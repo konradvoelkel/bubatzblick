@@ -1,0 +1,18 @@
+[package]
+name = "bubatzcore"
+description = "bubatzblick: Geometriekern (Sichtfeld-Sweep, Vereinigung, Abschluss) -- keine I/O, kein PyO3"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+i_overlay = "9.0"
+radsort = "0.1"
+
+[dev-dependencies]
+proptest = "1"
+serde_json = "1"
+flate2 = "1"

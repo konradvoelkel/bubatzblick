@@ -1,0 +1,83 @@
+# CI = Lint und Tests, kein schweres Rechnen und keine Artefakte: der Server
+# baut sein Binary selbst. Dasselbe laeuft lokal als pre-push-Hook
+# (.githooks/pre-push, installiert durch `make dev`).
+# Actions per Commit-SHA gepinnt (Kommentar = Tag).
+name: tests
+on:
+  push:
+    branches: [master]
+    paths-ignore: ["**.md", ".githooks/**"]
+  pull_request:
+    paths-ignore: ["**.md", ".githooks/**"]
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # Version und Komponenten stehen in rust/rust-toolchain.toml.
+      - uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
+      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2
+        with:
+          workspaces: rust
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          enable-cache: true
+      # Ganzer Workspace, nicht nur das Binary: `bubatzcore` ist der
+      # Geometriekern, seine Unit-Tests, Proptests und `tests/ogc_repro.rs`
+      # muessen mitlaufen. `--all-targets` nimmt Tests und Benches mit in
+      # die Lint-Pruefung.
+      - name: "Rust: fmt, clippy, Tests"
+        working-directory: rust
+        run: |
+          cargo fmt --check --all
+          cargo clippy --workspace --all-targets --locked -- -D warnings
+          cargo test --workspace --locked
+      - name: "Python: uv sync, bubatzcore (maturin), Lint, Tests"
+        run: |
+          uv sync --frozen
+          uv run maturin develop --release -m rust/bubatzcore-py/Cargo.toml
+          make lint
+          uv run pytest -n auto
+      - name: "Nichts aus der Entwicklung im Baum"
+        run: make check-publishable
+      - name: "about.html ist aus about.md erzeugt"
+        run: |
+          make about
+          git diff --exit-code -- viewer/about.html
+
+  # Getrennter Job: scheitert er, sind die Tests trotzdem ausgewertet, und
+  # eine neue Meldung blockiert keinen Merge an einer anderen Stelle.
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
+      # cache-bin ist Vorgabe: `cargo install` laeuft nur beim ersten Mal.
+      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2
+        with:
+          workspaces: rust
+          key: deny
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          enable-cache: true
+      # Advisories, Lizenzvertraeglichkeit mit der AGPL, Quellen (rust/deny.toml).
+      - name: "Rust: cargo deny"
+        run: |
+          cargo install cargo-deny --locked
+          cargo deny --manifest-path rust/Cargo.toml check
+      # Die Python-Seite hatte bisher keine Entsprechung -- und genau dort lagen
+      # die ersten Meldungen (urllib3). Geprueft wird die gesperrte Aufloesung,
+      # nicht das, was gerade installiert ist.
+      - name: "Python: pip-audit"
+        run: make audit-python

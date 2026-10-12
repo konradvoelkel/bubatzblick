@@ -1,0 +1,6 @@
+# Eine Toolchain fuer alle: CI, pre-push-Hook und Server bauen mit derselben
+# Version, sonst weichen `cargo fmt` und `clippy` zwischen den Umgebungen ab.
+# Anheben ist eine bewusste Zeile -- dann auch `rust-version` in Cargo.toml.
+[toolchain]
+channel = "1.97"
+components = ["rustfmt", "clippy"]

@@ -1,0 +1,9 @@
+# https://securitytxt.org -- RFC 9116
+# Kontakt und Impressum: https://bubatzblick.de/about.html
+Contact: https://bubatzblick.de/about.html
+Preferred-Languages: de, en
+Canonical: https://bubatzblick.de/.well-known/security.txt
+Policy: https://bubatzblick.de/about.html
+# RFC 9116 verlangt ein Ablaufdatum. Jaehrlich erneuern (siehe CONTRIBUTING.md);
+# ein abgelaufenes security.txt gilt als ungueltig.
+Expires: 2027-10-01T00:00:00.000Z

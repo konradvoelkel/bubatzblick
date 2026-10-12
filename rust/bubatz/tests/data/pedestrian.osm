@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Testfixture fuer `bubatz pedestrian` (tests/pedestrian_tiny.rs). Nach jeder Aenderung:
+     osmium cat rust/bubatz/tests/data/pedestrian.osm -o rust/bubatz/tests/data/pedestrian.osm.pbf (dazu die Option overwrite; zwei Bindestriche darf ein XML-Kommentar nicht enthalten)
+     Enthalten: Way 200 (Flaeche, area=yes), Way 201 (offen), Way 202 (geschlossen ohne area=yes,
+     also Ringstrasse als Linie), Relation 300 (Multipolygon aus zwei Aussen-Ways und einem Loch),
+     Relation 301 (Mitglied fehlt), Relation 302 (kein highway=pedestrian). -->
+<osm version="0.6" generator="hand">
+  <node id="1" lat="51.2200" lon="6.7800"/>
+  <node id="2" lat="51.2200" lon="6.7802"/>
+  <node id="3" lat="51.2202" lon="6.7802"/>
+  <node id="4" lat="51.2202" lon="6.7800"/>
+  <node id="5" lat="51.2210" lon="6.7800"/>
+  <node id="6" lat="51.2211" lon="6.7803"/>
+  <node id="7" lat="51.2210" lon="6.7806"/>
+  <node id="8" lat="51.2220" lon="6.7800"/>
+  <node id="9" lat="51.2220" lon="6.7802"/>
+  <node id="10" lat="51.2222" lon="6.7802"/>
+  <node id="11" lat="51.2222" lon="6.7800"/>
+  <node id="12" lat="51.2300" lon="6.7900"/>
+  <node id="13" lat="51.2300" lon="6.7920"/>
+  <node id="14" lat="51.2320" lon="6.7920"/>
+  <node id="15" lat="51.2320" lon="6.7900"/>
+  <node id="16" lat="51.2305" lon="6.7905"/>
+  <node id="17" lat="51.2305" lon="6.7915"/>
+  <node id="18" lat="51.2315" lon="6.7915"/>
+  <node id="19" lat="51.2315" lon="6.7905"/>
+  <way id="200">
+    <nd ref="1"/><nd ref="2"/><nd ref="3"/><nd ref="4"/><nd ref="1"/>
+    <tag k="highway" v="pedestrian"/>
+    <tag k="area" v="yes"/>
+  </way>
+  <way id="201">
+    <nd ref="5"/><nd ref="6"/><nd ref="7"/>
+    <tag k="highway" v="pedestrian"/>
+  </way>
+  <way id="202">
+    <nd ref="8"/><nd ref="9"/><nd ref="10"/><nd ref="11"/><nd ref="8"/>
+    <tag k="highway" v="pedestrian"/>
+  </way>
+  <way id="203">
+    <nd ref="12"/><nd ref="13"/><nd ref="14"/>
+  </way>
+  <way id="204">
+    <nd ref="14"/><nd ref="15"/><nd ref="12"/>
+  </way>
+  <way id="205">
+    <nd ref="16"/><nd ref="17"/><nd ref="18"/><nd ref="19"/><nd ref="16"/>
+  </way>
+  <relation id="300">
+    <member type="way" ref="203" role="outer"/>
+    <member type="way" ref="204" role="outer"/>
+    <member type="way" ref="205" role="inner"/>
+    <tag k="type" v="multipolygon"/>
+    <tag k="highway" v="pedestrian"/>
+  </relation>
+  <relation id="301">
+    <member type="way" ref="203" role="outer"/>
+    <member type="way" ref="999" role="outer"/>
+    <tag k="type" v="multipolygon"/>
+    <tag k="highway" v="pedestrian"/>
+  </relation>
+  <relation id="302">
+    <member type="way" ref="203" role="outer"/>
+    <member type="way" ref="204" role="outer"/>
+    <tag k="type" v="multipolygon"/>
+    <tag k="highway" v="footway"/>
+  </relation>
+</osm>

@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+title: BubatzBlick
+abstract: >-
+  Konservativ berechnete Cannabis-Verbotszonen nach § 5 KCanG für Deutschland
+  aus OpenStreetMap-Daten. Das Sichtfeld jeder Einrichtung wird als Vereinigung
+  exakter Sichtbarkeitspolygone entlang der Objektkontur bestimmt, mit den
+  OSM-Gebäuden als Sichthindernis.
+message: Wenn Sie diese Arbeit verwenden, zitieren Sie sie bitte.
+type: software
+version: 2.0.0
+date-released: "2026-10-13"
+license: AGPL-3.0-or-later
+url: https://bubatzblick.de
+keywords:
+  - OpenStreetMap
+  - Sichtbarkeitsanalyse
+  - KCanG
+  - Geoinformatik
+  - Rust
+repository-code: https://github.com/konradvoelkel/bubatzblick
+# `authors` nennt das Projekt, nicht die Person: wer dahintersteht, steht im
+# Impressum der Über-Seite.
+authors:
+  - name: BubatzBlick
+# Das Verfahren stammt aus dieser Bachelorarbeit; Nennung und PDF mit Zustimmung
+# des Autors, als Autor der Arbeit, nicht als Angehoeriger der Universitaet.
+references:
+  - type: thesis
+    authors:
+      - family-names: Kleisch
+        given-names: Oliver
+    title: 2D-Sichtbarkeit anhand von Gebäudekonturen aus Openstreetmaps
+    thesis-type: Bachelorarbeit
+    institution:
+      name: Heinrich-Heine-Universität Düsseldorf
+    date-published: "2025-06-02"
+    languages:
+      - de
+    url: https://bubatzblick.de/kleisch-2025-2d-sichtbarkeit-osm.pdf

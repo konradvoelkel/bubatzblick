@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>BubatzBlick – Bubatzkarte 2.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Wo der öffentliche Konsum von Cannabis in Sichtweite von Schulen, Spielplätzen, Jugendeinrichtungen und Sportstätten verboten ist – berechnet aus OpenStreetMap, täglich aktualisiert.">
+<link rel="canonical" href="__SITE_URL__/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/">
+<meta property="og:title" content="BubatzBlick – Bubatzkarte 2.0">
+<meta property="og:description" content="Wo der öffentliche Konsum von Cannabis in Sichtweite von Schulen, Spielplätzen, Jugendeinrichtungen und Sportstätten verboten ist – berechnet aus OpenStreetMap, täglich aktualisiert.">
+<meta property="og:image" content="__SITE_URL__/img/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vorschaukarte: ein Spielplatz, dessen rote Sichtweitenzone zwischen den Häuserblöcken die Form eines Hanfblatts hat, daneben der Schriftzug BubatzBlick – Bubatzkarte 2.0, wo Kiffen in Sichtweite verboten ist">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link href="vendor/maplibre-gl.css" rel="stylesheet">
+<style>
+  /* Markenfarbe des Projekts: nur Bedienelemente --
+     die Zonenflaechen sind Datenfarbe und bleiben davon unberuehrt. */
+  :root { --marke: #287c42; --zone: #c0392b; --fuss: #2a78d6; }
+  html, body { margin: 0; height: 100%; font-family: system-ui, sans-serif; }
+  #map { position: absolute; inset: 0; }
+  /* Das Bedienfeld steht im Quelltext VOR der Karte, damit die Ortssuche am
+     Anfang der Tabulatorreihenfolge liegt und nicht hinter Karte, Zoom,
+     Kompass und Standort. Beide sind absolut
+     positioniert, deshalb muss die Stapelreihenfolge das nachholen. */
+  #panel { position: absolute; z-index: 1; top: 10px; left: 10px; background: rgba(255,255,255,.93);
+           padding: 10px 14px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,.3); font-size: 14px; max-width: 320px;
+           /* Auch auf breiten, aber FLACHEN Fenstern scrollen statt unten
+              herauszulaufen: die Hoehenbegrenzung gilt nicht nur unter
+              640 px Breite -- mit Farblegende und Werkzeugzeile ist das Feld
+              hoch genug, dass sie ueberall gebraucht wird. */
+           max-height: calc(100% - 20px); overflow-y: auto; box-sizing: border-box; }
+  #panel h1 { font-size: 15px; margin: 0; color: var(--marke); }
+  /* Kopfzeile mit Ein-/Ausklappknopf. Eingeklappt bleiben Titel, Legende und
+     Suche; auf schmalen Bildschirmen (Telefon) ist das der Anfangszustand,
+     sonst verdeckt das Feld die ganze Karte. */
+  #panel-kopf { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+  #panel-kopf h1 { flex: 1; }
+  #panel-toggle { flex: none; font: inherit; font-size: 12px; padding: 2px 8px; cursor: pointer;
+                  border: 1px solid var(--marke); border-radius: 4px; background: #fff; color: var(--marke); }
+  #panel.zu > .einklappbar { display: none; }
+  /* Was hinter dem Knopf liegt, wird im eingeklappten Zustand benannt --
+     sonst ist "Kategorien & Infos" eine Tuer ohne Schild: in Tests wurde
+     dahinter Hilfe erwartet und die Ebene gar nicht gefunden. */
+  #panel-inhalt { display: none; margin-top: 4px; color: #555; font-size: 12px; }
+  #panel.zu #panel-inhalt { display: block; }
+  #panel a { color: var(--marke); }
+  #panel details { margin-top: 6px; }
+  #panel summary { cursor: pointer; color: var(--marke); font-weight: 600; }
+  .legende-zeile { display: flex; align-items: baseline; gap: 6px; margin-top: 3px; font-size: 13px; }
+  .legende-zeile input:disabled + * , .legende-zeile input:disabled { cursor: not-allowed; }
+  /* Farblegende. Sie steht ausserhalb von .einklappbar: die Frage "was heisst
+     rot, was heisst weiss" ist die Kernfrage der Karte und darf nicht hinter
+     dem Knopf verschwinden. Ohne sie wurde das Gruen der Grundkarte
+     (Parkflaeche) als Datenfarbe und schloss "gruen = erlaubt". */
+  #farblegende { margin: 6px 0 2px; font-size: 12px; line-height: 1.45; color: #333; }
+  #farblegende div { display: flex; align-items: baseline; gap: 6px; }
+  /* Breiter als hoch und mit weichen Ecken: ein quadratisches weisses Feld
+     war vom Kontrollkaestchen der Kategorien darunter nicht zu unterscheiden
+     (in der Telefonansicht gesehen). */
+  #farblegende i { flex: none; width: 22px; height: 11px; border-radius: 3px;
+                   border: 1px solid rgba(0,0,0,.35); transform: translateY(1px); }
+  .swatch-zone { background: rgba(192,57,43,.4); }
+  .swatch-frei { background: #fff; }
+  .swatch-fuss { background: rgba(42,120,214,.6); }
+  #farblegende .fuss-nur { display: none; }
+  #farblegende.mit-fuss .fuss-nur { display: flex; }
+  #hinweis { margin-top: 6px; padding-top: 6px; border-top: 1px solid #ddd; }
+  #status, #ueber-zeile { margin-top: 6px; }
+  #suche { display: flex; gap: 6px; margin-top: 8px; }
+  #suche input { flex: 1; min-width: 0; padding: 4px 6px; font: inherit; font-size: 13px;
+                 border: 1px solid #bbb; border-radius: 4px; }
+  #suche button { padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer;
+                  border: 1px solid var(--marke); border-radius: 4px;
+                  background: var(--marke); color: #fff; }
+  #suche button[disabled] { opacity: .6; cursor: default; }
+  #suche-hinweis { display: block; color: #666; font-size: 11px; line-height: 1.35; margin-top: 3px; }
+  /* Zeile unter der Suche: eigener Standort und Ausschnitt teilen. Beides war
+     vorher nur als unbeschriftetes Kartensymbol bzw. gar nicht erreichbar
+     (in Tests zuerst gesucht: der eigene Standort und der Teilen-Weg). */
+  #werkzeuge { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  #werkzeuge button { font: inherit; font-size: 12px; padding: 3px 8px; cursor: pointer;
+                      border: 1px solid var(--marke); border-radius: 4px; background: #fff; color: var(--marke); }
+  #suche-treffer:not(:empty) { margin-top: 6px; border: 1px solid #e0e0e0; border-radius: 4px; }
+  #suche-treffer button { display: block; width: 100%; text-align: left; padding: 5px 7px;
+                          font: inherit; font-size: 13px; background: none; border: 0;
+                          border-bottom: 1px solid #eee; cursor: pointer; }
+  #suche-treffer button:last-child { border-bottom: 0; }
+  #suche-treffer button:hover, #suche-treffer button:focus { background: #e1f5e4; }
+  #suche-treffer .leer { display: block; padding: 5px 7px; color: #666; font-size: 13px; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden;
+                     clip-path: inset(50%); white-space: nowrap; }
+  /* MapLibre faerbt Fokusring (#0096ff) und Standortpunkt (#1da1f2) blau. Beides
+     sind Bedienelemente, keine Daten -- also Markenfarbe. Beim
+     Standortpunkt kommt ein zweiter Grund dazu: er war kaum von der blauen
+     Fussgaengerzonen-Ebene zu unterscheiden. Hier ueberschrieben statt in
+     vendor/maplibre-gl.css geaendert, damit ein Update der Bibliothek nichts
+     ueberschreibt. */
+  .maplibregl-ctrl-group button:focus,
+  .maplibregl-ctrl-attrib-button:focus,
+  .maplibregl-ctrl-group button:focus:focus-visible { box-shadow: 0 0 2px 2px var(--marke); }
+  .maplibregl-user-location-dot,
+  .maplibregl-user-location-dot::before { background-color: var(--marke); }
+  .maplibregl-user-location-accuracy-circle { background-color: #287c4233; }
+  #panel label { display: block; margin-top: 6px; }
+  #panel small { color: #555; }
+  /* spezifischer als `#panel label`, sonst gewinnt dessen display:block */
+  #panel #datasets { display: none; margin-top: 6px; }
+  /* Flüchtige Meldungen (Kartenfehler, Standort) stehen NEBEN dem Datenstand,
+     nicht an seiner Stelle: vorher ueberschrieb eine verweigerte
+     Ortungsfreigabe das Datum der Daten. */
+  #meldung:not(:empty) { margin-top: 6px; color: #b00; font-size: 12px; }
+  /* Ladeschleier ueber der Karte. Die Grundkarte malt bis zu ihrer Ankunft
+     ihre eigene Void-Farbe (#cccccc); Zonen auf Grau ohne Strassen lesen sich
+     als Fehler statt als "laedt noch". */
+  #laden { position: absolute; z-index: 2; left: 50%; bottom: 24px; transform: translateX(-50%);
+           background: rgba(255,255,255,.92); border-radius: 6px; padding: 6px 12px;
+           font-size: 13px; color: #333; box-shadow: 0 1px 4px rgba(0,0,0,.3); }
+  #laden[hidden] { display: none; }
+  code { font-size: 12px; }
+  @media (max-width: 640px) {
+    /* Volle Breite oben, scrollt statt ueber den Rand zu laufen. */
+    #panel { left: 8px; right: 8px; top: 8px; max-width: none; box-sizing: border-box;
+             max-height: calc(100% - 16px); overflow-y: auto; padding: 8px 10px; font-size: 13px; }
+    #panel h1 { font-size: 14px; }
+    /* iOS Safari zoomt beim Fokus in Eingabefelder unter 16 px hinein. */
+    #suche input { font-size: 16px; }
+    /* Kartenknoepfe (Zoom, Kompass, Standort) unten rechts ueber der
+       Quellenangabe: oben liegt das Bedienfeld, und der Daumen erreicht sie.
+       Per CSS statt Ecke in app.js, damit es beim Drehen des Telefons mitgeht. */
+    .maplibregl-ctrl-top-right { top: auto; bottom: 40px; }
+    #laden { bottom: 74px; }
+    /* Auf dem Telefon zaehlt jede Zeile: der Erklaersatz zum Teilen steckt
+       dort im `title` des Knopfes, der Knopf selbst sagt genug. */
+    #teilen-hinweis { display: none; }
+    #panel-toggle { font-size: 11px; padding: 2px 6px; }
+  }
+</style>
+</head>
+<body>
+<div id="panel">
+  <div id="panel-kopf">
+    <h1>BubatzBlick – Bubatzkarte 2.0</h1>
+    <button id="panel-toggle" type="button" aria-expanded="true" aria-controls="panel-text panel-mehr">Ausblenden</button>
+  </div>
+  <div id="farblegende">
+    <div><i class="swatch-zone"></i><span>rot: in Sichtweite – Konsumverbot nach § 5 Abs. 2 KCanG</span></div>
+    <div><i class="swatch-frei"></i><span>weiß: keine Zone in diesen Daten – andere Verbote gelten trotzdem</span></div>
+    <div class="fuss-nur"><i class="swatch-fuss"></i><span>blau: Fußgängerzone – Verbot 7–20 Uhr</span></div>
+  </div>
+  <div id="panel-inhalt">Darunter: Kategorien, Fußgängerzonen, Datenstand, Impressum.</div>
+  <div id="panel-text" class="einklappbar">
+  <small>Konsumverbot in Sichtweite (&le; 100 m, &sect; 5 Abs. 2 KCanG) von Schulen, Kinderspielplätzen,
+  Kinder- und Jugendeinrichtungen, öffentlich zugänglichen Sportstätten und Anbauvereinigungen.
+  Ab Zoom 14 ohne Gebäudegrundrisse. Konservativ: Zonen sind Obermengen des wahren Sichtfelds.
+  Daten &copy; OpenStreetMap-Mitwirkende (ODbL).</small>
+  </div>
+  <form id="suche" autocomplete="off">
+    <label for="suche-feld" class="visually-hidden">Ort suchen</label>
+    <input id="suche-feld" type="search" placeholder="Ort oder Adresse" enterkeyhint="search">
+    <button type="submit">Suchen</button>
+  </form>
+  <small id="suche-hinweis">Sucht über <a href="https://nominatim.openstreetmap.org/">Nominatim</a>
+  (OpenStreetMap). Anders als der Rest der Karte verlässt Ihre Eingabe dabei diese Seite.</small>
+  <div id="werkzeuge">
+    <button type="button" id="standort-knopf">Mein Standort</button>
+    <button type="button" id="teilen-knopf" aria-describedby="teilen-hinweis"
+            title="Der Ausschnitt steht in der Adresszeile (nach dem #); der Knopf kopiert sie.">Ausschnitt teilen</button>
+  </div>
+  <small id="teilen-hinweis">Der Ausschnitt steht in der Adresszeile (nach dem <code>#</code>); der Knopf kopiert sie.</small>
+  <div id="suche-treffer"></div>
+  <div id="panel-mehr" class="einklappbar">
+  <details id="kategorien">
+    <summary>Kategorien</summary>
+    <div id="legende"></div>
+  </details>
+  <label class="legende-zeile" id="fuss-zeile"><input type="checkbox" id="fuss-an">
+    <span>Fußgängerzonen <small id="fuss-zeit"></small></span></label>
+  <label id="datasets">Archiv <select id="ds"></select></label>
+  <div id="status"><small>lade …</small></div>
+  <div id="hinweis"><small><strong>Keine Rechtsauskunft.</strong> Die Karte bildet &sect; 5 Abs. 2 KCanG
+  näherungsweise aus OpenStreetMap-Daten ab. Ob an einem Ort tatsächlich ein Verbot gilt, entscheidet
+  sie nicht: OSM kann unvollständig oder veraltet sein, und die Zonen sind bewusst zu groß gerechnet.</small></div>
+  <div id="ueber-zeile"><small><a href="about.html" id="ueber-link">Über diese Karte</a> &middot; Fehler melden, Lizenzen, Impressum</small></div>
+  </div>
+  <div id="meldung" role="status" aria-live="polite"></div>
+</div>
+<div id="map"></div>
+<div id="laden">Karte lädt …</div>
+<!-- MapLibre GL JS 4.7.1 und pmtiles.js 3.2.1 liegen unter vendor/ (BSD-3, siehe LICENSE-Dateien dort);
+     `bubatz serve` bettet Seite und vendor/ ins Binary ein, fuer Pages liegt der Ordner daneben. -->
+<script src="vendor/maplibre-gl.js"></script>
+<script src="vendor/pmtiles.js"></script>
+<script src="vendor/basemaps/basemaps.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

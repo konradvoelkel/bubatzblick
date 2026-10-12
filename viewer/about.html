@@ -1,0 +1,447 @@
+<!doctype html>
+<!-- Erzeugt aus viewer/about.md durch deploy/bin/build_about.py (`make about`).
+     Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Über BubatzBlick – Bubatzkarte 2.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Wo der öffentliche Konsum von Cannabis in Sichtweite von Schulen, Spielplätzen, Jugendeinrichtungen und Sportstätten verboten ist – berechnet aus OpenStreetMap, täglich aktualisiert.">
+<link rel="canonical" href="__SITE_URL__/about.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/about.html">
+<meta property="og:title" content="Über BubatzBlick – Bubatzkarte 2.0">
+<meta property="og:description" content="Wo der öffentliche Konsum von Cannabis in Sichtweite von Schulen, Spielplätzen, Jugendeinrichtungen und Sportstätten verboten ist – berechnet aus OpenStreetMap, täglich aktualisiert.">
+<meta property="og:image" content="__SITE_URL__/img/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vorschaukarte: ein Spielplatz, dessen rote Sichtweitenzone zwischen den Häuserblöcken die Form eines Hanfblatts hat, daneben der Schriftzug BubatzBlick – Bubatzkarte 2.0, wo Kiffen in Sichtweite verboten ist">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<style>
+  body { margin: 0; font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: #222; background: #f2efe9; }
+  header { background: #fff; border-bottom: 1px solid #ddd; }
+  header .inner { max-width: 760px; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: #287c42; }
+  header p { margin: 0 0 8px; color: #555; }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: #287c42;
+          color: #fff; text-decoration: none; font-weight: 600; }
+  nav a:hover { background: #03642b; }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 20px 60px; background: #fff; }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid #eee; }
+  main h3 { margin-top: 1.5em; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-left: 4px solid #287c42;
+               background: #e1f5e4; }
+  blockquote ol { padding-left: 1.4em; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid #e5e5e5;
+           vertical-align: top; }
+  code { font-size: .9em; background: #f3f3f3; padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: #f3f3f3; padding: 10px; border-radius: 6px; }
+  a { color: #287c42; }
+  footer { max-width: 760px; margin: 0 auto; padding: 16px 20px; color: #666; font-size: .9em; }
+</style>
+</head>
+<body>
+<header><div class="inner">
+  <img src="img/sichtfeld-blatt.svg" alt="Schematische Karte: ein Spielplatz in der Mitte, die rote Sichtweitenzone zwischen den Häuserblöcken hat die Form eines Hanfblatts">
+  <div>
+    <h1>Über BubatzBlick</h1>
+    <p>Konsumverbot in Sichtweite nach § 5 Abs. 2 KCanG, berechnet aus OpenStreetMap.</p>
+    <nav><a href="./" class="zur-karte">← Zur Karte</a></nav>
+  </div>
+</div></header>
+<main>
+
+<p>Die Karte zeigt, wo in Deutschland der öffentliche Konsum von Cannabis nach
+§ 5 Abs. 2 des Konsumcannabisgesetzes (KCanG) verboten ist, weil eine
+Schule, ein Kinderspielplatz, eine Kinder- oder Jugendeinrichtung, eine
+öffentlich zugängliche Sportstätte oder eine Anbauvereinigung <strong>in
+Sichtweite</strong> liegt. Rot ist die Fläche, von der aus eine solche Einrichtung
+zu sehen sein kann — höchstens 100 m weit, und nur dort, wo kein Gebäude
+die Sicht verdeckt.</p>
+<p><strong>Die roten Zonen sind nicht die einzigen Orte, an denen Konsum verboten
+ist.</strong> Unabhängig vom Ort gilt § 5 Abs. 1 KCanG: Der Konsum in
+unmittelbarer Gegenwart von Minderjährigen ist verboten — auf einer
+weißen Fläche genauso wie auf einer roten. Dazu kommen Fußgängerzonen
+zwischen 7 und 20 Uhr und militärische Bereiche (siehe unten).</p>
+<p>Die Karte ist eine Orientierungshilfe, keine Rechtsauskunft. Sie beruht
+auf freiwillig gesammelten Daten (OpenStreetMap) und einem Rechenmodell;
+beides kann im Einzelfall falsch sein. Verantwortlich für das eigene
+Verhalten bleibt jede und jeder selbst.</p>
+<h2>Was rot ist — und was nicht</h2>
+<p><strong>Rot:</strong> Konsumverbot in Sichtweite (§ 5 Abs. 2 Satz 1 Nr. 1–4 und 6 KCanG)
+von den folgenden Einrichtungen. Die Liste wird beim Bauen dieser Seite aus
+genau der Tag-Datei erzeugt, mit der die Karte gerechnet wird
+(<code>config/tags.json</code> (Version 5)); sie kann daher nicht von der Karte abweichen.</p>
+<ul>
+<li><strong>Schulen</strong> (§ 5 Abs. 2 Nr. 1) — Allgemein- und berufsbildende Schulen nach den Schulgesetzen der Länder. Fahrschulen (gewerbliche Ausbildungsstätten nach dem Fahrlehrergesetz) und Sprachschulen sind keine Schulen im Sinne des Gesetzes und werden nicht gezeigt; Musikschulen zählen als Kinder- und Jugendeinrichtung.<ul>
+<li><code>amenity=school</code> — Schule</li>
+<li>Kategorie im Kartenpopup: <code>school</code></li>
+</ul>
+</li>
+<li><strong>Kinderspielplätze</strong> (§ 5 Abs. 2 Nr. 2) — Alle Spielplätze, auch nicht öffentliche (das Gesetz verlangt anders als bei Sportstätten keine öffentliche Zugänglichkeit), sowie Indoorspielplätze.<ul>
+<li><code>leisure=playground</code> — Spielplatz</li>
+<li><code>leisure=indoor_play</code> — Indoorspielplatz</li>
+<li>Kategorie im Kartenpopup: <code>playground</code></li>
+</ul>
+</li>
+<li><strong>Kindergärten und Kitas</strong> (§ 5 Abs. 2 Nr. 3) — Kindergärten, Kindertagesstätten und Horte (§ 5 Abs. 2 Nr. 3, Kinder- und Jugendeinrichtungen).<ul>
+<li><code>amenity=kindergarten</code> — Kindergarten, Kita, Hort</li>
+<li>Kategorie im Kartenpopup: <code>kindergarten</code></li>
+</ul>
+</li>
+<li><strong>Kindertagespflege</strong> (§ 5 Abs. 2 Nr. 3) — Kinderbetreuung außerhalb von Kitas (Tagesmütter, Krabbelgruppen, Kinderbetreuung in Einrichtungen).<ul>
+<li><code>amenity=childcare</code> — Kinderbetreuung</li>
+<li>Kategorie im Kartenpopup: <code>childcare</code></li>
+</ul>
+</li>
+<li><strong>Kinder- und Jugendeinrichtungen</strong> (§ 5 Abs. 2 Nr. 3) — Jugendzentren und Jugendclubs, soziale Einrichtungen für Kinder und Jugendliche (Heime, Tagesgruppen, Beratungsstellen — nur wenn in OpenStreetMap als für Kinder oder Jugendliche bestimmt eingetragen; Altenheime, Obdachlosenunterkünfte u. ä. zählen nicht), Musikschulen und Jugendherbergen.<ul>
+<li><code>community_centre=youth_centre | youth_club</code> — Jugendzentrum, Jugendclub</li>
+<li><code>community_centre:for=child | juvenile</code> (auch als Teil einer Liste) — Gemeinschaftseinrichtung für Kinder oder Jugendliche</li>
+<li><code>social_facility:for=child | juvenile</code> (auch als Teil einer Liste) — Soziale Einrichtung für Kinder oder Jugendliche (Heim, Tagesgruppe, Beratung)</li>
+<li><code>amenity=music_school</code> — Musikschule</li>
+<li>Jugendherbergen: Hostels (tourism=hostel), deren Name oder Betreiber „Jugendherberge“ oder „DJH“ enthält.</li>
+<li>Kategorie im Kartenpopup: <code>youth</code></li>
+</ul>
+</li>
+<li><strong>Öffentlich zugängliche Sportstätten</strong> (§ 5 Abs. 2 Nr. 4) — Sportplätze, Hallen, Stadien, Bäder, Bahnen, Reit- und Golfanlagen, Eisbahnen, Fitnessstudios, Minigolf- und Bowlinganlagen. Öffentlich zugänglich heißt: nicht in OpenStreetMap als privat oder gesperrt markiert (access=private/no); Kundenzugang und Erlaubnis zählen als öffentlich. Einzelne Tischtennis-, Schach- oder Boule-Tische sind Geräte, keine Sportstätten.<ul>
+<li><code>leisure=pitch | sports_hall | sports_centre | stadium | track | swimming_pool | water_park | fitness_centre | horse_riding | golf_course | ice_rink | miniature_golf | bowling_alley</code> — Sportplatz, Sporthalle, Sportzentrum, Stadion, Lauf-/Radbahn, Schwimmbecken, Wasserpark/Freibad, Fitnessstudio, Reitanlage, Golfplatz, Eisbahn, Minigolf, Bowling</li>
+<li><code>amenity=swimming_pool</code> — Schwimmbad (ältere Schreibweise)</li>
+<li>Ausgenommen: Einzelne Tischtennis-, Schach- oder Boule-Tische (leisure=pitch mit sport=table_tennis/chess/boules) sind Geräte, keine Sportstätten; eine Tischtennishalle als sports_centre bleibt.</li>
+<li>Zugang: Alle Sportstätten: mit access=private oder access=no nicht öffentlich zugänglich; yes, permissive, customers, permit gelten als öffentlich; ohne access-Tag zählt die Anlage.</li>
+<li>Zugang: Schwimmbecken ohne access-Tag zählen erst ab 100 m² Fläche (Gartenpools fallen weg, als Punkt eingetragene Becken ebenfalls).</li>
+<li>Kategorie im Kartenpopup: <code>sports</code></li>
+</ul>
+</li>
+<li><strong>Anbauvereinigungen</strong> (§ 5 Abs. 2 Nr. 6) — Cannabis-Anbauvereinigungen, soweit sie in OpenStreetMap eingetragen sind (derzeit nur wenige).<ul>
+<li><code>club=cannabis</code> — Cannabis-Club</li>
+<li><code>office=cannabis_club</code> — Geschäftsstelle einer Anbauvereinigung</li>
+<li>Kategorie im Kartenpopup: <code>cannabis_club</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Nicht auf der Karte</strong>, obwohl ebenfalls verboten:</p>
+<ul>
+<li>Konsum <strong>in unmittelbarer Gegenwart von Minderjährigen</strong> (§ 5 Abs. 1) —
+  das hängt von Menschen ab, nicht von Orten, und gilt überall.</li>
+<li>Konsum in <strong>Fußgängerzonen zwischen 7 und 20 Uhr</strong> (§ 5 Abs. 2 Nr. 5) —
+  keine Sichtweite, sondern eine Fläche mit Uhrzeit. Dafür gibt es eine
+  eigene, zuschaltbare Ebene in Blau; sie zeigt <code>highway=pedestrian</code> aus
+  OpenStreetMap unverändert, Flächen als Fläche und Wege als Linie, ohne
+  Puffer. Das erfasst mehr, als das Gesetz meint — auch Parkwege und
+  Bahnhofsvorplätze tragen dieses Merkmal —, denn das Verkehrszeichen
+  „Fußgängerzone" ist nur bei 3,8 % der Objekte eingetragen. Fußgängerzonen,
+  die in OpenStreetMap aus mehreren Teilen zusammengesetzt sind
+  (Multipolygon-Relationen), sind ebenfalls erfasst: nach Stückzahl rund 5 %,
+  nach Fläche fast die Hälfte dessen, was die einfachen Flächen ausmachen —
+  es sind die großen Plätze.</li>
+<li><strong>Militärische Bereiche der Bundeswehr</strong> (§ 5 Abs. 3).</li>
+<li>Alles, was in OpenStreetMap fehlt oder falsch eingetragen ist (siehe
+  „Fehler melden“).</li>
+</ul>
+<h2>Der Gesetzestext</h2>
+<blockquote>
+<p><strong>§ 5 KCanG – Konsumverbot</strong></p>
+<p>(1) Der Konsum von Cannabis in unmittelbarer Gegenwart von Personen, die
+das 18. Lebensjahr noch nicht vollendet haben, ist verboten.</p>
+<p>(2) Der öffentliche Konsum von Cannabis ist verboten:
+1. in Schulen und in deren Sichtweite,
+2. auf Kinderspielplätzen und in deren Sichtweite,
+3. in Kinder- und Jugendeinrichtungen und in deren Sichtweite,
+4. in öffentlich zugänglichen Sportstätten und in deren Sichtweite,
+5. in Fußgängerzonen zwischen 7 und 20 Uhr und
+6. innerhalb des befriedeten Besitztums von Anbauvereinigungen und in
+   deren Sichtweite.</p>
+<p>Im Sinne von Satz 1 ist eine Sichtweite bei einem Abstand von mehr als
+100 Metern von dem Eingangsbereich der in Satz 1 Nummer 1 bis 4 und 6
+genannten Einrichtungen nicht mehr gegeben.</p>
+<p>(3) In militärischen Bereichen der Bundeswehr ist der Konsum von Cannabis
+verboten.</p>
+</blockquote>
+<p>Quelle: <a href="https://www.gesetze-im-internet.de/kcang/__5.html">gesetze-im-internet.de/kcang/__5.html</a>.</p>
+<h2>Wie die Zonen berechnet werden</h2>
+<p>Das Gesetz spricht von <strong>Sichtweite</strong>, nicht von Abstand. Die 100 m sind
+eine Obergrenze: Weiter als 100 m vom Eingangsbereich entfernt gilt
+nichts mehr als Sichtweite — näher dran kommt es darauf an, ob man die
+Einrichtung tatsächlich sehen kann. Die Bubatzkarte 2.0 rechnet genau das:</p>
+<ol>
+<li>Aus OpenStreetMap werden alle Einrichtungen der genannten Arten und alle
+   <strong>Gebäudegrundrisse</strong> Deutschlands geladen (rund 500 000 Einrichtungen,
+   39 Millionen Gebäude).</li>
+<li>Entlang der gesamten Umrisslinie jeder Einrichtung werden alle 0,5 m
+   Beobachterpunkte gesetzt. Weil OpenStreetMap den „Eingangsbereich“
+   meist nicht kennt, gilt die <strong>ganze Kontur</strong> als Eingangsbereich — das
+   macht die Zone eher größer als kleiner.</li>
+<li>Für jeden Punkt wird exakt berechnet, welche Fläche im Umkreis von 100 m
+   von dort aus sichtbar ist, wenn Gebäude die Sicht verdecken. Bäume,
+   Mauern, Zäune, Hecken und Geländeformen werden <strong>nicht</strong> als
+   Sichthindernis gewertet — auch das vergrößert die Zone.</li>
+<li>Die Sichtfelder aller Punkte werden vereinigt, um eine kleine
+   Sicherheitsmarge (0,5 m) nach außen erweitert und mit 2 m Zuschlag für
+   die Lagegenauigkeit der OSM-Daten versehen.</li>
+</ol>
+<p>Das Ergebnis ist bewusst <strong>konservativ</strong>: Wo die Karte weiß ist, ist man
+nach diesem Modell sicher außerhalb der Sichtweite. Wo sie rot ist, <em>kann</em>
+ein Verbot gelten — die Karte kann kein Gebüsch und keinen Bauzaun kennen,
+der die Sicht in Wirklichkeit versperrt.</p>
+<p>Ab Zoomstufe 14 sind die Gebäude selbst aus dem Rot herausgeschnitten:
+Rot endet an der Hauswand. In kleineren Maßstäben sind die Flächen für die
+Darstellung vergröbert (immer nach außen, nie nach innen).</p>
+<p>Das Verfahren folgt der Bachelorarbeit von <strong>Oliver Kleisch</strong>, <em>2D-Sichtbarkeit
+anhand von Gebäudekonturen aus Openstreetmaps</em> (Heinrich-Heine-Universität
+Düsseldorf, Juni 2025), <a href="kleisch-2025-2d-sichtbarkeit-osm.pdf">als PDF, 3 MB</a>.</p>
+<h2>Für Informatikerinnen und Informatiker: die Algorithmen</h2>
+<p>Wer es genauer wissen will — die Berechnung ist freie Software (siehe
+Lizenzen), hier die Bausteine:</p>
+<ul>
+<li><strong>Sichtbarkeitspolygon.</strong> Für jeden Beobachterpunkt wird das
+  <a href="https://de.wikipedia.org/wiki/Sichtbarkeitspolygon">Sichtbarkeitspolygon</a>
+  gegenüber den Gebäudekanten in Reichweite mit einem <strong>Rotationssweep</strong>
+  berechnet (Winkelsortierung der Kanten-Endpunkte, Sweep über den
+  Vollkreis mit einer nach Entfernung geordneten Menge aktiver Kanten,
+  O(n log n) je Punkt). Klassische Referenzen: D. T. Lee, <em>Visibility of a
+  simple polygon</em>, Computer Vision, Graphics, and Image Processing 22
+  (1983); T. Asano, <em>An efficient algorithm for finding the visibility
+  polygon for a polygonal region with holes</em>, IEICE Transactions E68
+  (1985); P. J. Heffernan, J. S. B. Mitchell, <em>An optimal algorithm for
+  computing visibility in the plane</em>, SIAM Journal on Computing 24 (1995).
+  Die Bachelorarbeit verwendet die <em>triangular expansion</em> (F. Bungiu,
+  M. Hemmer, J. Hershberger, K. Huang, A. Kröller, <em>Efficient computation
+  of visibility polygons</em>, <a href="https://arxiv.org/abs/1403.3905">arXiv:1403.3905</a>,
+  2014, in CGAL implementiert); der Sweep war für viele Punkte in
+  derselben Szene die einfachere, exakt nachrechenbare Wahl.</li>
+<li><strong>Hindernissuche.</strong> Die 39 Millionen Gebäude liegen in einem
+  <a href="https://de.wikipedia.org/wiki/R-Baum">R-Baum</a> (A. Guttman, <em>R-trees: a
+  dynamic index structure for spatial searching</em>, SIGMOD 1984); je
+  Einrichtung werden alle Grundrisse im Umkreis von 102 m geholt und
+  verschmolzen.</li>
+<li><strong>Vereinigung und Marge.</strong> Die Punktpolygone werden mit exakter
+  Ganzzahlarithmetik vereinigt
+  (<a href="https://en.wikipedia.org/wiki/Boolean_operations_on_polygons">Boolesche Operationen auf Polygonen</a>,
+  Rust-Bibliothek <a href="https://github.com/iShape-Rust/iOverlay">iOverlay</a>); die
+  Sicherheitsmarge ist eine
+  <a href="https://de.wikipedia.org/wiki/Minkowski-Summe">Minkowski-Summe</a> mit
+  einem 200-Eck als Kreis. Fließkomma-Rundung, die Löcher „zuschmiert“
+  oder Flächen verliert, gibt es dadurch nicht.</li>
+<li><strong>Konservativität als Test.</strong> Die Zusicherungen — Zone enthält die
+  Quelle und den gebäudefreien Kreis, deckt eine vierfach dichtere
+  Abtastung ab, wird durch zusätzliche Hindernisse nie größer, ist
+  deterministisch bis aufs Byte und invariant unter Drehung/Verschiebung —
+  sind automatisierte Tests an eingefrorenen realen Objekten. Ein
+  Ankerobjekt in Düsseldorf muss bei jeder Veröffentlichung dieselbe
+  Fläche ergeben.</li>
+<li><strong>Inkrementell.</strong> Jede Zone trägt einen Inhaltsschlüssel
+  (<a href="https://de.wikipedia.org/wiki/BLAKE_(Hashfunktion)">BLAKE2b</a> über
+  Kontur, Hindernisse in Reichweite und Parameterversion). Beim täglichen
+  Lauf wird nur neu gerechnet, was sich in OpenStreetMap geändert hat —
+  typisch 0,1 % der Objekte; ganze 2-km-Zellen werden per Fingerabdruck
+  übernommen.</li>
+<li><strong>Kacheln.</strong> Die Zonen werden je Zoomstufe <em>einseitig</em> vereinfacht
+  (<a href="https://de.wikipedia.org/wiki/Douglas-Peucker-Algorithmus">Douglas-Peucker</a>
+  plus Puffer, sodass jede Vereinfachung eine Obermenge bleibt), mit
+  <a href="https://github.com/felt/tippecanoe">tippecanoe</a> zu
+  <a href="https://github.com/mapbox/vector-tile-spec">Vektorkacheln</a> gerendert
+  und als eine einzige <a href="https://github.com/protomaps/PMTiles">PMTiles</a>-Datei
+  ausgeliefert, aus der der Browser per HTTP-Range-Anfragen nur die
+  sichtbaren Kacheln liest. Anzeige mit
+  <a href="https://maplibre.org">MapLibre GL JS</a>; die Hintergrundkarte ist ein
+  <a href="https://docs.protomaps.com">Protomaps</a>-Ausschnitt für Deutschland
+  (5,7 GB, Zoom 0–15), ebenfalls eine PMTiles-Datei. Gerechnet wird in ETRS89 / UTM
+  32N (<a href="https://epsg.io/25832">EPSG:25832</a>), metrisch und bundesweit
+  einheitlich.</li>
+</ul>
+<h2>Zahlen</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Einrichtungen (Verbotsobjekte)</td>
+<td>492 934</td>
+</tr>
+<tr>
+<td>Gebäudegrundrisse als Hindernisse</td>
+<td>39,3 Millionen</td>
+</tr>
+<tr>
+<td>Beobachterpunkte insgesamt</td>
+<td>192 Millionen (Median 235 je Einrichtung, Kontur 95 800 km)</td>
+</tr>
+<tr>
+<td>Rechenzellen</td>
+<td>52 804 à 2 km × 2 km</td>
+</tr>
+<tr>
+<td>Fläche aller Zonen</td>
+<td>~20 300 km² (Summe je Einrichtung)</td>
+</tr>
+<tr>
+<td>Vollständige Neuberechnung</td>
+<td>4 h 30 min auf dem Server (4 vCPU, 8 GB), ~2 h auf 16 Threads</td>
+</tr>
+<tr>
+<td>Tägliche Aktualisierung</td>
+<td>~20 min auf dem Server</td>
+</tr>
+<tr>
+<td>Arbeitsspeicher, Spitze</td>
+<td>~5 GB</td>
+</tr>
+<tr>
+<td>Kachelarchiv</td>
+<td>354 MB, Zoom 8–14</td>
+</tr>
+<tr>
+<td>Gemessen</td>
+<td>vollständiger Lauf auf dem Server; der Datenstand steht unter „Aktualität“</td>
+</tr>
+</tbody>
+</table>
+<h2>Unterschied zur Bubatzkarte (2023)</h2>
+<p>Die <a href="https://bubatzkarte.de">Bubatzkarte</a> (seit Juni 2023) war die
+Inspiration für dieses Projekt; darüber hinaus gibt es keine Verbindung.
+Sie zeichnet um jede Einrichtung einen Kreis mit einstellbarem Abstand
+(Voreinstellung 100 m). Die Bubatzkarte 2.0 rechnet stattdessen die
+tatsächliche Sichtweite durch die Bebauung. In Innenstädten sind die
+Zonen dadurch deutlich kleiner — oft nur die Straßenzüge, von denen aus
+man die Einrichtung sieht — und es gibt keinen Abstandsregler: Es gilt
+allein die gesetzliche Sichtweite.</p>
+<h2>Daten, Aktualität, Genauigkeit</h2>
+<ul>
+<li><strong>Datenquelle:</strong> <a href="https://www.openstreetmap.org">OpenStreetMap</a>, der
+  Deutschland-Auszug von <a href="https://download.geofabrik.de">Geofabrik</a>. Die
+  Karte wird <strong>täglich</strong> mit den Änderungen des Vortags neu berechnet;
+  eine Korrektur in OpenStreetMap ist in der Regel nach ein bis zwei Tagen
+  zu sehen. Stand der Daten: <span id="stand">wird geladen</span>.</li>
+<li><strong>Einrichtungen</strong> werden über ihre OSM-Tags erkannt; welche, steht oben
+  unter „Was rot ist“ — erzeugt aus <code>config/tags.json</code> (Version 5) im Quellcode.</li>
+<li><strong>Grenznähe:</strong> Einrichtungen im Ausland werden nicht berücksichtigt;
+  Gebäude jenseits der Grenze verdecken in der Rechnung keine Sicht.</li>
+<li><strong>Fehlerquellen:</strong> fehlende oder falsch getaggte Einrichtungen, fehlende
+  Gebäude, Einrichtungen, die geschlossen sind, aber noch in OSM stehen,
+  private Sportanlagen, die in OSM nicht als privat markiert sind.</li>
+</ul>
+<h2>Fehler melden</h2>
+<ul>
+<li><strong>Etwas fehlt oder ist falsch eingezeichnet?</strong> Ein Klick auf eine rote
+  Fläche nennt die Einrichtung, die sie verursacht, und führt mit „In
+  OpenStreetMap ansehen“ direkt zu diesem Objekt. Das ist fast immer eine
+  Frage der OpenStreetMap-Daten — und die kann jede und jeder selbst
+  korrigieren: auf <a href="https://www.openstreetmap.org">openstreetmap.org</a> mit
+  einem Hinweis („Notiz hinzufügen“, kein Konto nötig) oder direkt mit den
+  Apps <a href="https://streetcomplete.app">StreetComplete</a> und
+  <a href="https://mapcomplete.org">MapComplete</a>. Die Bubatzkarte übernimmt die
+  Änderung automatisch.</li>
+<li><strong>Die Karte selbst funktioniert nicht richtig?</strong> E-Mail an die Adresse
+  unter „Kontakt“.</li>
+<li><strong>Fehler in der Hintergrundkarte</strong> (Straßen, Namen): ebenfalls
+  OpenStreetMap.</li>
+</ul>
+<h2>Datenschutz</h2>
+<p>Die Seite setzt keine Cookies, verwendet kein Tracking und keine
+Werbung. Die Seite selbst kommt von einem eigenen Server bei Hetzner
+(Deutschland), Kartendaten und Hintergrundkarte kommen aus einem Speicher
+bei Cloudflare (R2, Rechenzentrum EU); beide verarbeiten dabei als
+Auftragsverarbeiter Ihre IP-Adresse, wie jeder Hoster
+(<a href="https://www.hetzner.com/de/legal/privacy-policy/">Hetzner</a>,
+<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>). Für die Kartendaten bei Cloudflare wird kein Protokoll
+ausgewertet.</p>
+<h3>Was der eigene Server protokolliert</h3>
+<p>Der Server schreibt ein Zugriffsprotokoll. Es enthält keine Cookies und keine
+vollständigen IP-Adressen: die Adresse wird schon beim Schreiben gekürzt (IPv4
+auf die ersten drei Blöcke, IPv6 auf die ersten 48 Bit), lässt sich also keinem
+Anschluss mehr zuordnen.</p>
+<p>Einmal am Tag wird dieses Protokoll zu Tageszahlen verdichtet und dabei
+geleert — eine Protokollzeile liegt damit höchstens bis zum nächsten Lauf auf
+dem Server, in der Regel weniger als 48 Stunden.</p>
+<p>Die Tageszahlen enthalten <strong>keine</strong> Adressen, keine einzelnen Seitenpfade und
+keine Browserkennungen. Je Tag bleibt stehen: Zahl der Anfragen, Aufrufe der
+Karte und der Über-Seite, Zahl der unterschiedlichen gekürzten Adressen als
+Näherung für „Besucher", Zahl der erkannten Bots, übertragene Bytes, die
+Anzahl der Antworten je Statusklasse und die zehn häufigsten fremden Websites,
+von denen Besucher kamen. Diese Tageszahlen werden nach <strong>400 Tagen</strong> gelöscht,
+damit ein Jahresvergleich möglich bleibt und nicht mehr.</p>
+<p>Daraus entsteht eine kleine Statistikseite für den Betrieb — Laufzeiten der
+Berechnung, Größe des Kartenarchivs, die Tageszahlen von oben. Sie ist nicht
+verlinkt und enthält nichts, was über diese Zahlen hinausgeht.</p>
+<p>Es gibt keine Analysedienste, keine Zählpixel und keine Weitergabe dieser
+Zahlen an Dritte. Beim Laden und Bewegen der Karte wird <strong>nichts</strong> von anderen
+Servern nachgeladen — auch die Hintergrundkarte kommt aus einer eigenen Kopie
+(Protomaps), nicht von openstreetmap.org. Die einzige Ausnahme ist die
+Ortssuche: Wenn Sie einen Suchbegriff eingeben und absenden, geht er zusammen
+mit Ihrer IP-Adresse an den Geocoder Nominatim der OpenStreetMap Foundation
+(nominatim.openstreetmap.org, Vereinigtes Königreich;
+<a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">Datenschutzerklärung der OSMF</a>).
+Mehr als den Suchbegriff bekommt der Dienst nicht, beim Tippen wird nichts
+gesendet, und wer die Suche nicht benutzt, löst diesen Aufruf nie aus. Der
+Link „In OpenStreetMap ansehen“ im Popup einer Zone ist ein gewöhnlicher Link:
+Er lädt nichts nach, sondern führt erst, wenn Sie ihn anklicken, zu
+openstreetmap.org. Der
+aktuelle Kartenausschnitt steht in der Adresszeile (nach dem <code>#</code>) und wird nur
+übertragen, wenn Sie die Adresse selbst weitergeben.</p>
+<h2>Lizenzen und Weiterverwendung</h2>
+<ul>
+<li>Kartendaten © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a>,
+  <a href="https://opendatacommons.org/licenses/odbl/">ODbL 1.0</a>. Die berechneten
+  Verbotszonen sind eine daraus abgeleitete Datenbank und stehen ebenfalls
+  unter der ODbL; das vollständige Kachelarchiv gibt es auf Anfrage
+  (Kontakt).</li>
+<li>Die Software (Berechnung und diese Seite) ist freie Software unter der
+  <a href="https://www.gnu.org/licenses/agpl-3.0.de.html">AGPL-3.0-or-later</a>; der
+  Quellcode liegt auf <a href="https://github.com/konradvoelkel/bubatzblick">GitHub</a>.</li>
+<li>Screenshots dürfen mit Quellenangabe „BubatzBlick / © OpenStreetMap-
+  Mitwirkende“ frei verwendet werden.</li>
+<li>Hintergrundkarte: <a href="https://protomaps.com">Protomaps</a> Basemap aus
+  OpenStreetMap-Daten (ODbL), Stil <code>@protomaps/basemaps</code> (BSD-3-Clause),
+  Schrift Noto Sans (SIL Open Font License); als eigene Kopie gehostet.</li>
+</ul>
+<h2>Häufige Fragen</h2>
+<p><strong>Ist das eine amtliche Karte?</strong> Nein. Es ist ein privates,
+nicht-kommerzielles Projekt einer Einzelperson auf Basis offener Daten;
+keine Behörde und keine Hochschule stehen dahinter.</p>
+<p><strong>Warum ist meine Straße rot, obwohl ich von dort keine Schule sehe?</strong>
+Weil die Karte nur Gebäude als Sichthindernis kennt. Bäume, Mauern oder
+ein Bahndamm dazwischen fehlen im Modell — die Karte irrt hier zur
+sicheren Seite. Oder es liegt eine Einrichtung in der Nähe, die man
+nicht als solche erkennt (eine Kita im Wohnhaus, ein Bolzplatz).</p>
+<p><strong>Warum ist ein Ort weiß, an dem eine Kita ist?</strong> Dann fehlt die Kita in
+OpenStreetMap oder ist dort anders getaggt. Eintragen — nach ein bis zwei
+Tagen ist sie auf der Karte.</p>
+<p><strong>Auf einer weißen Fläche darf ich also konsumieren?</strong> Nicht, wenn
+Minderjährige in unmittelbarer Nähe sind (§ 5 Abs. 1), nicht in einer
+Fußgängerzone zwischen 7 und 20 Uhr, nicht in militärischen Bereichen —
+und nicht, wenn ein Hausrecht oder eine örtliche Regel es verbietet.</p>
+<p><strong>Warum gibt es keinen Abstandsregler?</strong> Weil das Gesetz keinen Abstand
+vorgibt, sondern die Sichtweite mit 100 m Obergrenze — und genau die wird
+berechnet.</p>
+<p><strong>Kann ich die Zonen für eigene Zwecke nutzen?</strong> Ja, unter der ODbL (siehe
+Lizenzen); das Archiv gibt es auf Anfrage.</p>
+<h2>Kontakt und Impressum</h2>
+<p>BubatzBlick (Bubatzkarte 2.0, bubatzblick.de) ist ein nicht-kommerzielles Angebot von</p>
+<p>Konrad Völkel
+Universitätsstr. 1
+40225 Düsseldorf</p>
+<p>E-Mail: <span id="mail">(JavaScript nötig)</span></p>
+<p>Dieses Angebot ist privat und steht in keiner Verbindung zur
+Heinrich-Heine-Universität Düsseldorf; die Anschrift dient allein der
+Erreichbarkeit.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.0.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · <a href="./" class="zur-karte">Karte</a></footer>
+<script src="config.js"></script>
+<script src="about.js"></script>
+</body>
+</html>

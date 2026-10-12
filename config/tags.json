@@ -1,0 +1,275 @@
+{
+  "version": 5,
+  "comment": "Verbotsobjekt-Tags nach § 5 Abs. 2 Satz 1 Nr. 1-4 und 6 KCanG. Diese Datei ist die EINZIGE Quelle: title/description je Kategorie und comment je Regel erscheinen wortgleich auf der Ueber-Seite (deploy/bin/build_about.py), ein Test prueft das. Regelsemantik (rust/bubatz/src/tags.rs): erste passende Kategorie in Dateireihenfolge; osm_tags = Schluessel traegt einen der Werte (split=true: Wert wird an ';' geteilt); name_match = unter 'when' enthaelt eines der Felder einen der Teilstrings; exclude/public_only wie kommentiert. Die Zaehlungen in den Regelkommentaren sind Groessenordnungen aus OSM-Deutschland zum Zeitpunkt der Regelentscheidung, keine laufenden Kennzahlen. `version` zaehlt Aenderungen an dieser Datei und stoesst `extract` neu an.",
+  "categories": {
+    "school": {
+      "kcang_nr": 1,
+      "title": "Schulen",
+      "description": "Allgemein- und berufsbildende Schulen nach den Schulgesetzen der Länder. Fahrschulen (gewerbliche Ausbildungsstätten nach dem Fahrlehrergesetz) und Sprachschulen sind keine Schulen im Sinne des Gesetzes und werden nicht gezeigt; Musikschulen zählen als Kinder- und Jugendeinrichtung.",
+      "osm_tags": [
+        {
+          "key": "amenity",
+          "values": [
+            "school"
+          ],
+          "comment": "Schule"
+        }
+      ]
+    },
+    "kindergarten": {
+      "kcang_nr": 3,
+      "title": "Kindergärten und Kitas",
+      "description": "Kindergärten, Kindertagesstätten und Horte (§ 5 Abs. 2 Nr. 3, Kinder- und Jugendeinrichtungen).",
+      "osm_tags": [
+        {
+          "key": "amenity",
+          "values": [
+            "kindergarten"
+          ],
+          "comment": "Kindergarten, Kita, Hort"
+        }
+      ]
+    },
+    "childcare": {
+      "kcang_nr": 3,
+      "title": "Kindertagespflege",
+      "description": "Kinderbetreuung außerhalb von Kitas (Tagesmütter, Krabbelgruppen, Kinderbetreuung in Einrichtungen).",
+      "osm_tags": [
+        {
+          "key": "amenity",
+          "values": [
+            "childcare"
+          ],
+          "comment": "Kinderbetreuung"
+        }
+      ]
+    },
+    "playground": {
+      "kcang_nr": 2,
+      "title": "Kinderspielplätze",
+      "description": "Alle Spielplätze, auch nicht öffentliche (das Gesetz verlangt anders als bei Sportstätten keine öffentliche Zugänglichkeit), sowie Indoorspielplätze.",
+      "osm_tags": [
+        {
+          "key": "leisure",
+          "values": [
+            "playground"
+          ],
+          "comment": "Spielplatz"
+        },
+        {
+          "key": "leisure",
+          "values": [
+            "indoor_play"
+          ],
+          "comment": "Indoorspielplatz"
+        }
+      ]
+    },
+    "sports": {
+      "kcang_nr": 4,
+      "title": "Öffentlich zugängliche Sportstätten",
+      "description": "Sportplätze, Hallen, Stadien, Bäder, Bahnen, Reit- und Golfanlagen, Eisbahnen, Fitnessstudios, Minigolf- und Bowlinganlagen. Öffentlich zugänglich heißt: nicht in OpenStreetMap als privat oder gesperrt markiert (access=private/no); Kundenzugang und Erlaubnis zählen als öffentlich. Einzelne Tischtennis-, Schach- oder Boule-Tische sind Geräte, keine Sportstätten.",
+      "osm_tags": [
+        {
+          "key": "leisure",
+          "values": [
+            "pitch",
+            "sports_hall",
+            "sports_centre",
+            "stadium",
+            "track",
+            "swimming_pool",
+            "water_park",
+            "fitness_centre",
+            "horse_riding",
+            "golf_course",
+            "ice_rink",
+            "miniature_golf",
+            "bowling_alley"
+          ],
+          "comment": "Sportplatz, Sporthalle, Sportzentrum, Stadion, Lauf-/Radbahn, Schwimmbecken, Wasserpark/Freibad, Fitnessstudio, Reitanlage, Golfplatz, Eisbahn, Minigolf, Bowling"
+        },
+        {
+          "key": "amenity",
+          "values": [
+            "swimming_pool"
+          ],
+          "comment": "Schwimmbad (ältere Schreibweise)"
+        }
+      ],
+      "exclude": [
+        {
+          "comment": "Einzelne Tischtennis-, Schach- oder Boule-Tische (leisure=pitch mit sport=table_tennis/chess/boules) sind Geräte, keine Sportstätten; eine Tischtennishalle als sports_centre bleibt.",
+          "when": {
+            "key": "leisure",
+            "value": "pitch"
+          },
+          "key": "sport",
+          "values": [
+            "table_tennis",
+            "chess",
+            "boules"
+          ]
+        }
+      ],
+      "public_only": [
+        {
+          "comment": "Alle Sportstätten: mit access=private oder access=no nicht öffentlich zugänglich; yes, permissive, customers, permit gelten als öffentlich; ohne access-Tag zählt die Anlage.",
+          "tags": [
+            {
+              "key": "leisure",
+              "values": [
+                "pitch",
+                "sports_hall",
+                "sports_centre",
+                "stadium",
+                "track",
+                "swimming_pool",
+                "water_park",
+                "fitness_centre",
+                "horse_riding",
+                "golf_course",
+                "ice_rink",
+                "miniature_golf",
+                "bowling_alley"
+              ]
+            },
+            {
+              "key": "amenity",
+              "values": [
+                "swimming_pool"
+              ]
+            }
+          ],
+          "public_access": [
+            "yes",
+            "permissive",
+            "customers",
+            "permit"
+          ],
+          "min_area_m2_if_untagged": 0
+        },
+        {
+          "comment": "Schwimmbecken ohne access-Tag zählen erst ab 100 m² Fläche (Gartenpools fallen weg, als Punkt eingetragene Becken ebenfalls).",
+          "tags": [
+            {
+              "key": "leisure",
+              "values": [
+                "swimming_pool"
+              ]
+            },
+            {
+              "key": "amenity",
+              "values": [
+                "swimming_pool"
+              ]
+            }
+          ],
+          "public_access": [
+            "yes",
+            "permissive",
+            "customers",
+            "permit"
+          ],
+          "min_area_m2_if_untagged": 100
+        }
+      ]
+    },
+    "youth": {
+      "kcang_nr": 3,
+      "title": "Kinder- und Jugendeinrichtungen",
+      "description": "Jugendzentren und Jugendclubs, soziale Einrichtungen für Kinder und Jugendliche (Heime, Tagesgruppen, Beratungsstellen — nur wenn in OpenStreetMap als für Kinder oder Jugendliche bestimmt eingetragen; Altenheime, Obdachlosenunterkünfte u. ä. zählen nicht), Musikschulen und Jugendherbergen.",
+      "osm_tags": [
+        {
+          "key": "community_centre",
+          "values": [
+            "youth_centre",
+            "youth_club"
+          ],
+          "comment": "Jugendzentrum, Jugendclub"
+        },
+        {
+          "key": "community_centre:for",
+          "values": [
+            "child",
+            "juvenile"
+          ],
+          "split": true,
+          "comment": "Gemeinschaftseinrichtung für Kinder oder Jugendliche"
+        },
+        {
+          "key": "social_facility:for",
+          "values": [
+            "child",
+            "juvenile"
+          ],
+          "split": true,
+          "comment": "Soziale Einrichtung für Kinder oder Jugendliche (Heim, Tagesgruppe, Beratung)"
+        },
+        {
+          "key": "amenity",
+          "values": [
+            "music_school"
+          ],
+          "comment": "Musikschule"
+        }
+      ],
+      "name_match": [
+        {
+          "comment": "Jugendherbergen: Hostels (tourism=hostel), deren Name oder Betreiber „Jugendherberge“ oder „DJH“ enthält.",
+          "when": {
+            "key": "tourism",
+            "value": "hostel"
+          },
+          "keys": [
+            "name",
+            "operator"
+          ],
+          "contains": [
+            "jugendherberge",
+            "djh"
+          ]
+        }
+      ]
+    },
+    "cannabis_club": {
+      "kcang_nr": 6,
+      "title": "Anbauvereinigungen",
+      "description": "Cannabis-Anbauvereinigungen, soweit sie in OpenStreetMap eingetragen sind (derzeit nur wenige).",
+      "osm_tags": [
+        {
+          "key": "club",
+          "values": [
+            "cannabis"
+          ],
+          "comment": "Cannabis-Club"
+        },
+        {
+          "key": "office",
+          "values": [
+            "cannabis_club"
+          ],
+          "comment": "Geschäftsstelle einer Anbauvereinigung"
+        }
+      ]
+    }
+  },
+  "non_opaque_exclusion": {
+    "comment": "M3 / Abschnitt 2.2: Bauwerke ohne durchgehende opake Wand werden NICHT als Hindernis gefuehrt (sicheres Vorzeichen: vergroessert die Zone).",
+    "building_values": [
+      "roof",
+      "carport",
+      "canopy"
+    ],
+    "building_levels_zero": true
+  },
+  "plausibility_limits_m2": {
+    "comment": "B8: Grenze pro Kategorie, Ueberschreitung fuehrt zu Warnung im Report, nicht zum Verwerfen.",
+    "default": 50000,
+    "leisure=golf_course": 1200000,
+    "leisure=horse_riding": 300000,
+    "leisure=water_park": 200000,
+    "amenity=school": 150000,
+    "leisure=sports_centre": 200000
+  }
+}

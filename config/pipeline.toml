@@ -1,0 +1,71 @@
+# bubatzblick Pipelineparameter -- einzige Quelle der Wahrheit fuer Radien,
+# Baender, CRS, Gitterweite und Schwellen.
+
+[crs]
+working = "EPSG:25832"   # ETRS89 / UTM 32N, bundesweit einheitlich
+output = "EPSG:4326"
+
+[reach]
+# NUR die gesetzliche Sichtweite von 100 m (§ 5 Abs. 2 KCanG), keine Baender
+# darunter oder darueber: ein einstellbarer Radius waere kein Rechtsstand,
+# sondern eine Vermutung. Hindernismenge und Rechenzeit skalieren mit der
+# Reichweite. Parameterversion v7.
+r_max_m = 100.0
+bands_m = [100]
+data_quality_margin_m = 2.0   # OSM-Lagegenauigkeit ~1-3 m, kein zusaetzlicher Puffer
+
+[grid]
+# 2 km, nicht 10 km: eine Zelle ist die Parallelisierungseinheit, und bei
+# 10 km lagen in einem Stadttest 54 % aller Objekte in EINER Zelle (dichte
+# Innenstadt). Die dominierte dann trotz 16 Kernen die Gesamtlaufzeit
+# (156 % durchschnittliche CPU-Auslastung statt der erwarteten ~1600 %).
+# Bei 2 km haelt die dichteste Zelle nur noch ~5 % aller Objekte.
+cell_size_m = 2000.0
+# Kein separater Halo-Parameter: der Hindernis-Suchkasten je Zelle ist
+# Zellgrenzen + Ausdehnung der zugeordneten Objekte + effective_reach_m.
+
+[visibility]
+# Das Sichtfeld je Verbotsobjekt: Beobachterpunkte entlang der Kontur, je
+# Punkt ein exaktes Sichtbarkeitspolygon gegen die Gebaeude, Vereinigung.
+# Das trifft das tatsaechliche Sichtfeld -- ein Schattenkegel waere eine
+# beweisbare Obermenge, an dicht bebauten Objekten aber bis 8,7x zu gross.
+spacing_m = 0.5      # Abstand der Beobachterpunkte entlang der Kontur
+margin_m = 0.5       # Sicherheitsmarge nach aussen
+min_points = 32
+# So hoch, dass ihn kein bekanntes Objekt erreicht (groesstes national:
+# 13.185 m Umfang = 26.369 Punkte bei 0,5 m). Jeder Abstand ueber
+# `spacing_m` reisst Luecken, die keine Marge schliesst: bei 1,67 m Abstand
+# fehlte ein 9,8 m breiter Sichtkorridor. Kosten gegenueber einem Deckel von
+# 4096: +0,22 % Beobachterpunkte.
+max_points = 32768
+# Sweep, Vereinigung der Punktpolygone, Hindernisverschmelzung, Kreis-Puffer,
+# Baender und Abschluss (Marge, Quelle, Freikreis) laufen im Kern
+# rust/bubatzcore (i_overlay) -- nicht einstellbar; ohne gebauten Kern bricht
+# der Lauf ab (gewollt): `make core`. Kreise sind exakte Minkowski-Summen mit
+# 216 Segmenten je Vollkreis, die Marge arbeitet ohne Eingabevereinfachung.
+# Das steckt in der Parameterversion `v1` (config.rs): wer hier etwas
+# aendert, muss sie mitziehen, sonst wird ein fremder Cache weiterverwendet.
+
+[simplify]
+tolerances_m = { z8 = 200, z10 = 80, z12 = 25, z14 = 0.5 }
+# Die Toleranz der FEINSTEN Stufe ist keine Darstellungs-, sondern eine
+# Genauigkeitsentscheidung: sie ist die letzte Kachelstufe (max_zoom = 14),
+# Clients zoomen darueber hinaus einfach hinein. Bei z14 = 8 m durfte
+# `one_sided_simplify` die Zone um bis zu 3*8 = 24 m nach aussen waschen
+# (Vertrag in geometry.py) -- auf einem schmalen Strassen-Sichtstern sind
+# das ~80 % Mehrflaeche, die Arme werden fett und die Luecken zwischen
+# Haeusern zugeschmiert -- im Viewer als ~80 % mehr gerenderte als
+# gerechnete Flaeche sichtbar. 0,5 m
+# entspricht der Sicherheitsmarge aus [visibility] und liegt in derselben
+# Groessenordnung wie das z14-Kachelraster (~0,37 m je Einheit).
+# Bis einschliesslich diesem Zoom tragen die Kacheln je Objekt EIN Merkmal
+# (Vereinigung aller Baender, band_max_m = kleinstes Band) statt sieben --
+# bis z11 (>= 75 m/Pixel) sind die 25-50 m breiten Baender unter einem
+# Pixel, der Radius-Regler des Clients wirkt dort nicht sichtbar. Ab z12
+# bandgenau.
+merge_bands_up_to_zoom = 11
+# Baender mit Toleranz <= diesem Wert (also z14, 0,5 m) bekommen die opaken
+# Gebaeudegrundrisse abgezogen: rot endet an der Hauswand.
+# Nur wirksam, wenn `tiles --buildings-path` angegeben ist; -1 = nie.
+subtract_buildings_max_tolerance_m = 8
+

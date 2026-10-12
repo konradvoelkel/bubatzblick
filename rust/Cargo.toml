@@ -1,0 +1,48 @@
+# Rust-Workspace von bubatzblick.
+#
+#   bubatzcore     Bibliothek: Geometrie und Algorithmen, keine I/O, kein PyO3
+#   bubatzcore-py  duenne PyO3-Bindung, Python-Modul `bubatzcore` (Tests, Orakel,
+#                  Uebergangszeit); Bauen:
+#                  uv run maturin develop --release -m rust/bubatzcore-py/Cargo.toml
+#   bubatz         das Binary: extract | clip | zones | tiles | pedestrian | report |
+#                  update-pbf | verify | serve
+#
+# `cargo test` im Workspace-Wurzelverzeichnis prueft die Bibliothek
+# (default-members); die Bindung wird mit `pyo3/extension-module` gebaut und
+# hat als cdylib keinen eigenen Testlauf.
+[workspace]
+resolver = "2"
+members = ["bubatzcore", "bubatzcore-py", "bubatz"]
+default-members = ["bubatzcore", "bubatz"]
+
+[workspace.package]
+# Die Versionsnummer des Projekts; pyproject.toml, CITATION.cff und der oberste
+# CHANGELOG-Eintrag muessen gleich lauten (tests/test_version.py). Die Zaehlung
+# beginnt bei 2: die 1 war die unveroeffentlichte Python-Fassung des Verfahrens.
+version = "2.0.0"
+edition = "2024"
+license = "AGPL-3.0-or-later"
+# Die gepinnte Toolchain (rust-toolchain.toml). Gegen aeltere Versionen ist
+# nichts geprueft, also wird auch nichts aelteres versprochen.
+rust-version = "1.97"
+repository = "https://github.com/konradvoelkel/bubatzblick"
+# `authors` bleibt leer: wer dahintersteht, steht im Impressum der Ueber-Seite.
+
+# Lint-Politik im Manifest, nicht nur als CI-Flag: `cargo clippy` verhaelt sich
+# lokal wie in der CI. Jedes Crate uebernimmt sie per `[lints] workspace = true`.
+[workspace.lints.rust]
+# Der Kern rechnet Geometrie, nichts davon braucht unsafe.
+unsafe_code = "forbid"
+unused_qualifications = "warn"
+
+[workspace.lints.clippy]
+# Debug-Ausgaben sollen nicht in einen Lauf ueber 500 000 Objekte geraten.
+dbg_macro = "deny"
+todo = "deny"
+
+# Kein `target-cpu=native` im Repo (lokal per RUSTFLAGS): das Wheel bzw. das
+# Binary muss auf einem gemieteten Server laufen.
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1

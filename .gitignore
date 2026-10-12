@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+uv.lock.tmp
+
+# Daten der Pipeline -- nie etwas davon tracken, auch nicht als Symlink.
+/data
+data/raw/
+data/interim/
+data/out/
+*.osm.pbf
+# Ausnahme: die winzigen Test-PBFs. Kein Kommentar hinter dem Muster --
+# gitignore kennt keine.
+!rust/bubatz/tests/data/tiny.osm.pbf
+!rust/bubatz/tests/data/pedestrian.osm.pbf
+
+# Lokale Konfiguration und Geheimnisse (Vorlage: deploy/site.env.example)
+.env
+deploy/site.env

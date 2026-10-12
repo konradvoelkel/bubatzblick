@@ -1,0 +1,24 @@
+# Abhaengigkeiten im Blick behalten. Woechentlich gesammelt statt bei jeder
+# Veroeffentlichung einzeln -- die Karte haengt an wenigen, grossen Kisten.
+version: 2
+updates:
+  - package-ecosystem: cargo
+    directory: /rust
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      # Patch-Staende sammeln; Minor/Major einzeln, damit der Diff lesbar bleibt.
+      patch:
+        update-types: [patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: uv
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5

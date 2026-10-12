@@ -1,0 +1,10 @@
+# Karte und Über-Seite dürfen in den Index. Ausgenommen ist allein die
+# unverlinkte Betriebsseite.
+#
+# Hier steht nur das Präfix, nie der Pfad selbst: robots.txt ist öffentlich,
+# und eine Zeile mit dem vollständigen Pfad veröffentlichte genau das, was sie
+# schützen soll. Diese Datei ist auch kein Schutz, sondern eine Bitte, die nur
+# gutwillige Crawler befolgen — der Schutz ist der unratbare Pfad.
+
+User-agent: *
+Disallow: /s/

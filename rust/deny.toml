@@ -1,0 +1,49 @@
+# cargo-deny: Advisories, Lizenzen, Quellen.
+# Lokal: cargo deny --manifest-path rust/Cargo.toml check
+#        (cargo install cargo-deny --locked)
+
+[graph]
+targets = [{ triple = "x86_64-unknown-linux-gnu" }]
+
+[advisories]
+# Zurueckgezogene Fassungen blockieren. Unmaintained-Hinweise sollen auffallen,
+# aber keinen Build anhalten: ein Austausch ist Arbeit, eine Luecke ist dringend.
+yanked = "deny"
+unmaintained = "workspace"
+
+[licenses]
+# Das Projekt selbst ist AGPL-3.0-or-later; Abhaengigkeiten muessen damit
+# vertraeglich sein. Diese Liste ist genau das, was im Baum vorkommt -- eine
+# neue Lizenz haelt die Pruefung an, und das ist der Zweck: sie gehoert
+# angesehen, nicht vorab pauschal erlaubt. Bewusst NICHT dabei: MPL-2.0 und
+# andere Copyleft-Lizenzen; kommt eine davon dazu, ist das eine Entscheidung.
+allow = [
+    "0BSD",
+    "AGPL-3.0-or-later",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "BSL-1.0",
+    "CDLA-Permissive-2.0",
+    "ISC",
+    "MIT",
+    "Unicode-3.0",
+    "Unlicense",
+    "Zlib",
+]
+confidence-threshold = 0.9
+
+[bans]
+# Zwei Fassungen derselben Kiste sind meist ein Versehen und blaehen das
+# Binary; nur melden, nicht blockieren -- Transitives hat man nicht in der Hand.
+multiple-versions = "warn"
+# Eine Abhaengigkeit ohne Versionsangabe aus der Registry waere ein Fehler.
+# Die `path`-Verweise innerhalb des Workspace sind genau das nicht.
+wildcards = "deny"
+allow-wildcard-paths = true
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]

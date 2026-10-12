@@ -1,0 +1,5 @@
+@protomaps/basemaps 5.7.2 (dist/basemaps.js) -- BSD-3-Clause
+Copyright (c) Protomaps LLC. https://github.com/protomaps/basemaps
+Fonts (fonts/): Noto Sans, SIL Open Font License 1.1 (fonts/OFL.txt), glyph PBFs
+from https://github.com/protomaps/basemaps-assets. Sprites (sprites/v4/): Protomaps
+basemaps-assets, BSD-3-Clause / CC-BY 4.0 icons.

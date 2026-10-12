@@ -1,0 +1,10 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Fehlende oder falsche Einrichtung
+    url: https://www.openstreetmap.org
+    about: >-
+      Das ist eine Datenfrage und wird direkt in OpenStreetMap korrigiert -- nach
+      einem Tageszyklus ist die Aenderung auf der Karte.
+  - name: Sicherheitsluecke
+    url: https://bubatzblick.de/about.html
+    about: Bitte nicht als Issue, sondern per E-Mail (siehe SECURITY.md).

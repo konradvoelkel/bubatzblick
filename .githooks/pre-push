@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+# Vor jedem Push dasselbe wie .github/workflows/tests.yml (Rust fmt/clippy/Tests,
+# cargo audit, Python-Lint/Tests), ~1-2 min. Installiert durch `make dev`
+# (git config core.hooksPath .githooks). Ueberspringen: git push --no-verify.
+set -eo pipefail
+cd "$(git rev-parse --show-toplevel)"
+export PATH="$HOME/.cargo/bin:$PATH"
+echo "pre-push: Rust"
+# Ganzer Workspace, nicht nur das Binary -- `bubatzcore` ist der Geometriekern.
+# Kein `| grep` hinter `cargo test`: die Pipe ersetzt den Exit-Code durch den
+# von grep, und weil "test result: FAILED" auf das Muster passt, ginge ein
+# fehlgeschlagener Lauf als Erfolg durch. `-q` ist schon knapp genug.
+(cd rust && cargo fmt --check --all && cargo clippy --workspace --all-targets --locked -q -- -D warnings && cargo test --workspace --locked -q)
+if command -v cargo-audit >/dev/null; then (cd rust && cargo audit -q); else echo "pre-push: cargo-audit fehlt (cargo install cargo-audit --locked) -- uebersprungen"; fi
+echo "pre-push: Python"
+uv run -q maturin develop --release -m rust/bubatzcore-py/Cargo.toml >/dev/null
+make -s lint
+uv run pytest -n auto -q
