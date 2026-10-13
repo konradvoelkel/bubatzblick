@@ -76,6 +76,12 @@ Grundkarte Protomaps aus eigener `basemap.pmtiles`, Zonen aus `zonen.pmtiles`,
 beides per HTTP-Range. Pfade in `viewer/config.js` (setzt der Deploy).
 Alternativ `?pmtiles=<URL>`, `?tiles=<Vorlage>` oder `bubatz serve`.
 
+Zwei zuschaltbare Ebenen neben dem Rot: Fußgängerzonen aus OpenStreetMap
+(blau, 7–20 Uhr) und örtliche Verbote außerhalb des KCanG (lila) — kommunale
+Verordnungen mit Fläche und Laufzeit, von Hand in `config/sonderzonen.toml`
+gepflegt; `scripts/sonderzonen.py` zeichnet daraus `viewer/sonderzonen.json`
+über die im Rechtsakt genannten Straßen und Plätze (Overpass).
+
 Die Ortssuche im Bedienfeld geht über Nominatim — die einzige Anfrage an einen
 fremden Server, nur beim Absenden, nie beim Tippen.
 
@@ -90,7 +96,7 @@ rust/bubatz/          Binary: alle Stufen, Vertrags- und Golden-Tests
 rust/bubatzcore-py/   PyO3-Brücke für die Python-Gegenprobe
 src/bubatzblick/      Python-Referenz des Sweeps (sampling_ref.py), nur Tests
 tests/                pytest: Rust gegen shapely
-config/               pipeline.toml, tags.json
+config/               pipeline.toml, tags.json, sonderzonen.toml
 scripts/              publish_germany.sh, Prüf- und Wartungsskripte
 viewer/               index.html + vendor/ (MapLibre GL JS, pmtiles.js)
 deploy/               Seite auf den Server, Tageszyklus, Bildgeneratoren

@@ -317,6 +317,90 @@ const TITEL = new Map(KATEGORIEN);
       });
     }
   }
+  // Oertliche Verbote ausserhalb von Paragraf 5 KCanG: Verordnungen und
+  // Allgemeinverfuegungen einer Stadt mit fester Flaeche und Laufzeit
+  // (config/sonderzonen.toml -> scripts/sonderzonen.py -> sonderzonen.json,
+  // liegt neben der Seite, nicht im Bucket). Lila, weil es eine dritte
+  // Rechtsfolge ist: Konsum verboten, teils auch das Mitfuehren. Gezeigt wird
+  // nur, was heute (Europe/Berlin) gilt; die Datei traegt gueltig_ab/bis.
+  const sonderUrl = cfg.sonderzonen || "sonderzonen.json";
+  const sonderSchalter = document.getElementById("sonder-an");
+  const sonderZahl = document.getElementById("sonder-zahl");
+  const sonderZeile = document.getElementById("sonder-zeile");
+  const heuteBerlin = () => new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" }).format(new Date());
+  const datumDe = iso => iso ? new Date(iso + "T12:00:00Z").toLocaleDateString("de-DE", { timeZone: "UTC" }) : "";
+  let sonderDaten = null;
+  try {
+    const r = await fetch(sonderUrl, { cache: "no-cache", signal: AbortSignal.timeout(8000) });
+    if (r.ok) {
+      const fc = await r.json();
+      const heute = heuteBerlin();
+      sonderDaten = {
+        type: "FeatureCollection",
+        features: (fc.features || []).filter(f => {
+          const p = f.properties || {};
+          return p.gueltig_ab && p.gueltig_ab <= heute && (!p.gueltig_bis || heute <= p.gueltig_bis);
+        }),
+      };
+    }
+  } catch (e) { /* keine Datei, oder zu langsam: dann kein Angebot */ }
+  if (!sonderDaten || !sonderDaten.features.length) {
+    if (sonderZeile) sonderZeile.remove();
+  } else {
+    const orte = [...new Set(sonderDaten.features.map(f => f.properties.ort))];
+    sonderZahl.textContent = "(" + String(sonderDaten.features.length) + ": " + orte.join(", ") + ")";
+    let sonderStand = false;
+    let sonderQuelleDa = false;
+    const sonderAnwenden = () => {
+      const an = sonderSchalter.checked;
+      if (an === sonderStand) return;
+      if (an) {
+        if (!sonderQuelleDa) {
+          map.addSource("sonder", { type: "geojson", data: sonderDaten });
+          sonderQuelleDa = true;
+        }
+        map.addLayer({ id: "sonder-fill", type: "fill", source: "sonder",
+          paint: { "fill-color": "#7d3c98", "fill-opacity": 0.45 } });
+        map.addLayer({ id: "sonder-line", type: "line", source: "sonder",
+          paint: { "line-color": "#7d3c98", "line-width": 2, "line-opacity": 0.9 } });
+      } else {
+        for (const id of ["sonder-fill", "sonder-line"]) map.removeLayer(id);
+      }
+      sonderStand = an;
+    };
+    const sonderZeichnen = () => {
+      document.getElementById("farblegende").classList.toggle("mit-sonder", sonderSchalter.checked);
+      try { sonderAnwenden(); } catch (err) { setTimeout(sonderZeichnen, 1000); }
+    };
+    sonderSchalter.addEventListener("change", sonderZeichnen);
+    map.once("load", sonderZeichnen);
+    map.on("click", "sonder-fill", e => {
+      const p = e.features[0].properties;
+      // GeoJSON-Eigenschaften kommen als Zeichenketten; Listen als JSON-Text.
+      const verbot = (() => { try { return JSON.parse(p.verbot); } catch (x) { return [String(p.verbot)]; } })();
+      const box = document.createElement("div");
+      const b = document.createElement("b");
+      b.textContent = String(p.name);
+      box.appendChild(b);
+      const zeile = t => { box.appendChild(document.createElement("br")); box.appendChild(document.createTextNode(t)); };
+      zeile(String(p.ort) + " · " + String(p.rechtsgrundlage));
+      zeile((verbot.includes("mitfuehren") ? "Konsum und Mitführen zum Konsum verboten" : "Konsum verboten")
+        + (p.zeit && p.zeit !== "ganztags" ? ", " + String(p.zeit) : ", ganztags"));
+      zeile("gilt seit " + datumDe(p.gueltig_ab) + (p.gueltig_bis && p.gueltig_bis !== "null" ? " bis " + datumDe(p.gueltig_bis) : ""));
+      if (p.hinweis) zeile(String(p.hinweis));
+      box.appendChild(document.createElement("br"));
+      const link = (href, text) => {
+        const a = document.createElement("a");
+        a.href = String(href); a.target = "_blank"; a.rel = "noopener noreferrer"; a.textContent = text;
+        box.appendChild(a);
+      };
+      link(p.quelle, "Rechtsakt");
+      if (p.karte && p.karte !== "null") { box.appendChild(document.createTextNode(" · ")); link(p.karte, "Amtliche Karte"); }
+      new maplibregl.Popup().setLngLat(e.lngLat).setDOMContent(box).addTo(map);
+    });
+    map.on("mouseenter", "sonder-fill", () => { map.getCanvas().style.cursor = "pointer"; });
+    map.on("mouseleave", "sonder-fill", () => { map.getCanvas().style.cursor = ""; });
+  }
   // Eigener Standort: Knopf unter der Navigation, folgt der Position
   // (trackUserLocation) mit Genauigkeitskreis. Braucht einen sicheren Kontext
   // (HTTPS oder localhost) und die Freigabe im Browser; die Seite selbst

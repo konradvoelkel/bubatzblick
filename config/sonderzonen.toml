@@ -1,0 +1,81 @@
+# Oertliche Konsumverbote ausserhalb von Paragraf 5 KCanG: kommunale Verordnungen und
+# Allgemeinverfuegungen, die eine feste Flaeche fuer Monate oder Jahre belegen.
+# Handgepflegt -- OpenStreetMap kennt solche Zonen nicht. scripts/sonderzonen.py liest
+# diese Datei, holt die genannten Strassen und Plaetze aus OpenStreetMap (Overpass),
+# puffert Wege auf ihre Breite, vereinigt alles und schreibt viewer/sonderzonen.json.
+#
+# Aufgenommen wird, was ein Rechtsakt mit Flaeche und Laufzeit ist; Volksfest- und
+# Veranstaltungsverfuegungen ueber Tage (Kerwe, Stadtfest, Messe) nicht. Vor jeder
+# Aenderung die Quelle lesen; `gueltig_bis` ist das Datum, ab dem die Zone verschwindet.
+#
+# Je Zone:
+#   id, name, ort, traeger, rechtsgrundlage  Text fuer Popup und Ueber-Seite
+#   verbot          Liste aus "konsum", "mitfuehren"
+#   zeit            Text, z. B. "ganztags" oder "7-18 Uhr an Schultagen"
+#   gueltig_ab/bis  ISO-Datum; bis fehlt = unbefristet
+#   quelle, karte   URLs (Rechtsakt, amtliche Karte)
+#   hinweis         was an der Grenze naeherungsweise ist
+#   bbox            [sued, west, nord, ost] fuer die Overpass-Abfrage
+#   [[zone.teil]]   name = Regex auf OSM-name, optional ids = [..] (explizit, ohne name),
+#                   typ = ["way","relation"], puffer_m (ueberschreibt die Klassenbreite),
+#                   lon_max/lon_min/lat_max/lat_min (Mittelpunktfilter), ohne_ids = [..],
+#                   tags = "k=v" statt name, optional = true (kein Abbruch ohne Treffer)
+
+[[zone]]
+id = "nuernberg-hauptbahnhof"
+name = "Cannabisverbotszone rund um den Hauptbahnhof"
+ort = "Nürnberg"
+traeger = "Stadt Nürnberg"
+rechtsgrundlage = "Cannabisverbotsverordnung (CanVVO) der Stadt Nürnberg vom 12. Dezember 2025, Art. 30 LStVG"
+verbot = ["konsum", "mitfuehren"]
+zeit = "ganztags"
+gueltig_ab = 2025-12-17
+# Paragraf 5 CanVVO: tritt mit Ablauf des 31. Dezember 2028 ausser Kraft.
+gueltig_bis = 2028-12-31
+quelle = "https://www.nuernberg.de/internet/stadtportal/cannabisverbotszone.html"
+karte = "https://www.nuernberg.de/imperia/md/zentral/dokumente/verbotszonen/cannabisverbotszone_2025.pdf"
+hinweis = "Grenze näherungsweise aus den im Verordnungstext genannten Straßen und Plätzen; maßgeblich ist die Karte der Stadt."
+bbox = [49.4425, 11.0690, 49.4492, 11.0880]
+
+[[zone.teil]]
+name = "^(Bahnhofsplatz|Nelson-Mandela-Platz|Celtisplatz|Südstadtpark|Hinterm Bahnhof|Celtisstraße|Celtisunterführung|Karl-Bröger-Tunnel|Allersberger Unterführung)$"
+[[zone.teil]]
+# Bahnhofstrasse nur bis zur Allersberger Unterfuehrung (oestlich davon nicht).
+name = "^Bahnhofstraße$"
+lon_max = 11.0875
+[[zone.teil]]
+# Frauentorgraben vom Sterntor (West) bis zum Koenigstor (Ost), der Graben zwischen den
+# Mauern ist breiter als die Fahrbahn.
+name = "^Frauentorgraben$"
+lon_min = 11.0690
+puffer_m = 22
+[[zone.teil]]
+# Zentraler Omnibusbahnhof: die Busbahnhof-Flaeche an der Kaete-Strobel-Strasse.
+name = "^Käte-Strobel-Straße$"
+[[zone.teil]]
+tags = 'amenity=bus_station'
+optional = true
+
+[[zone]]
+id = "muenchen-alter-botanischer-garten"
+name = "Alkohol- und Cannabisverbotszone Alter Botanischer Garten"
+ort = "München"
+traeger = "Landeshauptstadt München"
+rechtsgrundlage = "Alkohol- und Cannabisverbotsverordnung (ACVV) der Landeshauptstadt München vom 18. Dezember 2024, Art. 30 LStVG"
+verbot = ["konsum", "mitfuehren"]
+zeit = "ganztags"
+gueltig_ab = 2025-01-15
+gueltig_bis = 2027-01-14
+quelle = "https://stadt.muenchen.de/rathaus/stadtrecht/vorschrift/331/version1/0.html"
+karte = "https://stadt.muenchen.de/rathaus/stadtrecht/vorschrift/331.pdf"
+hinweis = "Park und Karl-Stützel-Platz mit den angrenzenden Gehwegen und Straßenabschnitten (Luisen-, Sophien-, Elisen-, Luitpoldstraße) näherungsweise; maßgeblich ist der Lageplan der Verordnung."
+bbox = [48.1398, 11.5598, 48.1434, 11.5668]
+
+[[zone.teil]]
+name = "^(Alter Botanischer Garten|Karl-Stützel-Platz)$"
+puffer_m = 12
+[[zone.teil]]
+name = "^(Luisenstraße|Sophienstraße|Elisenstraße|Luitpoldstraße)$"
+lat_max = 48.1432
+lon_min = 11.5600
+lon_max = 11.5666

@@ -43,6 +43,18 @@ genau der Tag-Datei erzeugt, mit der die Karte gerechnet wird
   (Multipolygon-Relationen), sind ebenfalls erfasst: nach Stückzahl rund 5 %,
   nach Fläche fast die Hälfte dessen, was die einfachen Flächen ausmachen —
   es sind die großen Plätze.
+- **Örtliche Verbote außerhalb des KCanG.** Städte können auf eigener
+  Rechtsgrundlage weitere Flächen belegen — in Bayern per Verordnung nach
+  Art. 30 LStVG (Konsum und meist auch das Mitführen zum Konsum, befristet
+  auf höchstens vier Jahre), anderswo per Allgemeinverfügung. Dafür gibt es
+  eine eigene Ebene in **Lila**: eine von Hand gepflegte Liste der Rechtsakte
+  mit Fläche und Laufzeit, derzeit die Cannabisverbotszone rund um den
+  Nürnberger Hauptbahnhof und der Alte Botanische Garten in München. Die
+  Grenzen sind aus den im Rechtsakt genannten Straßen und Plätzen
+  näherungsweise gezeichnet; maßgeblich ist die amtliche Karte, die im Popup
+  verlinkt ist. Gezeigt wird nur, was am heutigen Tag gilt. Verfügungen für
+  ein Volksfest oder Stadtfest über wenige Tage nimmt die Karte nicht auf.
+  Fehlt ein Rechtsakt, bitte mit Quelle melden (siehe „Fehler melden“).
 - **Militärische Bereiche der Bundeswehr** (§ 5 Abs. 3).
 - Alles, was in OpenStreetMap fehlt oder falsch eingetragen ist (siehe
   „Fehler melden“).
@@ -309,8 +321,9 @@ Tagen ist sie auf der Karte.
 
 **Auf einer weißen Fläche darf ich also konsumieren?** Nicht, wenn
 Minderjährige in unmittelbarer Nähe sind (§ 5 Abs. 1), nicht in einer
-Fußgängerzone zwischen 7 und 20 Uhr, nicht in militärischen Bereichen —
-und nicht, wenn ein Hausrecht oder eine örtliche Regel es verbietet.
+Fußgängerzone zwischen 7 und 20 Uhr, nicht in militärischen Bereichen,
+nicht in einer lila Zone — und nicht, wenn ein Hausrecht oder eine
+örtliche Regel es verbietet, die die Karte nicht kennt.
 
 **Warum gibt es keinen Abstandsregler?** Weil das Gesetz keinen Abstand
 vorgibt, sondern die Sichtweite mit 100 m Obergrenze — und genau die wird

@@ -9,6 +9,15 @@ Karte selbst.
 
 ## [Unveröffentlicht]
 
+### Hinzugefügt
+
+- Ebene „Örtliche Verbote“ (lila): kommunale Konsumverbote außerhalb von
+  § 5 KCanG mit Fläche und Laufzeit, von Hand gepflegt in
+  `config/sonderzonen.toml`, gezeichnet von `scripts/sonderzonen.py` aus den im
+  Rechtsakt genannten Straßen (Overpass) nach `viewer/sonderzonen.json`. Zum
+  Start: Nürnberg Hauptbahnhof (CanVVO, Art. 30 LStVG) und München Alter
+  Botanischer Garten (ACVV). Der Viewer zeigt nur, was am heutigen Tag gilt.
+
 ### Geändert
 
 - Abhängigkeiten: i_overlay 9.0.1, shapely 2.2.0, pyarrow 26.0.0, pyproj 3.8.0,

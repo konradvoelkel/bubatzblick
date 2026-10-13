@@ -82,6 +82,12 @@ warum die Schwellen in `config/pipeline.toml` so stehen, wie sie stehen.
   auswerten und stattdessen den alten Wurzelpfad anfragen. Erzeugt aus dem
   32er-PNG, zwei Größen in einer Datei:
   `convert viewer/img/favicon-32.png -define icon:auto-resize=32,16 viewer/favicon.ico`
+- **Örtliche Verbote** (lila Ebene) stehen in `config/sonderzonen.toml`: nur
+  Rechtsakte mit Fläche und Laufzeit von Monaten oder Jahren, mit Quelle, Karte
+  und Ablaufdatum; Volksfest-Verfügungen über Tage nicht. Nach jeder Änderung
+  `uv run python scripts/sonderzonen.py` (holt die Straßen aus Overpass) und
+  die erzeugte `viewer/sonderzonen.json` mit einchecken; `tests/test_sonderzonen.py`
+  prüft Geometrie, Pflichtfelder und Daten.
 - **Tag-Entscheidungen** stehen in `config/tags.json`, auch die Begründung: die
   Kommentare dort erscheinen wortgleich auf der Über-Seite. Eine Änderung dort
   ist eine Aussage über Recht, nicht über Code.

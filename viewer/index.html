@@ -24,7 +24,7 @@
 <style>
   /* Markenfarbe des Projekts: nur Bedienelemente --
      die Zonenflaechen sind Datenfarbe und bleiben davon unberuehrt. */
-  :root { --marke: #287c42; --zone: #c0392b; --fuss: #2a78d6; }
+  :root { --marke: #287c42; --zone: #c0392b; --fuss: #2a78d6; --sonder: #7d3c98; }
   html, body { margin: 0; height: 100%; font-family: system-ui, sans-serif; }
   #map { position: absolute; inset: 0; }
   /* Das Bedienfeld steht im Quelltext VOR der Karte, damit die Ortssuche am
@@ -73,6 +73,10 @@
   .swatch-fuss { background: rgba(42,120,214,.6); }
   #farblegende .fuss-nur { display: none; }
   #farblegende.mit-fuss .fuss-nur { display: flex; }
+  /* Oertliche Verbote (Verordnungen, Allgemeinverfuegungen): Lila, eigene Rechtsfolge wie Blau. */
+  .swatch-sonder { background: rgba(125,60,152,.55); }
+  #farblegende .sonder-nur { display: none; }
+  #farblegende.mit-sonder .sonder-nur { display: flex; }
   #hinweis { margin-top: 6px; padding-top: 6px; border-top: 1px solid #ddd; }
   #status, #ueber-zeile { margin-top: 6px; }
   #suche { display: flex; gap: 6px; margin-top: 8px; }
@@ -155,8 +159,9 @@
     <div><i class="swatch-zone"></i><span>rot: in Sichtweite – Konsumverbot nach § 5 Abs. 2 KCanG</span></div>
     <div><i class="swatch-frei"></i><span>weiß: keine Zone in diesen Daten – andere Verbote gelten trotzdem</span></div>
     <div class="fuss-nur"><i class="swatch-fuss"></i><span>blau: Fußgängerzone – Verbot 7–20 Uhr</span></div>
+    <div class="sonder-nur"><i class="swatch-sonder"></i><span>lila: örtliches Verbot (Verordnung der Stadt), teils auch Mitführen</span></div>
   </div>
-  <div id="panel-inhalt">Darunter: Kategorien, Fußgängerzonen, Datenstand, Impressum.</div>
+  <div id="panel-inhalt">Darunter: Kategorien, Fußgängerzonen, örtliche Verbote, Datenstand, Impressum.</div>
   <div id="panel-text" class="einklappbar">
   <small>Konsumverbot in Sichtweite (&le; 100 m, &sect; 5 Abs. 2 KCanG) von Schulen, Kinderspielplätzen,
   Kinder- und Jugendeinrichtungen, öffentlich zugänglichen Sportstätten und Anbauvereinigungen.
@@ -184,6 +189,8 @@
   </details>
   <label class="legende-zeile" id="fuss-zeile"><input type="checkbox" id="fuss-an">
     <span>Fußgängerzonen <small id="fuss-zeit"></small></span></label>
+  <label class="legende-zeile" id="sonder-zeile"><input type="checkbox" id="sonder-an" checked>
+    <span>Örtliche Verbote <small id="sonder-zahl"></small></span></label>
   <label id="datasets">Archiv <select id="ds"></select></label>
   <div id="status"><small>lade …</small></div>
   <div id="hinweis"><small><strong>Keine Rechtsauskunft.</strong> Die Karte bildet &sect; 5 Abs. 2 KCanG
