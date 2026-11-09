@@ -509,11 +509,9 @@ mod tests {
         }
         let mut s = w.create(f).unwrap();
         let c = TileCoord::new(Z, X, Y).unwrap();
-        if gzip {
-            s.add_tile(c, payload).unwrap();
-        } else {
-            s.add_raw_tile(c, payload).unwrap();
-        }
+        // Seit pmtiles 0.25 gibt es nur `add_tile`; mit `Compression::None` im
+        // Builder schreibt es die Bytes unveraendert (vorher `add_raw_tile`).
+        s.add_tile(c, payload).unwrap();
         s.finalize().unwrap();
     }
 

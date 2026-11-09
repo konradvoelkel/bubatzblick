@@ -32,10 +32,10 @@ tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["fmt"] }
 axum = { version = "0.8", default-features = false, features = ["http1", "tokio", "json", "query"] }
 tokio = { version = "1", features = ["rt-multi-thread", "net", "fs", "signal", "macros"] }
-pmtiles = { version = "0.24", default-features = false, features = ["mmap-async-tokio"] }
+pmtiles = { version = "0.25", default-features = false, features = ["mmap-async-tokio"] }
 tower-http = { version = "0.7", default-features = false, features = ["fs"] }
 
 [dev-dependencies]
 http-body-util = "0.1"
-pmtiles = { version = "0.24", default-features = false, features = ["mmap-async-tokio", "write"] }
+pmtiles = { version = "0.25", default-features = false, features = ["mmap-async-tokio", "write"] }
 tower = { version = "0.5", features = ["util"] }

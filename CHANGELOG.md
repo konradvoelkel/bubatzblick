@@ -33,6 +33,14 @@ Karte selbst.
   Kompression). Betroffen war der tägliche PBF-Download über HTTPS. Die
   Zonengeometrie bleibt gleich: Düsseldorf-Zonen aus altem und neuem Lock
   sind byte-identisch (`bubatz verify identical`, 2 715 Bänder).
+- Abhängigkeiten: i_overlay 9.1.0, pmtiles 0.25.0, serde_json 1.0.154,
+  proptest 1.12.0, hypothesis 6.170.0, pydantic-settings 2.16.0, ruff 0.17.1,
+  numpy 2.5.4, types-geopandas, setup-uv 10.3.3, rust-cache 2.9.3; dazu tokio
+  1.54.1 (RUSTSEC-2026-0386, `AsyncFd`-Konstruktoren). pmtiles 0.25 hat
+  `add_raw_tile` gestrichen, betroffen war nur ein Testhelfer. Zonengeometrie
+  und Kacheln bleiben gleich: Düsseldorf-Zonen aus altem und neuem Lock sind
+  byte-identisch (`bubatz verify identical`, 2 715 Bänder), das daraus gebaute
+  `zonen.pmtiles` ist sha256-gleich.
 
 ## [2.0.0] - 2026-10-13
 
