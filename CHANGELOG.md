@@ -24,6 +24,14 @@ Karte selbst.
   ruff 0.17.0, hypothesis, types-geopandas, toml-Crates, setup-uv 10.3.0. Die
   Zonengeometrie bleibt gleich: die Düsseldorf-Zonen aus i_overlay 9.0.0 und
   9.0.1 sind byte-identisch (`bubatz verify identical`, 2 715 Bänder).
+- Abhängigkeiten nach den Sicherheitsmeldungen vom Oktober 2026: certifi
+  2026.10.23 und webpki-roots 1.0.11 (ohne die emSign-Wurzeln, deren
+  Zwischenzertifikate beim eMudhra-Vorfall kompromittiert wurden),
+  rustls-webpki 0.103.16 (misstraut diesen Zwischenzertifikaten), rustls
+  0.23.46, arrow-data 60.1.0 (mit arrow-buffer und arrow-schema), ctutils
+  0.4.8. Betroffen war der tägliche PBF-Download über HTTPS. Die
+  Zonengeometrie bleibt gleich: Düsseldorf-Zonen aus altem und neuem Lock
+  sind byte-identisch (`bubatz verify identical`, 2 715 Bänder).
 
 ## [2.0.0] - 2026-10-13
 
