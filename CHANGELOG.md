@@ -29,7 +29,8 @@ Karte selbst.
   Zwischenzertifikate beim eMudhra-Vorfall kompromittiert wurden),
   rustls-webpki 0.103.16 (misstraut diesen Zwischenzertifikaten), rustls
   0.23.46, arrow-data 60.1.0 (mit arrow-buffer und arrow-schema), ctutils
-  0.4.8. Betroffen war der tägliche PBF-Download über HTTPS. Die
+  0.4.8, zstd 0.14.3 (mit zstd-safe 8.2.0 und zstd-sys 2.1.2, Parquet-
+  Kompression). Betroffen war der tägliche PBF-Download über HTTPS. Die
   Zonengeometrie bleibt gleich: Düsseldorf-Zonen aus altem und neuem Lock
   sind byte-identisch (`bubatz verify identical`, 2 715 Bänder).
 
