@@ -1,7 +1,8 @@
 # Python
 __pycache__/
 *.pyc
-.venv/
+# Ohne Schraegstrich: .venv kann ein Symlink sein, und `.venv/` trifft nur Verzeichnisse.
+.venv
 .mypy_cache/
 .ruff_cache/
 .pytest_cache/
