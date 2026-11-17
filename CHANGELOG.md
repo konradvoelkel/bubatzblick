@@ -9,6 +9,12 @@ Karte selbst.
 
 ## [Unveröffentlicht]
 
+## [2.1.0] - 2026-11-17
+
+Eine weitere Ebene, Pflege der Abhängigkeiten und eine Fehlermeldung, wo die
+Seite bisher schwieg. Verfahren, Zonengeometrie und Kachelvertrag sind
+gegenüber 2.0.0 unverändert.
+
 ### Hinzugefügt
 
 - Ebene „Örtliche Verbote“ (lila): kommunale Konsumverbote außerhalb von
@@ -17,6 +23,7 @@ Karte selbst.
   Rechtsakt genannten Straßen (Overpass) nach `viewer/sonderzonen.json`. Zum
   Start: Nürnberg Hauptbahnhof (CanVVO, Art. 30 LStVG) und München Alter
   Botanischer Garten (ACVV). Der Viewer zeigt nur, was am heutigen Tag gilt.
+  Auf der Karte seit dem 13. Oktober 2026.
 
 ### Geändert
 
@@ -63,6 +70,11 @@ Karte selbst.
   `zonen.pmtiles` ist sha256-gleich. Die Zellendateien unterscheiden sich
   nur im Fuß der Parquet-Datei (Versionsstempel der Bibliothek), ihr Inhalt
   ist gleich.
+- Über-Seite und README nennen die Zahlen des Laufs vom 17. November 2026
+  (496 217 Einrichtungen, 39,6 Millionen Gebäude, Archiv 372 MB) statt dreier
+  verschiedener Stände; die Zonenfläche steht als runder Wert da. Der Absatz
+  zur Hindernissuche beschreibt den Gebäudespeicher auf der Platte statt des
+  früheren R-Baums.
 
 ### Behoben
 

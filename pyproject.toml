@@ -1,6 +1,6 @@
 [project]
 name = "bubatzblick"
-version = "2.0.0"
+version = "2.1.0"
 description = "BubatzBlick (Bubatzkarte 2.0) — konservative Verbotszonen-Berechnung fuer ganz Deutschland (KCanG § 5)"
 readme = "README.md"
 requires-python = ">=3.13"

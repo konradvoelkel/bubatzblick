@@ -434,7 +434,7 @@ dependencies = [
 
 [[package]]
 name = "bubatz"
-version = "2.0.0"
+version = "2.1.0"
 dependencies = [
  "anyhow",
  "arrow",
@@ -462,7 +462,7 @@ dependencies = [
 
 [[package]]
 name = "bubatzcore"
-version = "2.0.0"
+version = "2.1.0"
 dependencies = [
  "flate2",
  "i_overlay",
@@ -473,7 +473,7 @@ dependencies = [
 
 [[package]]
 name = "bubatzcore-py"
-version = "2.0.0"
+version = "2.1.0"
 dependencies = [
  "bubatzcore",
  "numpy",

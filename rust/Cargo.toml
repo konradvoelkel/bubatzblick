@@ -19,7 +19,7 @@ default-members = ["bubatzcore", "bubatz"]
 # Die Versionsnummer des Projekts; pyproject.toml, CITATION.cff und der oberste
 # CHANGELOG-Eintrag muessen gleich lauten (tests/test_version.py). Die Zaehlung
 # beginnt bei 2: die 1 war die unveroeffentlichte Python-Fassung des Verfahrens.
-version = "2.0.0"
+version = "2.1.0"
 edition = "2024"
 license = "AGPL-3.0-or-later"
 # Die gepinnte Toolchain (rust-toolchain.toml). Gegen aeltere Versionen ist
