@@ -52,6 +52,17 @@ Karte selbst.
   vergleicht das Gerüst der WKB exakt und jede Koordinate bis 10 nm statt
   byte-gleich. Neu: `scripts/proj_reference.py` erzeugt und prüft die
   Referenz. Die Karte ändert sich dadurch nicht.
+- Abhängigkeiten: pmtiles 0.28.1, arrow und parquet 60.1.0, toml 1.2.0,
+  flate2 1.1.11, pyarrow 26.0.1, hypothesis 6.170.14, pydantic-settings
+  2.16.2, ruff 0.17.4, types-geopandas. pmtiles liest lokale Archive seit 0.27
+  mit positionierten Lesezugriffen statt über ein Speicherabbild;
+  `bubatz serve` bleibt beim Speicherabbild (`new_with_mmap_path`), sein
+  Verhalten ändert sich nicht. Zonengeometrie und Kacheln bleiben gleich:
+  Düsseldorf-Zonen aus altem und neuem Lock sind byte-identisch
+  (`bubatz verify identical`, 2 715 Bänder), das daraus gebaute
+  `zonen.pmtiles` ist sha256-gleich. Die Zellendateien unterscheiden sich
+  nur im Fuß der Parquet-Datei (Versionsstempel der Bibliothek), ihr Inhalt
+  ist gleich.
 
 ### Behoben
 

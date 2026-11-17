@@ -138,7 +138,7 @@ impl Dataset {
         {
             return Ok(o.clone());
         }
-        let reader = AsyncPmTilesReader::new_with_path(&self.path)
+        let reader = AsyncPmTilesReader::new_with_mmap_path(&self.path)
             .await
             .with_context(|| format!("{} oeffnen", self.path.display()))?;
         let metadata = match reader.get_metadata().await {
