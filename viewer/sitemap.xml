@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Die öffentlichen Seiten, eine Zeile je Seite. Eine Sitemap verlangt absolute
+  Adressen; die Domain steht hier fest wie in .well-known/security.txt, weil
+  der Deploy den Platzhalter für die Seitenadresse nur in *.html ersetzt.
+  tests/test_sitemap.py hält diese Liste, die Seiten und robots.txt zusammen.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://bubatzblick.de/</loc></url>
+  <url><loc>https://bubatzblick.de/about.html</loc></url>
+</urlset>

@@ -9,6 +9,11 @@ Karte selbst.
 
 ## [Unveröffentlicht]
 
+### Hinzugefügt
+
+- `sitemap.xml` mit den beiden Seiten der Karte, dazu der Verweis darauf in
+  `robots.txt`. Ein Test hält die Liste, die Seiten und `robots.txt` zusammen.
+
 ### Geändert
 
 - Abhängigkeiten: toml 1.2.1, ruff 0.17.5, hypothesis 6.170.15,

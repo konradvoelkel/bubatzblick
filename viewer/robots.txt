@@ -8,3 +8,6 @@
 
 User-agent: *
 Disallow: /s/
+
+# Die Liste der öffentlichen Seiten (tests/test_sitemap.py hält sie aktuell).
+Sitemap: https://bubatzblick.de/sitemap.xml
