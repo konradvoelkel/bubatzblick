@@ -73,4 +73,7 @@ Alle Prüfungen am Stück, ohne zu veröffentlichen:
 Dazu zwei Konsistenzproben, die nicht automatisch laufen:
 `bubatz verify identical` vergleicht denselben Ausschnitt aus zwei
 verschiedenen Extrakten (Stadt in Land, Land in Bund) byte-genau, und der
-Tageszyklus wird gegen einen Volllauf gestellt.
+Tageszyklus wird gegen einen Volllauf gestellt. Byte-genau gilt zwischen
+Läufen derselben libm-Fassung: die Projektion nimmt fünf Funktionen aus der
+libm des Systems, und deren letzte Bits ändern sich zwischen glibc-Fassungen
+(Kopf von `rust/bubatz/src/proj.rs`).
