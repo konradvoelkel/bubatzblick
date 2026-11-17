@@ -41,6 +41,15 @@ Karte selbst.
   und Kacheln bleiben gleich: Düsseldorf-Zonen aus altem und neuem Lock sind
   byte-identisch (`bubatz verify identical`, 2 715 Bänder), das daraus gebaute
   `zonen.pmtiles` ist sha256-gleich.
+- Tests laufen auf Ubuntu 26.04 (glibc 2.43), im Workflow als Fassung genannt
+  statt `ubuntu-latest`. Die neue glibc rundet `asinh` korrekt; dadurch
+  verschieben sich 731 von 9 998 Referenzpunkten der Projektion im Rechtswert
+  um höchstens 2 ULP (2,3e-10 m). Der Code ist unverändert, die neuen Bits
+  sind der Maßstab: `tests/data/proj_points.json` trägt jetzt pyproj unter
+  glibc 2.43 und daneben die bisherige Generation (glibc 2.39 bis 2.41), der
+  Test verlangt höchstens 10 nm Abstand zu pyproj und 90 % Bitgleichheit mit
+  einer der Generationen. Neu: `scripts/proj_reference.py` erzeugt und prüft
+  die Referenz. Die Karte ändert sich dadurch nicht.
 
 ## [2.0.0] - 2026-10-13
 
