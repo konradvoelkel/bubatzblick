@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Statistikseite des Tageszyklus: eine statische, nirgends verlinkte
-Seite unter einem geheimen Pfad (Caddy liefert STATS_DIR, Infra-Repo Rolle bubatzweb).
+Seite unter einem geheimen Pfad (Caddy liefert STATS_DIR, Infra-Repo Rolle bubatzblick).
 
 Liest den letzten Zyklus aus dem Tageslog, die *_summary.json der Stufen und
 stand.json, haengt einen Datensatz an history.jsonl an und schreibt index.html

@@ -93,7 +93,7 @@ Einrichtung tatsächlich sehen kann. Die Bubatzkarte 2.0 rechnet genau das:
 
 1. Aus OpenStreetMap werden alle Einrichtungen der genannten Arten und alle
    **Gebäudegrundrisse** Deutschlands geladen (rund 500 000 Einrichtungen,
-   39 Millionen Gebäude).
+   knapp 40 Millionen Gebäude).
 2. Entlang der gesamten Umrisslinie jeder Einrichtung werden alle 0,5 m
    Beobachterpunkte gesetzt. Weil OpenStreetMap den „Eingangsbereich“
    meist nicht kennt, gilt die **ganze Kontur** als Eingangsbereich — das
@@ -140,11 +140,11 @@ Lizenzen), hier die Bausteine:
   of visibility polygons*, [arXiv:1403.3905](https://arxiv.org/abs/1403.3905),
   2014, in CGAL implementiert); der Sweep war für viele Punkte in
   derselben Szene die einfachere, exakt nachrechenbare Wahl.
-- **Hindernissuche.** Die 39 Millionen Gebäude liegen in einem
-  [R-Baum](https://de.wikipedia.org/wiki/R-Baum) (A. Guttman, *R-trees: a
-  dynamic index structure for spatial searching*, SIGMOD 1984); je
-  Einrichtung werden alle Grundrisse im Umkreis von 102 m geholt und
-  verschmolzen.
+- **Hindernissuche.** Die knapp 40 Millionen Gebäude liegen nach
+  1-km-Kacheln sortiert auf der Platte; je Rechenzelle wird nur gelesen, was
+  in ihrem Suchkasten liegt. Je Einrichtung werden alle Grundrisse im Umkreis
+  von 102 m geholt und verschmolzen. So kommt die Rechnung für ganz
+  Deutschland mit 8 GB Arbeitsspeicher aus.
 - **Vereinigung und Marge.** Die Punktpolygone werden mit exakter
   Ganzzahlarithmetik vereinigt
   ([Boolesche Operationen auf Polygonen](https://en.wikipedia.org/wiki/Boolean_operations_on_polygons),
@@ -184,16 +184,16 @@ Lizenzen), hier die Bausteine:
 
 | | |
 |---|---|
-| Einrichtungen (Verbotsobjekte) | 492 934 |
-| Gebäudegrundrisse als Hindernisse | 39,3 Millionen |
-| Beobachterpunkte insgesamt | 192 Millionen (Median 235 je Einrichtung, Kontur 95 800 km) |
-| Rechenzellen | 52 804 à 2 km × 2 km |
-| Fläche aller Zonen | ~20 300 km² (Summe je Einrichtung) |
-| Vollständige Neuberechnung | 4 h 30 min auf dem Server (4 vCPU, 8 GB), ~2 h auf 16 Threads |
-| Tägliche Aktualisierung | ~20 min auf dem Server |
+| Einrichtungen (Verbotsobjekte) | 496 217 |
+| Gebäudegrundrisse als Hindernisse | 39,6 Millionen |
+| Beobachterpunkte insgesamt | rund 190 Millionen (Median 235 je Einrichtung, Kontur rund 96 000 km; gemessen im September 2026) |
+| Rechenzellen | 52 955 à 2 km × 2 km |
+| Fläche aller Zonen | rund 20 000 km² |
+| Vollständige Neuberechnung | 4 h 45 min auf dem Server (4 vCPU, 8 GB; zuletzt im Oktober 2026), ~2 h auf 16 Threads |
+| Tägliche Aktualisierung | 22 min auf dem Server, davon 12 min Rechnen |
 | Arbeitsspeicher, Spitze | ~5 GB |
-| Kachelarchiv | 354 MB, Zoom 8–14 |
-| Gemessen | vollständiger Lauf auf dem Server; der Datenstand steht unter „Aktualität“ |
+| Kachelarchiv | 372 MB, Zoom 8–14 |
+| Stand | täglicher Lauf auf dem Server am 17. November 2026; der heutige Datenstand steht unter „Aktualität“ |
 
 ## Unterschied zur Bubatzkarte (2023)
 

@@ -565,8 +565,8 @@ const TITEL = new Map(KATEGORIEN);
   const fertig = () => { ladeschleier.hidden = true; };
   map.once("load", fertig);
   map.once("idle", fertig);
-  // 30 s, und ohne Schuldzuweisung: beim ersten Aufruf werden ein 365-MB-
-  // Kachelarchiv und die Grundkarte per Range-Anfragen angelesen, ein zaeher
+  // 30 s, und ohne Schuldzuweisung: beim ersten Aufruf werden ein rund
+  // 370 MB grosses Kachelarchiv und die Grundkarte per Range-Anfragen angelesen, ein zaeher
   // Aufbau ist der Normalfall und kein Verbindungsfehler. Die erste Fassung
   // (15 s, "Verbindung pruefen") schlug auf der Live-Seite bei einem voellig
   // gewoehnlichen Kaltstart an.

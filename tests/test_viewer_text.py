@@ -52,9 +52,12 @@ UMSCHRIEBEN = [
 
 
 def _sichtbarer_text(html: str) -> str:
-    ohne = re.sub(r"<!--.*?-->", " ", html, flags=re.S)
-    ohne = re.sub(r"<style\b.*?</style>", " ", ohne, flags=re.S | re.I)
-    ohne = re.sub(r"<script\b.*?</script>", " ", ohne, flags=re.S | re.I)
+    # Die Endmarken so weit, wie ein Browser sie liest (`--!>`, `</script >`,
+    # `</script x>`): sonst bliebe Skripttext als "sichtbar" stehen. Kein
+    # Schutzfilter -- geprueft wird nur die eigene Seite.
+    ohne = re.sub(r"<!--.*?--!?>", " ", html, flags=re.S)
+    ohne = re.sub(r"<style\b.*?</style[^>]*>", " ", ohne, flags=re.S | re.I)
+    ohne = re.sub(r"<script\b.*?</script[^>]*>", " ", ohne, flags=re.S | re.I)
     # Attribute mitnehmen: placeholder, title und aria-label sind sichtbar bzw.
     # werden vorgelesen.
     sichtbar = re.findall(r'(?:placeholder|title|aria-label|alt)="([^"]*)"', ohne)

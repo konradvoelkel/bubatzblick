@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 # Tageszyklus auf dem Server (Einheit bubatz-daily.service, Umgebung aus
-# /srv/bubatz/env): PBF per Geofabrik-Tagesdiff fortschreiben, `make germany`
+# /etc/bubatz/env): PBF per Geofabrik-Tagesdiff fortschreiben, `make germany`
 # (inkrementell), `make publish` (Pruefkette, atomarer Tausch in die Webwurzel).
 # Ohne neue Folge endet der Zyklus nach update-pbf (~1,5 min); der Timer
-# startet alle sechs Stunden (die Tagesfolge kommt meist ~02:40 Ortszeit).
+# startet zweimal am Tag, morgens und abends (die Tagesfolge kommt meist nachts).
 set -u
 : "${BUBATZ_REPO:?}" "${RAW_DIR:?}" "${INTERIM_DIR:?}" "${OUT_DIR:?}" "${PUBLISH_DIR:?}" "${LOG_DIR:?}" "${N_JOBS:?}"
 cd "$BUBATZ_REPO" || exit 1

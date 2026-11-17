@@ -188,7 +188,7 @@ Einrichtung tatsächlich sehen kann. Die Bubatzkarte 2.0 rechnet genau das:</p>
 <ol>
 <li>Aus OpenStreetMap werden alle Einrichtungen der genannten Arten und alle
    <strong>Gebäudegrundrisse</strong> Deutschlands geladen (rund 500 000 Einrichtungen,
-   39 Millionen Gebäude).</li>
+   knapp 40 Millionen Gebäude).</li>
 <li>Entlang der gesamten Umrisslinie jeder Einrichtung werden alle 0,5 m
    Beobachterpunkte gesetzt. Weil OpenStreetMap den „Eingangsbereich“
    meist nicht kennt, gilt die <strong>ganze Kontur</strong> als Eingangsbereich — das
@@ -231,11 +231,11 @@ Lizenzen), hier die Bausteine:</p>
   of visibility polygons</em>, <a href="https://arxiv.org/abs/1403.3905">arXiv:1403.3905</a>,
   2014, in CGAL implementiert); der Sweep war für viele Punkte in
   derselben Szene die einfachere, exakt nachrechenbare Wahl.</li>
-<li><strong>Hindernissuche.</strong> Die 39 Millionen Gebäude liegen in einem
-  <a href="https://de.wikipedia.org/wiki/R-Baum">R-Baum</a> (A. Guttman, <em>R-trees: a
-  dynamic index structure for spatial searching</em>, SIGMOD 1984); je
-  Einrichtung werden alle Grundrisse im Umkreis von 102 m geholt und
-  verschmolzen.</li>
+<li><strong>Hindernissuche.</strong> Die knapp 40 Millionen Gebäude liegen nach
+  1-km-Kacheln sortiert auf der Platte; je Rechenzelle wird nur gelesen, was
+  in ihrem Suchkasten liegt. Je Einrichtung werden alle Grundrisse im Umkreis
+  von 102 m geholt und verschmolzen. So kommt die Rechnung für ganz
+  Deutschland mit 8 GB Arbeitsspeicher aus.</li>
 <li><strong>Vereinigung und Marge.</strong> Die Punktpolygone werden mit exakter
   Ganzzahlarithmetik vereinigt
   (<a href="https://en.wikipedia.org/wiki/Boolean_operations_on_polygons">Boolesche Operationen auf Polygonen</a>,
@@ -282,31 +282,31 @@ Lizenzen), hier die Bausteine:</p>
 <tbody>
 <tr>
 <td>Einrichtungen (Verbotsobjekte)</td>
-<td>492 934</td>
+<td>496 217</td>
 </tr>
 <tr>
 <td>Gebäudegrundrisse als Hindernisse</td>
-<td>39,3 Millionen</td>
+<td>39,6 Millionen</td>
 </tr>
 <tr>
 <td>Beobachterpunkte insgesamt</td>
-<td>192 Millionen (Median 235 je Einrichtung, Kontur 95 800 km)</td>
+<td>rund 190 Millionen (Median 235 je Einrichtung, Kontur rund 96 000 km; gemessen im September 2026)</td>
 </tr>
 <tr>
 <td>Rechenzellen</td>
-<td>52 804 à 2 km × 2 km</td>
+<td>52 955 à 2 km × 2 km</td>
 </tr>
 <tr>
 <td>Fläche aller Zonen</td>
-<td>~20 300 km² (Summe je Einrichtung)</td>
+<td>rund 20 000 km²</td>
 </tr>
 <tr>
 <td>Vollständige Neuberechnung</td>
-<td>4 h 30 min auf dem Server (4 vCPU, 8 GB), ~2 h auf 16 Threads</td>
+<td>4 h 45 min auf dem Server (4 vCPU, 8 GB; zuletzt im Oktober 2026), ~2 h auf 16 Threads</td>
 </tr>
 <tr>
 <td>Tägliche Aktualisierung</td>
-<td>~20 min auf dem Server</td>
+<td>22 min auf dem Server, davon 12 min Rechnen</td>
 </tr>
 <tr>
 <td>Arbeitsspeicher, Spitze</td>
@@ -314,11 +314,11 @@ Lizenzen), hier die Bausteine:</p>
 </tr>
 <tr>
 <td>Kachelarchiv</td>
-<td>354 MB, Zoom 8–14</td>
+<td>372 MB, Zoom 8–14</td>
 </tr>
 <tr>
-<td>Gemessen</td>
-<td>vollständiger Lauf auf dem Server; der Datenstand steht unter „Aktualität“</td>
+<td>Stand</td>
+<td>täglicher Lauf auf dem Server am 17. November 2026; der heutige Datenstand steht unter „Aktualität“</td>
 </tr>
 </tbody>
 </table>

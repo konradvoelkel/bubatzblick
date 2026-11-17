@@ -30,8 +30,8 @@ Mitarbeit: `CONTRIBUTING.md`.
 - **Karte:** z8–z14, je Zoomstufe nur nach außen vereinfacht; in z14 sind die
   Gebäudegrundrisse abgezogen.
 
-Größenordnung Deutschland: ~500 000 Verbotsobjekte, 39 Mio. Gebäude,
-~19 200 km² Zonenfläche, `zonen.pmtiles` ~365 MB.
+Größenordnung Deutschland (November 2026): ~500 000 Verbotsobjekte, knapp
+40 Mio. Gebäude, ~20 000 km² Zonenfläche, `zonen.pmtiles` ~370 MB.
 
 Stufen, Kachelvertrag und Prüfkette: **[`docs/pipeline.md`](docs/pipeline.md)**.
 

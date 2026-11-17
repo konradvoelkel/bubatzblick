@@ -6,6 +6,7 @@ Es gibt genau einen unterstützten Stand: den, der auf
 [bubatzblick.de](https://bubatzblick.de) läuft, und damit den aktuellen
 `master`-Branch. Ältere Veröffentlichungen werden nicht zurückgepflegt.
 
+## Melden
 
 Bitte **keine** öffentlichen Issues für Sicherheitslücken. Stattdessen eine
 E-Mail an die Kontaktadresse der Über-Seite der Karte
