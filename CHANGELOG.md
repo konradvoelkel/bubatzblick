@@ -48,8 +48,10 @@ Karte selbst.
   sind der Maßstab: `tests/data/proj_points.json` trägt jetzt pyproj unter
   glibc 2.43 und daneben die bisherige Generation (glibc 2.39 bis 2.41), der
   Test verlangt höchstens 10 nm Abstand zu pyproj und 90 % Bitgleichheit mit
-  einer der Generationen. Neu: `scripts/proj_reference.py` erzeugt und prüft
-  die Referenz. Die Karte ändert sich dadurch nicht.
+  einer der Generationen. Der Extrakt-Test (`tests/extract_tiny.rs`)
+  vergleicht das Gerüst der WKB exakt und jede Koordinate bis 10 nm statt
+  byte-gleich. Neu: `scripts/proj_reference.py` erzeugt und prüft die
+  Referenz. Die Karte ändert sich dadurch nicht.
 
 ## [2.0.0] - 2026-10-13
 

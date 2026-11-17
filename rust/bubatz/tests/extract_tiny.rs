@@ -1,6 +1,13 @@
 //! `bubatz extract` auf einer winzigen, von Hand gebauten PBF
 //! (`tests/data/tiny.osm.pbf`): erwartete Objekte, Kategorien, Opazitaet und
-//! byte-gleiche WKB stehen in `tests/data/tiny_expected.json`.
+//! WKB stehen in `tests/data/tiny_expected.json` (aus der Python-Fassung, pyproj
+//! unter glibc 2.39).
+//!
+//! Verglichen wird das Geruest der WKB (Typen, Ring- und Punktzahlen, Reihenfolge)
+//! exakt und jede Koordinate bis auf 10 nm. Byte-gleich ist die WKB nur auf
+//! derselben libm: die Projektion holt `asinh` und vier weitere Funktionen aus der
+//! libm des Systems (Kopf von `src/proj.rs`), und drei Maschinen lieferten fuer
+//! denselben Punkt drei letzte Bytes (glibc 2.39, glibc 2.43, CI-Runner mit 2.43).
 use std::path::Path;
 use std::process::Command;
 
@@ -42,6 +49,85 @@ fn read_column_pairs(path: &Path, key_cols: &[&str]) -> Vec<(String, Vec<u8>)> {
     out
 }
 
+/// Groesster Abstand je Koordinate, in Metern; dieselbe Schranke wie im
+/// Projektionstest. Die libm-Fassungen liegen hoechstens 2 ULP auseinander
+/// (1,9e-9 m), ein falscher Ring oder eine vertauschte Achse um Meter.
+const TOLERANCE_M: f64 = 1e-8;
+
+fn unhex(s: &str) -> Vec<u8> {
+    (0..s.len())
+        .step_by(2)
+        .map(|i| u8::from_str_radix(&s[i..i + 2], 16).unwrap())
+        .collect()
+}
+
+/// Zerlegt eine WKB (little endian) in ihr Geruest -- Geometrietypen und alle
+/// Zaehler in Lesereihenfolge -- und die Koordinaten.
+fn split_wkb(b: &[u8]) -> (Vec<u32>, Vec<f64>) {
+    fn u32_at(b: &[u8], p: &mut usize) -> u32 {
+        let v = u32::from_le_bytes(b[*p..*p + 4].try_into().unwrap());
+        *p += 4;
+        v
+    }
+    fn points(b: &[u8], p: &mut usize, n: u32, xy: &mut Vec<f64>) {
+        for _ in 0..2 * n {
+            xy.push(f64::from_le_bytes(b[*p..*p + 8].try_into().unwrap()));
+            *p += 8;
+        }
+    }
+    fn geometry(b: &[u8], p: &mut usize, shape: &mut Vec<u32>, xy: &mut Vec<f64>) {
+        assert_eq!(b[*p], 1, "WKB nicht little endian");
+        *p += 1;
+        let kind = u32_at(b, p);
+        shape.push(kind);
+        match kind {
+            1 => points(b, p, 1, xy),
+            2 => {
+                let n = u32_at(b, p);
+                shape.push(n);
+                points(b, p, n, xy);
+            }
+            3 => {
+                let rings = u32_at(b, p);
+                shape.push(rings);
+                for _ in 0..rings {
+                    let n = u32_at(b, p);
+                    shape.push(n);
+                    points(b, p, n, xy);
+                }
+            }
+            4..=7 => {
+                let parts = u32_at(b, p);
+                shape.push(parts);
+                for _ in 0..parts {
+                    geometry(b, p, shape, xy);
+                }
+            }
+            other => panic!("WKB-Typ {other}"),
+        }
+    }
+    let (mut p, mut shape, mut xy) = (0usize, Vec::new(), Vec::new());
+    geometry(b, &mut p, &mut shape, &mut xy);
+    assert_eq!(p, b.len(), "WKB mit Rest");
+    (shape, xy)
+}
+
+/// Gleiches Geruest, jede Koordinate innerhalb der Schranke. Gibt zurueck, ob
+/// die WKB sogar byte-gleich ist.
+fn assert_wkb_matches(key: &str, got: &[u8], expected_hex: &str) -> bool {
+    let expected = unhex(expected_hex);
+    let (shape, xy) = split_wkb(got);
+    let (exp_shape, exp_xy) = split_wkb(&expected);
+    assert_eq!(shape, exp_shape, "WKB-Geruest {key}");
+    for (i, (a, e)) in xy.iter().zip(&exp_xy).enumerate() {
+        assert!(
+            (a - e).abs() <= TOLERANCE_M,
+            "WKB {key}, Koordinate {i}: {a} statt {e}"
+        );
+    }
+    got == expected.as_slice()
+}
+
 #[test]
 fn extract_matches_python_on_tiny_pbf() {
     let data = Path::new(env!("CARGO_MANIFEST_DIR")).join("tests/data");
@@ -66,19 +152,24 @@ fn extract_matches_python_on_tiny_pbf() {
     let expected: serde_json::Value =
         serde_json::from_str(&std::fs::read_to_string(data.join("tiny_expected.json")).unwrap())
             .unwrap();
-    let hex = |b: &[u8]| b.iter().map(|x| format!("{x:02x}")).collect::<String>();
     let protected = read_column_pairs(&out.join("protected.parquet"), &["osm_type", "osm_id"]);
     let buildings = read_column_pairs(&out.join("buildings.parquet"), &["osm_id"]);
     let exp_p = expected["protected"].as_object().unwrap();
     let exp_b = expected["buildings"].as_object().unwrap();
     assert_eq!(protected.len(), exp_p.len(), "Verbotsobjekte");
     assert_eq!(buildings.len(), exp_b.len(), "Gebaeude");
+    let mut identical = 0usize;
     for (k, wkb) in &protected {
-        assert_eq!(hex(wkb), exp_p[k].as_str().unwrap(), "WKB {k}");
+        identical += usize::from(assert_wkb_matches(k, wkb, exp_p[k].as_str().unwrap()));
     }
     for (k, wkb) in &buildings {
-        assert_eq!(hex(wkb), exp_b[k].as_str().unwrap(), "WKB Gebaeude {k}");
+        let key = format!("Gebaeude {k}");
+        identical += usize::from(assert_wkb_matches(&key, wkb, exp_b[k].as_str().unwrap()));
     }
+    println!(
+        "byte-gleich {identical}/{}; der Rest innerhalb {TOLERANCE_M:e} m",
+        protected.len() + buildings.len()
+    );
     let summary: serde_json::Value =
         serde_json::from_str(&std::fs::read_to_string(out.join("extract_summary.json")).unwrap())
             .unwrap();

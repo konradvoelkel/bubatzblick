@@ -42,7 +42,8 @@ jobs:
         run: |
           cargo fmt --check --all
           cargo clippy --workspace --all-targets --locked -- -D warnings
-          cargo test --workspace --locked
+          # --no-fail-fast: sonst verdeckt das erste rote Testbinary alle folgenden.
+          cargo test --workspace --locked --no-fail-fast
       - name: "Python: uv sync, bubatzcore (maturin), Lint, Tests"
         run: |
           uv sync --frozen
