@@ -53,6 +53,12 @@ Karte selbst.
   byte-gleich. Neu: `scripts/proj_reference.py` erzeugt und prüft die
   Referenz. Die Karte ändert sich dadurch nicht.
 
+### Behoben
+
+- Ohne WebGL blieb die Karte stumm bei „Karte lädt …“ stehen, der Fehler stand
+  nur in der Konsole. Jetzt sagt die Seite, woran es liegt und was hilft; dasselbe
+  gilt für jeden anderen Abbruch beim Start und für abgeschaltetes JavaScript.
+
 ## [2.0.0] - 2026-10-13
 
 Erste Veröffentlichung. Was sie kann, steht in `README.md`.

@@ -129,6 +129,21 @@
            background: rgba(255,255,255,.92); border-radius: 6px; padding: 6px 12px;
            font-size: 13px; color: #333; box-shadow: 0 1px 4px rgba(0,0,0,.3); }
   #laden[hidden] { display: none; }
+  /* Startfehler (app.js `startFehler`) und die Seite ohne JavaScript: mittig
+     und mit Umbruch statt als einzeilige Pille am Rand -- es ist dann das
+     Einzige, was die Karte sagt. */
+  #laden.fehler, #ohne-js {
+    position: absolute; z-index: 2; left: 50%; top: 50%; bottom: auto;
+    transform: translate(-50%, -50%); width: min(86vw, 30em); box-sizing: border-box;
+    background: rgba(255,255,255,.96); border-radius: 6px; padding: 12px 16px;
+    font-size: 14px; line-height: 1.4; color: #333; text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,.3); }
+  /* Breit steht das Bedienfeld links (bis 330 px): die Meldung mittig in den
+     Rest, sonst deckt sie bei 800 px Breite den Suchknopf zu. */
+  @media (min-width: 641px) {
+    #laden.fehler, #ohne-js { left: calc(340px + (100% - 340px) / 2);
+                              width: min(calc(100% - 370px), 30em); }
+  }
   code { font-size: 12px; }
   @media (max-width: 640px) {
     /* Volle Breite oben, scrollt statt ueber den Rand zu laufen. */
@@ -202,6 +217,11 @@
 </div>
 <div id="map"></div>
 <div id="laden">Karte lädt …</div>
+<noscript>
+  <style>#laden { display: none; }</style>
+  <div id="ohne-js">Diese Karte braucht JavaScript. Was sie zeigt und wie sie rechnet, steht
+  unter <a href="about.html">Über diese Karte</a>.</div>
+</noscript>
 <!-- MapLibre GL JS 4.7.1 und pmtiles.js 3.2.1 liegen unter vendor/ (BSD-3, siehe LICENSE-Dateien dort);
      `bubatz serve` bettet Seite und vendor/ ins Binary ein, fuer Pages liegt der Ordner daneben. -->
 <script src="vendor/maplibre-gl.js"></script>

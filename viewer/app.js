@@ -2,6 +2,20 @@
 // CSP `script-src 'self'` ohne 'unsafe-inline' auskommt. Regel: nichts aus
 // der URL, aus stand.json oder aus Kacheleigenschaften als HTML einsetzen,
 // immer textContent / createElement.
+
+// Scheitert der Start, sagt die Seite es. Vorher blieb sie stumm bei
+// "Karte laedt ..." stehen, wenn der Browser kein WebGL hergab: der Fehler stand
+// nur in der Konsole, und alles nach der Kartenerzeugung lief nie an.
+function startFehler(text) {
+  const el = document.getElementById("laden");
+  el.hidden = false;
+  el.className = "fehler";
+  el.setAttribute("role", "alert");
+  el.textContent = text;
+  // "lade ..." im Bedienfeld stimmt jetzt nicht mehr.
+  document.getElementById("status").replaceChildren();
+}
+
 (async () => {
 // Kategorien in der Reihenfolge des § 5 Abs. 2 KCanG. Schluessel = Eigenschaft
 // `category` der Kacheln, Titel wortgleich aus config/tags.json --
@@ -163,7 +177,13 @@ const TITEL = new Map(KATEGORIEN);
   // Ebene -- kein Fehler, nur kein Angebot.
   const haveFuss = await exists(fussgaengerUrl);
 
-  const map = new maplibregl.Map({
+  // Ohne WebGL zeichnet MapLibre nichts, der Konstruktor wirft (abgeschaltete
+  // Hardwarebeschleunigung, gesperrter Grafiktreiber, manche Fernzugriffe und
+  // gehaertete Browser). Kein Vorab-Test: der Konstruktor ist die Stelle, die
+  // es wirklich braucht, und merkt auch "API da, Kontext nicht erzeugbar".
+  let map;
+  try {
+    map = new maplibregl.Map({
     container: "map",
     center: [6.7735, 51.2277], zoom: 13, hash: true,
     // MapLibre beschriftet seine Bedienelemente sonst englisch -- auf einer
@@ -188,7 +208,15 @@ const TITEL = new Map(KATEGORIEN);
       sprite: `${abs(cfg.assets)}/sprites/v4/light`,
       sources, layers,
     },
-  });
+    });
+  } catch (err) {
+    if (!/webgl/i.test(String(err && err.message))) throw err;
+    console.error(err);
+    startFehler("Die Karte braucht WebGL, und dieser Browser stellt es gerade nicht bereit. "
+      + "Meist hilft es, in den Browser-Einstellungen die Hardwarebeschleunigung einzuschalten "
+      + "oder einen anderen Browser zu nehmen.");
+    return;
+  }
   map.addControl(new maplibregl.NavigationControl());
 
   // Legende: eine Zeile je Kategorie, jede blendet ihre Zonen aus und ein.
@@ -614,4 +642,9 @@ const TITEL = new Map(KATEGORIEN);
     }
     new maplibregl.Popup().setLngLat(e.lngLat).setDOMContent(box).addTo(map);
   });
-})();
+})().catch(err => {
+  // Alles andere, was den Start abbricht (ein Skript unter vendor/ nicht geladen,
+  // ein Fehler vor der ersten Karte): ebenfalls sagen statt schweigen.
+  console.error(err);
+  startFehler("Die Karte konnte nicht gestartet werden. Bitte die Seite neu laden.");
+});
