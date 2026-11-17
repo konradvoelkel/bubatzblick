@@ -9,6 +9,13 @@ Karte selbst.
 
 ## [Unveröffentlicht]
 
+### Geändert
+
+- Abhängigkeiten: toml 1.2.1, ruff 0.17.5, hypothesis 6.170.15,
+  pydantic-settings 2.16.3, types-geopandas. Zonengeometrie und Kacheln
+  bleiben gleich (Düsseldorf-Zonen byte-identisch, `zonen.pmtiles`
+  sha256-gleich).
+
 ## [2.1.0] - 2026-11-17
 
 Eine weitere Ebene, Pflege der Abhängigkeiten und eine Fehlermeldung, wo die
