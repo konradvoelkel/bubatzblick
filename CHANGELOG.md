@@ -16,6 +16,12 @@ Karte selbst.
 
 ### Geändert
 
+- Karte und Über-Seite tragen je einen eigenen Titel und eine eigene
+  Beschreibung, beide kurz genug für ein Suchergebnis; bisher stand auf beiden
+  Seiten dieselbe Beschreibung, und der Titel der Karte nannte nur den Namen.
+  Die Einleitung im Bedienfeld sagt jetzt „Cannabis-Konsumverbot“ und nennt den
+  Unterschied zu 100-m-Kreisen. Die Über-Seite spricht durchgehend von
+  BubatzBlick und grenzt sich gleich oben von der Bubatzkarte von 2023 ab.
 - Abhängigkeiten: toml 1.2.1, ruff 0.17.5, hypothesis 6.170.15,
   pydantic-settings 2.16.3, types-geopandas. Zonengeometrie und Kacheln
   bleiben gleich (Düsseldorf-Zonen byte-identisch, `zonen.pmtiles`

@@ -19,6 +19,10 @@ auf freiwillig gesammelten Daten (OpenStreetMap) und einem Rechenmodell;
 beides kann im Einzelfall falsch sein. Verantwortlich für das eigene
 Verhalten bleibt jede und jeder selbst.
 
+BubatzBlick, die „Bubatzkarte 2.0“, ist ein privates, nicht-kommerzielles
+Projekt und unabhängig von der [Bubatzkarte](https://bubatzkarte.de) von
+2023; was die beiden unterscheidet, steht weiter unten.
+
 ## Was rot ist — und was nicht
 
 **Rot:** Konsumverbot in Sichtweite (§ 5 Abs. 2 Satz 1 Nr. 1–4 und 6 KCanG)
@@ -230,8 +234,8 @@ allein die gesetzliche Sichtweite.
   korrigieren: auf [openstreetmap.org](https://www.openstreetmap.org) mit
   einem Hinweis („Notiz hinzufügen“, kein Konto nötig) oder direkt mit den
   Apps [StreetComplete](https://streetcomplete.app) und
-  [MapComplete](https://mapcomplete.org). Die Bubatzkarte übernimmt die
-  Änderung automatisch.
+  [MapComplete](https://mapcomplete.org). BubatzBlick übernimmt die
+  Änderung beim nächsten täglichen Lauf automatisch.
 - **Die Karte selbst funktioniert nicht richtig?** E-Mail an die Adresse
   unter „Kontakt“.
 - **Fehler in der Hintergrundkarte** (Straßen, Namen): ebenfalls

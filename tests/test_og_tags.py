@@ -6,6 +6,13 @@ Domain nicht (nur deploy/site.env), deshalb steht `__SITE_URL__` davor und der
 Deploy ersetzt es -- in jeder Seite, mit Abbruch bei einem Rest. Hier wird der
 Quellstand geprueft: Satz vollstaendig, Platzhalter an jeder URL, Bildmasse
 wie im Kopf angegeben, Bildbeschreibung auf beiden Seiten gleich.
+
+Titel und Beschreibung dagegen gehoeren je Seite sich selbst: bis November 2026
+kopierte das Bauskript die Beschreibung der Karte in die Ueber-Seite, 182
+Zeichen auf beiden. Eine Suchmaschine schneidet bei rund 155 ab und zeigt fuer
+zwei Seiten denselben Text. Geprueft wird deshalb auch: je Seite ein eigener
+Titel und eine eigene Beschreibung, beide kurz genug, und die Karte fuers
+Teilen (`og:title`, `og:description`) sagt dasselbe wie der Kopf.
 """
 
 from __future__ import annotations
@@ -82,3 +89,37 @@ def test_card_size_matches_head() -> None:
         h = head(page)
         assert (prop(h, "og:image:width"), prop(h, "og:image:height")) == (str(width), str(height))
     assert (width, height) == (1200, 630)
+
+
+# Was ein Suchergebnis ungekuerzt zeigt. Keine Normen, sondern die ueblichen Grenzen:
+# Titel werden nach Breite gekuerzt (rund 60 Zeichen), Beschreibungen bei rund 155.
+MAX_TITLE = 60
+MAX_DESCRIPTION = 155
+
+
+def title(h: str) -> str:
+    m = re.search(r"<title>(.*?)</title>", h, re.S)
+    assert m, "title fehlt"
+    return m.group(1).strip()
+
+
+def description(h: str) -> str:
+    m = re.search(r'<meta name="description" content="([^"]*)"', h)
+    assert m, "description fehlt"
+    return m.group(1)
+
+
+def test_title_and_description_per_page_own_and_short() -> None:
+    titles, descriptions = {}, {}
+    for page in PAGES:
+        h = head(page)
+        titles[page] = title(h)
+        descriptions[page] = description(h)
+        assert prop(h, "og:title") == titles[page], page
+        assert prop(h, "og:description") == descriptions[page], page
+        assert len(titles[page]) <= MAX_TITLE, f"{page}: Titel {len(titles[page])} Zeichen"
+        assert len(descriptions[page]) <= MAX_DESCRIPTION, (
+            f"{page}: Beschreibung {len(descriptions[page])} Zeichen"
+        )
+    assert len(set(titles.values())) == len(PAGES), titles
+    assert len(set(descriptions.values())) == len(PAGES), descriptions

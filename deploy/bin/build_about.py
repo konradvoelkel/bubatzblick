@@ -98,10 +98,14 @@ def build(src_md: str, spec_path: pathlib.Path, spec: dict) -> str:
     )
 
 
+# Titel und Beschreibung der Ueber-Seite, eigenstaendig statt von der Karte kopiert: die Seite
+# beantwortet die Rechtsfrage (was heisst Sichtweite, warum 100 m nur die Obergrenze sind), und
+# eine Suchmaschine liest Titel und Beschreibung vor der Ueberschrift. Die sichtbare Ueberschrift
+# bleibt die H1 aus about.md. tests/test_og_tags.py haelt beides von der Karte verschieden und kurz.
+TITLE = "Sichtweite nach § 5 KCanG: wie BubatzBlick rechnet"
 DESCRIPTION = (
-    "Wo der öffentliche Konsum von Cannabis in Sichtweite von Schulen, Spielplätzen, "
-    "Jugendeinrichtungen und Sportstätten verboten ist \u2013 berechnet aus OpenStreetMap, "
-    "täglich aktualisiert."
+    "Was Sichtweite in § 5 KCanG heißt, warum 100 m nur die Obergrenze sind und wie BubatzBlick "
+    "die Zonen berechnet: Gesetzestext, Zahlen, Grenzen, Impressum."
 )
 
 # Markenfarbe des Projekts: oklch(0.52 0.12 150) = #287c42.
@@ -179,7 +183,7 @@ def page(body: str, title: str) -> str:
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>{title} \u2013 Bubatzkarte 2.0</title>
+<title>{TITLE}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{DESCRIPTION}">
 <link rel="canonical" href="__SITE_URL__/about.html">
@@ -187,7 +191,7 @@ def page(body: str, title: str) -> str:
 <meta property="og:site_name" content="BubatzBlick">
 <meta property="og:locale" content="de_DE">
 <meta property="og:url" content="__SITE_URL__/about.html">
-<meta property="og:title" content="{title} \u2013 Bubatzkarte 2.0">
+<meta property="og:title" content="{TITLE}">
 <meta property="og:description" content="{DESCRIPTION}">
 <meta property="og:image" content="__SITE_URL__/img/og.png">
 <meta property="og:image:type" content="image/png">
