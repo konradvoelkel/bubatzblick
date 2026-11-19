@@ -1,17 +1,22 @@
 #!/usr/bin/bash
 # Prueft auf dem Server, ob die Aussagen des Abschnitts "Was der eigene Server
 # protokolliert" (viewer/about.md) zu dem passen, was auf der Platte liegt.
-# Nur lesend. Vor jedem Deploy der Ueber-Seite laufen lassen.
+# Nur lesend. Vor jedem Deploy der Ueber-Seite laufen lassen, als root (das
+# Protokoll und sein Verzeichnis gehoeren `caddy`).
 #
 #   deploy/bin/check_access_log.sh
-#   LOG=... ACCESS=... REPO=... deploy/bin/check_access_log.sh   # andere Pfade
+#   LOG=... ACCESS=... AGG=... deploy/bin/check_access_log.sh   # andere Pfade
 #
 # Zwei der vier Zusagen haelt dieses Repository nicht selbst ein, deshalb dieses
 # Skript: das Kuerzen der Adressen macht der Logfilter von Caddy (Infra-Repo,
-# `ip_mask`), und `aggregate_access.py` loest eine root-Einheit aus, die hier
-# ebenfalls nicht liegt. Faellt eine der beiden aus, wird die Aussage auf der
-# Ueber-Seite still falsch -- ohne Kuerzung stehen vollstaendige Adressen im
-# Protokoll, ohne Verdichtung waechst es ueber die genannte Frist hinaus.
+# `ip_mask`), und die Einheiten der Verdichtung liegen hier ebenfalls nicht.
+# Es sind zwei: `bubatz-access-aggregate.service` fuehrt
+# `aggregate_access.py` als `caddy` aus, und zwar eine root-eigene Kopie unter
+# /usr/local/sbin; danach baut `bubatz-access.service` als `bubatz` die
+# Statistikseite (Umgebung aus /etc/bubatz/env). Faellt Kuerzung oder
+# Verdichtung aus, wird die Aussage auf der Ueber-Seite still falsch -- ohne
+# Kuerzung stehen vollstaendige Adressen im Protokoll, ohne Verdichtung waechst
+# es ueber die genannte Frist hinaus.
 #
 # Caddy kuerzt nicht von sich aus: ohne `ip_mask` im Logformat landet
 # `request.remote_ip` vollstaendig im JSON.
@@ -20,9 +25,11 @@
 # durchgeht. Exit 1, sobald ein Abschnitt ein PROBLEM meldet.
 set -u
 
-LOG=${LOG:-/var/log/caddy/access.log}
-ACCESS=${ACCESS:-/srv/bubatz/www/stats/access}
-REPO=${REPO:-/srv/bubatz/repo}
+# Vorgaben: die Pfade auf dem Server (Infra-Repo, Rolle bubatz); steht
+# /etc/bubatz/env in der Umgebung, gilt dessen STATS_DIR.
+LOG=${LOG:-/var/log/caddy/bubatzblick-access.log}
+ACCESS=${ACCESS:-${STATS_DIR:-/srv/bubatzpipe/publish/stats}/access}
+AGG=${AGG:-/usr/local/sbin/bubatz-access-aggregate}
 befund=0
 
 echo "===== 1. Laeuft die taegliche Verdichtung? ====================="
@@ -139,12 +146,14 @@ fi
 
 echo
 echo "===== 5. Kennt die Fassung auf dem Server die Frist? =========="
-if [ -r "$REPO/deploy/bin/aggregate_access.py" ]; then
-  grep -nE '^KEEP_DAYS' "$REPO/deploy/bin/aggregate_access.py" \
+# Die Kopie, die die Einheit ausfuehrt, nicht die Datei im Repo: eine Aenderung
+# an aggregate_access.py wirkt erst, wenn das Infra-Repo sie dorthin legt.
+if [ -r "$AGG" ]; then
+  grep -nE '^KEEP_DAYS' "$AGG" \
     && echo "  URTEIL: ok" \
     || { echo "  URTEIL: PROBLEM -- alte Fassung ohne KEEP_DAYS, dort loescht nichts"; befund=1; }
 else
-  echo "  $REPO/deploy/bin/aggregate_access.py nicht gefunden -- Pfad per REPO=... setzen"
+  echo "  $AGG nicht gefunden -- Pfad per AGG=... setzen"
 fi
 
 echo

@@ -35,6 +35,13 @@ Karte selbst.
   CI): nur dort gilt die gepinnte Toolchain, sonst nahm rustup die
   Standard-Toolchain.
 
+### Behoben
+
+- `deploy/bin/check_access_log.sh` zeigte mit seinen Vorgaben auf alte Pfade
+  und prüfte die Aufbewahrungsfrist in der Datei im Repo statt in der Kopie,
+  die der Server ausführt. Die Betriebsskripte nennen die beiden Einheiten
+  der Zugriffsverdichtung jetzt richtig.
+
 ## [2.1.0] - 2026-11-17
 
 Eine weitere Ebene, Pflege der Abhängigkeiten und eine Fehlermeldung, wo die

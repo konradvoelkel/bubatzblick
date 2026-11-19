@@ -5,12 +5,14 @@ Seite unter einem geheimen Pfad (Caddy liefert STATS_DIR, Infra-Repo Rolle bubat
 Liest den letzten Zyklus aus dem Tageslog, die *_summary.json der Stufen und
 stand.json, haengt einen Datensatz an history.jsonl an und schreibt index.html
 und stats.json. Zugriffszahlen kommen aus STATS_DIR/access/<datum>.json
-(aggregate_access.py, taeglich als root). Nur Standardbibliothek: laeuft in der
-abgeschotteten Einheit als bubatz.
+(aggregate_access.py, taeglich als `caddy` in bubatz-access-aggregate.service).
+Nur Standardbibliothek: laeuft als bubatz in abgeschotteten Einheiten, am Ende des
+Tageszyklus (bubatz-daily.sh) und in bubatz-access.service nach der Verdichtung.
 
-Umgebung wie bubatz-daily.sh (LOG_DIR, INTERIM_DIR, OUT_DIR, PUBLISH_DIR), dazu
-STATS_DIR (Vorgabe PUBLISH_DIR/stats) und optional BUBATZ_START/BUBATZ_END/
-BUBATZ_RESULT vom Aufrufer (robuster als das eigene, noch nicht gespuelte Log).
+Umgebung aus /etc/bubatz/env wie bubatz-daily.sh (LOG_DIR, INTERIM_DIR, OUT_DIR,
+PUBLISH_DIR), dazu STATS_DIR (Vorgabe PUBLISH_DIR/stats) und optional
+BUBATZ_START/BUBATZ_END/BUBATZ_RESULT vom Aufrufer (robuster als das eigene, noch
+nicht gespuelte Log).
 """
 
 from __future__ import annotations

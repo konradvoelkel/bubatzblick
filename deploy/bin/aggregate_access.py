@@ -30,9 +30,10 @@ from urllib.parse import urlsplit
 KEEP_DAYS = 400
 
 # Rueckmeldung an build_stats.py. Die Statistikseite laeuft als `bubatz` und
-# kommt an das Caddy-Protokoll (root) nicht heran; sie liest hier ab, wie alt
-# die aelteste offene Zeile ist -- und wie alt diese Datei selbst, denn ein
-# ausgefallener Timer faellt sonst niemandem auf.
+# kommt an das Caddy-Protokoll nicht heran (es gehoert `caddy`, unter dem diese
+# Verdichtung laeuft); sie liest hier ab, wie alt die aelteste offene Zeile ist
+# -- und wie alt diese Datei selbst, denn ein ausgefallener Timer faellt sonst
+# niemandem auf.
 STATUS_NAME = "_status.json"
 
 BOT = re.compile(
