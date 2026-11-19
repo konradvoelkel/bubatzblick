@@ -53,7 +53,7 @@ class VisibilityConfig(BaseModel):
     # Sweep, Vereinigung und Abschluss (Marge, Quelle, Freikreis) laufen im
     # Kern `bubatzcore`, ebenso Hindernisverschmelzung, Kreis-Puffer und
     # Baender. Ohne gebauten Kern bricht der Lauf ab (gewollt): `make core`
-    # bzw. `uv run maturin develop --release -m rust/bubatzcore-py/Cargo.toml`.
+    # bzw. in rust/ `uv run maturin develop --release -m bubatzcore-py/Cargo.toml`.
 
 
 class SimplifyConfig(BaseModel):

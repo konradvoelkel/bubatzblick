@@ -6,7 +6,8 @@
 //! orientiert. Ausgabe: Liste von Shapes, je Shape eine Liste von Ringen
 //! (Aussenring zuerst, dann Loecher) als (n, 2)-Arrays.
 //!
-//! Bauen: `uv run maturin develop --release -m rust/bubatzcore-py/Cargo.toml`.
+//! Bauen: `make core`, oder aus `rust/` heraus (dort gilt die gepinnte Toolchain)
+//! `uv run maturin develop --release -m bubatzcore-py/Cargo.toml`.
 
 use bubatzcore::{Ring, Shape};
 use numpy::{IntoPyArray, PyArray1, PyArray2, PyArrayMethods, PyReadonlyArray1, PyReadonlyArray2};

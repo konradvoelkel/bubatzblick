@@ -2,5 +2,5 @@
 # Version, sonst weichen `cargo fmt` und `clippy` zwischen den Umgebungen ab.
 # Anheben ist eine bewusste Zeile -- dann auch `rust-version` in Cargo.toml.
 [toolchain]
-channel = "1.97"
+channel = "1.100"
 components = ["rustfmt", "clippy"]

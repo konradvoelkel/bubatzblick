@@ -2,8 +2,8 @@
 #
 #   bubatzcore     Bibliothek: Geometrie und Algorithmen, keine I/O, kein PyO3
 #   bubatzcore-py  duenne PyO3-Bindung, Python-Modul `bubatzcore` (Tests, Orakel,
-#                  Uebergangszeit); Bauen:
-#                  uv run maturin develop --release -m rust/bubatzcore-py/Cargo.toml
+#                  Uebergangszeit); Bauen aus diesem Verzeichnis (`make core`):
+#                  uv run maturin develop --release -m bubatzcore-py/Cargo.toml
 #   bubatz         das Binary: extract | clip | zones | tiles | pedestrian | report |
 #                  update-pbf | verify | serve
 #
@@ -23,8 +23,10 @@ version = "2.1.0"
 edition = "2024"
 license = "AGPL-3.0-or-later"
 # Die gepinnte Toolchain (rust-toolchain.toml). Gegen aeltere Versionen ist
-# nichts geprueft, also wird auch nichts aelteres versprochen.
-rust-version = "1.97"
+# nichts geprueft, also wird auch nichts aelteres versprochen. Wirksam nur, weil
+# jedes Crate `rust-version.workspace = true` erbt (cargo warnt seit 1.100 vor
+# Feldern hier, die kein Crate erbt).
+rust-version = "1.100"
 repository = "https://github.com/konradvoelkel/bubatzblick"
 # `authors` bleibt leer: wer dahintersteht, steht im Impressum der Ueber-Seite.
 

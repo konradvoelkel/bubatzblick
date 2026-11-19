@@ -4,6 +4,8 @@ description = "PyO3-Bindung des Geometriekerns; Python-Modul `bubatzcore`"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
 publish = false
 
 # Der Bibliotheks-Crate heisst ebenfalls `bubatzcore`; ein zweites Ziel gleichen

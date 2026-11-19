@@ -47,7 +47,8 @@ jobs:
       - name: "Python: uv sync, bubatzcore (maturin), Lint, Tests"
         run: |
           uv sync --frozen
-          uv run maturin develop --release -m rust/bubatzcore-py/Cargo.toml
+          # Aus rust/ heraus, damit rustup die Toolchain aus rust-toolchain.toml nimmt.
+          (cd rust && uv run maturin develop --release -m bubatzcore-py/Cargo.toml)
           make lint
           uv run pytest -n auto
       - name: "Nichts aus der Entwicklung im Baum"

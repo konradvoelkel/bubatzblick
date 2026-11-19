@@ -26,6 +26,14 @@ Karte selbst.
   pydantic-settings 2.16.3, types-geopandas. Zonengeometrie und Kacheln
   bleiben gleich (Düsseldorf-Zonen byte-identisch, `zonen.pmtiles`
   sha256-gleich).
+- Rust 1.100 statt 1.97 (`rust/rust-toolchain.toml` und `rust-version`).
+  Zonengeometrie und Kacheln bleiben gleich: die Düsseldorf-Zonen aus beiden
+  Binaries sind byte-identisch (`bubatz verify identical`, 2 715 Bänder),
+  `zonen.pmtiles` ist sha256-gleich. `rust-version` gilt jetzt für jedes
+  Crate; bisher erbte es keines, und cargo 1.100 warnt davor. Deshalb baut
+  maturin die Python-Bindung aus `rust/` heraus (Makefile, pre-push-Hook,
+  CI): nur dort gilt die gepinnte Toolchain, sonst nahm rustup die
+  Standard-Toolchain.
 
 ## [2.1.0] - 2026-11-17
 

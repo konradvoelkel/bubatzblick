@@ -13,6 +13,7 @@ echo "pre-push: Rust"
 (cd rust && cargo fmt --check --all && cargo clippy --workspace --all-targets --locked -q -- -D warnings && cargo test --workspace --locked -q)
 if command -v cargo-audit >/dev/null; then (cd rust && cargo audit -q); else echo "pre-push: cargo-audit fehlt (cargo install cargo-audit --locked) -- uebersprungen"; fi
 echo "pre-push: Python"
-uv run -q maturin develop --release -m rust/bubatzcore-py/Cargo.toml >/dev/null
+# Aus rust/ heraus, damit rustup die Toolchain aus rust-toolchain.toml nimmt (Makefile, core).
+(cd rust && uv run -q maturin develop --release -m bubatzcore-py/Cargo.toml >/dev/null)
 make -s lint
 uv run pytest -n auto -q

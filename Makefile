@@ -77,11 +77,13 @@ dev:
 	git config core.hooksPath .githooks   # pre-push = CI lokal (.githooks/pre-push)
 
 # Rust bauen: das Binary `bubatz` (Produktionspfad) und den Kern als
-# Python-Modul `bubatzcore` (Tests, Orakel). Braucht Rust stable (rustup)
-# und maturin (dev-Gruppe). `make test` prueft beides.
+# Python-Modul `bubatzcore` (Tests, Orakel). Braucht rustup und maturin
+# (dev-Gruppe). `make test` prueft beides. maturin laeuft aus rust/ heraus:
+# rustup waehlt die Toolchain nach dem Arbeitsverzeichnis, und nur dort gilt
+# rust/rust-toolchain.toml (sonst baute die Standard-Toolchain die Bindung).
 core:
 	cd rust && cargo build --release -p bubatz
-	uv run maturin develop --release -m rust/bubatzcore-py/Cargo.toml
+	cd rust && uv run maturin develop --release -m bubatzcore-py/Cargo.toml
 
 $(BUBATZ):
 	cd rust && cargo build --release -p bubatz
