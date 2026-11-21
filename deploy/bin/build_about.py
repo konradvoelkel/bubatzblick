@@ -149,9 +149,10 @@ SCRIPT = """// Von deploy/bin/build_about.py erzeugt -- nicht von Hand aendern.
     el.textContent = (j.pbf_timestamp || "").slice(0, 10)
       + " (veröffentlicht " + (j.published || "").slice(0, 10) + ")"; }
   catch (e) { el.textContent = "unbekannt"; }
-  // Der Ausschnitt reist als ?karte=<hash> mit und geht so zurueck: vorher
-  // stand man nach "Zur Karte" wieder im Anfangsausschnitt.
-  const karte = new URLSearchParams(location.search).get("karte");
+  // Der Ausschnitt reist als #karte=<hash> mit und geht so zurueck: vorher
+  // stand man nach "Zur Karte" wieder im Anfangsausschnitt. Im Fragment, nie in
+  // der Query: das Fragment schickt der Browser nicht an den Server.
+  const karte = new URLSearchParams(location.hash.slice(1)).get("karte");
   if (karte) {
     for (const a of document.querySelectorAll("a.zur-karte")) a.href = "./#" + karte;
   }

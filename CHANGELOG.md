@@ -37,6 +37,11 @@ Karte selbst.
 
 ### Behoben
 
+- Der Link „Über diese Karte“ trug den Kartenausschnitt in der Abfragezeile
+  (`about.html?karte=…`). Damit stand er im Zugriffsprotokoll des Servers,
+  nach „Mein Standort“ also die eigene Position, entgegen der Zusage auf der
+  Über-Seite. Jetzt reist er im Fragment (`about.html#karte=…`), das der
+  Browser nicht an den Server schickt.
 - `deploy/bin/check_access_log.sh` zeigte mit seinen Vorgaben auf alte Pfade
   und prüfte die Aufbewahrungsfrist in der Datei im Repo statt in der Kopie,
   die der Server ausführt. Die Betriebsskripte nennen die beiden Einheiten

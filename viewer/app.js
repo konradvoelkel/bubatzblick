@@ -607,9 +607,11 @@ const TITEL = new Map(KATEGORIEN);
   });
 
   // Der Weg zur Ueber-Seite nimmt den Ausschnitt mit und zurueck: vorher stand
-  // man nach der Rueckkehr wieder im Anfangsausschnitt.
+  // man nach der Rueckkehr wieder im Anfangsausschnitt. Er reist im Fragment
+  // (#karte=...), das der Browser nicht an den Server schickt; als Query stand er
+  // im Zugriffsprotokoll, nach "Mein Standort" also die eigene Position.
   const ueberLink = document.getElementById("ueber-link");
-  const ueberZiel = () => "about.html" + (location.hash ? "?karte=" + encodeURIComponent(location.hash.slice(1)) : "");
+  const ueberZiel = () => "about.html" + (location.hash ? "#" + new URLSearchParams({ karte: location.hash.slice(1) }) : "");
   ueberLink.addEventListener("click", () => { ueberLink.href = ueberZiel(); });
   ueberLink.href = ueberZiel();
   map.on("moveend", () => { ueberLink.href = ueberZiel(); });
