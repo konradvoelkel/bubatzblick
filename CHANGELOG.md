@@ -11,6 +11,10 @@ Karte selbst.
 
 ### Hinzugefügt
 
+- Über-Seite: eine erste Frage „Wo ist Kiffen in Deutschland verboten?“, deren
+  Antwort für sich steht (nur aus dem gebaut, was die Seite schon sagt), und
+  Sprungziele für alle Überschriften. Die Kartenseite trägt einen
+  `WebSite`-Block als JSON-LD (Name, „Bubatzkarte 2.0“, Herausgeber).
 - Wächter gegen ein mitgeliefertes Arbeitsdokument: `tests/test_viewer_dateien.py`
   erlaubt unter `viewer/` nur bekannte Dateiarten und keine Namen wie
   „Entwurf“ oder „Kopie“; der Rückfall-Deploy `deploy/bin/deploy_vps.sh`
@@ -88,6 +92,10 @@ Karte selbst.
 
 ### Behoben
 
+- Die Karte nannte im Betrieb nur MapLibre und die Grundkarte als Quelle: das
+  Zonenarchiv trägt keine Quellenangabe in seinen Metadaten. Jetzt steht
+  „© OpenStreetMap-Mitwirkende (ODbL)“ für die Zonen dabei. Die Mailadresse im
+  Impressum ist auch ohne JavaScript lesbar (vorher „JavaScript nötig“).
 - Start der Karte: Die Prüfabfragen an den Kachelspeicher hatten keine Frist;
   hing eine Antwort, blieb „Karte lädt …“ ohne Meldung stehen. Jetzt nach 10 s
   eine Meldung, ebenso wenn Kartendaten oder Grundkarte fehlen; der

@@ -160,7 +160,11 @@ const TITEL = new Map(KATEGORIEN);
   const dsName = params.get("ds") || (datasets[0] && datasets[0].name);
   let source, label;
   if (archive) {
-    source = { type: "vector", url: `pmtiles://${archive}` }; label = archive;
+    // Das Archiv traegt keine Quellenangabe in seinen Metadaten; ohne diese Zeile
+    // nannte die Karte im Betrieb nur MapLibre und die Grundkarte.
+    source = { type: "vector", url: `pmtiles://${archive}`,
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a> (ODbL)' };
+    label = archive;
   } else if (params.get("tiles")) {
     source = { type: "vector", tiles: [params.get("tiles")], minzoom: 8, maxzoom: 14 }; label = params.get("tiles");
   } else if (dsName) {

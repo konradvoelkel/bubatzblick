@@ -313,6 +313,18 @@ jeden anderen.
 
 ## Häufige Fragen
 
+### Wo ist Kiffen in Deutschland verboten?
+
+Nach § 5 KCanG überall in unmittelbarer Gegenwart von Minderjährigen und in
+militärischen Bereichen der Bundeswehr. Öffentlich verboten ist der Konsum
+außerdem in Schulen, auf Kinderspielplätzen, in Kinder- und
+Jugendeinrichtungen, in öffentlich zugänglichen Sportstätten und in
+Anbauvereinigungen, jeweils auch in deren Sichtweite (höchstens 100 m vom
+Eingangsbereich), sowie in Fußgängerzonen zwischen 7 und 20 Uhr. Einzelne
+Städte verbieten weitere Flächen, etwa rund um den Nürnberger Hauptbahnhof.
+BubatzBlick zeigt die Sichtweiten-Zonen und diese örtlichen Verbote; es ist
+eine Orientierungshilfe, keine Rechtsauskunft.
+
 ### Ist das eine amtliche Karte?
 
 Nein. Es ist ein privates,

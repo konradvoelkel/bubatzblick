@@ -94,7 +94,9 @@ def build(src_md: str, spec_path: pathlib.Path, spec: dict) -> str:
     src = src.replace(PLACEHOLDER_STAND, '<span id="stand">wird geladen</span>')
     return src.replace(
         "kontakt [at] bubatzblick [punkt] de",
-        '<span id="mail">(JavaScript nötig)</span>',
+        # Ohne JavaScript bleibt die entstellte, aber lesbare Form stehen (vorher
+        # "(JavaScript nötig)"); about.js ersetzt sie durch den mailto-Link.
+        '<span id="mail">kontakt [at] bubatzblick [punkt] de</span>',
     )
 
 
@@ -236,12 +238,13 @@ def main() -> None:
 
     spec_path, spec = load_spec()
     src = build((ROOT / "viewer/about.md").read_text(encoding="utf-8"), spec_path, spec)
-    body = markdown.markdown(src, extensions=["tables", "footnotes", "sane_lists"])
-    m = re.search(r"<h1>(.*?)</h1>", body)
+    body = markdown.markdown(src, extensions=["tables", "footnotes", "sane_lists", "toc"])
+    # Die H1 wandert in den Kopf der Vorlage; toc gibt ihr eine id, die entfaellt mit.
+    m = re.search(r"<h1(?: id=\"[^\"]*\")?>(.*?)</h1>", body)
     if not m:
         raise SystemExit("about.md ohne H1")
     title = m.group(1)
-    body = body.replace(f"<h1>{title}</h1>", "", 1)
+    body = body.replace(m.group(0), "", 1)
     out = ROOT / "viewer/about.html"
     out.write_text(page(body, title), encoding="utf-8")
     (ROOT / "viewer/about.js").write_text(SCRIPT, encoding="utf-8")

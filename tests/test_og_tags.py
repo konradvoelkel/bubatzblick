@@ -123,3 +123,21 @@ def test_title_and_description_per_page_own_and_short() -> None:
         )
     assert len(set(titles.values())) == len(PAGES), titles
     assert len(set(descriptions.values())) == len(PAGES), descriptions
+
+
+def test_website_block_als_json_ld() -> None:
+    """Der WebSite-Block der Kartenseite ist gueltiges JSON und nennt Namen und Adresse.
+
+    Ein Datenblock, kein Skript: die CSP fuehrt ihn nicht aus. Die Adressen tragen
+    den Platzhalter wie canonical und og:url; der Deploy ersetzt ihn in jeder Seite.
+    """
+    import json
+    import re
+
+    h = (ROOT / "viewer" / "index.html").read_text(encoding="utf-8")
+    bloecke = re.findall(r'<script type="application/ld\+json">\s*(.*?)\s*</script>', h, re.S)
+    assert len(bloecke) == 1
+    d = json.loads(bloecke[0])
+    assert d["@type"] == "WebSite" and d["name"] == "BubatzBlick"
+    assert d["alternateName"] == "Bubatzkarte 2.0"
+    assert d["url"] == "__SITE_URL__/" and d["@id"] == "__SITE_URL__/#website"
