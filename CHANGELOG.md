@@ -11,6 +11,15 @@ Karte selbst.
 
 ### Hinzugefügt
 
+- `deploy/bin/check_tiles.sh` prüft von außen, ob `tiles.bubatzblick.de` antwortet
+  (Range-Anfragen auf beide Archive, `stand.json` jünger als 36 h, Zertifikat
+  noch 14 Tage), mit Ausgängen 0/1/2 und optionalem Healthcheck; gedacht für
+  einen Timer auf dem Server.
+- `deploy/bin/basemap-refresh.sh` erneuert die Grundkarte: neuester
+  Protomaps-Build, Schnitt auf Deutschland, Prüfungen (Größe, `pmtiles verify`,
+  Kachelfassung 4.x, Grenzen), dann Upload nach R2 mit dem Vorgänger als
+  `basemap.prev.pmtiles`; `DRY_RUN=1` lädt nichts hoch. Gedacht für einen
+  Monats-Timer auf dem Server; bisher von Hand.
 - Über-Seite: eine erste Frage „Wo ist Kiffen in Deutschland verboten?“, deren
   Antwort für sich steht (nur aus dem gebaut, was die Seite schon sagt), und
   Sprungziele für alle Überschriften. Die Kartenseite trägt einen
