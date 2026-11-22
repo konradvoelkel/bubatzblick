@@ -11,6 +11,10 @@ Karte selbst.
 
 ### Hinzugefügt
 
+- Wächter gegen ein mitgeliefertes Arbeitsdokument: `tests/test_viewer_dateien.py`
+  erlaubt unter `viewer/` nur bekannte Dateiarten und keine Namen wie
+  „Entwurf“ oder „Kopie“; der Rückfall-Deploy `deploy/bin/deploy_vps.sh`
+  bricht ab, wenn unter `viewer/` etwas Uncommittetes oder Unversioniertes liegt.
 - „Kartenmitte“: Enter auf der Karte, und nach Ortssuche und „Mein Standort“
   von selbst, nennt in einem Popup und für Screenreader, was in der Mitte der
   Karte liegt: rote Zone mit den Einrichtungen in Sichtweite, Fußgängerzone,

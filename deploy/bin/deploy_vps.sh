@@ -27,6 +27,19 @@ TILES_BASE_URL=${TILES_BASE_URL%/}
 out=$(mktemp -d)
 trap 'rm -rf "$out"' EXIT
 deploy/bin/build_about.py >/dev/null   # about.md -> about.html
+# Waechter: ausgeliefert wird nur, was in git steht. Ein unversioniertes oder
+# geaendertes Arbeitsdokument unter viewer/ (Notiz, Entwurf, Export) ginge sonst
+# mit hinaus -- die Excludes unten sind eine Sperrliste und kennen es nicht. Der
+# Server-Hook liefert ohnehin nur den gepushten Stand; tests/test_viewer_dateien.py
+# haelt die Dateiarten unter viewer/ fest.
+if git -C "$VIEWER_DIR" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+  offen=$(git -C "$VIEWER_DIR" status --porcelain --untracked-files=all -- .)
+  if [ -n "$offen" ]; then
+    echo "deploy_vps: $VIEWER_DIR enthaelt Uncommittetes oder Unversioniertes -- erst committen oder entfernen:" >&2
+    echo "$offen" >&2
+    exit 1
+  fi
+fi
 # `--exclude='.*'` haelt streunende Punktdateien heraus; `.well-known/` muss
 # aber mit (security.txt), deshalb vorher einschliessen -- bei rsync gewinnt die
 # erste passende Regel.
