@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>BubatzBlick – Bubatzkarte 2.0: wo Kiffen verboten ist</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="description" content="Karte der Cannabis-Verbotszonen: wo Kiffen in Sichtweite von Schulen, Spielplätzen und Sportstätten verboten ist – echte Sichtlinien statt 100-m-Kreise.">
 <link rel="canonical" href="__SITE_URL__/">
 <meta property="og:type" content="website">
@@ -24,7 +25,10 @@
 <style>
   /* Markenfarbe des Projekts: nur Bedienelemente --
      die Zonenflaechen sind Datenfarbe und bleiben davon unberuehrt. */
-  :root { --marke: #287c42; --zone: #c0392b; --fuss: #2a78d6; --sonder: #7d3c98; }
+  :root { --marke: #287c42; --zone: #c0392b; --fuss: #2a78d6; --sonder: #7d3c98;
+          /* Bewusst nur hell (CONTRIBUTING, "Nur hell"): sonst zeichnen Browser im
+             Dunkelmodus Formularelemente und Scrollleisten dunkel auf weissem Feld. */
+          color-scheme: light; }
   /* Schriftgroessen in rem und Umbruchgrenze in em: die Schriftgroesse, die jemand
      im Browser einstellt, soll wirken (vorher alles in px). */
   html, body { margin: 0; height: 100%; font-family: system-ui, sans-serif; }
@@ -50,7 +54,7 @@
      sonst verdeckt das Feld die ganze Karte. */
   #panel-kopf { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
   #panel-kopf h1 { flex: 1; }
-  #panel-toggle { flex: none; font: inherit; font-size: .75rem; padding: 2px 8px; cursor: pointer;
+  #panel-toggle { flex: none; font: inherit; font-size: .75rem; padding: 2px 8px; cursor: pointer; min-block-size: 24px;
                   border: 1px solid var(--marke); border-radius: 4px; background: #fff; color: var(--marke); }
   #panel.zu > .einklappbar { display: none; }
   /* Was hinter dem Knopf liegt, wird im eingeklappten Zustand benannt --
@@ -60,10 +64,11 @@
   #panel.zu #panel-inhalt { display: block; }
   #panel a { color: var(--marke); }
   #panel details { margin-top: 6px; }
-  #panel summary { cursor: pointer; color: var(--marke); font-weight: 600; }
+  #panel summary { cursor: pointer; color: var(--marke); font-weight: 600; min-block-size: 24px; }
   /* Abstand 6 px wie bisher sichtbar: die Regel `#panel label` (spezifischer)
      hatte flex und 3 px dieser Zeile ueberschrieben; sie ist weg. */
-  .legende-zeile { display: flex; align-items: baseline; gap: 6px; margin-top: 6px; font-size: .8125rem; }
+  .legende-zeile { display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: .8125rem;
+                   min-block-size: 24px; }
   /* Gesperrt ist die letzte aktive Kategorie (aria-disabled, siehe app.js). */
   .legende-zeile input[aria-disabled="true"] { cursor: not-allowed; opacity: .55; }
   .legende-zeile input[aria-disabled="true"] + span { cursor: not-allowed; }
@@ -102,7 +107,7 @@
      vorher nur als unbeschriftetes Kartensymbol bzw. gar nicht erreichbar
      (in Tests zuerst gesucht: der eigene Standort und der Teilen-Weg). */
   #werkzeuge { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-  #werkzeuge button { font: inherit; font-size: .75rem; padding: 3px 8px; cursor: pointer;
+  #werkzeuge button { font: inherit; font-size: .75rem; padding: 3px 8px; cursor: pointer; min-block-size: 24px;
                       border: 1px solid var(--marke); border-radius: 4px; background: #fff; color: var(--marke); }
   #suche-treffer:not(:empty) { margin-top: 6px; border: 1px solid #e0e0e0; border-radius: 4px; }
   #suche-treffer button { display: block; width: 100%; text-align: start; padding: 5px 7px;
@@ -128,6 +133,12 @@
   .maplibregl-ctrl-group button:focus-visible,
   .maplibregl-ctrl-attrib-button:focus-visible { outline: 2px solid var(--marke); outline-offset: 1px; }
   .maplibregl-canvas:focus-visible { outline: 3px solid var(--marke); outline-offset: -3px; }
+  /* Zielgroessen: mindestens 24 px ueberall (oben bei den Regeln), mit dem Finger
+     44 px fuer die Knoepfe, die man am haeufigsten trifft. Die Kategoriezeilen
+     bleiben bei 24 px: das Feld ist auf dem Telefon knapp. */
+  @media (pointer: coarse) {
+    #panel-toggle, #werkzeuge button { min-block-size: 44px; }
+  }
   @media (prefers-reduced-motion: reduce) {
     .maplibregl-user-location-dot::before { animation: none; }
   }

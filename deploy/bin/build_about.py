@@ -113,6 +113,7 @@ DESCRIPTION = (
 # heller Grund oklch(0.95 0.03 150) = #e1f5e4. Nicht das Zonenrot: das ist die
 # Datenfarbe der Karte und ausdruecklich KEINE Markenfarbe.
 STYLE = """
+  :root { color-scheme: light; }
   body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
          color: #222; background: #f2efe9; overflow-wrap: break-word; }
   header { background: #fff; border-bottom: 1px solid #ddd; }
@@ -190,6 +191,7 @@ def page(body: str, title: str) -> str:
 <meta charset="utf-8">
 <title>{TITLE}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="description" content="{DESCRIPTION}">
 <link rel="canonical" href="__SITE_URL__/about.html">
 <meta property="og:type" content="website">

@@ -16,6 +16,12 @@ Karte selbst.
 
 ### Geändert
 
+- Karte und Über-Seite erklären sich als nur hell (`color-scheme: light`), damit
+  Browser im Dunkelmodus keine dunklen Bedienelemente auf das weiße Feld
+  zeichnen. Bedienelemente sind mindestens 24 px hoch, „Ausblenden“ und die
+  Werkzeugknöpfe mit dem Finger 44 px. `CONTRIBUTING.md` nennt die
+  Browser-Untergrenze: Baseline Widely available plus WebGL, Neueres nur als
+  Verbesserung, keine Polyfills.
 - Bedienfeld und Datenschutzabschnitt sagen, dass „Mein Standort“ die Position
   nur im Browser abfragt und die Seite sie nicht sendet.
 - Karte und Über-Seite tragen je einen eigenen Titel und eine eigene

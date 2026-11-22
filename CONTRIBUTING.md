@@ -69,6 +69,16 @@ warum die Schwellen in `config/pipeline.toml` so stehen, wie sie stehen.
   Verträge in `rust/bubatz/src/contract_tests.rs` und
   `rust/bubatz/src/simplify.rs` halten das fest; wer sie ändert, ändert eine
   Zusage an die Nutzer.
+- **Browser:** Untergrenze ist „Baseline Widely available“
+  ([web.dev/baseline](https://web.dev/baseline)) plus WebGL, das MapLibre braucht.
+  Neueres nur als Verbesserung, deren Fehlen nichts kaputt macht (heute
+  `accent-color`, `text-wrap: balance`, `<search>`, Trusted Types), und nie mit
+  einem Polyfill: der käme von einem fremden Server oder wäre eine neue
+  Abhängigkeit. Ohne WebGL sagt die Seite, woran es liegt (`startFehler` in
+  `viewer/app.js`).
+- **Nur hell:** Karte und Über-Seite deklarieren `color-scheme: light`. Die
+  Zonenfarben sind auf hellem Grund vermessen, und die Grundkarte liegt nur mit
+  hellen Symbolen vor; ein Dunkelmodus hieße beides neu.
 - **`viewer/about.html` nicht von Hand ändern** — es wird aus `viewer/about.md`
   erzeugt (`make about`), und die CI prüft, dass ein Neubau kein Diff ergibt.
 - **`viewer/.well-known/security.txt`** trägt nach RFC 9116 ein Ablaufdatum.
