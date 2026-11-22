@@ -11,6 +11,11 @@ Karte selbst.
 
 ### Hinzugefügt
 
+- „Kartenmitte“: Enter auf der Karte, und nach Ortssuche und „Mein Standort“
+  von selbst, nennt in einem Popup und für Screenreader, was in der Mitte der
+  Karte liegt: rote Zone mit den Einrichtungen in Sichtweite, Fußgängerzone,
+  örtliches Verbot oder keine Zone. Bisher gab es diese Antwort nur per
+  Mausklick auf eine Fläche.
 - `sitemap.xml` mit den beiden Seiten der Karte, dazu der Verweis darauf in
   `robots.txt`. Ein Test hält die Liste, die Seiten und `robots.txt` zusammen.
 

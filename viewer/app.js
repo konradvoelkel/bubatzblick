@@ -228,7 +228,8 @@ const TITEL = new Map(KATEGORIEN);
     // durchgehend deutschen Seite hoert ein Screenreader-Publikum sonst
     // "Reset bearing to north".
     locale: {
-      "Map.Title": "Karte",
+      // Der Name sagt auch, was die Tastatur auf der Karte kann (siehe zeigeMitte).
+      "Map.Title": "Karte – Pfeiltasten verschieben, Enter nennt, was in der Kartenmitte liegt",
       "NavigationControl.ZoomIn": "Hineinzoomen",
       "NavigationControl.ZoomOut": "Herauszoomen",
       "NavigationControl.ResetBearing": "Nach Norden ausrichten",
@@ -261,9 +262,11 @@ const TITEL = new Map(KATEGORIEN);
   // MapLibre setzt ihn beim Oeffnen auf den Schliessen-Knopf; nach dem Schliessen
   // lag er sonst auf dem Seitenanfang.
   let offenesPopup = null;
-  const zeigePopup = (lngLat, box) => {
+  // `fokus: false` fuer Popups, die nicht auf eine Eingabe auf der Karte folgen
+  // (nach Suche und Standort): dort bleibt der Fokus, wo er war.
+  const zeigePopup = (lngLat, box, fokus = true) => {
     if (offenesPopup) offenesPopup.remove();
-    const popup = new maplibregl.Popup().setLngLat(lngLat).setDOMContent(box);
+    const popup = new maplibregl.Popup({ focusAfterOpen: fokus }).setLngLat(lngLat).setDOMContent(box);
     popup.on("close", () => {
       if (offenesPopup === popup) offenesPopup = null;
       const f = document.activeElement;
@@ -593,6 +596,7 @@ const TITEL = new Map(KATEGORIEN);
           // statt an den Seitenanfang.
           sucheFeld.focus();
           sagAn("Karte zeigt " + t.display_name);
+          nachBewegung(() => sagAn(zeigeMitte(false)));
           if (t.boundingbox) {
             const [s1, n1, w1, e1] = t.boundingbox.map(Number);
             map.fitBounds([[w1, s1], [e1, n1]], { maxZoom: 17, padding: 40 });
@@ -678,13 +682,20 @@ const TITEL = new Map(KATEGORIEN);
     const why = { 1: "Freigabe im Browser verweigert", 2: "Position nicht ermittelbar", 3: "Zeitüberschreitung" };
     setMeldung("Standort: " + (why[e && e.code] || (isSecureContext ? "Fehler" : "nur über HTTPS")));
   });
-  geolocate.on("geolocate", () => setMeldung(""));
+  let standortFrage = false;  // nur nach einem Druck auf "Mein Standort", nicht bei jeder Nachfuehrung
+  geolocate.on("geolocate", () => {
+    setMeldung("");
+    if (!standortFrage) return;
+    standortFrage = false;
+    nachBewegung(() => sagAn(zeigeMitte(false)));
+  });
 
   // Eigener Standort als beschrifteter Knopf im Bedienfeld: das Kartensymbol
   // ist unbeschriftet und auf dem Telefon unten rechts -- in Tests die erste
   // gesuchte und nicht gefundene Funktion.
   document.getElementById("standort-knopf").addEventListener("click", () => {
     setMeldung("");
+    standortFrage = true;
     geolocate.trigger();
   });
 
@@ -746,6 +757,53 @@ const TITEL = new Map(KATEGORIEN);
       box.appendChild(document.createTextNode("osm_id " + String(p.osm_id)));
     }
     zeigePopup(e.lngLat, box);
+  });
+
+  // Was liegt in der Kartenmitte? Die Kernfrage der Karte ohne Zeiger: Enter auf
+  // der fokussierten Karte, und nach Suche und Standort, wenn die Karte von selbst
+  // dorthin faehrt. Gefragt wird, was gezeichnet ist: abgeschaltete Kategorien
+  // und Ebenen zaehlen nicht, wie auf dem Bild. Die Woerter folgen der Legende.
+  const MITTE_EBENEN = ["zonen-fill", "fuss-fill", "fuss-line", "sonder-fill"];
+  const zeigeMitte = fokus => {
+    const p = map.project(map.getCenter());
+    const treffer = map.queryRenderedFeatures([[p.x - 3, p.y - 3], [p.x + 3, p.y + 3]],
+      { layers: MITTE_EBENEN.filter(id => map.getLayer(id)) });
+    const zeilen = [];
+    const zonen = treffer.filter(f => f.layer.id === "zonen-fill");
+    if (zonen.length) {
+      // In den groben Zoombaendern sind Baender verschmolzen und tragen keine Kategorie.
+      const kat = [...new Set(zonen.map(f => TITEL.get(f.properties.category)).filter(Boolean))];
+      zeilen.push("rot: in Sichtweite – Konsumverbot nach § 5 Abs. 2 KCanG");
+      if (kat.length) zeilen.push("Einrichtungen in Sichtweite: " + kat.join(", "));
+    }
+    if (treffer.some(f => f.layer.id.startsWith("fuss-"))) {
+      zeilen.push("blau: Fußgängerzone – Verbot 7–20 Uhr, " + (giltJetzt() ? "gilt jetzt" : "gilt jetzt nicht"));
+    }
+    const sonder = [...new Set(treffer.filter(f => f.layer.id === "sonder-fill").map(f => String(f.properties.name)))];
+    if (sonder.length) zeilen.push("lila: örtliches Verbot – " + sonder.join(", "));
+    if (!zeilen.length) zeilen.push("weiß: keine Zone in diesen Daten – andere Verbote gelten trotzdem");
+    // Erst das z14-Band rechnet mit Gebaeudegrundrissen; darunter ist die Grenze grob.
+    if (map.getZoom() < 14) zeilen.push("Bei dieser Zoomstufe vereinfacht – für die genaue Grenze näher heranzoomen");
+    const box = document.createElement("div");
+    const b = document.createElement("b");
+    b.textContent = "Kartenmitte";
+    box.appendChild(b);
+    for (const z of zeilen) {
+      box.appendChild(document.createElement("br"));
+      box.appendChild(document.createTextNode(z));
+    }
+    zeigePopup(map.getCenter(), box, fokus);
+    return "Kartenmitte: " + zeilen.join(". ") + ".";
+  };
+  // Nach einer Kamerafahrt erst fragen, wenn die Kacheln am Ziel gezeichnet sind.
+  // Vor der Fahrt anmelden: ohne Bewegung kommt kein `moveend`, dann keine Antwort.
+  const nachBewegung = f => map.once("moveend", () => {
+    if (map.areTilesLoaded()) f(); else map.once("idle", f);
+  });
+  map.getCanvas().addEventListener("keydown", e => {
+    if (e.key !== "Enter" || e.repeat) return;
+    e.preventDefault();
+    sagAn(zeigeMitte(true));
   });
 })().catch(err => {
   // Alles andere, was den Start abbricht (ein Skript unter vendor/ nicht geladen,
