@@ -42,6 +42,9 @@ Karte selbst.
   Die Einleitung im Bedienfeld sagt jetzt „Cannabis-Konsumverbot“ und nennt den
   Unterschied zu 100-m-Kreisen. Die Über-Seite spricht durchgehend von
   BubatzBlick und grenzt sich gleich oben von der Bubatzkarte von 2023 ab.
+- Abhängigkeiten: pyo3 0.30.1 und numpy 0.30.0 für die Python-Bindung des
+  Geometriekerns (nur Tests und Orakel; das Binary `bubatz` bleibt davon
+  unberührt). Der Code brauchte keine Änderung.
 - Abhängigkeiten: i_overlay 9.2.0. Zonengeometrie und Kacheln bleiben gleich:
   Düsseldorf-Zonen aus altem und neuem Lock byte-identisch
   (`bubatz verify identical`, 2 715 Bänder), Zellendateien und `zonen.pmtiles`
