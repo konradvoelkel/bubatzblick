@@ -16,6 +16,8 @@ Karte selbst.
 
 ### Geändert
 
+- Bedienfeld und Datenschutzabschnitt sagen, dass „Mein Standort“ die Position
+  nur im Browser abfragt und die Seite sie nicht sendet.
 - Karte und Über-Seite tragen je einen eigenen Titel und eine eigene
   Beschreibung, beide kurz genug für ein Suchergebnis; bisher stand auf beiden
   Seiten dieselbe Beschreibung, und der Titel der Karte nannte nur den Namen.
@@ -37,6 +39,26 @@ Karte selbst.
 
 ### Behoben
 
+- Start der Karte: Die Prüfabfragen an den Kachelspeicher hatten keine Frist;
+  hing eine Antwort, blieb „Karte lädt …“ ohne Meldung stehen. Jetzt nach 10 s
+  eine Meldung, ebenso wenn Kartendaten oder Grundkarte fehlen; der
+  OSM-Rasterersatz greift nur noch in der lokalen Vorschau. Die drei Abfragen
+  laufen gleichzeitig, und Suche, Standort und Teilen warten nicht mehr auf die
+  örtlichen Verbote. Enter in der Suche lud vor dem Kartenaufbau die Seite neu.
+- Bedienung mit Tastatur und Hilfstechnik (Prüfung gegen Googles „Modern Web
+  Guidance“): Popups schließen mit Esc und geben den Fokus an die Karte zurück;
+  Karte und Kartenknöpfe zeigen einen sichtbaren Fokus, auch bei erzwungenen
+  Farben; Suchergebnisse und „Adresse kopiert“ werden angesagt, nach der
+  Trefferwahl bleibt der Fokus im Suchfeld; eine IME-Eingabe löst keine Suche
+  mehr aus; die letzte aktive Kategorie bleibt erreichbar und sagt, warum sie
+  sich nicht abwählen lässt; Kategorien als Gruppe, Seite mit `main` und
+  `search`.
+- Darstellung: Schriftgrößen in rem und die Umbruchgrenze in em, damit die
+  Schriftgröße des Browsers wirkt; Ränder von Suchfeld und Farbfeldern mit
+  genug Kontrast; die Farbfelder der Legende behalten bei erzwungenen Farben
+  ihre Farbe; die Kategoriezeilen stehen wie gedacht (eine allgemeinere
+  CSS-Regel hatte sie überschrieben); der Standortpunkt pulsiert nicht, wenn
+  weniger Bewegung eingestellt ist.
 - Der Link „Über diese Karte“ trug den Kartenausschnitt in der Abfragezeile
   (`about.html?karte=…`). Damit stand er im Zugriffsprotokoll des Servers,
   nach „Mein Standort“ also die eigene Position, entgegen der Zusage auf der

@@ -44,7 +44,8 @@ const TITEL = new Map(KATEGORIEN);
   // im Browser ab. Vor dem ersten `await`, damit der Knopf sofort geht.
   // Die Vorgabe folgt der Breite auch spaeter (Telefon gedreht, Fenster erst nach
   // dem Laden auf Groesse gebracht), solange niemand den Knopf benutzt hat.
-  const schmal = matchMedia("(max-width: 640px)");
+  // In em wie im CSS: mit groesserer Schrift im Browser kippt das Layout frueher.
+  const schmal = matchMedia("(max-width: 40em)");
   const panel = document.getElementById("panel");
   const panelToggle = document.getElementById("panel-toggle");
   let panelBeruehrt = false;
@@ -73,6 +74,9 @@ const TITEL = new Map(KATEGORIEN);
   // schaltete damit die Breitenlogik ab -- auf dem Telefon blieb das Feld
   // offen und verdeckte die Karte.
   schmal.addEventListener("change", e => { if (!panelBeruehrt) breiteAnwenden(e.matches); });
+  // Bis die Ortssuche unten ihren Handler hat (nach dem Kartenaufbau), schickte
+  // Enter das Formular nativ ab: die Seite lud neu und verlor den Ausschnitt.
+  document.getElementById("suche").addEventListener("submit", e => e.preventDefault());
 
   const cfg = Object.assign({ zones: "zonen.pmtiles", basemap: "basemap.pmtiles",
     assets: "vendor/basemaps", stand: "stand.json" }, window.BUBATZ_CONFIG || {});
@@ -83,7 +87,19 @@ const TITEL = new Map(KATEGORIEN);
   // Infra-Repo), ein neuer Schluessel muesste an beiden nachgezogen werden.
   const fussgaengerUrl = cfg.fussgaenger
     || cfg.zones.replace(/[^/]+$/, "fussgaengerzonen.pmtiles");
-  const exists = async u => { try { const r = await fetch(u, { method: "HEAD" }); return r.ok; } catch (e) { return false; } };
+  // HEAD mit Frist: ohne sie blieb die Seite bei "Karte laedt ..." stehen, wenn eine
+  // Antwort ausblieb. Dreiwertig, weil "fehlt" (404, z. B. keine Fussgaengerzonen)
+  // etwas anderes ist als "nicht erreichbar" (Netz, Frist, 5xx).
+  const pruefe = async u => {
+    try {
+      const r = await fetch(u, { method: "HEAD", signal: AbortSignal.timeout(10_000) });
+      return r.ok ? "da" : (r.status === 404 ? "fehlt" : "unerreichbar");
+    } catch (e) { return "unerreichbar"; }
+  };
+  // Absolute Adressen stehen nur in der config.js des Betriebs (R2). Dort ist ein
+  // fehlendes Archiv ein Fehler, den die Seite sagt, und kein Anlass fuer einen
+  // Rueckfall (Archivliste, OSM-Raster), der nur lokal Sinn hat.
+  const fern = u => /^https?:\/\//i.test(u);
 
   // Quelle der Verbotszonen, in dieser Reihenfolge:
   // (1) ?pmtiles=<URL einer .pmtiles-Datei> (Range-Anfragen),
@@ -96,14 +112,29 @@ const TITEL = new Map(KATEGORIEN);
   const protocol = new pmtiles.Protocol();
   maplibregl.addProtocol("pmtiles", protocol.tile);
 
+  // Die drei HEAD-Pruefungen laufen gleichzeitig statt nacheinander: zwei
+  // Umlaeufe zu R2 weniger vor dem ersten Kartenbild.
+  const eigeneZonen = !archive && !params.get("tiles");
+  const zonenPruefung = eigeneZonen ? pruefe(cfg.zones) : null;
+  const grundPruefung = pruefe(cfg.basemap);
+  const fussPruefung = pruefe(fussgaengerUrl);
+
   let datasets = [];
-  if (!archive && !params.get("tiles")) {
+  if (eigeneZonen) {
     // Erst die Datei neben der Seite, dann die Archivliste von `bubatz serve`.
     // Andersherum fragte der statische Stand bei JEDEM Aufruf `/datasets` und
     // bekam 404 -- in jeder Browserkonsole sichtbar.
-    if (await exists(cfg.zones)) archive = abs(cfg.zones);
+    if ((await zonenPruefung) === "da") {
+      archive = abs(cfg.zones);
+    } else if (fern(cfg.zones)) {
+      startFehler("Die Kartendaten sind gerade nicht erreichbar. Bitte die Seite in ein paar Minuten neu laden.");
+      return;
+    }
     if (!archive) {
-      try { const r = await fetch("datasets"); if (r.ok) datasets = await r.json(); } catch (e) { /* statisch gehostet */ }
+      try {
+        const r = await fetch("datasets", { signal: AbortSignal.timeout(10_000) });
+        if (r.ok) datasets = await r.json();
+      } catch (e) { /* statisch gehostet */ }
     }
   }
   const dsName = params.get("ds") || (datasets[0] && datasets[0].name);
@@ -134,9 +165,16 @@ const TITEL = new Map(KATEGORIEN);
   // Grundkarte: Protomaps (Vektor, PMTiles, Stil @protomaps/basemaps "light",
   // Glyphen und Sprites aus vendor/basemaps -- nichts von fremden Servern).
   // Fehlt das Archiv (lokale Vorschau ohne --basemap), OSM-Rasterkacheln als
-  // Notnagel; der ist NICHT fuer den Betrieb gedacht (OSMF-Kachelrichtlinie).
+  // Notnagel; der ist NICHT fuer den Betrieb gedacht (OSMF-Kachelrichtlinie). Im
+  // Betrieb (absolute Adresse) sagt die Seite stattdessen, dass die Grundkarte
+  // fehlt -- vorher lief jeder Fehler hierher, und weil die CSP
+  // tile.openstreetmap.org sperrt, blieb die Grundkarte still leer.
   const attribution = '<a href="https://protomaps.com">Protomaps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a>';
-  const haveBasemap = await exists(cfg.basemap);
+  const haveBasemap = (await grundPruefung) === "da";
+  if (!haveBasemap && fern(cfg.basemap)) {
+    startFehler("Die Grundkarte ist gerade nicht erreichbar. Bitte die Seite in ein paar Minuten neu laden.");
+    return;
+  }
   const sources = { zonen: source };
   let layers;
   if (haveBasemap) {
@@ -175,7 +213,7 @@ const TITEL = new Map(KATEGORIEN);
   // Deckkraft vom Zonenrot messbar unterscheidbar (Delta E
   // 16,1 normal, 10,6 bei Farbfehlsichtigkeit). Fehlt das Archiv, fehlt die
   // Ebene -- kein Fehler, nur kein Angebot.
-  const haveFuss = await exists(fussgaengerUrl);
+  const haveFuss = (await fussPruefung) === "da";
 
   // Ohne WebGL zeichnet MapLibre nichts, der Konstruktor wirft (abgeschaltete
   // Hardwarebeschleunigung, gesperrter Grafiktreiber, manche Fernzugriffe und
@@ -219,6 +257,24 @@ const TITEL = new Map(KATEGORIEN);
   }
   map.addControl(new maplibregl.NavigationControl());
 
+  // Popups: Esc schliesst sie, und der Fokus kehrt auf die Karte zurueck.
+  // MapLibre setzt ihn beim Oeffnen auf den Schliessen-Knopf; nach dem Schliessen
+  // lag er sonst auf dem Seitenanfang.
+  let offenesPopup = null;
+  const zeigePopup = (lngLat, box) => {
+    if (offenesPopup) offenesPopup.remove();
+    const popup = new maplibregl.Popup().setLngLat(lngLat).setDOMContent(box);
+    popup.on("close", () => {
+      if (offenesPopup === popup) offenesPopup = null;
+      const f = document.activeElement;
+      if (!f || f === document.body) map.getCanvas().focus({ preventScroll: true });
+    });
+    offenesPopup = popup.addTo(map);
+  };
+  map.getContainer().addEventListener("keydown", e => {
+    if (e.key === "Escape" && offenesPopup) offenesPopup.remove();
+  });
+
   // Legende: eine Zeile je Kategorie, jede blendet ihre Zonen aus und ein.
   // Ohne Auswahl waere die Karte leer -- die letzte Kategorie laesst sich nicht
   // abwaehlen, das erspart den leeren Zustand ohne Erklaerung.
@@ -228,14 +284,26 @@ const TITEL = new Map(KATEGORIEN);
     zeile.className = "legende-zeile";
     const kasten = document.createElement("input");
     kasten.type = "checkbox"; kasten.checked = true; kasten.value = key;
-    zeile.appendChild(kasten);
-    zeile.appendChild(document.createTextNode(" " + titel));
+    kasten.id = "kat-" + key; zeile.htmlFor = kasten.id;
+    const text = document.createElement("span");
+    text.textContent = titel;
+    zeile.append(kasten, text);
     legende.appendChild(zeile);
+    // Gesperrt per aria-disabled statt disabled: ein disabled-Kasten fiel aus der
+    // Tabulatorreihenfolge, und niemand erfuhr, warum er nicht ging.
+    kasten.addEventListener("click", e => {
+      if (kasten.getAttribute("aria-disabled") === "true") e.preventDefault();
+    });
     return kasten;
   });
   const anwenden = () => {
     const aktiv = kaesten.filter(k => k.checked).map(k => k.value);
-    kaesten.forEach(k => { k.disabled = k.checked && aktiv.length === 1; });
+    kaesten.forEach(k => {
+      const gesperrt = k.checked && aktiv.length === 1;
+      k.setAttribute("aria-disabled", String(gesperrt));
+      if (gesperrt) k.setAttribute("aria-describedby", "kat-hinweis");
+      else k.removeAttribute("aria-describedby");
+    });
     const f = filterFor(aktiv.length === KATEGORIEN.length ? null : aktiv);
     for (const id of ["zonen-fill", "zonen-line"]) map.setFilter(id, f);
   };
@@ -311,10 +379,12 @@ const TITEL = new Map(KATEGORIEN);
       fussBeschriften();
       try {
         fussAnwenden();
-        fussWartet = false;
       } catch (err) {
-        if (!fussWartet) { fussWartet = true; }
-        setTimeout(fussZeichnen, 1000);
+        // Hoechstens ein Wiederholer: jeder Fehlversuch (Schalter, Minutentakt)
+        // startete vorher eine eigene Kette, solange der Stil lud.
+        if (fussWartet) return;
+        fussWartet = true;
+        setTimeout(() => { fussWartet = false; fussZeichnen(); }, 1000);
       }
     };
     // Voreinstellung: die Ebene ist an, wenn das Verbot gerade gilt (7-20 Uhr
@@ -341,7 +411,7 @@ const TITEL = new Map(KATEGORIEN);
         box.appendChild(document.createElement("br"));
         box.appendChild(document.createTextNode(
           "§ 5 Abs. 2 Nr. 5 KCanG, 7–20 Uhr — " + (giltJetzt() ? "gilt jetzt" : "gilt jetzt nicht")));
-        new maplibregl.Popup().setLngLat(e.lngLat).setDOMContent(box).addTo(map);
+        zeigePopup(e.lngLat, box);
       });
     }
   }
@@ -357,6 +427,9 @@ const TITEL = new Map(KATEGORIEN);
   const sonderZeile = document.getElementById("sonder-zeile");
   const heuteBerlin = () => new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" }).format(new Date());
   const datumDe = iso => iso ? new Date(iso + "T12:00:00Z").toLocaleDateString("de-DE", { timeZone: "UTC" }) : "";
+  // Laeuft neben dem Rest her: vorher wartete alles darunter (Suche, Standort,
+  // Teilen) bis zu 8 s auf diese Datei.
+  (async () => {
   let sonderDaten = null;
   try {
     const r = await fetch(sonderUrl, { cache: "no-cache", signal: AbortSignal.timeout(8000) });
@@ -396,12 +469,20 @@ const TITEL = new Map(KATEGORIEN);
       }
       sonderStand = an;
     };
+    // Wie bei den Fussgaengerzonen: wiederholen, bis der Stil fertig ist, mit
+    // hoechstens einem Wiederholer. Direkt aufgerufen statt auf `load`, denn
+    // die Datei kann nach `load` ankommen.
+    let sonderWartet = false;
     const sonderZeichnen = () => {
       document.getElementById("farblegende").classList.toggle("mit-sonder", sonderSchalter.checked);
-      try { sonderAnwenden(); } catch (err) { setTimeout(sonderZeichnen, 1000); }
+      try { sonderAnwenden(); } catch (err) {
+        if (sonderWartet) return;
+        sonderWartet = true;
+        setTimeout(() => { sonderWartet = false; sonderZeichnen(); }, 1000);
+      }
     };
     sonderSchalter.addEventListener("change", sonderZeichnen);
-    map.once("load", sonderZeichnen);
+    sonderZeichnen();
     map.on("click", "sonder-fill", e => {
       const p = e.features[0].properties;
       // GeoJSON-Eigenschaften kommen als Zeichenketten; Listen als JSON-Text.
@@ -424,11 +505,12 @@ const TITEL = new Map(KATEGORIEN);
       };
       link(p.quelle, "Rechtsakt");
       if (p.karte && p.karte !== "null") { box.appendChild(document.createTextNode(" · ")); link(p.karte, "Amtliche Karte"); }
-      new maplibregl.Popup().setLngLat(e.lngLat).setDOMContent(box).addTo(map);
+      zeigePopup(e.lngLat, box);
     });
     map.on("mouseenter", "sonder-fill", () => { map.getCanvas().style.cursor = "pointer"; });
     map.on("mouseleave", "sonder-fill", () => { map.getCanvas().style.cursor = ""; });
   }
+  })().catch(err => console.error(err));
   // Eigener Standort: Knopf unter der Navigation, folgt der Position
   // (trackUserLocation) mit Genauigkeitskreis. Braucht einen sicheren Kontext
   // (HTTPS oder localhost) und die Freigabe im Browser; die Seite selbst
@@ -458,7 +540,13 @@ const TITEL = new Map(KATEGORIEN);
   const sucheFeld = document.getElementById("suche-feld");
   const sucheTreffer = document.getElementById("suche-treffer");
   const sucheKnopf = sucheForm.querySelector("button");
+  // Angesagt wird ein kurzer Satz in einer eigenen Live-Region, nicht die
+  // Trefferliste selbst (fuenf Knoepfe waeren zu geschwaetzig). Gleicher Text
+  // zweimal: ein Leerzeichen anhaengen, sonst schweigen manche Screenreader.
+  const ansage = document.getElementById("ansage");
+  const sagAn = text => { ansage.textContent = ansage.textContent === text ? text + "\u00a0" : text; };
   const sucheMeldung = text => {
+    sagAn(text);
     sucheTreffer.replaceChildren();
     const s = document.createElement("span");
     s.className = "leer";
@@ -469,8 +557,13 @@ const TITEL = new Map(KATEGORIEN);
   // kam in der Vorschau nicht an (gemessen: Feld fokussiert, Enter
   // gedrueckt, kein Aufruf) -- also ausdruecklich. Eine Suche, die auf Enter
   // nichts tut, ist kaputt.
+  // Waehrend einer IME-Eingabe (Japanisch, Chinesisch ...) bestaetigt Enter das
+  // Zeichen; das darf nicht schon halbfertig an Nominatim gehen.
   sucheFeld.addEventListener("keydown", e => {
-    if (e.key === "Enter") { e.preventDefault(); sucheForm.requestSubmit(); }
+    if (e.key !== "Enter") return;
+    e.preventDefault();
+    if (e.isComposing || e.keyCode === 229) return;
+    sucheForm.requestSubmit();
   });
   sucheForm.addEventListener("submit", async e => {
     e.preventDefault();
@@ -488,20 +581,25 @@ const TITEL = new Map(KATEGORIEN);
       const treffer = await r.json();
       if (!treffer.length) { sucheMeldung("nichts gefunden"); return; }
       sucheTreffer.replaceChildren();
+      sagAn(treffer.length + " Treffer");
       for (const t of treffer) {
         // display_name ist OSM-Freitext: nur textContent, nie innerHTML.
         const b = document.createElement("button");
         b.type = "button";
         b.textContent = t.display_name;
-        b.onclick = () => {
+        b.addEventListener("click", () => {
           sucheTreffer.replaceChildren();
+          // Der fokussierte Knopf ist jetzt weg; der Fokus kehrt ins Suchfeld zurueck
+          // statt an den Seitenanfang.
+          sucheFeld.focus();
+          sagAn("Karte zeigt " + t.display_name);
           if (t.boundingbox) {
             const [s1, n1, w1, e1] = t.boundingbox.map(Number);
             map.fitBounds([[w1, s1], [e1, n1]], { maxZoom: 17, padding: 40 });
           } else {
             map.flyTo({ center: [Number(t.lon), Number(t.lat)], zoom: 16 });
           }
-        };
+        });
         sucheTreffer.appendChild(b);
       }
     } catch (err) {
@@ -521,7 +619,7 @@ const TITEL = new Map(KATEGORIEN);
   const setStatus = (parts, warn) => {
     status.replaceChildren();
     const small = document.createElement("small");
-    if (warn) small.style.color = "#b00";
+    small.classList.toggle("warn", Boolean(warn));
     small.textContent = parts.join(" \u00b7 ");
     status.appendChild(small);
   };
@@ -594,16 +692,21 @@ const TITEL = new Map(KATEGORIEN);
   // wusste das niemand, und auf dem Tablet ist die Adresszeile muehsam
   // weil der Teilen-Weg sonst nicht gefunden wird.
   const teilenKnopf = document.getElementById("teilen-knopf");
+  // Der neue Knopftext allein wird nicht verlaesslich angesagt, daher zusaetzlich
+  // die Live-Region. Ein Zeitgeber, nicht einer je Klick.
+  let teilenUhr = 0;
   teilenKnopf.addEventListener("click", async () => {
     const url = location.href;
     try {
       await navigator.clipboard.writeText(url);
       teilenKnopf.textContent = "Adresse kopiert";
+      sagAn("Adresse kopiert");
     } catch (e) {
       // Ohne Zwischenablage-Freigabe: Adresse sichtbar und markierbar zeigen.
       setMeldung(url);
     }
-    setTimeout(() => { teilenKnopf.textContent = "Ausschnitt teilen"; }, 3000);
+    clearTimeout(teilenUhr);
+    teilenUhr = setTimeout(() => { teilenKnopf.textContent = "Ausschnitt teilen"; }, 3000);
   });
 
   // Der Weg zur Ueber-Seite nimmt den Ausschnitt mit und zurueck: vorher stand
@@ -642,7 +745,7 @@ const TITEL = new Map(KATEGORIEN);
     } else {
       box.appendChild(document.createTextNode("osm_id " + String(p.osm_id)));
     }
-    new maplibregl.Popup().setLngLat(e.lngLat).setDOMContent(box).addTo(map);
+    zeigePopup(e.lngLat, box);
   });
 })().catch(err => {
   // Alles andere, was den Start abbricht (ein Skript unter vendor/ nicht geladen,

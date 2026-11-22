@@ -25,6 +25,8 @@
   /* Markenfarbe des Projekts: nur Bedienelemente --
      die Zonenflaechen sind Datenfarbe und bleiben davon unberuehrt. */
   :root { --marke: #287c42; --zone: #c0392b; --fuss: #2a78d6; --sonder: #7d3c98; }
+  /* Schriftgroessen in rem und Umbruchgrenze in em: die Schriftgroesse, die jemand
+     im Browser einstellt, soll wirken (vorher alles in px). */
   html, body { margin: 0; height: 100%; font-family: system-ui, sans-serif; }
   #map { position: absolute; inset: 0; }
   /* Das Bedienfeld steht im Quelltext VOR der Karte, damit die Ortssuche am
@@ -32,42 +34,51 @@
      Kompass und Standort. Beide sind absolut
      positioniert, deshalb muss die Stapelreihenfolge das nachholen. */
   #panel { position: absolute; z-index: 1; top: 10px; left: 10px; background: rgba(255,255,255,.93);
-           padding: 10px 14px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,.3); font-size: 14px; max-width: 320px;
+           padding: 10px 14px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,.3); font-size: .875rem; max-width: 20rem;
            /* Auch auf breiten, aber FLACHEN Fenstern scrollen statt unten
               herauszulaufen: die Hoehenbegrenzung gilt nicht nur unter
               640 px Breite -- mit Farblegende und Werkzeugzeile ist das Feld
               hoch genug, dass sie ueberall gebraucht wird. */
-           max-height: calc(100% - 20px); overflow-y: auto; box-sizing: border-box; }
-  #panel h1 { font-size: 15px; margin: 0; color: var(--marke); }
+           max-height: calc(100% - 20px); overflow-y: auto; box-sizing: border-box;
+           /* Am Ende des Felds nicht die Seite weiterscrollen (Telefon: Neuladen
+              per Herunterziehen); Kontrollkaestchen in der Markenfarbe statt
+              Browserblau neben der blauen Fussgaengerzonen-Legende. */
+           overscroll-behavior: contain; accent-color: var(--marke); }
+  #panel h1 { font-size: .9375rem; margin: 0; color: var(--marke); }
   /* Kopfzeile mit Ein-/Ausklappknopf. Eingeklappt bleiben Titel, Legende und
      Suche; auf schmalen Bildschirmen (Telefon) ist das der Anfangszustand,
      sonst verdeckt das Feld die ganze Karte. */
   #panel-kopf { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
   #panel-kopf h1 { flex: 1; }
-  #panel-toggle { flex: none; font: inherit; font-size: 12px; padding: 2px 8px; cursor: pointer;
+  #panel-toggle { flex: none; font: inherit; font-size: .75rem; padding: 2px 8px; cursor: pointer;
                   border: 1px solid var(--marke); border-radius: 4px; background: #fff; color: var(--marke); }
   #panel.zu > .einklappbar { display: none; }
   /* Was hinter dem Knopf liegt, wird im eingeklappten Zustand benannt --
      sonst ist "Kategorien & Infos" eine Tuer ohne Schild: in Tests wurde
      dahinter Hilfe erwartet und die Ebene gar nicht gefunden. */
-  #panel-inhalt { display: none; margin-top: 4px; color: #555; font-size: 12px; }
+  #panel-inhalt { display: none; margin-top: 4px; color: #555; font-size: .75rem; }
   #panel.zu #panel-inhalt { display: block; }
   #panel a { color: var(--marke); }
   #panel details { margin-top: 6px; }
   #panel summary { cursor: pointer; color: var(--marke); font-weight: 600; }
-  .legende-zeile { display: flex; align-items: baseline; gap: 6px; margin-top: 3px; font-size: 13px; }
-  .legende-zeile input:disabled + * , .legende-zeile input:disabled { cursor: not-allowed; }
+  /* Abstand 6 px wie bisher sichtbar: die Regel `#panel label` (spezifischer)
+     hatte flex und 3 px dieser Zeile ueberschrieben; sie ist weg. */
+  .legende-zeile { display: flex; align-items: baseline; gap: 6px; margin-top: 6px; font-size: .8125rem; }
+  /* Gesperrt ist die letzte aktive Kategorie (aria-disabled, siehe app.js). */
+  .legende-zeile input[aria-disabled="true"] { cursor: not-allowed; opacity: .55; }
+  .legende-zeile input[aria-disabled="true"] + span { cursor: not-allowed; }
+  #legende { border: 0; margin: 0; padding: 0; min-inline-size: 0; }
   /* Farblegende. Sie steht ausserhalb von .einklappbar: die Frage "was heisst
      rot, was heisst weiss" ist die Kernfrage der Karte und darf nicht hinter
      dem Knopf verschwinden. Ohne sie wurde das Gruen der Grundkarte
      (Parkflaeche) als Datenfarbe und schloss "gruen = erlaubt". */
-  #farblegende { margin: 6px 0 2px; font-size: 12px; line-height: 1.45; color: #333; }
+  #farblegende { margin: 6px 0 2px; font-size: .75rem; line-height: 1.45; color: #333; }
   #farblegende div { display: flex; align-items: baseline; gap: 6px; }
   /* Breiter als hoch und mit weichen Ecken: ein quadratisches weisses Feld
      war vom Kontrollkaestchen der Kategorien darunter nicht zu unterscheiden
      (in der Telefonansicht gesehen). */
   #farblegende i { flex: none; width: 22px; height: 11px; border-radius: 3px;
-                   border: 1px solid rgba(0,0,0,.35); transform: translateY(1px); }
+                   border: 1px solid rgba(0,0,0,.55); transform: translateY(1px); }
   .swatch-zone { background: rgba(192,57,43,.4); }
   .swatch-frei { background: #fff; }
   .swatch-fuss { background: rgba(42,120,214,.6); }
@@ -80,26 +91,26 @@
   #hinweis { margin-top: 6px; padding-top: 6px; border-top: 1px solid #ddd; }
   #status, #ueber-zeile { margin-top: 6px; }
   #suche { display: flex; gap: 6px; margin-top: 8px; }
-  #suche input { flex: 1; min-width: 0; padding: 4px 6px; font: inherit; font-size: 13px;
-                 border: 1px solid #bbb; border-radius: 4px; }
-  #suche button { padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer;
+  #suche input { flex: 1; min-width: 0; padding: 4px 6px; font: inherit; font-size: .8125rem;
+                 border: 1px solid #767676; border-radius: 4px; }
+  #suche button { padding: 4px 10px; font: inherit; font-size: .8125rem; cursor: pointer;
                   border: 1px solid var(--marke); border-radius: 4px;
                   background: var(--marke); color: #fff; }
   #suche button[disabled] { opacity: .6; cursor: default; }
-  #suche-hinweis { display: block; color: #666; font-size: 11px; line-height: 1.35; margin-top: 3px; }
+  #suche-hinweis { display: block; color: #666; font-size: .6875rem; line-height: 1.35; margin-top: 3px; }
   /* Zeile unter der Suche: eigener Standort und Ausschnitt teilen. Beides war
      vorher nur als unbeschriftetes Kartensymbol bzw. gar nicht erreichbar
      (in Tests zuerst gesucht: der eigene Standort und der Teilen-Weg). */
   #werkzeuge { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-  #werkzeuge button { font: inherit; font-size: 12px; padding: 3px 8px; cursor: pointer;
+  #werkzeuge button { font: inherit; font-size: .75rem; padding: 3px 8px; cursor: pointer;
                       border: 1px solid var(--marke); border-radius: 4px; background: #fff; color: var(--marke); }
   #suche-treffer:not(:empty) { margin-top: 6px; border: 1px solid #e0e0e0; border-radius: 4px; }
-  #suche-treffer button { display: block; width: 100%; text-align: left; padding: 5px 7px;
-                          font: inherit; font-size: 13px; background: none; border: 0;
-                          border-bottom: 1px solid #eee; cursor: pointer; }
-  #suche-treffer button:last-child { border-bottom: 0; }
+  #suche-treffer button { display: block; width: 100%; text-align: start; padding: 5px 7px;
+                          font: inherit; font-size: .8125rem; background: none; border: 0;
+                          cursor: pointer; }
+  #suche-treffer button:not(:last-child) { border-bottom: 1px solid #eee; }
   #suche-treffer button:hover, #suche-treffer button:focus { background: #e1f5e4; }
-  #suche-treffer .leer { display: block; padding: 5px 7px; color: #666; font-size: 13px; }
+  #suche-treffer .leer { display: block; padding: 5px 7px; color: #666; font-size: .8125rem; }
   .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden;
                      clip-path: inset(50%); white-space: nowrap; }
   /* MapLibre faerbt Fokusring (#0096ff) und Standortpunkt (#1da1f2) blau. Beides
@@ -111,23 +122,36 @@
   .maplibregl-ctrl-group button:focus,
   .maplibregl-ctrl-attrib-button:focus,
   .maplibregl-ctrl-group button:focus:focus-visible { box-shadow: 0 0 2px 2px var(--marke); }
+  /* Dazu ein echter Umriss: den box-shadow loescht der Modus "erzwungene Farben",
+     und MapLibre setzt `outline: none`. Die Karte selbst hatte gar keinen sichtbaren
+     Fokus (und `overflow: hidden` schnitt einen aeusseren Ring ab). */
+  .maplibregl-ctrl-group button:focus-visible,
+  .maplibregl-ctrl-attrib-button:focus-visible { outline: 2px solid var(--marke); outline-offset: 1px; }
+  .maplibregl-canvas:focus-visible { outline: 3px solid var(--marke); outline-offset: -3px; }
+  @media (prefers-reduced-motion: reduce) {
+    .maplibregl-user-location-dot::before { animation: none; }
+  }
+  /* Die Farbfelder der Legende sind Hintergrund leerer Elemente; ohne diese Regel
+     verloeren sie in diesem Modus ihre Farbe, die WebGL-Karte behaelt ihre. */
+  @media (forced-colors: active) {
+    #farblegende i { forced-color-adjust: none; border-color: CanvasText; }
+  }
   .maplibregl-user-location-dot,
   .maplibregl-user-location-dot::before { background-color: var(--marke); }
   .maplibregl-user-location-accuracy-circle { background-color: #287c4233; }
-  #panel label { display: block; margin-top: 6px; }
   #panel small { color: #555; }
-  /* spezifischer als `#panel label`, sonst gewinnt dessen display:block */
-  #panel #datasets { display: none; margin-top: 6px; }
+  #panel .warn { color: #b00; }
+  #datasets { display: none; margin-top: 6px; }
   /* Flüchtige Meldungen (Kartenfehler, Standort) stehen NEBEN dem Datenstand,
      nicht an seiner Stelle: vorher ueberschrieb eine verweigerte
      Ortungsfreigabe das Datum der Daten. */
-  #meldung:not(:empty) { margin-top: 6px; color: #b00; font-size: 12px; }
+  #meldung:not(:empty) { margin-top: 6px; color: #b00; font-size: .75rem; overflow-wrap: anywhere; }
   /* Ladeschleier ueber der Karte. Die Grundkarte malt bis zu ihrer Ankunft
      ihre eigene Void-Farbe (#cccccc); Zonen auf Grau ohne Strassen lesen sich
      als Fehler statt als "laedt noch". */
   #laden { position: absolute; z-index: 2; left: 50%; bottom: 24px; transform: translateX(-50%);
            background: rgba(255,255,255,.92); border-radius: 6px; padding: 6px 12px;
-           font-size: 13px; color: #333; box-shadow: 0 1px 4px rgba(0,0,0,.3); }
+           font-size: .8125rem; color: #333; box-shadow: 0 1px 4px rgba(0,0,0,.3); }
   #laden[hidden] { display: none; }
   /* Startfehler (app.js `startFehler`) und die Seite ohne JavaScript: mittig
      und mit Umbruch statt als einzeilige Pille am Rand -- es ist dann das
@@ -136,35 +160,36 @@
     position: absolute; z-index: 2; left: 50%; top: 50%; bottom: auto;
     transform: translate(-50%, -50%); width: min(86vw, 30em); box-sizing: border-box;
     background: rgba(255,255,255,.96); border-radius: 6px; padding: 12px 16px;
-    font-size: 14px; line-height: 1.4; color: #333; text-align: center;
+    font-size: .875rem; line-height: 1.4; color: #333; text-align: center;
     box-shadow: 0 1px 4px rgba(0,0,0,.3); }
-  /* Breit steht das Bedienfeld links (bis 330 px): die Meldung mittig in den
-     Rest, sonst deckt sie bei 800 px Breite den Suchknopf zu. */
-  @media (min-width: 641px) {
-    #laden.fehler, #ohne-js { left: calc(340px + (100% - 340px) / 2);
-                              width: min(calc(100% - 370px), 30em); }
+  /* Breit steht das Bedienfeld links (bis 20rem plus Rand): die Meldung mittig in
+     den Rest, sonst deckt sie bei 800 px Breite den Suchknopf zu. */
+  @media (min-width: 40.0625em) {
+    #laden.fehler, #ohne-js { left: calc(21.25rem + (100% - 21.25rem) / 2);
+                              width: min(calc(100% - 23.125rem), 30em); }
   }
-  code { font-size: 12px; }
-  @media (max-width: 640px) {
+  code { font-size: .75rem; }
+  @media (max-width: 40em) {
     /* Volle Breite oben, scrollt statt ueber den Rand zu laufen. */
     #panel { left: 8px; right: 8px; top: 8px; max-width: none; box-sizing: border-box;
-             max-height: calc(100% - 16px); overflow-y: auto; padding: 8px 10px; font-size: 13px; }
-    #panel h1 { font-size: 14px; }
+             max-height: calc(100% - 16px); overflow-y: auto; padding: 8px 10px; font-size: .8125rem; }
+    #panel h1 { font-size: .875rem; }
     /* iOS Safari zoomt beim Fokus in Eingabefelder unter 16 px hinein. */
-    #suche input { font-size: 16px; }
+    #suche input { font-size: 1rem; }
     /* Kartenknoepfe (Zoom, Kompass, Standort) unten rechts ueber der
        Quellenangabe: oben liegt das Bedienfeld, und der Daumen erreicht sie.
        Per CSS statt Ecke in app.js, damit es beim Drehen des Telefons mitgeht. */
     .maplibregl-ctrl-top-right { top: auto; bottom: 40px; }
     #laden { bottom: 74px; }
     /* Auf dem Telefon zaehlt jede Zeile: der Erklaersatz zum Teilen steckt
-       dort im `title` des Knopfes, der Knopf selbst sagt genug. */
-    #teilen-hinweis { display: none; }
-    #panel-toggle { font-size: 11px; padding: 2px 6px; }
+       dort im `title` der Knoepfe, die Knoepfe selbst sagen genug. */
+    #werkzeuge-hinweis { display: none; }
+    #panel-toggle { font-size: .6875rem; padding: 2px 6px; }
   }
 </style>
 </head>
 <body>
+<main>
 <div id="panel">
   <div id="panel-kopf">
     <h1>BubatzBlick – Bubatzkarte 2.0</h1>
@@ -183,24 +208,32 @@
   Anders als 100-m-Kreise rechnet die Karte die Sicht durch die Häuser, im Zweifel eher zu groß.
   Daten &copy; OpenStreetMap-Mitwirkende (ODbL).</small>
   </div>
+  <search>
   <form id="suche" autocomplete="off">
     <label for="suche-feld" class="visually-hidden">Ort suchen</label>
-    <input id="suche-feld" type="search" placeholder="Ort oder Adresse" enterkeyhint="search">
+    <input id="suche-feld" type="search" placeholder="Ort oder Adresse" enterkeyhint="search"
+           aria-describedby="suche-hinweis" autocorrect="off" autocapitalize="none" spellcheck="false">
     <button type="submit">Suchen</button>
   </form>
   <small id="suche-hinweis">Sucht über <a href="https://nominatim.openstreetmap.org/">Nominatim</a>
   (OpenStreetMap). Anders als der Rest der Karte verlässt Ihre Eingabe dabei diese Seite.</small>
+  </search>
   <div id="werkzeuge">
-    <button type="button" id="standort-knopf">Mein Standort</button>
-    <button type="button" id="teilen-knopf" aria-describedby="teilen-hinweis"
+    <button type="button" id="standort-knopf" aria-describedby="werkzeuge-hinweis"
+            title="Den Standort fragt der Browser ab; die Seite sendet ihn nicht.">Mein Standort</button>
+    <button type="button" id="teilen-knopf" aria-describedby="werkzeuge-hinweis"
             title="Der Ausschnitt steht in der Adresszeile (nach dem #); der Knopf kopiert sie.">Ausschnitt teilen</button>
   </div>
-  <small id="teilen-hinweis">Der Ausschnitt steht in der Adresszeile (nach dem <code>#</code>); der Knopf kopiert sie.</small>
+  <small id="werkzeuge-hinweis">Den Standort fragt der Browser ab; die Seite sendet ihn nicht.
+  Der Ausschnitt steht in der Adresszeile (nach dem <code>#</code>); „Ausschnitt teilen“ kopiert sie.</small>
   <div id="suche-treffer"></div>
   <div id="panel-mehr" class="einklappbar">
   <details id="kategorien">
     <summary>Kategorien</summary>
-    <div id="legende"></div>
+    <fieldset id="legende">
+      <legend class="visually-hidden">Kategorien</legend>
+      <span id="kat-hinweis" class="visually-hidden">Mindestens eine Kategorie bleibt eingeschaltet.</span>
+    </fieldset>
   </details>
   <label class="legende-zeile" id="fuss-zeile"><input type="checkbox" id="fuss-an">
     <span>Fußgängerzonen <small id="fuss-zeit"></small></span></label>
@@ -214,9 +247,11 @@
   <div id="ueber-zeile"><small><a href="about.html" id="ueber-link">Über diese Karte</a> &middot; Fehler melden, Lizenzen, Impressum</small></div>
   </div>
   <div id="meldung" role="status" aria-live="polite"></div>
+  <div id="ansage" class="visually-hidden" role="status"></div>
 </div>
 <div id="map"></div>
 <div id="laden">Karte lädt …</div>
+</main>
 <noscript>
   <style>#laden { display: none; }</style>
   <div id="ohne-js">Diese Karte braucht JavaScript. Was sie zeigt und wie sie rechnet, steht
