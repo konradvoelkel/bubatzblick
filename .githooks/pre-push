@@ -12,6 +12,9 @@ echo "pre-push: Rust"
 # fehlgeschlagener Lauf als Erfolg durch. `-q` ist schon knapp genug.
 (cd rust && cargo fmt --check --all && cargo clippy --workspace --all-targets --locked -q -- -D warnings && cargo test --workspace --locked -q)
 if command -v cargo-audit >/dev/null; then (cd rust && cargo audit -q); else echo "pre-push: cargo-audit fehlt (cargo install cargo-audit --locked) -- uebersprungen"; fi
+# Dazu cargo-deny wie die CI (Job audit), sofern installiert: es kennt dieselbe
+# Advisory-Datenbank, prueft aber auch zurueckgezogene Fassungen (yanked).
+if command -v cargo-deny >/dev/null; then cargo deny --log-level error --manifest-path rust/Cargo.toml check advisories; else echo "pre-push: cargo-deny fehlt (cargo install cargo-deny --locked) -- uebersprungen"; fi
 echo "pre-push: Python"
 # Aus rust/ heraus, damit rustup die Toolchain aus rust-toolchain.toml nimmt (Makefile, core).
 (cd rust && uv run -q maturin develop --release -m bubatzcore-py/Cargo.toml >/dev/null)

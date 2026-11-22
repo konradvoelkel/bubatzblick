@@ -7,10 +7,8 @@ requires-python = ">=3.13"
 license = { text = "AGPL-3.0-or-later" }
 dependencies = [
     "shapely>=2.0.6",
-    "osmium>=3.7.0",
     "geopandas>=1.0.0",
     "pyarrow>=17.0.0",
-    "joblib>=1.4.0",
     "pydantic-settings>=2.5.0",
     "pyproj>=3.6.0",
     "numpy>=2.1.0",
@@ -63,10 +61,6 @@ check_untyped_defs = true
 module = [
     "pyarrow",
     "pyarrow.*",
-    "joblib",
-    "joblib.*",
-    "osmium",
-    "osmium.*",
     "bubatzcore",
     "markdown",
 ]

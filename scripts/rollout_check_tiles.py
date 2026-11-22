@@ -31,11 +31,11 @@ import sys
 import tomllib
 from pathlib import Path
 
+import numpy as np
 import pyarrow.parquet as pq
 import shapely
 from pyproj import Transformer
 from shapely.geometry import shape
-from shapely.ops import transform
 
 RADIUS_M = 100
 SIMPLIFY_VERSION = "v1"  # tiles.rs
@@ -131,10 +131,13 @@ def main() -> None:
     if not geoms:
         raise SystemExit(f"osm_id={osm_id} nicht in {hits[-1]}")
 
-    def nach_utm(x: float, y: float, z: float | None = None) -> tuple[float, ...]:
-        return tuple(tr.transform(x, y))
+    # shapely.transform statt des seit shapely 2.2 veralteten shapely.ops.transform:
+    # die Funktion bekommt alle Koordinaten als (n, 2)-Feld auf einmal.
+    def nach_utm(xy: np.ndarray) -> np.ndarray:
+        x, y = tr.transform(xy[:, 0], xy[:, 1])
+        return np.column_stack([x, y])
 
-    u = transform(nach_utm, shapely.union_all(shapely.make_valid(geoms)))
+    u = shapely.transform(shapely.union_all(shapely.make_valid(geoms)), nach_utm)
     print(f"Zelle:          {cell}  ({hits[-1].name})")
     print(f"Kachel-Eingabe: {round(u.area)} m2  ({len(geoms)} Teilgeometrien)")
     print(f"Zonendaten:     {round(z)} m2")

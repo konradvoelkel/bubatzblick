@@ -42,6 +42,12 @@ Karte selbst.
   Die Einleitung im Bedienfeld sagt jetzt „Cannabis-Konsumverbot“ und nennt den
   Unterschied zu 100-m-Kreisen. Die Über-Seite spricht durchgehend von
   BubatzBlick und grenzt sich gleich oben von der Bubatzkarte von 2023 ab.
+- Abhängigkeiten: `osmium` und `joblib` gestrichen, beide nirgends importiert;
+  mit ihnen fallen requests, urllib3, idna, charset-normalizer und
+  cloudpickle aus `uv.lock`. Die Kachelprüfung im Tageszyklus
+  (`scripts/rollout_check_tiles.py`) nutzt `shapely.transform` statt des seit
+  shapely 2.2 veralteten `shapely.ops.transform`, mit gleicher Ausgabe. Der
+  pre-push-Hook prüft zusätzlich mit `cargo deny`, wenn es installiert ist.
 - Abhängigkeiten: 73 kompatible Rust-Updates (`cargo update`), darunter arrow
   und parquet 60.2.0, zstd 0.14.4, rustls-webpki 0.103.17 und rustix 1.1.6
   (RUSTSEC-2026-0486). Zonengeometrie und Kacheln bleiben gleich:
