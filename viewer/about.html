@@ -23,40 +23,44 @@
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <style>
-  body { margin: 0; font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-         color: #222; background: #f2efe9; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: #222; background: #f2efe9; overflow-wrap: break-word; }
   header { background: #fff; border-bottom: 1px solid #ddd; }
-  header .inner { max-width: 760px; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
                   gap: 24px; align-items: center; flex-wrap: wrap; }
   header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
   header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: #287c42; }
   header p { margin: 0 0 8px; color: #555; }
   nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: #287c42;
           color: #fff; text-decoration: none; font-weight: 600; }
   nav a:hover { background: #03642b; }
-  main { max-width: 760px; margin: 0 auto; padding: 8px 20px 60px; background: #fff; }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: #fff; }
   main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid #eee; }
   main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
   blockquote { margin: 1em 0; padding: .6em 1em; border-left: 4px solid #287c42;
                background: #e1f5e4; }
   blockquote ol { padding-left: 1.4em; }
   table { border-collapse: collapse; width: 100%; }
-  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid #e5e5e5;
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid #e5e5e5;
            vertical-align: top; }
   code { font-size: .9em; background: #f3f3f3; padding: 1px 4px; border-radius: 3px;
          overflow-wrap: anywhere; }
   pre { overflow-x: auto; background: #f3f3f3; padding: 10px; border-radius: 6px; }
   a { color: #287c42; }
-  footer { max-width: 760px; margin: 0 auto; padding: 16px 20px; color: #666; font-size: .9em; }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: #666; font-size: .9em; }
 </style>
 </head>
 <body>
 <header><div class="inner">
-  <img src="img/sichtfeld-blatt.svg" alt="Schematische Karte: ein Spielplatz in der Mitte, die rote Sichtweitenzone zwischen den Häuserblöcken hat die Form eines Hanfblatts">
+  <img src="img/sichtfeld-blatt.svg" width="200" height="200" alt="Schematische Karte: ein Spielplatz in der Mitte, die rote Sichtweitenzone zwischen den Häuserblöcken hat die Form eines Hanfblatts">
   <div>
     <h1>Über BubatzBlick</h1>
     <p>Konsumverbot in Sichtweite nach § 5 Abs. 2 KCanG, berechnet aus OpenStreetMap.</p>
-    <nav><a href="./" class="zur-karte">← Zur Karte</a></nav>
+    <nav><a href="./" class="zur-karte"><span aria-hidden="true">←</span> Zur Karte</a></nav>
   </div>
 </div></header>
 <main>
@@ -168,14 +172,16 @@ genau der Tag-Datei erzeugt, mit der die Karte gerechnet wird
 <p><strong>§ 5 KCanG – Konsumverbot</strong></p>
 <p>(1) Der Konsum von Cannabis in unmittelbarer Gegenwart von Personen, die
 das 18. Lebensjahr noch nicht vollendet haben, ist verboten.</p>
-<p>(2) Der öffentliche Konsum von Cannabis ist verboten:
-1. in Schulen und in deren Sichtweite,
-2. auf Kinderspielplätzen und in deren Sichtweite,
-3. in Kinder- und Jugendeinrichtungen und in deren Sichtweite,
-4. in öffentlich zugänglichen Sportstätten und in deren Sichtweite,
-5. in Fußgängerzonen zwischen 7 und 20 Uhr und
-6. innerhalb des befriedeten Besitztums von Anbauvereinigungen und in
-   deren Sichtweite.</p>
+<p>(2) Der öffentliche Konsum von Cannabis ist verboten:</p>
+<ol>
+<li>in Schulen und in deren Sichtweite,</li>
+<li>auf Kinderspielplätzen und in deren Sichtweite,</li>
+<li>in Kinder- und Jugendeinrichtungen und in deren Sichtweite,</li>
+<li>in öffentlich zugänglichen Sportstätten und in deren Sichtweite,</li>
+<li>in Fußgängerzonen zwischen 7 und 20 Uhr und</li>
+<li>innerhalb des befriedeten Besitztums von Anbauvereinigungen und in
+   deren Sichtweite.</li>
+</ol>
 <p>Im Sinne von Satz 1 ist eine Sichtweite bei einem Abstand von mehr als
 100 Metern von dem Eingangsbereich der in Satz 1 Nummer 1 bis 4 und 6
 genannten Einrichtungen nicht mehr gegeben.</p>
@@ -278,8 +284,8 @@ Lizenzen), hier die Bausteine:</p>
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
+<th>Kennzahl</th>
+<th>Wert</th>
 </tr>
 </thead>
 <tbody>
@@ -406,7 +412,10 @@ Link „In OpenStreetMap ansehen“ im Popup einer Zone ist ein gewöhnlicher Li
 Er lädt nichts nach, sondern führt erst, wenn Sie ihn anklicken, zu
 openstreetmap.org. Der
 aktuelle Kartenausschnitt steht in der Adresszeile (nach dem <code>#</code>) und wird nur
-übertragen, wenn Sie die Adresse selbst weitergeben.</p>
+übertragen, wenn Sie die Adresse selbst weitergeben. „Mein Standort“ fragt die
+Position nach Ihrer Freigabe über den Browser ab; die Seite sendet sie nirgendwohin.
+Die Karte springt dorthin und lädt die Kacheln für diesen Ausschnitt wie für
+jeden anderen.</p>
 <h2>Lizenzen und Weiterverwendung</h2>
 <ul>
 <li>Kartendaten © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-Mitwirkende</a>,
@@ -424,31 +433,36 @@ aktuelle Kartenausschnitt steht in der Adresszeile (nach dem <code>#</code>) und
   Schrift Noto Sans (SIL Open Font License); als eigene Kopie gehostet.</li>
 </ul>
 <h2>Häufige Fragen</h2>
-<p><strong>Ist das eine amtliche Karte?</strong> Nein. Es ist ein privates,
+<h3>Ist das eine amtliche Karte?</h3>
+<p>Nein. Es ist ein privates,
 nicht-kommerzielles Projekt einer Einzelperson auf Basis offener Daten;
 keine Behörde und keine Hochschule stehen dahinter.</p>
-<p><strong>Warum ist meine Straße rot, obwohl ich von dort keine Schule sehe?</strong>
-Weil die Karte nur Gebäude als Sichthindernis kennt. Bäume, Mauern oder
+<h3>Warum ist meine Straße rot, obwohl ich von dort keine Schule sehe?</h3>
+<p>Weil die Karte nur Gebäude als Sichthindernis kennt. Bäume, Mauern oder
 ein Bahndamm dazwischen fehlen im Modell — die Karte irrt hier zur
 sicheren Seite. Oder es liegt eine Einrichtung in der Nähe, die man
 nicht als solche erkennt (eine Kita im Wohnhaus, ein Bolzplatz).</p>
-<p><strong>Warum ist ein Ort weiß, an dem eine Kita ist?</strong> Dann fehlt die Kita in
+<h3>Warum ist ein Ort weiß, an dem eine Kita ist?</h3>
+<p>Dann fehlt die Kita in
 OpenStreetMap oder ist dort anders getaggt. Eintragen — nach ein bis zwei
 Tagen ist sie auf der Karte.</p>
-<p><strong>Auf einer weißen Fläche darf ich also konsumieren?</strong> Nicht, wenn
+<h3>Auf einer weißen Fläche darf ich also konsumieren?</h3>
+<p>Nicht, wenn
 Minderjährige in unmittelbarer Nähe sind (§ 5 Abs. 1), nicht in einer
 Fußgängerzone zwischen 7 und 20 Uhr, nicht in militärischen Bereichen,
 nicht in einer lila Zone — und nicht, wenn ein Hausrecht oder eine
 örtliche Regel es verbietet, die die Karte nicht kennt.</p>
-<p><strong>Warum gibt es keinen Abstandsregler?</strong> Weil das Gesetz keinen Abstand
+<h3>Warum gibt es keinen Abstandsregler?</h3>
+<p>Weil das Gesetz keinen Abstand
 vorgibt, sondern die Sichtweite mit 100 m Obergrenze — und genau die wird
 berechnet.</p>
-<p><strong>Kann ich die Zonen für eigene Zwecke nutzen?</strong> Ja, unter der ODbL (siehe
+<h3>Kann ich die Zonen für eigene Zwecke nutzen?</h3>
+<p>Ja, unter der ODbL (siehe
 Lizenzen); das Archiv gibt es auf Anfrage.</p>
 <h2>Kontakt und Impressum</h2>
 <p>BubatzBlick (Bubatzkarte 2.0, bubatzblick.de) ist ein nicht-kommerzielles Angebot von</p>
-<p>Konrad Völkel
-Universitätsstr. 1
+<p>Konrad Völkel<br>
+Universitätsstr. 1<br>
 40225 Düsseldorf</p>
 <p>E-Mail: <span id="mail">(JavaScript nötig)</span></p>
 <p>Dieses Angebot ist privat und steht in keiner Verbindung zur
@@ -456,7 +470,7 @@ Heinrich-Heine-Universität Düsseldorf; die Anschrift dient allein der
 Erreichbarkeit.</p>
 </main>
 <footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
-Daten © OpenStreetMap-Mitwirkende (ODbL) · <a href="./" class="zur-karte">Karte</a></footer>
+Daten © OpenStreetMap-Mitwirkende (ODbL) · <a href="./" class="zur-karte">Zur Karte</a></footer>
 <script src="config.js"></script>
 <script src="about.js"></script>
 </body>

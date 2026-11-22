@@ -71,6 +71,7 @@ genau der Tag-Datei erzeugt, mit der die Karte gerechnet wird
 > das 18. Lebensjahr noch nicht vollendet haben, ist verboten.
 >
 > (2) Der öffentliche Konsum von Cannabis ist verboten:
+>
 > 1. in Schulen und in deren Sichtweite,
 > 2. auf Kinderspielplätzen und in deren Sichtweite,
 > 3. in Kinder- und Jugendeinrichtungen und in deren Sichtweite,
@@ -186,7 +187,7 @@ Lizenzen), hier die Bausteine:
 
 ## Zahlen
 
-| | |
+| Kennzahl | Wert |
 |---|---|
 | Einrichtungen (Verbotsobjekte) | 496 217 |
 | Gebäudegrundrisse als Hindernisse | 39,6 Millionen |
@@ -289,7 +290,10 @@ Link „In OpenStreetMap ansehen“ im Popup einer Zone ist ein gewöhnlicher Li
 Er lädt nichts nach, sondern führt erst, wenn Sie ihn anklicken, zu
 openstreetmap.org. Der
 aktuelle Kartenausschnitt steht in der Adresszeile (nach dem `#`) und wird nur
-übertragen, wenn Sie die Adresse selbst weitergeben.
+übertragen, wenn Sie die Adresse selbst weitergeben. „Mein Standort“ fragt die
+Position nach Ihrer Freigabe über den Browser ab; die Seite sendet sie nirgendwohin.
+Die Karte springt dorthin und lädt die Kacheln für diesen Ausschnitt wie für
+jeden anderen.
 
 ## Lizenzen und Weiterverwendung
 
@@ -309,39 +313,50 @@ aktuelle Kartenausschnitt steht in der Adresszeile (nach dem `#`) und wird nur
 
 ## Häufige Fragen
 
-**Ist das eine amtliche Karte?** Nein. Es ist ein privates,
+### Ist das eine amtliche Karte?
+
+Nein. Es ist ein privates,
 nicht-kommerzielles Projekt einer Einzelperson auf Basis offener Daten;
 keine Behörde und keine Hochschule stehen dahinter.
 
-**Warum ist meine Straße rot, obwohl ich von dort keine Schule sehe?**
+### Warum ist meine Straße rot, obwohl ich von dort keine Schule sehe?
+
 Weil die Karte nur Gebäude als Sichthindernis kennt. Bäume, Mauern oder
 ein Bahndamm dazwischen fehlen im Modell — die Karte irrt hier zur
 sicheren Seite. Oder es liegt eine Einrichtung in der Nähe, die man
 nicht als solche erkennt (eine Kita im Wohnhaus, ein Bolzplatz).
 
-**Warum ist ein Ort weiß, an dem eine Kita ist?** Dann fehlt die Kita in
+### Warum ist ein Ort weiß, an dem eine Kita ist?
+
+Dann fehlt die Kita in
 OpenStreetMap oder ist dort anders getaggt. Eintragen — nach ein bis zwei
 Tagen ist sie auf der Karte.
 
-**Auf einer weißen Fläche darf ich also konsumieren?** Nicht, wenn
+### Auf einer weißen Fläche darf ich also konsumieren?
+
+Nicht, wenn
 Minderjährige in unmittelbarer Nähe sind (§ 5 Abs. 1), nicht in einer
 Fußgängerzone zwischen 7 und 20 Uhr, nicht in militärischen Bereichen,
 nicht in einer lila Zone — und nicht, wenn ein Hausrecht oder eine
 örtliche Regel es verbietet, die die Karte nicht kennt.
 
-**Warum gibt es keinen Abstandsregler?** Weil das Gesetz keinen Abstand
+### Warum gibt es keinen Abstandsregler?
+
+Weil das Gesetz keinen Abstand
 vorgibt, sondern die Sichtweite mit 100 m Obergrenze — und genau die wird
 berechnet.
 
-**Kann ich die Zonen für eigene Zwecke nutzen?** Ja, unter der ODbL (siehe
+### Kann ich die Zonen für eigene Zwecke nutzen?
+
+Ja, unter der ODbL (siehe
 Lizenzen); das Archiv gibt es auf Anfrage.
 
 ## Kontakt und Impressum
 
 BubatzBlick (Bubatzkarte 2.0, bubatzblick.de) ist ein nicht-kommerzielles Angebot von
 
-Konrad Völkel
-Universitätsstr. 1
+Konrad Völkel<br>
+Universitätsstr. 1<br>
 40225 Düsseldorf
 
 E-Mail: kontakt [at] bubatzblick [punkt] de

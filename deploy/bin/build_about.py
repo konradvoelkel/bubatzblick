@@ -113,31 +113,35 @@ DESCRIPTION = (
 # heller Grund oklch(0.95 0.03 150) = #e1f5e4. Nicht das Zonenrot: das ist die
 # Datenfarbe der Karte und ausdruecklich KEINE Markenfarbe.
 STYLE = """
-  body { margin: 0; font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-         color: #222; background: #f2efe9; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: #222; background: #f2efe9; overflow-wrap: break-word; }
   header { background: #fff; border-bottom: 1px solid #ddd; }
-  header .inner { max-width: 760px; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
                   gap: 24px; align-items: center; flex-wrap: wrap; }
   header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
   header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: #287c42; }
   header p { margin: 0 0 8px; color: #555; }
   nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: #287c42;
           color: #fff; text-decoration: none; font-weight: 600; }
   nav a:hover { background: #03642b; }
-  main { max-width: 760px; margin: 0 auto; padding: 8px 20px 60px; background: #fff; }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: #fff; }
   main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid #eee; }
   main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
   blockquote { margin: 1em 0; padding: .6em 1em; border-left: 4px solid #287c42;
                background: #e1f5e4; }
   blockquote ol { padding-left: 1.4em; }
   table { border-collapse: collapse; width: 100%; }
-  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid #e5e5e5;
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid #e5e5e5;
            vertical-align: top; }
   code { font-size: .9em; background: #f3f3f3; padding: 1px 4px; border-radius: 3px;
          overflow-wrap: anywhere; }
   pre { overflow-x: auto; background: #f3f3f3; padding: 10px; border-radius: 6px; }
   a { color: #287c42; }
-  footer { max-width: 760px; margin: 0 auto; padding: 16px 20px; color: #666; font-size: .9em; }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: #666; font-size: .9em; }
 """
 
 # Eigene Datei viewer/about.js (kein Inline-Skript: CSP script-src 'self').
@@ -206,18 +210,18 @@ def page(body: str, title: str) -> str:
 </head>
 <body>
 <header><div class="inner">
-  <img src="img/sichtfeld-blatt.svg" alt="{ALT}">
+  <img src="img/sichtfeld-blatt.svg" width="200" height="200" alt="{ALT}">
   <div>
     <h1>{title}</h1>
     <p>Konsumverbot in Sichtweite nach § 5 Abs. 2 KCanG, berechnet aus OpenStreetMap.</p>
-    <nav><a href="./" class="zur-karte">← Zur Karte</a></nav>
+    <nav><a href="./" class="zur-karte"><span aria-hidden="true">←</span> Zur Karte</a></nav>
   </div>
 </div></header>
 <main>
 {body}
 </main>
 <footer>BubatzBlick \u2013 Bubatzkarte 2.0 · Version {version()} ·
-Daten © OpenStreetMap-Mitwirkende (ODbL) · <a href="./" class="zur-karte">Karte</a></footer>
+Daten © OpenStreetMap-Mitwirkende (ODbL) · <a href="./" class="zur-karte">Zur Karte</a></footer>
 <script src="config.js"></script>
 <script src="about.js"></script>
 </body>

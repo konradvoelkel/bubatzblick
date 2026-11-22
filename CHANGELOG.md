@@ -59,6 +59,10 @@ Karte selbst.
   ihre Farbe; die Kategoriezeilen stehen wie gedacht (eine allgemeinere
   CSS-Regel hatte sie überschrieben); der Standortpunkt pulsiert nicht, wenn
   weniger Bewegung eingestellt ist.
+- Über-Seite: Das Gesetzeszitat zeigt § 5 Abs. 2 wieder als nummerierte Liste
+  (lief als ein Absatz durch), die Tabelle hat einen Kopf, die häufigen Fragen
+  sind Überschriften, die Anschrift steht zeilenweise, die Textspalte ist auf
+  etwa 80 Zeichen begrenzt und lange Wörter brechen um.
 - Der Link „Über diese Karte“ trug den Kartenausschnitt in der Abfragezeile
   (`about.html?karte=…`). Damit stand er im Zugriffsprotokoll des Servers,
   nach „Mein Standort“ also die eigene Position, entgegen der Zusage auf der
