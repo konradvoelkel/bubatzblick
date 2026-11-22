@@ -100,15 +100,20 @@ fn seq_path(seq: i64) -> String {
 /// GET mit Zeitlimit und drei Versuchen (Geofabrik antwortet gelegentlich
 /// erst nach einem Verbindungsabbruch).
 fn fetch(url: &str) -> Result<Vec<u8>> {
-    let agent = ureq::AgentBuilder::new()
-        .timeout(Duration::from_secs(180))
-        .build();
+    // Eine Frist fuer den ganzen Abruf (Namensaufloesung bis Ende des Koerpers),
+    // wie `timeout` in ureq 2. TLS: rustls mit ring und webpki-roots, wie zuvor.
+    let agent: ureq::Agent = ureq::Agent::config_builder()
+        .timeout_global(Some(Duration::from_secs(180)))
+        .build()
+        .into();
     let mut last = None;
     for attempt in 1..=3 {
         match agent.get(url).call() {
-            Ok(resp) => {
+            Ok(mut resp) => {
+                // Ohne Groessengrenze wie bisher: `read_to_vec` haette in ureq 3 eine
+                // Vorgabe von 10 MB, ein Tagesdiff fuer Deutschland ist groesser.
                 let mut buf = Vec::new();
-                resp.into_reader().read_to_end(&mut buf)?;
+                resp.body_mut().as_reader().read_to_end(&mut buf)?;
                 return Ok(buf);
             }
             Err(e) => {
@@ -461,6 +466,18 @@ fn which(bin: &str) -> Option<PathBuf> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    /// Echter Abruf bei Geofabrik (Netz noetig, daher nicht im normalen Lauf):
+    /// `cargo test -p bubatz geofabrik_state -- --ignored`. Prueft HTTPS, Frist und
+    /// das Lesen des Koerpers nach einem Wechsel der HTTP-Bibliothek.
+    #[test]
+    #[ignore = "braucht Netz"]
+    fn geofabrik_state() {
+        let (seq, ts) =
+            server_state("https://download.geofabrik.de/europe/germany-updates").unwrap();
+        assert!(seq > 4_000, "Folge {seq}");
+        assert!(ts.starts_with("20"), "Zeitstempel {ts}");
+    }
 
     #[test]
     fn sequence_paths_follow_the_replication_layout() {

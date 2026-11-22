@@ -42,6 +42,11 @@ Karte selbst.
   Die Einleitung im Bedienfeld sagt jetzt „Cannabis-Konsumverbot“ und nennt den
   Unterschied zu 100-m-Kreisen. Die Über-Seite spricht durchgehend von
   BubatzBlick und grenzt sich gleich oben von der Bubatzkarte von 2023 ab.
+- Abhängigkeiten: ureq 3.5.2 statt 2.12.1 für den täglichen PBF-Download
+  (`bubatz update-pbf`). TLS bleibt rustls mit ring und webpki-roots, die
+  Frist 180 s für den ganzen Abruf, gelesen wird ohne Größengrenze. Damit
+  entfallen `url` samt idna und ICU aus den Abhängigkeiten. Ein Test, der
+  nur auf Wunsch läuft, ruft `state.txt` bei Geofabrik echt ab.
 - Abhängigkeiten: pyo3 0.30.1 und numpy 0.30.0 für die Python-Bindung des
   Geometriekerns (nur Tests und Orakel; das Binary `bubatz` bleibt davon
   unberührt). Der Code brauchte keine Änderung.
