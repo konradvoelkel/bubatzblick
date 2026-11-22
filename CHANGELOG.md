@@ -42,6 +42,12 @@ Karte selbst.
   Die Einleitung im Bedienfeld sagt jetzt „Cannabis-Konsumverbot“ und nennt den
   Unterschied zu 100-m-Kreisen. Die Über-Seite spricht durchgehend von
   BubatzBlick und grenzt sich gleich oben von der Bubatzkarte von 2023 ab.
+- Abhängigkeiten: 73 kompatible Rust-Updates (`cargo update`), darunter arrow
+  und parquet 60.2.0, zstd 0.14.4, rustls-webpki 0.103.17 und rustix 1.1.6
+  (RUSTSEC-2026-0486). Zonengeometrie und Kacheln bleiben gleich:
+  Düsseldorf-Zonen byte-identisch (`bubatz verify identical`, 2 715 Bänder),
+  `zonen.pmtiles` sha256-gleich; die Zellendateien unterscheiden sich nur im
+  Versionsstempel von parquet, ihr Inhalt ist gleich.
 - Abhängigkeiten: ureq 3.5.2 statt 2.12.1 für den täglichen PBF-Download
   (`bubatz update-pbf`). TLS bleibt rustls mit ring und webpki-roots, die
   Frist 180 s für den ganzen Abruf, gelesen wird ohne Größengrenze. Damit
