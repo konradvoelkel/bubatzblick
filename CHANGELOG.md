@@ -42,6 +42,10 @@ Karte selbst.
   Die Einleitung im Bedienfeld sagt jetzt „Cannabis-Konsumverbot“ und nennt den
   Unterschied zu 100-m-Kreisen. Die Über-Seite spricht durchgehend von
   BubatzBlick und grenzt sich gleich oben von der Bubatzkarte von 2023 ab.
+- Abhängigkeiten: i_overlay 9.2.0. Zonengeometrie und Kacheln bleiben gleich:
+  Düsseldorf-Zonen aus altem und neuem Lock byte-identisch
+  (`bubatz verify identical`, 2 715 Bänder), Zellendateien und `zonen.pmtiles`
+  sha256-gleich.
 - Abhängigkeiten: url 2.5.9 (mit form_urlencoded 1.2.3) nach RUSTSEC-2026-0592
   (Stapelüberlauf in `Url::origin()` bei verschachtelten `blob:`-Adressen);
   `url` kommt nur über ureq in den täglichen PBF-Download.
