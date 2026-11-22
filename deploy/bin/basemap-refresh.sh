@@ -2,7 +2,7 @@
 # Grundkarte erneuern: Deutschland plus 10 km aus dem neuesten taeglichen
 # Protomaps-Build schneiden, pruefen und nach R2 laden. Gedacht fuer einen
 # Monats-Timer in der Rolle bubatz des Infra-Repos; laeuft auch zu Hause.
-# Bisher von Hand (DEPLOY.md § 0, "Grundkarte").
+# Bisher von Hand.
 #
 #   deploy/bin/basemap-refresh.sh                 # schneiden, pruefen, hochladen
 #   DRY_RUN=1 deploy/bin/basemap-refresh.sh       # schneiden und pruefen, nichts hochladen
@@ -11,7 +11,7 @@
 #   WORK_DIR       Arbeitsverzeichnis, braucht rund 6 GB frei  (mktemp unter /var/tmp)
 #   REGION         Schnittflaeche (GeoJSON)                    (deploy/basemap/germany-region.geojson)
 #   BUILD_BASE     Protomaps-Builds                             (https://build.protomaps.com)
-#   MIN_GB/MAX_GB  erwartete Groesse in GB                      (5 / 7; 17.11.2026: 5,72 GB)
+#   MIN_GB/MAX_GB  erwartete Groesse in GB                      (5 / 7; bisher rund 5,7 GB)
 #   R2_REMOTE      rclone-Ziel                                  (bubatz:bubatz)
 #   KEEP_PREV      Vorgaenger als basemap.prev.pmtiles behalten (1; kostet rund 5 Cent im Monat,
 #                  weil der Speicher dann ueber die freien 10 GB steigt)

@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 # Prueft von aussen, ob die Kartendaten erreichbar und frisch sind: das, was der
-# caddy-watchdog (fragt bubatzblick.de ueber 127.0.0.1) und der Zyklus-Healthcheck
+# caddy-watchdog (fragt bubatzblick.de auf dem Server selbst) und der Zyklus-Healthcheck
 # (meldet nur gescheiterte Laeufe) nicht sehen -- DNS, Zertifikat und Cloudflare R2
 # hinter tiles.bubatzblick.de. Faellt tiles. aus, steht die Seite ohne Karte da.
 #

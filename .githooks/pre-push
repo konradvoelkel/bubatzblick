@@ -1,7 +1,9 @@
 #!/usr/bin/bash
-# Vor jedem Push dasselbe wie .github/workflows/tests.yml (Rust fmt/clippy/Tests,
-# cargo audit, Python-Lint/Tests), ~1-2 min. Installiert durch `make dev`
-# (git config core.hooksPath .githooks). Ueberspringen: git push --no-verify.
+# Vor jedem Push dasselbe wie der Job tests in .github/workflows/tests.yml (Rust
+# fmt/clippy/Tests, Python-Lint/Tests, check-publishable, about.html), dazu cargo
+# audit und deny, ~1-2 min. tests/test_hook.py haelt beide Listen gleich.
+# Installiert durch `make dev` (git config core.hooksPath .githooks).
+# Ueberspringen: git push --no-verify.
 set -eo pipefail
 cd "$(git rev-parse --show-toplevel)"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -20,3 +22,6 @@ echo "pre-push: Python"
 (cd rust && uv run -q maturin develop --release -m bubatzcore-py/Cargo.toml >/dev/null)
 make -s lint
 uv run pytest -n auto -q
+make -s check-publishable
+make -s about >/dev/null
+git diff --exit-code -- viewer/about.html
