@@ -3,6 +3,23 @@
 // der URL, aus stand.json oder aus Kacheleigenschaften als HTML einsetzen,
 // immer textContent / createElement.
 
+// Trusted Types: eine enge Standard-Policy fuer die Stellen, an denen MapLibre
+// Zeichenketten an gefaehrliche DOM-Schnittstellen gibt. Wirksam erst, wenn der
+// Server `require-trusted-types-for 'script'` sendet; Browser ohne Trusted Types
+// lassen den Block aus. Alles andere lehnt die Policy ab (null), der Browser
+// meldet es dann als Verstoss.
+//  - DOMParser.parseFromString: die Quellenangaben der Kartenquellen. MapLibre
+//    parst sie in ein inertes Dokument und laesst nur erlaubte Elemente stehen.
+//  - innerHTML "&#215;": das Schliessen-Zeichen jedes Popups.
+//  - Worker: nur die eigene Worker-Datei des CSP-Builds.
+const WORKER_URL = new URL("vendor/maplibre-gl-csp-worker.js", location.href).href;
+if (window.trustedTypes && trustedTypes.createPolicy) {
+  trustedTypes.createPolicy("default", {
+    createHTML: (s, _typ, senke) => (senke === "DOMParser parseFromString" || s === "&#215;" ? s : null),
+    createScriptURL: s => (new URL(s, location.href).href === WORKER_URL ? s : null),
+  });
+}
+
 // Scheitert der Start, sagt die Seite es. Vorher blieb sie stumm bei
 // "Karte laedt ..." stehen, wenn der Browser kein WebGL hergab: der Fehler stand
 // nur in der Konsole, und alles nach der Kartenerzeugung lief nie an.
@@ -109,6 +126,9 @@ const TITEL = new Map(KATEGORIEN);
   // (4) cfg.zones -- neben der Seite (statisch) oder die absolute R2-URL aus config.js.
   const params = new URLSearchParams(location.search);
   let archive = params.get("pmtiles");
+  // CSP-Build: der Worker kommt aus einer eigenen Datei, damit die CSP ohne
+  // `worker-src blob:` auskommt. Vor dem ersten Kartenaufbau setzen.
+  maplibregl.setWorkerUrl(WORKER_URL);
   const protocol = new pmtiles.Protocol();
   maplibregl.addProtocol("pmtiles", protocol.tile);
 

@@ -21,6 +21,13 @@ Karte selbst.
 
 ### Geändert
 
+- MapLibre GL JS 5.24.1 statt 4.7.1, als CSP-Build: der Worker kommt aus
+  einer eigenen Datei (`vendor/maplibre-gl-csp-worker.js`) statt aus einer
+  `blob:`-Adresse, damit die CSP ohne `worker-src blob:` auskommt. Dazu eine
+  enge Trusted-Types-Policy in `viewer/app.js` (Quellenangaben über
+  `DOMParser`, das Schließen-Zeichen der Popups, die eigene Worker-Datei).
+  Unverändert aus dem npm-Paket, Integrität gegen die Registry geprüft.
+  Ausspielen erst, wenn die CSP des Servers `worker-src 'self'` erlaubt.
 - Karte und Über-Seite erklären sich als nur hell (`color-scheme: light`), damit
   Browser im Dunkelmodus keine dunklen Bedienelemente auf das weiße Feld
   zeichnen. Bedienelemente sind mindestens 24 px hoch, „Ausblenden“ und die

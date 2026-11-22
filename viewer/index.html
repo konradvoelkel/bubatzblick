@@ -268,9 +268,11 @@
   <div id="ohne-js">Diese Karte braucht JavaScript. Was sie zeigt und wie sie rechnet, steht
   unter <a href="about.html">Über diese Karte</a>.</div>
 </noscript>
-<!-- MapLibre GL JS 4.7.1 und pmtiles.js 3.2.1 liegen unter vendor/ (BSD-3, siehe LICENSE-Dateien dort);
+<!-- MapLibre GL JS 5.24.1 (CSP-Build: der Worker kommt aus einer eigenen Datei statt aus einer
+     blob:-Adresse, app.js setzt sie) und pmtiles.js 3.2.1 liegen unter vendor/ (BSD-3, siehe
+     LICENSE-Dateien dort), unveraendert aus den npm-Paketen;
      `bubatz serve` bettet Seite und vendor/ ins Binary ein, fuer Pages liegt der Ordner daneben. -->
-<script src="vendor/maplibre-gl.js"></script>
+<script src="vendor/maplibre-gl-csp.js"></script>
 <script src="vendor/pmtiles.js"></script>
 <script src="vendor/basemaps/basemaps.js"></script>
 <script src="config.js"></script>

@@ -37,7 +37,11 @@ use tracing::{info, warn};
 
 const INDEX_HTML: &str = include_str!("../../../viewer/index.html");
 const APP_JS: &[u8] = include_bytes!("../../../viewer/app.js");
-const MAPLIBRE_JS: &[u8] = include_bytes!("../../../viewer/vendor/maplibre-gl.js");
+// CSP-Build von MapLibre: Bibliothek und Worker als eigene Dateien (app.js setzt
+// die Worker-Adresse), damit auch die Vorschau ohne blob:-Worker laeuft.
+const MAPLIBRE_JS: &[u8] = include_bytes!("../../../viewer/vendor/maplibre-gl-csp.js");
+const MAPLIBRE_WORKER_JS: &[u8] =
+    include_bytes!("../../../viewer/vendor/maplibre-gl-csp-worker.js");
 const MAPLIBRE_CSS: &[u8] = include_bytes!("../../../viewer/vendor/maplibre-gl.css");
 const PMTILES_JS: &[u8] = include_bytes!("../../../viewer/vendor/pmtiles.js");
 const ARCHIVE_FILE: &str = "zonen.pmtiles";
@@ -403,8 +407,12 @@ pub fn router(datasets: Vec<Dataset>, viewer_dir: Option<&Path>, basemap: Option
     .route("/healthz", get(|| async { "ok\n" }))
     .route("/datasets", get(datasets_json))
     .route(
-        "/vendor/maplibre-gl.js",
+        "/vendor/maplibre-gl-csp.js",
         get(|| async { asset("text/javascript", MAPLIBRE_JS) }),
+    )
+    .route(
+        "/vendor/maplibre-gl-csp-worker.js",
+        get(|| async { asset("text/javascript", MAPLIBRE_WORKER_JS) }),
     )
     .route(
         "/vendor/maplibre-gl.css",
@@ -613,10 +621,11 @@ mod tests {
         assert!(
             std::str::from_utf8(&body)
                 .unwrap()
-                .contains("vendor/maplibre-gl.js")
+                .contains("vendor/maplibre-gl-csp.js")
         );
         for (uri, ct) in [
-            ("/vendor/maplibre-gl.js", "text/javascript"),
+            ("/vendor/maplibre-gl-csp.js", "text/javascript"),
+            ("/vendor/maplibre-gl-csp-worker.js", "text/javascript"),
             ("/vendor/maplibre-gl.css", "text/css"),
             ("/vendor/pmtiles.js", "text/javascript"),
         ] {
