@@ -62,25 +62,6 @@ def _random_box(cx: float, cy: float, half_w: float, half_h: float) -> Polygon:
     )
 
 
-box_strategy = st.builds(
-    _random_box,
-    cx=st.floats(min_value=-60, max_value=60, allow_nan=False).filter(lambda v: abs(v) > 2),
-    cy=st.floats(min_value=-60, max_value=60, allow_nan=False).filter(lambda v: abs(v) > 2),
-    half_w=st.floats(min_value=0.5, max_value=8, allow_nan=False),
-    half_h=st.floats(min_value=0.5, max_value=8, allow_nan=False),
-)
-
-
-@given(obstacles=st.lists(box_strategy, min_size=0, max_size=6))
-@settings(max_examples=100, deadline=None)
-def test_vectorized_matches_scalar_reference_random_boxes(obstacles: list[Polygon]) -> None:
-    origin = (0.0, 0.0)
-    fast = visibility_polygon(origin, obstacles, REACH, circle_arc_segments=32)
-    ref = _visibility_polygon_reference(origin, obstacles, REACH, circle_arc_segments=32)
-    diff = fast.symmetric_difference(ref).area
-    assert diff < AREA_DIFF_TOLERANCE_M2, f"vektorisiert vs. skalar weichen um {diff} m^2 ab"
-
-
 @given(
     origin_angle=st.floats(min_value=-math.pi, max_value=math.pi, allow_nan=False),
     origin_dist=st.floats(min_value=5, max_value=40, allow_nan=False),
@@ -89,10 +70,9 @@ def test_vectorized_matches_scalar_reference_random_boxes(obstacles: list[Polygo
 def test_vectorized_matches_scalar_reference_varying_origin(
     origin_angle: float, origin_dist: float
 ) -> None:
-    """Wie oben, aber mit variierendem Beobachterpunkt statt fixem Ursprung
-    -- deckt mehr relative Winkel/Distanzen zwischen origin und Hindernis-
-    kanten ab (u.a. Faelle nahe an Kollinearitaet, siehe
-    `_ray_hit_distances_batch`-Docstring)."""
+    """Zufaellige Kaesten um einen variierenden Beobachterpunkt -- deckt viele
+    relative Winkel/Distanzen zwischen origin und Hinderniskanten ab (u.a.
+    Faelle nahe an Kollinearitaet, siehe `_ray_hit_distances_batch`-Docstring)."""
     origin = (origin_dist * math.cos(origin_angle), origin_dist * math.sin(origin_angle))
     rng = random.Random(hash((origin_angle, origin_dist)) & 0xFFFFFFFF)
     obstacles = [
