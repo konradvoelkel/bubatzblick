@@ -11,6 +11,10 @@ Karte selbst.
 
 ### Hinzugefügt
 
+- Die Kartenseite baut die Verbindung zum Kachel-Host früh auf (`<link rel="preconnect">`).
+  Die Adresse kommt beim Ausliefern über den neuen Platzhalter `__TILES_ORIGIN__`, den der
+  Server-Hook und `deploy/bin/deploy_vps.sh` ersetzen; ein Test hält jeden Platzhalter der
+  Seiten gegen das Deploy-Skript.
 - `deploy/bin/check_tiles.sh` prüft von außen, ob `tiles.bubatzblick.de` antwortet
   (Range-Anfragen auf beide Archive, `stand.json` jünger als 36 h, Zertifikat
   noch 14 Tage), mit Ausgängen 0/1/2 und optionalem Healthcheck; gedacht für

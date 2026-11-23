@@ -23,6 +23,8 @@ TILES_BASE_URL=${TILES_BASE_URL:-https://$TILES_DOMAIN}
 SITE_URL=https://$SITE_DOMAIN
 VIEWER_DIR=${VIEWER_DIR:-viewer}
 TILES_BASE_URL=${TILES_BASE_URL%/}
+# Schema und Host der Kacheln fuer <link rel="preconnect"> (ohne Pfad und Schraegstrich).
+TILES_ORIGIN=$(printf '%s\n' "$TILES_BASE_URL" | sed -E 's#^(https?://[^/]+).*#\1#')
 
 out=$(mktemp -d)
 trap 'rm -rf "$out"' EXIT
@@ -49,7 +51,8 @@ rsync -a --exclude='about.md' --include='.well-known/' --include='.well-known/**
 # pruefen, dass keiner uebrig ist: eine dritte Seite liefe sonst mit einer Karten-URL
 # "__SITE_URL__/img/og.png" aus. Dieselbe Pruefung steht im Server-Hook (Infra-Repo,
 # deploy-site) -- beide Skripte bauen gleich, aendert sich eins, zieht das andere nach.
-find "$out" -name '*.html' -print0 | xargs -0 -r sed -i "s|__SITE_URL__|$SITE_URL|g"
+find "$out" -name '*.html' -print0 |
+  xargs -0 -r sed -i "s|__SITE_URL__|$SITE_URL|g; s|__TILES_ORIGIN__|$TILES_ORIGIN|g"
 rest=$(grep -rl '__[A-Z0-9_]*__' --include='*.html' "$out" || true)
 [ -z "$rest" ] || { echo "deploy_vps: unersetzter Platzhalter in: $rest" >&2; exit 1; }
 cat > "$out/config.js" <<CFG

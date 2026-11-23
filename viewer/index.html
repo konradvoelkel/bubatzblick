@@ -22,6 +22,12 @@
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link href="vendor/maplibre-gl.css" rel="stylesheet">
+<!-- Verbindung zum Kachel-Host frueh aufbauen (DNS, TLS): die ersten Kachelanfragen kommen
+     erst nach app.js. __TILES_ORIGIN__ ersetzen der Server-Hook (deploy-site) und
+     deploy/bin/deploy_vps.sh durch Schema und Host der Kacheln; lokal bleibt der Platzhalter
+     stehen und zeigt auf die eigene Seite, das schadet nicht. crossorigin, weil pmtiles per
+     CORS ohne Anmeldedaten laedt -- sonst baute der Browser eine zweite Verbindung auf. -->
+<link rel="preconnect" href="__TILES_ORIGIN__" crossorigin>
 <!-- Strukturierte Daten (schema.org WebSite): Name und Abgrenzung fuer Suchmaschinen.
      Ein Datenblock, kein Skript: die CSP (script-src 'self') fuehrt ihn nicht aus,
      tests/test_og_tags.py prueft ihn. -->
