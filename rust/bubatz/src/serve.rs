@@ -29,7 +29,7 @@ use axum::response::{Html, IntoResponse, Response};
 use axum::routing::get;
 use axum::{Json, Router};
 use clap::Args;
-use pmtiles::{AsyncPmTilesReader, MmapBackend, TileCoord};
+use pmtiles::{AsyncPmTilesReader, FileBackend, TileCoord};
 use serde_json::{Value, json};
 use tokio::sync::RwLock;
 use tower_http::services::{ServeDir, ServeFile};
@@ -99,7 +99,7 @@ impl Ident {
 }
 
 struct Opened {
-    reader: AsyncPmTilesReader<MmapBackend>,
+    reader: AsyncPmTilesReader<FileBackend>,
     ident: Ident,
     etag: HeaderValue,
     metadata: Value,
@@ -142,7 +142,7 @@ impl Dataset {
         {
             return Ok(o.clone());
         }
-        let reader = AsyncPmTilesReader::new_with_mmap_path(&self.path)
+        let reader = AsyncPmTilesReader::new_with_path(&self.path)
             .await
             .with_context(|| format!("{} oeffnen", self.path.display()))?;
         let metadata = match reader.get_metadata().await {

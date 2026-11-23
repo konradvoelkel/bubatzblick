@@ -42,6 +42,10 @@ Karte selbst.
 
 ### Geändert
 
+- `bubatz serve` (lokale Vorschau) liest die Archive mit positionierten Lesezugriffen statt
+  über ein Speicherabbild: ein Seitenfehler blockiert keinen Tokio-Worker mehr, und ein
+  während der Vorschau neu geschriebenes Archiv kann den Prozess nicht mehr beenden.
+  Kacheln und Range-Antworten sind byte-gleich; `memmap2` 0.9 fällt aus dem Lock.
 - Die Einleitung im Bedienfeld ist kürzer und ohne Paragrafen: wo Kiffen verboten ist,
   Beispiele statt der Gesetzesaufzählung, der Hinweis auf die gerechnete Sicht statt
   100-m-Kreisen. Die Rechtsgrundlage nennt weiter die Farblegende direkt darüber.
