@@ -8,9 +8,10 @@
 //! Ebene ueberlappungsfrei. Je Quadrat werden die Baender, die es beruehren,
 //! vereinigt und auf das Quadrat geschnitten; die Summe ueber die Quadrate ist
 //! die Flaeche der Vereinigung, ohne je alle 500 000 Baender auf einmal zu
-//! vereinigen. Die Gebiete werden vorab auf Bloecke aus 10 x 10 Quadraten
-//! geschnitten, damit der Schnitt je Quadrat nicht die ganze Landesgrenze
-//! (zehntausende Punkte) mitnimmt.
+//! vereinigen. Gerechnet wird blockweise (Bloecke zu 20 km): je Block nur die
+//! Baender, die ihn beruehren, und die Gebiete auf ihn vorgeschnitten, damit der
+//! Schnitt je Quadrat nicht die ganze Landesgrenze mitnimmt. Die Baender eines
+//! Bundeslaufs (rund 1 Mrd. Punkte) passen nicht auf einmal in den Speicher.
 
 use std::collections::HashMap;
 
@@ -22,8 +23,15 @@ use crate::geos::shapes_area;
 use crate::simplify::union_many;
 use bubatzcore::union::overlay_pair;
 
-/// Quadrate je Blockkante: die Gebiete werden auf Bloecke dieser Groesse vorgeschnitten.
-const BLOCK: i64 = 10;
+/// Kantenlaenge eines Blocks (auf ganze Quadrate gerundet). Je Block werden die
+/// Baender geladen und die Gebiete vorgeschnitten: 20 km haelt den dichtesten
+/// Block klein und die Zahl der Gebietsschnitte gering.
+const BLOCK_M: f64 = 20_000.0;
+
+/// Quadrate je Blockkante fuer ein Raster.
+fn block_quadrate(raster_m: f64) -> i64 {
+    ((BLOCK_M / raster_m).round() as i64).max(1)
+}
 
 pub struct Gebiet {
     /// ISO3166-2 oder, wo sie fehlt, die Relations-ID
@@ -76,60 +84,94 @@ fn quadrate_von(b: [f64; 4], raster: f64) -> impl Iterator<Item = (i64, i64)> {
     (qx0..=qx1).flat_map(move |qx| (qy0..=qy1).map(move |qy| (qx, qy)))
 }
 
+/// Wie `flaeche_je_gebiet_mit`, mit allen Baendern schon im Speicher (Tests).
+#[cfg(test)]
 pub fn flaeche_je_gebiet(baender: &[Shapes], gebiete: &[Gebiet], raster_m: f64) -> Ergebnis {
+    let rahmen: Vec<Option<[f64; 4]>> = baender.iter().map(|b| bbox(b)).collect();
+    flaeche_je_gebiet_mit(
+        &rahmen,
+        |idx| Ok(idx.iter().map(|&i| baender[i].clone()).collect()),
+        gebiete,
+        raster_m,
+    )
+    .expect("Laden aus dem Speicher scheitert nicht")
+}
+
+/// Zonenflaeche je Gebiet, blockweise: `rahmen` sind die Rechtecke aller Baender
+/// (ein Durchgang vorab, wenige MB), `laden` liefert zu Band-Indizes die Formen.
+/// Je Block (`BLOCK_M`, auf ganze Quadrate gerundet) werden nur die Baender geladen, die ihn
+/// beruehren, und danach wieder freigegeben: der Speicher richtet sich nach dem
+/// dichtesten Block, nicht nach allen Baendern (bundesweit rund 1 Mrd. Punkte,
+/// 17 GB -- daran starb der erste Bundeslauf mit MemoryMax=7G). Jedes
+/// Quadrat zaehlt nur in seinem eigenen Block, mit allen Baendern, die es
+/// beruehren; deshalb gleicht das Ergebnis dem einer Rechnung in einem Stueck.
+pub fn flaeche_je_gebiet_mit<F>(
+    rahmen: &[Option<[f64; 4]>],
+    laden: F,
+    gebiete: &[Gebiet],
+    raster_m: f64,
+) -> anyhow::Result<Ergebnis>
+where
+    F: Fn(&[usize]) -> anyhow::Result<Vec<Shapes>>,
+{
     assert!(raster_m > 0.0, "Rasterweite muss positiv sein");
-    // Baender je Quadrat (ein Band liegt meist in einem, an Kanten in zwei bis vier).
-    let mut je_quadrat: HashMap<(i64, i64), Vec<usize>> = HashMap::new();
-    for (i, b) in baender.iter().enumerate() {
-        if let Some(bb) = bbox(b) {
-            for q in quadrate_von(bb, raster_m) {
-                je_quadrat.entry(q).or_default().push(i);
+    let block = block_quadrate(raster_m);
+    let block_m = raster_m * block as f64;
+    // Baender je Block (ein Band an einer Blockkante gehoert zu bis zu vier).
+    let mut je_block: HashMap<(i64, i64), Vec<usize>> = HashMap::new();
+    for (i, bb) in rahmen.iter().enumerate() {
+        if let Some(bb) = bb {
+            for b in quadrate_von(*bb, block_m) {
+                je_block.entry(b).or_default().push(i);
             }
         }
     }
-    // Gebiete auf Bloecke vorschneiden, nur Bloecke mit Baendern.
-    let block_m = raster_m * BLOCK as f64;
-    let mut bloecke: Vec<(i64, i64)> = je_quadrat
-        .keys()
-        .map(|&(qx, qy)| (qx.div_euclid(BLOCK), qy.div_euclid(BLOCK)))
-        .collect();
+    let mut bloecke: Vec<(i64, i64)> = je_block.keys().copied().collect();
     bloecke.sort_unstable();
-    bloecke.dedup();
     let gebiet_bb: Vec<Option<[f64; 4]>> = gebiete.iter().map(|g| bbox(&g.form)).collect();
-    let stuecke: HashMap<(i64, i64), Vec<(usize, Shapes)>> = bloecke
-        .par_iter()
-        .map(|&(bx, by)| {
-            let (x0, y0) = (bx as f64 * block_m, by as f64 * block_m);
-            let kasten = rechteck(x0, y0, x0 + block_m, y0 + block_m);
-            let mut s = Vec::new();
-            for (gi, g) in gebiete.iter().enumerate() {
-                let Some(b) = gebiet_bb[gi] else { continue };
+    let mut zone_m2 = vec![0.0; gebiete.len()];
+    let mut gesamt_m2 = 0.0;
+    let mut quadrate_gesamt = 0usize;
+    for (n, &(bx, by)) in bloecke.iter().enumerate() {
+        let idx = &je_block[&(bx, by)];
+        let formen = laden(idx)?;
+        let (x0, y0) = (bx as f64 * block_m, by as f64 * block_m);
+        // Gebiete auf diesen Block schneiden (je Gebiet parallel).
+        let kasten = rechteck(x0, y0, x0 + block_m, y0 + block_m);
+        let stuecke: Vec<(usize, Shapes)> = (0..gebiete.len())
+            .into_par_iter()
+            .filter_map(|gi| {
+                let b = gebiet_bb[gi]?;
                 if b[2] < x0 || b[0] > x0 + block_m || b[3] < y0 || b[1] > y0 + block_m {
-                    continue;
+                    return None;
                 }
-                let teil = overlay_pair(&g.form, &kasten, OverlayRule::Intersect);
-                if !teil.is_empty() {
-                    s.push((gi, teil));
+                let teil = overlay_pair(&gebiete[gi].form, &kasten, OverlayRule::Intersect);
+                (!teil.is_empty()).then_some((gi, teil))
+            })
+            .collect();
+        // Quadrate dieses Blocks mit den Baendern, die sie beruehren.
+        let mut je_quadrat: HashMap<(i64, i64), Vec<usize>> = HashMap::new();
+        for (k, &i) in idx.iter().enumerate() {
+            for q in quadrate_von(rahmen[i].expect("nur Baender mit Rahmen"), raster_m) {
+                if (q.0.div_euclid(block), q.1.div_euclid(block)) == (bx, by) {
+                    je_quadrat.entry(q).or_default().push(k);
                 }
             }
-            ((bx, by), s)
-        })
-        .collect();
-    // Je Quadrat: Vereinigung, auf das Quadrat geschnitten, dann je Gebietsstueck.
-    let quadrate: Vec<(&(i64, i64), &Vec<usize>)> = je_quadrat.iter().collect();
-    let teile: Vec<(f64, Vec<(usize, f64)>)> = quadrate
-        .par_iter()
-        .map(|&(&(qx, qy), idx)| {
-            let (x0, y0) = (qx as f64 * raster_m, qy as f64 * raster_m);
-            let quadrat = rechteck(x0, y0, x0 + raster_m, y0 + raster_m);
-            let teile: Vec<Shapes> = idx.iter().map(|&i| baender[i].clone()).collect();
-            let u = overlay_pair(&union_many(&teile), &quadrat, OverlayRule::Intersect);
-            let mut je = Vec::new();
-            if u.is_empty() {
-                return (0.0, je);
-            }
-            if let Some(s) = stuecke.get(&(qx.div_euclid(BLOCK), qy.div_euclid(BLOCK))) {
-                for (gi, stueck) in s {
+        }
+        quadrate_gesamt += je_quadrat.len();
+        let quadrate: Vec<(&(i64, i64), &Vec<usize>)> = je_quadrat.iter().collect();
+        let teile: Vec<(f64, Vec<(usize, f64)>)> = quadrate
+            .par_iter()
+            .map(|&(&(qx, qy), ks)| {
+                let (x0, y0) = (qx as f64 * raster_m, qy as f64 * raster_m);
+                let quadrat = rechteck(x0, y0, x0 + raster_m, y0 + raster_m);
+                let teile: Vec<Shapes> = ks.iter().map(|&k| formen[k].clone()).collect();
+                let u = overlay_pair(&union_many(&teile), &quadrat, OverlayRule::Intersect);
+                let mut je = Vec::new();
+                if u.is_empty() {
+                    return (0.0, je);
+                }
+                for (gi, stueck) in &stuecke {
                     let im_quadrat = overlay_pair(stueck, &quadrat, OverlayRule::Intersect);
                     if im_quadrat.is_empty() {
                         continue;
@@ -139,24 +181,31 @@ pub fn flaeche_je_gebiet(baender: &[Shapes], gebiete: &[Gebiet], raster_m: f64) 
                         je.push((*gi, a));
                     }
                 }
+                (shapes_area(&u), je)
+            })
+            .collect();
+        for (a, je) in &teile {
+            gesamt_m2 += a;
+            for &(gi, x) in je {
+                zone_m2[gi] += x;
             }
-            (shapes_area(&u), je)
-        })
-        .collect();
-    let mut zone_m2 = vec![0.0; gebiete.len()];
-    let mut gesamt_m2 = 0.0;
-    for (a, je) in &teile {
-        gesamt_m2 += a;
-        for &(gi, x) in je {
-            zone_m2[gi] += x;
+        }
+        if (n + 1) % 50 == 0 || n + 1 == bloecke.len() {
+            tracing::info!(
+                "flaeche: Block {}/{} ({} Baender), bisher {:.1} km2",
+                n + 1,
+                bloecke.len(),
+                idx.len(),
+                gesamt_m2 / 1e6
+            );
         }
     }
-    Ergebnis {
+    Ok(Ergebnis {
         zone_m2,
         gebiet_m2: gebiete.iter().map(|g| shapes_area(&g.form)).collect(),
         gesamt_m2,
-        quadrate: je_quadrat.len(),
-    }
+        quadrate: quadrate_gesamt,
+    })
 }
 
 #[cfg(test)]
@@ -200,6 +249,31 @@ mod tests {
         assert!((e.zone_m2[0] - 15_000.0).abs() < 1e-6, "{}", e.zone_m2[0]);
         assert!((e.zone_m2[1] - 15_000.0).abs() < 1e-6, "{}", e.zone_m2[1]);
         assert!((e.gesamt_m2 - 40_000.0).abs() < 1e-6, "{}", e.gesamt_m2);
+    }
+
+    #[test]
+    fn laedt_je_block_nur_dessen_baender() {
+        // Zwei Baender 50 km auseinander (Raster 5 km, Bloecke 20 km): zwei Ladeaufrufe
+        // mit je einem Band, nie beide zugleich -- der Speicher folgt dem Block.
+        let b = [
+            quadrat(1000.0, 1000.0, 100.0),
+            quadrat(51_000.0, 1000.0, 100.0),
+        ];
+        let rahmen: Vec<Option<[f64; 4]>> = b.iter().map(|s| bbox(s)).collect();
+        let aufrufe = std::sync::Mutex::new(Vec::new());
+        let g = vec![gebiet("alles", rechteck(-1e6, -1e6, 1e6, 1e6))];
+        let e = flaeche_je_gebiet_mit(
+            &rahmen,
+            |idx| {
+                aufrufe.lock().unwrap().push(idx.to_vec());
+                Ok(idx.iter().map(|&i| b[i].clone()).collect())
+            },
+            &g,
+            5000.0,
+        )
+        .unwrap();
+        assert_eq!(*aufrufe.lock().unwrap(), vec![vec![0], vec![1]]);
+        assert!((e.gesamt_m2 - 20_000.0).abs() < 1e-6, "{}", e.gesamt_m2);
     }
 
     #[test]

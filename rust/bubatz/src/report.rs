@@ -35,28 +35,81 @@ pub struct ReportArgs {
     /// Nur Gebiete mit ISO3166-2-Kennung unter diesem Praefix (z. B. DE-)
     #[arg(long)]
     pub areas_iso_prefix: Option<String>,
-    /// Rasterweite in Metern fuer die stueckweise Vereinigung
-    #[arg(long, default_value_t = 5000.0)]
+    /// Rasterweite in Metern fuer die stueckweise Vereinigung. Kleiner heisst weniger
+    /// Speicher je Thread (dichte Grossstadtquadrate), etwas mehr doppelte Arbeit an den Kanten
+    #[arg(long, default_value_t = 2000.0)]
     pub areas_grid_m: f64,
 }
 
-/// Die Geometrien aller Baender bis 100 m (EPSG:25832), fuer `flaeche`.
-fn read_band_shapes(dir: &Path) -> Result<Vec<bubatzcore::geom::Shapes>> {
-    let mut parts: Vec<PathBuf> = std::fs::read_dir(dir)?
-        .flatten()
-        .map(|e| e.path())
-        .filter(|p| p.extension().is_some_and(|x| x == "parquet"))
-        .collect();
-    parts.sort();
-    let mut out = Vec::new();
-    for part in &parts {
-        for r in read_zone_cell(part)? {
-            if r.band_max_m <= 100 {
-                out.push(crate::wkb::parse(&r.wkb)?);
+/// Die Baender bis 100 m fuer `flaeche`, ohne ihre Formen zu behalten: je Band nur
+/// Datei, Zeile und Rechteck (bundesweit rund 500 000 x 40 Bytes). Die Formen
+/// selbst -- rund 2 000 Punkte je Band, bundesweit 17 GB -- laedt
+/// `BandQuelle::laden` je Block nach.
+struct BandQuelle {
+    dateien: Vec<PathBuf>,
+    /// (Datei, Zeile in `read_zone_cell`) je Band
+    ort: Vec<(u32, u32)>,
+    rahmen: Vec<Option<[f64; 4]>>,
+}
+
+impl BandQuelle {
+    fn lesen(dir: &Path) -> Result<Self> {
+        let mut dateien: Vec<PathBuf> = std::fs::read_dir(dir)?
+            .flatten()
+            .map(|e| e.path())
+            .filter(|p| p.extension().is_some_and(|x| x == "parquet"))
+            .collect();
+        dateien.sort();
+        let (mut ort, mut rahmen) = (Vec::new(), Vec::new());
+        for (d, datei) in dateien.iter().enumerate() {
+            for (z, r) in read_zone_cell(datei)?.iter().enumerate() {
+                if r.band_max_m <= 100 {
+                    ort.push((d as u32, z as u32));
+                    let mut b = [
+                        f64::INFINITY,
+                        f64::INFINITY,
+                        f64::NEG_INFINITY,
+                        f64::NEG_INFINITY,
+                    ];
+                    for p in crate::wkb::parse(&r.wkb)?.iter().flatten().flatten() {
+                        b = [
+                            b[0].min(p[0]),
+                            b[1].min(p[1]),
+                            b[2].max(p[0]),
+                            b[3].max(p[1]),
+                        ];
+                    }
+                    rahmen.push((b[0] <= b[2]).then_some(b));
+                }
             }
         }
+        Ok(Self {
+            dateien,
+            ort,
+            rahmen,
+        })
     }
-    Ok(out)
+
+    /// Die Formen zu den Band-Indizes, in derselben Reihenfolge; jede Datei wird
+    /// einmal gelesen.
+    fn laden(&self, idx: &[usize]) -> Result<Vec<bubatzcore::geom::Shapes>> {
+        let mut je_datei: BTreeMap<u32, Vec<(u32, usize)>> = BTreeMap::new();
+        for (k, &i) in idx.iter().enumerate() {
+            let (d, z) = self.ort[i];
+            je_datei.entry(d).or_default().push((z, k));
+        }
+        let mut out: Vec<Option<bubatzcore::geom::Shapes>> = vec![None; idx.len()];
+        for (d, zeilen) in je_datei {
+            let rows = read_zone_cell(&self.dateien[d as usize])?;
+            for (z, k) in zeilen {
+                out[k] = Some(crate::wkb::parse(&rows[z as usize].wkb)?);
+            }
+        }
+        Ok(out
+            .into_iter()
+            .map(|s| s.expect("jede Zeile gelesen"))
+            .collect())
+    }
 }
 
 struct ObjectRow {
@@ -307,8 +360,19 @@ pub fn run(args: ReportArgs) -> Result<()> {
             args.areas_admin_level,
             args.areas_iso_prefix.as_deref(),
         )?;
-        let baender = read_band_shapes(&args.zones_dir)?;
-        let e = crate::flaeche::flaeche_je_gebiet(&baender, &gebiete, args.areas_grid_m);
+        let quelle = BandQuelle::lesen(&args.zones_dir)?;
+        tracing::info!(
+            "flaeche: {} Gebiete, {} Baender bis 100 m indiziert (RSS {} MB)",
+            gebiete.len(),
+            quelle.ort.len(),
+            crate::pbf::rss_mb()
+        );
+        let e = crate::flaeche::flaeche_je_gebiet_mit(
+            &quelle.rahmen,
+            |idx| quelle.laden(idx),
+            &gebiete,
+            args.areas_grid_m,
+        )?;
         let summe: f64 = e.zone_m2.iter().sum();
         report["zone_area_by_area"] = serde_json::json!(
             gebiete
@@ -331,7 +395,7 @@ pub fn run(args: ReportArgs) -> Result<()> {
             "Zonenflaeche je Gebiet (admin_level {}, Vereinigung der Baender bis 100 m, \
              Ueberlappungen einmal; {} Baender, {} Quadrate zu {} m, {:.0} s):",
             args.areas_admin_level,
-            baender.len(),
+            quelle.ort.len(),
             e.quadrate,
             args.areas_grid_m,
             t0.elapsed().as_secs_f64()
