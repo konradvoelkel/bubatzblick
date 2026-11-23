@@ -42,6 +42,14 @@ Karte selbst.
 
 ### Geändert
 
+- MapLibre GL JS 6.19.0 statt 5.24.1. MapLibre 6 gibt es nur als ES-Modul: `app.js` lädt
+  `vendor/maplibre-gl.mjs` per `import()`, nachdem die Trusted-Types-Policy steht, der Kopf
+  holt es per `modulepreload` vorab; der Worker ist ein Modul-Worker aus der eigenen Datei
+  (`worker-src 'self'` genügt weiter). MapLibre 6 braucht **WebGL 2**; ohne sagt die Seite
+  das. Listen in GeoJSON-Eigenschaften kommen jetzt als echte Arrays: das Popup der
+  örtlichen Verbote nimmt beide Formen an (sonst fehlte dort das Mitführverbot).
+  Geteilte Adressen (`#zoom/breite/länge`) bleiben gültig. Unverändert aus dem npm-Paket,
+  Integrität gegen die Registry geprüft.
 - `bubatz serve` (lokale Vorschau) liest die Archive mit positionierten Lesezugriffen statt
   über ein Speicherabbild: ein Seitenfehler blockiert keinen Tokio-Worker mehr, und ein
   während der Vorschau neu geschriebenes Archiv kann den Prozess nicht mehr beenden.

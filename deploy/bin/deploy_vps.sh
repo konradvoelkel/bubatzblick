@@ -66,7 +66,7 @@ window.BUBATZ_CONFIG = {
 };
 CFG
 # Vorkomprimieren (brotli/zstd/gzip, sofern vorhanden); Caddy liefert die passende Datei.
-find "$out" -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.json' -o -name '*.svg' -o -name '*.txt' -o -name '*.pbf' \) -print0 |
+find "$out" -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.mjs' -o -name '*.json' -o -name '*.svg' -o -name '*.txt' -o -name '*.pbf' \) -print0 |
   xargs -0 -r -P "$(nproc)" -I{} sh -c '
     command -v brotli >/dev/null && brotli -kf "$1"
     command -v zstd   >/dev/null && zstd -q -kf -19 "$1"

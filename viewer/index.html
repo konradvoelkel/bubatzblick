@@ -22,6 +22,9 @@
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link href="vendor/maplibre-gl.css" rel="stylesheet">
+<!-- MapLibre 6 gibt es nur als ES-Modul; app.js laedt es per import(), nachdem die
+     Trusted-Types-Policy steht. modulepreload holt es schon beim Lesen des Kopfs. -->
+<link rel="modulepreload" href="vendor/maplibre-gl.mjs">
 <!-- Verbindung zum Kachel-Host frueh aufbauen (DNS, TLS): die ersten Kachelanfragen kommen
      erst nach app.js. __TILES_ORIGIN__ ersetzen der Server-Hook (deploy-site) und
      deploy/bin/deploy_vps.sh durch Schema und Host der Kacheln; lokal bleibt der Platzhalter
@@ -311,11 +314,10 @@
   <div id="ohne-js">Diese Karte braucht JavaScript. Was sie zeigt und wie sie rechnet, steht
   unter <a href="about.html">Über diese Karte</a>.</div>
 </noscript>
-<!-- MapLibre GL JS 5.24.1 (CSP-Build: der Worker kommt aus einer eigenen Datei statt aus einer
-     blob:-Adresse, app.js setzt sie) und pmtiles.js 3.2.1 liegen unter vendor/ (BSD-3, siehe
-     LICENSE-Dateien dort), unveraendert aus den npm-Paketen;
+<!-- MapLibre GL JS 6.19.0 (ES-Modul vendor/maplibre-gl.mjs, Worker vendor/maplibre-gl-worker.mjs;
+     app.js laedt beides, kein script-Tag) und pmtiles.js 3.2.1 liegen unter vendor/ (BSD-3,
+     siehe LICENSE-Dateien dort), unveraendert aus den npm-Paketen;
      `bubatz serve` bettet Seite und vendor/ ins Binary ein, fuer Pages liegt der Ordner daneben. -->
-<script src="vendor/maplibre-gl-csp.js"></script>
 <script src="vendor/pmtiles.js"></script>
 <script src="vendor/basemaps/basemaps.js"></script>
 <script src="config.js"></script>

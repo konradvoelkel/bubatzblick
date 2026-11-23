@@ -11,8 +11,11 @@
 //  - DOMParser.parseFromString: die Quellenangaben der Kartenquellen. MapLibre
 //    parst sie in ein inertes Dokument und laesst nur erlaubte Elemente stehen.
 //  - innerHTML "&#215;": das Schliessen-Zeichen jedes Popups.
-//  - Worker: nur die eigene Worker-Datei des CSP-Builds.
-const WORKER_URL = new URL("vendor/maplibre-gl-csp-worker.js", location.href).href;
+//  - Worker: nur die eigene Worker-Datei (MapLibre 6 startet sie als Modul-Worker).
+// Die Policy entsteht hier, bevor app.js MapLibre per import() laedt: ein ES-Modul
+// im script-Tag liefe vor jedem Code dieser Datei. Eine benannte Policy ueber
+// setTrustedTypesPolicy liesse die CSP (`trusted-types default`) nicht zu.
+const WORKER_URL = new URL("vendor/maplibre-gl-worker.mjs", location.href).href;
 if (window.trustedTypes && trustedTypes.createPolicy) {
   trustedTypes.createPolicy("default", {
     createHTML: (s, _typ, senke) => (senke === "DOMParser parseFromString" || s === "&#215;" ? s : null),
@@ -40,6 +43,13 @@ const farbe = (token, ersatz) =>
   getComputedStyle(document.documentElement).getPropertyValue(token).trim() || ersatz;
 
 (async () => {
+// MapLibre 6 gibt es nur als ES-Modul. Das Laden beginnt sofort (modulepreload im
+// Kopf hat die Datei meist schon) und laeuft neben den Pruefungen unten; erwartet
+// wird es erst vor dem Kartenaufbau. Das leere catch verhindert nur die Meldung
+// "unbehandelte Ablehnung", bevor das await unten die Ablehnung uebernimmt.
+const maplibreLaden = import("./vendor/maplibre-gl.mjs");
+maplibreLaden.catch(() => {});
+
 // Kategorien in der Reihenfolge des § 5 Abs. 2 KCanG. Schluessel = Eigenschaft
 // `category` der Kacheln, Titel wortgleich aus config/tags.json --
 // tests/test_viewer_categories.py prueft beides gegeneinander.
@@ -131,8 +141,10 @@ const TITEL = new Map(KATEGORIEN);
   // (4) cfg.zones -- neben der Seite (statisch) oder die absolute R2-URL aus config.js.
   const params = new URLSearchParams(location.search);
   let archive = params.get("pmtiles");
-  // CSP-Build: der Worker kommt aus einer eigenen Datei, damit die CSP ohne
-  // `worker-src blob:` auskommt. Vor dem ersten Kartenaufbau setzen.
+  const maplibregl = await maplibreLaden;
+  // Der Worker kommt aus der eigenen Datei (CSP `worker-src 'self'`, ohne blob:).
+  // Ohne diesen Aufruf naehme MapLibre dieselbe Datei mit "?v=<Fassung>" -- die
+  // Trusted-Types-Policy oben laesst aber nur genau WORKER_URL durch.
   maplibregl.setWorkerUrl(WORKER_URL);
   const protocol = new pmtiles.Protocol();
   maplibregl.addProtocol("pmtiles", protocol.tile);
@@ -292,9 +304,10 @@ const TITEL = new Map(KATEGORIEN);
     },
     });
   } catch (err) {
-    if (!/webgl/i.test(String(err && err.message))) throw err;
+    // MapLibre 6 wirft GPUInitializationError, wenn es kein WebGL 2 bekommt.
+    if (!(err instanceof maplibregl.GPUInitializationError) && !/webgl/i.test(String(err && err.message))) throw err;
     console.error(err);
-    startFehler("Die Karte braucht WebGL, und dieser Browser stellt es gerade nicht bereit. "
+    startFehler("Die Karte braucht WebGL 2, und dieser Browser stellt es gerade nicht bereit. "
       + "Meist hilft es, in den Browser-Einstellungen die Hardwarebeschleunigung einzuschalten "
       + "oder einen anderen Browser zu nehmen.");
     return;
@@ -530,8 +543,11 @@ const TITEL = new Map(KATEGORIEN);
     sonderZeichnen();
     map.on("click", "sonder-fill", e => {
       const p = e.features[0].properties;
-      // GeoJSON-Eigenschaften kommen als Zeichenketten; Listen als JSON-Text.
-      const verbot = (() => { try { return JSON.parse(p.verbot); } catch (x) { return [String(p.verbot)]; } })();
+      // MapLibre 6 gibt Listen aus GeoJSON-Eigenschaften als echte Arrays heraus, 5 gab
+      // sie als JSON-Text. Beides annehmen: als Text zerfiele ["konsum","mitfuehren"]
+      // sonst zu einem Eintrag, und das Popup verschwiege das Mitfuehrverbot.
+      const verbot = Array.isArray(p.verbot) ? p.verbot.map(String)
+        : (() => { try { return JSON.parse(p.verbot); } catch (x) { return [String(p.verbot)]; } })();
       const box = document.createElement("div");
       const b = document.createElement("b");
       b.textContent = String(p.name);

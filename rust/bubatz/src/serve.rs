@@ -37,11 +37,11 @@ use tracing::{info, warn};
 
 const INDEX_HTML: &str = include_str!("../../../viewer/index.html");
 const APP_JS: &[u8] = include_bytes!("../../../viewer/app.js");
-// CSP-Build von MapLibre: Bibliothek und Worker als eigene Dateien (app.js setzt
-// die Worker-Adresse), damit auch die Vorschau ohne blob:-Worker laeuft.
-const MAPLIBRE_JS: &[u8] = include_bytes!("../../../viewer/vendor/maplibre-gl-csp.js");
-const MAPLIBRE_WORKER_JS: &[u8] =
-    include_bytes!("../../../viewer/vendor/maplibre-gl-csp-worker.js");
+// MapLibre 6 als ES-Modul: Bibliothek und Modul-Worker als eigene Dateien (app.js
+// laedt die Bibliothek per import() und setzt die Worker-Adresse). Module brauchen
+// einen JavaScript-Typ, sonst laedt der Browser sie nicht.
+const MAPLIBRE_JS: &[u8] = include_bytes!("../../../viewer/vendor/maplibre-gl.mjs");
+const MAPLIBRE_WORKER_JS: &[u8] = include_bytes!("../../../viewer/vendor/maplibre-gl-worker.mjs");
 const MAPLIBRE_CSS: &[u8] = include_bytes!("../../../viewer/vendor/maplibre-gl.css");
 const PMTILES_JS: &[u8] = include_bytes!("../../../viewer/vendor/pmtiles.js");
 const ARCHIVE_FILE: &str = "zonen.pmtiles";
@@ -407,11 +407,11 @@ pub fn router(datasets: Vec<Dataset>, viewer_dir: Option<&Path>, basemap: Option
     .route("/healthz", get(|| async { "ok\n" }))
     .route("/datasets", get(datasets_json))
     .route(
-        "/vendor/maplibre-gl-csp.js",
+        "/vendor/maplibre-gl.mjs",
         get(|| async { asset("text/javascript", MAPLIBRE_JS) }),
     )
     .route(
-        "/vendor/maplibre-gl-csp-worker.js",
+        "/vendor/maplibre-gl-worker.mjs",
         get(|| async { asset("text/javascript", MAPLIBRE_WORKER_JS) }),
     )
     .route(
@@ -621,11 +621,11 @@ mod tests {
         assert!(
             std::str::from_utf8(&body)
                 .unwrap()
-                .contains("vendor/maplibre-gl-csp.js")
+                .contains("vendor/maplibre-gl.mjs")
         );
         for (uri, ct) in [
-            ("/vendor/maplibre-gl-csp.js", "text/javascript"),
-            ("/vendor/maplibre-gl-csp-worker.js", "text/javascript"),
+            ("/vendor/maplibre-gl.mjs", "text/javascript"),
+            ("/vendor/maplibre-gl-worker.mjs", "text/javascript"),
             ("/vendor/maplibre-gl.css", "text/css"),
             ("/vendor/pmtiles.js", "text/javascript"),
         ] {
