@@ -38,6 +38,12 @@ Karte selbst.
 
 ### Geändert
 
+- Kartenseite: alle Farben als CSS-Tokens; die Kartenebenen lesen ihre Datenfarben
+  aus denselben Tokens wie die Farblegende. Ein- und Ausklappen des Bedienfelds und
+  die blaue und lila Legendenzeile folgen per `:has()` dem Knopf bzw. dem Haken statt
+  eigener Zustandsklassen. Der Ladehinweis ist von Anfang an eine Alarm-Region, damit
+  Screenreader einen Startfehler zuverlässig ansagen; das Bedienfeld hält den Platz der
+  Scrollleiste frei; die Archivauswahl der lokalen Vorschau lädt erst auf „Anzeigen“.
 - MapLibre GL JS 5.24.1 statt 4.7.1, als CSP-Build: der Worker kommt aus
   einer eigenen Datei (`vendor/maplibre-gl-csp-worker.js`) statt aus einer
   `blob:`-Adresse, damit die CSP ohne `worker-src blob:` auskommt. Dazu eine

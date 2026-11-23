@@ -27,11 +27,17 @@ function startFehler(text) {
   const el = document.getElementById("laden");
   el.hidden = false;
   el.className = "fehler";
-  el.setAttribute("role", "alert");
+  // role=alert steht schon im HTML: eine erst jetzt gesetzte Rolle sagten
+  // Screenreader nicht zuverlaessig an, der neue Text in einer bestehenden schon.
   el.textContent = text;
   // "lade ..." im Bedienfeld stimmt jetzt nicht mehr.
   document.getElementById("status").replaceChildren();
 }
+
+// Datenfarben aus den CSS-Tokens in index.html (:root), damit Karte und Farblegende
+// eine Quelle haben. Der Ersatzwert greift nur, wenn das Stylesheet fehlt.
+const farbe = (token, ersatz) =>
+  getComputedStyle(document.documentElement).getPropertyValue(token).trim() || ersatz;
 
 (async () => {
 // Kategorien in der Reihenfolge des § 5 Abs. 2 KCanG. Schluessel = Eigenschaft
@@ -63,11 +69,10 @@ const TITEL = new Map(KATEGORIEN);
   // dem Laden auf Groesse gebracht), solange niemand den Knopf benutzt hat.
   // In em wie im CSS: mit groesserer Schrift im Browser kippt das Layout frueher.
   const schmal = matchMedia("(max-width: 40em)");
-  const panel = document.getElementById("panel");
   const panelToggle = document.getElementById("panel-toggle");
   let panelBeruehrt = false;
+  // Der Zustand steht nur in aria-expanded; das CSS blendet per :has() danach ein und aus.
   const panelOffen = offen => {
-    panel.classList.toggle("zu", !offen);
     panelToggle.setAttribute("aria-expanded", String(offen));
     // "Mehr" versprach Hilfe und lieferte Filter; der Knopf nennt stattdessen,
     // was hinter ihm liegt.
@@ -83,7 +88,7 @@ const TITEL = new Map(KATEGORIEN);
   breiteAnwenden(schmal.matches);
   panelToggle.addEventListener("click", () => {
     panelBeruehrt = true;
-    panelOffen(panel.classList.contains("zu"));
+    panelOffen(panelToggle.getAttribute("aria-expanded") === "false");
   });
   // KEIN `toggle`-Horcher auf dem Block: `open = …` oben loest ihn selbst aus,
   // und weil `toggle` verzoegert zugestellt wird, laesst er sich nicht sauber
@@ -182,7 +187,11 @@ const TITEL = new Map(KATEGORIEN);
       o.value = d.name; o.textContent = d.error ? `${d.name} (nicht verfügbar)` : d.name;
       o.selected = d.name === dsName; sel.appendChild(o);
     }
-    sel.onchange = () => { params.set("ds", sel.value); location.search = params.toString(); };
+    // Erst auf den Knopf laden, nicht schon bei `change`: mit den Pfeiltasten loest
+    // eine geschlossene Auswahl je Schritt `change` aus und luede jedes Archiv.
+    document.getElementById("ds-wechseln").addEventListener("click", () => {
+      params.set("ds", sel.value); location.search = params.toString();
+    });
     document.getElementById("datasets").style.display = "block";
   }
 
@@ -234,11 +243,11 @@ const TITEL = new Map(KATEGORIEN);
     // Layer wird mit Tiefentest gezeichnet und wirkt wie EINE Flaeche.
     { id: "zonen-fill", type: "fill-extrusion", source: "zonen", "source-layer": "zonen",
       filter: bandFilter,
-      paint: { "fill-extrusion-color": "#c0392b", "fill-extrusion-opacity": 0.4,
+      paint: { "fill-extrusion-color": farbe("--zone", "#c0392b"), "fill-extrusion-opacity": 0.4,
                "fill-extrusion-height": 1, "fill-extrusion-base": 0 } },
     { id: "zonen-line", type: "line", source: "zonen", "source-layer": "zonen", minzoom: 12,
       filter: bandFilter,
-      paint: { "line-color": "#7b241c", "line-width": 0.5, "line-opacity": 0.35 } },
+      paint: { "line-color": farbe("--zone-rand", "#7b241c"), "line-width": 0.5, "line-opacity": 0.35 } },
   );
 
   // Fussgaengerzonen (§ 5 Abs. 2 Nr. 5): eigene, zuschaltbare Ebene, OHNE
@@ -375,10 +384,10 @@ const TITEL = new Map(KATEGORIEN);
     const fussEbenen = jetzt => [
       { id: "fuss-fill", type: "fill", source: "fussgaenger", "source-layer": "fussgaengerzonen",
         filter: ["==", ["geometry-type"], "Polygon"],
-        paint: { "fill-color": "#2a78d6", "fill-opacity": jetzt ? 0.6 : 0.25 } },
+        paint: { "fill-color": farbe("--fuss", "#2a78d6"), "fill-opacity": jetzt ? 0.6 : 0.25 } },
       { id: "fuss-line", type: "line", source: "fussgaenger", "source-layer": "fussgaengerzonen",
         filter: ["==", ["geometry-type"], "LineString"],
-        paint: { "line-color": "#2a78d6", "line-opacity": jetzt ? 0.85 : 0.35, "line-width": 4 } },
+        paint: { "line-color": farbe("--fuss", "#2a78d6"), "line-opacity": jetzt ? 0.85 : 0.35, "line-width": 4 } },
     ];
     let fussQuelleDa = false;
     let fussStand = null;    // null = keine Ebenen, sonst der gezeigte Zeitzustand
@@ -409,8 +418,8 @@ const TITEL = new Map(KATEGORIEN);
       fussZeit.textContent = an
         ? (giltJetzt() ? "gilt jetzt (7–20 Uhr)" : "gilt jetzt nicht (7–20 Uhr)")
         : "";
-      // Blau in der Farblegende nur zeigen, solange auch Blau auf der Karte ist.
-      document.getElementById("farblegende").classList.toggle("mit-fuss", an);
+      // Blau in der Farblegende steht nur, solange auch Blau auf der Karte ist:
+      // das CSS folgt dem Haken (#panel:has(#fuss-an:checked)).
     };
     const fussZeichnen = () => {
       fussBeschriften();
@@ -498,9 +507,9 @@ const TITEL = new Map(KATEGORIEN);
           sonderQuelleDa = true;
         }
         map.addLayer({ id: "sonder-fill", type: "fill", source: "sonder",
-          paint: { "fill-color": "#7d3c98", "fill-opacity": 0.45 } });
+          paint: { "fill-color": farbe("--sonder", "#7d3c98"), "fill-opacity": 0.45 } });
         map.addLayer({ id: "sonder-line", type: "line", source: "sonder",
-          paint: { "line-color": "#7d3c98", "line-width": 2, "line-opacity": 0.9 } });
+          paint: { "line-color": farbe("--sonder", "#7d3c98"), "line-width": 2, "line-opacity": 0.9 } });
       } else {
         for (const id of ["sonder-fill", "sonder-line"]) map.removeLayer(id);
       }
@@ -511,7 +520,6 @@ const TITEL = new Map(KATEGORIEN);
     // die Datei kann nach `load` ankommen.
     let sonderWartet = false;
     const sonderZeichnen = () => {
-      document.getElementById("farblegende").classList.toggle("mit-sonder", sonderSchalter.checked);
       try { sonderAnwenden(); } catch (err) {
         if (sonderWartet) return;
         sonderWartet = true;
