@@ -38,6 +38,9 @@ Karte selbst.
 
 ### Geändert
 
+- Die Einleitung im Bedienfeld ist kürzer und ohne Paragrafen: wo Kiffen verboten ist,
+  Beispiele statt der Gesetzesaufzählung, der Hinweis auf die gerechnete Sicht statt
+  100-m-Kreisen. Die Rechtsgrundlage nennt weiter die Farblegende direkt darüber.
 - Über-Seite: das Gesetzeszitat ist eine `<figure>` mit der Quelle als Bildunterschrift
   (`cite`-Attribut am Zitat), Werktitel stehen in `<cite>` (englische mit `lang="en"`), der
   Fachbegriff „triangular expansion“ als englisch ausgezeichnet. Farben als Tokens wie auf
