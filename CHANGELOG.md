@@ -105,6 +105,11 @@ Karte selbst.
 
 ### Behoben
 
+- Rathäuser auf der Grundkarte hatten kein Symbol, und die Konsole meldete bei
+  jedem Laden ein fehlendes Bild „townhall“: der Stil @protomaps/basemaps
+  5.7.2 verlangt es, das Sprite von basemaps-assets hat es nie enthalten. Sie
+  bekommen jetzt das Gebäudesymbol aus derselben Farbgruppe; ein Test hält
+  Stil, Sprite und die Ergänzung in `viewer/app.js` zusammen.
 - Die Karte nannte im Betrieb nur MapLibre und die Grundkarte als Quelle: das
   Zonenarchiv trägt keine Quellenangabe in seinen Metadaten. Jetzt steht
   „© OpenStreetMap-Mitwirkende (ODbL)“ für die Zonen dabei. Die Mailadresse im

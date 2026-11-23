@@ -204,6 +204,16 @@ const TITEL = new Map(KATEGORIEN);
   if (haveBasemap) {
     sources.basemap = { type: "vector", url: `pmtiles://${abs(cfg.basemap)}`, attribution };
     layers = basemaps.layers("basemap", basemaps.namedFlavor("light"), { lang: "de" });
+    // Der Stil zeigt Rathaeuser (kind "townhall") mit einem gleichnamigen Symbol,
+    // das basemaps-assets nie ausgeliefert hat (Sprite v4, auch upstream): MapLibre
+    // warnte bei jedem Laden und zeichnete keins. Rathaeuser bekommen "building"
+    // aus derselben Farbgruppe. tests/test_viewer_grundkarte.py haelt das gegen
+    // Stil und Sprite.
+    const pois = layers.find(l => l.id === "pois");
+    const bild = pois && pois.layout && pois.layout["icon-image"];
+    if (Array.isArray(bild) && bild[0] === "match" && !bild.includes("townhall")) {
+      pois.layout["icon-image"] = [...bild.slice(0, -1), "townhall", "building", bild[bild.length - 1]];
+    }
   } else {
     console.warn("basemap.pmtiles fehlt -- OSM-Raster als Notnagel");
     sources.osm = { type: "raster", tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"], tileSize: 256,
