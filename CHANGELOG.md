@@ -90,6 +90,10 @@ Karte selbst.
   pydantic-settings 2.16.3, types-geopandas. Zonengeometrie und Kacheln
   bleiben gleich (Düsseldorf-Zonen byte-identisch, `zonen.pmtiles`
   sha256-gleich).
+- Abhängigkeiten: numpy 2.5.5, mypy 2.4.1, pandas-stubs 3.1.0, hypothesis
+  6.170.16, ruff 0.17.6; in der CI astral-sh/setup-uv 10.4.0. numpy ist das
+  einzige davon, das im Tageszyklus läuft (Kachelprüfung): deren Ausgabe ist
+  mit beiden Fassungen gleich.
 - Rust 1.100 statt 1.97 (`rust/rust-toolchain.toml` und `rust-version`).
   Zonengeometrie und Kacheln bleiben gleich: die Düsseldorf-Zonen aus beiden
   Binaries sind byte-identisch (`bubatz verify identical`, 2 715 Bänder),
