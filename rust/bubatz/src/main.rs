@@ -9,6 +9,7 @@ mod config;
 #[cfg(test)]
 mod contract_tests;
 mod extract;
+mod flaeche;
 mod geoparquet;
 mod geos;
 mod grid;

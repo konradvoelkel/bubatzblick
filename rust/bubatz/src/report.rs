@@ -25,6 +25,38 @@ pub struct ReportArgs {
     pub out_json: Option<PathBuf>,
     #[arg(long, default_value_t = 10)]
     pub n_largest: usize,
+    /// Zusaetzlich die Zonenflaeche je Verwaltungsgebiet: Vereinigung der Baender
+    /// bis 100 m (Ueberlappungen einmal), geschnitten mit den Grenzen aus dieser PBF
+    #[arg(long)]
+    pub areas_pbf: Option<PathBuf>,
+    /// admin_level der Gebiete (4 = Bundeslaender, 6 = Kreise und kreisfreie Staedte)
+    #[arg(long, default_value_t = 4)]
+    pub areas_admin_level: u32,
+    /// Nur Gebiete mit ISO3166-2-Kennung unter diesem Praefix (z. B. DE-)
+    #[arg(long)]
+    pub areas_iso_prefix: Option<String>,
+    /// Rasterweite in Metern fuer die stueckweise Vereinigung
+    #[arg(long, default_value_t = 5000.0)]
+    pub areas_grid_m: f64,
+}
+
+/// Die Geometrien aller Baender bis 100 m (EPSG:25832), fuer `flaeche`.
+fn read_band_shapes(dir: &Path) -> Result<Vec<bubatzcore::geom::Shapes>> {
+    let mut parts: Vec<PathBuf> = std::fs::read_dir(dir)?
+        .flatten()
+        .map(|e| e.path())
+        .filter(|p| p.extension().is_some_and(|x| x == "parquet"))
+        .collect();
+    parts.sort();
+    let mut out = Vec::new();
+    for part in &parts {
+        for r in read_zone_cell(part)? {
+            if r.band_max_m <= 100 {
+                out.push(crate::wkb::parse(&r.wkb)?);
+            }
+        }
+    }
+    Ok(out)
 }
 
 struct ObjectRow {
@@ -267,6 +299,61 @@ pub fn run(args: ReportArgs) -> Result<()> {
                 ));
             }
         }
+    }
+    if let Some(pbf) = &args.areas_pbf {
+        let t0 = std::time::Instant::now();
+        let gebiete = crate::clip::admin_areas(
+            pbf,
+            args.areas_admin_level,
+            args.areas_iso_prefix.as_deref(),
+        )?;
+        let baender = read_band_shapes(&args.zones_dir)?;
+        let e = crate::flaeche::flaeche_je_gebiet(&baender, &gebiete, args.areas_grid_m);
+        let summe: f64 = e.zone_m2.iter().sum();
+        report["zone_area_by_area"] = serde_json::json!(
+            gebiete
+                .iter()
+                .zip(e.zone_m2.iter().zip(&e.gebiet_m2))
+                .map(|(g, (z, a))| serde_json::json!({
+                    "key": g.schluessel, "name": g.name,
+                    "zone_km2": round(z / 1e6, 3), "area_km2": round(a / 1e6, 1),
+                }))
+                .collect::<Vec<_>>()
+        );
+        report["zone_area_union_km2"] = serde_json::json!({
+            "in_areas": round(summe / 1e6, 3),
+            "total": round(e.gesamt_m2 / 1e6, 3),
+            "grid_m": args.areas_grid_m,
+            "squares": e.quadrate,
+        });
+        lines.push(String::new());
+        lines.push(format!(
+            "Zonenflaeche je Gebiet (admin_level {}, Vereinigung der Baender bis 100 m, \
+             Ueberlappungen einmal; {} Baender, {} Quadrate zu {} m, {:.0} s):",
+            args.areas_admin_level,
+            baender.len(),
+            e.quadrate,
+            args.areas_grid_m,
+            t0.elapsed().as_secs_f64()
+        ));
+        lines.push(format!(
+            "  {:<8} {:<28} {:>12} {:>14}",
+            "Schl.", "Name", "Zonen km2", "Gebiet km2"
+        ));
+        for (g, (z, a)) in gebiete.iter().zip(e.zone_m2.iter().zip(&e.gebiet_m2)) {
+            lines.push(format!(
+                "  {:<8} {:<28} {:>12.2} {:>14.0}",
+                g.schluessel,
+                g.name,
+                z / 1e6,
+                a / 1e6
+            ));
+        }
+        lines.push(format!(
+            "  Summe in den Gebieten {:.2} km2, insgesamt {:.2} km2 (der Rest liegt jenseits der Gebiete)",
+            summe / 1e6,
+            e.gesamt_m2 / 1e6
+        ));
     }
     println!("{}", lines.join("\n"));
     if let Some(p) = &args.out_json {

@@ -307,6 +307,58 @@ pub fn admin_boundary(pbf: &Path, args: &ClipArgs) -> Result<(i64, Shapes, Bound
     }
 }
 
+/// Alle `boundary=administrative`-Relationen einer Ebene (4 = Bundeslaender), auf
+/// Wunsch nur die mit einer ISO3166-2-Kennung unter `iso_praefix` ("DE-"), in
+/// EPSG:25832 und nach Schluessel sortiert. Ein PBF-Pass wie `admin_boundary`.
+/// Relationen, deren Mitglieder im Ausschnitt fehlen oder die sich nicht zu einer
+/// Flaeche fuegen, werden mit Warnung uebersprungen: in einem Regionalausschnitt
+/// sind die Nachbarn immer angeschnitten.
+pub fn admin_areas(
+    pbf: &Path,
+    ebene: u32,
+    iso_praefix: Option<&str>,
+) -> Result<Vec<crate::flaeche::Gebiet>> {
+    let keys: HashSet<&str> = HashSet::new();
+    let ok = |t: &Tags| t.get("boundary") == Some("administrative");
+    let data = crate::pbf::read(pbf, &keys, &keys, &ok, &|_t: &Tags| false)?;
+    let proj = Utm32::new();
+    let ebene = ebene.to_string();
+    let mut out = Vec::new();
+    for rel in &data.relations {
+        if rel.tags.get("boundary") != Some("administrative")
+            || rel.tags.get("admin_level") != Some(ebene.as_str())
+        {
+            continue;
+        }
+        let iso = rel.tags.get("ISO3166-2");
+        if let Some(p) = iso_praefix
+            && !iso.is_some_and(|i| i.starts_with(p))
+        {
+            continue;
+        }
+        let name = rel.tags.get("name").unwrap_or("").to_string();
+        match assemble_relation(&data, rel) {
+            crate::extract::RelationOutcome::Rings(r) => out.push(crate::flaeche::Gebiet {
+                schluessel: iso.map_or_else(|| format!("r{}", rel.id), str::to_string),
+                name,
+                form: project_rings(&r, &proj),
+            }),
+            _ => tracing::warn!(
+                "Gebiete: Relation {} ({name}) unvollstaendig oder keine Flaeche -- uebersprungen",
+                rel.id
+            ),
+        }
+    }
+    out.sort_by(|a, b| a.schluessel.cmp(&b.schluessel));
+    if out.is_empty() {
+        bail!(
+            "keine vollstaendige boundary=administrative-Relation mit admin_level={ebene} in {}",
+            pbf.display()
+        );
+    }
+    Ok(out)
+}
+
 fn bounds_of(shapes: &[Shape]) -> [f64; 4] {
     let mut b = [
         f64::INFINITY,

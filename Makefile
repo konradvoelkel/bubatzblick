@@ -1,7 +1,7 @@
 # cargo/maturin auch unter systemd-run (dort fehlt ~/.cargo/bin im PATH)
 export PATH := $(HOME)/.cargo/bin:$(PATH)
 
-.PHONY: dev core test lint about check-publishable audit audit-python audit-rust duesseldorf nrw germany update-pbf publish viewer report clean-duesseldorf clean-nrw clean-germany
+.PHONY: dev core test lint about check-publishable audit audit-python audit-rust duesseldorf nrw germany update-pbf publish viewer report report-laender clean-duesseldorf clean-nrw clean-germany
 
 # bubatzblick -- Ziele: make dev | core | test | lint | about | check-publishable |
 # audit | duesseldorf | nrw | germany | update-pbf | publish | viewer | report
@@ -312,6 +312,17 @@ report: $(BUBATZ)
 	$(BUBATZ) report --zones-dir $(GERMANY_DIR)/zones \
 		$$( [ -f $(GERMANY_DIR)/zones.prev/.stamp ] && echo "--previous $(GERMANY_DIR)/zones.prev" ) \
 		--out-json $(GERMANY_DIR)/zones/report.json
+
+# -- Zonenflaeche je Bundesland --------------------------------------------------
+# Vereinigung der Baender bis 100 m (Ueberlappungen zaehlen einmal), geschnitten
+# mit den Landesgrenzen aus der Bundes-PBF (admin_level 4, ISO3166-2 DE-*). Die
+# Summen je Kategorie in `report` zaehlen jedes Band fuer sich und liegen
+# deshalb hoeher. Laeuft nicht im Tageszyklus; von Hand, wenn die Zahl gebraucht
+# wird (Ueber-Seite).
+report-laender: $(BUBATZ)
+	$(BUBATZ) report --zones-dir $(GERMANY_DIR)/zones \
+		--areas-pbf $(GERMANY_PBF) --areas-admin-level 4 --areas-iso-prefix DE- \
+		--out-json $(GERMANY_DIR)/zones/report-laender.json
 
 # -- Vorschau im Browser (`bubatz serve`) --------------------------------------
 #

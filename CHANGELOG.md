@@ -11,6 +11,11 @@ Karte selbst.
 
 ### Hinzugefügt
 
+- `bubatz report --areas-pbf` (und `make report-laender`) misst die Zonenfläche je
+  Verwaltungsgebiet, etwa je Bundesland: die Vereinigung aller Bänder bis 100 m, in der
+  sich überlappende Zonen einmal zählen, geschnitten mit den Grenzen aus der PBF. Die
+  Ebene ist wählbar (`--areas-admin-level`). Für die Stadt Düsseldorf: 40,1 km² Zonen
+  auf 217 km² Stadtfläche, auf den Quadratmeter gleich mit einer Gegenrechnung in shapely.
 - Kinder- und Jugendpsychiatrien (Klinik, Tagesklinik, Ambulanz, Praxis; OSM
   `healthcare:speciality=child_psychiatry`, bundesweit rund 500 Objekte) zählen als Kinder- und
   Jugendeinrichtung (§ 5 Abs. 2 Nr. 3 KCanG). Im Regierungsbezirk Düsseldorf sind das
