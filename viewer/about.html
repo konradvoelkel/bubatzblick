@@ -100,7 +100,7 @@ Projekt und unabhängig von der <a href="https://bubatzkarte.de">Bubatzkarte</a>
 <p><strong>Rot:</strong> Konsumverbot in Sichtweite (§ 5 Abs. 2 Satz 1 Nr. 1–4 und 6 KCanG)
 von den folgenden Einrichtungen. Die Liste wird beim Bauen dieser Seite aus
 genau der Tag-Datei erzeugt, mit der die Karte gerechnet wird
-(<code>config/tags.json</code> (Version 5)); sie kann daher nicht von der Karte abweichen.</p>
+(<code>config/tags.json</code> (Version 6)); sie kann daher nicht von der Karte abweichen.</p>
 <ul>
 <li><strong>Schulen</strong> (§ 5 Abs. 2 Nr. 1) — Allgemein- und berufsbildende Schulen nach den Schulgesetzen der Länder. Fahrschulen (gewerbliche Ausbildungsstätten nach dem Fahrlehrergesetz) und Sprachschulen sind keine Schulen im Sinne des Gesetzes und werden nicht gezeigt; Musikschulen zählen als Kinder- und Jugendeinrichtung.<ul>
 <li><code>amenity=school</code> — Schule</li>
@@ -123,10 +123,11 @@ genau der Tag-Datei erzeugt, mit der die Karte gerechnet wird
 <li>Kategorie im Kartenpopup: <code>childcare</code></li>
 </ul>
 </li>
-<li><strong>Kinder- und Jugendeinrichtungen</strong> (§ 5 Abs. 2 Nr. 3) — Jugendzentren und Jugendclubs, soziale Einrichtungen für Kinder und Jugendliche (Heime, Tagesgruppen, Beratungsstellen — nur wenn in OpenStreetMap als für Kinder oder Jugendliche bestimmt eingetragen; Altenheime, Obdachlosenunterkünfte u. ä. zählen nicht), Musikschulen und Jugendherbergen.<ul>
+<li><strong>Kinder- und Jugendeinrichtungen</strong> (§ 5 Abs. 2 Nr. 3) — Jugendzentren und Jugendclubs, soziale Einrichtungen für Kinder und Jugendliche (Heime, Tagesgruppen, Beratungsstellen — nur wenn in OpenStreetMap als für Kinder oder Jugendliche bestimmt eingetragen; Altenheime, Obdachlosenunterkünfte u. ä. zählen nicht), Kinder- und Jugendpsychiatrien, Musikschulen und Jugendherbergen.<ul>
 <li><code>community_centre=youth_centre | youth_club</code> — Jugendzentrum, Jugendclub</li>
 <li><code>community_centre:for=child | juvenile</code> (auch als Teil einer Liste) — Gemeinschaftseinrichtung für Kinder oder Jugendliche</li>
 <li><code>social_facility:for=child | juvenile</code> (auch als Teil einer Liste) — Soziale Einrichtung für Kinder oder Jugendliche (Heim, Tagesgruppe, Beratung)</li>
+<li><code>healthcare:speciality=child_psychiatry</code> (auch als Teil einer Liste) — Kinder- und Jugendpsychiatrie (Klinik, Tagesklinik, Ambulanz, Praxis); rund 500 Objekte</li>
 <li><code>amenity=music_school</code> — Musikschule</li>
 <li>Jugendherbergen: Hostels (tourism=hostel), deren Name oder Betreiber „Jugendherberge“ oder „DJH“ enthält.</li>
 <li>Kategorie im Kartenpopup: <code>youth</code></li>
@@ -363,7 +364,7 @@ allein die gesetzliche Sichtweite.</p>
   eine Korrektur in OpenStreetMap ist in der Regel nach ein bis zwei Tagen
   zu sehen. Stand der Daten: <span id="stand">wird geladen</span>.</li>
 <li><strong>Einrichtungen</strong> werden über ihre OSM-Tags erkannt; welche, steht oben
-  unter „Was rot ist“ — erzeugt aus <code>config/tags.json</code> (Version 5) im Quellcode.</li>
+  unter „Was rot ist“ — erzeugt aus <code>config/tags.json</code> (Version 6) im Quellcode.</li>
 <li><strong>Grenznähe:</strong> Einrichtungen im Ausland werden nicht berücksichtigt;
   Gebäude jenseits der Grenze verdecken in der Rechnung keine Sicht.</li>
 <li><strong>Fehlerquellen:</strong> fehlende oder falsch getaggte Einrichtungen, fehlende

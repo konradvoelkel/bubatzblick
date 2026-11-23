@@ -403,9 +403,40 @@ mod tests {
     }
 
     #[test]
+    fn v6_kinder_und_jugendpsychiatrie() {
+        let s = spec();
+        assert_eq!(s.version, 6);
+        let cat = |pairs: &[(&str, &str)]| s.match_category(&tags(pairs)).map(|x| x.category);
+        // Nr. 3: Kinder- und Jugendpsychiatrie zaehlt als Kinder- und Jugendeinrichtung,
+        // gleich ob Klinik oder Praxis, auch als Teil einer Liste von Fachrichtungen.
+        assert_eq!(
+            cat(&[
+                ("amenity", "clinic"),
+                ("healthcare:speciality", "child_psychiatry")
+            ]),
+            Some("youth")
+        );
+        assert_eq!(
+            cat(&[
+                ("healthcare", "doctor"),
+                ("healthcare:speciality", "psychiatry; child_psychiatry")
+            ]),
+            Some("youth")
+        );
+        // Psychiatrie fuer Erwachsene nicht.
+        assert_eq!(
+            cat(&[
+                ("amenity", "hospital"),
+                ("healthcare:speciality", "psychiatry")
+            ]),
+            None
+        );
+    }
+
+    #[test]
     fn v5_schools_sports_access_and_youth() {
         let s = spec();
-        assert_eq!(s.version, 5);
+        assert!(s.version >= 5);
         let m = |pairs: &[(&str, &str)]| s.match_category(&tags(pairs));
         let cat = |pairs: &[(&str, &str)]| m(pairs).map(|x| x.category);
         // Nr. 1: nur amenity=school; Fahr-/Sprachschulen weg, Musikschule -> youth

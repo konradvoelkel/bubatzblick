@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "comment": "Verbotsobjekt-Tags nach § 5 Abs. 2 Satz 1 Nr. 1-4 und 6 KCanG. Diese Datei ist die EINZIGE Quelle: title/description je Kategorie und comment je Regel erscheinen wortgleich auf der Ueber-Seite (deploy/bin/build_about.py), ein Test prueft das. Regelsemantik (rust/bubatz/src/tags.rs): erste passende Kategorie in Dateireihenfolge; osm_tags = Schluessel traegt einen der Werte (split=true: Wert wird an ';' geteilt); name_match = unter 'when' enthaelt eines der Felder einen der Teilstrings; exclude/public_only wie kommentiert. Die Zaehlungen in den Regelkommentaren sind Groessenordnungen aus OSM-Deutschland zum Zeitpunkt der Regelentscheidung, keine laufenden Kennzahlen. `version` zaehlt Aenderungen an dieser Datei und stoesst `extract` neu an.",
   "categories": {
     "school": {
@@ -178,7 +178,7 @@
     "youth": {
       "kcang_nr": 3,
       "title": "Kinder- und Jugendeinrichtungen",
-      "description": "Jugendzentren und Jugendclubs, soziale Einrichtungen für Kinder und Jugendliche (Heime, Tagesgruppen, Beratungsstellen — nur wenn in OpenStreetMap als für Kinder oder Jugendliche bestimmt eingetragen; Altenheime, Obdachlosenunterkünfte u. ä. zählen nicht), Musikschulen und Jugendherbergen.",
+      "description": "Jugendzentren und Jugendclubs, soziale Einrichtungen für Kinder und Jugendliche (Heime, Tagesgruppen, Beratungsstellen — nur wenn in OpenStreetMap als für Kinder oder Jugendliche bestimmt eingetragen; Altenheime, Obdachlosenunterkünfte u. ä. zählen nicht), Kinder- und Jugendpsychiatrien, Musikschulen und Jugendherbergen.",
       "osm_tags": [
         {
           "key": "community_centre",
@@ -205,6 +205,14 @@
           ],
           "split": true,
           "comment": "Soziale Einrichtung für Kinder oder Jugendliche (Heim, Tagesgruppe, Beratung)"
+        },
+        {
+          "key": "healthcare:speciality",
+          "values": [
+            "child_psychiatry"
+          ],
+          "split": true,
+          "comment": "Kinder- und Jugendpsychiatrie (Klinik, Tagesklinik, Ambulanz, Praxis); rund 500 Objekte"
         },
         {
           "key": "amenity",

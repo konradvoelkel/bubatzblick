@@ -11,6 +11,10 @@ Karte selbst.
 
 ### Hinzugefügt
 
+- Kinder- und Jugendpsychiatrien (Klinik, Tagesklinik, Ambulanz, Praxis; OSM
+  `healthcare:speciality=child_psychiatry`, bundesweit rund 500 Objekte) zählen als Kinder- und
+  Jugendeinrichtung (§ 5 Abs. 2 Nr. 3 KCanG). Im Regierungsbezirk Düsseldorf sind das
+  35 Objekte mehr; die bisherigen Zonen bleiben byte-gleich.
 - Die Kartenseite baut die Verbindung zum Kachel-Host früh auf (`<link rel="preconnect">`).
   Die Adresse kommt beim Ausliefern über den neuen Platzhalter `__TILES_ORIGIN__`, den der
   Server-Hook und `deploy/bin/deploy_vps.sh` ersetzen; ein Test hält jeden Platzhalter der
