@@ -194,7 +194,7 @@ Lizenzen), hier die Bausteine:
 | Gebäudegrundrisse als Hindernisse | 39,6 Millionen |
 | Beobachterpunkte insgesamt | rund 190 Millionen (Median 235 je Einrichtung, Kontur rund 96 000 km; gemessen im September 2026) |
 | Rechenzellen | 52 955 à 2 km × 2 km |
-| Fläche aller Zonen | rund 20 000 km² |
+| Fläche aller Zonen | rund 11 400 km², 3,2 % der Fläche Deutschlands (jede Stelle einmal gezählt; je Einrichtung einzeln gezählt, Überlappungen mehrfach, rund 20 000 km²) |
 | Vollständige Neuberechnung | 4 h 45 min auf dem Server (4 vCPU, 8 GB; zuletzt im Oktober 2026), ~2 h auf 16 Threads |
 | Tägliche Aktualisierung | 22 min auf dem Server, davon 12 min Rechnen |
 | Arbeitsspeicher, Spitze | ~5 GB |

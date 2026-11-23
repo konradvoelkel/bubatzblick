@@ -31,7 +31,7 @@ Mitarbeit: `CONTRIBUTING.md`.
   Gebäudegrundrisse abgezogen.
 
 Größenordnung Deutschland (November 2026): ~500 000 Verbotsobjekte, knapp
-40 Mio. Gebäude, ~20 000 km² Zonenfläche, `zonen.pmtiles` ~370 MB.
+40 Mio. Gebäude, ~11 400 km² Zonenfläche (Überlappungen einmal gezählt), `zonen.pmtiles` ~370 MB.
 
 Stufen, Kachelvertrag und Prüfkette: **[`docs/pipeline.md`](docs/pipeline.md)**.
 

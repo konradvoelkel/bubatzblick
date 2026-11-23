@@ -145,6 +145,11 @@ Karte selbst.
 
 ### Behoben
 
+- Die Über-Seite und das README nannten als Fläche aller Zonen rund 20 000 km²: die
+  Summe der Zonen je Einrichtung, in der sich überlappende Zonen mehrfach zählen. Die
+  Vereinigung, jede Stelle einmal gezählt, ergibt rund 11 400 km², 3,2 % der Fläche
+  Deutschlands (`make report-laender`, Lauf vom 23. November 2026). Die Summe steht in Klammern
+  daneben.
 - Rathäuser auf der Grundkarte hatten kein Symbol, und die Konsole meldete bei
   jedem Laden ein fehlendes Bild „townhall“: der Stil @protomaps/basemaps
   5.7.2 verlangt es, das Sprite von basemaps-assets hat es nie enthalten. Sie
