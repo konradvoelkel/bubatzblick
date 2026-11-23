@@ -11,6 +11,7 @@ from __future__ import annotations
 import pathlib
 import re
 import shlex
+import subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 WORKFLOW = ROOT / ".github/workflows/tests.yml"
@@ -76,3 +77,41 @@ def test_hook_faehrt_jeden_ci_befehl() -> None:
     hook = _befehle(HOOK.read_text(encoding="utf-8"))
     fehlt = sorted(" ".join(b) for b in _ci_befehle() - NUR_CI - hook)
     assert not fehlt, f"im pre-push-Hook fehlt: {fehlt}"
+
+
+def _hook(stdin: str, home: pathlib.Path) -> subprocess.CompletedProcess[str]:
+    """Den Hook wie git aufrufen. PATH ohne echte Werkzeuge: dort steht ein
+    `cargo`, das sofort mit 97 endet -- laeuft die Pruefkette los, bricht sie
+    beim ersten Schritt ab, statt minutenlang zu bauen."""
+    bin_ = home / "bin"
+    bin_.mkdir(exist_ok=True)
+    falsch = bin_ / "cargo"
+    falsch.write_text("#!/bin/sh\nexit 97\n")
+    falsch.chmod(0o755)
+    return subprocess.run(
+        ["bash", str(HOOK), "origin", "https://example.invalid/repo.git"],
+        input=stdin,
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        timeout=60,
+        env={"PATH": f"{bin_}:/usr/bin:/bin", "HOME": str(home)},
+    )
+
+
+def test_hook_ohne_zu_sendendes_endet_sofort(tmp_path: pathlib.Path) -> None:
+    """'Everything up-to-date' (keine Zeile) und reine Loeschungen pruefen nichts."""
+    null = "0" * 40
+    for stdin in ("", f"(delete) {null} refs/heads/alt {'1' * 40}\n"):
+        r = _hook(stdin, tmp_path)
+        assert r.returncode == 0, r.stdout + r.stderr
+        assert "nichts zu senden" in r.stdout
+        assert "pre-push: Rust" not in r.stdout
+
+
+def test_hook_prueft_bei_echtem_push(tmp_path: pathlib.Path) -> None:
+    """Mit einer Zeile fuer einen echten Commit laeuft die Kette los."""
+    zeile = f"refs/heads/master {'a' * 40} refs/heads/master {'b' * 40}\n"
+    r = _hook(zeile, tmp_path)
+    assert "pre-push: Rust" in r.stdout
+    assert r.returncode == 97, r.stdout + r.stderr
