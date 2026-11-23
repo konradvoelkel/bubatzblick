@@ -38,6 +38,10 @@ Karte selbst.
 
 ### Geändert
 
+- Über-Seite: das Gesetzeszitat ist eine `<figure>` mit der Quelle als Bildunterschrift
+  (`cite`-Attribut am Zitat), Werktitel stehen in `<cite>` (englische mit `lang="en"`), der
+  Fachbegriff „triangular expansion“ als englisch ausgezeichnet. Farben als Tokens wie auf
+  der Kartenseite.
 - Kartenseite: alle Farben als CSS-Tokens; die Kartenebenen lesen ihre Datenfarben
   aus denselben Tokens wie die Farblegende. Ein- und Ausklappen des Bedienfelds und
   die blaue und lila Legendenzeile folgen per `:has()` dem Knopf bzw. dem Haken statt

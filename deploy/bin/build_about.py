@@ -115,36 +115,46 @@ DESCRIPTION = (
 # heller Grund oklch(0.95 0.03 150) = #e1f5e4. Nicht das Zonenrot: das ist die
 # Datenfarbe der Karte und ausdruecklich KEINE Markenfarbe.
 STYLE = """
-  :root { color-scheme: light; }
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
   body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-         color: #222; background: #f2efe9; overflow-wrap: break-word; }
-  header { background: #fff; border-bottom: 1px solid #ddd; }
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
   header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
                   gap: 24px; align-items: center; flex-wrap: wrap; }
   header img { width: 200px; height: 200px; flex: none; }
   /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
      stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
   header .inner > div { flex: 1 1 20em; }
-  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: #287c42; }
-  header p { margin: 0 0 8px; color: #555; }
-  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: #287c42;
-          color: #fff; text-decoration: none; font-weight: 600; }
-  nav a:hover { background: #03642b; }
-  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: #fff; }
-  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid #eee; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
   main h3 { margin-top: 1.5em; }
   h1, h2, h3 { text-wrap: balance; }
-  blockquote { margin: 1em 0; padding: .6em 1em; border-left: 4px solid #287c42;
-               background: #e1f5e4; }
-  blockquote ol { padding-left: 1.4em; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
   table { border-collapse: collapse; width: 100%; }
-  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid #e5e5e5;
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
            vertical-align: top; }
-  code { font-size: .9em; background: #f3f3f3; padding: 1px 4px; border-radius: 3px;
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
          overflow-wrap: anywhere; }
-  pre { overflow-x: auto; background: #f3f3f3; padding: 10px; border-radius: 6px; }
-  a { color: #287c42; }
-  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: #666; font-size: .9em; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
 """
 
 # Eigene Datei viewer/about.js (kein Inline-Skript: CSP script-src 'self').
@@ -233,6 +243,27 @@ Daten © OpenStreetMap-Mitwirkende (ODbL) · <a href="./" class="zur-karte">Zur 
 """
 
 
+def zitate_als_figur(body: str) -> str:
+    """Ein Zitat, auf das ein Absatz "Quelle: ..." mit Link folgt, wird eine <figure>:
+    die Quelle steht in <figcaption>, ihr Link zusaetzlich als cite-Attribut am
+    <blockquote>. Markdown kennt beides nicht."""
+    muster = re.compile(
+        r"<blockquote>\n((?:(?!</?blockquote>).)*)</blockquote>\n<p>(Quelle: (?:(?!</p>).)*)</p>",
+        re.S,
+    )
+
+    def ersetze(m: re.Match[str]) -> str:
+        link = re.search(r'href="([^"]+)"', m.group(2))
+        if not link:
+            return m.group(0)
+        return (
+            f'<figure>\n<blockquote cite="{link.group(1)}">\n{m.group(1)}</blockquote>\n'
+            f"<figcaption>{m.group(2)}</figcaption>\n</figure>"
+        )
+
+    return muster.sub(ersetze, body)
+
+
 def main() -> None:
     import markdown
 
@@ -245,6 +276,7 @@ def main() -> None:
         raise SystemExit("about.md ohne H1")
     title = m.group(1)
     body = body.replace(m.group(0), "", 1)
+    body = zitate_als_figur(body)
     out = ROOT / "viewer/about.html"
     out.write_text(page(body, title), encoding="utf-8")
     (ROOT / "viewer/about.js").write_text(SCRIPT, encoding="utf-8")

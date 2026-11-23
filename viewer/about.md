@@ -87,7 +87,8 @@ genau der Tag-Datei erzeugt, mit der die Karte gerechnet wird
 > (3) In militärischen Bereichen der Bundeswehr ist der Konsum von Cannabis
 > verboten.
 
-Quelle: [gesetze-im-internet.de/kcang/__5.html](https://www.gesetze-im-internet.de/kcang/__5.html).
+Quelle: <cite>Konsumcannabisgesetz (KCanG)</cite>, § 5,
+[gesetze-im-internet.de/kcang/__5.html](https://www.gesetze-im-internet.de/kcang/__5.html).
 
 ## Wie die Zonen berechnet werden
 
@@ -120,8 +121,8 @@ Ab Zoomstufe 14 sind die Gebäude selbst aus dem Rot herausgeschnitten:
 Rot endet an der Hauswand. In kleineren Maßstäben sind die Flächen für die
 Darstellung vergröbert (immer nach außen, nie nach innen).
 
-Das Verfahren folgt der Bachelorarbeit von **Oliver Kleisch**, *2D-Sichtbarkeit
-anhand von Gebäudekonturen aus Openstreetmaps* (Heinrich-Heine-Universität
+Das Verfahren folgt der Bachelorarbeit von **Oliver Kleisch**, <cite>2D-Sichtbarkeit
+anhand von Gebäudekonturen aus Openstreetmaps</cite> (Heinrich-Heine-Universität
 Düsseldorf, Juni 2025), [als PDF, 3 MB](kleisch-2025-2d-sichtbarkeit-osm.pdf).
 
 ## Für Informatikerinnen und Informatiker: die Algorithmen
@@ -134,15 +135,15 @@ Lizenzen), hier die Bausteine:
   gegenüber den Gebäudekanten in Reichweite mit einem **Rotationssweep**
   berechnet (Winkelsortierung der Kanten-Endpunkte, Sweep über den
   Vollkreis mit einer nach Entfernung geordneten Menge aktiver Kanten,
-  O(n log n) je Punkt). Klassische Referenzen: D. T. Lee, *Visibility of a
-  simple polygon*, Computer Vision, Graphics, and Image Processing 22
-  (1983); T. Asano, *An efficient algorithm for finding the visibility
-  polygon for a polygonal region with holes*, IEICE Transactions E68
-  (1985); P. J. Heffernan, J. S. B. Mitchell, *An optimal algorithm for
-  computing visibility in the plane*, SIAM Journal on Computing 24 (1995).
-  Die Bachelorarbeit verwendet die *triangular expansion* (F. Bungiu,
-  M. Hemmer, J. Hershberger, K. Huang, A. Kröller, *Efficient computation
-  of visibility polygons*, [arXiv:1403.3905](https://arxiv.org/abs/1403.3905),
+  O(n log n) je Punkt). Klassische Referenzen: D. T. Lee, <cite lang="en">Visibility of a
+  simple polygon</cite>, Computer Vision, Graphics, and Image Processing 22
+  (1983); T. Asano, <cite lang="en">An efficient algorithm for finding the visibility
+  polygon for a polygonal region with holes</cite>, IEICE Transactions E68
+  (1985); P. J. Heffernan, J. S. B. Mitchell, <cite lang="en">An optimal algorithm for
+  computing visibility in the plane</cite>, SIAM Journal on Computing 24 (1995).
+  Die Bachelorarbeit verwendet die <i lang="en">triangular expansion</i> (F. Bungiu,
+  M. Hemmer, J. Hershberger, K. Huang, A. Kröller, <cite lang="en">Efficient computation
+  of visibility polygons</cite>, [arXiv:1403.3905](https://arxiv.org/abs/1403.3905),
   2014, in CGAL implementiert); der Sweep war für viele Punkte in
   derselben Szene die einfachere, exakt nachrechenbare Wahl.
 - **Hindernissuche.** Die knapp 40 Millionen Gebäude liegen nach
