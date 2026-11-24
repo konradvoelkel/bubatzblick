@@ -201,6 +201,36 @@ Lizenzen), hier die Bausteine:
 | Kachelarchiv | 372 MB, Zoom 8–14 |
 | Stand | täglicher Lauf auf dem Server am 17. November 2026; der heutige Datenstand steht unter „Aktualität“ |
 
+### Zonenfläche je Bundesland
+
+Wie viel Fläche je Land in Sichtweite einer Einrichtung liegt, jede Stelle
+einmal gezählt, auch wo sich mehrere Zonen überlappen. Fußgängerzonen und
+örtliche Verbote sind nicht enthalten. Die Landesgrenzen stammen aus
+OpenStreetMap, der Anteil bezieht sich auf die amtliche Fläche des Landes
+([Statistisches Bundesamt, Tabelle 33111-0008](https://www-genesis.destatis.de/datenbank/online/statistic/33111/table/33111-0008)).
+Die Stadtstaaten liegen vorn: viele Einrichtungen auf wenig Fläche. Stand:
+Lauf vom 24. November 2026.
+
+| Land | Zonen | Anteil an der Landesfläche |
+|---|--:|--:|
+| Berlin | 205 km² | 23,0 % |
+| Hamburg | 125 km² | 16,5 % |
+| Bremen | 55 km² | 13,2 % |
+| Nordrhein-Westfalen | 2 046 km² | 6,0 % |
+| Saarland | 127 km² | 4,9 % |
+| Baden-Württemberg | 1 563 km² | 4,4 % |
+| Hessen | 804 km² | 3,8 % |
+| Rheinland-Pfalz | 645 km² | 3,3 % |
+| Schleswig-Holstein | 501 km² | 3,2 % |
+| Sachsen | 552 km² | 3,0 % |
+| Bayern | 2 039 km² | 2,9 % |
+| Niedersachsen | 1 377 km² | 2,9 % |
+| Thüringen | 343 km² | 2,1 % |
+| Sachsen-Anhalt | 321 km² | 1,6 % |
+| Brandenburg | 431 km² | 1,5 % |
+| Mecklenburg-Vorpommern | 285 km² | 1,2 % |
+| **Deutschland** | **11 425 km²** | **3,2 %** |
+
 ## Unterschied zur Bubatzkarte (2023)
 
 Die [Bubatzkarte](https://bubatzkarte.de) (seit Juni 2023) war die

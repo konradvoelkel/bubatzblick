@@ -18,6 +18,10 @@ Karte selbst.
   rund eine Milliarde Punkte der Bundesbänder nicht auf einmal im Speicher liegen. Für die
   Stadt Düsseldorf: 40,1 km² Zonen auf 217 km² Stadtfläche, auf den Quadratmeter gleich mit
   einer Gegenrechnung in shapely.
+- Die Über-Seite zeigt unter „Zahlen“ die Zonenfläche je Bundesland, jede Stelle einmal
+  gezählt, mit dem Anteil an der amtlichen Landesfläche (Statistisches Bundesamt). Die
+  Landesgrenzen aus OpenStreetMap schließen das Küstenmeer ein und taugen deshalb nicht als
+  Bezug. Berlin liegt bei 23 %, Mecklenburg-Vorpommern bei 1,2 %, ganz Deutschland bei 3,2 %.
 - Kinder- und Jugendpsychiatrien (Klinik, Tagesklinik, Ambulanz, Praxis; OSM
   `healthcare:speciality=child_psychiatry`, auch in Listen wie `psychiatry;child_psychiatry`;
   bundesweit rund 610 Objekte) zählen als Kinder- und Jugendeinrichtung (§ 5 Abs. 2 Nr. 3
