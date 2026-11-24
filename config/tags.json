@@ -212,7 +212,7 @@
             "child_psychiatry"
           ],
           "split": true,
-          "comment": "Kinder- und Jugendpsychiatrie (Klinik, Tagesklinik, Ambulanz, Praxis); rund 500 Objekte"
+          "comment": "Kinder- und Jugendpsychiatrie (Klinik, Tagesklinik, Ambulanz, Praxis), auch in Listen: dann zaehlt das ganze Klinikgelaende (Entscheidung Konrad, November 2026); bundesweit rund 610 Objekte"
         },
         {
           "key": "amenity",

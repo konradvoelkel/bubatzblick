@@ -19,9 +19,14 @@ Karte selbst.
   Stadt Düsseldorf: 40,1 km² Zonen auf 217 km² Stadtfläche, auf den Quadratmeter gleich mit
   einer Gegenrechnung in shapely.
 - Kinder- und Jugendpsychiatrien (Klinik, Tagesklinik, Ambulanz, Praxis; OSM
-  `healthcare:speciality=child_psychiatry`, bundesweit rund 500 Objekte) zählen als Kinder- und
-  Jugendeinrichtung (§ 5 Abs. 2 Nr. 3 KCanG). Im Regierungsbezirk Düsseldorf sind das
-  35 Objekte mehr; die bisherigen Zonen bleiben byte-gleich.
+  `healthcare:speciality=child_psychiatry`, auch in Listen wie `psychiatry;child_psychiatry`;
+  bundesweit rund 610 Objekte) zählen als Kinder- und Jugendeinrichtung (§ 5 Abs. 2 Nr. 3
+  KCanG). Im Regierungsbezirk Düsseldorf sind das 35 Objekte mehr; die bisherigen Zonen
+  bleiben byte-gleich. Eine Klinik, die die Fachrichtung neben anderen führt, zählt mit dem
+  ganzen Gelände, weil OpenStreetMap die Abteilung meist nicht eigens verzeichnet; im Zweifel
+  eher zu groß. Bundesweit betrifft das elf große Klinikgelände. Das größte, die LVR-Klinik
+  Bedburg-Hau mit 82 ha, liegt über der harten Größengrenze des Veröffentlichens und braucht
+  dort eine geprüfte Ausnahme (`OVERSIZE_OK`).
 - Die Kartenseite baut die Verbindung zum Kachel-Host früh auf (`<link rel="preconnect">`).
   Die Adresse kommt beim Ausliefern über den neuen Platzhalter `__TILES_ORIGIN__`, den der
   Server-Hook und `deploy/bin/deploy_vps.sh` ersetzen; ein Test hält jeden Platzhalter der
