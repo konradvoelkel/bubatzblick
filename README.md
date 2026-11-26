@@ -128,5 +128,5 @@ wird, steht in `CONTRIBUTING.md`.
 ## Datenquelle
 
 `download.geofabrik.de` (`europe/germany-latest.osm.pbf`, Tagesdiffs unter
-`europe/germany-updates/`), Ausweich `download.openstreetmap.fr/extracts/…`.
+`europe/germany/updates/`), Ausweich `download.openstreetmap.fr/extracts/…`.
 Der Erst-Download wird gegen Geofabriks `.md5` geprüft.

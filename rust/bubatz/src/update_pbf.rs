@@ -50,7 +50,7 @@ pub struct UpdateArgs {
     #[arg(long, default_value_t = 30)]
     pub keep_diffs: usize,
     /// Replikationsquelle (state.txt darunter); weicht sie vom Kopf ab, wird
-    /// per Zeitstempel umgestiegen (z. B. https://download.geofabrik.de/europe/germany-updates)
+    /// per Zeitstempel umgestiegen (z. B. https://download.geofabrik.de/europe/germany/updates)
     #[arg(long)]
     pub replication_url: Option<String>,
     /// Beim Umstieg: Startfolge der neuen Quelle statt der Zeitstempelsuche
@@ -474,7 +474,7 @@ mod tests {
     #[ignore = "braucht Netz"]
     fn geofabrik_state() {
         let (seq, ts) =
-            server_state("https://download.geofabrik.de/europe/germany-updates").unwrap();
+            server_state("https://download.geofabrik.de/europe/germany/updates").unwrap();
         assert!(seq > 4_000, "Folge {seq}");
         assert!(ts.starts_with("20"), "Zeitstempel {ts}");
     }

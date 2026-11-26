@@ -62,6 +62,11 @@ Karte selbst.
 
 ### Geändert
 
+- Die Tagesdiffs kommen von Geofabriks heutiger Adresse `europe/germany/updates` (Vorgabe
+  `GERMANY_REPLICATION_URL`); die alte `europe/germany-updates` leitet nur noch per 301 um.
+  Weil die Adresse dann vom Kopf der PBF abweicht, steigt `update-pbf` beim ersten Lauf einmal
+  um: Es findet die Folge per Zeitstempel wieder (lokal gegen Geofabrik geprobt: 4980 → 4980)
+  und schreibt danach die neue Adresse in den Kopf.
 - Der Datenschutzabschnitt der Über-Seite sagt jetzt, was eine Zeile im Zugriffsprotokoll
   enthält: Zeitpunkt, Methode, Host, Protokoll, angefragte Adresse samt Query, TLS-Version und
   Verschlüsselung, Antwortcode, Größe, Dauer und die Kopfzeilen der Anfrage mit User-Agent und

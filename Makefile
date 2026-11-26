@@ -37,7 +37,7 @@ TILES_CMD = $(BUBATZ) tiles
 # osmium apply-changes haelt alle Diffs eines Aufrufs im Speicher, auf dem
 # 8-GB-Server waeren 2 GB Diffs nach langem Stillstand zu viel.
 # Gemessen: 1 bzw. 5 Tagesdiffs < 1 GB anonym.
-GERMANY_REPLICATION_URL ?= https://download.geofabrik.de/europe/germany-updates
+GERMANY_REPLICATION_URL ?= https://download.geofabrik.de/europe/germany/updates
 GERMANY_DIFF_DIR ?= $(RAW_DIR)/diffs
 UPDATE_PBF_CMD = $(BUBATZ) update-pbf --size 500 $(if $(GERMANY_REPLICATION_URL),--replication-url $(GERMANY_REPLICATION_URL)) --diff-dir $(GERMANY_DIFF_DIR) -o $(GERMANY_PBF_NEW) $(GERMANY_PBF)
 
