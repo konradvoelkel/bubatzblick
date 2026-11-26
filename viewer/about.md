@@ -287,11 +287,12 @@ ausgewertet.
 ### Was der eigene Server protokolliert
 
 Der Server schreibt ein Zugriffsprotokoll. Eine Zeile darin enthält den
-Zeitpunkt, die angefragte Adresse samt allem hinter einem „?“, Antwortcode,
-Größe und Dauer der Antwort sowie die Kopfzeilen, die Ihr Browser mitschickt,
-darunter die Browserkennung (User-Agent) und die Seite, von der Sie gekommen
-sind (Referer). Cookies, Anmeldedaten und die Sprachwahl des Browsers werden
-vor dem Schreiben entfernt. Vollständige IP-Adressen enthält das Protokoll
+Zeitpunkt, Methode, Host und Protokoll der Anfrage, die angefragte Adresse samt
+allem hinter einem „?“, TLS-Version und Verschlüsselung, Antwortcode, Größe
+und Dauer der Antwort sowie die Kopfzeilen der Anfrage, darunter die
+Browserkennung (User-Agent) und die Seite, von der Sie gekommen sind
+(Referer). Cookies, Anmeldedaten und die Sprachwahl des Browsers werden vor
+dem Schreiben entfernt. Vollständige IP-Adressen enthält das Protokoll
 nicht: die Adresse wird schon beim Schreiben gekürzt (IPv4 auf die ersten drei
 Blöcke, IPv6 auf die ersten 48 Bit), lässt sich also keinem Anschluss mehr
 zuordnen.
