@@ -62,6 +62,10 @@ Karte selbst.
 
 ### Geändert
 
+- Der Datenschutzabschnitt der Über-Seite sagt jetzt, was eine Zeile im Zugriffsprotokoll
+  enthält: angefragte Adresse samt Query, Antwortcode, Größe, Dauer und die Kopfzeilen des
+  Browsers mit User-Agent und Referer, ohne Cookies, Anmeldedaten und Sprachwahl, mit
+  gekürzter IP. Bisher nannte er nur, was fehlt. Query und Referer bleiben im Protokoll.
 - MapLibre GL JS 6.19.0 statt 5.24.1. MapLibre 6 gibt es nur als ES-Modul: `app.js` lädt
   `vendor/maplibre-gl.mjs` per `import()`, nachdem die Trusted-Types-Policy steht, der Kopf
   holt es per `modulepreload` vorab; der Worker ist ein Modul-Worker aus der eigenen Datei
