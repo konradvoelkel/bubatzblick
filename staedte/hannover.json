@@ -1,0 +1,2088 @@
+{
+ "stadtflaeche_osm_km2": 203.96,
+ "wald": {
+  "flaeche_km2": 31.8,
+  "anteil_stadt": 0.1561,
+  "anteil_zone": 0.1135,
+  "anteil_zone_ohne_wald": 0.2303
+ },
+ "zonen_km2": 43.26,
+ "anteil": 0.21209,
+ "kategorien": {
+  "sports": {
+   "objekte": 1222,
+   "zonen_km2": 20.4
+  },
+  "playground": {
+   "objekte": 753,
+   "zonen_km2": 17.11
+  },
+  "kindergarten": {
+   "objekte": 473,
+   "zonen_km2": 10.65
+  },
+  "school": {
+   "objekte": 133,
+   "zonen_km2": 8.39
+  },
+  "youth": {
+   "objekte": 77,
+   "zonen_km2": 1.65
+  },
+  "childcare": {
+   "objekte": 12,
+   "zonen_km2": 0.28
+  }
+ },
+ "objekte_gesamt": 2670,
+ "merkmale": {
+  "see": [
+   {
+    "name": "Maschsee",
+    "osm": [
+     "w36192145"
+    ],
+    "flaeche_ha": 78.0,
+    "zone_ha": 15.6,
+    "anteil_zone": 0.1993,
+    "lat": 52.35281,
+    "lon": 9.74436,
+    "bbox": [
+     9.73485,
+     52.34292,
+     9.7547,
+     52.36277
+    ]
+   },
+   {
+    "name": "Altwarmbüchener See",
+    "osm": [
+     "r59414"
+    ],
+    "flaeche_ha": 36.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.42212,
+    "lon": 9.85358,
+    "bbox": [
+     9.8454,
+     52.4184,
+     9.86252,
+     52.42582
+    ]
+   },
+   {
+    "name": "Großer Ricklinger Teich",
+    "osm": [
+     "r9074569"
+    ],
+    "flaeche_ha": 21.5,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.1194,
+    "lat": 52.33957,
+    "lon": 9.73866,
+    "bbox": [
+     9.73518,
+     52.33553,
+     9.74206,
+     52.34378
+    ]
+   },
+   {
+    "name": "Großer Wülfler und Detmarscher Teich",
+    "osm": [
+     "r66450"
+    ],
+    "flaeche_ha": 17.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.32578,
+    "lon": 9.75895,
+    "bbox": [
+     9.75294,
+     52.32276,
+     9.76159,
+     52.32882
+    ]
+   },
+   {
+    "name": "Großer Döhrener Teich",
+    "osm": [
+     "r1436127"
+    ],
+    "flaeche_ha": 13.4,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.0958,
+    "lat": 52.33409,
+    "lon": 9.74874,
+    "bbox": [
+     9.74317,
+     52.3318,
+     9.75241,
+     52.3364
+    ]
+   },
+   {
+    "name": "Sonnensee",
+    "osm": [
+     "w4758427"
+    ],
+    "flaeche_ha": 13.1,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.0809,
+    "lat": 52.40659,
+    "lon": 9.87415,
+    "bbox": [
+     9.87265,
+     52.40307,
+     9.876,
+     52.40975
+    ]
+   },
+   {
+    "name": "Annateich",
+    "osm": [
+     "r198961"
+    ],
+    "flaeche_ha": 7.6,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.4221,
+    "lat": 52.37136,
+    "lon": 9.81789,
+    "bbox": [
+     9.8106,
+     52.36979,
+     9.81892,
+     52.37298
+    ]
+   },
+   {
+    "name": "Steinbruchsee Steinbruch Süd Heidelberg Materials AG",
+    "osm": [
+     "w27675681"
+    ],
+    "flaeche_ha": 6.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.36758,
+    "lon": 9.88069,
+    "bbox": [
+     9.87778,
+     52.36564,
+     9.88281,
+     52.36919
+    ]
+   },
+   {
+    "name": "Sieben-Meter-Teich",
+    "osm": [
+     "w5024864"
+    ],
+    "flaeche_ha": 6.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.33724,
+    "lon": 9.74564,
+    "bbox": [
+     9.74233,
+     52.33607,
+     9.74879,
+     52.33845
+    ]
+   },
+   {
+    "name": "Graft",
+    "osm": [
+     "w9610598"
+    ],
+    "flaeche_ha": 5.4,
+    "zone_ha": 4.0,
+    "anteil_zone": 0.7337,
+    "lat": 52.38851,
+    "lon": 9.69326,
+    "bbox": [
+     9.6916,
+     52.38354,
+     9.70122,
+     52.39127
+    ]
+   },
+   {
+    "name": "Dreiecks-Teich",
+    "osm": [
+     "w5024868"
+    ],
+    "flaeche_ha": 4.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.34124,
+    "lon": 9.74156,
+    "bbox": [
+     9.7404,
+     52.33906,
+     9.74457,
+     52.34216
+    ]
+   },
+   {
+    "name": "Laher Teich",
+    "osm": [
+     "w26767591"
+    ],
+    "flaeche_ha": 3.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.41428,
+    "lon": 9.83613,
+    "bbox": [
+     9.83493,
+     52.413,
+     9.83842,
+     52.41552
+    ]
+   },
+   {
+    "name": "Titanteich",
+    "osm": [
+     "w27675683"
+    ],
+    "flaeche_ha": 3.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.37376,
+    "lon": 9.88095,
+    "bbox": [
+     9.87863,
+     52.37301,
+     9.88317,
+     52.3744
+    ]
+   },
+   {
+    "name": "Blauer See",
+    "osm": [
+     "w76149291"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.8221,
+    "lat": 52.40292,
+    "lon": 9.85138,
+    "bbox": [
+     9.84966,
+     52.40202,
+     9.85267,
+     52.4039
+    ]
+   },
+   {
+    "name": "Friedhofsteich Stöcken",
+    "osm": [
+     "r108597"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.1194,
+    "lat": 52.40665,
+    "lon": 9.66353,
+    "bbox": [
+     9.6625,
+     52.40518,
+     9.66587,
+     52.40816
+    ]
+   },
+   {
+    "name": "Maschteich",
+    "osm": [
+     "r313164"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.5023,
+    "lat": 52.36534,
+    "lon": 9.73744,
+    "bbox": [
+     9.73563,
+     52.36405,
+     9.73911,
+     52.36664
+    ]
+   },
+   {
+    "name": "Tonkuhle \"Seefugium\"",
+    "osm": [
+     "w37105365"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.44384,
+    "lon": 9.80885,
+    "bbox": [
+     9.80792,
+     52.44287,
+     9.8098,
+     52.44477
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Vahrenheide",
+    "osm": [
+     "r408374"
+    ],
+    "flaeche_ha": 75.8,
+    "zone_ha": 17.0,
+    "anteil_zone": 0.2247,
+    "lat": 52.42391,
+    "lon": 9.75444,
+    "bbox": [
+     9.74601,
+     52.4203,
+     9.78057,
+     52.42718
+    ]
+   },
+   {
+    "name": "Hermann-Löns-Park",
+    "osm": [
+     "r3355352"
+    ],
+    "flaeche_ha": 73.5,
+    "zone_ha": 28.2,
+    "anteil_zone": 0.3831,
+    "lat": 52.37027,
+    "lon": 9.81811,
+    "bbox": [
+     9.80942,
+     52.36601,
+     9.83261,
+     52.37468
+    ]
+   },
+   {
+    "name": "Georgengarten",
+    "osm": [
+     "r92570"
+    ],
+    "flaeche_ha": 55.6,
+    "zone_ha": 18.1,
+    "anteil_zone": 0.326,
+    "lat": 52.38486,
+    "lon": 9.70837,
+    "bbox": [
+     9.70031,
+     52.37868,
+     9.72206,
+     52.39102
+    ]
+   },
+   {
+    "name": "Parc Agricole",
+    "osm": [
+     "w25675667"
+    ],
+    "flaeche_ha": 28.8,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.0134,
+    "lat": 52.3154,
+    "lon": 9.82445,
+    "bbox": [
+     9.82061,
+     52.31008,
+     9.83158,
+     52.32041
+    ]
+   },
+   {
+    "name": "Maschpark",
+    "osm": [
+     "w533438751"
+    ],
+    "flaeche_ha": 22.4,
+    "zone_ha": 12.4,
+    "anteil_zone": 0.5514,
+    "lat": 52.36528,
+    "lon": 9.7367,
+    "bbox": [
+     9.7313,
+     52.3623,
+     9.73993,
+     52.36899
+    ]
+   },
+   {
+    "name": "Hinüberscher Garten",
+    "osm": [
+     "w24780001"
+    ],
+    "flaeche_ha": 20.5,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.0986,
+    "lat": 52.40725,
+    "lon": 9.63076,
+    "bbox": [
+     9.62795,
+     52.40402,
+     9.63504,
+     52.41041
+    ]
+   },
+   {
+    "name": "Park Kattenbrook",
+    "osm": [
+     "w26637493",
+     "w89062515"
+    ],
+    "flaeche_ha": 18.4,
+    "zone_ha": 7.2,
+    "anteil_zone": 0.3929,
+    "lat": 52.33158,
+    "lon": 9.82376,
+    "bbox": [
+     9.81137,
+     52.33017,
+     9.82773,
+     52.33422
+    ]
+   },
+   {
+    "name": "Expo-Park Süd",
+    "osm": [
+     "r198746"
+    ],
+    "flaeche_ha": 16.8,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0117,
+    "lat": 52.31151,
+    "lon": 9.82293,
+    "bbox": [
+     9.81682,
+     52.3087,
+     9.82604,
+     52.31427
+    ]
+   },
+   {
+    "name": "Welfengarten",
+    "osm": [
+     "w9477640"
+    ],
+    "flaeche_ha": 14.9,
+    "zone_ha": 6.8,
+    "anteil_zone": 0.457,
+    "lat": 52.38267,
+    "lon": 9.71633,
+    "bbox": [
+     9.71299,
+     52.3793,
+     9.72168,
+     52.38603
+    ]
+   },
+   {
+    "name": "Berggarten",
+    "osm": [
+     "w4799693"
+    ],
+    "flaeche_ha": 11.5,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.1202,
+    "lat": 52.39407,
+    "lon": 9.69958,
+    "bbox": [
+     9.69709,
+     52.39179,
+     9.70176,
+     52.39632
+    ]
+   },
+   {
+    "name": "Grünzug Roderbruch Nord",
+    "osm": [
+     "w220683310"
+    ],
+    "flaeche_ha": 11.1,
+    "zone_ha": 7.8,
+    "anteil_zone": 0.7063,
+    "lat": 52.3929,
+    "lon": 9.81042,
+    "bbox": [
+     9.80427,
+     52.39044,
+     9.81678,
+     52.39549
+    ]
+   },
+   {
+    "name": "Oheriedenpark",
+    "osm": [
+     "w130159933"
+    ],
+    "flaeche_ha": 8.0,
+    "zone_ha": 6.6,
+    "anteil_zone": 0.8257,
+    "lat": 52.34223,
+    "lon": 9.83556,
+    "bbox": [
+     9.82867,
+     52.33964,
+     9.83687,
+     52.34493
+    ]
+   },
+   {
+    "name": "Stadtpark",
+    "osm": [
+     "w31880153"
+    ],
+    "flaeche_ha": 6.8,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.2182,
+    "lat": 52.37411,
+    "lon": 9.77152,
+    "bbox": [
+     9.76878,
+     52.37281,
+     9.77409,
+     52.37545
+    ]
+   },
+   {
+    "name": "Von-Alten-Garten",
+    "osm": [
+     "w23936055"
+    ],
+    "flaeche_ha": 6.7,
+    "zone_ha": 5.4,
+    "anteil_zone": 0.8167,
+    "lat": 52.36415,
+    "lon": 9.7114,
+    "bbox": [
+     9.70736,
+     52.36221,
+     9.71503,
+     52.36612
+    ]
+   },
+   {
+    "name": "Messepark",
+    "osm": [
+     "w31971375"
+    ],
+    "flaeche_ha": 6.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.32456,
+    "lon": 9.80886,
+    "bbox": [
+     9.80666,
+     52.32189,
+     9.81031,
+     52.32711
+    ]
+   },
+   {
+    "name": "Stadtteilpark Kronsberg-Süd",
+    "osm": [
+     "w1107174366"
+    ],
+    "flaeche_ha": 5.5,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.0627,
+    "lat": 52.32385,
+    "lon": 9.82947,
+    "bbox": [
+     9.82328,
+     52.3209,
+     9.83073,
+     52.32653
+    ]
+   },
+   {
+    "name": "Park Kattenbrook IV",
+    "osm": [
+     "w244819816"
+    ],
+    "flaeche_ha": 5.2,
+    "zone_ha": 3.1,
+    "anteil_zone": 0.5937,
+    "lat": 52.3301,
+    "lon": 9.83004,
+    "bbox": [
+     9.82747,
+     52.32908,
+     9.83438,
+     52.33138
+    ]
+   },
+   {
+    "name": "Bothfelder Anger",
+    "osm": [
+     "w24639304"
+    ],
+    "flaeche_ha": 4.2,
+    "zone_ha": 4.2,
+    "anteil_zone": 1.0,
+    "lat": 52.41446,
+    "lon": 9.8025,
+    "bbox": [
+     9.79909,
+     52.41318,
+     9.8037,
+     52.4161
+    ]
+   },
+   {
+    "name": "Willy-Spahn-Park",
+    "osm": [
+     "w144985324"
+    ],
+    "flaeche_ha": 4.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0006,
+    "lat": 52.38526,
+    "lon": 9.65795,
+    "bbox": [
+     9.65447,
+     52.38435,
+     9.66133,
+     52.38596
+    ]
+   },
+   {
+    "name": "Döhrener Maschpark",
+    "osm": [
+     "w574138012"
+    ],
+    "flaeche_ha": 4.1,
+    "zone_ha": 3.9,
+    "anteil_zone": 0.9531,
+    "lat": 52.33678,
+    "lon": 9.75718,
+    "bbox": [
+     9.75458,
+     52.33506,
+     9.75952,
+     52.33866
+    ]
+   },
+   {
+    "name": "Ihme-Park",
+    "osm": [
+     "w46353640"
+    ],
+    "flaeche_ha": 3.9,
+    "zone_ha": 2.9,
+    "anteil_zone": 0.7557,
+    "lat": 52.37072,
+    "lon": 9.72002,
+    "bbox": [
+     9.71723,
+     52.36836,
+     9.72235,
+     52.37315
+    ]
+   },
+   {
+    "name": "Gärten im Wandel",
+    "osm": [
+     "w25675668"
+    ],
+    "flaeche_ha": 3.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0003,
+    "lat": 52.31527,
+    "lon": 9.81868,
+    "bbox": [
+     9.81682,
+     52.31279,
+     9.82036,
+     52.318
+    ]
+   },
+   {
+    "name": "Grüne Mitte Hainholz",
+    "osm": [
+     "w168774038"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.9463,
+    "lat": 52.40083,
+    "lon": 9.71639,
+    "bbox": [
+     9.71489,
+     52.3997,
+     9.71755,
+     52.40202
+    ]
+   },
+   {
+    "name": "Welfenplatz",
+    "osm": [
+     "r368477"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.9252,
+    "lat": 52.38477,
+    "lon": 9.74239,
+    "bbox": [
+     9.73949,
+     52.38338,
+     9.74367,
+     52.38618
+    ]
+   },
+   {
+    "name": "Westfalenhof",
+    "osm": [
+     "w269837302"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.35367,
+    "lon": 9.80628,
+    "bbox": [
+     9.80491,
+     52.35316,
+     9.80767,
+     52.35475
+    ]
+   },
+   {
+    "name": "Stadtteilpark Hainholz",
+    "osm": [
+     "w30091869"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 2.5,
+    "anteil_zone": 1.0,
+    "lat": 52.40223,
+    "lon": 9.71882,
+    "bbox": [
+     9.71674,
+     52.40102,
+     9.71975,
+     52.40336
+    ]
+   },
+   {
+    "name": "Waterlooplatz",
+    "osm": [
+     "w9923061"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.6449,
+    "lat": 52.36722,
+    "lon": 9.7287,
+    "bbox": [
+     9.72676,
+     52.36592,
+     9.73071,
+     52.3685
+    ]
+   },
+   {
+    "name": "Wiehbergpark",
+    "osm": [
+     "w45341701"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.3319,
+    "lon": 9.76389,
+    "bbox": [
+     9.76205,
+     52.331,
+     9.76645,
+     52.33277
+    ]
+   },
+   {
+    "name": "Stadtteilpark Steinbruchsfeld",
+    "osm": [
+     "w825056436"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.7317,
+    "lat": 52.39264,
+    "lon": 9.83821,
+    "bbox": [
+     9.83609,
+     52.39165,
+     9.84032,
+     52.39346
+    ]
+   },
+   {
+    "name": "Stadtteilpark Linden-Süd",
+    "osm": [
+     "w771134267"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.723,
+    "lat": 52.36552,
+    "lon": 9.72122,
+    "bbox": [
+     9.71984,
+     52.36286,
+     9.72313,
+     52.36798
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Eilenriede-Nord",
+    "osm": [
+     "r156510"
+    ],
+    "flaeche_ha": 357.2,
+    "zone_ha": 77.3,
+    "anteil_zone": 0.2166,
+    "lat": 52.3858,
+    "lon": 9.76418,
+    "bbox": [
+     9.75245,
+     52.37298,
+     9.79187,
+     52.39851
+    ]
+   },
+   {
+    "name": "Altwarmbüchener Moor",
+    "osm": [
+     "r5766455",
+     "r5766471",
+     "r67039"
+    ],
+    "flaeche_ha": 331.1,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.0079,
+    "lat": 52.41178,
+    "lon": 9.88424,
+    "bbox": [
+     9.83537,
+     52.39994,
+     9.8916,
+     52.42684
+    ]
+   },
+   {
+    "name": "Misburger Wald",
+    "osm": [
+     "r109178"
+    ],
+    "flaeche_ha": 306.2,
+    "zone_ha": 6.4,
+    "anteil_zone": 0.0208,
+    "lat": 52.40149,
+    "lon": 9.84095,
+    "bbox": [
+     9.82681,
+     52.39169,
+     9.88116,
+     52.41094
+    ]
+   },
+   {
+    "name": "Eilenriede-Süd",
+    "osm": [
+     "r222864"
+    ],
+    "flaeche_ha": 245.4,
+    "zone_ha": 39.0,
+    "anteil_zone": 0.1588,
+    "lat": 52.36493,
+    "lon": 9.79302,
+    "bbox": [
+     9.76073,
+     52.34663,
+     9.81248,
+     52.37169
+    ]
+   },
+   {
+    "name": "Bockmerholz",
+    "osm": [
+     "r1339876"
+    ],
+    "flaeche_ha": 185.2,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.0026,
+    "lat": 52.31394,
+    "lon": 9.85253,
+    "bbox": [
+     9.83644,
+     52.3051,
+     9.86849,
+     52.3228
+    ]
+   },
+   {
+    "name": "Gaim",
+    "osm": [
+     "r10280032"
+    ],
+    "flaeche_ha": 161.7,
+    "zone_ha": 3.3,
+    "anteil_zone": 0.0205,
+    "lat": 52.33861,
+    "lon": 9.87415,
+    "bbox": [
+     9.85954,
+     52.33088,
+     9.88267,
+     52.34717
+    ]
+   },
+   {
+    "name": "Seelhorst",
+    "osm": [
+     "w1195856373",
+     "w4818052"
+    ],
+    "flaeche_ha": 102.0,
+    "zone_ha": 29.1,
+    "anteil_zone": 0.2854,
+    "lat": 52.34288,
+    "lon": 9.8074,
+    "bbox": [
+     9.79477,
+     52.337,
+     9.8211,
+     52.34856
+    ]
+   },
+   {
+    "name": "Tiergarten",
+    "osm": [
+     "w23429655"
+    ],
+    "flaeche_ha": 95.9,
+    "zone_ha": 8.1,
+    "anteil_zone": 0.0848,
+    "lat": 52.36632,
+    "lon": 9.83617,
+    "bbox": [
+     9.82548,
+     52.36057,
+     9.84689,
+     52.37161
+    ]
+   },
+   {
+    "name": "Mecklenheide Forst",
+    "osm": [
+     "r401368"
+    ],
+    "flaeche_ha": 83.5,
+    "zone_ha": 14.1,
+    "anteil_zone": 0.1695,
+    "lat": 52.42618,
+    "lon": 9.67566,
+    "bbox": [
+     9.65637,
+     52.4231,
+     9.68902,
+     52.42934
+    ]
+   },
+   {
+    "name": "Klosterforst",
+    "osm": [
+     "w23608987"
+    ],
+    "flaeche_ha": 40.7,
+    "zone_ha": 4.2,
+    "anteil_zone": 0.1034,
+    "lat": 52.4095,
+    "lon": 9.62313,
+    "bbox": [
+     9.61754,
+     52.40608,
+     9.63033,
+     52.41296
+    ]
+   },
+   {
+    "name": "Ricklinger Holz",
+    "osm": [
+     "r5644298"
+    ],
+    "flaeche_ha": 34.9,
+    "zone_ha": 9.6,
+    "anteil_zone": 0.2754,
+    "lat": 52.33261,
+    "lon": 9.73032,
+    "bbox": [
+     9.71899,
+     52.32903,
+     9.73339,
+     52.3372
+    ]
+   },
+   {
+    "name": "Große Heide",
+    "osm": [
+     "w24695741"
+    ],
+    "flaeche_ha": 30.2,
+    "zone_ha": 5.8,
+    "anteil_zone": 0.1905,
+    "lat": 52.42662,
+    "lon": 9.79505,
+    "bbox": [
+     9.79144,
+     52.42251,
+     9.79943,
+     52.4307
+    ]
+   },
+   {
+    "name": "Wettberger Holz",
+    "osm": [
+     "w4865614"
+    ],
+    "flaeche_ha": 27.7,
+    "zone_ha": 5.2,
+    "anteil_zone": 0.1871,
+    "lat": 52.32036,
+    "lon": 9.69449,
+    "bbox": [
+     9.68725,
+     52.31676,
+     9.7016,
+     52.32396
+    ]
+   },
+   {
+    "name": "Altholzparzelle",
+    "osm": [
+     "r3355349"
+    ],
+    "flaeche_ha": 23.9,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.0288,
+    "lat": 52.38606,
+    "lon": 9.77844,
+    "bbox": [
+     9.77041,
+     52.38234,
+     9.78205,
+     52.38907
+    ]
+   },
+   {
+    "name": "Forst Heidehaus",
+    "osm": [
+     "w27912430"
+    ],
+    "flaeche_ha": 20.4,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.0803,
+    "lat": 52.42449,
+    "lon": 9.62634,
+    "bbox": [
+     9.62392,
+     52.42155,
+     9.63455,
+     52.42722
+    ]
+   },
+   {
+    "name": "Seelhorster Kreuz",
+    "osm": [
+     "w648646052"
+    ],
+    "flaeche_ha": 20.1,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.0415,
+    "lat": 52.3504,
+    "lon": 9.79374,
+    "bbox": [
+     9.78737,
+     52.34716,
+     9.80126,
+     52.35348
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Expo Plaza",
+    "osm": [
+     "r2777283"
+    ],
+    "flaeche_ha": 5.4,
+    "zone_ha": 3.5,
+    "anteil_zone": 0.6466,
+    "lat": 52.3214,
+    "lon": 9.81678,
+    "bbox": [
+     9.81438,
+     52.3196,
+     9.81986,
+     52.3232
+    ]
+   },
+   {
+    "name": "Georgsplatz",
+    "osm": [
+     "r103300"
+    ],
+    "flaeche_ha": 2.0,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0693,
+    "lat": 52.37013,
+    "lon": 9.7424,
+    "bbox": [
+     9.74117,
+     52.36905,
+     9.74394,
+     52.37119
+    ]
+   },
+   {
+    "name": "Jahnplatz",
+    "osm": [
+     "w25042462"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.9608,
+    "lat": 52.39454,
+    "lon": 9.72986,
+    "bbox": [
+     9.72856,
+     52.39405,
+     9.7312,
+     52.39499
+    ]
+   },
+   {
+    "name": "Stephansplatz",
+    "osm": [
+     "w24768642"
+    ],
+    "flaeche_ha": 0.9,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.982,
+    "lat": 52.36109,
+    "lon": 9.75492,
+    "bbox": [
+     9.75405,
+     52.36038,
+     9.75579,
+     52.36179
+    ]
+   },
+   {
+    "name": "Schützenplatz Misburg",
+    "osm": [
+     "w1320978875"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.9703,
+    "lat": 52.39086,
+    "lon": 9.86348,
+    "bbox": [
+     9.86277,
+     52.39026,
+     9.86439,
+     52.39127
+    ]
+   },
+   {
+    "name": "Friedrich-Wulfert-Platz",
+    "osm": [
+     "w191839127"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.6258,
+    "lat": 52.34282,
+    "lon": 9.83241,
+    "bbox": [
+     9.8317,
+     52.34236,
+     9.83317,
+     52.3433
+    ]
+   },
+   {
+    "name": "Am Steintor",
+    "osm": [
+     "r4028318"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.37599,
+    "lon": 9.73266,
+    "bbox": [
+     9.73188,
+     52.37545,
+     9.73312,
+     52.37655
+    ]
+   },
+   {
+    "name": "Platz der Mecklenburgischen",
+    "osm": [
+     "w902789684"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.9231,
+    "lat": 52.37821,
+    "lon": 9.80668,
+    "bbox": [
+     9.80606,
+     52.37783,
+     9.80753,
+     52.37859
+    ]
+   },
+   {
+    "name": "Geibelplatz",
+    "osm": [
+     "w24769271"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.9946,
+    "lat": 52.3625,
+    "lon": 9.76243,
+    "bbox": [
+     9.76187,
+     52.36218,
+     9.76302,
+     52.36279
+    ]
+   },
+   {
+    "name": "Rübezahlplatz",
+    "osm": [
+     "w727387204"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.5448,
+    "lat": 52.33356,
+    "lon": 9.78984,
+    "bbox": [
+     9.78938,
+     52.33307,
+     9.79055,
+     52.33412
+    ]
+   },
+   {
+    "name": "Aegidientorplatz",
+    "osm": [
+     "r6473816"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.2006,
+    "lat": 52.36846,
+    "lon": 9.74395,
+    "bbox": [
+     9.74355,
+     52.36797,
+     9.74448,
+     52.36896
+    ]
+   },
+   {
+    "name": "Lichtenbergplatz",
+    "osm": [
+     "w1349976692"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 1.0,
+    "lat": 52.36884,
+    "lon": 9.71247,
+    "bbox": [
+     9.71197,
+     52.36854,
+     9.71298,
+     52.36915
+    ]
+   },
+   {
+    "name": "Theodor-Lessing-Platz",
+    "osm": [
+     "w29181098"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 52.36936,
+    "lon": 9.73791,
+    "bbox": [
+     9.73724,
+     52.36906,
+     9.73836,
+     52.3696
+    ]
+   },
+   {
+    "name": "Platz der Weltausstellung",
+    "osm": [
+     "w31292681"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.031,
+    "lat": 52.37274,
+    "lon": 9.73751,
+    "bbox": [
+     9.73711,
+     52.37243,
+     9.73799,
+     52.37302
+    ]
+   },
+   {
+    "name": "Wedekindplatz",
+    "osm": [
+     "w31881299"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 52.3857,
+    "lon": 9.74963,
+    "bbox": [
+     9.74929,
+     52.38548,
+     9.74997,
+     52.38599
+    ]
+   },
+   {
+    "name": "Jina-Mahsa-Amini-Platz",
+    "osm": [
+     "w1209821364"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 52.36892,
+    "lon": 9.71479,
+    "bbox": [
+     9.71441,
+     52.36865,
+     9.71532,
+     52.36918
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Tierärztliche Hochschule Hannover",
+    "osm": [
+     "r10381287",
+     "w31879538"
+    ],
+    "flaeche_ha": 23.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.35346,
+    "lon": 9.80394,
+    "bbox": [
+     9.79636,
+     52.35243,
+     9.80909,
+     52.35625
+    ]
+   },
+   {
+    "name": "Leibniz Universität Hannover",
+    "osm": [
+     "r10361848",
+     "w151671496",
+     "w206666681",
+     "w28304812"
+    ],
+    "flaeche_ha": 13.4,
+    "zone_ha": 4.8,
+    "anteil_zone": 0.3568,
+    "lat": 52.38812,
+    "lon": 9.71223,
+    "bbox": [
+     9.71037,
+     52.38495,
+     9.71776,
+     52.39021
+    ]
+   },
+   {
+    "name": "Hochschule Hannover",
+    "osm": [
+     "r10361598"
+    ],
+    "flaeche_ha": 6.3,
+    "zone_ha": 2.1,
+    "anteil_zone": 0.3383,
+    "lat": 52.35367,
+    "lon": 9.72414,
+    "bbox": [
+     9.72207,
+     52.35245,
+     9.72665,
+     52.35491
+    ]
+   },
+   {
+    "name": "Fakultät für Architektur und Landschaft",
+    "osm": [
+     "w32024868"
+    ],
+    "flaeche_ha": 1.8,
+    "zone_ha": 0.9,
+    "anteil_zone": 0.4924,
+    "lat": 52.3927,
+    "lon": 9.69627,
+    "bbox": [
+     9.69489,
+     52.39202,
+     9.69769,
+     52.39339
+    ]
+   },
+   {
+    "name": "Justus-von-Liebig-Schule",
+    "osm": [
+     "w1411555264",
+     "w238060623",
+     "w53330774"
+    ],
+    "flaeche_ha": 1.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.3783,
+    "lon": 9.67352,
+    "bbox": [
+     9.67218,
+     52.37745,
+     9.67428,
+     52.37917
+    ]
+   },
+   {
+    "name": "Berufsbildene Schulen Cora Berliner",
+    "osm": [
+     "w288888582"
+    ],
+    "flaeche_ha": 1.7,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.491,
+    "lat": 52.38801,
+    "lon": 9.8085,
+    "bbox": [
+     9.80738,
+     52.38717,
+     9.80998,
+     52.38881
+    ]
+   },
+   {
+    "name": "Pflegeschule der Bildungsakademie Pflege",
+    "osm": [
+     "w1367330466"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.7365,
+    "lat": 52.38097,
+    "lon": 9.80061,
+    "bbox": [
+     9.79937,
+     52.38015,
+     9.80175,
+     52.38174
+    ]
+   },
+   {
+    "name": "BBS 3 - Schule für Berufe am Bau",
+    "osm": [
+     "w1367964661"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.1168,
+    "lat": 52.36646,
+    "lon": 9.72394,
+    "bbox": [
+     9.72247,
+     52.36576,
+     9.72553,
+     52.36716
+    ]
+   },
+   {
+    "name": "BBS-ME Otto-Brenner-Schule",
+    "osm": [
+     "w1367964664"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.1213,
+    "lat": 52.36674,
+    "lon": 9.72562,
+    "bbox": [
+     9.72325,
+     52.36554,
+     9.72622,
+     52.36793
+    ]
+   },
+   {
+    "name": "Berufsbildende Schulen Hannah Arendt",
+    "osm": [
+     "w28246779"
+    ],
+    "flaeche_ha": 1.3,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.3887,
+    "lat": 52.37503,
+    "lon": 9.726,
+    "bbox": [
+     9.72452,
+     52.37429,
+     9.72719,
+     52.37561
+    ]
+   },
+   {
+    "name": "BBS Hannah-Arendt-Schule",
+    "osm": [
+     "w1367964663"
+    ],
+    "flaeche_ha": 1.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0248,
+    "lat": 52.36489,
+    "lon": 9.72417,
+    "bbox": [
+     9.72306,
+     52.36406,
+     9.72532,
+     52.36586
+    ]
+   },
+   {
+    "name": "Hochschule für Musik, Theater und Medien Hannover",
+    "osm": [
+     "w42713800"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.37757,
+    "lon": 9.75454,
+    "bbox": [
+     9.7535,
+     52.37697,
+     9.75586,
+     52.37818
+    ]
+   },
+   {
+    "name": "Fachhochschule für die Wirtschaft und bib International College Hannover",
+    "osm": [
+     "w208150796"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.36621,
+    "lon": 9.77347,
+    "bbox": [
+     9.77227,
+     52.36555,
+     9.77472,
+     52.36687
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r15625778",
+     "w106076393",
+     "w107034520",
+     "w107876615",
+     "w112722778",
+     "w112724088",
+     "w112748403",
+     "w112748404",
+     "w122747070",
+     "w127200881",
+     "w136652473",
+     "w136652486",
+     "w136701289",
+     "w143043225",
+     "w1537576694",
+     "w1537765974",
+     "w163977828",
+     "w219073993",
+     "w219073994",
+     "w225552041",
+     "w225552042",
+     "w225585274",
+     "w352837024",
+     "w352837028",
+     "w352837029",
+     "w352837030",
+     "w352837034",
+     "w45286573",
+     "w87199139",
+     "w88822093",
+     "w93445260",
+     "w93446169",
+     "w93446321",
+     "w93450524",
+     "w93450533",
+     "w93450535",
+     "w94382631"
+    ],
+    "flaeche_ha": 77.0,
+    "zone_ha": 25.5,
+    "anteil_zone": 0.3313,
+    "lat": 52.34974,
+    "lon": 9.74509,
+    "bbox": [
+     9.60339,
+     52.3182,
+     9.7741,
+     52.41408
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Großer Garten",
+    "osm": [
+     "w52525549"
+    ],
+    "flaeche_ha": 37.6,
+    "zone_ha": 4.0,
+    "anteil_zone": 0.1066,
+    "lat": 52.38742,
+    "lon": 9.69646,
+    "bbox": [
+     9.69206,
+     52.38378,
+     9.70161,
+     52.39173
+    ]
+   },
+   {
+    "name": "KGV Burg",
+    "osm": [
+     "w487586901"
+    ],
+    "flaeche_ha": 23.8,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.1038,
+    "lat": 52.40227,
+    "lon": 9.69714,
+    "bbox": [
+     9.69381,
+     52.39955,
+     9.70773,
+     52.40493
+    ]
+   },
+   {
+    "name": "KGV Burgfrieden e.V.",
+    "osm": [
+     "w487541786"
+    ],
+    "flaeche_ha": 18.1,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.0277,
+    "lat": 52.40783,
+    "lon": 9.7012,
+    "bbox": [
+     9.6959,
+     52.40174,
+     9.70723,
+     52.41353
+    ]
+   },
+   {
+    "name": "Botanischer Schulgarten Burg",
+    "osm": [
+     "w237010369"
+    ],
+    "flaeche_ha": 6.4,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0256,
+    "lat": 52.39955,
+    "lon": 9.69678,
+    "bbox": [
+     9.69291,
+     52.398,
+     9.69865,
+     52.40108
+    ]
+   },
+   {
+    "name": "Botanischer Schulgarten Linden",
+    "osm": [
+     "w72184180"
+    ],
+    "flaeche_ha": 1.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.36239,
+    "lon": 9.70012,
+    "bbox": [
+     9.69819,
+     52.36172,
+     9.70101,
+     52.36305
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "Maschseebad – Strandbad Maschsee",
+    "osm": [
+     "w136839565"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 1.0,
+    "lat": 52.34341,
+    "lon": 9.75364,
+    "bbox": [
+     9.75141,
+     52.34285,
+     9.75445,
+     52.34397
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 486.0,
+   "zone_ha": 141.3,
+   "anteil_zone": 0.2907
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 50.9,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 52.3799,
+  "lon": 9.7723,
+  "bbox": [
+   9.60321,
+   52.3044,
+   9.91959,
+   52.45537
+  ]
+ },
+ "orte": [
+  {
+   "name": "Georgstraße und Bahnhofstraße",
+   "osm": [
+    "r13565293",
+    "r17795230",
+    "r21250660",
+    "r6456890",
+    "r6456891",
+    "w1013349070",
+    "w124259414",
+    "w124259415",
+    "w124259430",
+    "w13612740",
+    "w1487751624",
+    "w1488640260",
+    "w1488759120",
+    "w253969515",
+    "w265755775",
+    "w265755778",
+    "w265755779",
+    "w31284082",
+    "w31284085",
+    "w31285284",
+    "w31287200",
+    "w31292799",
+    "w32455499",
+    "w328868553",
+    "w332123695",
+    "w332128472",
+    "w358971594",
+    "w358971595",
+    "w358971597",
+    "w362627912",
+    "w362628008",
+    "w435784555",
+    "w435784556",
+    "w435784557",
+    "w435784558",
+    "w435784559",
+    "w435784560",
+    "w435784561",
+    "w435784562",
+    "w4712898",
+    "w537391002",
+    "w68830787",
+    "w732856938",
+    "w746497210",
+    "w7996251",
+    "w7996252"
+   ],
+   "flaeche_ha": 3.62,
+   "bbox": [
+    9.73222,
+    52.37109,
+    9.74144,
+    52.37605
+   ],
+   "anteil_zone": 0.0012,
+   "art": "flaeche",
+   "lat": 52.37357,
+   "lon": 9.73796
+  },
+  {
+   "name": "Lister Meile",
+   "osm": [
+    "r18080843",
+    "r18110960",
+    "w11139332",
+    "w1236283857",
+    "w1319878007",
+    "w1319879408",
+    "w34682206",
+    "w398353029",
+    "w414940582",
+    "w4696336"
+   ],
+   "flaeche_ha": 1.94,
+   "bbox": [
+    9.74481,
+    52.38079,
+    9.75016,
+    52.38873
+   ],
+   "anteil_zone": 0.2671,
+   "art": "flaeche",
+   "lat": 52.38478,
+   "lon": 9.74687
+  },
+  {
+   "name": "Limmerstraße",
+   "osm": [
+    "w224692861",
+    "w224692862",
+    "w235677972",
+    "w23660580",
+    "w28508076"
+   ],
+   "flaeche_ha": 1.09,
+   "bbox": [
+    9.70505,
+    52.37099,
+    9.71409,
+    52.3743
+   ],
+   "anteil_zone": 0.3748,
+   "art": "linie",
+   "lat": 52.37267,
+   "lon": 9.70976
+  },
+  {
+   "name": "Ernst-August-Platz",
+   "osm": [
+    "r83227",
+    "w1090774856",
+    "w1090774857",
+    "w1169053329",
+    "w167522490",
+    "w167522491"
+   ],
+   "flaeche_ha": 1.78,
+   "bbox": [
+    9.73898,
+    52.37528,
+    9.74256,
+    52.37726
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 52.37623,
+   "lon": 9.7404
+  },
+  {
+   "name": "Raschplatz",
+   "osm": [
+    "r3793852"
+   ],
+   "flaeche_ha": 0.71,
+   "bbox": [
+    9.74262,
+    52.37795,
+    9.74478,
+    52.37972
+   ],
+   "anteil_zone": 0.4952,
+   "art": "flaeche",
+   "lat": 52.37884,
+   "lon": 9.74383
+  },
+  {
+   "name": "Andreas-Hermes-Platz",
+   "osm": [
+    "r6473807"
+   ],
+   "flaeche_ha": 0.93,
+   "bbox": [
+    9.74396,
+    52.37906,
+    9.74638,
+    52.38025
+   ],
+   "anteil_zone": 0.9097,
+   "art": "flaeche",
+   "lat": 52.37964,
+   "lon": 9.74555
+  },
+  {
+   "name": "Weißekreuzplatz",
+   "osm": [
+    "w1100923265"
+   ],
+   "flaeche_ha": 0.48,
+   "bbox": [
+    9.74497,
+    52.38101,
+    9.74573,
+    52.38217
+   ],
+   "anteil_zone": 0.3748,
+   "art": "flaeche",
+   "lat": 52.38163,
+   "lon": 9.74538
+  },
+  {
+   "name": "Welfengarten",
+   "osm": [
+    "w9477640"
+   ],
+   "flaeche_ha": 14.89,
+   "bbox": [
+    9.71299,
+    52.3793,
+    9.72168,
+    52.38603
+   ],
+   "anteil_zone": 0.457,
+   "art": "flaeche",
+   "lat": 52.38267,
+   "lon": 9.71633
+  },
+  {
+   "name": "Eilenriede",
+   "osm": [
+    "r156510",
+    "r222864"
+   ],
+   "flaeche_ha": 602.57,
+   "bbox": [
+    9.75201,
+    52.34663,
+    9.81297,
+    52.39851
+   ],
+   "anteil_zone": 0.193,
+   "art": "flaeche",
+   "lat": 52.36493,
+   "lon": 9.79302
+  },
+  {
+   "name": "Am Steintor",
+   "osm": [
+    "r4028318"
+   ],
+   "flaeche_ha": 0.51,
+   "bbox": [
+    9.73188,
+    52.37545,
+    9.73312,
+    52.37655
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 52.37599,
+   "lon": 9.73266
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Niedersachsen (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  52.374,
+  9.738
+ ],
+ "og_zoom": 12.6,
+ "bilder": [
+  [
+   "see",
+   "Maschsee",
+   "maschsee"
+  ],
+  [
+   "park",
+   "Georgengarten",
+   "georgengarten"
+  ],
+  [
+   "ort",
+   "Welfengarten",
+   "welfengarten"
+  ],
+  [
+   "ort",
+   "Eilenriede",
+   "eilenriede"
+  ],
+  [
+   "ort",
+   "Georgstraße und Bahnhofstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "Limmerstraße",
+   "limmerstrasse"
+  ]
+ ]
+}

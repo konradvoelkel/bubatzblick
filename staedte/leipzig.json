@@ -1,0 +1,2317 @@
+{
+ "stadtflaeche_osm_km2": 297.99,
+ "wald": {
+  "flaeche_km2": 30.1,
+  "anteil_stadt": 0.1011,
+  "anteil_zone": 0.1375,
+  "anteil_zone_ohne_wald": 0.156
+ },
+ "zonen_km2": 45.94,
+ "anteil": 0.15417,
+ "kategorien": {
+  "sports": {
+   "objekte": 1212,
+   "zonen_km2": 24.08
+  },
+  "playground": {
+   "objekte": 1057,
+   "zonen_km2": 17.35
+  },
+  "school": {
+   "objekte": 231,
+   "zonen_km2": 9.94
+  },
+  "kindergarten": {
+   "objekte": 299,
+   "zonen_km2": 8.3
+  },
+  "youth": {
+   "objekte": 117,
+   "zonen_km2": 2.41
+  },
+  "childcare": {
+   "objekte": 12,
+   "zonen_km2": 0.25
+  },
+  "cannabis_club": {
+   "objekte": 1,
+   "zonen_km2": 0.02
+  }
+ },
+ "objekte_gesamt": 2929,
+ "merkmale": {
+  "see": [
+   {
+    "name": "Cospudener See",
+    "osm": [
+     "r285950"
+    ],
+    "flaeche_ha": 206.3,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.0128,
+    "lat": 51.27612,
+    "lon": 12.3376,
+    "bbox": [
+     12.32192,
+     51.26576,
+     12.35039,
+     51.28548
+    ]
+   },
+   {
+    "name": "Zwenkauer See",
+    "osm": [
+     "r2138613"
+    ],
+    "flaeche_ha": 129.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.24671,
+    "lon": 12.29448,
+    "bbox": [
+     12.27466,
+     51.24103,
+     12.31114,
+     51.25249
+    ]
+   },
+   {
+    "name": "Kulkwitzer See",
+    "osm": [
+     "w354260405"
+    ],
+    "flaeche_ha": 101.8,
+    "zone_ha": 8.4,
+    "anteil_zone": 0.0829,
+    "lat": 51.308,
+    "lon": 12.24988,
+    "bbox": [
+     12.23928,
+     51.29758,
+     12.25731,
+     51.31848
+    ]
+   },
+   {
+    "name": "Tagebausee Kleinpösna",
+    "osm": [
+     "w4918032"
+    ],
+    "flaeche_ha": 27.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.30994,
+    "lon": 12.53378,
+    "bbox": [
+     12.52947,
+     51.30599,
+     12.53982,
+     51.31383
+    ]
+   },
+   {
+    "name": "Kiesgrube Kleinpösna",
+    "osm": [
+     "w4918033"
+    ],
+    "flaeche_ha": 24.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.3131,
+    "lon": 12.52544,
+    "bbox": [
+     12.52145,
+     51.3098,
+     12.52982,
+     51.31628
+    ]
+   },
+   {
+    "name": "Auensee",
+    "osm": [
+     "w4312431"
+    ],
+    "flaeche_ha": 11.9,
+    "zone_ha": 2.1,
+    "anteil_zone": 0.1728,
+    "lat": 51.36904,
+    "lon": 12.31939,
+    "bbox": [
+     12.31506,
+     51.36754,
+     12.32285,
+     51.3705
+    ]
+   },
+   {
+    "name": "Lindenauer Hafen",
+    "osm": [
+     "r5442762"
+    ],
+    "flaeche_ha": 7.8,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.0672,
+    "lat": 51.33428,
+    "lon": 12.29846,
+    "bbox": [
+     12.2938,
+     51.33082,
+     12.30478,
+     51.33763
+    ]
+   },
+   {
+    "name": "Schönauer Lachen",
+    "osm": [
+     "r1162915"
+    ],
+    "flaeche_ha": 6.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.33712,
+    "lon": 12.28144,
+    "bbox": [
+     12.27993,
+     51.33567,
+     12.28511,
+     51.33855
+    ]
+   },
+   {
+    "name": "Naturbad Südwest",
+    "osm": [
+     "w25588025"
+    ],
+    "flaeche_ha": 5.7,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.1128,
+    "lat": 51.29015,
+    "lon": 12.31611,
+    "bbox": [
+     12.31367,
+     51.28807,
+     12.31789,
+     51.29199
+    ]
+   },
+   {
+    "name": "Kiesgrube Rückmarsdorf",
+    "osm": [
+     "w73710028"
+    ],
+    "flaeche_ha": 5.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.3352,
+    "lon": 12.27633,
+    "bbox": [
+     12.2736,
+     51.33297,
+     12.27796,
+     51.33743
+    ]
+   },
+   {
+    "name": "Großer Silbersee",
+    "osm": [
+     "w7997604"
+    ],
+    "flaeche_ha": 5.2,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.4303,
+    "lat": 51.29817,
+    "lon": 12.40004,
+    "bbox": [
+     12.39819,
+     51.29711,
+     12.40433,
+     51.29924
+    ]
+   },
+   {
+    "name": "Lachen an der Waldspitze",
+    "osm": [
+     "w36839527"
+    ],
+    "flaeche_ha": 5.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.36908,
+    "lon": 12.28357,
+    "bbox": [
+     12.28188,
+     51.36714,
+     12.28578,
+     51.37093
+    ]
+   },
+   {
+    "name": "Naturbad Nordost",
+    "osm": [
+     "w4244150"
+    ],
+    "flaeche_ha": 4.4,
+    "zone_ha": 2.9,
+    "anteil_zone": 0.6615,
+    "lat": 51.37566,
+    "lon": 12.42847,
+    "bbox": [
+     12.42648,
+     51.37417,
+     12.42976,
+     51.37719
+    ]
+   },
+   {
+    "name": "Baggersee Holzhausen ehem. Tongrube",
+    "osm": [
+     "w151086553"
+    ],
+    "flaeche_ha": 4.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.29356,
+    "lon": 12.48887,
+    "bbox": [
+     12.48636,
+     51.29257,
+     12.49135,
+     51.29448
+    ]
+   },
+   {
+    "name": "Schönauer Wiesenlachen",
+    "osm": [
+     "w87679421"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.33213,
+    "lon": 12.28342,
+    "bbox": [
+     12.28135,
+     51.3312,
+     12.28692,
+     51.3334
+    ]
+   },
+   {
+    "name": "Fortunabad",
+    "osm": [
+     "r2226693"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.28105,
+    "lon": 12.32204,
+    "bbox": [
+     12.31974,
+     51.28004,
+     12.32299,
+     51.28207
+    ]
+   },
+   {
+    "name": "Ullrichsteich",
+    "osm": [
+     "w4880395"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 2.1,
+    "anteil_zone": 0.9468,
+    "lat": 51.3435,
+    "lon": 12.33392,
+    "bbox": [
+     12.3326,
+     51.34256,
+     12.33648,
+     51.34442
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Erholungspark Lößnig-Dölitz",
+    "osm": [
+     "w431265781"
+    ],
+    "flaeche_ha": 188.4,
+    "zone_ha": 32.6,
+    "anteil_zone": 0.1728,
+    "lat": 51.29494,
+    "lon": 12.40608,
+    "bbox": [
+     12.39528,
+     51.28458,
+     12.4217,
+     51.30519
+    ]
+   },
+   {
+    "name": "Volkspark Kleinzschocher",
+    "osm": [
+     "r8338062"
+    ],
+    "flaeche_ha": 72.5,
+    "zone_ha": 27.9,
+    "anteil_zone": 0.3853,
+    "lat": 51.31317,
+    "lon": 12.33611,
+    "bbox": [
+     12.32653,
+     51.3069,
+     12.34394,
+     51.31941
+    ]
+   },
+   {
+    "name": "Südfriedhof",
+    "osm": [
+     "r7400577"
+    ],
+    "flaeche_ha": 69.9,
+    "zone_ha": 5.7,
+    "anteil_zone": 0.0814,
+    "lat": 51.30887,
+    "lon": 12.41521,
+    "bbox": [
+     12.40432,
+     51.30439,
+     12.42189,
+     51.31347
+    ]
+   },
+   {
+    "name": "Clara-Zetkin-Park",
+    "osm": [
+     "r4867151"
+    ],
+    "flaeche_ha": 46.3,
+    "zone_ha": 13.7,
+    "anteil_zone": 0.2963,
+    "lat": 51.33039,
+    "lon": 12.3589,
+    "bbox": [
+     12.34826,
+     51.32633,
+     12.36479,
+     51.33459
+    ]
+   },
+   {
+    "name": "agra-Messegelände (Leipzig)",
+    "osm": [
+     "r3818085"
+    ],
+    "flaeche_ha": 39.3,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.0559,
+    "lat": 51.2836,
+    "lon": 12.39051,
+    "bbox": [
+     12.38393,
+     51.27944,
+     12.39565,
+     51.28787
+    ]
+   },
+   {
+    "name": "agra Messepark Leipzig",
+    "osm": [
+     "w1495964837"
+    ],
+    "flaeche_ha": 34.0,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.0542,
+    "lat": 51.28389,
+    "lon": 12.39032,
+    "bbox": [
+     12.38484,
+     51.27964,
+     12.3956,
+     51.28724
+    ]
+   },
+   {
+    "name": "Wilhelm-Külz-Park",
+    "osm": [
+     "w22990548",
+     "w42446860",
+     "w42446877"
+    ],
+    "flaeche_ha": 22.0,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.0261,
+    "lat": 51.31646,
+    "lon": 12.40662,
+    "bbox": [
+     12.40081,
+     51.31196,
+     12.41153,
+     51.31887
+    ]
+   },
+   {
+    "name": "Schloßpark Lützschena",
+    "osm": [
+     "r5263772"
+    ],
+    "flaeche_ha": 21.5,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.1198,
+    "lat": 51.37525,
+    "lon": 12.28546,
+    "bbox": [
+     12.27804,
+     51.37231,
+     12.28955,
+     51.3785
+    ]
+   },
+   {
+    "name": "Rosental",
+    "osm": [
+     "r9721041"
+    ],
+    "flaeche_ha": 20.1,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.1287,
+    "lat": 51.34991,
+    "lon": 12.36323,
+    "bbox": [
+     12.35826,
+     51.34693,
+     12.36891,
+     51.35296
+    ]
+   },
+   {
+    "name": "Friedenspark",
+    "osm": [
+     "r11684"
+    ],
+    "flaeche_ha": 17.7,
+    "zone_ha": 11.7,
+    "anteil_zone": 0.663,
+    "lat": 51.32748,
+    "lon": 12.39467,
+    "bbox": [
+     12.39228,
+     51.32378,
+     12.39793,
+     51.33071
+    ]
+   },
+   {
+    "name": "Palmengarten",
+    "osm": [
+     "r4135475"
+    ],
+    "flaeche_ha": 17.5,
+    "zone_ha": 7.9,
+    "anteil_zone": 0.4549,
+    "lat": 51.33593,
+    "lon": 12.34446,
+    "bbox": [
+     12.34117,
+     51.33277,
+     12.34956,
+     51.33909
+    ]
+   },
+   {
+    "name": "Abtnaundorfer Park",
+    "osm": [
+     "r5263491"
+    ],
+    "flaeche_ha": 17.1,
+    "zone_ha": 3.7,
+    "anteil_zone": 0.2167,
+    "lat": 51.36872,
+    "lon": 12.41543,
+    "bbox": [
+     12.41256,
+     51.36549,
+     12.41907,
+     51.3719
+    ]
+   },
+   {
+    "name": "Volkshain Stünz",
+    "osm": [
+     "r9699189"
+    ],
+    "flaeche_ha": 16.7,
+    "zone_ha": 2.9,
+    "anteil_zone": 0.1754,
+    "lat": 51.33503,
+    "lon": 12.43299,
+    "bbox": [
+     12.42734,
+     51.33246,
+     12.43654,
+     51.33795
+    ]
+   },
+   {
+    "name": "Mariannenpark",
+    "osm": [
+     "r9285991"
+    ],
+    "flaeche_ha": 15.7,
+    "zone_ha": 13.1,
+    "anteil_zone": 0.8328,
+    "lat": 51.35507,
+    "lon": 12.40254,
+    "bbox": [
+     12.39878,
+     51.35139,
+     12.4069,
+     51.35846
+    ]
+   },
+   {
+    "name": "Parkstadt Dösen",
+    "osm": [
+     "w265596721"
+    ],
+    "flaeche_ha": 14.6,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.2065,
+    "lat": 51.29241,
+    "lon": 12.42553,
+    "bbox": [
+     12.42262,
+     51.28927,
+     12.4288,
+     51.29492
+    ]
+   },
+   {
+    "name": "Robert-Koch-Park",
+    "osm": [
+     "r6404164"
+    ],
+    "flaeche_ha": 14.4,
+    "zone_ha": 9.6,
+    "anteil_zone": 0.6648,
+    "lat": 51.31821,
+    "lon": 12.29897,
+    "bbox": [
+     12.29472,
+     51.31533,
+     12.30488,
+     51.32062
+    ]
+   },
+   {
+    "name": "Dölitzer Holz",
+    "osm": [
+     "r3818078"
+    ],
+    "flaeche_ha": 13.3,
+    "zone_ha": 5.3,
+    "anteil_zone": 0.3977,
+    "lat": 51.28715,
+    "lon": 12.38166,
+    "bbox": [
+     12.3783,
+     51.2848,
+     12.38516,
+     51.28934
+    ]
+   },
+   {
+    "name": "Park Dösen",
+    "osm": [
+     "w265595981"
+    ],
+    "flaeche_ha": 12.9,
+    "zone_ha": 5.5,
+    "anteil_zone": 0.4248,
+    "lat": 51.28867,
+    "lon": 12.42264,
+    "bbox": [
+     12.41972,
+     51.28661,
+     12.42676,
+     51.29071
+    ]
+   },
+   {
+    "name": "Grüner Bogen Paunsdorf",
+    "osm": [
+     "w271405011"
+    ],
+    "flaeche_ha": 12.7,
+    "zone_ha": 7.3,
+    "anteil_zone": 0.5721,
+    "lat": 51.35772,
+    "lon": 12.45517,
+    "bbox": [
+     12.45138,
+     51.35524,
+     12.46186,
+     51.36024
+    ]
+   },
+   {
+    "name": "Schönauer Park",
+    "osm": [
+     "r7473783"
+    ],
+    "flaeche_ha": 12.0,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.2477,
+    "lat": 51.32674,
+    "lon": 12.29256,
+    "bbox": [
+     12.28941,
+     51.32448,
+     12.29698,
+     51.32891
+    ]
+   },
+   {
+    "name": "Herfurth-Park (Ost)",
+    "osm": [
+     "r3134559"
+    ],
+    "flaeche_ha": 11.2,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.181,
+    "lat": 51.2833,
+    "lon": 12.38394,
+    "bbox": [
+     12.37998,
+     51.28091,
+     12.38676,
+     51.28576
+    ]
+   },
+   {
+    "name": "Park an der Etzoldschen Sandgrube",
+    "osm": [
+     "w122547419"
+    ],
+    "flaeche_ha": 10.6,
+    "zone_ha": 5.3,
+    "anteil_zone": 0.5013,
+    "lat": 51.30899,
+    "lon": 12.42385,
+    "bbox": [
+     12.41871,
+     51.30738,
+     12.42736,
+     51.31076
+    ]
+   },
+   {
+    "name": "Johannapark",
+    "osm": [
+     "r6121849"
+    ],
+    "flaeche_ha": 9.9,
+    "zone_ha": 3.6,
+    "anteil_zone": 0.3619,
+    "lat": 51.33454,
+    "lon": 12.36472,
+    "bbox": [
+     12.35935,
+     51.33251,
+     12.36797,
+     51.33663
+    ]
+   },
+   {
+    "name": "Naturbad Nordost \"Bagger\"",
+    "osm": [
+     "w219748341"
+    ],
+    "flaeche_ha": 9.8,
+    "zone_ha": 6.7,
+    "anteil_zone": 0.6842,
+    "lat": 51.37593,
+    "lon": 12.4283,
+    "bbox": [
+     12.42592,
+     51.37369,
+     12.43031,
+     51.37807
+    ]
+   },
+   {
+    "name": "Goethe-Park",
+    "osm": [
+     "r11620875"
+    ],
+    "flaeche_ha": 9.6,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.1855,
+    "lat": 51.28793,
+    "lon": 12.38661,
+    "bbox": [
+     12.38369,
+     51.28615,
+     12.38937,
+     51.28976
+    ]
+   },
+   {
+    "name": "Arthur-Bretschneider-Park",
+    "osm": [
+     "w31068283"
+    ],
+    "flaeche_ha": 9.3,
+    "zone_ha": 9.2,
+    "anteil_zone": 0.9902,
+    "lat": 51.36966,
+    "lon": 12.38208,
+    "bbox": [
+     12.37945,
+     51.36599,
+     12.38343,
+     51.37352
+    ]
+   },
+   {
+    "name": "Richard-Wagner-Hain",
+    "osm": [
+     "r4065070"
+    ],
+    "flaeche_ha": 9.0,
+    "zone_ha": 5.6,
+    "anteil_zone": 0.6174,
+    "lat": 51.33746,
+    "lon": 12.35016,
+    "bbox": [
+     12.34454,
+     51.33492,
+     12.35193,
+     51.33989
+    ]
+   },
+   {
+    "name": "Gleis-Grün-Zug",
+    "osm": [
+     "r9576033"
+    ],
+    "flaeche_ha": 6.4,
+    "zone_ha": 3.9,
+    "anteil_zone": 0.6105,
+    "lat": 51.32388,
+    "lon": 12.3224,
+    "bbox": [
+     12.3203,
+     51.32045,
+     12.32393,
+     51.32715
+    ]
+   },
+   {
+    "name": "Lene-Voigt-Park",
+    "osm": [
+     "r11968718"
+    ],
+    "flaeche_ha": 6.3,
+    "zone_ha": 6.1,
+    "anteil_zone": 0.9735,
+    "lat": 51.33416,
+    "lon": 12.39998,
+    "bbox": [
+     12.3933,
+     51.33286,
+     12.40664,
+     51.33556
+    ]
+   },
+   {
+    "name": "Rabet",
+    "osm": [
+     "r8338060"
+    ],
+    "flaeche_ha": 6.2,
+    "zone_ha": 6.2,
+    "anteil_zone": 0.9984,
+    "lat": 51.344,
+    "lon": 12.40356,
+    "bbox": [
+     12.40027,
+     51.34269,
+     12.40602,
+     51.34549
+    ]
+   },
+   {
+    "name": "Schönauer Holz",
+    "osm": [
+     "w426678888"
+    ],
+    "flaeche_ha": 5.2,
+    "zone_ha": 4.5,
+    "anteil_zone": 0.8585,
+    "lat": 51.31922,
+    "lon": 12.26673,
+    "bbox": [
+     12.26372,
+     51.31652,
+     12.26818,
+     51.32192
+    ]
+   },
+   {
+    "name": "Stadtgarten Lindenau",
+    "osm": [
+     "w815854118"
+    ],
+    "flaeche_ha": 4.4,
+    "zone_ha": 4.2,
+    "anteil_zone": 0.9513,
+    "lat": 51.34353,
+    "lon": 12.3346,
+    "bbox": [
+     12.33244,
+     51.34232,
+     12.33659,
+     51.34486
+    ]
+   },
+   {
+    "name": "Gutspark Rittergut Großzschocher",
+    "osm": [
+     "r12528247"
+    ],
+    "flaeche_ha": 3.9,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0442,
+    "lat": 51.30182,
+    "lon": 12.33237,
+    "bbox": [
+     12.33053,
+     51.30053,
+     12.33381,
+     51.30305
+    ]
+   },
+   {
+    "name": "Messepark",
+    "osm": [
+     "w248994729"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.39614,
+    "lon": 12.40876,
+    "bbox": [
+     12.40577,
+     51.3955,
+     12.41176,
+     51.3968
+    ]
+   },
+   {
+    "name": "Karl-Heine-Holz",
+    "osm": [
+     "r9724216"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.401,
+    "lat": 51.31813,
+    "lon": 12.32059,
+    "bbox": [
+     12.31932,
+     51.31634,
+     12.32177,
+     51.32004
+    ]
+   },
+   {
+    "name": "Meusdorfer Park",
+    "osm": [
+     "w268289715"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.4498,
+    "lat": 51.29337,
+    "lon": 12.43966,
+    "bbox": [
+     12.43802,
+     51.2922,
+     12.44235,
+     51.29429
+    ]
+   },
+   {
+    "name": "Karl-Heine-Kanal",
+    "osm": [
+     "r9708793"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.7106,
+    "lat": 51.33036,
+    "lon": 12.32379,
+    "bbox": [
+     12.31054,
+     51.32659,
+     12.339,
+     51.33408
+    ]
+   },
+   {
+    "name": "Volksgarten",
+    "osm": [
+     "r7055132"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.8841,
+    "lat": 51.35029,
+    "lon": 12.42086,
+    "bbox": [
+     12.41934,
+     51.34888,
+     12.42342,
+     51.35165
+    ]
+   },
+   {
+    "name": "Stadion der Freundschaft",
+    "osm": [
+     "w587035010"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.9685,
+    "lat": 51.31701,
+    "lon": 12.33153,
+    "bbox": [
+     12.32977,
+     51.31596,
+     12.33331,
+     51.31801
+    ]
+   },
+   {
+    "name": "Krimlindenallee",
+    "osm": [
+     "r6431048"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.38577,
+    "lon": 12.2656,
+    "bbox": [
+     12.26487,
+     51.38519,
+     12.26731,
+     51.39038
+    ]
+   },
+   {
+    "name": "Klingerhain",
+    "osm": [
+     "w309583275"
+    ],
+    "flaeche_ha": 2.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.33329,
+    "lon": 12.34986,
+    "bbox": [
+     12.34773,
+     51.33222,
+     12.3512,
+     51.33468
+    ]
+   },
+   {
+    "name": "Stadtteilpark Wasserschloß",
+    "osm": [
+     "w304643562"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 2.3,
+    "anteil_zone": 0.843,
+    "lat": 51.34857,
+    "lon": 12.3155,
+    "bbox": [
+     12.31394,
+     51.34729,
+     12.31676,
+     51.34959
+    ]
+   },
+   {
+    "name": "Stadtteilpark Plagwitz",
+    "osm": [
+     "r13790707"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 2.7,
+    "anteil_zone": 0.937,
+    "lat": 51.32845,
+    "lon": 12.33149,
+    "bbox": [
+     12.32806,
+     51.32779,
+     12.33606,
+     51.32911
+    ]
+   },
+   {
+    "name": "Anger-Crottendorfer Bahnschneise",
+    "osm": [
+     "r9660213"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.1837,
+    "lat": 51.33271,
+    "lon": 12.40925,
+    "bbox": [
+     12.40659,
+     51.33168,
+     12.41918,
+     51.33351
+    ]
+   },
+   {
+    "name": "Stephaniplatz",
+    "osm": [
+     "w23326869"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 2.6,
+    "anteil_zone": 1.0,
+    "lat": 51.33742,
+    "lon": 12.39846,
+    "bbox": [
+     12.39781,
+     51.33643,
+     12.40058,
+     51.33923
+    ]
+   },
+   {
+    "name": "Jahrtausendfeld",
+    "osm": [
+     "w24261294"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.6215,
+    "lat": 51.33066,
+    "lon": 12.32802,
+    "bbox": [
+     12.32631,
+     51.3297,
+     12.32972,
+     51.33163
+    ]
+   },
+   {
+    "name": "Zaubergarten",
+    "osm": [
+     "w129169002"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.301,
+    "lat": 51.31723,
+    "lon": 12.43035,
+    "bbox": [
+     12.42879,
+     51.31584,
+     12.43185,
+     51.31872
+    ]
+   },
+   {
+    "name": "Park am Schwanenteich",
+    "osm": [
+     "w7948306"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0198,
+    "lat": 51.34207,
+    "lon": 12.38183,
+    "bbox": [
+     12.3807,
+     51.34083,
+     12.38285,
+     51.34331
+    ]
+   },
+   {
+    "name": "Dr.-Güntz-Park",
+    "osm": [
+     "w34334138"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.9955,
+    "lat": 51.32085,
+    "lon": 12.41228,
+    "bbox": [
+     12.40889,
+     51.32014,
+     12.41354,
+     51.32171
+    ]
+   },
+   {
+    "name": "Nachtigallenwald",
+    "osm": [
+     "w152763550"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.018,
+    "lat": 51.32684,
+    "lon": 12.3505,
+    "bbox": [
+     12.34915,
+     51.3261,
+     12.35182,
+     51.32766
+    ]
+   },
+   {
+    "name": "Wildschweine",
+    "osm": [
+     "w362464787",
+     "w938814366"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 0.9,
+    "anteil_zone": 0.3509,
+    "lat": 51.30174,
+    "lon": 12.36164,
+    "bbox": [
+     12.36022,
+     51.30037,
+     12.36263,
+     51.30298
+    ]
+   },
+   {
+    "name": "Mühlpark Großzschocher",
+    "osm": [
+     "r6793991"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.29599,
+    "lon": 12.32911,
+    "bbox": [
+     12.32762,
+     51.29456,
+     12.33105,
+     51.29738
+    ]
+   },
+   {
+    "name": "Schönauer Welle",
+    "osm": [
+     "w33730194"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.6779,
+    "lat": 51.32343,
+    "lon": 12.28053,
+    "bbox": [
+     12.27565,
+     51.32164,
+     12.28344,
+     51.32522
+    ]
+   },
+   {
+    "name": "Ratzelwiese",
+    "osm": [
+     "r6406368"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.8977,
+    "lat": 51.30957,
+    "lon": 12.26442,
+    "bbox": [
+     12.26361,
+     51.30892,
+     12.26641,
+     51.31113
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Die Probstei",
+    "osm": [
+     "r4064303"
+    ],
+    "flaeche_ha": 164.6,
+    "zone_ha": 4.3,
+    "anteil_zone": 0.0264,
+    "lat": 51.30691,
+    "lon": 12.35195,
+    "bbox": [
+     12.34297,
+     51.29492,
+     12.35986,
+     51.31861
+    ]
+   },
+   {
+    "name": "Tannenwald",
+    "osm": [
+     "r8767424"
+    ],
+    "flaeche_ha": 131.2,
+    "zone_ha": 7.2,
+    "anteil_zone": 0.0552,
+    "lat": 51.40539,
+    "lon": 12.32058,
+    "bbox": [
+     12.31147,
+     51.39726,
+     12.33401,
+     51.41348
+    ]
+   },
+   {
+    "name": "Rosental",
+    "osm": [
+     "r1410773"
+    ],
+    "flaeche_ha": 91.6,
+    "zone_ha": 22.0,
+    "anteil_zone": 0.2398,
+    "lat": 51.3555,
+    "lon": 12.34946,
+    "bbox": [
+     12.33909,
+     51.3465,
+     12.36787,
+     51.36084
+    ]
+   },
+   {
+    "name": "Die Nonne",
+    "osm": [
+     "r2325151"
+    ],
+    "flaeche_ha": 53.0,
+    "zone_ha": 14.7,
+    "anteil_zone": 0.2762,
+    "lat": 51.32389,
+    "lon": 12.35335,
+    "bbox": [
+     12.34547,
+     51.31911,
+     12.35704,
+     51.32878
+    ]
+   },
+   {
+    "name": "Bienitz",
+    "osm": [
+     "w22697321"
+    ],
+    "flaeche_ha": 40.5,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.0162,
+    "lat": 51.35336,
+    "lon": 12.24765,
+    "bbox": [
+     12.24154,
+     51.35001,
+     12.25709,
+     51.35663
+    ]
+   },
+   {
+    "name": "Das Streitholz",
+    "osm": [
+     "r4064335"
+    ],
+    "flaeche_ha": 37.2,
+    "zone_ha": 14.5,
+    "anteil_zone": 0.3907,
+    "lat": 51.31351,
+    "lon": 12.36012,
+    "bbox": [
+     12.35617,
+     51.3058,
+     12.36793,
+     51.32117
+    ]
+   },
+   {
+    "name": "Paunsdorfer Wäldchen",
+    "osm": [
+     "r4628651"
+    ],
+    "flaeche_ha": 25.2,
+    "zone_ha": 9.4,
+    "anteil_zone": 0.3722,
+    "lat": 51.35538,
+    "lon": 12.46889,
+    "bbox": [
+     12.46449,
+     51.35125,
+     12.47417,
+     51.35945
+    ]
+   },
+   {
+    "name": "Der Wolfswinkel",
+    "osm": [
+     "r4118130"
+    ],
+    "flaeche_ha": 24.9,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.1197,
+    "lat": 51.29803,
+    "lon": 12.3569,
+    "bbox": [
+     12.3523,
+     51.29323,
+     12.36015,
+     51.3028
+    ]
+   },
+   {
+    "name": "Der Apitzsch",
+    "osm": [
+     "r4118128"
+    ],
+    "flaeche_ha": 23.6,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.1024,
+    "lat": 51.299,
+    "lon": 12.37982,
+    "bbox": [
+     12.37234,
+     51.29329,
+     12.38186,
+     51.30263
+    ]
+   },
+   {
+    "name": "Ratsholz",
+    "osm": [
+     "r5261221"
+    ],
+    "flaeche_ha": 23.0,
+    "zone_ha": 2.1,
+    "anteil_zone": 0.0912,
+    "lat": 51.39005,
+    "lon": 12.46117,
+    "bbox": [
+     12.44473,
+     51.3855,
+     12.46541,
+     51.39194
+    ]
+   },
+   {
+    "name": "Der Möckernsche Winkel",
+    "osm": [
+     "r2222546"
+    ],
+    "flaeche_ha": 21.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.36574,
+    "lon": 12.3185,
+    "bbox": [
+     12.31137,
+     51.364,
+     12.32551,
+     51.36732
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "„Gartenfreunde Süd-Ost“ e.V.",
+    "osm": [
+     "w24480477"
+    ],
+    "flaeche_ha": 14.4,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.031,
+    "lat": 51.30848,
+    "lon": 12.4045,
+    "bbox": [
+     12.40134,
+     51.30533,
+     12.40782,
+     51.31222
+    ]
+   },
+   {
+    "name": "Botanischer Garten Leipzig",
+    "osm": [
+     "w23449509"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0057,
+    "lat": 51.32868,
+    "lon": 12.39144,
+    "bbox": [
+     12.38956,
+     51.3275,
+     12.39283,
+     51.33026
+    ]
+   },
+   {
+    "name": "Schulbiologiezentrum",
+    "osm": [
+     "r4064336"
+    ],
+    "flaeche_ha": 1.4,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.8777,
+    "lat": 51.32034,
+    "lon": 12.35889,
+    "bbox": [
+     12.35798,
+     51.31948,
+     12.36014,
+     51.32106
+    ]
+   },
+   {
+    "name": "KGV \"Marienbrunn\" e.V.",
+    "osm": [
+     "w24437330"
+    ],
+    "flaeche_ha": 1.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.31278,
+    "lon": 12.3988,
+    "bbox": [
+     12.39666,
+     51.31168,
+     12.40067,
+     51.31411
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r12247945",
+     "r12517711",
+     "r12542080",
+     "r13734839",
+     "r13735603",
+     "r13741621",
+     "r13742271",
+     "r13742272",
+     "r13742273",
+     "r13742277",
+     "r13742283",
+     "r13812784",
+     "r20300639",
+     "r2117483",
+     "r21387988",
+     "r2197170",
+     "r2205866",
+     "r2222551",
+     "r2222552",
+     "r2758320",
+     "r3818091",
+     "r4103044",
+     "r4103045",
+     "r4103047",
+     "r4118136",
+     "r4118138",
+     "r4120458",
+     "r4120459",
+     "r4120460",
+     "r4135480",
+     "r4135482",
+     "r4135747",
+     "r4150946",
+     "r4152612",
+     "r4679347",
+     "r6121854",
+     "r6237559",
+     "r7344069",
+     "r7354417",
+     "r9578360",
+     "r9650199",
+     "r9708794",
+     "r9709426",
+     "r9721026",
+     "w1073421190",
+     "w1225777803",
+     "w1507403163",
+     "w1507406781",
+     "w1507440096",
+     "w1559099196",
+     "w218441152",
+     "w24031267",
+     "w332213044",
+     "w332213048",
+     "w342721934",
+     "w355434461",
+     "w355434465",
+     "w355434466",
+     "w355434469",
+     "w421546715",
+     "w426800494",
+     "w435306521"
+    ],
+    "flaeche_ha": 113.8,
+    "zone_ha": 32.2,
+    "anteil_zone": 0.2834,
+    "lat": 51.30935,
+    "lon": 12.34644,
+    "bbox": [
+     12.24559,
+     51.23594,
+     12.46588,
+     51.39884
+    ]
+   },
+   {
+    "name": "Elsterbecken",
+    "osm": [
+     "r4120452"
+    ],
+    "flaeche_ha": 36.5,
+    "zone_ha": 3.3,
+    "anteil_zone": 0.0891,
+    "lat": 51.34686,
+    "lon": 12.34324,
+    "bbox": [
+     12.33126,
+     51.33506,
+     12.35163,
+     51.35786
+    ]
+   },
+   {
+    "name": "Paußnitzlache",
+    "osm": [
+     "w108493833"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.31108,
+    "lon": 12.35378,
+    "bbox": [
+     12.3535,
+     51.31063,
+     12.35439,
+     51.31159
+    ]
+   },
+   {
+    "name": "Gamanil",
+    "osm": [
+     "r10533595"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.35033,
+    "lon": 12.37211,
+    "bbox": [
+     12.3709,
+     51.34979,
+     12.37234,
+     51.35089
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Universität Leipzig - Sportwissenschaft",
+    "osm": [
+     "w37904577"
+    ],
+    "flaeche_ha": 13.8,
+    "zone_ha": 10.6,
+    "anteil_zone": 0.7692,
+    "lat": 51.33829,
+    "lon": 12.35281,
+    "bbox": [
+     12.34885,
+     51.33573,
+     12.35577,
+     51.34086
+    ]
+   },
+   {
+    "name": "Universität Leipzig - Veterinärmedizinische Fakultät",
+    "osm": [
+     "w24679287"
+    ],
+    "flaeche_ha": 6.6,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.2913,
+    "lat": 51.3204,
+    "lon": 12.39255,
+    "bbox": [
+     12.38974,
+     51.31856,
+     12.3949,
+     51.32229
+    ]
+   },
+   {
+    "name": "Hochschule für Technik, Wirtschaft und Kultur Leipzig",
+    "osm": [
+     "w186305761"
+    ],
+    "flaeche_ha": 5.5,
+    "zone_ha": 0.9,
+    "anteil_zone": 0.1676,
+    "lat": 51.31308,
+    "lon": 12.37447,
+    "bbox": [
+     12.37141,
+     51.31165,
+     12.37657,
+     51.31476
+    ]
+   },
+   {
+    "name": "Universität Leipzig - Fakultäten für Chemie und Physik",
+    "osm": [
+     "w165483202"
+    ],
+    "flaeche_ha": 4.1,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.1452,
+    "lat": 51.32741,
+    "lon": 12.39084,
+    "bbox": [
+     12.38861,
+     51.32638,
+     12.39299,
+     51.3285
+    ]
+   },
+   {
+    "name": "Institut für Tierernährung, Ernährungsschäden und Diätetik",
+    "osm": [
+     "r9721024"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.2128,
+    "lat": 51.36709,
+    "lon": 12.33936,
+    "bbox": [
+     12.33777,
+     51.36603,
+     12.34087,
+     51.36828
+    ]
+   },
+   {
+    "name": "Universität Leipzig",
+    "osm": [
+     "w186275381"
+    ],
+    "flaeche_ha": 2.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0042,
+    "lat": 51.33844,
+    "lon": 12.37863,
+    "bbox": [
+     12.37766,
+     51.33724,
+     12.37965,
+     51.33963
+    ]
+   },
+   {
+    "name": "Institut für Geographie",
+    "osm": [
+     "w165575245",
+     "w31977212",
+     "w31977247"
+    ],
+    "flaeche_ha": 1.3,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0515,
+    "lat": 51.33119,
+    "lon": 12.39449,
+    "bbox": [
+     12.39314,
+     51.33053,
+     12.39533,
+     51.33201
+    ]
+   },
+   {
+    "name": "Abendoberschule / Abendgymnasium der Stadt Leipzig",
+    "osm": [
+     "w369456717"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.9131,
+    "lat": 51.34154,
+    "lon": 12.38753,
+    "bbox": [
+     12.38627,
+     51.34112,
+     12.38849,
+     51.3421
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Augustusplatz",
+    "osm": [
+     "r287079"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.33879,
+    "lon": 12.38067,
+    "bbox": [
+     12.3788,
+     51.33794,
+     12.38182,
+     51.34015
+    ]
+   },
+   {
+    "name": "Markt",
+    "osm": [
+     "w1311967238"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.34055,
+    "lon": 12.37468,
+    "bbox": [
+     12.374,
+     51.33981,
+     12.37536,
+     51.34126
+    ]
+   },
+   {
+    "name": "Roßplatz",
+    "osm": [
+     "r6292296"
+    ],
+    "flaeche_ha": 0.9,
+    "zone_ha": 0.9,
+    "anteil_zone": 1.0,
+    "lat": 51.33606,
+    "lon": 12.38035,
+    "bbox": [
+     12.37903,
+     51.33536,
+     12.38164,
+     51.3368
+    ]
+   },
+   {
+    "name": "Otto-Runki-Platz",
+    "osm": [
+     "w1423964970"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.7,
+    "anteil_zone": 1.0,
+    "lat": 51.34561,
+    "lon": 12.39975,
+    "bbox": [
+     12.39909,
+     51.34504,
+     12.40037,
+     51.34586
+    ]
+   },
+   {
+    "name": "Simsonplatz",
+    "osm": [
+     "r7344070"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.33333,
+    "lon": 12.37066,
+    "bbox": [
+     12.36997,
+     51.33258,
+     12.37113,
+     51.3341
+    ]
+   },
+   {
+    "name": "Nikolaikirchhof",
+    "osm": [
+     "r1069576"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.1875,
+    "lat": 51.34041,
+    "lon": 12.37861,
+    "bbox": [
+     12.37797,
+     51.34006,
+     12.37929,
+     51.34071
+    ]
+   },
+   {
+    "name": "Kurt-Masur-Platz",
+    "osm": [
+     "r12651523"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.7866,
+    "lat": 51.33765,
+    "lon": 12.37917,
+    "bbox": [
+     12.37806,
+     51.33707,
+     12.3802,
+     51.33826
+    ]
+   },
+   {
+    "name": "Polygraphplatz",
+    "osm": [
+     "w914218484"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.33621,
+    "lon": 12.41894,
+    "bbox": [
+     12.41812,
+     51.33594,
+     12.4197,
+     51.33647
+    ]
+   },
+   {
+    "name": "Liebertwolkwitzer Markt",
+    "osm": [
+     "w1089037259"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.28233,
+    "lon": 12.46417,
+    "bbox": [
+     12.46372,
+     51.28205,
+     12.46478,
+     51.28295
+    ]
+   },
+   {
+    "name": "Festplatz",
+    "osm": [
+     "w1316718359"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 51.30547,
+    "lon": 12.4561,
+    "bbox": [
+     12.45563,
+     51.30517,
+     12.45653,
+     51.30589
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "Nordstrand",
+    "osm": [
+     "r4751791"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.9101,
+    "lat": 51.28269,
+    "lon": 12.34511,
+    "bbox": [
+     12.34235,
+     51.28166,
+     12.3477,
+     51.2837
+    ]
+   },
+   {
+    "name": "Dauercamper-Strand",
+    "osm": [
+     "w311045629"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.30967,
+    "lon": 12.25187,
+    "bbox": [
+     12.2515,
+     51.30874,
+     12.25232,
+     51.31092
+    ]
+   },
+   {
+    "name": "Hundestrand",
+    "osm": [
+     "r7258283"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.9999,
+    "lat": 51.28447,
+    "lon": 12.33644,
+    "bbox": [
+     12.33524,
+     51.284,
+     12.33732,
+     51.28495
+    ]
+   },
+   {
+    "name": "Nacktbadestrand",
+    "osm": [
+     "w1000851759"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.28416,
+    "lon": 12.34144,
+    "bbox": [
+     12.34044,
+     51.28354,
+     12.34245,
+     51.28473
+    ]
+   },
+   {
+    "name": "Zeitcamper-Strand",
+    "osm": [
+     "w311045627"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.7819,
+    "lat": 51.31154,
+    "lon": 12.25243,
+    "bbox": [
+     12.25213,
+     51.3111,
+     12.25273,
+     51.312
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 1432.1,
+   "zone_ha": 339.1,
+   "anteil_zone": 0.2368
+  },
+  {
+   "name": "Elsterbecken",
+   "flaeche_ha": 63.8,
+   "zone_ha": 20.9,
+   "anteil_zone": 0.3269
+  },
+  {
+   "name": "Paußnitzlache",
+   "flaeche_ha": 5.8,
+   "zone_ha": 0.0,
+   "anteil_zone": 0.0
+  },
+  {
+   "name": "Gamanil",
+   "flaeche_ha": 6.7,
+   "zone_ha": 1.8,
+   "anteil_zone": 0.2655
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 12.9,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 51.34186,
+  "lon": 12.39214,
+  "bbox": [
+   12.22825,
+   51.22994,
+   12.55183,
+   51.45376
+  ]
+ },
+ "orte": [
+  {
+   "name": "Grimmaische und Petersstraße",
+   "osm": [
+    "w167877296",
+    "w22946719",
+    "w253313622",
+    "w253313623",
+    "w253332004",
+    "w253332005",
+    "w254680116",
+    "w28211522",
+    "w4310323",
+    "w4362261",
+    "w67508812",
+    "w67508825",
+    "w7947556",
+    "w80646313"
+   ],
+   "flaeche_ha": 1.49,
+   "bbox": [
+    12.37239,
+    51.33623,
+    12.38024,
+    51.34317
+   ],
+   "anteil_zone": 0.6146,
+   "art": "linie",
+   "lat": 51.33963,
+   "lon": 12.3784
+  },
+  {
+   "name": "Markt",
+   "osm": [
+    "w1311967238"
+   ],
+   "flaeche_ha": 1.1,
+   "bbox": [
+    12.374,
+    51.33981,
+    12.37536,
+    51.34126
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 51.34055,
+   "lon": 12.37468
+  },
+  {
+   "name": "Augustusplatz",
+   "osm": [
+    "r287079"
+   ],
+   "flaeche_ha": 2.14,
+   "bbox": [
+    12.3788,
+    51.33794,
+    12.38182,
+    51.34015
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 51.33879,
+   "lon": 12.38067
+  },
+  {
+   "name": "Richard-Wagner-Platz",
+   "osm": [
+    "r5119868"
+   ],
+   "flaeche_ha": 0.6,
+   "bbox": [
+    12.37105,
+    51.34314,
+    12.3729,
+    51.34398
+   ],
+   "anteil_zone": 1.0,
+   "art": "flaeche",
+   "lat": 51.34355,
+   "lon": 12.37208
+  },
+  {
+   "name": "Johannapark",
+   "osm": [
+    "r6121849"
+   ],
+   "flaeche_ha": 9.88,
+   "bbox": [
+    12.35935,
+    51.33251,
+    12.36797,
+    51.33663
+   ],
+   "anteil_zone": 0.3619,
+   "art": "flaeche",
+   "lat": 51.33454,
+   "lon": 12.36472
+  },
+  {
+   "name": "Lene-Voigt-Park",
+   "osm": [
+    "r11968718"
+   ],
+   "flaeche_ha": 6.31,
+   "bbox": [
+    12.3933,
+    51.33286,
+    12.40664,
+    51.33556
+   ],
+   "anteil_zone": 0.9735,
+   "art": "flaeche",
+   "lat": 51.33416,
+   "lon": 12.39998
+  },
+  {
+   "name": "Karl-Heine-Kanal",
+   "osm": [
+    "r9708793"
+   ],
+   "flaeche_ha": 3.36,
+   "bbox": [
+    12.31054,
+    51.32659,
+    12.339,
+    51.33408
+   ],
+   "anteil_zone": 0.7106,
+   "art": "flaeche",
+   "lat": 51.33036,
+   "lon": 12.32379
+  },
+  {
+   "name": "Rabet",
+   "osm": [
+    "r8338060"
+   ],
+   "flaeche_ha": 6.2,
+   "bbox": [
+    12.40027,
+    51.34269,
+    12.40602,
+    51.34549
+   ],
+   "anteil_zone": 0.9984,
+   "art": "flaeche",
+   "lat": 51.344,
+   "lon": 12.40356
+  },
+  {
+   "name": "Alexis-Schumann-Platz",
+   "osm": [
+    "w1132614102"
+   ],
+   "flaeche_ha": 0.78,
+   "bbox": [
+    12.37364,
+    51.31865,
+    12.37496,
+    51.31953
+   ],
+   "anteil_zone": 1.0,
+   "art": "flaeche",
+   "lat": 51.31927,
+   "lon": 12.37431
+  },
+  {
+   "name": "Eisenbahnstraße",
+   "osm": [
+    "w592042574"
+   ],
+   "flaeche_ha": 8.97,
+   "bbox": [
+    12.39471,
+    51.34437,
+    12.41453,
+    51.3467
+   ],
+   "anteil_zone": 0.4803,
+   "art": "flaeche",
+   "lat": 51.34547,
+   "lon": 12.40743
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "osm": "2026-11-25T21:22:46Z",
+  "tags_json": 6,
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Sachsen (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  51.338,
+  12.374
+ ],
+ "og_zoom": 12.6,
+ "bilder": [
+  [
+   "park",
+   "Clara-Zetkin-Park",
+   "clara-zetkin-park"
+  ],
+  [
+   "ort",
+   "Johannapark",
+   "johannapark"
+  ],
+  [
+   "wald",
+   "Rosental",
+   "rosental"
+  ],
+  [
+   "ort",
+   "Lene-Voigt-Park",
+   "lene-voigt-park"
+  ],
+  [
+   "ort",
+   "Grimmaische und Petersstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "Rabet",
+   "rabet"
+  ]
+ ]
+}

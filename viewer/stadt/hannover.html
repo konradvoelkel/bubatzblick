@@ -1,14 +1,275 @@
 <!doctype html>
-<!-- Platzhalter, erzeugt durch deploy/bin/build_staedte.py aus staedte/grossstaedte.json. -->
+<!-- Erzeugt aus staedte/hannover.md und staedte/hannover.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>Kiffen in Hannover | BubatzBlick</title>
+<title>Kiffen in Hannover: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=../?interesse=hannover#12/52.3744/9.7386">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Hannover liegen 43 km², 21,2 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<link rel="canonical" href="__SITE_URL__/stadt/hannover">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/hannover">
+<meta property="og:title" content="Kiffen in Hannover: wo es verboten ist">
+<meta property="og:description" content="In Hannover liegen 43 km², 21,2 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/hannover.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Hannover mit den roten Verbotszonen, daneben: Kiffen in Hannover, 21,2 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/hannover",
+   "url": "__SITE_URL__/stadt/hannover",
+   "name": "Kiffen in Hannover: wo es verboten ist",
+   "description": "In Hannover liegen 43 km², 21,2 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-27",
+   "about": {
+    "@type": "City",
+    "name": "Hannover",
+    "sameAs": "https://www.wikidata.org/wiki/Q1715",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Niedersachsen"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/hannover.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Hannover",
+     "item": "__SITE_URL__/stadt/hannover"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { fill: #c0392b; stroke: #fff; stroke-width: 2; }
+  svg.deutschland text { font-size: 19px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 9; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1.2; }
+  @media (max-width: 480px) { svg.deutschland a:not(.eng) text { font-size: 28px; }
+                              svg.deutschland a:not(.eng) circle { r: 10; } }
+</style>
 </head>
 <body>
-<p>Weiter zur <a href="../?interesse=hannover#12/52.3744/9.7386">Karte von Hannover</a>.</p>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Hannover</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <nav><a href="../#12/52.3799/9.7723" class="knopf">Hannover auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Hannover ist öffentliches Kiffen auf 43 km² verboten, das sind
+<strong>21,2 % der Stadtfläche</strong> von 204 km². Grund sind 2 670
+Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
+Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
+nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
+7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
+Jugendlichen.</p>
+
+<p>Ohne die Wälder, vor allem die Eilenriede (16 % der Stadtfläche sind Wald), liegen
+23,0 % der Stadt in einer Zone.</p>
+<figure class="karte"><img src="../img/stadt/hannover-stadt.webp" width="960" height="600" alt="Karte von Hannover mit Stadtgrenze und den roten Verbotszonen"><figcaption>Hannover: 43 km² Verbotszone auf 204 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">133</td><td class="zahl">8,4 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">473</td><td class="zahl">10,7 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">12</td><td class="zahl">0,3 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">753</td><td class="zahl">17,1 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">77</td><td class="zahl">1,6 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">1 222</td><td class="zahl">20,4 km²</td></tr></tbody></table>
+
+<p>Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
+überlappen, ist ihre Summe größer als die 43 km² oben. Den größten Teil machen die
+1 222 Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
+gefolgt von 753 Spielplätzen.</p>
+<p>Auf den städtischen Spiel- und Bolzplätzen verbietet die Spielplatzsatzung außerdem, zu rauchen und
+„Drogen aller Art“ zu konsumieren; dort dürfen nur Kinder und Jugendliche mit ihren Begleitpersonen
+hin, und nur von 7 bis 20 Uhr
+(<a href="https://www.hannover.de/content/download/407405/file/Spielplatzsatzung-INTRANET.pdf">Spielplatzsatzung</a>).
+Anbauvereinigungen fehlen in der Tabelle: Wo sie anbauen, ist nicht veröffentlicht.</p>
+<h2 id="maschsee-eilenriede-und-garten">Maschsee, Eilenriede und Gärten</h2>
+<p>Am <strong>Maschsee</strong> liegen 20 % der Wasserfläche in einer Zone, vor allem am Ufer mit seinen
+Sportanlagen. Im <strong>Maschpark</strong> hinter dem Neuen Rathaus sind es 55 %, um einen
+Spielplatz und die Kita im Rathaus.</p>
+<figure class="karte"><img src="../img/stadt/hannover-maschsee.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Maschsee (grün umrandet) mit den roten Verbotszonen; etwa 20 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Maschsee: 78 ha, davon 20 % Verbotszone. <a href="../#16/52.35281/9.74436">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Die <strong>Eilenriede</strong> (603 ha) liegt zu 19 % in einer Zone; im Wald selbst
+liegen nur wenige Spielplätze und Sportanlagen, die meisten am Rand.</p>
+<figure class="karte"><img src="../img/stadt/hannover-eilenriede.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Eilenriede (grün umrandet) mit den roten Verbotszonen; etwa 19 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Eilenriede: 603 ha, davon 19 % Verbotszone. <a href="../#16/52.36493/9.79302">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Im <strong>Georgengarten</strong> sind es 33 %, um drei Spielplätze und die Sportanlagen am Rand,
+im <strong>Welfengarten</strong> vor dem Hauptgebäude der Universität 46 %: Dort liegen drei
+Spielplätze und eine Kita. Im <strong>Großen Garten</strong> in Herrenhausen sind es 11 %; die
+Gartenordnung verbietet das Rauchen nur in der Grotte
+(<a href="https://herrenhaeuser-gaerten.hannover.de/content/download/392297/file/Gartenordnung%20Gro%C3%9Fer%20Garten_Juli%202019.pdf">Gartenordnung</a>).</p>
+<figure class="karte"><img src="../img/stadt/hannover-georgengarten.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Georgengarten (grün umrandet) mit den roten Verbotszonen; etwa 33 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Georgengarten: 56 ha, davon 33 % Verbotszone. <a href="../#16/52.38486/9.70837">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/hannover-welfengarten.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Welfengarten (grün umrandet) mit den roten Verbotszonen; etwa 46 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Welfengarten: 15 ha, davon 46 % Verbotszone. <a href="../#16/52.38267/9.71633">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Auf einem 100 Meter breiten Streifen Land entlang der Leine liegen 29 % in einer Zone.
+An der <strong>Limmerstraße</strong> in Linden, die in OpenStreetMap als Fußgängerbereich eingetragen ist, sind es
+37 %.</p>
+<figure class="karte"><img src="../img/stadt/hannover-limmerstrasse.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Limmerstraße (grün umrandet) mit den roten Verbotszonen; etwa 37 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Limmerstraße: 1 ha, davon 37 % Verbotszone. <a href="../#16/52.37267/9.70976">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="innenstadt">Innenstadt</h2>
+<p>Eine eigene Liste der Fußgängerzonen hat die Stadt nicht veröffentlicht. Ihre Verordnung über die
+Waffenverbotszonen zählt die Fußgängerzone zwischen Hauptbahnhof und Steintor auf:
+Ernst-August-Platz, Bahnhofstraße, Kröpcke, Georgstraße von der Ständehausstraße bis zum Steintor,
+Schillerstraße, Teile von Rathenaustraße, Großer Packhofstraße und Andreaestraße und die
+Niki-de-Saint-Phalle-Promenade
+(<a href="https://www.hannover.de/content/download/1018464/file/Verbotszonenverordnung-25-06-26.pdf">Verbotszonenverordnung</a>).
+Eine Karte der Stadt zum Radfahren in der City zeigt weitere Fußgängerzonen, etwa die Karmarschstraße
+nördlich der Osterstraße
+(<a href="https://www.hannover.de/content/download/550592/file/Faltblatt_City-Radring.pdf">Faltblatt City-Radring</a>),
+und auch die <strong>Lister Meile</strong> ist Fußgängerzone
+(<a href="https://www.hannover.de/content/download/507824/file/LHH_fahrradstr_Eden_web.pdf">Stadt Hannover</a>).
+Dort gilt zwischen 7 und 20 Uhr Konsumverbot; blau zeigt die Karte die Fußgängerbereiche, wie sie in
+OpenStreetMap eingetragen sind.</p>
+<p>Eine Sichtweite gibt es in der Fußgängerzone nicht, auch wenn eine Broschüre der Stadt es so
+darstellt: Verboten ist der Konsum in der Zone selbst, nicht daneben. Von Georgstraße, Bahnhofstraße,
+Kröpcke, Großer Packhofstraße und Karmarschstraße liegt kaum etwas in einer Sichtweiten-Zone
+(0 %), der Ernst-August-Platz vor dem Hauptbahnhof gar nichts
+(0 %). Von der Lister Meile sind es 27 %, vom Raschplatz
+50 %, vom Andreas-Hermes-Platz 91 %.</p>
+<figure class="karte"><img src="../img/stadt/hannover-fussgaengerzone.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Georgstraße und Bahnhofstraße (grün umrandet) mit den roten Verbotszonen; etwa 0 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Georgstraße und Bahnhofstraße: 4 ha, davon 0 % Verbotszone. <a href="../#16/52.37357/9.73796">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Auf ihren oberirdischen Hochbahnsteigen verbietet die Üstra seit Januar 2026, Tabak und Cannabis
+zu rauchen
+(<a href="https://www.hannover.de/Service/Presse-Medien/Hannover.de/Aktuelles/Service-2026/Alkohol-und-Rauchverbot-auf-Hannovers-Hoch%C2%ADbahn%C2%ADstei%C2%ADgen">Stadt Hannover</a>).</p>
+<h2 id="hochschulen-und-feste">Hochschulen und Feste</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte; in ihren Gebäuden verbietet das
+Nichtraucherschutzgesetz das Kiffen
+(<a href="https://www.ms.niedersachsen.de/download/219599/Niedersaechsisches_Nichtraucherschutz-_gesetz_Nds._NiRSG_.pdf">Niedersächsisches Nichtraucherschutzgesetz</a>).
+Das Gelände der <strong>Leibniz Universität</strong> am Welfenschloss liegt zu
+36 % in einer Zone, die <strong>Hochschule Hannover</strong> zu
+34 %.</p>
+<p>Beim Frühlingsfest 2024 haben die Veranstalter Cannabis auf dem ganzen Gelände per Hausrecht
+verboten, wegen der vielen Kinder
+(<a href="https://www.hogapage.de/nachrichten/wirtschaft/gastronomie/cannabis-und-volksfeste-die-lage-ist-unklar/">dpa bei Hogapage, April 2024</a>).
+Eine Regel des Landes für Volksfeste gibt es nicht.</p>
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>Ein Verstoß gegen § 5 Abs. 2 kostet in Niedersachsen 20 bis 500 Euro, in Gegenwart von
+Minderjährigen 20 bis 1.000 Euro
+(<a href="https://www.stk.niedersachsen.de/download/216928/028-Anlage_-_Bussgeldkatalog_Cannabis.pdf.pdf">Bußgeldkatalog Niedersachsen</a>);
+zuständig ist die Stadt, nicht die Region Hannover. Ein Modellprojekt für den Verkauf von Cannabis
+in Geschäften hat die zuständige Bundesanstalt 2025 abgelehnt
+(<a href="https://www.hannover.de/Service/Presse-Medien/Landeshauptstadt-Hannover/Meldungsarchiv-f%C3%BCr-das-Jahr-2025/Bundesbeh%C3%B6rde-lehnt-Cannabis-Modellprojekt-in-Hannover-ab">Stadt Hannover, 2025</a>).
+Eigene Verbotszonen für Cannabis hat Hannover nicht (Stand 27. November 2026).</p>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-hannover-kiffen">Wo darf man in Hannover kiffen?</h3>
+<p>Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht auf Spiel-
+und Bolzplätzen, nicht in Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht
+es verbietet. Eine weiße Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte
+kennt weder Hecken noch Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap
+fehlen.</p>
+<h3 id="darf-man-am-maschsee-kiffen">Darf man am Maschsee kiffen?</h3>
+<p>Wo am Ufer keine Sportanlage und kein Spielplatz in Sichtweite liegt, verbietet es § 5 KCanG nicht;
+die Zonen zeigt die Karte. In Gegenwart von Kindern und Jugendlichen gilt das Verbot überall, und das Maschseefest hat keine
+eigene Regel, die wir gefunden haben.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
+neu gerechnet; die Zahlen auf dieser Seite sind vom 27. November 2026. Die Karte ist eine
+Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
+auf der <a href="../about.html">Über-Seite</a>.</p>
+<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
+OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
 </body>
 </html>

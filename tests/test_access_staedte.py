@@ -40,20 +40,22 @@ def _zeile(uri: str, ip: str, ua: str = "Mozilla/5.0", status: int = 200) -> str
 
 def _tageszahlen(tmp_path: pathlib.Path) -> tuple[dict, pathlib.Path]:
     zeilen = [
-        _zeile("/stadt/bochum", "1.2.3.0"),
-        _zeile("/?interesse=bochum", "1.2.3.0"),
-        _zeile("/?interesse=bochum", "1.2.3.0"),  # dieselbe Adresse am selben Tag: eine Stimme
-        _zeile("/stadt/bochum", "5.6.7.0"),
-        _zeile("/?interesse=bochum", "5.6.7.0"),
+        _zeile("/stadt/gelsenkirchen", "1.2.3.0"),
+        _zeile("/?interesse=gelsenkirchen", "1.2.3.0"),
+        # dieselbe Adresse am selben Tag: eine Stimme
+        _zeile("/?interesse=gelsenkirchen", "1.2.3.0"),
+        _zeile("/stadt/gelsenkirchen", "5.6.7.0"),
+        _zeile("/?interesse=gelsenkirchen", "5.6.7.0"),
         _zeile("/stadt/berlin", "1.2.3.0"),
         _zeile("/stadt/berlin.html", "2.2.2.0"),
         _zeile("/stadt/", "1.2.3.0"),
         _zeile("/stadt/index.html", "9.9.9.0"),
         _zeile("/stadt/gibtsnicht", "1.2.3.0", status=404),
-        _zeile("/stadt/bochum", "8.8.8.0", ua="Googlebot/2.1"),
-        _zeile("/?interesse=Bochum%3Cx%3E", "1.2.3.0"),
+        _zeile("/stadt/gelsenkirchen", "8.8.8.0", ua="Googlebot/2.1"),
+        _zeile("/?interesse=Gelsenkirchen%3Cx%3E", "1.2.3.0"),
         _zeile("/?interesse=erfundener-name", "3.3.3.0"),  # kein Platzhalter abgerufen
-        _zeile("/?interesse=bochum", "4.4.4.0"),  # Stimme ohne Abruf von /stadt/bochum
+        # Stimme ohne Abruf von /stadt/gelsenkirchen
+        _zeile("/?interesse=gelsenkirchen", "4.4.4.0"),
         _zeile("/stadt/erfunden", "3.3.3.0", status=404),
         _zeile("/?interesse=erfunden", "3.3.3.0"),  # Platzhalter gibt es nicht (404)
     ]
@@ -71,8 +73,8 @@ def _tageszahlen(tmp_path: pathlib.Path) -> tuple[dict, pathlib.Path]:
 
 def test_aufrufe_und_stimmen_je_stadt(tmp_path: pathlib.Path) -> None:
     d, _ = _tageszahlen(tmp_path)
-    assert d["city_views"] == {"berlin": 2, "bochum": 2}
-    assert d["city_votes"] == {"bochum": 2}
+    assert d["city_views"] == {"berlin": 2, "gelsenkirchen": 2}
+    assert d["city_votes"] == {"gelsenkirchen": 2}
     assert d["city_index_views"] == 2
 
 
@@ -84,14 +86,14 @@ def test_statistikseite_trennt_platzhalter_von_seiten(tmp_path: pathlib.Path) ->
     spec.loader.exec_module(bs)
     html = bs.staedte_html(bs.staedte_summen(out))
     ohne, mit = html.split("<h3>Ohne eigene Seite")[1].split("<h3>Mit eigener Seite")
-    assert "bochum" in ohne and "berlin" not in ohne
-    assert "berlin" in mit and "bochum" not in mit
+    assert "gelsenkirchen" in ohne and "berlin" not in ohne
+    assert "berlin" in mit and "gelsenkirchen" not in mit
 
 
 def test_statistikseite_kennt_nur_staedte_aus_der_liste(tmp_path: pathlib.Path) -> None:
     tag = {
         "date": "2026-01-02",
-        "city_views": {"erfunden": 9, "bochum": 1},
+        "city_views": {"erfunden": 9, "gelsenkirchen": 1},
         "city_votes": {"erfunden": 9},
     }
     (tmp_path / "2026-01-02.json").write_text(json.dumps(tag))
@@ -101,4 +103,4 @@ def test_statistikseite_kennt_nur_staedte_aus_der_liste(tmp_path: pathlib.Path) 
     spec.loader.exec_module(bs)
     html = bs.staedte_html(bs.staedte_summen(tmp_path))
     assert "erfunden" not in html
-    assert "bochum" in html
+    assert "gelsenkirchen" in html

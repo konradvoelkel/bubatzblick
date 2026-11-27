@@ -1,0 +1,1891 @@
+{
+ "stadtflaeche_osm_km2": 325.96,
+ "wald": {
+  "flaeche_km2": 21.3,
+  "anteil_stadt": 0.0652,
+  "anteil_zone": 0.1619,
+  "anteil_zone_ohne_wald": 0.1372
+ },
+ "zonen_km2": 45.24,
+ "anteil": 0.13879,
+ "kategorien": {
+  "sports": {
+   "objekte": 1119,
+   "zonen_km2": 23.32
+  },
+  "playground": {
+   "objekte": 702,
+   "zonen_km2": 15.5
+  },
+  "school": {
+   "objekte": 198,
+   "zonen_km2": 10.8
+  },
+  "kindergarten": {
+   "objekte": 307,
+   "zonen_km2": 8.37
+  },
+  "youth": {
+   "objekte": 59,
+   "zonen_km2": 1.36
+  },
+  "childcare": {
+   "objekte": 12,
+   "zonen_km2": 0.18
+  }
+ },
+ "objekte_gesamt": 2397,
+ "merkmale": {
+  "see": [
+   {
+    "name": "Werdersee",
+    "osm": [
+     "r27523"
+    ],
+    "flaeche_ha": 55.4,
+    "zone_ha": 4.5,
+    "anteil_zone": 0.082,
+    "lat": 53.05662,
+    "lon": 8.83519,
+    "bbox": [
+     8.81146,
+     53.05051,
+     8.86233,
+     53.06274
+    ]
+   },
+   {
+    "name": "Sportparksee Grambke",
+    "osm": [
+     "w4817925"
+    ],
+    "flaeche_ha": 43.6,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.0544,
+    "lat": 53.14942,
+    "lon": 8.6931,
+    "bbox": [
+     8.68413,
+     53.14603,
+     8.70453,
+     53.15308
+    ]
+   },
+   {
+    "name": "Stadtwaldsee",
+    "osm": [
+     "w4271705"
+    ],
+    "flaeche_ha": 29.0,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.0558,
+    "lat": 53.1118,
+    "lon": 8.8289,
+    "bbox": [
+     8.82311,
+     53.10897,
+     8.83454,
+     53.11461
+    ]
+   },
+   {
+    "name": "Kuhgrabensee",
+    "osm": [
+     "r2065979"
+    ],
+    "flaeche_ha": 19.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.11767,
+    "lon": 8.84645,
+    "bbox": [
+     8.83832,
+     53.11627,
+     8.85269,
+     53.11907
+    ]
+   },
+   {
+    "name": "Mahndorfer See",
+    "osm": [
+     "r1099570"
+    ],
+    "flaeche_ha": 15.8,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0089,
+    "lat": 53.03022,
+    "lon": 8.94096,
+    "bbox": [
+     8.93605,
+     53.02848,
+     8.9465,
+     53.03181
+    ]
+   },
+   {
+    "name": "Dunger See",
+    "osm": [
+     "r2952"
+    ],
+    "flaeche_ha": 15.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.1581,
+    "lon": 8.67553,
+    "bbox": [
+     8.67105,
+     53.15596,
+     8.67975,
+     53.16029
+    ]
+   },
+   {
+    "name": "Kreuzdeichsee",
+    "osm": [
+     "r21953754"
+    ],
+    "flaeche_ha": 14.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.13061,
+    "lon": 8.87563,
+    "bbox": [
+     8.87269,
+     53.1283,
+     8.87996,
+     53.13294
+    ]
+   },
+   {
+    "name": "Waller Feldmarksee",
+    "osm": [
+     "w15400858"
+    ],
+    "flaeche_ha": 12.5,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.1021,
+    "lat": 53.12641,
+    "lon": 8.78823,
+    "bbox": [
+     8.78368,
+     53.12381,
+     8.79024,
+     53.12903
+    ]
+   },
+   {
+    "name": "Hemelinger See",
+    "osm": [
+     "w159898234"
+    ],
+    "flaeche_ha": 10.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.04225,
+    "lon": 8.87265,
+    "bbox": [
+     8.86996,
+     53.04023,
+     8.87534,
+     53.04429
+    ]
+   },
+   {
+    "name": "Grambker Feldmarksee",
+    "osm": [
+     "r4656023"
+    ],
+    "flaeche_ha": 9.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.1544,
+    "lon": 8.72816,
+    "bbox": [
+     8.72607,
+     53.15206,
+     8.73028,
+     53.15661
+    ]
+   },
+   {
+    "name": "Krimpelsee",
+    "osm": [
+     "r5341792"
+    ],
+    "flaeche_ha": 8.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0038,
+    "lat": 53.04422,
+    "lon": 8.83691,
+    "bbox": [
+     8.83405,
+     53.04187,
+     8.84203,
+     53.04655
+    ]
+   },
+   {
+    "name": "Nachtweidesee",
+    "osm": [
+     "r3256339"
+    ],
+    "flaeche_ha": 8.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.14872,
+    "lon": 8.72765,
+    "bbox": [
+     8.72405,
+     53.14642,
+     8.73081,
+     53.15112
+    ]
+   },
+   {
+    "name": "Neue Weser",
+    "osm": [
+     "r1847987"
+    ],
+    "flaeche_ha": 8.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.005,
+    "lat": 53.05585,
+    "lon": 8.85944,
+    "bbox": [
+     8.85693,
+     53.05394,
+     8.86724,
+     53.05775
+    ]
+   },
+   {
+    "name": "Achterdieksee",
+    "osm": [
+     "w22726689"
+    ],
+    "flaeche_ha": 7.6,
+    "zone_ha": 5.0,
+    "anteil_zone": 0.6578,
+    "lat": 53.08071,
+    "lon": 8.92064,
+    "bbox": [
+     8.91534,
+     53.07942,
+     8.92265,
+     53.08203
+    ]
+   },
+   {
+    "name": "Sodenmattsee",
+    "osm": [
+     "w4672619"
+    ],
+    "flaeche_ha": 7.2,
+    "zone_ha": 3.9,
+    "anteil_zone": 0.5472,
+    "lat": 53.04989,
+    "lon": 8.72491,
+    "bbox": [
+     8.72171,
+     53.04832,
+     8.72739,
+     53.05144
+    ]
+   },
+   {
+    "name": "Teiche der Großen Brake",
+    "osm": [
+     "r3896833"
+    ],
+    "flaeche_ha": 6.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.14218,
+    "lon": 8.63685,
+    "bbox": [
+     8.63533,
+     53.14016,
+     8.63989,
+     53.14418
+    ]
+   },
+   {
+    "name": "Bultensee",
+    "osm": [
+     "w22965145"
+    ],
+    "flaeche_ha": 5.4,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.2039,
+    "lat": 53.07369,
+    "lon": 8.96234,
+    "bbox": [
+     8.96003,
+     53.07224,
+     8.96396,
+     53.07521
+    ]
+   },
+   {
+    "name": "Weserportsee",
+    "osm": [
+     "w41533285"
+    ],
+    "flaeche_ha": 3.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.58076,
+    "lon": 8.56825,
+    "bbox": [
+     8.56722,
+     53.57896,
+     8.57016,
+     53.58259
+    ]
+   },
+   {
+    "name": "Baggersee Neustädter Hafen",
+    "osm": [
+     "r5972909"
+    ],
+    "flaeche_ha": 3.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.095,
+    "lon": 8.73366,
+    "bbox": [
+     8.73203,
+     53.09397,
+     8.73556,
+     53.09599
+    ]
+   },
+   {
+    "name": "Wischen Teich",
+    "osm": [
+     "w47149124"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.0158,
+    "lon": 8.90649,
+    "bbox": [
+     8.90495,
+     53.01418,
+     8.908,
+     53.01738
+    ]
+   },
+   {
+    "name": "Niederblocklander See",
+    "osm": [
+     "w15402588"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.15992,
+    "lon": 8.82562,
+    "bbox": [
+     8.82317,
+     53.15867,
+     8.82721,
+     53.16113
+    ]
+   },
+   {
+    "name": "Vahrer See",
+    "osm": [
+     "r3804074"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.8255,
+    "lat": 53.08139,
+    "lon": 8.89891,
+    "bbox": [
+     8.89464,
+     53.08051,
+     8.90283,
+     53.08227
+    ]
+   },
+   {
+    "name": "Wadeackersee",
+    "osm": [
+     "r3800"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.2362,
+    "lat": 53.0263,
+    "lon": 8.82754,
+    "bbox": [
+     8.82671,
+     53.02497,
+     8.8296,
+     53.02762
+    ]
+   },
+   {
+    "name": "Blockdieksee",
+    "osm": [
+     "r3257589"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.97,
+    "lat": 53.07839,
+    "lon": 8.92584,
+    "bbox": [
+     8.92205,
+     53.07782,
+     8.93414,
+     53.07896
+    ]
+   },
+   {
+    "name": "Burger See",
+    "osm": [
+     "r11088132",
+     "w11558428",
+     "w11559008"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.15327,
+    "lon": 8.70805,
+    "bbox": [
+     8.70619,
+     53.15125,
+     8.70999,
+     53.15516
+    ]
+   },
+   {
+    "name": "Osterholzer See",
+    "osm": [
+     "w23332643"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.05624,
+    "lon": 8.96653,
+    "bbox": [
+     8.964,
+     53.05505,
+     8.96883,
+     53.05744
+    ]
+   },
+   {
+    "name": "Panrepel See",
+    "osm": [
+     "w23332654"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.05102,
+    "lon": 8.96971,
+    "bbox": [
+     8.96738,
+     53.04973,
+     8.97184,
+     53.0522
+    ]
+   },
+   {
+    "name": "Baggersee Westfriedhof",
+    "osm": [
+     "w11560436"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.9,
+    "anteil_zone": 0.4496,
+    "lat": 53.16055,
+    "lon": 8.68624,
+    "bbox": [
+     8.68494,
+     53.15961,
+     8.68732,
+     53.16149
+    ]
+   },
+   {
+    "name": "Grambker See",
+    "osm": [
+     "w11851060"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.2074,
+    "lat": 53.14648,
+    "lon": 8.71392,
+    "bbox": [
+     8.71204,
+     53.14581,
+     8.71938,
+     53.14718
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r1364932",
+     "r1364935",
+     "r1364989",
+     "r1648989",
+     "r17907131",
+     "r3092087",
+     "r3092293",
+     "r3391431",
+     "r3810869",
+     "r3864123",
+     "r4134829",
+     "r4471356",
+     "r5418960",
+     "r5418961",
+     "w1270425699",
+     "w1270437519",
+     "w1270442369",
+     "w1270444311",
+     "w1270458279",
+     "w1270460163",
+     "w1270460164",
+     "w1305562216",
+     "w1305562217",
+     "w1358134269",
+     "w14132834",
+     "w14133763",
+     "w167188626",
+     "w185769065",
+     "w192009933",
+     "w193108617",
+     "w193108618",
+     "w193108619",
+     "w193108620",
+     "w193561935",
+     "w193561937",
+     "w193561940",
+     "w193561952",
+     "w198950485",
+     "w198950487",
+     "w199624368",
+     "w201702986",
+     "w209828485",
+     "w220024367",
+     "w230575686",
+     "w230597237",
+     "w230597260",
+     "w25312304",
+     "w25312328",
+     "w25312367",
+     "w25312369",
+     "w25915288",
+     "w27035438",
+     "w27044519",
+     "w27046798",
+     "w27046997",
+     "w27049041",
+     "w27374734",
+     "w27715891",
+     "w27716163",
+     "w287203365",
+     "w287203384",
+     "w287799627",
+     "w288128219",
+     "w288179184",
+     "w290774280",
+     "w290774296",
+     "w290774300",
+     "w290774305",
+     "w293374214",
+     "w295376168",
+     "w296947139",
+     "w301168619",
+     "w301168625",
+     "w317835491",
+     "w320593132",
+     "w332223821",
+     "w35575493",
+     "w36480259",
+     "w36480261",
+     "w397566349",
+     "w57869007",
+     "w95293782",
+     "w95389823"
+    ],
+    "flaeche_ha": 1117.0,
+    "zone_ha": 35.9,
+    "anteil_zone": 0.0321,
+    "lat": 53.11977,
+    "lon": 8.69718,
+    "bbox": [
+     8.4826,
+     53.01007,
+     8.98333,
+     53.22913
+    ]
+   },
+   {
+    "name": "Semkenfahrt",
+    "osm": [
+     "w287203276"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 2.7,
+    "anteil_zone": 1.0,
+    "lat": 53.12993,
+    "lon": 8.8314,
+    "bbox": [
+     8.81708,
+     53.11679,
+     8.84626,
+     53.14326
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Park Links der Weser",
+    "osm": [
+     "r5974353"
+    ],
+    "flaeche_ha": 223.0,
+    "zone_ha": 3.3,
+    "anteil_zone": 0.0149,
+    "lat": 53.05108,
+    "lon": 8.75231,
+    "bbox": [
+     8.74212,
+     53.03803,
+     8.76075,
+     53.06398
+    ]
+   },
+   {
+    "name": "Bürgerpark",
+    "osm": [
+     "w664446849"
+    ],
+    "flaeche_ha": 141.1,
+    "zone_ha": 31.9,
+    "anteil_zone": 0.2258,
+    "lat": 53.09341,
+    "lon": 8.82598,
+    "bbox": [
+     8.81389,
+     53.0846,
+     8.83824,
+     53.10272
+    ]
+   },
+   {
+    "name": "Stadtwald",
+    "osm": [
+     "w664446850"
+    ],
+    "flaeche_ha": 71.1,
+    "zone_ha": 4.5,
+    "anteil_zone": 0.064,
+    "lat": 53.10617,
+    "lon": 8.83232,
+    "bbox": [
+     8.82364,
+     53.10166,
+     8.84122,
+     53.11067
+    ]
+   },
+   {
+    "name": "Knoops Park",
+    "osm": [
+     "w161476151"
+    ],
+    "flaeche_ha": 49.6,
+    "zone_ha": 9.3,
+    "anteil_zone": 0.1879,
+    "lat": 53.16631,
+    "lon": 8.67044,
+    "bbox": [
+     8.66353,
+     53.16159,
+     8.67683,
+     53.17103
+    ]
+   },
+   {
+    "name": "Rhododendronpark",
+    "osm": [
+     "w210024831"
+    ],
+    "flaeche_ha": 45.3,
+    "zone_ha": 16.4,
+    "anteil_zone": 0.3625,
+    "lat": 53.093,
+    "lon": 8.88144,
+    "bbox": [
+     8.87067,
+     53.08922,
+     8.89572,
+     53.09689
+    ]
+   },
+   {
+    "name": "Wätjens Park",
+    "osm": [
+     "w27505633"
+    ],
+    "flaeche_ha": 29.9,
+    "zone_ha": 5.1,
+    "anteil_zone": 0.1705,
+    "lat": 53.17851,
+    "lon": 8.58909,
+    "bbox": [
+     8.58219,
+     53.17563,
+     8.59976,
+     53.18133
+    ]
+   },
+   {
+    "name": "Klinikpark Bremen Ost",
+    "osm": [
+     "r3132077"
+    ],
+    "flaeche_ha": 27.8,
+    "zone_ha": 11.3,
+    "anteil_zone": 0.4073,
+    "lat": 53.06402,
+    "lon": 8.93547,
+    "bbox": [
+     8.93186,
+     53.061,
+     8.94316,
+     53.06678
+    ]
+   },
+   {
+    "name": "Weseruferpark",
+    "osm": [
+     "w34869805"
+    ],
+    "flaeche_ha": 24.3,
+    "zone_ha": 4.6,
+    "anteil_zone": 0.1892,
+    "lat": 53.10205,
+    "lon": 8.74786,
+    "bbox": [
+     8.73822,
+     53.09513,
+     8.7552,
+     53.1092
+    ]
+   },
+   {
+    "name": "Pellens Park",
+    "osm": [
+     "w258150249"
+    ],
+    "flaeche_ha": 21.5,
+    "zone_ha": 16.6,
+    "anteil_zone": 0.7683,
+    "lat": 53.17487,
+    "lon": 8.72849,
+    "bbox": [
+     8.72286,
+     53.17216,
+     8.73331,
+     53.17726
+    ]
+   },
+   {
+    "name": "Wallanlagen",
+    "osm": [
+     "r1695565"
+    ],
+    "flaeche_ha": 19.3,
+    "zone_ha": 6.9,
+    "anteil_zone": 0.3595,
+    "lat": 53.08016,
+    "lon": 8.80646,
+    "bbox": [
+     8.80397,
+     53.07077,
+     8.8168,
+     53.08132
+    ]
+   },
+   {
+    "name": "Osterdeichwiesen",
+    "osm": [
+     "w219407001"
+    ],
+    "flaeche_ha": 10.7,
+    "zone_ha": 2.1,
+    "anteil_zone": 0.1983,
+    "lat": 53.06926,
+    "lon": 8.81892,
+    "bbox": [
+     8.81018,
+     53.06674,
+     8.83659,
+     53.07182
+    ]
+   },
+   {
+    "name": "Park Gut Hodenberg",
+    "osm": [
+     "w32118187"
+    ],
+    "flaeche_ha": 10.3,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.0554,
+    "lat": 53.09018,
+    "lon": 8.94241,
+    "bbox": [
+     8.93951,
+     53.08698,
+     8.94627,
+     53.0934
+    ]
+   },
+   {
+    "name": "Carl-Goerdeler-Park",
+    "osm": [
+     "r3314063"
+    ],
+    "flaeche_ha": 10.2,
+    "zone_ha": 10.0,
+    "anteil_zone": 0.9815,
+    "lat": 53.07652,
+    "lon": 8.89386,
+    "bbox": [
+     8.88747,
+     53.0738,
+     8.90181,
+     53.07923
+    ]
+   },
+   {
+    "name": "Vahrer See",
+    "osm": [
+     "w31551727"
+    ],
+    "flaeche_ha": 10.1,
+    "zone_ha": 7.3,
+    "anteil_zone": 0.7172,
+    "lat": 53.08058,
+    "lon": 8.90225,
+    "bbox": [
+     8.89461,
+     53.07887,
+     8.90654,
+     53.08234
+    ]
+   },
+   {
+    "name": "Friedehorstpark",
+    "osm": [
+     "w27174535"
+    ],
+    "flaeche_ha": 9.4,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.295,
+    "lat": 53.17722,
+    "lon": 8.67313,
+    "bbox": [
+     8.67068,
+     53.17564,
+     8.67547,
+     53.17897
+    ]
+   },
+   {
+    "name": "Oslebshauser Park",
+    "osm": [
+     "w23204273"
+    ],
+    "flaeche_ha": 9.1,
+    "zone_ha": 6.5,
+    "anteil_zone": 0.7138,
+    "lat": 53.13059,
+    "lon": 8.74099,
+    "bbox": [
+     8.73549,
+     53.12883,
+     8.74259,
+     53.13237
+    ]
+   },
+   {
+    "name": "Neustadtswallanlagen",
+    "osm": [
+     "r3523435"
+    ],
+    "flaeche_ha": 9.1,
+    "zone_ha": 8.0,
+    "anteil_zone": 0.8752,
+    "lat": 53.06864,
+    "lon": 8.7988,
+    "bbox": [
+     8.78894,
+     53.06799,
+     8.80121,
+     53.07385
+    ]
+   },
+   {
+    "name": "Park Höpkens Ruh",
+    "osm": [
+     "w167637880"
+    ],
+    "flaeche_ha": 8.6,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.1849,
+    "lat": 53.09687,
+    "lon": 8.9376,
+    "bbox": [
+     8.93212,
+     53.0933,
+     8.94304,
+     53.10041
+    ]
+   },
+   {
+    "name": "Grünzug West",
+    "osm": [
+     "w218757741"
+    ],
+    "flaeche_ha": 8.1,
+    "zone_ha": 6.7,
+    "anteil_zone": 0.8287,
+    "lat": 53.11174,
+    "lon": 8.77237,
+    "bbox": [
+     8.76328,
+     53.10682,
+     8.77843,
+     53.11663
+    ]
+   },
+   {
+    "name": "Achterdiekpark",
+    "osm": [
+     "w27316911"
+    ],
+    "flaeche_ha": 7.4,
+    "zone_ha": 2.9,
+    "anteil_zone": 0.3941,
+    "lat": 53.08854,
+    "lon": 8.91135,
+    "bbox": [
+     8.90715,
+     53.08728,
+     8.91425,
+     53.08995
+    ]
+   },
+   {
+    "name": "Bahrsplate",
+    "osm": [
+     "w27522414"
+    ],
+    "flaeche_ha": 7.4,
+    "zone_ha": 4.9,
+    "anteil_zone": 0.6578,
+    "lat": 53.18157,
+    "lon": 8.56495,
+    "bbox": [
+     8.56138,
+     53.17994,
+     8.56809,
+     53.18317
+    ]
+   },
+   {
+    "name": "Muhles Park",
+    "osm": [
+     "w167637877"
+    ],
+    "flaeche_ha": 7.1,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.2679,
+    "lat": 53.09554,
+    "lon": 8.93735,
+    "bbox": [
+     8.93303,
+     53.09269,
+     8.94196,
+     53.09854
+    ]
+   },
+   {
+    "name": "Waller Park",
+    "osm": [
+     "w23252057"
+    ],
+    "flaeche_ha": 6.9,
+    "zone_ha": 4.6,
+    "anteil_zone": 0.6674,
+    "lat": 53.10491,
+    "lon": 8.77464,
+    "bbox": [
+     8.77328,
+     53.10206,
+     8.77697,
+     53.10771
+    ]
+   },
+   {
+    "name": "Stadtgarten Vegesack",
+    "osm": [
+     "w23619670"
+    ],
+    "flaeche_ha": 5.9,
+    "zone_ha": 3.6,
+    "anteil_zone": 0.6082,
+    "lat": 53.17092,
+    "lon": 8.61685,
+    "bbox": [
+     8.60914,
+     53.16919,
+     8.621,
+     53.1726
+    ]
+   },
+   {
+    "name": "Hasses Park",
+    "osm": [
+     "w27438641"
+    ],
+    "flaeche_ha": 5.6,
+    "zone_ha": 4.8,
+    "anteil_zone": 0.8676,
+    "lat": 53.08408,
+    "lon": 8.92915,
+    "bbox": [
+     8.92775,
+     53.08265,
+     8.9342,
+     53.08549
+    ]
+   },
+   {
+    "name": "Schlosspark Sebaldsbrück",
+    "osm": [
+     "w19834255"
+    ],
+    "flaeche_ha": 5.3,
+    "zone_ha": 3.4,
+    "anteil_zone": 0.6406,
+    "lat": 53.06212,
+    "lon": 8.89747,
+    "bbox": [
+     8.89542,
+     53.0608,
+     8.89945,
+     53.06339
+    ]
+   },
+   {
+    "name": "Werdersee",
+    "osm": [
+     "w331743528"
+    ],
+    "flaeche_ha": 5.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.05271,
+    "lon": 8.85635,
+    "bbox": [
+     8.85173,
+     53.04976,
+     8.86295,
+     53.05552
+    ]
+   },
+   {
+    "name": "Spiel- und Wassergarten Pusdorf",
+    "osm": [
+     "w35311183"
+    ],
+    "flaeche_ha": 5.2,
+    "zone_ha": 5.0,
+    "anteil_zone": 0.9767,
+    "lat": 53.08955,
+    "lon": 8.76345,
+    "bbox": [
+     8.76089,
+     53.08663,
+     8.76639,
+     53.09239
+    ]
+   },
+   {
+    "name": "Menke Park",
+    "osm": [
+     "w28174475"
+    ],
+    "flaeche_ha": 5.1,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.0981,
+    "lat": 53.10031,
+    "lon": 8.89642,
+    "bbox": [
+     8.89293,
+     53.09844,
+     8.89789,
+     53.10194
+    ]
+   },
+   {
+    "name": "Tamra-Hemelingen-Park",
+    "osm": [
+     "w350195513"
+    ],
+    "flaeche_ha": 4.4,
+    "zone_ha": 3.1,
+    "anteil_zone": 0.7006,
+    "lat": 53.05829,
+    "lon": 8.89107,
+    "bbox": [
+     8.8894,
+     53.0568,
+     8.89383,
+     53.05985
+    ]
+   },
+   {
+    "name": "Wolfskuhlenpark",
+    "osm": [
+     "w35954648"
+    ],
+    "flaeche_ha": 4.0,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.5527,
+    "lat": 53.04064,
+    "lon": 8.81357,
+    "bbox": [
+     8.81109,
+     53.03871,
+     8.8148,
+     53.0424
+    ]
+   },
+   {
+    "name": "Heinekenspark",
+    "osm": [
+     "w27496687"
+    ],
+    "flaeche_ha": 3.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.1024,
+    "lon": 8.91608,
+    "bbox": [
+     8.91371,
+     53.1012,
+     8.91812,
+     53.10358
+    ]
+   },
+   {
+    "name": "Campus Park",
+    "osm": [
+     "w172614114"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0516,
+    "lat": 53.10655,
+    "lon": 8.85003,
+    "bbox": [
+     8.84813,
+     53.1053,
+     8.8521,
+     53.10802
+    ]
+   },
+   {
+    "name": "Utbremer Grün",
+    "osm": [
+     "w23191964",
+     "w35896191"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 3.6,
+    "anteil_zone": 0.9966,
+    "lat": 53.08918,
+    "lon": 8.78947,
+    "bbox": [
+     8.78757,
+     53.08494,
+     8.79462,
+     53.09027
+    ]
+   },
+   {
+    "name": "Flughafenpark",
+    "osm": [
+     "r3325674"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.05358,
+    "lon": 8.78714,
+    "bbox": [
+     8.78598,
+     53.05127,
+     8.78934,
+     53.05596
+    ]
+   },
+   {
+    "name": "Nelson-Mandela-Park",
+    "osm": [
+     "w369157724"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.5239,
+    "lat": 53.08505,
+    "lon": 8.81802,
+    "bbox": [
+     8.81671,
+     53.08364,
+     8.82026,
+     53.08644
+    ]
+   },
+   {
+    "name": "Diako Park",
+    "osm": [
+     "r3251765"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0049,
+    "lat": 53.1241,
+    "lon": 8.74432,
+    "bbox": [
+     8.74276,
+     53.12252,
+     8.74754,
+     53.12564
+    ]
+   },
+   {
+    "name": "Überseepark",
+    "osm": [
+     "r3612544"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.8438,
+    "lat": 53.09857,
+    "lon": 8.75934,
+    "bbox": [
+     8.75849,
+     53.09806,
+     8.76333,
+     53.10121
+    ]
+   },
+   {
+    "name": "Hohentorspark",
+    "osm": [
+     "w215378749"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.3244,
+    "lat": 53.07478,
+    "lon": 8.78812,
+    "bbox": [
+     8.78704,
+     53.07329,
+     8.79019,
+     53.07627
+    ]
+   },
+   {
+    "name": "Waller Grün",
+    "osm": [
+     "r6001324"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 2.3,
+    "anteil_zone": 0.9991,
+    "lat": 53.09635,
+    "lon": 8.78287,
+    "bbox": [
+     8.78253,
+     53.09037,
+     8.78857,
+     53.09656
+    ]
+   },
+   {
+    "name": "Smidts Park",
+    "osm": [
+     "r950175"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0095,
+    "lat": 53.15167,
+    "lon": 8.70629,
+    "bbox": [
+     8.70388,
+     53.15044,
+     8.7083,
+     53.1529
+    ]
+   },
+   {
+    "name": "Werderseeufer",
+    "osm": [
+     "w356856462"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0488,
+    "lat": 53.06157,
+    "lon": 8.81528,
+    "bbox": [
+     8.81131,
+     53.05934,
+     8.82081,
+     53.06382
+    ]
+   },
+   {
+    "name": "Naturerlebnisbereich Huchtinger Fleet Nord",
+    "osm": [
+     "w884298563"
+    ],
+    "flaeche_ha": 2.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.04239,
+    "lon": 8.74853,
+    "bbox": [
+     8.7469,
+     53.04136,
+     8.75044,
+     53.04357
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Universität Bremen",
+    "osm": [
+     "r2906997"
+    ],
+    "flaeche_ha": 72.8,
+    "zone_ha": 23.3,
+    "anteil_zone": 0.3202,
+    "lat": 53.10796,
+    "lon": 8.85566,
+    "bbox": [
+     8.84306,
+     53.10172,
+     8.86762,
+     53.11452
+    ]
+   },
+   {
+    "name": "Constructor University",
+    "osm": [
+     "w23232309"
+    ],
+    "flaeche_ha": 28.5,
+    "zone_ha": 7.2,
+    "anteil_zone": 0.2541,
+    "lat": 53.16753,
+    "lon": 8.65112,
+    "bbox": [
+     8.64716,
+     53.1643,
+     8.65654,
+     53.17118
+    ]
+   },
+   {
+    "name": "Lufthansa Flight Training",
+    "osm": [
+     "r3515122"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.05124,
+    "lon": 8.78776,
+    "bbox": [
+     8.78667,
+     53.05052,
+     8.79036,
+     53.05392
+    ]
+   },
+   {
+    "name": "Hochschule Bremen",
+    "osm": [
+     "r3465418"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.1611,
+    "lat": 53.07237,
+    "lon": 8.79306,
+    "bbox": [
+     8.79161,
+     53.07142,
+     8.79557,
+     53.07333
+    ]
+   },
+   {
+    "name": "Hochschule für Künste Bremen",
+    "osm": [
+     "r2409738"
+    ],
+    "flaeche_ha": 1.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.09797,
+    "lon": 8.76829,
+    "bbox": [
+     8.76592,
+     53.09728,
+     8.76963,
+     53.09916
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "Rablinghauser Strand",
+    "osm": [
+     "w197295349"
+    ],
+    "flaeche_ha": 0.9,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.3935,
+    "lat": 53.09741,
+    "lon": 8.75307,
+    "bbox": [
+     8.75202,
+     53.09669,
+     8.75453,
+     53.09814
+    ]
+   },
+   {
+    "name": "Weserstrand",
+    "osm": [
+     "w23904865"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.9896,
+    "lat": 53.06713,
+    "lon": 8.82364,
+    "bbox": [
+     8.82164,
+     53.06685,
+     8.82565,
+     53.0674
+    ]
+   },
+   {
+    "name": "Werderseestrand",
+    "osm": [
+     "w32304128"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.4,
+    "anteil_zone": 1.0,
+    "lat": 53.05948,
+    "lon": 8.82334,
+    "bbox": [
+     8.82206,
+     53.05927,
+     8.82468,
+     53.05962
+    ]
+   },
+   {
+    "name": "FKK-Strand",
+    "osm": [
+     "w44600191"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.11168,
+    "lon": 8.83457,
+    "bbox": [
+     8.83418,
+     53.11079,
+     8.8347,
+     53.1122
+    ]
+   },
+   {
+    "name": "Hundestrand",
+    "osm": [
+     "w44584837"
+    ],
+    "flaeche_ha": 0.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.11111,
+    "lon": 8.84052,
+    "bbox": [
+     8.84037,
+     53.11105,
+     8.8407,
+     53.11119
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w28057719"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.09256,
+    "lon": 8.88506,
+    "bbox": [
+     8.88231,
+     53.09206,
+     8.88759,
+     53.093
+    ]
+   },
+   {
+    "name": "NABU-Naturzentrum",
+    "osm": [
+     "w372286467"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.072,
+    "lat": 53.06916,
+    "lon": 8.89879,
+    "bbox": [
+     8.8972,
+     53.06838,
+     8.90036,
+     53.07007
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Neuer Markt",
+    "osm": [
+     "r3362338"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.03,
+    "lat": 53.07242,
+    "lon": 8.79874,
+    "bbox": [
+     8.79796,
+     53.07202,
+     8.7996,
+     53.0729
+    ]
+   },
+   {
+    "name": "Marktplatz Osterholz",
+    "osm": [
+     "w1249974725"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.1457,
+    "lat": 53.06459,
+    "lon": 8.9499,
+    "bbox": [
+     8.9494,
+     53.0643,
+     8.95042,
+     53.06498
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "WIFO Wald",
+    "osm": [
+     "r153077"
+    ],
+    "flaeche_ha": 253.2,
+    "zone_ha": 5.9,
+    "anteil_zone": 0.0233,
+    "lat": 53.20867,
+    "lon": 8.56473,
+    "bbox": [
+     8.52399,
+     53.20018,
+     8.58237,
+     53.21723
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 1716.0,
+   "zone_ha": 121.2,
+   "anteil_zone": 0.0706
+  },
+  {
+   "name": "Semkenfahrt",
+   "flaeche_ha": 75.2,
+   "zone_ha": 74.6,
+   "anteil_zone": 0.9926
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 37.4,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 53.12038,
+  "lon": 8.80685,
+  "bbox": [
+   8.47705,
+   53.01007,
+   8.99085,
+   53.59931
+  ]
+ },
+ "orte": [
+  {
+   "name": "Obernstraße und Sögestraße",
+   "osm": [
+    "w245340348",
+    "w249185806",
+    "w250182716",
+    "w250182717",
+    "w250252016",
+    "w316439535"
+   ],
+   "flaeche_ha": 0.91,
+   "bbox": [
+    8.80274,
+    53.07639,
+    8.80885,
+    53.0786
+   ],
+   "anteil_zone": 0.3521,
+   "art": "linie",
+   "lat": 53.07745,
+   "lon": 8.80475
+  },
+  {
+   "name": "Am Markt",
+   "osm": [
+    "r3316885",
+    "w111101454",
+    "w247310710",
+    "w250182690",
+    "w250182691",
+    "w250182708",
+    "w291827410"
+   ],
+   "flaeche_ha": 0.59,
+   "bbox": [
+    8.80639,
+    53.07488,
+    8.8078,
+    53.07631
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 53.07559,
+   "lon": 8.8072
+  },
+  {
+   "name": "Domshof",
+   "osm": [
+    "r2861156",
+    "w188806175",
+    "w188900435",
+    "w215506121",
+    "w215506122",
+    "w661620928"
+   ],
+   "flaeche_ha": 1.02,
+   "bbox": [
+    8.80824,
+    53.07567,
+    8.81065,
+    53.07705
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 53.07636,
+   "lon": 8.80934
+  },
+  {
+   "name": "Unser Lieben Frauen Kirchhof",
+   "osm": [
+    "r3355045",
+    "w249185801",
+    "w249477346",
+    "w250182707",
+    "w308471301",
+    "w374441686"
+   ],
+   "flaeche_ha": 0.72,
+   "bbox": [
+    8.80659,
+    53.07602,
+    8.8087,
+    53.07729
+   ],
+   "anteil_zone": 0.0213,
+   "art": "flaeche",
+   "lat": 53.07664,
+   "lon": 8.80706
+  },
+  {
+   "name": "Hanseatenhof",
+   "osm": [
+    "r3317047",
+    "w245340356",
+    "w753577009",
+    "w753577010"
+   ],
+   "flaeche_ha": 0.24,
+   "bbox": [
+    8.8036,
+    53.07824,
+    8.80473,
+    53.07897
+   ],
+   "anteil_zone": 0.8601,
+   "art": "flaeche",
+   "lat": 53.0786,
+   "lon": 8.80433
+  },
+  {
+   "name": "Schlachte",
+   "osm": [
+    "w1372445900",
+    "w219167634",
+    "w4020305"
+   ],
+   "flaeche_ha": 0.61,
+   "bbox": [
+    8.7996,
+    53.07519,
+    8.80362,
+    53.07806
+   ],
+   "anteil_zone": 0.0411,
+   "art": "linie",
+   "lat": 53.07664,
+   "lon": 8.80193
+  },
+  {
+   "name": "Bahnhofsplatz",
+   "osm": [
+    "w79630457"
+   ],
+   "flaeche_ha": 0.28,
+   "bbox": [
+    8.81211,
+    53.08216,
+    8.81342,
+    53.08281
+   ],
+   "anteil_zone": 0.9932,
+   "art": "flaeche",
+   "lat": 53.08248,
+   "lon": 8.81275
+  },
+  {
+   "name": "Werdersee (Wiese und Badestelle)",
+   "osm": [
+    "w331743528"
+   ],
+   "flaeche_ha": 5.29,
+   "bbox": [
+    8.85173,
+    53.04976,
+    8.86295,
+    53.05552
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 53.05271,
+   "lon": 8.85635
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "osm": "2026-11-25T21:22:46Z",
+  "tags_json": 6,
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Bremen (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  53.078,
+  8.807
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Bürgerpark",
+   "buergerpark"
+  ],
+  [
+   "park",
+   "Wallanlagen",
+   "wallanlagen"
+  ],
+  [
+   "ort",
+   "Werdersee (Wiese und Badestelle)",
+   "werdersee"
+  ],
+  [
+   "ort",
+   "Obernstraße und Sögestraße",
+   "fussgaengerzone"
+  ],
+  [
+   "park",
+   "Rhododendronpark",
+   "rhododendronpark"
+  ],
+  [
+   "hochschule",
+   "Universität Bremen",
+   "uni"
+  ]
+ ]
+}

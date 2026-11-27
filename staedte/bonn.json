@@ -1,0 +1,880 @@
+{
+ "stadtflaeche_osm_km2": 141.02,
+ "wald": {
+  "flaeche_km2": 43.8,
+  "anteil_stadt": 0.3109,
+  "anteil_zone": 0.0507,
+  "anteil_zone_ohne_wald": 0.2317
+ },
+ "zonen_km2": 24.74,
+ "anteil": 0.17541,
+ "kategorien": {
+  "sports": {
+   "objekte": 774,
+   "zonen_km2": 11.46
+  },
+  "playground": {
+   "objekte": 480,
+   "zonen_km2": 8.91
+  },
+  "school": {
+   "objekte": 153,
+   "zonen_km2": 6.48
+  },
+  "kindergarten": {
+   "objekte": 228,
+   "zonen_km2": 5.14
+  },
+  "youth": {
+   "objekte": 50,
+   "zonen_km2": 1.16
+  },
+  "childcare": {
+   "objekte": 14,
+   "zonen_km2": 0.23
+  }
+ },
+ "objekte_gesamt": 1699,
+ "merkmale": {
+  "park": [
+   {
+    "name": "Freizeitpark Rheinaue",
+    "osm": [
+     "w4818020"
+    ],
+    "flaeche_ha": 125.5,
+    "zone_ha": 33.8,
+    "anteil_zone": 0.2693,
+    "lat": 50.71048,
+    "lon": 7.14579,
+    "bbox": [
+     7.13226,
+     50.70233,
+     7.16305,
+     50.71873
+    ]
+   },
+   {
+    "name": "Derletal",
+    "osm": [
+     "w4953734"
+    ],
+    "flaeche_ha": 30.9,
+    "zone_ha": 11.8,
+    "anteil_zone": 0.3815,
+    "lat": 50.70582,
+    "lon": 7.0397,
+    "bbox": [
+     7.03313,
+     50.70058,
+     7.04458,
+     50.71114
+    ]
+   },
+   {
+    "name": "Freizeitpark Rheinaue (Beueler Seite)",
+    "osm": [
+     "w43384744"
+    ],
+    "flaeche_ha": 18.9,
+    "zone_ha": 10.8,
+    "anteil_zone": 0.571,
+    "lat": 50.72158,
+    "lon": 7.1409,
+    "bbox": [
+     7.1356,
+     50.71921,
+     7.14653,
+     50.72384
+    ]
+   },
+   {
+    "name": "Grünzug Bonn Nord/ Alfter",
+    "osm": [
+     "w4741169"
+    ],
+    "flaeche_ha": 8.9,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.0943,
+    "lat": 50.75634,
+    "lon": 7.04078,
+    "bbox": [
+     7.03672,
+     50.75184,
+     7.04359,
+     50.7589
+    ]
+   },
+   {
+    "name": "Stadtpark",
+    "osm": [
+     "r308308"
+    ],
+    "flaeche_ha": 8.2,
+    "zone_ha": 6.4,
+    "anteil_zone": 0.7814,
+    "lat": 50.68142,
+    "lon": 7.15581,
+    "bbox": [
+     7.15364,
+     50.67947,
+     7.15977,
+     50.6834
+    ]
+   },
+   {
+    "name": "Hofgarten",
+    "osm": [
+     "w102199952"
+    ],
+    "flaeche_ha": 7.1,
+    "zone_ha": 3.3,
+    "anteil_zone": 0.4713,
+    "lat": 50.73272,
+    "lon": 7.10433,
+    "bbox": [
+     7.1019,
+     50.73105,
+     7.10705,
+     50.73416
+    ]
+   },
+   {
+    "name": "Finkenhofpark",
+    "osm": [
+     "w4972074"
+    ],
+    "flaeche_ha": 6.5,
+    "zone_ha": 3.8,
+    "anteil_zone": 0.58,
+    "lat": 50.70565,
+    "lon": 7.0525,
+    "bbox": [
+     7.05033,
+     50.70427,
+     7.05764,
+     50.70704
+    ]
+   },
+   {
+    "name": "Redoutenpark",
+    "osm": [
+     "r1338929"
+    ],
+    "flaeche_ha": 6.5,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.4565,
+    "lat": 50.67995,
+    "lon": 7.15127,
+    "bbox": [
+     7.15038,
+     50.67793,
+     7.15406,
+     50.68197
+    ]
+   },
+   {
+    "name": "Arboretum-Park Härle",
+    "osm": [
+     "r17665814"
+    ],
+    "flaeche_ha": 4.0,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.1877,
+    "lat": 50.71608,
+    "lon": 7.17024,
+    "bbox": [
+     7.16774,
+     50.71426,
+     7.17168,
+     50.71718
+    ]
+   },
+   {
+    "name": "Panoramapark",
+    "osm": [
+     "w144947528"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.9576,
+    "lat": 50.68964,
+    "lon": 7.17044,
+    "bbox": [
+     7.1688,
+     50.68843,
+     7.17235,
+     50.69074
+    ]
+   },
+   {
+    "name": "Garten der Erinnerung",
+    "osm": [
+     "w74686608"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.5353,
+    "lat": 50.7496,
+    "lon": 7.0892,
+    "bbox": [
+     7.08724,
+     50.74895,
+     7.09128,
+     50.75039
+    ]
+   },
+   {
+    "name": "Park Carstanjen",
+    "osm": [
+     "w39321065"
+    ],
+    "flaeche_ha": 2.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0077,
+    "lat": 50.70323,
+    "lon": 7.16331,
+    "bbox": [
+     7.16164,
+     50.70218,
+     7.16497,
+     50.70428
+    ]
+   },
+   {
+    "name": "Leserpark",
+    "osm": [
+     "w143871897"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.9771,
+    "lat": 50.69183,
+    "lon": 7.17027,
+    "bbox": [
+     7.16777,
+     50.69068,
+     7.1712,
+     50.69284
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r1705916",
+     "r1705917",
+     "w122857776",
+     "w28663235",
+     "w402346576"
+    ],
+    "flaeche_ha": 500.6,
+    "zone_ha": 25.4,
+    "anteil_zone": 0.0507,
+    "lat": 50.71055,
+    "lon": 7.16016,
+    "bbox": [
+     7.06534,
+     50.64712,
+     7.21069,
+     50.77568
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Kaiserplatz",
+    "osm": [
+     "w1280342218"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 0.9,
+    "anteil_zone": 0.7724,
+    "lat": 50.73189,
+    "lon": 7.10093,
+    "bbox": [
+     7.09963,
+     50.73106,
+     7.10205,
+     50.73271
+    ]
+   },
+   {
+    "name": "Markt",
+    "osm": [
+     "r8080908"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.9999,
+    "lat": 50.73534,
+    "lon": 7.10222,
+    "bbox": [
+     7.10097,
+     50.73492,
+     7.10291,
+     50.73574
+    ]
+   },
+   {
+    "name": "Ria-Maternus-Platz",
+    "osm": [
+     "w1174622915"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.68358,
+    "lon": 7.15876,
+    "bbox": [
+     7.1583,
+     50.68305,
+     7.15958,
+     50.68412
+    ]
+   },
+   {
+    "name": "Beethovenplatz",
+    "osm": [
+     "w1223171522"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.7912,
+    "lat": 50.73103,
+    "lon": 7.09025,
+    "bbox": [
+     7.08958,
+     50.73058,
+     7.09097,
+     50.73147
+    ]
+   },
+   {
+    "name": "Friedensplatz",
+    "osm": [
+     "w144595005"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.6527,
+    "lat": 50.73622,
+    "lon": 7.09784,
+    "bbox": [
+     7.09753,
+     50.73573,
+     7.09823,
+     50.73668
+    ]
+   },
+   {
+    "name": "Moltkeplatz",
+    "osm": [
+     "w31466374"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.9985,
+    "lat": 50.68568,
+    "lon": 7.15551,
+    "bbox": [
+     7.15484,
+     50.68525,
+     7.15639,
+     50.6861
+    ]
+   },
+   {
+    "name": "Bottlerplatz",
+    "osm": [
+     "w146385316"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 1.0,
+    "lat": 50.73491,
+    "lon": 7.09801,
+    "bbox": [
+     7.09743,
+     50.73451,
+     7.09853,
+     50.73527
+    ]
+   },
+   {
+    "name": "Helmut-Schmidt-Platz",
+    "osm": [
+     "w566349092"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.71354,
+    "lon": 7.12433,
+    "bbox": [
+     7.12389,
+     50.71327,
+     7.12477,
+     50.71383
+    ]
+   },
+   {
+    "name": "Wilhelmsplatz",
+    "osm": [
+     "w1227383396"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0012,
+    "lat": 50.74022,
+    "lon": 7.09915,
+    "bbox": [
+     7.09861,
+     50.73992,
+     7.09965,
+     50.74049
+    ]
+   },
+   {
+    "name": "Clemens-August-Platz",
+    "osm": [
+     "w1279965893"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 1.0,
+    "lat": 50.71968,
+    "lon": 7.0869,
+    "bbox": [
+     7.08638,
+     50.71939,
+     7.08734,
+     50.72002
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w142937225"
+    ],
+    "flaeche_ha": 7.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.72457,
+    "lon": 7.09275,
+    "bbox": [
+     7.0902,
+     50.72309,
+     7.09542,
+     50.72604
+    ]
+   },
+   {
+    "name": "Montag Stiftungen",
+    "osm": [
+     "w39948230"
+    ],
+    "flaeche_ha": 1.6,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.1735,
+    "lat": 50.72407,
+    "lon": 7.11575,
+    "bbox": [
+     7.11424,
+     50.72323,
+     7.11685,
+     50.72482
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Universität Bonn – Campus Poppelsdorf",
+    "osm": [
+     "w142937229"
+    ],
+    "flaeche_ha": 37.9,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.0469,
+    "lat": 50.72631,
+    "lon": 7.08811,
+    "bbox": [
+     7.08239,
+     50.72296,
+     7.09542,
+     50.72974
+    ]
+   },
+   {
+    "name": "GIZ Akademie",
+    "osm": [
+     "w577603472"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.1722,
+    "lat": 50.67683,
+    "lon": 7.07293,
+    "bbox": [
+     7.07162,
+     50.67592,
+     7.07412,
+     50.67791
+    ]
+   },
+   {
+    "name": "Weiterbildungskolleg Bonn",
+    "osm": [
+     "w128636496"
+    ],
+    "flaeche_ha": 1.6,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.3106,
+    "lat": 50.70836,
+    "lon": 7.11498,
+    "bbox": [
+     7.11362,
+     50.70758,
+     7.11617,
+     50.70916
+    ]
+   },
+   {
+    "name": "Landesfinanzschule NRW",
+    "osm": [
+     "w236862433"
+    ],
+    "flaeche_ha": 1.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0217,
+    "lat": 50.68356,
+    "lon": 7.14275,
+    "bbox": [
+     7.14137,
+     50.68278,
+     7.1442,
+     50.68428
+    ]
+   },
+   {
+    "name": "Rechts- und Staatswissenschaftliche Fakultät",
+    "osm": [
+     "w636945417"
+    ],
+    "flaeche_ha": 1.6,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.4034,
+    "lat": 50.72954,
+    "lon": 7.10769,
+    "bbox": [
+     7.10628,
+     50.72874,
+     7.10891,
+     50.73045
+    ]
+   }
+  ],
+  "see": [
+   {
+    "name": "Auensee",
+    "osm": [
+     "r32790"
+    ],
+    "flaeche_ha": 11.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.71387,
+    "lon": 7.14379,
+    "bbox": [
+     7.13412,
+     50.71061,
+     7.15238,
+     50.7171
+    ]
+   },
+   {
+    "name": "Dornheckensee",
+    "osm": [
+     "w135303182"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.72513,
+    "lon": 7.16722,
+    "bbox": [
+     7.16621,
+     50.72406,
+     7.16884,
+     50.72621
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Kottenforst",
+    "osm": [
+     "r3613"
+    ],
+    "flaeche_ha": 2302.7,
+    "zone_ha": 11.9,
+    "anteil_zone": 0.0052,
+    "lat": 50.65808,
+    "lon": 7.08133,
+    "bbox": [
+     7.02197,
+     50.63221,
+     7.13645,
+     50.69885
+    ]
+   },
+   {
+    "name": "Stadtwald",
+    "osm": [
+     "r1602722"
+    ],
+    "flaeche_ha": 680.3,
+    "zone_ha": 54.6,
+    "anteil_zone": 0.0802,
+    "lat": 50.69714,
+    "lon": 7.09641,
+    "bbox": [
+     7.08276,
+     50.67454,
+     7.15281,
+     50.72027
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 316.1,
+   "zone_ha": 60.1,
+   "anteil_zone": 0.19
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 10.3,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 50.70365,
+  "lon": 7.10004,
+  "bbox": [
+   7.01878,
+   50.63211,
+   7.21296,
+   50.7757
+  ]
+ },
+ "orte": [
+  {
+   "name": "Innenstadt",
+   "osm": [
+    "r6625631",
+    "r8080908",
+    "w1000315921",
+    "w1229698170",
+    "w1229698171",
+    "w1280195306",
+    "w1362618993",
+    "w1362827877",
+    "w1369613627",
+    "w144595005",
+    "w146385319",
+    "w146385320",
+    "w146385321",
+    "w146385322",
+    "w146385323",
+    "w146385324",
+    "w146385325",
+    "w1546491230",
+    "w23373968",
+    "w23438506",
+    "w240248193",
+    "w30553899",
+    "w30987609",
+    "w33179775",
+    "w403595461",
+    "w40514299",
+    "w464666140",
+    "w469059977",
+    "w4801267",
+    "w4801378",
+    "w4801479",
+    "w48215926",
+    "w4886464",
+    "w4886797",
+    "w4886839",
+    "w4887073",
+    "w569321362",
+    "w680952425",
+    "w680952426",
+    "w813119748",
+    "w813119749",
+    "w813119750",
+    "w813172995",
+    "w813172996",
+    "w813706868",
+    "w813706870",
+    "w813706873",
+    "w813840493",
+    "w894014061",
+    "w894016063",
+    "w894078291",
+    "w894078298",
+    "w894078300",
+    "w927753205",
+    "w927753208",
+    "w93267264",
+    "w93267265",
+    "w968252203",
+    "w968252204",
+    "w968252205",
+    "w968252206"
+   ],
+   "flaeche_ha": 3.58,
+   "bbox": [
+    7.09681,
+    50.73248,
+    7.10301,
+    50.73739
+   ],
+   "anteil_zone": 0.4025,
+   "art": "flaeche",
+   "lat": 50.73466,
+   "lon": 7.09927
+  },
+  {
+   "name": "Markt",
+   "osm": [
+    "r8080908"
+   ],
+   "flaeche_ha": 0.56,
+   "bbox": [
+    7.10097,
+    50.73492,
+    7.10291,
+    50.73574
+   ],
+   "anteil_zone": 0.9999,
+   "art": "flaeche",
+   "lat": 50.73534,
+   "lon": 7.10222
+  },
+  {
+   "name": "Münsterplatz",
+   "osm": [
+    "r6625631",
+    "w1000315921",
+    "w1229698170",
+    "w1229698171",
+    "w1546491230",
+    "w813172995",
+    "w813172996",
+    "w813840493",
+    "w894078291",
+    "w894078300",
+    "w927753208",
+    "w968252203",
+    "w968252204",
+    "w968252205"
+   ],
+   "flaeche_ha": 1.0,
+   "bbox": [
+    7.09836,
+    50.73348,
+    7.10032,
+    50.73511
+   ],
+   "anteil_zone": 0.0184,
+   "art": "flaeche",
+   "lat": 50.73428,
+   "lon": 7.09914
+  },
+  {
+   "name": "Kaiserplatz",
+   "osm": [
+    "w1280342218"
+   ],
+   "flaeche_ha": 1.13,
+   "bbox": [
+    7.09963,
+    50.73106,
+    7.10205,
+    50.73271
+   ],
+   "anteil_zone": 0.7724,
+   "art": "flaeche",
+   "lat": 50.73189,
+   "lon": 7.10093
+  },
+  {
+   "name": "Universität Bonn (Hauptgebäude)",
+   "osm": [
+    "w26626851"
+   ],
+   "flaeche_ha": 0.35,
+   "bbox": [
+    7.12837,
+    50.70505,
+    7.13021,
+    50.70595
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 50.7055,
+   "lon": 7.12986
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-25T21:22:46Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Regierungsbezirks Köln (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  50.735,
+  7.1
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Hofgarten",
+   "hofgarten"
+  ],
+  [
+   "park",
+   "Freizeitpark Rheinaue",
+   "rheinaue"
+  ],
+  [
+   "ort",
+   "Innenstadt",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "Kaiserplatz",
+   "kaiserplatz"
+  ],
+  [
+   "ort",
+   "Münsterplatz",
+   "muensterplatz"
+  ],
+  [
+   "hochschule",
+   "Universität Bonn – Campus Poppelsdorf",
+   "poppelsdorf"
+  ]
+ ]
+}

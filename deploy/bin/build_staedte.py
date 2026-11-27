@@ -72,8 +72,9 @@ STADT_STYLE = (
   ul.grau a { color: var(--text-schwach); text-decoration: none;
               border-bottom: 1px dotted currentColor; }
   ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
-  @media (max-width: 480px) { svg.deutschland text { font-size: 28px; }
-                              svg.deutschland circle { r: 10; } }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1.2; }
+  @media (max-width: 480px) { svg.deutschland a:not(.eng) text { font-size: 28px; }
+                              svg.deutschland a:not(.eng) circle { r: 10; } }
 """
 )
 
@@ -364,16 +365,27 @@ def svg_karte(eintraege: list[tuple[dict, dict]]) -> str:
         a = d["ansicht_stadt"]
         x, y = xy(a["lon"], a["lat"])
         lage = stadt.get("beschriftung", "rechts")
-        tx, ty, anker = {
-            "rechts": (x + 14, y + 6, "start"),
-            "links": (x - 14, y + 6, "end"),
-            "oben": (x, y - 14, "middle"),
-            "unten": (x, y + 28, "middle"),
-        }[lage]
+        strich, klasse = "", ""
+        if isinstance(lage, dict):
+            # Freie Lage fuer dichte Gegenden (Ruhrgebiet): Textanfang relativ zum Punkt, auf Wunsch
+            # mit Strich zum Punkt. Solche Beschriftungen wachsen auf dem Handy nicht mit ("eng"),
+            # sonst stiessen sie dort wieder aneinander.
+            tx, ty = round(x + lage["dx"], 1), round(y + lage["dy"], 1)
+            anker = lage.get("anker", "start")
+            klasse = ' class="eng"'
+            if lage.get("strich"):
+                strich = f'<line x1="{x:g}" y1="{y:g}" x2="{tx - 3:g}" y2="{ty - 5:g}"/>'
+        else:
+            tx, ty, anker = {
+                "rechts": (x + 14, y + 6, "start"),
+                "links": (x - 14, y + 6, "end"),
+                "oben": (x, y - 14, "middle"),
+                "unten": (x, y + 28, "middle"),
+            }[lage]
         orte.append(
-            f'<a href="{stadt["slug"]}"><title>{html.escape(stadt["name"])}: '
+            f'<a href="{stadt["slug"]}"{klasse}><title>{html.escape(stadt["name"])}: '
             f"{prozent(d['anteil'], 1)} der Stadtfläche</title>"
-            f'<circle cx="{x:g}" cy="{y:g}" r="7"/>'
+            f'{strich}<circle cx="{x:g}" cy="{y:g}" r="7"/>'
             f'<text x="{tx:g}" y="{ty:g}" text-anchor="{anker}">{html.escape(stadt["name"])} '
             f'<tspan class="anteil">{prozent(d["anteil"])}</tspan></text></a>'
         )

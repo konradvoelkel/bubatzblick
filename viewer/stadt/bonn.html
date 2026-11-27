@@ -1,14 +1,265 @@
 <!doctype html>
-<!-- Platzhalter, erzeugt durch deploy/bin/build_staedte.py aus staedte/grossstaedte.json. -->
+<!-- Erzeugt aus staedte/bonn.md und staedte/bonn.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>Kiffen in Bonn | BubatzBlick</title>
+<title>Kiffen in Bonn: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=../?interesse=bonn#12/50.734/7.0998">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Bonn liegen 25 km², 17,5 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<link rel="canonical" href="__SITE_URL__/stadt/bonn">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/bonn">
+<meta property="og:title" content="Kiffen in Bonn: wo es verboten ist">
+<meta property="og:description" content="In Bonn liegen 25 km², 17,5 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/bonn.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Bonn mit den roten Verbotszonen, daneben: Kiffen in Bonn, 17,5 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/bonn",
+   "url": "__SITE_URL__/stadt/bonn",
+   "name": "Kiffen in Bonn: wo es verboten ist",
+   "description": "In Bonn liegen 25 km², 17,5 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-27",
+   "about": {
+    "@type": "City",
+    "name": "Bonn",
+    "sameAs": "https://www.wikidata.org/wiki/Q586",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Nordrhein-Westfalen"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/bonn.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Bonn",
+     "item": "__SITE_URL__/stadt/bonn"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { fill: #c0392b; stroke: #fff; stroke-width: 2; }
+  svg.deutschland text { font-size: 19px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 9; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1.2; }
+  @media (max-width: 480px) { svg.deutschland a:not(.eng) text { font-size: 28px; }
+                              svg.deutschland a:not(.eng) circle { r: 10; } }
+</style>
 </head>
 <body>
-<p>Weiter zur <a href="../?interesse=bonn#12/50.734/7.0998">Karte von Bonn</a>.</p>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Bonn</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <nav><a href="../#13/50.70365/7.10004" class="knopf">Bonn auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Bonn ist öffentliches Kiffen auf 25 km² verboten, das sind
+<strong>17,5 % der Stadtfläche</strong> von 141 km². Grund sind 1 699
+Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
+Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
+nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
+7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
+Jugendlichen.</p>
+
+<p>Fast ein Drittel der Stadt ist Wald, vor allem der Kottenforst (31 % der Stadtfläche),
+und dort liegt kaum eine Zone (5,1 %). Ohne den Wald gerechnet liegen 23,2 %
+der Stadt in einer Zone. Außerdem verbietet die Stadt das Kiffen auf ihren Weihnachtsmärkten und
+auf Pützchens Markt (siehe unten).</p>
+<figure class="karte"><img src="../img/stadt/bonn-stadt.webp" width="960" height="600" alt="Karte von Bonn mit Stadtgrenze und den roten Verbotszonen"><figcaption>Bonn: 25 km² Verbotszone auf 141 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">153</td><td class="zahl">6,5 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">228</td><td class="zahl">5,1 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">14</td><td class="zahl">0,2 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">480</td><td class="zahl">8,9 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">50</td><td class="zahl">1,2 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">774</td><td class="zahl">11,5 km²</td></tr></tbody></table>
+
+<p>Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
+überlappen, ist ihre Summe größer als die 25 km² oben. Den größten Teil machen die
+774 Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
+gefolgt von 480 Spielplätzen.</p>
+<p>Auf Spielplätzen verbietet die Straßenordnung der Stadt außerdem, Tabak „oder andere Produkte“ zu
+rauchen und Alkohol zu trinken
+(<a href="https://www.bonn.de/service-bieten/stadtpolitik-ortsrecht/ortsrecht/recht-sicherheit/strassenordnung.php">Straßenordnung</a>),
+und auf dem ganzen Gelände der städtischen Sportstätten ist Rauchen verboten
+(<a href="https://www.bonn.de/service-bieten/stadtpolitik-ortsrecht/ortsrecht/soziales-gesundheit-sport/haus-und-nutzungsordnung-sportstaetten.php">Haus- und Nutzungsordnung</a>).
+Anbauvereinigungen fehlen in der Tabelle: Wo sie anbauen, ist nicht veröffentlicht.</p>
+<h2 id="hofgarten-rheinaue-und-rhein">Hofgarten, Rheinaue und Rhein</h2>
+<p>Im <strong>Hofgarten</strong> vor dem Hauptgebäude der Universität liegen 47 % der Fläche in einer
+Zone, vor allem um den Spielplatz an der Stockenstraße; eine eigene Regel zu Cannabis haben wir für
+den Hofgarten nicht gefunden.</p>
+<figure class="karte"><img src="../img/stadt/bonn-hofgarten.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Hofgarten (grün umrandet) mit den roten Verbotszonen; etwa 47 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Hofgarten: 7 ha, davon 47 % Verbotszone. <a href="../#16/50.73272/7.10433">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Im <strong>Freizeitpark Rheinaue</strong> sind es 27 %, um acht Sportanlagen, darunter das
+Baseballstadion, und fünf Spielplätze; auf der Beueler Seite der Rheinaue
+57 %. Auf einem 100 Meter breiten Streifen Land entlang des
+Rheins liegen 19 % in einer Zone.</p>
+<figure class="karte"><img src="../img/stadt/bonn-rheinaue.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Freizeitpark Rheinaue (grün umrandet) mit den roten Verbotszonen; etwa 27 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Freizeitpark Rheinaue: 126 ha, davon 27 % Verbotszone. <a href="../#16/50.71048/7.14579">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="innenstadt-und-weihnachtsmarkt">Innenstadt und Weihnachtsmarkt</h2>
+<p>Eine amtliche Liste der Bonner Fußgängerzonen haben wir nicht gefunden. Am nächsten kommt ihr das
+Straßenverzeichnis der Straßenreinigung, das die Fußgängerstraßen der Innenstadt in eigenen Klassen
+führt, darunter Markt, Sternstraße, Remigiusstraße, Poststraße und Münsterplatz
+(<a href="https://www.bonnorange.de/fileadmin/user_upload/downloads/bonnorange_Stra%C3%9Fenverzeichnis_20241202.pdf">Straßenverzeichnis bonnorange</a>);
+eine Fußgängerzone in Bad Godesberg nennt der Gebührentarif zur Sondernutzungssatzung
+(<a href="https://www.bonn.de/medien-global/amt-30/ortsrecht/bauen/60-6-Gebuehrentarif-zur-Sondernutzungssatzung-ab-28-03-2024.pdf">Gebührentarif</a>).
+Dort gilt zwischen
+7 und 20 Uhr Konsumverbot; blau zeigt die Karte die Fußgängerbereiche, wie sie in OpenStreetMap
+eingetragen sind.</p>
+<p>Von den Fußgängerstraßen der Innenstadt liegen außerdem 40 % in einer
+Sichtweiten-Zone, der <strong>Markt</strong> ganz (100 %), der Münsterplatz kaum (2 %).
+Der Kaiserplatz liegt zu 77 % in einer Zone, wegen des Spielplatzes darauf.</p>
+<figure class="karte"><img src="../img/stadt/bonn-fussgaengerzone.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Innenstadt (grün umrandet) mit den roten Verbotszonen; etwa 40 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Innenstadt: 4 ha, davon 40 % Verbotszone. <a href="../#16/50.73466/7.09927">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/bonn-kaiserplatz.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Kaiserplatz (grün umrandet) mit den roten Verbotszonen; etwa 77 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Kaiserplatz: 1 ha, davon 77 % Verbotszone. <a href="../#16/50.73189/7.10093">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/bonn-muensterplatz.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Münsterplatz (grün umrandet) mit den roten Verbotszonen; etwa 2 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Münsterplatz: 1 ha, davon 2 % Verbotszone. <a href="../#16/50.73428/7.09914">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Während des <strong>Weihnachtsmarkts</strong> 2026 ist Kiffen in der Innenstadt bis in den Abend verboten, vom
+18. November bis 23. Dezember von 12 bis 22.30 Uhr, freitags und samstags bis 23.30 Uhr: auf
+Münsterplatz, Remigiusplatz und Remigiusstraße, Friedensplatz, Vivatsgasse, Bottlerplatz und
+Teilen von Post- und Sternstraße. Auf dem Nikolausmarkt in Bad Godesberg am Theaterplatz gilt es
+bis Mitternacht
+(<a href="https://www.bonn.de/medien-global/amt-13/amtsblatt/49_2026_Amtsblatt_geschwaerzt.pdf">Allgemeinverfügungen, Amtsblatt 49/2026</a>).
+Auf <strong>Pützchens Markt</strong> in Beuel war es im September 2026 bis drei Uhr nachts verboten
+(<a href="https://www.bonn.de/medien-global/amt-13/amtsblatt/39_2026_Amtsblatt_geschwaerzt.pdf">Amtsblatt 39/2026</a>);
+2025 zählte der Ordnungsdienst dort zwölf Verstöße
+(<a href="https://www.bonn.de/pressemitteilungen/september/erfolgreicher-puetzchens-markt-2025.php">Stadt Bonn, 2025</a>).</p>
+<h2 id="universitat">Universität</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte. Der <strong>Campus Poppelsdorf</strong> der Universität liegt
+zu 5 % in einer Zone. Eine Hausordnung mit einer Regel
+zu Cannabis haben wir für die Universität nicht gefunden.</p>
+<figure class="karte"><img src="../img/stadt/bonn-poppelsdorf.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Universität Bonn – Campus Poppelsdorf (grün umrandet) mit den roten Verbotszonen; etwa 5 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Universität Bonn – Campus Poppelsdorf: 38 ha, davon 5 % Verbotszone. <a href="../#16/50.72631/7.08811">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>Ein Verstoß gegen § 5 Abs. 2 kostet in Nordrhein-Westfalen 50 bis 500 Euro, in Gegenwart von
+Minderjährigen 300 bis 1.000 Euro
+(<a href="https://www.mags.nrw/regeln-und-bussgelder-zur-cannabiskontrolle">Land NRW</a>); zuständig ist die
+Stadt. Für Volksfeste und ähnliche Großveranstaltungen sind die Veranstalter nach einem Erlass des
+Landes verpflichtet, Verstöße zu verhindern, notfalls mit einem generellen Konsumverbot
+(<a href="https://www.mags.nrw/system/files/media/document/file/erlass_konsumverbot_auf_volksfesten_presse.pdf">Erlass des Gesundheitsministeriums, Mai 2024</a>).
+Dauerhafte eigene Verbotszonen für Cannabis hat Bonn nicht, nur die zeitlich begrenzten auf Märkten
+(Stand 27. November 2026).</p>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-bonn-kiffen">Wo darf man in Bonn kiffen?</h3>
+<p>Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht auf den
+Märkten, für die die Stadt es verboten hat, nicht in Gegenwart von Kindern und Jugendlichen und nicht
+dort, wo ein Hausrecht es verbietet. Eine weiße Fläche auf der Karte heißt nicht, dass Konsum dort
+erlaubt ist: Die Karte kennt weder Hecken noch Bäume, die die Sicht nehmen, noch Einrichtungen, die
+in OpenStreetMap fehlen.</p>
+<h3 id="darf-man-auf-dem-weihnachtsmarkt-kiffen">Darf man auf dem Weihnachtsmarkt kiffen?</h3>
+<p>Nein. Tagsüber liegt er in der Fußgängerzone, und die Stadt hat das Kiffen dort während der
+Öffnungszeiten bis in den späten Abend verboten.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
+neu gerechnet; die Zahlen auf dieser Seite sind vom 27. November 2026. Die Karte ist eine
+Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
+auf der <a href="../about.html">Über-Seite</a>.</p>
+<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
+OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
 </body>
 </html>

@@ -1,0 +1,1070 @@
+{
+ "stadtflaeche_osm_km2": 145.6,
+ "wald": {
+  "flaeche_km2": 22.3,
+  "anteil_stadt": 0.1535,
+  "anteil_zone": 0.1919,
+  "anteil_zone_ohne_wald": 0.2146
+ },
+ "zonen_km2": 30.74,
+ "anteil": 0.21114,
+ "kategorien": {
+  "sports": {
+   "objekte": 756,
+   "zonen_km2": 16.98
+  },
+  "playground": {
+   "objekte": 535,
+   "zonen_km2": 10.98
+  },
+  "school": {
+   "objekte": 122,
+   "zonen_km2": 5.76
+  },
+  "kindergarten": {
+   "objekte": 176,
+   "zonen_km2": 4.15
+  },
+  "youth": {
+   "objekte": 52,
+   "zonen_km2": 1.03
+  },
+  "childcare": {
+   "objekte": 25,
+   "zonen_km2": 0.51
+  },
+  "cannabis_club": {
+   "objekte": 1,
+   "zonen_km2": 0.02
+  }
+ },
+ "objekte_gesamt": 1667,
+ "merkmale": {
+  "wald": [
+   {
+    "name": "Weitmarer Holz",
+    "osm": [
+     "w24952299"
+    ],
+    "flaeche_ha": 91.2,
+    "zone_ha": 10.3,
+    "anteil_zone": 0.113,
+    "lat": 51.43453,
+    "lon": 7.19653,
+    "bbox": [
+     7.18708,
+     51.42879,
+     7.20756,
+     51.4408
+    ]
+   },
+   {
+    "name": "Rauendahler Wald",
+    "osm": [
+     "r2339619"
+    ],
+    "flaeche_ha": 61.7,
+    "zone_ha": 1.2,
+    "anteil_zone": 0.0187,
+    "lat": 51.42355,
+    "lon": 7.19243,
+    "bbox": [
+     7.18446,
+     51.41913,
+     7.21303,
+     51.42818
+    ]
+   },
+   {
+    "name": "Oveneys Busch",
+    "osm": [
+     "w30133173"
+    ],
+    "flaeche_ha": 47.1,
+    "zone_ha": 32.7,
+    "anteil_zone": 0.6943,
+    "lat": 51.42983,
+    "lon": 7.26576,
+    "bbox": [
+     7.2547,
+     51.42134,
+     7.27986,
+     51.43849
+    ]
+   },
+   {
+    "name": "Hörsterholz",
+    "osm": [
+     "r10592099"
+    ],
+    "flaeche_ha": 46.2,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.0307,
+    "lat": 51.43608,
+    "lon": 7.14109,
+    "bbox": [
+     7.13776,
+     51.42944,
+     7.15845,
+     51.44294
+    ]
+   },
+   {
+    "name": "Kalwes",
+    "osm": [
+     "r12917184"
+    ],
+    "flaeche_ha": 45.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0006,
+    "lat": 51.44249,
+    "lon": 7.27381,
+    "bbox": [
+     7.26541,
+     51.43746,
+     7.28087,
+     51.44748
+    ]
+   },
+   {
+    "name": "Laerholz",
+    "osm": [
+     "w4812944"
+    ],
+    "flaeche_ha": 32.6,
+    "zone_ha": 11.0,
+    "anteil_zone": 0.3386,
+    "lat": 51.45525,
+    "lon": 7.26338,
+    "bbox": [
+     7.25277,
+     51.44884,
+     7.27371,
+     51.46149
+    ]
+   },
+   {
+    "name": "Bömmerdelle",
+    "osm": [
+     "w25352478"
+    ],
+    "flaeche_ha": 27.6,
+    "zone_ha": 3.8,
+    "anteil_zone": 0.1387,
+    "lat": 51.46366,
+    "lon": 7.33258,
+    "bbox": [
+     7.32569,
+     51.45901,
+     7.33682,
+     51.46848
+    ]
+   },
+   {
+    "name": "Dr.-C.-Otto-Wald",
+    "osm": [
+     "w697379224"
+    ],
+    "flaeche_ha": 27.0,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.048,
+    "lat": 51.43616,
+    "lon": 7.13415,
+    "bbox": [
+     7.12244,
+     51.43258,
+     7.13964,
+     51.43977
+    ]
+   },
+   {
+    "name": "Berghofer Holz",
+    "osm": [
+     "r11797100"
+    ],
+    "flaeche_ha": 23.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.50632,
+    "lon": 7.30096,
+    "bbox": [
+     7.29387,
+     51.50293,
+     7.30443,
+     51.50987
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Südpark",
+    "osm": [
+     "w696012432"
+    ],
+    "flaeche_ha": 32.2,
+    "zone_ha": 10.6,
+    "anteil_zone": 0.3308,
+    "lat": 51.45357,
+    "lon": 7.1579,
+    "bbox": [
+     7.15071,
+     51.44884,
+     7.16431,
+     51.45818
+    ]
+   },
+   {
+    "name": "Stadtpark",
+    "osm": [
+     "w16364803"
+    ],
+    "flaeche_ha": 31.1,
+    "zone_ha": 10.3,
+    "anteil_zone": 0.3321,
+    "lat": 51.4907,
+    "lon": 7.22476,
+    "bbox": [
+     7.22129,
+     51.48668,
+     7.22841,
+     51.49453
+    ]
+   },
+   {
+    "name": "Westpark",
+    "osm": [
+     "w23940213"
+    ],
+    "flaeche_ha": 28.7,
+    "zone_ha": 7.0,
+    "anteil_zone": 0.2429,
+    "lat": 51.48143,
+    "lon": 7.19893,
+    "bbox": [
+     7.19327,
+     51.47785,
+     7.20403,
+     51.48511
+    ]
+   },
+   {
+    "name": "Hiltroper Park",
+    "osm": [
+     "w56256158"
+    ],
+    "flaeche_ha": 21.5,
+    "zone_ha": 4.8,
+    "anteil_zone": 0.2253,
+    "lat": 51.52083,
+    "lon": 7.26328,
+    "bbox": [
+     7.25894,
+     51.51565,
+     7.2722,
+     51.52611
+    ]
+   },
+   {
+    "name": "Wiesental",
+    "osm": [
+     "w35965886"
+    ],
+    "flaeche_ha": 15.6,
+    "zone_ha": 5.5,
+    "anteil_zone": 0.3506,
+    "lat": 51.46086,
+    "lon": 7.20962,
+    "bbox": [
+     7.2063,
+     51.45624,
+     7.21275,
+     51.46547
+    ]
+   },
+   {
+    "name": "Grummer Teiche",
+    "osm": [
+     "r12535211"
+    ],
+    "flaeche_ha": 10.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0011,
+    "lat": 51.50031,
+    "lon": 7.24625,
+    "bbox": [
+     7.23652,
+     51.49825,
+     7.24949,
+     51.50262
+    ]
+   },
+   {
+    "name": "Rechener Park",
+    "osm": [
+     "r12883904"
+    ],
+    "flaeche_ha": 9.8,
+    "zone_ha": 5.9,
+    "anteil_zone": 0.6015,
+    "lat": 51.46545,
+    "lon": 7.21708,
+    "bbox": [
+     7.21412,
+     51.46402,
+     7.22282,
+     51.46701
+    ]
+   },
+   {
+    "name": "Volkspark Langendreer",
+    "osm": [
+     "w141055272"
+    ],
+    "flaeche_ha": 9.5,
+    "zone_ha": 9.3,
+    "anteil_zone": 0.9771,
+    "lat": 51.47499,
+    "lon": 7.31281,
+    "bbox": [
+     7.30708,
+     51.47358,
+     7.31713,
+     51.47638
+    ]
+   },
+   {
+    "name": "Park am Neggenborn",
+    "osm": [
+     "w765967307"
+    ],
+    "flaeche_ha": 9.2,
+    "zone_ha": 7.7,
+    "anteil_zone": 0.8416,
+    "lat": 51.46472,
+    "lon": 7.30322,
+    "bbox": [
+     7.29967,
+     51.46162,
+     7.3054,
+     51.46774
+    ]
+   },
+   {
+    "name": "Stadtgarten Wattenscheid",
+    "osm": [
+     "w68274971"
+    ],
+    "flaeche_ha": 8.6,
+    "zone_ha": 5.9,
+    "anteil_zone": 0.6873,
+    "lat": 51.4865,
+    "lon": 7.14236,
+    "bbox": [
+     7.13999,
+     51.48427,
+     7.14473,
+     51.48871
+    ]
+   },
+   {
+    "name": "Saure Wiese",
+    "osm": [
+     "w68549326"
+    ],
+    "flaeche_ha": 8.5,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.0655,
+    "lat": 51.47014,
+    "lon": 7.17514,
+    "bbox": [
+     7.17127,
+     51.4674,
+     7.1777,
+     51.47263
+    ]
+   },
+   {
+    "name": "Park Hamme",
+    "osm": [
+     "w567880505"
+    ],
+    "flaeche_ha": 8.0,
+    "zone_ha": 7.4,
+    "anteil_zone": 0.9307,
+    "lat": 51.48881,
+    "lon": 7.19879,
+    "bbox": [
+     7.19355,
+     51.48698,
+     7.20075,
+     51.49073
+    ]
+   },
+   {
+    "name": "Königsgruber Park",
+    "osm": [
+     "w27060690"
+    ],
+    "flaeche_ha": 7.8,
+    "zone_ha": 5.8,
+    "anteil_zone": 0.7372,
+    "lat": 51.5068,
+    "lon": 7.16211,
+    "bbox": [
+     7.15749,
+     51.50479,
+     7.16395,
+     51.50881
+    ]
+   },
+   {
+    "name": "Schloßpark Weitmar",
+    "osm": [
+     "w68062978"
+    ],
+    "flaeche_ha": 7.4,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.4019,
+    "lat": 51.44706,
+    "lon": 7.19111,
+    "bbox": [
+     7.18719,
+     51.44571,
+     7.19433,
+     51.4484
+    ]
+   },
+   {
+    "name": "Kortumpark",
+    "osm": [
+     "w66215781"
+    ],
+    "flaeche_ha": 6.4,
+    "zone_ha": 3.6,
+    "anteil_zone": 0.568,
+    "lat": 51.47957,
+    "lon": 7.23074,
+    "bbox": [
+     7.22561,
+     51.47829,
+     7.23414,
+     51.48079
+    ]
+   },
+   {
+    "name": "Schmechtingwiesen",
+    "osm": [
+     "r14402771"
+    ],
+    "flaeche_ha": 5.8,
+    "zone_ha": 4.3,
+    "anteil_zone": 0.7443,
+    "lat": 51.49383,
+    "lon": 7.21555,
+    "bbox": [
+     7.21393,
+     51.492,
+     7.21732,
+     51.49561
+    ]
+   },
+   {
+    "name": "Friedenspark Ehrenmal",
+    "osm": [
+     "w28456520"
+    ],
+    "flaeche_ha": 3.3,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.7846,
+    "lat": 51.47684,
+    "lon": 7.14038,
+    "bbox": [
+     7.13836,
+     51.47543,
+     7.14198,
+     51.4783
+    ]
+   },
+   {
+    "name": "Park Werne",
+    "osm": [
+     "w32949746"
+    ],
+    "flaeche_ha": 3.2,
+    "zone_ha": 3.1,
+    "anteil_zone": 0.9639,
+    "lat": 51.49107,
+    "lon": 7.31207,
+    "bbox": [
+     7.30984,
+     51.49011,
+     7.31486,
+     51.49208
+    ]
+   },
+   {
+    "name": "Vels-Heide-Park",
+    "osm": [
+     "w19670706"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.9417,
+    "lat": 51.46891,
+    "lon": 7.23933,
+    "bbox": [
+     7.23743,
+     51.4679,
+     7.24234,
+     51.46999
+    ]
+   },
+   {
+    "name": "Im Schußholz",
+    "osm": [
+     "w28472675"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.6383,
+    "lat": 51.45456,
+    "lon": 7.24135,
+    "bbox": [
+     7.23921,
+     51.45287,
+     7.2426,
+     51.45617
+    ]
+   },
+   {
+    "name": "Park Laer",
+    "osm": [
+     "w846496685"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.6784,
+    "lat": 51.47043,
+    "lon": 7.2593,
+    "bbox": [
+     7.25749,
+     51.46916,
+     7.26329,
+     51.47179
+    ]
+   },
+   {
+    "name": "Idunapark",
+    "osm": [
+     "w41759218"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.8758,
+    "lat": 51.46649,
+    "lon": 7.20218,
+    "bbox": [
+     7.19986,
+     51.46548,
+     7.20343,
+     51.46749
+    ]
+   },
+   {
+    "name": "Barbara Park",
+    "osm": [
+     "w34407041"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 2.1,
+    "anteil_zone": 1.0,
+    "lat": 51.49974,
+    "lon": 7.17821,
+    "bbox": [
+     7.17678,
+     51.49899,
+     7.17934,
+     51.50078
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w21579487"
+    ],
+    "flaeche_ha": 12.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.44229,
+    "lon": 7.26713,
+    "bbox": [
+     7.26375,
+     51.43992,
+     7.27037,
+     51.44495
+    ]
+   },
+   {
+    "name": "Gemeinschaftsgarten Hof Bergmann",
+    "osm": [
+     "w793526128"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.1183,
+    "lat": 51.46117,
+    "lon": 7.2714,
+    "bbox": [
+     7.26983,
+     51.46059,
+     7.27328,
+     51.46208
+    ]
+   },
+   {
+    "name": "Dahliengarten",
+    "osm": [
+     "w629593890"
+    ],
+    "flaeche_ha": 1.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.49084,
+    "lon": 7.22255,
+    "bbox": [
+     7.22171,
+     51.49016,
+     7.22323,
+     51.49154
+    ]
+   }
+  ],
+  "see": [
+   {
+    "name": "Kemnader See",
+    "osm": [
+     "r73808"
+    ],
+    "flaeche_ha": 53.9,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.0301,
+    "lat": 51.42568,
+    "lon": 7.26763,
+    "bbox": [
+     7.2512,
+     51.41348,
+     7.2834,
+     51.43795
+    ]
+   },
+   {
+    "name": "Ümminger See",
+    "osm": [
+     "r1640964"
+    ],
+    "flaeche_ha": 10.3,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.1328,
+    "lat": 51.47005,
+    "lon": 7.289,
+    "bbox": [
+     7.28665,
+     51.46741,
+     7.29219,
+     51.47274
+    ]
+   },
+   {
+    "name": "Harpener Teiche",
+    "osm": [
+     "r8674348"
+    ],
+    "flaeche_ha": 6.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.49037,
+    "lon": 7.29023,
+    "bbox": [
+     7.2858,
+     51.48744,
+     7.29292,
+     51.49323
+    ]
+   },
+   {
+    "name": "Oelbach Mündungsteich",
+    "osm": [
+     "w24449261"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.44231,
+    "lon": 7.29091,
+    "bbox": [
+     7.28807,
+     51.4401,
+     7.29274,
+     51.44434
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r17433865",
+     "r22710",
+     "r23545",
+     "w734490170",
+     "w90632194"
+    ],
+    "flaeche_ha": 18.9,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.0186,
+    "lat": 51.41462,
+    "lon": 7.21508,
+    "bbox": [
+     7.18855,
+     51.4099,
+     7.25271,
+     51.41988
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Ruhr-Universität Bochum",
+    "osm": [
+     "w31008475"
+    ],
+    "flaeche_ha": 60.0,
+    "zone_ha": 9.3,
+    "anteil_zone": 0.1546,
+    "lat": 51.44405,
+    "lon": 7.26067,
+    "bbox": [
+     7.25312,
+     51.43974,
+     7.26975,
+     51.44843
+    ]
+   },
+   {
+    "name": "EBZ Business School",
+    "osm": [
+     "r18543610"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.4986,
+    "lat": 51.45188,
+    "lon": 7.21015,
+    "bbox": [
+     7.2085,
+     51.45069,
+     7.2118,
+     51.45333
+    ]
+   },
+   {
+    "name": "Technische Hochschule (TH) Georg Agricola zu Bochum",
+    "osm": [
+     "w648280808"
+    ],
+    "flaeche_ha": 2.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0169,
+    "lat": 51.48807,
+    "lon": 7.2123,
+    "bbox": [
+     7.21072,
+     51.48743,
+     7.2138,
+     51.48867
+    ]
+   },
+   {
+    "name": "Akademie des Handwerks",
+    "osm": [
+     "w1350763430"
+    ],
+    "flaeche_ha": 1.8,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0336,
+    "lat": 51.4531,
+    "lon": 7.20867,
+    "bbox": [
+     7.20778,
+     51.45238,
+     7.21012,
+     51.45429
+    ]
+   },
+   {
+    "name": "Evangelische Hochschule Rheinland-Westfalen-Lippe",
+    "osm": [
+     "w760660080"
+    ],
+    "flaeche_ha": 1.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.47407,
+    "lon": 7.25309,
+    "bbox": [
+     7.25169,
+     51.47328,
+     7.25436,
+     51.4749
+    ]
+   },
+   {
+    "name": "Fraunhofer-Einrichtung für Energieinfrastrukturen und Geothermie IEG",
+    "osm": [
+     "w290451540"
+    ],
+    "flaeche_ha": 1.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.44644,
+    "lon": 7.27397,
+    "bbox": [
+     7.27278,
+     51.44588,
+     7.27531,
+     51.44696
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "Stranddeck",
+    "osm": [
+     "w91360783"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.9006,
+    "lat": 51.43639,
+    "lon": 7.27662,
+    "bbox": [
+     7.27612,
+     51.43608,
+     7.27693,
+     51.43669
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 89.0,
+   "zone_ha": 6.0,
+   "anteil_zone": 0.0672
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 22.6,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 51.47058,
+  "lon": 7.23088,
+  "bbox": [
+   7.10011,
+   51.40858,
+   7.35142,
+   51.53212
+  ]
+ },
+ "orte": [
+  {
+   "name": "Kortumstraße",
+   "osm": [
+    "r5176629",
+    "r7942494",
+    "r8882366",
+    "w1030795839",
+    "w136794958",
+    "w139274191",
+    "w139274192",
+    "w1416376523",
+    "w1416376524",
+    "w1476379425",
+    "w1556420685",
+    "w1556429088",
+    "w1556429089",
+    "w1556429090",
+    "w228695160",
+    "w228695164",
+    "w228695168",
+    "w228695198",
+    "w24379909",
+    "w342626739",
+    "w342626741",
+    "w346955591",
+    "w346955594",
+    "w346956390",
+    "w347324542",
+    "w347324547",
+    "w347324557",
+    "w347324561",
+    "w347324566",
+    "w347324577",
+    "w347324582",
+    "w349903140",
+    "w349903141",
+    "w449977742",
+    "w493912510",
+    "w556341452",
+    "w556341453",
+    "w658534972",
+    "w658534975",
+    "w658534980",
+    "w670596873",
+    "w685962373",
+    "w686922488",
+    "w686922489",
+    "w700659565",
+    "w730285834",
+    "w730285837",
+    "w818037109",
+    "w86660738",
+    "w958234085",
+    "w960100545",
+    "w96972301",
+    "w96973009",
+    "w96973011"
+   ],
+   "flaeche_ha": 3.14,
+   "bbox": [
+    7.21545,
+    51.4759,
+    7.22237,
+    51.4839
+   ],
+   "anteil_zone": 0.4418,
+   "art": "flaeche",
+   "lat": 51.47988,
+   "lon": 7.21762
+  },
+  {
+   "name": "Bermudadreieck",
+   "osm": [
+    "w353037283"
+   ],
+   "flaeche_ha": 10.27,
+   "bbox": [
+    7.21246,
+    51.47391,
+    7.21929,
+    51.47866
+   ],
+   "anteil_zone": 0.2285,
+   "art": "flaeche",
+   "lat": 51.47543,
+   "lon": 7.21473
+  },
+  {
+   "name": "Dr.-Ruer-Platz",
+   "osm": [
+    "r5176629",
+    "w1556429090",
+    "w347324542",
+    "w347324547",
+    "w347324557",
+    "w347324561",
+    "w347324566",
+    "w347324577",
+    "w347324582",
+    "w493912510",
+    "w958234085"
+   ],
+   "flaeche_ha": 0.44,
+   "bbox": [
+    7.21817,
+    51.47976,
+    7.21938,
+    51.48085
+   ],
+   "anteil_zone": 0.0215,
+   "art": "flaeche",
+   "lat": 51.4803,
+   "lon": 7.21888
+  },
+  {
+   "name": "Gustav-Heinemann-Platz",
+   "osm": [
+    "r7271971",
+    "w1360390913",
+    "w581575800",
+    "w609827158",
+    "w695658530",
+    "w695661425",
+    "w98786005",
+    "w98786025",
+    "w98786030",
+    "w98786072"
+   ],
+   "flaeche_ha": 0.98,
+   "bbox": [
+    7.21308,
+    51.48172,
+    7.21559,
+    51.48383
+   ],
+   "anteil_zone": 0.1862,
+   "art": "flaeche",
+   "lat": 51.48277,
+   "lon": 7.21391
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-25T21:22:46Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Regierungsbezirks Arnsberg (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  51.481,
+  7.219
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Stadtpark",
+   "stadtpark"
+  ],
+  [
+   "park",
+   "Westpark",
+   "westpark"
+  ],
+  [
+   "see",
+   "Kemnader See",
+   "kemnader-see"
+  ],
+  [
+   "ort",
+   "Kortumstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "Bermudadreieck",
+   "bermudadreieck"
+  ],
+  [
+   "hochschule",
+   "Ruhr-Universität Bochum",
+   "rub"
+  ]
+ ]
+}

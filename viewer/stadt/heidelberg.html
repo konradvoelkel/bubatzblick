@@ -140,8 +140,9 @@
   ul.grau a { color: var(--text-schwach); text-decoration: none;
               border-bottom: 1px dotted currentColor; }
   ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
-  @media (max-width: 480px) { svg.deutschland text { font-size: 28px; }
-                              svg.deutschland circle { r: 10; } }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1.2; }
+  @media (max-width: 480px) { svg.deutschland a:not(.eng) text { font-size: 28px; }
+                              svg.deutschland a:not(.eng) circle { r: 10; } }
 </style>
 </head>
 <body>

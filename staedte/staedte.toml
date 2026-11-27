@@ -8,6 +8,8 @@
 [[stadt]]
 slug = "duesseldorf"
 name = "Düsseldorf"
+# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
+beschriftung = { dx = 70, dy = 58, strich = true }
 land = "Nordrhein-Westfalen"
 land_iso = "DE-NW"
 osm_relation = 62539
@@ -18,6 +20,8 @@ fertig = true
 [[stadt]]
 slug = "heidelberg"
 name = "Heidelberg"
+# Unten rechts: rechts auf gleicher Hoehe liegt Nuernberg
+beschriftung = { dx = 8, dy = 24 }
 land = "Baden-Württemberg"
 land_iso = "DE-BW"
 osm_relation = 62487
@@ -28,6 +32,8 @@ fertig = true
 [[stadt]]
 slug = "berlin"
 name = "Berlin"
+# Ueber dem Punkt: rechts liefe sie auf dem Handy ueber den Kartenrand
+beschriftung = "oben"
 land = "Berlin"
 land_iso = "DE-BE"
 osm_relation = 62422
@@ -66,6 +72,8 @@ fertig = true
 [[stadt]]
 slug = "koeln"
 name = "Köln"
+# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
+beschriftung = { dx = 60, dy = 52, strich = true }
 land = "Nordrhein-Westfalen"
 land_iso = "DE-NW"
 osm_relation = 62578
@@ -76,6 +84,8 @@ fertig = true
 [[stadt]]
 slug = "frankfurt-am-main"
 name = "Frankfurt am Main"
+# Rechts, etwas tiefer und auf dem Handy nicht groesser: darueber endet die Spalte mit Bonn
+beschriftung = { dx = 14, dy = 16 }
 land = "Hessen"
 land_iso = "DE-HE"
 osm_relation = 62400
@@ -86,6 +96,8 @@ fertig = true
 [[stadt]]
 slug = "stuttgart"
 name = "Stuttgart"
+# Unter dem Punkt, auf dem Handy nicht groesser: rechts liefe sie in Karlsruhe
+beschriftung = { dx = 0, dy = 28, anker = "middle" }
 land = "Baden-Württemberg"
 land_iso = "DE-BW"
 osm_relation = 62375
@@ -93,3 +105,179 @@ wikidata = "Q1022"
 ags = "08111000"
 fertig = true
 
+[[stadt]]
+slug = "leipzig"
+name = "Leipzig"
+# Ueber dem Punkt: links stiesse sie auf dem Handy an die Spalte des Ruhrgebiets
+beschriftung = "oben"
+land = "Sachsen"
+land_iso = "DE-SN"
+osm_relation = 62649
+wikidata = "Q2079"
+ags = "14713000"
+fertig = true
+
+[[stadt]]
+slug = "dortmund"
+name = "Dortmund"
+# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
+beschriftung = { dx = 28, dy = -25, strich = true }
+land = "Nordrhein-Westfalen"
+land_iso = "DE-NW"
+osm_relation = 1829065
+wikidata = "Q1295"
+ags = "05913000"
+fertig = true
+
+[[stadt]]
+slug = "essen"
+name = "Essen"
+# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
+beschriftung = { dx = 54, dy = 12, strich = true }
+land = "Nordrhein-Westfalen"
+land_iso = "DE-NW"
+osm_relation = 62713
+wikidata = "Q2066"
+ags = "05113000"
+fertig = true
+
+[[stadt]]
+slug = "bremen"
+name = "Bremen"
+land = "Bremen"
+land_iso = "DE-HB"
+osm_relation = 62559
+wikidata = "Q24879"
+ags = "04011000"
+fertig = true
+
+[[stadt]]
+slug = "dresden"
+name = "Dresden"
+# Beschriftung unter dem Punkt, rechts liefe sie ueber den Kartenrand
+beschriftung = "unten"
+land = "Sachsen"
+land_iso = "DE-SN"
+osm_relation = 191645
+wikidata = "Q1731"
+ags = "14612000"
+fertig = true
+
+
+[[stadt]]
+slug = "nuernberg"
+name = "Nürnberg"
+land = "Bayern"
+land_iso = "DE-BY"
+osm_relation = 62780
+wikidata = "Q2090"
+ags = "09564000"
+fertig = true
+
+[[stadt]]
+slug = "hannover"
+name = "Hannover"
+# Rechts, auf dem Handy nicht groesser: sonst liefe sie in den Punkt von Berlin
+beschriftung = { dx = 14, dy = 6 }
+land = "Niedersachsen"
+land_iso = "DE-NI"
+osm_relation = 59418
+wikidata = "Q1715"
+ags = "03241001"
+fertig = true
+
+[[stadt]]
+slug = "duisburg"
+name = "Duisburg"
+# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
+beschriftung = { dx = 73, dy = 35, strich = true }
+land = "Nordrhein-Westfalen"
+land_iso = "DE-NW"
+osm_relation = 62456
+wikidata = "Q2100"
+ags = "05112000"
+fertig = true
+
+[[stadt]]
+slug = "wuppertal"
+name = "Wuppertal"
+# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
+beschriftung = { dx = 46, dy = 36, strich = true }
+land = "Nordrhein-Westfalen"
+land_iso = "DE-NW"
+osm_relation = 62478
+wikidata = "Q2107"
+ags = "05124000"
+fertig = true
+
+[[stadt]]
+slug = "bochum"
+name = "Bochum"
+# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
+beschriftung = { dx = 42, dy = -7, strich = true }
+land = "Nordrhein-Westfalen"
+land_iso = "DE-NW"
+osm_relation = 62644
+wikidata = "Q2103"
+ags = "05911000"
+fertig = true
+
+[[stadt]]
+slug = "bielefeld"
+name = "Bielefeld"
+# Rechts, etwas hoeher und auf dem Handy nicht groesser: darunter beginnt die Spalte des Ruhrgebiets
+beschriftung = { dx = 14, dy = 0 }
+land = "Nordrhein-Westfalen"
+land_iso = "DE-NW"
+osm_relation = 62646
+wikidata = "Q2112"
+ags = "05711000"
+fertig = true
+
+[[stadt]]
+slug = "bonn"
+name = "Bonn"
+# Unter dem Punkt, auf dem Handy nicht groesser: die Spalte des Ruhrgebiets endet mit Koeln
+beschriftung = { dx = 0, dy = 28, anker = "middle" }
+land = "Nordrhein-Westfalen"
+land_iso = "DE-NW"
+osm_relation = 62508
+wikidata = "Q586"
+ags = "05314000"
+fertig = true
+
+[[stadt]]
+slug = "muenster"
+name = "Münster"
+# Ueber dem Punkt, nach links versetzt: rechts liegt Bielefeld
+beschriftung = { dx = -50, dy = -18, anker = "middle" }
+land = "Nordrhein-Westfalen"
+land_iso = "DE-NW"
+osm_relation = 62591
+wikidata = "Q2742"
+ags = "05515000"
+fertig = true
+
+[[stadt]]
+slug = "mannheim"
+name = "Mannheim"
+# Ueber dem Punkt: rechts liegt Heidelberg
+beschriftung = { dx = 0, dy = -14, anker = "middle" }
+land = "Baden-Württemberg"
+land_iso = "DE-BW"
+osm_relation = 62691
+wikidata = "Q2119"
+ags = "08222000"
+fertig = true
+
+[[stadt]]
+slug = "karlsruhe"
+name = "Karlsruhe"
+# Rechts, etwas tiefer und auf dem Handy nicht groesser: darueber steht Heidelberg
+beschriftung = { dx = 14, dy = 10 }
+land = "Baden-Württemberg"
+land_iso = "DE-BW"
+osm_relation = 62518
+wikidata = "Q1040"
+ags = "08212000"
+fertig = true

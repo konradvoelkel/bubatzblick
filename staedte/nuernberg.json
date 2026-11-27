@@ -1,0 +1,1036 @@
+{
+ "stadtflaeche_osm_km2": 186.62,
+ "wald": {
+  "flaeche_km2": 33.3,
+  "anteil_stadt": 0.1785,
+  "anteil_zone": 0.0906,
+  "anteil_zone_ohne_wald": 0.1882
+ },
+ "zonen_km2": 31.87,
+ "anteil": 0.17078,
+ "kategorien": {
+  "sports": {
+   "objekte": 994,
+   "zonen_km2": 16.8
+  },
+  "playground": {
+   "objekte": 489,
+   "zonen_km2": 9.77
+  },
+  "school": {
+   "objekte": 148,
+   "zonen_km2": 6.92
+  },
+  "kindergarten": {
+   "objekte": 321,
+   "zonen_km2": 6.52
+  },
+  "youth": {
+   "objekte": 29,
+   "zonen_km2": 0.52
+  },
+  "childcare": {
+   "objekte": 13,
+   "zonen_km2": 0.28
+  }
+ },
+ "objekte_gesamt": 1994,
+ "merkmale": {
+  "platz": [
+   {
+    "name": "Leipziger Platz",
+    "osm": [
+     "w1107959401"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 1.0,
+    "anteil_zone": 0.47,
+    "lat": 49.47219,
+    "lon": 11.10441,
+    "bbox": [
+     11.10289,
+     49.47134,
+     11.10573,
+     49.47299
+    ]
+   },
+   {
+    "name": "Hauptmarkt",
+    "osm": [
+     "w136698909"
+    ],
+    "flaeche_ha": 0.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.45368,
+    "lon": 11.07723,
+    "bbox": [
+     11.07661,
+     49.45299,
+     11.07808,
+     49.45437
+    ]
+   },
+   {
+    "name": "Nelson-Mandela-Platz",
+    "osm": [
+     "w583525104"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.8439,
+    "lat": 49.4438,
+    "lon": 11.08263,
+    "bbox": [
+     11.08181,
+     49.44351,
+     11.08336,
+     49.44423
+    ]
+   },
+   {
+    "name": "Helmut-Herold-Platz",
+    "osm": [
+     "w65155449"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.4,
+    "anteil_zone": 1.0,
+    "lat": 49.43012,
+    "lon": 11.06915,
+    "bbox": [
+     11.06825,
+     49.42971,
+     11.06986,
+     49.43048
+    ]
+   },
+   {
+    "name": "Samuel-Heinicke-Platz",
+    "osm": [
+     "w85066683"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.4,
+    "anteil_zone": 1.0,
+    "lat": 49.45934,
+    "lon": 11.03956,
+    "bbox": [
+     11.03891,
+     49.45895,
+     11.04021,
+     49.45971
+    ]
+   },
+   {
+    "name": "Egidienplatz",
+    "osm": [
+     "w136506125"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.9722,
+    "lat": 49.45656,
+    "lon": 11.08102,
+    "bbox": [
+     11.0807,
+     49.4559,
+     11.08235,
+     49.45713
+    ]
+   },
+   {
+    "name": "Europaplatz",
+    "osm": [
+     "w125082744"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.46101,
+    "lon": 11.11252,
+    "bbox": [
+     11.11182,
+     49.46073,
+     11.1134,
+     49.46125
+    ]
+   },
+   {
+    "name": "Heinrich-Böll-Platz",
+    "osm": [
+     "w144777918"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.9799,
+    "lat": 49.40242,
+    "lon": 11.13604,
+    "bbox": [
+     11.1355,
+     49.40204,
+     11.1366,
+     49.40279
+    ]
+   },
+   {
+    "name": "Sebalder Platz",
+    "osm": [
+     "w5022968"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.45556,
+    "lon": 11.07629,
+    "bbox": [
+     11.07589,
+     49.45535,
+     11.07666,
+     49.45578
+    ]
+   },
+   {
+    "name": "Platz der Deutschen Einheit",
+    "osm": [
+     "w26384413"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 49.41843,
+    "lon": 11.03966,
+    "bbox": [
+     11.03923,
+     49.41821,
+     11.04006,
+     49.41866
+    ]
+   },
+   {
+    "name": "Fritz-Munkert-Platz",
+    "osm": [
+     "w34696122"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.4848,
+    "lon": 11.10534,
+    "bbox": [
+     11.10513,
+     49.48433,
+     11.10589,
+     49.48519
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Volkspark Dutzendteich",
+    "osm": [
+     "r14089133"
+    ],
+    "flaeche_ha": 106.8,
+    "zone_ha": 12.9,
+    "anteil_zone": 0.1205,
+    "lat": 49.42503,
+    "lon": 11.11057,
+    "bbox": [
+     11.10355,
+     49.41804,
+     11.12168,
+     49.43565
+    ]
+   },
+   {
+    "name": "Volkspark Marienberg",
+    "osm": [
+     "w8157133"
+    ],
+    "flaeche_ha": 82.0,
+    "zone_ha": 21.5,
+    "anteil_zone": 0.2618,
+    "lat": 49.47948,
+    "lon": 11.09304,
+    "bbox": [
+     11.07979,
+     49.47419,
+     11.09912,
+     49.48489
+    ]
+   },
+   {
+    "name": "Faberpark",
+    "osm": [
+     "w23415647"
+    ],
+    "flaeche_ha": 28.0,
+    "zone_ha": 8.6,
+    "anteil_zone": 0.308,
+    "lat": 49.41393,
+    "lon": 11.02609,
+    "bbox": [
+     11.02081,
+     49.41113,
+     11.03211,
+     49.41688
+    ]
+   },
+   {
+    "name": "Luitpoldhain",
+    "osm": [
+     "w273905057"
+    ],
+    "flaeche_ha": 21.3,
+    "zone_ha": 6.9,
+    "anteil_zone": 0.3258,
+    "lat": 49.43445,
+    "lon": 11.10603,
+    "bbox": [
+     11.10185,
+     49.4316,
+     11.11021,
+     49.43727
+    ]
+   },
+   {
+    "name": "Stadtpark",
+    "osm": [
+     "w138296120"
+    ],
+    "flaeche_ha": 19.1,
+    "zone_ha": 10.6,
+    "anteil_zone": 0.5541,
+    "lat": 49.4652,
+    "lon": 11.09338,
+    "bbox": [
+     11.08921,
+     49.46189,
+     11.09651,
+     49.46816
+    ]
+   },
+   {
+    "name": "Westpark",
+    "osm": [
+     "r14261901"
+    ],
+    "flaeche_ha": 13.2,
+    "zone_ha": 10.8,
+    "anteil_zone": 0.8219,
+    "lat": 49.44547,
+    "lon": 11.03274,
+    "bbox": [
+     11.02436,
+     49.44412,
+     11.041,
+     49.44681
+    ]
+   },
+   {
+    "name": "Platnersberg",
+    "osm": [
+     "r7859"
+    ],
+    "flaeche_ha": 9.4,
+    "zone_ha": 5.0,
+    "anteil_zone": 0.534,
+    "lat": 49.47055,
+    "lon": 11.13053,
+    "bbox": [
+     11.12486,
+     49.46878,
+     11.13148,
+     49.47247
+    ]
+   },
+   {
+    "name": "Rechenberganlage",
+    "osm": [
+     "w23573209"
+    ],
+    "flaeche_ha": 5.1,
+    "zone_ha": 3.4,
+    "anteil_zone": 0.6716,
+    "lat": 49.46399,
+    "lon": 11.11092,
+    "bbox": [
+     11.10462,
+     49.46182,
+     11.11422,
+     49.46612
+    ]
+   },
+   {
+    "name": "Cramer-Klett-Park",
+    "osm": [
+     "w6091022"
+    ],
+    "flaeche_ha": 4.0,
+    "zone_ha": 3.8,
+    "anteil_zone": 0.9575,
+    "lat": 49.45458,
+    "lon": 11.09063,
+    "bbox": [
+     11.08831,
+     49.45364,
+     11.09265,
+     49.45556
+    ]
+   },
+   {
+    "name": "Grünanlage Hasenbuck",
+    "osm": [
+     "w145037838"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.861,
+    "lat": 49.42642,
+    "lon": 11.08817,
+    "bbox": [
+     11.0864,
+     49.42495,
+     11.09003,
+     49.42788
+    ]
+   },
+   {
+    "name": "Rosenau",
+    "osm": [
+     "w7367784"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 2.9,
+    "anteil_zone": 0.9236,
+    "lat": 49.45098,
+    "lon": 11.06441,
+    "bbox": [
+     11.06294,
+     49.45005,
+     11.06596,
+     49.45205
+    ]
+   },
+   {
+    "name": "Züricher Park",
+    "osm": [
+     "w98211488"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.7048,
+    "lat": 49.43898,
+    "lon": 11.02614,
+    "bbox": [
+     11.02132,
+     49.43748,
+     11.02807,
+     49.44041
+    ]
+   },
+   {
+    "name": "Bürgergarten Langwasser",
+    "osm": [
+     "w604044892"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.6616,
+    "lat": 49.39917,
+    "lon": 11.1389,
+    "bbox": [
+     11.13684,
+     49.39806,
+     11.14155,
+     49.40008
+    ]
+   },
+   {
+    "name": "Norduferpark Wöhrder See",
+    "osm": [
+     "w708644225"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.5662,
+    "lat": 49.4533,
+    "lon": 11.09912,
+    "bbox": [
+     11.09774,
+     49.45173,
+     11.10118,
+     49.45478
+    ]
+   },
+   {
+    "name": "Archivpark",
+    "osm": [
+     "w5075353"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 2.1,
+    "anteil_zone": 0.9894,
+    "lat": 49.46203,
+    "lon": 11.07366,
+    "bbox": [
+     11.07189,
+     49.46148,
+     11.07538,
+     49.46252
+    ]
+   },
+   {
+    "name": "Kontumazgarten",
+    "osm": [
+     "w137378366"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.7084,
+    "lat": 49.45468,
+    "lon": 11.06785,
+    "bbox": [
+     11.06569,
+     49.45394,
+     11.06977,
+     49.45542
+    ]
+   },
+   {
+    "name": "Tullnaupark",
+    "osm": [
+     "w138602782"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.8422,
+    "lat": 49.44997,
+    "lon": 11.10561,
+    "bbox": [
+     11.10382,
+     49.44921,
+     11.10707,
+     49.45077
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Ritterholz",
+    "osm": [
+     "w10019220"
+    ],
+    "flaeche_ha": 34.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.35695,
+    "lon": 11.08005,
+    "bbox": [
+     11.07633,
+     49.35238,
+     11.08852,
+     49.36002
+    ]
+   },
+   {
+    "name": "Faberwald",
+    "osm": [
+     "r2132271"
+    ],
+    "flaeche_ha": 26.3,
+    "zone_ha": 7.8,
+    "anteil_zone": 0.2948,
+    "lat": 49.41397,
+    "lon": 11.0273,
+    "bbox": [
+     11.02081,
+     49.41113,
+     11.03211,
+     49.41688
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r17084411",
+     "r49739",
+     "r50009",
+     "w1046887833",
+     "w1187664260",
+     "w144523898",
+     "w23140007",
+     "w23140028",
+     "w24346314",
+     "w26534312",
+     "w26555858",
+     "w28219672",
+     "w28237763",
+     "w30603916",
+     "w30603974",
+     "w30603998",
+     "w30604201",
+     "w30604391",
+     "w30604422",
+     "w30604610",
+     "w30604620",
+     "w30604873",
+     "w30605572",
+     "w30605872",
+     "w30606095",
+     "w31018306",
+     "w31018340",
+     "w508120953",
+     "w508131270"
+    ],
+    "flaeche_ha": 19.0,
+    "zone_ha": 10.9,
+    "anteil_zone": 0.5736,
+    "lat": 49.46752,
+    "lon": 11.02009,
+    "bbox": [
+     11.01587,
+     49.45078,
+     11.09834,
+     49.46926
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Technische Hochschule Nürnberg Georg Simon Ohm",
+    "osm": [
+     "w129888411",
+     "w129888412",
+     "w215387868",
+     "w239208056"
+    ],
+    "flaeche_ha": 4.3,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0348,
+    "lat": 49.45242,
+    "lon": 11.09401,
+    "bbox": [
+     11.0922,
+     49.45162,
+     11.09826,
+     49.45373
+    ]
+   },
+   {
+    "name": "Akademie der Bildenden Künste Nürnberg",
+    "osm": [
+     "w124270486"
+    ],
+    "flaeche_ha": 4.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.44584,
+    "lon": 11.13476,
+    "bbox": [
+     11.13208,
+     49.44492,
+     11.13697,
+     49.44685
+    ]
+   },
+   {
+    "name": "Sankt Paul",
+    "osm": [
+     "w32237714"
+    ],
+    "flaeche_ha": 2.0,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.7764,
+    "lat": 49.43681,
+    "lon": 11.11321,
+    "bbox": [
+     11.11192,
+     49.43597,
+     11.11501,
+     49.43765
+    ]
+   }
+  ],
+  "see": [
+   {
+    "name": "Wöhrder See",
+    "osm": [
+     "r2203143"
+    ],
+    "flaeche_ha": 42.1,
+    "zone_ha": 13.6,
+    "anteil_zone": 0.3235,
+    "lat": 49.45761,
+    "lon": 11.10994,
+    "bbox": [
+     11.09759,
+     49.44984,
+     11.13098,
+     49.46523
+    ]
+   },
+   {
+    "name": "Großer Dutzendteich",
+    "osm": [
+     "w144161513"
+    ],
+    "flaeche_ha": 31.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.4308,
+    "lon": 11.11683,
+    "bbox": [
+     11.11172,
+     49.42629,
+     11.12134,
+     49.43529
+    ]
+   },
+   {
+    "name": "Kleiner Dutzendteich",
+    "osm": [
+     "w144161515"
+    ],
+    "flaeche_ha": 11.2,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.062,
+    "lat": 49.42646,
+    "lon": 11.11095,
+    "bbox": [
+     11.10809,
+     49.42459,
+     11.11413,
+     49.42831
+    ]
+   },
+   {
+    "name": "Flachweiher",
+    "osm": [
+     "r63764"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0106,
+    "lat": 49.42589,
+    "lon": 11.10721,
+    "bbox": [
+     11.10609,
+     49.42485,
+     11.10848,
+     49.42737
+    ]
+   },
+   {
+    "name": "Die Nummernweiher",
+    "osm": [
+     "r1736916"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.42851,
+    "lon": 11.10996,
+    "bbox": [
+     11.10724,
+     49.42762,
+     11.11114,
+     49.4292
+    ]
+   },
+   {
+    "name": "Valznerweiher",
+    "osm": [
+     "r2263434",
+     "r2263435"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.8631,
+    "lat": 49.43814,
+    "lon": 11.13518,
+    "bbox": [
+     11.13223,
+     49.4373,
+     11.13608,
+     49.43905
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 505.5,
+   "zone_ha": 130.7,
+   "anteil_zone": 0.2586
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 25.0,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 49.43555,
+  "lon": 11.06294,
+  "bbox": [
+   10.98052,
+   49.3275,
+   11.28812,
+   49.5408
+  ]
+ },
+ "orte": [
+  {
+   "name": "Königstraße und Karolinenstraße",
+   "osm": [
+    "r6450428",
+    "r6451364",
+    "w1187544584",
+    "w1187544585",
+    "w1187544587",
+    "w121548430",
+    "w121548431",
+    "w121548432",
+    "w136794904",
+    "w136893644",
+    "w136897561",
+    "w140560946",
+    "w162609526",
+    "w162609552",
+    "w25441013",
+    "w35801889",
+    "w35801891",
+    "w43204367",
+    "w435099388",
+    "w850193014",
+    "w885133920",
+    "w9196226",
+    "w9197676"
+   ],
+   "flaeche_ha": 2.89,
+   "bbox": [
+    11.07087,
+    49.4478,
+    11.08207,
+    49.45269
+   ],
+   "anteil_zone": 0.0561,
+   "art": "flaeche",
+   "lat": 49.45025,
+   "lon": 11.07217
+  },
+  {
+   "name": "Hauptmarkt",
+   "osm": [
+    "w136698909"
+   ],
+   "flaeche_ha": 0.83,
+   "bbox": [
+    11.07661,
+    49.45299,
+    11.07808,
+    49.45437
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.45368,
+   "lon": 11.07723
+  },
+  {
+   "name": "Lorenzer Platz",
+   "osm": [
+    "r153638",
+    "w136793807",
+    "w160983142",
+    "w316484911",
+    "w316484912",
+    "w619761022",
+    "w776256197"
+   ],
+   "flaeche_ha": 1.17,
+   "bbox": [
+    11.07757,
+    49.45043,
+    11.08061,
+    49.45173
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.45107,
+   "lon": 11.07952
+  },
+  {
+   "name": "Wöhrder Wiese",
+   "osm": [
+    "w5183894"
+   ],
+   "flaeche_ha": 16.91,
+   "bbox": [
+    11.08611,
+    49.44921,
+    11.09718,
+    49.45296
+   ],
+   "anteil_zone": 0.35,
+   "art": "flaeche",
+   "lat": 49.45102,
+   "lon": 11.09163
+  },
+  {
+   "name": "Kontumazgarten",
+   "osm": [
+    "w137378366"
+   ],
+   "flaeche_ha": 2.12,
+   "bbox": [
+    11.06569,
+    49.45394,
+    11.06977,
+    49.45542
+   ],
+   "anteil_zone": 0.7084,
+   "art": "flaeche",
+   "lat": 49.45468,
+   "lon": 11.06785
+  },
+  {
+   "name": "Insel Schütt",
+   "osm": [
+    "w1573462699"
+   ],
+   "flaeche_ha": 5.12,
+   "bbox": [
+    11.07891,
+    49.45191,
+    11.08771,
+    49.45366
+   ],
+   "anteil_zone": 0.7226,
+   "art": "flaeche",
+   "lat": 49.45276,
+   "lon": 11.08309
+  },
+  {
+   "name": "Jamnitzerplatz",
+   "osm": [
+    "w33184100"
+   ],
+   "flaeche_ha": 0.72,
+   "bbox": [
+    11.05571,
+    49.44794,
+    11.05699,
+    49.44917
+   ],
+   "anteil_zone": 1.0,
+   "art": "flaeche",
+   "lat": 49.44849,
+   "lon": 11.05619
+  },
+  {
+   "name": "Burggarten",
+   "osm": [
+    "w7985144"
+   ],
+   "flaeche_ha": 0.92,
+   "bbox": [
+    11.07184,
+    49.45648,
+    11.07664,
+    49.45875
+   ],
+   "anteil_zone": 0.1541,
+   "art": "flaeche",
+   "lat": 49.45767,
+   "lon": 11.07375
+  },
+  {
+   "name": "Aufseßplatz",
+   "osm": [
+    "r4753185",
+    "w140494223",
+    "w140494229",
+    "w233064767",
+    "w29209070",
+    "w900438856"
+   ],
+   "flaeche_ha": 0.93,
+   "bbox": [
+    11.07903,
+    49.44028,
+    11.08056,
+    49.44223
+   ],
+   "anteil_zone": 0.794,
+   "art": "flaeche",
+   "lat": 49.44126,
+   "lon": 11.07969
+  },
+  {
+   "name": "Nelson-Mandela-Platz",
+   "osm": [
+    "w583525104"
+   ],
+   "flaeche_ha": 0.62,
+   "bbox": [
+    11.08181,
+    49.44351,
+    11.08336,
+    49.44423
+   ],
+   "anteil_zone": 0.8439,
+   "art": "flaeche",
+   "lat": 49.4438,
+   "lon": 11.08263
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Regierungsbezirks Mittelfranken (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  49.452,
+  11.077
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Stadtpark",
+   "stadtpark"
+  ],
+  [
+   "ort",
+   "Wöhrder Wiese",
+   "woehrder-wiese"
+  ],
+  [
+   "ort",
+   "Insel Schütt",
+   "insel-schuett"
+  ],
+  [
+   "ort",
+   "Jamnitzerplatz",
+   "jamnitzerplatz"
+  ],
+  [
+   "ort",
+   "Königstraße und Karolinenstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "park",
+   "Volkspark Marienberg",
+   "marienberg"
+  ]
+ ]
+}

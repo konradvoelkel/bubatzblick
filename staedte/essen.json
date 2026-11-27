@@ -1,0 +1,1328 @@
+{
+ "stadtflaeche_osm_km2": 210.27,
+ "wald": {
+  "flaeche_km2": 41.3,
+  "anteil_stadt": 0.1964,
+  "anteil_zone": 0.1423,
+  "anteil_zone_ohne_wald": 0.226
+ },
+ "zonen_km2": 44.06,
+ "anteil": 0.20955,
+ "kategorien": {
+  "sports": {
+   "objekte": 943,
+   "zonen_km2": 21.76
+  },
+  "playground": {
+   "objekte": 837,
+   "zonen_km2": 16.39
+  },
+  "school": {
+   "objekte": 325,
+   "zonen_km2": 9.84
+  },
+  "kindergarten": {
+   "objekte": 335,
+   "zonen_km2": 7.32
+  },
+  "youth": {
+   "objekte": 57,
+   "zonen_km2": 1.2
+  },
+  "childcare": {
+   "objekte": 15,
+   "zonen_km2": 0.24
+  }
+ },
+ "objekte_gesamt": 2512,
+ "merkmale": {
+  "wald": [
+   {
+    "name": "Schellenberger Wald",
+    "osm": [
+     "w28982828",
+     "w5140719"
+    ],
+    "flaeche_ha": 223.6,
+    "zone_ha": 4.2,
+    "anteil_zone": 0.0186,
+    "lat": 51.4163,
+    "lon": 7.05526,
+    "bbox": [
+     7.0294,
+     51.40756,
+     7.07339,
+     51.42492
+    ]
+   },
+   {
+    "name": "Kruppwald",
+    "osm": [
+     "r19153150",
+     "w25718811",
+     "w338481358"
+    ],
+    "flaeche_ha": 154.0,
+    "zone_ha": 3.4,
+    "anteil_zone": 0.0222,
+    "lat": 51.40529,
+    "lon": 6.9974,
+    "bbox": [
+     6.98835,
+     51.39503,
+     7.01791,
+     51.42137
+    ]
+   },
+   {
+    "name": "Baldeneyer Wald",
+    "osm": [
+     "r7828840"
+    ],
+    "flaeche_ha": 114.9,
+    "zone_ha": 15.0,
+    "anteil_zone": 0.1306,
+    "lat": 51.40864,
+    "lon": 7.03076,
+    "bbox": [
+     7.00777,
+     51.40145,
+     7.05678,
+     51.41588
+    ]
+   },
+   {
+    "name": "Hammer Mark",
+    "osm": [
+     "r901009"
+    ],
+    "flaeche_ha": 113.9,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.023,
+    "lat": 51.37987,
+    "lon": 7.05631,
+    "bbox": [
+     7.04623,
+     51.37193,
+     7.06857,
+     51.38786
+    ]
+   },
+   {
+    "name": "Stadtwald",
+    "osm": [
+     "r11160337",
+     "r1746276",
+     "r8553734",
+     "w23680884",
+     "w29052475"
+    ],
+    "flaeche_ha": 76.7,
+    "zone_ha": 19.6,
+    "anteil_zone": 0.2557,
+    "lat": 51.41554,
+    "lon": 7.0154,
+    "bbox": [
+     7.00464,
+     51.41171,
+     7.02327,
+     51.4258
+    ]
+   },
+   {
+    "name": "Langenhorster Wald",
+    "osm": [
+     "r2166210"
+    ],
+    "flaeche_ha": 62.0,
+    "zone_ha": 6.0,
+    "anteil_zone": 0.0974,
+    "lat": 51.36657,
+    "lon": 7.04949,
+    "bbox": [
+     7.029,
+     51.36145,
+     7.05919,
+     51.37111
+    ]
+   },
+   {
+    "name": "Kettwiger Stadtwald",
+    "osm": [
+     "w357630776"
+    ],
+    "flaeche_ha": 53.2,
+    "zone_ha": 7.9,
+    "anteil_zone": 0.1484,
+    "lat": 51.37172,
+    "lon": 6.95893,
+    "bbox": [
+     6.95061,
+     51.36328,
+     6.96298,
+     51.38003
+    ]
+   },
+   {
+    "name": "Karnaper Wäldchen",
+    "osm": [
+     "w27878343"
+    ],
+    "flaeche_ha": 38.4,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.0397,
+    "lat": 51.52829,
+    "lon": 6.99535,
+    "bbox": [
+     6.9946,
+     51.52272,
+     7.01243,
+     51.53439
+    ]
+   },
+   {
+    "name": "Nachtigallental",
+    "osm": [
+     "r6065367"
+    ],
+    "flaeche_ha": 35.1,
+    "zone_ha": 2.3,
+    "anteil_zone": 0.0657,
+    "lat": 51.42803,
+    "lon": 6.97136,
+    "bbox": [
+     6.96514,
+     51.41818,
+     6.98037,
+     51.43799
+    ]
+   },
+   {
+    "name": "Volkswald",
+    "osm": [
+     "w26933434"
+    ],
+    "flaeche_ha": 28.7,
+    "zone_ha": 6.7,
+    "anteil_zone": 0.2329,
+    "lat": 51.38118,
+    "lon": 7.0226,
+    "bbox": [
+     7.01752,
+     51.37704,
+     7.03584,
+     51.38551
+    ]
+   },
+   {
+    "name": "Beckmannsbusch",
+    "osm": [
+     "r3589287"
+    ],
+    "flaeche_ha": 26.8,
+    "zone_ha": 4.2,
+    "anteil_zone": 0.1559,
+    "lat": 51.41759,
+    "lon": 6.98527,
+    "bbox": [
+     6.98052,
+     51.41257,
+     6.9937,
+     51.4227
+    ]
+   },
+   {
+    "name": "Bredeneyer Gemeindewald",
+    "osm": [
+     "w32344229"
+    ],
+    "flaeche_ha": 23.9,
+    "zone_ha": 5.4,
+    "anteil_zone": 0.2268,
+    "lat": 51.4064,
+    "lon": 6.98609,
+    "bbox": [
+     6.98168,
+     51.40248,
+     6.99265,
+     51.41026
+    ]
+   },
+   {
+    "name": "NSG Wälder bei Hugenpoet und Landsberg",
+    "osm": [
+     "r3445171"
+    ],
+    "flaeche_ha": 22.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0001,
+    "lat": 51.35656,
+    "lon": 6.92618,
+    "bbox": [
+     6.91899,
+     51.34833,
+     6.93114,
+     51.3602
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Zeche Zollverein",
+    "osm": [
+     "w35100527"
+    ],
+    "flaeche_ha": 75.1,
+    "zone_ha": 15.5,
+    "anteil_zone": 0.2058,
+    "lat": 51.48802,
+    "lon": 7.03948,
+    "bbox": [
+     7.02874,
+     51.48333,
+     7.04909,
+     51.49265
+    ]
+   },
+   {
+    "name": "Grugapark",
+    "osm": [
+     "r4760873"
+    ],
+    "flaeche_ha": 52.9,
+    "zone_ha": 31.2,
+    "anteil_zone": 0.5895,
+    "lat": 51.42735,
+    "lon": 6.9833,
+    "bbox": [
+     6.98026,
+     51.4225,
+     6.99825,
+     51.43238
+    ]
+   },
+   {
+    "name": "Hügelpark",
+    "osm": [
+     "w29320779"
+    ],
+    "flaeche_ha": 34.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.40812,
+    "lon": 7.00792,
+    "bbox": [
+     7.00298,
+     51.40371,
+     7.0134,
+     51.41253
+    ]
+   },
+   {
+    "name": "Schlosspark",
+    "osm": [
+     "r7989411"
+    ],
+    "flaeche_ha": 31.4,
+    "zone_ha": 11.1,
+    "anteil_zone": 0.3555,
+    "lat": 51.46616,
+    "lon": 6.93814,
+    "bbox": [
+     6.93133,
+     51.46247,
+     6.94367,
+     51.46978
+    ]
+   },
+   {
+    "name": "Krupp-Park",
+    "osm": [
+     "w170320391",
+     "w62183022"
+    ],
+    "flaeche_ha": 23.5,
+    "zone_ha": 13.9,
+    "anteil_zone": 0.589,
+    "lat": 51.45657,
+    "lon": 6.98793,
+    "bbox": [
+     6.98315,
+     51.45397,
+     6.99051,
+     51.46598
+    ]
+   },
+   {
+    "name": "Gleispark Frintrop",
+    "osm": [
+     "w28638675"
+    ],
+    "flaeche_ha": 17.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0012,
+    "lat": 51.48783,
+    "lon": 6.90848,
+    "bbox": [
+     6.90221,
+     51.4863,
+     6.9148,
+     51.48919
+    ]
+   },
+   {
+    "name": "Segerothpark",
+    "osm": [
+     "w28607940",
+     "w28608841"
+    ],
+    "flaeche_ha": 15.3,
+    "zone_ha": 5.4,
+    "anteil_zone": 0.3556,
+    "lat": 51.46939,
+    "lon": 6.99973,
+    "bbox": [
+     6.99594,
+     51.46527,
+     7.00258,
+     51.47167
+    ]
+   },
+   {
+    "name": "Emscherpark",
+    "osm": [
+     "r4806849"
+    ],
+    "flaeche_ha": 13.6,
+    "zone_ha": 7.7,
+    "anteil_zone": 0.5648,
+    "lat": 51.51787,
+    "lon": 7.01481,
+    "bbox": [
+     7.00671,
+     51.51457,
+     7.01976,
+     51.5209
+    ]
+   },
+   {
+    "name": "Kaiser-Wilhelm-Park",
+    "osm": [
+     "w28502088"
+    ],
+    "flaeche_ha": 12.7,
+    "zone_ha": 11.1,
+    "anteil_zone": 0.8739,
+    "lat": 51.49051,
+    "lon": 7.01347,
+    "bbox": [
+     7.0102,
+     51.48715,
+     7.01588,
+     51.49387
+    ]
+   },
+   {
+    "name": "Volksgarten",
+    "osm": [
+     "w25586153",
+     "w25658337"
+    ],
+    "flaeche_ha": 11.5,
+    "zone_ha": 8.8,
+    "anteil_zone": 0.7674,
+    "lat": 51.46977,
+    "lon": 7.09181,
+    "bbox": [
+     7.08813,
+     51.46513,
+     7.09498,
+     51.47184
+    ]
+   },
+   {
+    "name": "Stadtgarten Essen",
+    "osm": [
+     "w25210794"
+    ],
+    "flaeche_ha": 10.2,
+    "zone_ha": 6.2,
+    "anteil_zone": 0.6105,
+    "lat": 51.44553,
+    "lon": 7.01231,
+    "bbox": [
+     7.00893,
+     51.44293,
+     7.01375,
+     51.44807
+    ]
+   },
+   {
+    "name": "Abenteuerpark",
+    "osm": [
+     "w35694166"
+    ],
+    "flaeche_ha": 8.5,
+    "zone_ha": 3.1,
+    "anteil_zone": 0.3648,
+    "lat": 51.43498,
+    "lon": 7.12029,
+    "bbox": [
+     7.11313,
+     51.43236,
+     7.12239,
+     51.43731
+    ]
+   },
+   {
+    "name": "Zeche Carl",
+    "osm": [
+     "w35435017"
+    ],
+    "flaeche_ha": 7.9,
+    "zone_ha": 5.0,
+    "anteil_zone": 0.6369,
+    "lat": 51.49604,
+    "lon": 7.01323,
+    "bbox": [
+     7.01024,
+     51.49437,
+     7.01649,
+     51.49767
+    ]
+   },
+   {
+    "name": "Ludwig-Kessing-Park",
+    "osm": [
+     "w33116445"
+    ],
+    "flaeche_ha": 6.6,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.4779,
+    "lat": 51.43383,
+    "lon": 7.08337,
+    "bbox": [
+     7.08219,
+     51.43159,
+     7.08647,
+     51.43615
+    ]
+   },
+   {
+    "name": "Siepental",
+    "osm": [
+     "w36725291"
+    ],
+    "flaeche_ha": 6.5,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.4917,
+    "lat": 51.44039,
+    "lon": 7.05111,
+    "bbox": [
+     7.04272,
+     51.43667,
+     7.05391,
+     51.44412
+    ]
+   },
+   {
+    "name": "Park am Läppkesmühlenbach",
+    "osm": [
+     "w1175770227"
+    ],
+    "flaeche_ha": 6.0,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.0444,
+    "lat": 51.47856,
+    "lon": 6.89753,
+    "bbox": [
+     6.89582,
+     51.4759,
+     6.90179,
+     51.48122
+    ]
+   },
+   {
+    "name": "Brehminsel",
+    "osm": [
+     "w24454529"
+    ],
+    "flaeche_ha": 5.8,
+    "zone_ha": 5.4,
+    "anteil_zone": 0.9224,
+    "lat": 51.39035,
+    "lon": 6.99858,
+    "bbox": [
+     6.99732,
+     51.38788,
+     6.99987,
+     51.39272
+    ]
+   },
+   {
+    "name": "Gervinuspark",
+    "osm": [
+     "w25382754"
+    ],
+    "flaeche_ha": 5.0,
+    "zone_ha": 4.8,
+    "anteil_zone": 0.9527,
+    "lat": 51.45107,
+    "lon": 6.96944,
+    "bbox": [
+     6.96765,
+     51.44982,
+     6.97197,
+     51.4522
+    ]
+   },
+   {
+    "name": "Stadtgarten",
+    "osm": [
+     "w27046970",
+     "w28678995"
+    ],
+    "flaeche_ha": 4.4,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.5883,
+    "lat": 51.4441,
+    "lon": 7.06741,
+    "bbox": [
+     7.06427,
+     51.443,
+     7.06929,
+     51.44539
+    ]
+   },
+   {
+    "name": "Spindelmannpark",
+    "osm": [
+     "w49682269"
+    ],
+    "flaeche_ha": 4.3,
+    "zone_ha": 3.9,
+    "anteil_zone": 0.9024,
+    "lat": 51.47648,
+    "lon": 7.00344,
+    "bbox": [
+     7.00139,
+     51.47541,
+     7.00574,
+     51.47761
+    ]
+   },
+   {
+    "name": "Waldpark",
+    "osm": [
+     "w598082697"
+    ],
+    "flaeche_ha": 3.9,
+    "zone_ha": 3.9,
+    "anteil_zone": 1.0,
+    "lat": 51.42066,
+    "lon": 7.0162,
+    "bbox": [
+     7.01459,
+     51.41936,
+     7.0186,
+     51.42195
+    ]
+   },
+   {
+    "name": "Am Hallo Park",
+    "osm": [
+     "w486659253"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 3.6,
+    "anteil_zone": 0.9845,
+    "lat": 51.47664,
+    "lon": 7.05044,
+    "bbox": [
+     7.04668,
+     51.47548,
+     7.05276,
+     51.47793
+    ]
+   },
+   {
+    "name": "Bürgerpark Kuhlhoff",
+    "osm": [
+     "w28957630"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 3.3,
+    "anteil_zone": 0.9247,
+    "lat": 51.50559,
+    "lon": 7.0283,
+    "bbox": [
+     7.02683,
+     51.50422,
+     7.03014,
+     51.50675
+    ]
+   },
+   {
+    "name": "Helenenpark",
+    "osm": [
+     "w28925900"
+    ],
+    "flaeche_ha": 3.3,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.6612,
+    "lat": 51.48018,
+    "lon": 7.02116,
+    "bbox": [
+     7.01913,
+     51.47848,
+     7.02355,
+     51.48203
+    ]
+   },
+   {
+    "name": "Universitätsviertel",
+    "osm": [
+     "r897262"
+    ],
+    "flaeche_ha": 3.2,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.5422,
+    "lat": 51.46126,
+    "lon": 7.00806,
+    "bbox": [
+     7.00351,
+     51.45975,
+     7.01195,
+     51.46277
+    ]
+   },
+   {
+    "name": "Volkspark Bergeborbeck",
+    "osm": [
+     "w50882060"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.4755,
+    "lat": 51.48104,
+    "lon": 6.98114,
+    "bbox": [
+     6.97866,
+     51.47982,
+     6.98226,
+     51.48224
+    ]
+   },
+   {
+    "name": "Jahnplatz",
+    "osm": [
+     "w235374179"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.9828,
+    "lat": 51.46791,
+    "lon": 6.97759,
+    "bbox": [
+     6.97602,
+     51.46702,
+     6.98116,
+     51.46878
+    ]
+   },
+   {
+    "name": "Bürger- u. Handwerkerpark Zeche Zollverein 3/7/10",
+    "osm": [
+     "w44129368"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.6902,
+    "lat": 51.48896,
+    "lon": 7.06345,
+    "bbox": [
+     7.0607,
+     51.48809,
+     7.065,
+     51.4898
+    ]
+   },
+   {
+    "name": "Haumannplatz",
+    "osm": [
+     "w26545588"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 2.1,
+    "anteil_zone": 0.9975,
+    "lat": 51.43382,
+    "lon": 6.99584,
+    "bbox": [
+     6.99341,
+     51.43281,
+     6.99726,
+     51.4348
+    ]
+   },
+   {
+    "name": "Südpark",
+    "osm": [
+     "w28661767"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.7825,
+    "lat": 51.45634,
+    "lon": 7.07293,
+    "bbox": [
+     7.07082,
+     51.45567,
+     7.07469,
+     51.45714
+    ]
+   }
+  ],
+  "see": [
+   {
+    "name": "Baldeneysee",
+    "osm": [
+     "r12686910"
+    ],
+    "flaeche_ha": 249.4,
+    "zone_ha": 17.1,
+    "anteil_zone": 0.0685,
+    "lat": 51.3973,
+    "lon": 7.05339,
+    "bbox": [
+     7.00052,
+     51.38533,
+     7.07973,
+     51.40884
+    ]
+   },
+   {
+    "name": "Kettwiger Stausee",
+    "osm": [
+     "w25332287"
+    ],
+    "flaeche_ha": 19.3,
+    "zone_ha": 4.5,
+    "anteil_zone": 0.2334,
+    "lat": 51.35936,
+    "lon": 6.9383,
+    "bbox": [
+     6.93548,
+     51.35728,
+     6.95414,
+     51.36182
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r10456788",
+     "r12686869",
+     "r2237857",
+     "r22710",
+     "r2342805",
+     "r23545",
+     "r29367",
+     "w111017053",
+     "w121590402",
+     "w163721895",
+     "w254366731",
+     "w26534364",
+     "w28151275",
+     "w28151442",
+     "w31266677",
+     "w56187921",
+     "w798937117",
+     "w798937118"
+    ],
+    "flaeche_ha": 82.1,
+    "zone_ha": 4.8,
+    "anteil_zone": 0.059,
+    "lat": 51.42014,
+    "lon": 7.06842,
+    "bbox": [
+     7.05518,
+     51.39673,
+     7.13867,
+     51.44447
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Universität Duisburg-Essen",
+    "osm": [
+     "r5887366"
+    ],
+    "flaeche_ha": 16.2,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.0786,
+    "lat": 51.46425,
+    "lon": 7.00574,
+    "bbox": [
+     7.00167,
+     51.46199,
+     7.01168,
+     51.4662
+    ]
+   },
+   {
+    "name": "Universitätsklinikum Essen",
+    "osm": [
+     "w385832037"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.43334,
+    "lon": 6.98583,
+    "bbox": [
+     6.98412,
+     51.43239,
+     6.98757,
+     51.43428
+    ]
+   },
+   {
+    "name": "Folkwang Universität der Künste",
+    "osm": [
+     "w961623658"
+    ],
+    "flaeche_ha": 1.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0003,
+    "lat": 51.38706,
+    "lon": 7.00488,
+    "bbox": [
+     7.00315,
+     51.38625,
+     7.00639,
+     51.38788
+    ]
+   },
+   {
+    "name": "Haus des Handwerks",
+    "osm": [
+     "w79858112"
+    ],
+    "flaeche_ha": 1.7,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.6455,
+    "lat": 51.47066,
+    "lon": 7.01937,
+    "bbox": [
+     7.01804,
+     51.47002,
+     7.02076,
+     51.47121
+    ]
+   },
+   {
+    "name": "Universität Duisburg-Essen - Campus Essen-Schützenbahn",
+    "osm": [
+     "w55852460"
+    ],
+    "flaeche_ha": 1.4,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0566,
+    "lat": 51.46173,
+    "lon": 7.01706,
+    "bbox": [
+     7.01578,
+     51.46117,
+     7.01824,
+     51.46244
+    ]
+   },
+   {
+    "name": "Robert-Schmidt-Berufskolleg",
+    "osm": [
+     "w35383455"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.2745,
+    "lat": 51.44294,
+    "lon": 7.02609,
+    "bbox": [
+     7.02535,
+     51.44241,
+     7.02742,
+     51.44354
+    ]
+   },
+   {
+    "name": "Helen-Keller-Schule",
+    "osm": [
+     "w35999396",
+     "w55832221"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.6368,
+    "lat": 51.46945,
+    "lon": 7.01945,
+    "bbox": [
+     7.01856,
+     51.46874,
+     7.02036,
+     51.4699
+    ]
+   },
+   {
+    "name": "Berufskolleg West",
+    "osm": [
+     "w736229345"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.3371,
+    "lat": 51.45281,
+    "lon": 6.98112,
+    "bbox": [
+     6.97921,
+     51.45219,
+     6.98213,
+     51.45339
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Arboretum Trautmann",
+    "osm": [
+     "w408369186"
+    ],
+    "flaeche_ha": 2.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.45116,
+    "lon": 6.92209,
+    "bbox": [
+     6.92019,
+     51.45019,
+     6.92585,
+     51.45218
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Messeplatz",
+    "osm": [
+     "w543252980"
+    ],
+    "flaeche_ha": 1.7,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0643,
+    "lat": 51.43051,
+    "lon": 6.99959,
+    "bbox": [
+     6.99848,
+     51.42986,
+     7.00087,
+     51.43131
+    ]
+   },
+   {
+    "name": "Isenbergplatz",
+    "osm": [
+     "w1433556059"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.9994,
+    "lat": 51.44328,
+    "lon": 7.01586,
+    "bbox": [
+     7.01533,
+     51.44287,
+     7.01649,
+     51.4437
+    ]
+   },
+   {
+    "name": "Ehrenhof Zollverein",
+    "osm": [
+     "w1529021874"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.48647,
+    "lon": 7.04476,
+    "bbox": [
+     7.04428,
+     51.48627,
+     7.04525,
+     51.48668
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 590.8,
+   "zone_ha": 113.3,
+   "anteil_zone": 0.1918
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 30.0,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 51.44195,
+  "lon": 7.04487,
+  "bbox": [
+   6.89176,
+   51.34649,
+   7.1406,
+   51.53638
+  ]
+ },
+ "orte": [
+  {
+   "name": "Limbecker und Kettwiger Straße",
+   "osm": [
+    "w1030678272",
+    "w1031029638",
+    "w1031029639",
+    "w1031029640",
+    "w44100509",
+    "w44100662",
+    "w51255387",
+    "w51255388",
+    "w51360826",
+    "w51360827",
+    "w5781936",
+    "w6070874",
+    "w610901856",
+    "w7822756",
+    "w892744546",
+    "w91645813"
+   ],
+   "flaeche_ha": 1.77,
+   "bbox": [
+    7.00691,
+    51.45295,
+    7.01368,
+    51.45819
+   ],
+   "anteil_zone": 0.1905,
+   "art": "flaeche",
+   "lat": 51.45562,
+   "lon": 7.01289
+  },
+  {
+   "name": "Kennedyplatz",
+   "osm": [
+    "r544582",
+    "w1051917628",
+    "w121539786",
+    "w121539790",
+    "w121539802",
+    "w28217397",
+    "w5780358",
+    "w607029856"
+   ],
+   "flaeche_ha": 1.21,
+   "bbox": [
+    7.01022,
+    51.45567,
+    7.01179,
+    51.45714
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 51.45641,
+   "lon": 7.01102
+  },
+  {
+   "name": "Willy-Brandt-Platz",
+   "osm": [
+    "r299474",
+    "w1030976739",
+    "w1030976740",
+    "w1062167309",
+    "w1062167310",
+    "w1062167311",
+    "w1062167312",
+    "w1062167313",
+    "w1062167314",
+    "w1062167315",
+    "w1062167316",
+    "w1062167319",
+    "w336124647",
+    "w606398945",
+    "w663953446",
+    "w663953447",
+    "w663953448",
+    "w663953449",
+    "w98952783",
+    "w98952790",
+    "w999728137",
+    "w999728138"
+   ],
+   "flaeche_ha": 0.62,
+   "bbox": [
+    7.01226,
+    51.45197,
+    7.0136,
+    51.45315
+   ],
+   "anteil_zone": 0.9098,
+   "art": "flaeche",
+   "lat": 51.45254,
+   "lon": 7.01291
+  },
+  {
+   "name": "Burgplatz",
+   "osm": [
+    "r9360861",
+    "w1046340369",
+    "w1046340370",
+    "w1046340371",
+    "w1046340372",
+    "w1046340374",
+    "w1046340375",
+    "w1046340376",
+    "w1046340377",
+    "w1046340378",
+    "w1046340379",
+    "w1046340380",
+    "w1046340382",
+    "w27362759",
+    "w27362771",
+    "w426282531",
+    "w673482996"
+   ],
+   "flaeche_ha": 0.53,
+   "bbox": [
+    7.01291,
+    51.45501,
+    7.01501,
+    51.45557
+   ],
+   "anteil_zone": 0.1303,
+   "art": "flaeche",
+   "lat": 51.45531,
+   "lon": 7.01452
+  },
+  {
+   "name": "Hirschlandplatz",
+   "osm": [
+    "r15608734",
+    "w1154742178",
+    "w35635705",
+    "w35635807",
+    "w574108100",
+    "w5781944"
+   ],
+   "flaeche_ha": 0.36,
+   "bbox": [
+    7.01042,
+    51.45349,
+    7.01151,
+    51.45448
+   ],
+   "anteil_zone": 0.9419,
+   "art": "flaeche",
+   "lat": 51.45399,
+   "lon": 7.01112
+  },
+  {
+   "name": "Rheinischer Platz",
+   "osm": [
+    "r13409982"
+   ],
+   "flaeche_ha": 0.45,
+   "bbox": [
+    7.01208,
+    51.46064,
+    7.01389,
+    51.46189
+   ],
+   "anteil_zone": 0.8969,
+   "art": "flaeche",
+   "lat": 51.46128,
+   "lon": 7.01368
+  },
+  {
+   "name": "Viehofer Straße",
+   "osm": [
+    "w1030664859",
+    "w1030673097",
+    "w1030673098",
+    "w1031027467",
+    "w22972673",
+    "w27376658",
+    "w610901858",
+    "w91645833"
+   ],
+   "flaeche_ha": 0.82,
+   "bbox": [
+    7.01258,
+    51.45798,
+    7.01412,
+    51.46189
+   ],
+   "anteil_zone": 0.3651,
+   "art": "linie",
+   "lat": 51.45933,
+   "lon": 7.01351
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "osm": "2026-11-25T21:22:46Z",
+  "tags_json": 6,
+  "quelle": "lokaler Lauf auf dem Auszug des Regierungsbezirks Düsseldorf (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  51.455,
+  7.012
+ ],
+ "og_zoom": 12.6,
+ "bilder": [
+  [
+   "park",
+   "Grugapark",
+   "grugapark"
+  ],
+  [
+   "park",
+   "Zeche Zollverein",
+   "zollverein"
+  ],
+  [
+   "see",
+   "Baldeneysee",
+   "baldeneysee"
+  ],
+  [
+   "ort",
+   "Limbecker und Kettwiger Straße",
+   "fussgaengerzone"
+  ],
+  [
+   "park",
+   "Segerothpark",
+   "segerothpark"
+  ],
+  [
+   "park",
+   "Krupp-Park",
+   "krupp-park"
+  ]
+ ]
+}

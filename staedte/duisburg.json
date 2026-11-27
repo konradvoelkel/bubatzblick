@@ -1,0 +1,1691 @@
+{
+ "stadtflaeche_osm_km2": 232.79,
+ "wald": {
+  "flaeche_km2": 29.0,
+  "anteil_stadt": 0.1246,
+  "anteil_zone": 0.1109,
+  "anteil_zone_ohne_wald": 0.153
+ },
+ "zonen_km2": 34.4,
+ "anteil": 0.14778,
+ "kategorien": {
+  "sports": {
+   "objekte": 759,
+   "zonen_km2": 18.82
+  },
+  "playground": {
+   "objekte": 466,
+   "zonen_km2": 9.9
+  },
+  "school": {
+   "objekte": 157,
+   "zonen_km2": 8.04
+  },
+  "kindergarten": {
+   "objekte": 147,
+   "zonen_km2": 4.2
+  },
+  "youth": {
+   "objekte": 35,
+   "zonen_km2": 0.78
+  },
+  "childcare": {
+   "objekte": 21,
+   "zonen_km2": 0.37
+  },
+  "cannabis_club": {
+   "objekte": 0,
+   "zonen_km2": 0.0
+  }
+ },
+ "objekte_gesamt": 1585,
+ "merkmale": {
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r11811879",
+     "r13166884",
+     "r17433787",
+     "w143657090",
+     "w23288423",
+     "w320320750",
+     "w320320751",
+     "w35814119",
+     "w59608823"
+    ],
+    "flaeche_ha": 1187.5,
+    "zone_ha": 5.9,
+    "anteil_zone": 0.005,
+    "lat": 51.44781,
+    "lon": 6.75565,
+    "bbox": [
+     6.6438,
+     51.33222,
+     6.81585,
+     51.56235
+    ]
+   },
+   {
+    "name": "Werkshafen Schwelgern",
+    "osm": [
+     "w4088508"
+    ],
+    "flaeche_ha": 13.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.50742,
+    "lon": 6.72926,
+    "bbox": [
+     6.72487,
+     51.50237,
+     6.73335,
+     51.51164
+    ]
+   },
+   {
+    "name": "Südhafen Walsum",
+    "osm": [
+     "w4088507"
+    ],
+    "flaeche_ha": 6.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.51737,
+    "lon": 6.7213,
+    "bbox": [
+     6.71743,
+     51.51569,
+     6.72605,
+     51.51905
+    ]
+   },
+   {
+    "name": "Hafen Mevissen",
+    "osm": [
+     "w4088515"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.43353,
+    "lon": 6.71111,
+    "bbox": [
+     6.71007,
+     51.43106,
+     6.71238,
+     51.43603
+    ]
+   },
+   {
+    "name": "Hansegracht",
+    "osm": [
+     "w24827208"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.5488,
+    "lat": 51.43977,
+    "lon": 6.77034,
+    "bbox": [
+     6.76988,
+     51.4393,
+     6.77054,
+     51.44076
+    ]
+   },
+   {
+    "name": "Speichergracht",
+    "osm": [
+     "w25120006"
+    ],
+    "flaeche_ha": 0.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0099,
+    "lat": 51.44021,
+    "lon": 6.77152,
+    "bbox": [
+     6.77117,
+     51.43952,
+     6.77185,
+     51.44096
+    ]
+   },
+   {
+    "name": "Holzgracht",
+    "osm": [
+     "w25120040"
+    ],
+    "flaeche_ha": 0.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.44079,
+    "lon": 6.77287,
+    "bbox": [
+     6.77265,
+     51.44051,
+     6.77304,
+     51.44119
+    ]
+   }
+  ],
+  "see": [
+   {
+    "name": "Lohheidersee",
+    "osm": [
+     "r139337"
+    ],
+    "flaeche_ha": 65.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0027,
+    "lat": 51.5058,
+    "lon": 6.6602,
+    "bbox": [
+     6.64451,
+     51.50064,
+     6.66571,
+     51.51067
+    ]
+   },
+   {
+    "name": "Toeppersee",
+    "osm": [
+     "r22054928"
+    ],
+    "flaeche_ha": 52.1,
+    "zone_ha": 4.0,
+    "anteil_zone": 0.0775,
+    "lat": 51.40145,
+    "lon": 6.67737,
+    "bbox": [
+     6.6698,
+     51.39678,
+     6.68936,
+     51.4062
+    ]
+   },
+   {
+    "name": "Baggersee Laakmannshof",
+    "osm": [
+     "r139338"
+    ],
+    "flaeche_ha": 50.3,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.033,
+    "lat": 51.50398,
+    "lon": 6.63537,
+    "bbox": [
+     6.63205,
+     51.49969,
+     6.65002,
+     51.50851
+    ]
+   },
+   {
+    "name": "Rahmer See",
+    "osm": [
+     "r1674950"
+    ],
+    "flaeche_ha": 43.9,
+    "zone_ha": 7.3,
+    "anteil_zone": 0.1672,
+    "lat": 51.35581,
+    "lon": 6.76601,
+    "bbox": [
+     6.76248,
+     51.35189,
+     6.77457,
+     51.36008
+    ]
+   },
+   {
+    "name": "Wildförstersee",
+    "osm": [
+     "r1985658"
+    ],
+    "flaeche_ha": 38.2,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.012,
+    "lat": 51.37614,
+    "lon": 6.79581,
+    "bbox": [
+     6.78996,
+     51.3714,
+     6.80003,
+     51.38086
+    ]
+   },
+   {
+    "name": "Uettelsheimer See",
+    "osm": [
+     "r153789"
+    ],
+    "flaeche_ha": 36.6,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.0823,
+    "lat": 51.46537,
+    "lon": 6.67891,
+    "bbox": [
+     6.67161,
+     51.45975,
+     6.6852,
+     51.47091
+    ]
+   },
+   {
+    "name": "Regattabahn",
+    "osm": [
+     "w4798814"
+    ],
+    "flaeche_ha": 27.4,
+    "zone_ha": 9.8,
+    "anteil_zone": 0.3579,
+    "lat": 51.40423,
+    "lon": 6.79146,
+    "bbox": [
+     6.78525,
+     51.39458,
+     6.7987,
+     51.41271
+    ]
+   },
+   {
+    "name": "Haubachsee",
+    "osm": [
+     "r1985657"
+    ],
+    "flaeche_ha": 24.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.37456,
+    "lon": 6.8042,
+    "bbox": [
+     6.79623,
+     51.37051,
+     6.80894,
+     51.37843
+    ]
+   },
+   {
+    "name": "Masurensee",
+    "osm": [
+     "w4798817"
+    ],
+    "flaeche_ha": 23.7,
+    "zone_ha": 8.3,
+    "anteil_zone": 0.3506,
+    "lat": 51.38613,
+    "lon": 6.80204,
+    "bbox": [
+     6.79613,
+     51.3821,
+     6.80591,
+     51.39005
+    ]
+   },
+   {
+    "name": "Wambachsee",
+    "osm": [
+     "w4798818"
+    ],
+    "flaeche_ha": 22.9,
+    "zone_ha": 3.6,
+    "anteil_zone": 0.1571,
+    "lat": 51.38648,
+    "lon": 6.79231,
+    "bbox": [
+     6.78626,
+     51.38412,
+     6.79918,
+     51.38881
+    ]
+   },
+   {
+    "name": "Wolfssee",
+    "osm": [
+     "w310438120"
+    ],
+    "flaeche_ha": 19.0,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.0829,
+    "lat": 51.38147,
+    "lon": 6.7994,
+    "bbox": [
+     6.79439,
+     51.37892,
+     6.80303,
+     51.38383
+    ]
+   },
+   {
+    "name": "Böllertsee",
+    "osm": [
+     "w4798819"
+    ],
+    "flaeche_ha": 15.0,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.0931,
+    "lat": 51.38199,
+    "lon": 6.79079,
+    "bbox": [
+     6.78756,
+     51.37988,
+     6.7945,
+     51.38431
+    ]
+   },
+   {
+    "name": "Innenhafen",
+    "osm": [
+     "w185529303",
+     "w208150719"
+    ],
+    "flaeche_ha": 13.7,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.2042,
+    "lat": 51.44143,
+    "lon": 6.77203,
+    "bbox": [
+     6.75252,
+     51.43364,
+     6.77696,
+     51.44248
+    ]
+   },
+   {
+    "name": "Barbarasee",
+    "osm": [
+     "r1120190"
+    ],
+    "flaeche_ha": 13.1,
+    "zone_ha": 7.4,
+    "anteil_zone": 0.566,
+    "lat": 51.40988,
+    "lon": 6.79088,
+    "bbox": [
+     6.78906,
+     51.40645,
+     6.7945,
+     51.41323
+    ]
+   },
+   {
+    "name": "Außenhafen",
+    "osm": [
+     "w6139014"
+    ],
+    "flaeche_ha": 12.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.42928,
+    "lon": 6.74372,
+    "bbox": [
+     6.7261,
+     51.42507,
+     6.75347,
+     51.43376
+    ]
+   },
+   {
+    "name": "Kruppsee",
+    "osm": [
+     "r12424976"
+    ],
+    "flaeche_ha": 12.3,
+    "zone_ha": 2.3,
+    "anteil_zone": 0.1897,
+    "lat": 51.38813,
+    "lon": 6.69733,
+    "bbox": [
+     6.69539,
+     51.3854,
+     6.70421,
+     51.39089
+    ]
+   },
+   {
+    "name": "Tegge",
+    "osm": [
+     "r22054929"
+    ],
+    "flaeche_ha": 11.3,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.1767,
+    "lat": 51.4058,
+    "lon": 6.67331,
+    "bbox": [
+     6.6702,
+     51.40362,
+     6.6759,
+     51.40785
+    ]
+   },
+   {
+    "name": "Großenbaumer See",
+    "osm": [
+     "w4797108"
+    ],
+    "flaeche_ha": 8.3,
+    "zone_ha": 2.3,
+    "anteil_zone": 0.2804,
+    "lat": 51.36112,
+    "lon": 6.77396,
+    "bbox": [
+     6.77091,
+     51.35951,
+     6.77673,
+     51.36281
+    ]
+   },
+   {
+    "name": "Hafen Rheinhausen",
+    "osm": [
+     "w4812588"
+    ],
+    "flaeche_ha": 8.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.39621,
+    "lon": 6.73646,
+    "bbox": [
+     6.73125,
+     51.39121,
+     6.74322,
+     51.40105
+    ]
+   },
+   {
+    "name": "Bertasee",
+    "osm": [
+     "w4798813"
+    ],
+    "flaeche_ha": 6.8,
+    "zone_ha": 6.7,
+    "anteil_zone": 0.986,
+    "lat": 51.40862,
+    "lon": 6.78516,
+    "bbox": [
+     6.78159,
+     51.40653,
+     6.78809,
+     51.41061
+    ]
+   },
+   {
+    "name": "Remberger See",
+    "osm": [
+     "w4797114"
+    ],
+    "flaeche_ha": 6.7,
+    "zone_ha": 5.3,
+    "anteil_zone": 0.788,
+    "lat": 51.3662,
+    "lon": 6.75927,
+    "bbox": [
+     6.75739,
+     51.36454,
+     6.76602,
+     51.36798
+    ]
+   },
+   {
+    "name": "Mühlenbergsee",
+    "osm": [
+     "w4801992"
+    ],
+    "flaeche_ha": 5.6,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0362,
+    "lat": 51.39247,
+    "lon": 6.6855,
+    "bbox": [
+     6.67999,
+     51.39088,
+     6.68686,
+     51.39398
+    ]
+   },
+   {
+    "name": "Die Roos",
+    "osm": [
+     "w4812599"
+    ],
+    "flaeche_ha": 5.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.37486,
+    "lon": 6.68013,
+    "bbox": [
+     6.67771,
+     51.37417,
+     6.69058,
+     51.3757
+    ]
+   },
+   {
+    "name": "Parallelkanal",
+    "osm": [
+     "w26716965"
+    ],
+    "flaeche_ha": 4.6,
+    "zone_ha": 2.3,
+    "anteil_zone": 0.5116,
+    "lat": 51.40151,
+    "lon": 6.79148,
+    "bbox": [
+     6.7877,
+     51.39624,
+     6.79567,
+     51.40695
+    ]
+   },
+   {
+    "name": "Margaretensee",
+    "osm": [
+     "r3186597"
+    ],
+    "flaeche_ha": 4.1,
+    "zone_ha": 4.1,
+    "anteil_zone": 1.0,
+    "lat": 51.40665,
+    "lon": 6.78168,
+    "bbox": [
+     6.78035,
+     51.40536,
+     6.7845,
+     51.40797
+    ]
+   },
+   {
+    "name": "Beeckerwerther See",
+    "osm": [
+     "w26300029"
+    ],
+    "flaeche_ha": 4.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.47659,
+    "lon": 6.71328,
+    "bbox": [
+     6.70889,
+     51.47534,
+     6.71604,
+     51.47779
+    ]
+   },
+   {
+    "name": "Teich am Lohheider See",
+    "osm": [
+     "w23492391",
+     "w23492396",
+     "w23492400",
+     "w23492407"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.50969,
+    "lon": 6.65836,
+    "bbox": [
+     6.65563,
+     51.50691,
+     6.65995,
+     51.51044
+    ]
+   },
+   {
+    "name": "Essenberger See",
+    "osm": [
+     "w4779597"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.44136,
+    "lon": 6.69816,
+    "bbox": [
+     6.69631,
+     51.4404,
+     6.70004,
+     51.44233
+    ]
+   },
+   {
+    "name": "Blauer See",
+    "osm": [
+     "w4798816"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.4381,
+    "lat": 51.39456,
+    "lon": 6.80804,
+    "bbox": [
+     6.80662,
+     51.39232,
+     6.80949,
+     51.39672
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Averdunkplatz",
+    "osm": [
+     "r10550066"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0957,
+    "lat": 51.43254,
+    "lon": 6.77235,
+    "bbox": [
+     6.7716,
+     51.43193,
+     6.77319,
+     51.43312
+    ]
+   },
+   {
+    "name": "Alfred-Hitz-Platz",
+    "osm": [
+     "w173177884"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.5,
+    "anteil_zone": 1.0,
+    "lat": 51.41144,
+    "lon": 6.68589,
+    "bbox": [
+     6.68497,
+     51.41089,
+     6.68651,
+     51.41191
+    ]
+   },
+   {
+    "name": "Friedrich-Ebert-Platz",
+    "osm": [
+     "w24517675"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.52564,
+    "lon": 6.7424,
+    "bbox": [
+     6.74215,
+     51.52516,
+     6.74264,
+     51.52613
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Erholungsgebiet Toeppersee",
+    "osm": [
+     "w34133164"
+    ],
+    "flaeche_ha": 167.2,
+    "zone_ha": 42.0,
+    "anteil_zone": 0.2512,
+    "lat": 51.40325,
+    "lon": 6.67855,
+    "bbox": [
+     6.66558,
+     51.39598,
+     6.69193,
+     51.41053
+    ]
+   },
+   {
+    "name": "Revierpark Mattlerbusch",
+    "osm": [
+     "w24960083"
+    ],
+    "flaeche_ha": 49.4,
+    "zone_ha": 28.8,
+    "anteil_zone": 0.5822,
+    "lat": 51.51978,
+    "lon": 6.78048,
+    "bbox": [
+     6.77221,
+     51.51402,
+     6.7856,
+     51.52565
+    ]
+   },
+   {
+    "name": "Freizeitpark Hamborn",
+    "osm": [
+     "w127811854"
+    ],
+    "flaeche_ha": 33.6,
+    "zone_ha": 15.5,
+    "anteil_zone": 0.4616,
+    "lat": 51.51733,
+    "lon": 6.77242,
+    "bbox": [
+     6.76718,
+     51.51363,
+     6.77696,
+     51.52112
+    ]
+   },
+   {
+    "name": "Volkspark Rheinhausen",
+    "osm": [
+     "w28528126"
+    ],
+    "flaeche_ha": 32.9,
+    "zone_ha": 14.5,
+    "anteil_zone": 0.4404,
+    "lat": 51.4113,
+    "lon": 6.70168,
+    "bbox": [
+     6.69558,
+     51.40751,
+     6.70822,
+     51.4153
+    ]
+   },
+   {
+    "name": "Biegerpark",
+    "osm": [
+     "r2430622"
+    ],
+    "flaeche_ha": 30.7,
+    "zone_ha": 17.0,
+    "anteil_zone": 0.5534,
+    "lat": 51.37859,
+    "lon": 6.75301,
+    "bbox": [
+     6.74571,
+     51.37518,
+     6.75776,
+     51.38179
+    ]
+   },
+   {
+    "name": "Rheinpark",
+    "osm": [
+     "w35314651"
+    ],
+    "flaeche_ha": 27.3,
+    "zone_ha": 16.7,
+    "anteil_zone": 0.613,
+    "lat": 51.41237,
+    "lon": 6.74638,
+    "bbox": [
+     6.7389,
+     51.40719,
+     6.75235,
+     51.41754
+    ]
+   },
+   {
+    "name": "Stadtpark",
+    "osm": [
+     "w30992937"
+    ],
+    "flaeche_ha": 16.8,
+    "zone_ha": 12.3,
+    "anteil_zone": 0.7312,
+    "lat": 51.46004,
+    "lon": 6.76629,
+    "bbox": [
+     6.75946,
+     51.45798,
+     6.77099,
+     51.46219
+    ]
+   },
+   {
+    "name": "Rheinpromenade Wanheim",
+    "osm": [
+     "r3181392"
+    ],
+    "flaeche_ha": 16.4,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.1686,
+    "lat": 51.38973,
+    "lon": 6.74529,
+    "bbox": [
+     6.73623,
+     51.38522,
+     6.74787,
+     51.39428
+    ]
+   },
+   {
+    "name": "Zoo Duisburg",
+    "osm": [
+     "w475552300"
+    ],
+    "flaeche_ha": 15.6,
+    "zone_ha": 7.0,
+    "anteil_zone": 0.4515,
+    "lat": 51.43635,
+    "lon": 6.80933,
+    "bbox": [
+     6.80287,
+     51.43313,
+     6.81048,
+     51.43952
+    ]
+   },
+   {
+    "name": "Volkspark Schwelgern",
+    "osm": [
+     "w39405082"
+    ],
+    "flaeche_ha": 15.0,
+    "zone_ha": 9.7,
+    "anteil_zone": 0.65,
+    "lat": 51.50611,
+    "lon": 6.74473,
+    "bbox": [
+     6.74212,
+     51.50172,
+     6.74756,
+     51.51049
+    ]
+   },
+   {
+    "name": "Angerpark",
+    "osm": [
+     "w181422834"
+    ],
+    "flaeche_ha": 14.4,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.13,
+    "lat": 51.3764,
+    "lon": 6.73863,
+    "bbox": [
+     6.73329,
+     51.37406,
+     6.74229,
+     51.37881
+    ]
+   },
+   {
+    "name": "Iltispark",
+    "osm": [
+     "w45990865"
+    ],
+    "flaeche_ha": 14.1,
+    "zone_ha": 12.3,
+    "anteil_zone": 0.8723,
+    "lat": 51.50021,
+    "lon": 6.7954,
+    "bbox": [
+     6.78722,
+     51.49724,
+     6.79773,
+     51.50305
+    ]
+   },
+   {
+    "name": "Gewerbegebiet Friedrich-Park",
+    "osm": [
+     "w174668049"
+    ],
+    "flaeche_ha": 12.5,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.1637,
+    "lat": 51.51178,
+    "lon": 6.75051,
+    "bbox": [
+     6.74345,
+     51.51012,
+     6.75588,
+     51.51377
+    ]
+   },
+   {
+    "name": "Jubiläumshain",
+    "osm": [
+     "r5756839"
+    ],
+    "flaeche_ha": 12.2,
+    "zone_ha": 9.9,
+    "anteil_zone": 0.8117,
+    "lat": 51.51026,
+    "lon": 6.7668,
+    "bbox": [
+     6.76556,
+     51.50825,
+     6.77174,
+     51.51234
+    ]
+   },
+   {
+    "name": "Mercatorinsel",
+    "osm": [
+     "w35931140"
+    ],
+    "flaeche_ha": 10.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.45197,
+    "lon": 6.72745,
+    "bbox": [
+     6.72521,
+     51.44818,
+     6.73094,
+     51.45638
+    ]
+   },
+   {
+    "name": "Böninger Park",
+    "osm": [
+     "w152762413",
+     "w152762414"
+    ],
+    "flaeche_ha": 9.7,
+    "zone_ha": 6.8,
+    "anteil_zone": 0.7013,
+    "lat": 51.42142,
+    "lon": 6.76455,
+    "bbox": [
+     6.75867,
+     51.41926,
+     6.76708,
+     51.42255
+    ]
+   },
+   {
+    "name": "Lene-Reklat-Park",
+    "osm": [
+     "r21062211"
+    ],
+    "flaeche_ha": 9.5,
+    "zone_ha": 6.1,
+    "anteil_zone": 0.6398,
+    "lat": 51.40124,
+    "lon": 6.71407,
+    "bbox": [
+     6.7103,
+     51.39814,
+     6.72189,
+     51.40427
+    ]
+   },
+   {
+    "name": "Stadtwald",
+    "osm": [
+     "w225411920"
+    ],
+    "flaeche_ha": 9.0,
+    "zone_ha": 4.9,
+    "anteil_zone": 0.5481,
+    "lat": 51.48746,
+    "lon": 6.76136,
+    "bbox": [
+     6.7582,
+     51.48589,
+     6.76532,
+     51.48901
+    ]
+   },
+   {
+    "name": "Immanuel-Kant-Park",
+    "osm": [
+     "w129916275"
+    ],
+    "flaeche_ha": 7.0,
+    "zone_ha": 5.0,
+    "anteil_zone": 0.7098,
+    "lat": 51.42911,
+    "lon": 6.76665,
+    "bbox": [
+     6.76458,
+     51.42746,
+     6.76909,
+     51.43107
+    ]
+   },
+   {
+    "name": "Blücherpark",
+    "osm": [
+     "w208688448"
+    ],
+    "flaeche_ha": 6.0,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.4003,
+    "lat": 51.42195,
+    "lon": 6.74818,
+    "bbox": [
+     6.74696,
+     51.41969,
+     6.75097,
+     51.42424
+    ]
+   },
+   {
+    "name": "Diergardtpark",
+    "osm": [
+     "r21915320"
+    ],
+    "flaeche_ha": 6.0,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.4753,
+    "lat": 51.42067,
+    "lon": 6.70015,
+    "bbox": [
+     6.69761,
+     51.41912,
+     6.70467,
+     51.42224
+    ]
+   },
+   {
+    "name": "Alter Parkfriedhof",
+    "osm": [
+     "w95681692"
+    ],
+    "flaeche_ha": 4.3,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.6135,
+    "lat": 51.45886,
+    "lon": 6.70073,
+    "bbox": [
+     6.69867,
+     51.45774,
+     6.70291,
+     51.45997
+    ]
+   },
+   {
+    "name": "Friesenpark",
+    "osm": [
+     "w934108565"
+    ],
+    "flaeche_ha": 4.3,
+    "zone_ha": 3.5,
+    "anteil_zone": 0.8146,
+    "lat": 51.45568,
+    "lon": 6.71359,
+    "bbox": [
+     6.70778,
+     51.45454,
+     6.7156,
+     51.457
+    ]
+   },
+   {
+    "name": "Mühlenweide",
+    "osm": [
+     "w42300131"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0201,
+    "lat": 51.45703,
+    "lon": 6.72741,
+    "bbox": [
+     6.72559,
+     51.45608,
+     6.72827,
+     51.45963
+    ]
+   },
+   {
+    "name": "Bertha Park",
+    "osm": [
+     "w1290004259"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.5671,
+    "lat": 51.39673,
+    "lon": 6.70302,
+    "bbox": [
+     6.69937,
+     51.39499,
+     6.70488,
+     51.39855
+    ]
+   },
+   {
+    "name": "Lutherpark",
+    "osm": [
+     "w75016214"
+    ],
+    "flaeche_ha": 3.2,
+    "zone_ha": 3.1,
+    "anteil_zone": 0.9562,
+    "lat": 51.45656,
+    "lon": 6.70074,
+    "bbox": [
+     6.69914,
+     51.45512,
+     6.70217,
+     51.45793
+    ]
+   },
+   {
+    "name": "Bürgermeister-Johann-Asch-Platz",
+    "osm": [
+     "w532998632"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 3.1,
+    "anteil_zone": 1.0,
+    "lat": 51.39694,
+    "lon": 6.7101,
+    "bbox": [
+     6.7086,
+     51.39593,
+     6.71198,
+     51.39781
+    ]
+   },
+   {
+    "name": "Garten der Erinnerung",
+    "osm": [
+     "r8124695"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 1.2,
+    "anteil_zone": 0.4161,
+    "lat": 51.43944,
+    "lon": 6.76651,
+    "bbox": [
+     6.76217,
+     51.4375,
+     6.76796,
+     51.43983
+    ]
+   },
+   {
+    "name": "Goerdeler-Park",
+    "osm": [
+     "w44956052"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.6132,
+    "lat": 51.43368,
+    "lon": 6.78009,
+    "bbox": [
+     6.77823,
+     51.43225,
+     6.78198,
+     51.43515
+    ]
+   },
+   {
+    "name": "Stielmuspark",
+    "osm": [
+     "w151801126"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0989,
+    "lat": 51.4945,
+    "lon": 6.79961,
+    "bbox": [
+     6.79866,
+     51.49318,
+     6.80061,
+     51.49555
+    ]
+   },
+   {
+    "name": "Botanischer Garten Duisburg Hamborn",
+    "osm": [
+     "w72608177"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.1946,
+    "lat": 51.48705,
+    "lon": 6.7669,
+    "bbox": [
+     6.76515,
+     51.48617,
+     6.76819,
+     51.48788
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w154851842"
+    ],
+    "flaeche_ha": 1.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0115,
+    "lat": 51.43583,
+    "lon": 6.79736,
+    "bbox": [
+     6.79622,
+     51.43518,
+     6.7985,
+     51.4365
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Universität Duisburg-Essen, L+M-Bereich",
+    "osm": [
+     "w164084646"
+    ],
+    "flaeche_ha": 18.7,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.0836,
+    "lat": 51.42909,
+    "lon": 6.80085,
+    "bbox": [
+     6.79749,
+     51.42528,
+     6.80334,
+     51.43319
+    ]
+   },
+   {
+    "name": "Universität Duisburg-Essen, B-Bereich",
+    "osm": [
+     "w232895563",
+     "w239176990",
+     "w239180481"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 0.9,
+    "anteil_zone": 0.2624,
+    "lat": 51.42963,
+    "lon": 6.78467,
+    "bbox": [
+     6.78318,
+     51.42716,
+     6.78765,
+     51.43086
+    ]
+   },
+   {
+    "name": "Willy-Brandt-Berufskolleg Sekundarstufe II Rheinhausen",
+    "osm": [
+     "w1300833487"
+    ],
+    "flaeche_ha": 1.8,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.6315,
+    "lat": 51.40731,
+    "lon": 6.70865,
+    "bbox": [
+     6.70736,
+     51.4068,
+     6.71001,
+     51.40803
+    ]
+   },
+   {
+    "name": "Gertrud-Bäumer Berufskolleg",
+    "osm": [
+     "w238738094"
+    ],
+    "flaeche_ha": 1.7,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.7313,
+    "lat": 51.42936,
+    "lon": 6.78099,
+    "bbox": [
+     6.78003,
+     51.42862,
+     6.78222,
+     51.43033
+    ]
+   },
+   {
+    "name": "Kaufmännisches Berufskolleg Walther Rathenau Sekundarstufe II und Fachschule Hamborn",
+    "osm": [
+     "w1561810362"
+    ],
+    "flaeche_ha": 1.4,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.3803,
+    "lat": 51.49835,
+    "lon": 6.76801,
+    "bbox": [
+     6.76687,
+     51.49758,
+     6.76913,
+     51.49907
+    ]
+   },
+   {
+    "name": "Robert-Bosch-Berufskolleg Städt. Schule der Sekundarstufe II und Fachschule Duisburg Hamborn",
+    "osm": [
+     "w1561386921"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.1742,
+    "lat": 51.49876,
+    "lon": 6.76943,
+    "bbox": [
+     6.76833,
+     51.49825,
+     6.77036,
+     51.49952
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Duisburger Stadtwald",
+    "osm": [
+     "r67782"
+    ],
+    "flaeche_ha": 292.1,
+    "zone_ha": 10.4,
+    "anteil_zone": 0.0356,
+    "lat": 51.41284,
+    "lon": 6.80403,
+    "bbox": [
+     6.79628,
+     51.40912,
+     6.81965,
+     51.43959
+    ]
+   },
+   {
+    "name": "Baerler Busch",
+    "osm": [
+     "r7207208"
+    ],
+    "flaeche_ha": 278.4,
+    "zone_ha": 11.3,
+    "anteil_zone": 0.0407,
+    "lat": 51.4952,
+    "lon": 6.65533,
+    "bbox": [
+     6.63561,
+     51.48137,
+     6.67065,
+     51.50555
+    ]
+   },
+   {
+    "name": "Lintorfer Mark",
+    "osm": [
+     "r3453770"
+    ],
+    "flaeche_ha": 79.9,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.0277,
+    "lat": 51.3575,
+    "lon": 6.82263,
+    "bbox": [
+     6.81728,
+     51.35037,
+     6.83033,
+     51.36477
+    ]
+   },
+   {
+    "name": "Broich-Speldorfer Wald",
+    "osm": [
+     "r3200300"
+    ],
+    "flaeche_ha": 30.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.36662,
+    "lon": 6.82025,
+    "bbox": [
+     6.81479,
+     51.36297,
+     6.82563,
+     51.37013
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 860.6,
+   "zone_ha": 22.2,
+   "anteil_zone": 0.0258
+  },
+  {
+   "name": "Werkshafen Schwelgern",
+   "flaeche_ha": 32.0,
+   "zone_ha": 0.0,
+   "anteil_zone": 0.0
+  },
+  {
+   "name": "Südhafen Walsum",
+   "flaeche_ha": 21.0,
+   "zone_ha": 0.0,
+   "anteil_zone": 0.0
+  },
+  {
+   "name": "Hafen Mevissen",
+   "flaeche_ha": 15.0,
+   "zone_ha": 0.0,
+   "anteil_zone": 0.0
+  },
+  {
+   "name": "Hansegracht",
+   "flaeche_ha": 6.6,
+   "zone_ha": 1.4,
+   "anteil_zone": 0.2149
+  },
+  {
+   "name": "Speichergracht",
+   "flaeche_ha": 6.5,
+   "zone_ha": 1.1,
+   "anteil_zone": 0.1692
+  },
+  {
+   "name": "Holzgracht",
+   "flaeche_ha": 4.8,
+   "zone_ha": 0.2,
+   "anteil_zone": 0.0314
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 14.5,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 51.44765,
+  "lon": 6.74263,
+  "bbox": [
+   6.61794,
+   51.3317,
+   6.83199,
+   51.56265
+  ]
+ },
+ "orte": [
+  {
+   "name": "Königstraße",
+   "osm": [
+    "w1198199723",
+    "w12255595",
+    "w1312751693",
+    "w1312751694",
+    "w1312752282",
+    "w147035035",
+    "w147392394",
+    "w147441870",
+    "w147442071",
+    "w170228986",
+    "w197841687",
+    "w236369373",
+    "w237506198",
+    "w237506511",
+    "w25091989",
+    "w29242785",
+    "w384813421",
+    "w384813422",
+    "w384813423",
+    "w384813424",
+    "w388422465",
+    "w391032549",
+    "w391032552",
+    "w391032555",
+    "w509930101",
+    "w80572895",
+    "w816397192",
+    "w816397193",
+    "w827364212",
+    "w911194169"
+   ],
+   "flaeche_ha": 3.62,
+   "bbox": [
+    6.7578,
+    51.43109,
+    6.77474,
+    51.43538
+   ],
+   "anteil_zone": 0.1406,
+   "art": "flaeche",
+   "lat": 51.43325,
+   "lon": 6.76749
+  },
+  {
+   "name": "König-Heinrich-Platz",
+   "osm": [
+    "r16300437",
+    "w508759545",
+    "w508759547",
+    "w508759548",
+    "w508759549",
+    "w589495220"
+   ],
+   "flaeche_ha": 0.94,
+   "bbox": [
+    6.76919,
+    51.43245,
+    6.77089,
+    51.43445
+   ],
+   "anteil_zone": 0.009,
+   "art": "flaeche",
+   "lat": 51.43345,
+   "lon": 6.77026
+  },
+  {
+   "name": "Portsmouthplatz",
+   "osm": [
+    "r16182676"
+   ],
+   "flaeche_ha": 1.55,
+   "bbox": [
+    6.77195,
+    51.42943,
+    6.77436,
+    51.43176
+   ],
+   "anteil_zone": 0.2955,
+   "art": "flaeche",
+   "lat": 51.43059,
+   "lon": 6.77305
+  },
+  {
+   "name": "Landschaftspark Duisburg-Nord",
+   "osm": [
+    "r9487766"
+   ],
+   "flaeche_ha": 95.2,
+   "bbox": [
+    6.76572,
+    51.47714,
+    6.79466,
+    51.48627
+   ],
+   "anteil_zone": 0.2688,
+   "art": "flaeche",
+   "lat": 51.48179,
+   "lon": 6.78377
+  },
+  {
+   "name": "Kantpark",
+   "osm": [
+    "w129916275"
+   ],
+   "flaeche_ha": 7.04,
+   "bbox": [
+    6.76458,
+    51.42746,
+    6.76909,
+    51.43107
+   ],
+   "anteil_zone": 0.7098,
+   "art": "flaeche",
+   "lat": 51.42911,
+   "lon": 6.76665
+  },
+  {
+   "name": "Innenhafen",
+   "osm": [
+    "w185529303"
+   ],
+   "flaeche_ha": 8.82,
+   "bbox": [
+    6.75255,
+    51.43364,
+    6.76828,
+    51.44176
+   ],
+   "anteil_zone": 0.1455,
+   "art": "flaeche",
+   "lat": 51.43741,
+   "lon": 6.7604
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-25T21:22:46Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Regierungsbezirks Düsseldorf (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  51.432,
+  6.765
+ ],
+ "og_zoom": 12.6,
+ "bilder": [
+  [
+   "ort",
+   "Landschaftspark Duisburg-Nord",
+   "landschaftspark"
+  ],
+  [
+   "ort",
+   "Kantpark",
+   "kantpark"
+  ],
+  [
+   "ort",
+   "Innenhafen",
+   "innenhafen"
+  ],
+  [
+   "park",
+   "Rheinpark",
+   "rheinpark"
+  ],
+  [
+   "ort",
+   "Königstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "hochschule",
+   "Universität Duisburg-Essen, L+M-Bereich",
+   "uni"
+  ]
+ ]
+}

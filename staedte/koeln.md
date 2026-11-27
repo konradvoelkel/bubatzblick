@@ -52,11 +52,15 @@ Rheins sind es {{ufer:Fluss}}.
 
 ## Innenstadt und Plätze
 
-Eine amtliche Liste der Kölner Fußgängerzonen haben wir nicht gefunden. Die Stadt nennt die
+Eine amtliche Gesamtliste der Kölner Fußgängerzonen haben wir nicht gefunden. Die Stadt nennt die
 **Hohe Straße** seit 1967 Fußgängerstraße, und ihr Faltblatt zum Radfahren in den Fußgängerzonen
 der City zeigt unter anderem Hohe Straße, Schildergasse, Ehrenstraße, Breite Straße, Alter Markt
 und Roncalliplatz
 ([Stadt Köln, Oktober 2025](https://www.stadt-koeln.de/mediaasset/content/pdf66/radverkehr/radfahren-in-fussgaengerzonen-10-2025.pdf)).
+2025 hat sie außerdem die Straßen um den Alter Markt und große Teile des Eigelsteins auf Fuß- und
+Radverkehr beschränkt
+([Altstadt](https://www.stadt-koeln.de/mediaasset/content/bekanntmachungen/2025/2025.04.09_0070-01_teileinziehung_bereich_altstadt.pdf),
+[Eigelstein](https://www.stadt-koeln.de/mediaasset/content/bekanntmachungen/2025/2025.06.02_0103-01_teileinziehung_eigelstein.pdf)).
 Dort gilt zwischen 7 und 20 Uhr Konsumverbot, ganz gleich, was die Karte rot zeigt; blau zeigt die
 Karte die Fußgängerbereiche, wie sie in OpenStreetMap eingetragen sind.
 

@@ -84,7 +84,10 @@ Rauchen sagt sie nichts
 
 Eine Fußgängerzone ist in Berlin ein Rechtsakt: Die Straße muss für Fahrzeuge teilweise
 eingezogen sein, und das Schild muss stehen. Eine amtliche Liste dieser Fußgängerzonen haben wir
-nicht gefunden. Belegt sind zum Beispiel die **Wilmersdorfer Straße** in Charlottenburg, **Alt-Tegel** und die
+nicht gefunden; eine Antwort des Senats von 2022 zählt die Teileinziehungen seit 2012 auf, aber fünf
+Bezirke haben dazu nichts geliefert
+([Drucksache 19/11397](https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-11397.pdf)).
+Belegt sind zum Beispiel die **Wilmersdorfer Straße** in Charlottenburg, **Alt-Tegel** und die
 Gorkistraße in Reinickendorf, die **Altstadt Spandau** und der Lausitzer Platz in Kreuzberg; die
 Friedrichstraße ist seit Juli 2023 keine Fußgängerzone mehr. Die Karte zeigt blau, was in
 OpenStreetMap als Fußgängerbereich eingetragen ist, und das ist mehr als die Fußgängerzonen im

@@ -1,14 +1,256 @@
 <!doctype html>
-<!-- Platzhalter, erzeugt durch deploy/bin/build_staedte.py aus staedte/grossstaedte.json. -->
+<!-- Erzeugt aus staedte/wuppertal.md und staedte/wuppertal.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>Kiffen in Wuppertal | BubatzBlick</title>
+<title>Kiffen in Wuppertal: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=../?interesse=wuppertal#12/51.2562/7.1508">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Wuppertal liegen 24 km², 14,4 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<link rel="canonical" href="__SITE_URL__/stadt/wuppertal">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/wuppertal">
+<meta property="og:title" content="Kiffen in Wuppertal: wo es verboten ist">
+<meta property="og:description" content="In Wuppertal liegen 24 km², 14,4 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/wuppertal.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Wuppertal mit den roten Verbotszonen, daneben: Kiffen in Wuppertal, 14,4 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/wuppertal",
+   "url": "__SITE_URL__/stadt/wuppertal",
+   "name": "Kiffen in Wuppertal: wo es verboten ist",
+   "description": "In Wuppertal liegen 24 km², 14,4 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-27",
+   "about": {
+    "@type": "City",
+    "name": "Wuppertal",
+    "sameAs": "https://www.wikidata.org/wiki/Q2107",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Nordrhein-Westfalen"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/wuppertal.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Wuppertal",
+     "item": "__SITE_URL__/stadt/wuppertal"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { fill: #c0392b; stroke: #fff; stroke-width: 2; }
+  svg.deutschland text { font-size: 19px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 9; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1.2; }
+  @media (max-width: 480px) { svg.deutschland a:not(.eng) text { font-size: 28px; }
+                              svg.deutschland a:not(.eng) circle { r: 10; } }
+</style>
 </head>
 <body>
-<p>Weiter zur <a href="../?interesse=wuppertal#12/51.2562/7.1508">Karte von Wuppertal</a>.</p>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Wuppertal</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <nav><a href="../#12/51.24142/7.168" class="knopf">Wuppertal auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Wuppertal ist öffentliches Kiffen auf 24 km² verboten, das sind
+<strong>14,4 % der Stadtfläche</strong> von 168 km². Grund sind 1 265
+Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
+Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
+nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen in Elberfeld und
+Barmen, in denen zwischen 7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare
+Gegenwart von Kindern und Jugendlichen.</p>
+
+<p>Fast ein Drittel der Stadt ist Wald (31 % der Stadtfläche), und dort liegen nur
+8,5 % in einer Zone. Ohne den Wald gerechnet sind es 17,1 %.</p>
+<figure class="karte"><img src="../img/stadt/wuppertal-stadt.webp" width="960" height="600" alt="Karte von Wuppertal mit Stadtgrenze und den roten Verbotszonen"><figcaption>Wuppertal: 24 km² Verbotszone auf 168 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">154</td><td class="zahl">5,4 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">161</td><td class="zahl">4,2 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">19</td><td class="zahl">0,3 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">396</td><td class="zahl">8,3 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">23</td><td class="zahl">0,4 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">512</td><td class="zahl">11,9 km²</td></tr></tbody></table>
+
+<p>Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
+überlappen, ist ihre Summe größer als die 24 km² oben. Den größten Teil machen die
+512 Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
+gefolgt von 396 Spielplätzen.</p>
+<p>Auf Spielplätzen, Bolzplätzen und Skateanlagen verbietet die Straßenordnung der Stadt nur Alkohol;
+eine eigene Regel zu Cannabis hat Wuppertal dort nicht
+(<a href="https://www.wuppertal.de/rathaus-buergerservice/verwaltung/politik/stadtrecht-dokumente/3-10.pdf">Straßenordnung</a>).
+Anbauvereinigungen fehlen in der Tabelle: Wo sie anbauen, ist nicht veröffentlicht.</p>
+<h2 id="parks-und-nordbahntrasse">Parks und Nordbahntrasse</h2>
+<p>In der <strong>Hardt-Anlage</strong> liegen 52 % der Fläche in einer Zone, um drei Spielplätze und
+zwei Sportanlagen, darunter ein Juggerfeld. Im <strong>Nordpark</strong> sind es 50 %: Vier
+Spielplätze und drei Sportanlagen liegen im Park. Die <strong>Barmer Anlagen</strong>, wie sie in OpenStreetMap
+als Park eingetragen sind, kommen auf 23 %, der Mirker Hain auf
+12 %.</p>
+<figure class="karte"><img src="../img/stadt/wuppertal-hardt.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Hardt-Anlage (grün umrandet) mit den roten Verbotszonen; etwa 52 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Hardt-Anlage: 21 ha, davon 52 % Verbotszone. <a href="../#16/51.26151/7.15958">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/wuppertal-nordpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Nordpark (grün umrandet) mit den roten Verbotszonen; etwa 50 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Nordpark: 37 ha, davon 50 % Verbotszone. <a href="../#16/51.28511/7.19828">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/wuppertal-barmer-anlagen.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Barmer Anlagen (grün umrandet) mit den roten Verbotszonen; etwa 23 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Barmer Anlagen: 10 ha, davon 23 % Verbotszone. <a href="../#16/51.2655/7.20552">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Auf der <strong>Nordbahntrasse</strong>, dem Rad- und Fußweg auf der alten Bahnstrecke quer durch die Stadt,
+liegen 32 % in einer Zone, gerechnet auf einem 15 Meter breiten Streifen. Auf einem
+100 Meter breiten Streifen Land entlang der Wupper sind es 22 %. Der <strong>Schusterplatz</strong> im
+Ölberg-Viertel liegt ganz in einer Zone (99 %), wegen des Spielplatzes darauf, der
+Laurentiusplatz im Luisenviertel außerhalb (0 %).</p>
+<h2 id="elberfeld-und-barmen">Elberfeld und Barmen</h2>
+<p>Die Fußgängerzonen nennt die Stadt in ihrem Infoblatt zur Ausnahmegenehmigung: in Elberfeld unter
+anderem Poststraße, Herzogstraße, Alte Freiheit, Kirchplatz, Von-der-Heydt-Platz und
+Willy-Brandt-Platz, in Barmen unter anderem Werth, Alter Markt und Johannes-Rau-Platz, dazu der
+Wupperfelder Markt
+(<a href="https://www.wuppertal.de/vv/produkte/104/104.11_Ausnahmegenehmigung_Fussgaengerzone.php.media/531968/Infoblatt-Ausnahmegenehmigung-Fussgaengerzone_10_2024.pdf">Stadt Wuppertal, Oktober 2024</a>).
+Dort gilt zwischen 7 und 20 Uhr Konsumverbot; blau zeigt die Karte die Fußgängerbereiche, wie sie in
+OpenStreetMap eingetragen sind. Der Neumarkt in Elberfeld ist dort als Fußgängerbereich
+eingetragen, steht aber nicht in der Liste der Stadt.</p>
+<p>Von der Elberfelder Fußgängerzone liegen außerdem 12 % in einer
+Sichtweiten-Zone, vom Werth mit Altem Markt und Johannes-Rau-Platz 25 %.</p>
+<figure class="karte"><img src="../img/stadt/wuppertal-fussgaengerzone.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Elberfelder Innenstadt (grün umrandet) mit den roten Verbotszonen; etwa 12 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Elberfelder Innenstadt: 2 ha, davon 12 % Verbotszone. <a href="../#16/51.25715/7.14471">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/wuppertal-werth.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Werth (grün umrandet) mit den roten Verbotszonen; etwa 25 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Werth: 2 ha, davon 25 % Verbotszone. <a href="../#16/51.27135/7.20002">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>In der Schwebebahn und in allen Bussen und Bahnen im VRR ist Rauchen verboten
+(<a href="https://www.vrr.de/fileadmin/user_upload/pdf/service/downloads/Tarifhandbuch/VRR_Handbuch_2026.pdf">VRR-Handbuch</a>).</p>
+<h2 id="hochschulen">Hochschulen</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte. Vom Campus Grifflenberg der <strong>Bergischen
+Universität</strong> liegen 13 % in einer Zone,
+um die Kita auf dem Campus. Die Hausordnung verbietet das Rauchen in den Gebäuden. Im früheren
+Bahndirektionsgebäude am Döppersberg, das Stadt, Jobcenter und Universität gemeinsam nutzen, ist
+Cannabis im Gebäude und draußen auf dem Gelände verboten
+(<a href="https://e-pflicht.ulb.hhu.de/download/pdf/430956">Hausordnung Döppersberg 41</a>).</p>
+<figure class="karte"><img src="../img/stadt/wuppertal-uni.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Bergische Universität Wuppertal - Campus Grifflenberg (grün umrandet) mit den roten Verbotszonen; etwa 13 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Bergische Universität Wuppertal - Campus Grifflenberg: 13 ha, davon 13 % Verbotszone. <a href="../#16/51.24462/7.14946">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>Ein Verstoß gegen § 5 Abs. 2 kostet in Nordrhein-Westfalen 50 bis 500 Euro, in Gegenwart von
+Minderjährigen 300 bis 1.000 Euro
+(<a href="https://www.mags.nrw/regeln-und-bussgelder-zur-cannabiskontrolle">Land NRW</a>); zuständig ist die
+Stadt. Für Volksfeste und ähnliche Großveranstaltungen sind die Veranstalter nach einem Erlass des
+Landes verpflichtet, Verstöße zu verhindern, notfalls mit einem generellen Konsumverbot
+(<a href="https://www.mags.nrw/system/files/media/document/file/erlass_konsumverbot_auf_volksfesten_presse.pdf">Erlass des Gesundheitsministeriums, Mai 2024</a>).
+Eigene Verbotszonen für Cannabis hat Wuppertal nicht (Stand 27. November 2026).</p>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-wuppertal-kiffen">Wo darf man in Wuppertal kiffen?</h3>
+<p>Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
+Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet. Eine weiße
+Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte kennt weder Hecken noch
+Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap fehlen.</p>
+<h3 id="darf-man-auf-der-nordbahntrasse-kiffen">Darf man auf der Nordbahntrasse kiffen?</h3>
+<p>Auf rund zwei Dritteln der Strecke verbietet es § 5 KCanG nicht; rot sind die Abschnitte an Schulen,
+Spielplätzen und Sportanlagen. Auf der Trasse sind viele Familien und Kinder unterwegs, und in ihrer Gegenwart gilt
+das Verbot überall.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
+neu gerechnet; die Zahlen auf dieser Seite sind vom 27. November 2026. Die Karte ist eine
+Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
+auf der <a href="../about.html">Über-Seite</a>.</p>
+<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
+OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
 </body>
 </html>

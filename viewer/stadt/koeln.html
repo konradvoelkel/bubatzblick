@@ -140,8 +140,9 @@
   ul.grau a { color: var(--text-schwach); text-decoration: none;
               border-bottom: 1px dotted currentColor; }
   ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
-  @media (max-width: 480px) { svg.deutschland text { font-size: 28px; }
-                              svg.deutschland circle { r: 10; } }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1.2; }
+  @media (max-width: 480px) { svg.deutschland a:not(.eng) text { font-size: 28px; }
+                              svg.deutschland a:not(.eng) circle { r: 10; } }
 </style>
 </head>
 <body>
@@ -200,11 +201,15 @@ Sportplätze am Rand.</p>
 Osten fast gar nicht (0 %). Auf einem 100 Meter breiten Streifen Land entlang des
 Rheins sind es 12 %.</p>
 <h2 id="innenstadt-und-platze">Innenstadt und Plätze</h2>
-<p>Eine amtliche Liste der Kölner Fußgängerzonen haben wir nicht gefunden. Die Stadt nennt die
+<p>Eine amtliche Gesamtliste der Kölner Fußgängerzonen haben wir nicht gefunden. Die Stadt nennt die
 <strong>Hohe Straße</strong> seit 1967 Fußgängerstraße, und ihr Faltblatt zum Radfahren in den Fußgängerzonen
 der City zeigt unter anderem Hohe Straße, Schildergasse, Ehrenstraße, Breite Straße, Alter Markt
 und Roncalliplatz
 (<a href="https://www.stadt-koeln.de/mediaasset/content/pdf66/radverkehr/radfahren-in-fussgaengerzonen-10-2025.pdf">Stadt Köln, Oktober 2025</a>).
+2025 hat sie außerdem die Straßen um den Alter Markt und große Teile des Eigelsteins auf Fuß- und
+Radverkehr beschränkt
+(<a href="https://www.stadt-koeln.de/mediaasset/content/bekanntmachungen/2025/2025.04.09_0070-01_teileinziehung_bereich_altstadt.pdf">Altstadt</a>,
+<a href="https://www.stadt-koeln.de/mediaasset/content/bekanntmachungen/2025/2025.06.02_0103-01_teileinziehung_eigelstein.pdf">Eigelstein</a>).
 Dort gilt zwischen 7 und 20 Uhr Konsumverbot, ganz gleich, was die Karte rot zeigt; blau zeigt die
 Karte die Fußgängerbereiche, wie sie in OpenStreetMap eingetragen sind.</p>
 <p>Von Hohe Straße und Schildergasse liegen außerdem 46 % in einer

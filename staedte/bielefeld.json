@@ -1,0 +1,948 @@
+{
+ "stadtflaeche_osm_km2": 258.63,
+ "wald": {
+  "flaeche_km2": 62.7,
+  "anteil_stadt": 0.2423,
+  "anteil_zone": 0.0793,
+  "anteil_zone_ohne_wald": 0.1463
+ },
+ "zonen_km2": 33.64,
+ "anteil": 0.13008,
+ "kategorien": {
+  "sports": {
+   "objekte": 799,
+   "zonen_km2": 16.74
+  },
+  "playground": {
+   "objekte": 524,
+   "zonen_km2": 13.21
+  },
+  "school": {
+   "objekte": 145,
+   "zonen_km2": 7.28
+  },
+  "kindergarten": {
+   "objekte": 228,
+   "zonen_km2": 6.04
+  },
+  "youth": {
+   "objekte": 33,
+   "zonen_km2": 0.71
+  },
+  "childcare": {
+   "objekte": 13,
+   "zonen_km2": 0.28
+  }
+ },
+ "objekte_gesamt": 1742,
+ "merkmale": {
+  "platz": [
+   {
+    "name": "Kesselbrink",
+    "osm": [
+     "w972788520"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.9766,
+    "lat": 52.024,
+    "lon": 8.53841,
+    "bbox": [
+     8.53709,
+     52.02327,
+     8.53973,
+     52.02469
+    ]
+   },
+   {
+    "name": "Festplatz Radrennbahn",
+    "osm": [
+     "w706080172"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.2619,
+    "lat": 52.02948,
+    "lon": 8.57862,
+    "bbox": [
+     8.57651,
+     52.02882,
+     8.58038,
+     52.03028
+    ]
+   },
+   {
+    "name": "Jahnplatz",
+    "osm": [
+     "w32472680"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.5749,
+    "lat": 52.02316,
+    "lon": 8.53299,
+    "bbox": [
+     8.53215,
+     52.02255,
+     8.53459,
+     52.02378
+    ]
+   },
+   {
+    "name": "Paulusplatz",
+    "osm": [
+     "w479843462"
+    ],
+    "flaeche_ha": 0.8,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.4839,
+    "lat": 52.0277,
+    "lon": 8.54129,
+    "bbox": [
+     8.54065,
+     52.02741,
+     8.54192,
+     52.02829
+    ]
+   },
+   {
+    "name": "Interaktion",
+    "osm": [
+     "r10057744"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.8391,
+    "lat": 52.04447,
+    "lon": 8.4919,
+    "bbox": [
+     8.49128,
+     52.04386,
+     8.49264,
+     52.0451
+    ]
+   },
+   {
+    "name": "Klosterplatz",
+    "osm": [
+     "w27212289"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.9938,
+    "lat": 52.02083,
+    "lon": 8.52855,
+    "bbox": [
+     8.52797,
+     52.02037,
+     8.52925,
+     52.02124
+    ]
+   },
+   {
+    "name": "Neumarkt",
+    "osm": [
+     "w28126777"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.1435,
+    "lat": 52.02621,
+    "lon": 8.53648,
+    "bbox": [
+     8.53588,
+     52.02571,
+     8.53768,
+     52.02668
+    ]
+   },
+   {
+    "name": "Siegfriedplatz",
+    "osm": [
+     "r8369557"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.9499,
+    "lat": 52.02813,
+    "lon": 8.5225,
+    "bbox": [
+     8.52179,
+     52.02765,
+     8.52331,
+     52.02859
+    ]
+   },
+   {
+    "name": "Reichowplatz",
+    "osm": [
+     "w36948292"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.9661,
+    "lat": 51.94594,
+    "lon": 8.58512,
+    "bbox": [
+     8.58444,
+     51.94561,
+     8.58576,
+     51.94629
+    ]
+   },
+   {
+    "name": "Bethelplatz",
+    "osm": [
+     "w28871605"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.00959,
+    "lon": 8.52443,
+    "bbox": [
+     8.52394,
+     52.0092,
+     8.52501,
+     52.00996
+    ]
+   },
+   {
+    "name": "Inspiration",
+    "osm": [
+     "w306462072"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.04501,
+    "lon": 8.49281,
+    "bbox": [
+     8.49228,
+     52.0446,
+     8.49341,
+     52.04529
+    ]
+   },
+   {
+    "name": "Alter Markt",
+    "osm": [
+     "w5104262"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0922,
+    "lat": 52.02061,
+    "lon": 8.53228,
+    "bbox": [
+     8.53146,
+     52.02024,
+     8.53245,
+     52.02093
+    ]
+   },
+   {
+    "name": "Bunnemannplatz",
+    "osm": [
+     "w227647037"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.9289,
+    "lat": 52.01937,
+    "lon": 8.52984,
+    "bbox": [
+     8.52915,
+     52.01898,
+     8.53035,
+     52.01976
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Luttergrünzug",
+    "osm": [
+     "r13464052"
+    ],
+    "flaeche_ha": 80.5,
+    "zone_ha": 34.6,
+    "anteil_zone": 0.4292,
+    "lat": 52.02718,
+    "lon": 8.58656,
+    "bbox": [
+     8.56282,
+     52.02099,
+     8.59953,
+     52.03098
+    ]
+   },
+   {
+    "name": "Bultkamp-Grünzug",
+    "osm": [
+     "w331605483"
+    ],
+    "flaeche_ha": 39.0,
+    "zone_ha": 23.4,
+    "anteil_zone": 0.601,
+    "lat": 52.05136,
+    "lon": 8.53461,
+    "bbox": [
+     8.52738,
+     52.04508,
+     8.53985,
+     52.05769
+    ]
+   },
+   {
+    "name": "Heimat-Tierpark Olderdissen",
+    "osm": [
+     "r13319255"
+    ],
+    "flaeche_ha": 23.2,
+    "zone_ha": 7.9,
+    "anteil_zone": 0.3419,
+    "lat": 52.01955,
+    "lon": 8.5009,
+    "bbox": [
+     8.4974,
+     52.01649,
+     8.50806,
+     52.0227
+    ]
+   },
+   {
+    "name": "Ost-West-Grünzug",
+    "osm": [
+     "r4726587"
+    ],
+    "flaeche_ha": 19.1,
+    "zone_ha": 18.7,
+    "anteil_zone": 0.9797,
+    "lat": 51.95407,
+    "lon": 8.59424,
+    "bbox": [
+     8.58496,
+     51.95187,
+     8.60083,
+     51.95595
+    ]
+   },
+   {
+    "name": "Gellershagenpark",
+    "osm": [
+     "w333557186"
+    ],
+    "flaeche_ha": 14.5,
+    "zone_ha": 11.0,
+    "anteil_zone": 0.756,
+    "lat": 52.04662,
+    "lon": 8.51663,
+    "bbox": [
+     8.51015,
+     52.04305,
+     8.52243,
+     52.05016
+    ]
+   },
+   {
+    "name": "Bullerbachgrünzug",
+    "osm": [
+     "w80413845"
+    ],
+    "flaeche_ha": 13.7,
+    "zone_ha": 8.8,
+    "anteil_zone": 0.6444,
+    "lat": 51.94995,
+    "lon": 8.58733,
+    "bbox": [
+     8.58323,
+     51.94653,
+     8.59149,
+     51.95339
+    ]
+   },
+   {
+    "name": "Luttertal",
+    "osm": [
+     "r9208420"
+    ],
+    "flaeche_ha": 13.7,
+    "zone_ha": 4.6,
+    "anteil_zone": 0.3326,
+    "lat": 51.995,
+    "lon": 8.48817,
+    "bbox": [
+     8.48071,
+     51.99109,
+     8.49606,
+     51.9989
+    ]
+   },
+   {
+    "name": "Nordpark",
+    "osm": [
+     "r1400490"
+    ],
+    "flaeche_ha": 7.0,
+    "zone_ha": 6.5,
+    "anteil_zone": 0.9286,
+    "lat": 52.0379,
+    "lon": 8.52891,
+    "bbox": [
+     8.52402,
+     52.03643,
+     8.53268,
+     52.03931
+    ]
+   },
+   {
+    "name": "Bürgerpark",
+    "osm": [
+     "w19738791"
+    ],
+    "flaeche_ha": 6.7,
+    "zone_ha": 3.3,
+    "anteil_zone": 0.4989,
+    "lat": 52.02701,
+    "lon": 8.51395,
+    "bbox": [
+     8.51141,
+     52.02523,
+     8.51655,
+     52.02881
+    ]
+   },
+   {
+    "name": "Ravensberger Park",
+    "osm": [
+     "w25363169"
+    ],
+    "flaeche_ha": 6.0,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.5336,
+    "lat": 52.0222,
+    "lon": 8.54542,
+    "bbox": [
+     8.54296,
+     52.02129,
+     8.5486,
+     52.02333
+    ]
+   },
+   {
+    "name": "Sieker Park",
+    "osm": [
+     "w373835536"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 3.5,
+    "anteil_zone": 0.9698,
+    "lat": 52.00545,
+    "lon": 8.57015,
+    "bbox": [
+     8.56866,
+     52.00331,
+     8.57244,
+     52.00746
+    ]
+   },
+   {
+    "name": "Oldentruper Park",
+    "osm": [
+     "w27716892"
+    ],
+    "flaeche_ha": 3.2,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.6916,
+    "lat": 52.01406,
+    "lon": 8.60506,
+    "bbox": [
+     8.6041,
+     52.0122,
+     8.60681,
+     52.01601
+    ]
+   },
+   {
+    "name": "Dr.-Mildred-Scheel-Park",
+    "osm": [
+     "r10155106"
+    ],
+    "flaeche_ha": 2.9,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.481,
+    "lat": 52.01312,
+    "lon": 8.54359,
+    "bbox": [
+     8.54208,
+     52.0125,
+     8.54643,
+     52.01632
+    ]
+   },
+   {
+    "name": "Dornberger Auenpark",
+    "osm": [
+     "r1356981",
+     "w39812056"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.4938,
+    "lat": 52.04426,
+    "lon": 8.47913,
+    "bbox": [
+     8.47627,
+     52.04256,
+     8.48449,
+     52.04605
+    ]
+   }
+  ],
+  "see": [
+   {
+    "name": "Obersee",
+    "osm": [
+     "r2083500"
+    ],
+    "flaeche_ha": 13.4,
+    "zone_ha": 3.8,
+    "anteil_zone": 0.2854,
+    "lat": 52.05658,
+    "lon": 8.56342,
+    "bbox": [
+     8.55768,
+     52.05477,
+     8.56982,
+     52.05841
+    ]
+   },
+   {
+    "name": "Bockschatzteich",
+    "osm": [
+     "w27141863"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.97352,
+    "lon": 8.49313,
+    "bbox": [
+     8.49219,
+     51.97205,
+     8.49592,
+     51.97503
+    ]
+   },
+   {
+    "name": "Queller See",
+    "osm": [
+     "w702708129"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.00714,
+    "lon": 8.4629,
+    "bbox": [
+     8.4611,
+     52.00614,
+     8.46479,
+     52.00813
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Campus Süd",
+    "osm": [
+     "r13450207"
+    ],
+    "flaeche_ha": 61.7,
+    "zone_ha": 23.1,
+    "anteil_zone": 0.3747,
+    "lat": 52.03703,
+    "lon": 8.49319,
+    "bbox": [
+     8.48657,
+     52.03187,
+     8.50404,
+     52.04195
+    ]
+   },
+   {
+    "name": "Campus Nord",
+    "osm": [
+     "w70586475"
+    ],
+    "flaeche_ha": 28.1,
+    "zone_ha": 5.8,
+    "anteil_zone": 0.205,
+    "lat": 52.04585,
+    "lon": 8.49368,
+    "bbox": [
+     8.48903,
+     52.04215,
+     8.49848,
+     52.04933
+    ]
+   },
+   {
+    "name": "Hochschule Bielefeld - Hauptgebäude",
+    "osm": [
+     "r5481142"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0077,
+    "lat": 52.04444,
+    "lon": 8.49272,
+    "bbox": [
+     8.49223,
+     52.04369,
+     8.49538,
+     52.04522
+    ]
+   },
+   {
+    "name": "Hochschule Bielefeld",
+    "osm": [
+     "w32074156",
+     "w742122284"
+    ],
+    "flaeche_ha": 1.3,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.1428,
+    "lat": 52.02796,
+    "lon": 8.51168,
+    "bbox": [
+     8.51076,
+     52.02706,
+     8.5128,
+     52.02886
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Köckerwald",
+    "osm": [
+     "r10625741",
+     "w670661274"
+    ],
+    "flaeche_ha": 40.2,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.0077,
+    "lat": 52.06945,
+    "lon": 8.50793,
+    "bbox": [
+     8.49225,
+     52.06426,
+     8.51451,
+     52.07459
+    ]
+   },
+   {
+    "name": "Heeperholz",
+    "osm": [
+     "r12636471"
+    ],
+    "flaeche_ha": 36.0,
+    "zone_ha": 5.0,
+    "anteil_zone": 0.1381,
+    "lat": 52.02608,
+    "lon": 8.59248,
+    "bbox": [
+     8.58611,
+     52.02099,
+     8.60115,
+     52.03082
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "w301771195",
+     "w310185713",
+     "w310185714",
+     "w310185719",
+     "w310185726",
+     "w310873315",
+     "w310873317",
+     "w363885116",
+     "w412105429",
+     "w756679741",
+     "w931960514"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.06279,
+    "lon": 8.6141,
+    "bbox": [
+     8.61311,
+     52.06171,
+     8.61581,
+     52.06372
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w341539741"
+    ],
+    "flaeche_ha": 4.1,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.4851,
+    "lat": 52.01466,
+    "lon": 8.51012,
+    "bbox": [
+     8.50745,
+     52.01367,
+     8.51299,
+     52.01567
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 42.4,
+   "zone_ha": 11.9,
+   "anteil_zone": 0.2822
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 14.8,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 52.01505,
+  "lon": 8.55907,
+  "bbox": [
+   8.37585,
+   51.91427,
+   8.66439,
+   52.11531
+  ]
+ },
+ "orte": [
+  {
+   "name": "Bahnhofstraße und Obernstraße",
+   "osm": [
+    "w1118139612",
+    "w1118139613",
+    "w1118290067",
+    "w1175757127",
+    "w1175757132",
+    "w1175757133",
+    "w1451388307",
+    "w219927653",
+    "w227646944",
+    "w25937866",
+    "w366080361",
+    "w413364469",
+    "w446080840",
+    "w5034488",
+    "w5056090",
+    "w5104261",
+    "w731988166",
+    "w783011365",
+    "w783011366",
+    "w800661256",
+    "w800661273",
+    "w941769498",
+    "w964569204"
+   ],
+   "flaeche_ha": 1.76,
+   "bbox": [
+    8.52784,
+    52.01952,
+    8.53339,
+    52.02731
+   ],
+   "anteil_zone": 0.3192,
+   "art": "linie",
+   "lat": 52.02002,
+   "lon": 8.5294
+  },
+  {
+   "name": "Jahnplatz",
+   "osm": [
+    "w32472680"
+   ],
+   "flaeche_ha": 1.09,
+   "bbox": [
+    8.53215,
+    52.02255,
+    8.53459,
+    52.02378
+   ],
+   "anteil_zone": 0.5749,
+   "art": "flaeche",
+   "lat": 52.02316,
+   "lon": 8.53299
+  },
+  {
+   "name": "Kesselbrink",
+   "osm": [
+    "w972788520"
+   ],
+   "flaeche_ha": 2.46,
+   "bbox": [
+    8.53709,
+    52.02327,
+    8.53973,
+    52.02469
+   ],
+   "anteil_zone": 0.9766,
+   "art": "flaeche",
+   "lat": 52.024,
+   "lon": 8.53841
+  },
+  {
+   "name": "Siegfriedplatz",
+   "osm": [
+    "r8369557",
+    "w36969608",
+    "w764237073",
+    "w765414937"
+   ],
+   "flaeche_ha": 0.53,
+   "bbox": [
+    8.52179,
+    52.02765,
+    8.52339,
+    52.02863
+   ],
+   "anteil_zone": 0.9523,
+   "art": "flaeche",
+   "lat": 52.02814,
+   "lon": 8.52251
+  },
+  {
+   "name": "Alter Markt",
+   "osm": [
+    "w219927650",
+    "w27143959",
+    "w5104262",
+    "w731988157",
+    "w731988159",
+    "w731988161"
+   ],
+   "flaeche_ha": 0.26,
+   "bbox": [
+    8.53146,
+    52.02023,
+    8.53246,
+    52.02093
+   ],
+   "anteil_zone": 0.0945,
+   "art": "flaeche",
+   "lat": 52.02058,
+   "lon": 8.53224
+  },
+  {
+   "name": "Bürgerpark",
+   "osm": [
+    "w19738791"
+   ],
+   "flaeche_ha": 6.69,
+   "bbox": [
+    8.51141,
+    52.02523,
+    8.51655,
+    52.02881
+   ],
+   "anteil_zone": 0.4989,
+   "art": "flaeche",
+   "lat": 52.02701,
+   "lon": 8.51395
+  },
+  {
+   "name": "Nordpark",
+   "osm": [
+    "r1400490"
+   ],
+   "flaeche_ha": 6.98,
+   "bbox": [
+    8.52402,
+    52.03643,
+    8.53268,
+    52.03931
+   ],
+   "anteil_zone": 0.9286,
+   "art": "flaeche",
+   "lat": 52.0379,
+   "lon": 8.52891
+  },
+  {
+   "name": "Ravensberger Park",
+   "osm": [
+    "w25363169"
+   ],
+   "flaeche_ha": 6.03,
+   "bbox": [
+    8.54296,
+    52.02129,
+    8.5486,
+    52.02333
+   ],
+   "anteil_zone": 0.5336,
+   "art": "flaeche",
+   "lat": 52.0222,
+   "lon": 8.54542
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Regierungsbezirks Detmold (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  52.021,
+  8.534
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "ort",
+   "Kesselbrink",
+   "kesselbrink"
+  ],
+  [
+   "ort",
+   "Bürgerpark",
+   "buergerpark"
+  ],
+  [
+   "ort",
+   "Nordpark",
+   "nordpark"
+  ],
+  [
+   "see",
+   "Obersee",
+   "obersee"
+  ],
+  [
+   "ort",
+   "Bahnhofstraße und Obernstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "hochschule",
+   "Campus Süd",
+   "uni"
+  ]
+ ]
+}

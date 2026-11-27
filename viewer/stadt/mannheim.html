@@ -1,14 +1,265 @@
 <!doctype html>
-<!-- Platzhalter, erzeugt durch deploy/bin/build_staedte.py aus staedte/grossstaedte.json. -->
+<!-- Erzeugt aus staedte/mannheim.md und staedte/mannheim.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>Kiffen in Mannheim | BubatzBlick</title>
+<title>Kiffen in Mannheim: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=../?interesse=mannheim#12/49.4878/8.4662">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Mannheim liegen 24 km², 16,9 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<link rel="canonical" href="__SITE_URL__/stadt/mannheim">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/mannheim">
+<meta property="og:title" content="Kiffen in Mannheim: wo es verboten ist">
+<meta property="og:description" content="In Mannheim liegen 24 km², 16,9 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/mannheim.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Mannheim mit den roten Verbotszonen, daneben: Kiffen in Mannheim, 16,9 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/mannheim",
+   "url": "__SITE_URL__/stadt/mannheim",
+   "name": "Kiffen in Mannheim: wo es verboten ist",
+   "description": "In Mannheim liegen 24 km², 16,9 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-27",
+   "about": {
+    "@type": "City",
+    "name": "Mannheim",
+    "sameAs": "https://www.wikidata.org/wiki/Q2119",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Baden-Württemberg"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/mannheim.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Mannheim",
+     "item": "__SITE_URL__/stadt/mannheim"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { fill: #c0392b; stroke: #fff; stroke-width: 2; }
+  svg.deutschland text { font-size: 19px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 9; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1.2; }
+  @media (max-width: 480px) { svg.deutschland a:not(.eng) text { font-size: 28px; }
+                              svg.deutschland a:not(.eng) circle { r: 10; } }
+</style>
 </head>
 <body>
-<p>Weiter zur <a href="../?interesse=mannheim#12/49.4878/8.4662">Karte von Mannheim</a>.</p>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Mannheim</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <nav><a href="../#13/49.50051/8.51121" class="knopf">Mannheim auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Mannheim ist öffentliches Kiffen auf 24 km² verboten, das sind
+<strong>16,9 % der Stadtfläche</strong> von 145 km². Grund sind 1 641
+Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
+Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
+nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
+7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
+Jugendlichen.</p>
+
+<p>Die Stadt Mannheim hat eine eigene Karte veröffentlicht, mit Zonen von 100 Metern und, auf einer
+zweiten Ebene, die man erst einschalten muss, den Fußgängerzonen nach ihren Angaben
+(<a href="https://www.gis-mannheim.de/mannheim/index.php?service=cannabis_konsum">Cannabiskonsumkarte der Stadt</a>).</p>
+<figure class="karte"><img src="../img/stadt/mannheim-stadt.webp" width="960" height="600" alt="Karte von Mannheim mit Stadtgrenze und den roten Verbotszonen"><figcaption>Mannheim: 24 km² Verbotszone auf 145 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">137</td><td class="zahl">4,5 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">165</td><td class="zahl">3,3 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">14</td><td class="zahl">0,2 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">457</td><td class="zahl">8,7 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">43</td><td class="zahl">0,8 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">825</td><td class="zahl">13,8 km²</td></tr></tbody></table>
+
+<p>Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
+überlappen, ist ihre Summe größer als die 24 km² oben. Den größten Teil machen die
+825 Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
+gefolgt von 457 Spielplätzen.</p>
+<p>Von den Anbauvereinigungen hatte das Land bis Juni 2025 eine mit Sitz in Mannheim erlaubt; wo sie
+anbaut, ist nicht veröffentlicht
+(<a href="https://www.landtag-bw.de/resource/blob/576032/5e25358a40209a454555d61a01adaca4/17_8893_D.pdf">Landtag Baden-Württemberg</a>).</p>
+<h2 id="luisenpark-und-parks">Luisenpark und Parks</h2>
+<p>Im <strong>Luisenpark</strong> liegen 70 % der Fläche in einer Zone: 18 Spielplätze liegen im Park.
+Im <strong>Herzogenriedpark</strong> sind es 96 %, um sieben Spielplätze und sechs
+Sportanlagen. In beiden Parks verbietet die Nutzungsordnung Cannabis auf dem ganzen Gelände; wer
+sich nicht daran hält, muss gehen
+(<a href="https://www.luisenpark.de/besucherinfo/parkbesuch/nutzungsordnung">Nutzungsordnung Luisenpark</a>,
+<a href="https://www.herzogenriedpark.de/besucherinfo/parkbesuch/nutzungsbedingungen">Herzogenriedpark</a>).</p>
+<figure class="karte"><img src="../img/stadt/mannheim-luisenpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Luisenpark (grün umrandet) mit den roten Verbotszonen; etwa 70 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Luisenpark: 39 ha, davon 70 % Verbotszone. <a href="../#16/49.48337/8.4962">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/mannheim-herzogenriedpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Herzogenriedpark (grün umrandet) mit den roten Verbotszonen; etwa 96 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Herzogenriedpark: 20 ha, davon 96 % Verbotszone. <a href="../#16/49.50285/8.48464">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Im <strong>Spinelli-Park</strong>, dem Gelände der Bundesgartenschau 2023, liegen 45 % in einer
+Zone; dort verbietet die Satzung der Stadt auf und an den Spielflächen den Konsum berauschender
+Mittel, bis zu 1.000 Euro
+(<a href="https://www.mannheim.de/sites/default/files/2025-06/s03-12_0.pdf">Satzung Spinelli-Park</a>).
+Der <strong>Schlosspark</strong> am Rhein kommt auf 42 %, mit neun Sportanlagen und drei
+Spielplätzen. Auf einem 100 Meter breiten Streifen Land entlang von Rhein und Neckar liegen
+15 % in einer Zone.</p>
+<figure class="karte"><img src="../img/stadt/mannheim-schlosspark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Schlosspark (grün umrandet) mit den roten Verbotszonen; etwa 42 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Schlosspark: 33 ha, davon 42 % Verbotszone. <a href="../#16/49.47744/8.46388">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="quadrate-und-jungbusch">Quadrate und Jungbusch</h2>
+<p>Fußgängerzonen sind nach der Karte der Stadt die <strong>Planken</strong> über den Paradeplatz bis zum Friedrichsring
+und die <strong>Breite Straße</strong> von der Kurpfalzbrücke bis zum Paradeplatz, außerdem etwa der Alte
+Meßplatz und der Bahnhofsvorplatz; der Marktplatz und der Friedrichsplatz am Wasserturm sind dort
+nicht als Fußgängerzone eingefärbt. In der Fußgängerzone gilt zwischen 7 und 20 Uhr
+Konsumverbot; blau zeigt diese Karte die Fußgängerbereiche aus OpenStreetMap.</p>
+<p>Von Planken und Breiter Straße liegen außerdem 44 % in einer
+Sichtweiten-Zone, um Schulen, Kitas und Sportstätten in den Quadraten. Vom Paradeplatz sind es
+51 %, vom Friedrichsplatz 23 %; der Marktplatz liegt fast außerhalb
+(2 %), ebenso der Alte Meßplatz (12 %). An der
+<strong>Jungbuschpromenade</strong> am Verbindungskanal liegen 46 % in einer Zone.</p>
+<figure class="karte"><img src="../img/stadt/mannheim-fussgaengerzone.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Planken und Breite Straße (grün umrandet) mit den roten Verbotszonen; etwa 44 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Planken und Breite Straße: 4 ha, davon 44 % Verbotszone. <a href="../#16/49.48877/8.46714">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/mannheim-jungbusch.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Jungbuschpromenade (grün umrandet) mit den roten Verbotszonen; etwa 46 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Jungbuschpromenade: 1 ha, davon 46 % Verbotszone. <a href="../#16/49.49296/8.45624">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/mannheim-friedrichsplatz.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Friedrichsplatz (grün umrandet) mit den roten Verbotszonen; etwa 23 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Friedrichsplatz: 4 ha, davon 23 % Verbotszone. <a href="../#16/49.4839/8.47617">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>In den Wartehäuschen an Haltestellen verbietet die Polizeiverordnung der Stadt, sich zum Konsum
+berauschender Mittel aufzuhalten, und auf Kinderspielplätzen das Rauchen, bis zu 5.000 Euro
+(<a href="https://www.mannheim.de/sites/default/files/2021-11/s03-01.pdf">Polizeiverordnung, § 10</a>).</p>
+<h2 id="universitat">Universität</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte. Der Ehrenhof des Schlosses, in dem die
+<strong>Universität</strong> sitzt, liegt außerhalb jeder Zone (0 %). Die Hausordnung der
+Universität verbietet auf ihrem ganzen Gelände den Konsum von „Drogen und Betäubungsmitteln“; ob
+Cannabis gemeint ist, sagt sie nicht
+(<a href="https://www.uni-mannheim.de/media/Einrichtungen/Justitiariat/Dokumente/260220_Lesefassung_HausO_barrierefrei.pdf">Hausordnung</a>).</p>
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>Seit dem 1. Juni 2026 verbietet das Landesnichtraucherschutzgesetz Baden-Württemberg das Rauchen
+und Dampfen ausdrücklich auch von Cannabis: auf Spielplätzen, auf Schulgeländen und den
+Grundstücken von Kitas, an allen Haltestellen von Bus und Bahn, in Freibädern und Zoos. Das kostet
+bis zu 200 Euro, im Wiederholungsfall bis zu 500 Euro
+(<a href="https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/neue-regeln-fuer-raucherinnen-und-raucher-vom-1-juni-an-1">Land Baden-Württemberg</a>).</p>
+<p>Einen Bußgeldkatalog für das Cannabisgesetz hat Baden-Württemberg nicht veröffentlicht; das Gesetz
+erlaubt bis zu 30.000 Euro. Die Polizei in Mannheim nannte im Juni 2026 Bußgelder von 300 bis
+1.000 Euro als üblich, nachdem sie an einem Abend in der Innenstadt neun Verstöße gegen das
+Cannabisgesetz festgestellt hatte
+(<a href="https://www.presseportal.de/blaulicht/pm/14915/6303080">Polizeipräsidium Mannheim</a>). Eigene
+Verbotszonen für Cannabis hat Mannheim nicht (Stand 27. November 2026).</p>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-mannheim-kiffen">Wo darf man in Mannheim kiffen?</h3>
+<p>Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
+Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet, wie im
+Luisenpark. Gerauchtes Cannabis zusätzlich nicht an Haltestellen, auf Spielplätzen, Schulgeländen
+und in Freibädern. Eine weiße Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die
+Karte kennt weder Hecken noch Bäume, die die Sicht nehmen, noch Einrichtungen, die in
+OpenStreetMap fehlen.</p>
+<h3 id="gibt-es-eine-amtliche-karte">Gibt es eine amtliche Karte?</h3>
+<p>Ja, die Stadt Mannheim hat eine veröffentlicht (Link oben). Diese Karte hier kann von ihr abweichen,
+etwa bei den Fußgängerzonen oder bei Einrichtungen, die in OpenStreetMap anders oder gar nicht
+eingetragen sind; im Zweifel gilt, was vor Ort ausgeschildert ist.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
+neu gerechnet; die Zahlen auf dieser Seite sind vom 27. November 2026. Die Karte ist eine
+Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
+auf der <a href="../about.html">Über-Seite</a>.</p>
+<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
+OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
 </body>
 </html>
