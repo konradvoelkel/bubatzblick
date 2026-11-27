@@ -11,16 +11,20 @@ Karte selbst.
 
 ### Hinzugefügt
 
-- Städteseiten unter `/stadt/<name>`, zunächst für Berlin, Hamburg, München, Köln, Frankfurt am
-  Main, Stuttgart, Düsseldorf und Heidelberg: Anteil der Stadtfläche in Sichtweite einer
-  Einrichtung (jede Stelle einmal gezählt), Tabelle je Art von Einrichtung, vorgerenderte Karten
-  der Stadt, großer Parks, Plätze, Fußgängerzonen und Hochschulen, dazu die örtlichen und
-  landesrechtlichen Regeln mit Quellen. Text in `staedte/<name>.md`, Zahlen in
-  `staedte/<name>.json`, Seiten erzeugt von `deploy/bin/build_staedte.py` (`make staedte`); die CI
-  prüft, dass ein Neubau kein Diff ergibt. Die Seiten stehen in der Sitemap.
+- Städteseiten unter `/stadt/<name>` für 23 Städte: Berlin, Hamburg, München, Köln, Frankfurt am
+  Main, Stuttgart, Düsseldorf, Leipzig, Dortmund, Essen, Bremen, Dresden, Nürnberg, Hannover,
+  Duisburg, Wuppertal, Bochum, Bielefeld, Bonn, Münster, Mannheim, Karlsruhe und Heidelberg;
+  geplant sind 42 (die größten Städte, alle Landeshauptstädte und weitere Hochschulstädte). Je
+  Stadt: Anteil der Stadtfläche in Sichtweite einer Einrichtung (jede Stelle einmal gezählt),
+  Tabelle je Art von Einrichtung, vorgerenderte Karten der Stadt, großer Parks, Plätze,
+  Fußgängerzonen und Hochschulen, dazu die örtlichen und landesrechtlichen Regeln mit Quellen.
+  Text in `staedte/<name>.md`, Zahlen in `staedte/<name>.json`, Seiten erzeugt von
+  `deploy/bin/build_staedte.py` (`make staedte`); die CI prüft, dass ein Neubau kein Diff ergibt.
+  Die Seiten stehen in der Sitemap.
 - Übersicht `/stadt/` mit Liste und klickbarer Deutschlandkarte (SVG ohne JavaScript, Grenzen aus
-  der Grundkarte). Darunter alle übrigen Großstädte grau unter „Welche Stadt sollen wir noch
-  ausführlicher beschreiben?“: Ein Klick führt über einen Platzhalter `/stadt/<name>` (nicht
+  der Grundkarte; in dichten Gegenden wie dem Ruhrgebiet stehen die Namen in einer Spalte mit
+  Strichen zu den Punkten). Darunter alle übrigen Großstädte grau unter „Welche Stadt sollen wir
+  noch ausführlicher beschreiben?“: Ein Klick führt über einen Platzhalter `/stadt/<name>` (nicht
   indexiert) auf die Karte der Stadt mit einem kurzen Hinweis und zählt als Stimme. Karte und
   Über-Seite verlinken auf die Übersicht.
 - Die tägliche Verdichtung des Zugriffsprotokolls zählt je Stadt die Aufrufe von `/stadt/<name>`
