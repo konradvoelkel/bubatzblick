@@ -57,6 +57,11 @@ jobs:
         run: |
           make about
           git diff --exit-code -- viewer/about.html
+      - name: "Städteseiten sind aus staedte/ erzeugt"
+        run: |
+          make staedte
+          git diff --exit-code -- viewer/stadt viewer/sitemap.xml
+          test -z "$(git status --porcelain -- viewer/stadt)"
 
   # Getrennter Job: scheitert er, sind die Tests trotzdem ausgewertet, und
   # eine neue Meldung blockiert keinen Merge an einer anderen Stelle.

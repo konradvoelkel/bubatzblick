@@ -1,0 +1,2020 @@
+{
+ "stadtflaeche_osm_km2": 248.12,
+ "wald": {
+  "flaeche_km2": 41.8,
+  "anteil_stadt": 0.1686,
+  "anteil_zone": 0.0787,
+  "anteil_zone_ohne_wald": 0.204
+ },
+ "zonen_km2": 45.37,
+ "anteil": 0.18286,
+ "kategorien": {
+  "sports": {
+   "objekte": 1163,
+   "zonen_km2": 22.02
+  },
+  "playground": {
+   "objekte": 842,
+   "zonen_km2": 15.61
+  },
+  "kindergarten": {
+   "objekte": 583,
+   "zonen_km2": 10.44
+  },
+  "school": {
+   "objekte": 229,
+   "zonen_km2": 9.53
+  },
+  "youth": {
+   "objekte": 50,
+   "zonen_km2": 0.86
+  },
+  "childcare": {
+   "objekte": 50,
+   "zonen_km2": 0.77
+  }
+ },
+ "objekte_gesamt": 2917,
+ "merkmale": {
+  "park": [
+   {
+    "name": "Volkspark Niddatal",
+    "osm": [
+     "w4817049"
+    ],
+    "flaeche_ha": 161.5,
+    "zone_ha": 40.3,
+    "anteil_zone": 0.2493,
+    "lat": 50.13998,
+    "lon": 8.63423,
+    "bbox": [
+     8.62397,
+     50.13161,
+     8.64242,
+     50.14908
+    ]
+   },
+   {
+    "name": "Ostpark",
+    "osm": [
+     "w4886946"
+    ],
+    "flaeche_ha": 33.0,
+    "zone_ha": 19.7,
+    "anteil_zone": 0.5979,
+    "lat": 50.12001,
+    "lon": 8.7224,
+    "bbox": [
+     8.71706,
+     50.11666,
+     8.72899,
+     50.12305
+    ]
+   },
+   {
+    "name": "Grüneburgpark",
+    "osm": [
+     "w4751997"
+    ],
+    "flaeche_ha": 26.5,
+    "zone_ha": 12.4,
+    "anteil_zone": 0.4692,
+    "lat": 50.1272,
+    "lon": 8.6622,
+    "bbox": [
+     8.65723,
+     50.12319,
+     8.66453,
+     50.13119
+    ]
+   },
+   {
+    "name": "Alter Flugplatz",
+    "osm": [
+     "w4858327"
+    ],
+    "flaeche_ha": 23.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.17659,
+    "lon": 8.65624,
+    "bbox": [
+     8.65054,
+     50.17422,
+     8.6644,
+     50.17888
+    ]
+   },
+   {
+    "name": "Rebstockpark",
+    "osm": [
+     "w13870310"
+    ],
+    "flaeche_ha": 22.5,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.0865,
+    "lat": 50.11051,
+    "lon": 8.61475,
+    "bbox": [
+     8.60679,
+     50.10782,
+     8.62099,
+     50.11329
+    ]
+   },
+   {
+    "name": "Höchster Stadtpark",
+    "osm": [
+     "w8079333"
+    ],
+    "flaeche_ha": 18.5,
+    "zone_ha": 12.1,
+    "anteil_zone": 0.6553,
+    "lat": 50.11143,
+    "lon": 8.55608,
+    "bbox": [
+     8.55146,
+     50.1062,
+     8.56043,
+     50.11624
+    ]
+   },
+   {
+    "name": "Campus Westend",
+    "osm": [
+     "r17577467"
+    ],
+    "flaeche_ha": 17.2,
+    "zone_ha": 4.1,
+    "anteil_zone": 0.2396,
+    "lat": 50.1266,
+    "lon": 8.66917,
+    "bbox": [
+     8.66352,
+     50.12377,
+     8.67105,
+     50.12939
+    ]
+   },
+   {
+    "name": "Huthpark",
+    "osm": [
+     "w4938195"
+    ],
+    "flaeche_ha": 16.8,
+    "zone_ha": 10.9,
+    "anteil_zone": 0.6519,
+    "lat": 50.14387,
+    "lon": 8.71434,
+    "bbox": [
+     8.7106,
+     50.14246,
+     8.71883,
+     50.1457
+    ]
+   },
+   {
+    "name": "Kätcheslachpark",
+    "osm": [
+     "r4072576"
+    ],
+    "flaeche_ha": 15.3,
+    "zone_ha": 7.9,
+    "anteil_zone": 0.517,
+    "lat": 50.18082,
+    "lon": 8.63203,
+    "bbox": [
+     8.62252,
+     50.1784,
+     8.63876,
+     50.18317
+    ]
+   },
+   {
+    "name": "Rennbahnpark",
+    "osm": [
+     "w854437147"
+    ],
+    "flaeche_ha": 13.3,
+    "zone_ha": 6.3,
+    "anteil_zone": 0.472,
+    "lat": 50.08645,
+    "lon": 8.65328,
+    "bbox": [
+     8.65003,
+     50.08461,
+     8.65622,
+     50.08835
+    ]
+   },
+   {
+    "name": "Günthersburgpark",
+    "osm": [
+     "w164182183"
+    ],
+    "flaeche_ha": 12.0,
+    "zone_ha": 10.3,
+    "anteil_zone": 0.8547,
+    "lat": 50.13056,
+    "lon": 8.70342,
+    "bbox": [
+     8.70098,
+     50.12773,
+     8.70545,
+     50.13306
+    ]
+   },
+   {
+    "name": "Lohrberg",
+    "osm": [
+     "w8076022"
+    ],
+    "flaeche_ha": 11.1,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.1778,
+    "lat": 50.15065,
+    "lon": 8.72925,
+    "bbox": [
+     8.72449,
+     50.14886,
+     8.73289,
+     50.1524
+    ]
+   },
+   {
+    "name": "Waldspielpark Carl-von-Weinberg",
+    "osm": [
+     "w8662674"
+    ],
+    "flaeche_ha": 10.2,
+    "zone_ha": 4.5,
+    "anteil_zone": 0.4416,
+    "lat": 50.07491,
+    "lon": 8.64587,
+    "bbox": [
+     8.64241,
+     50.0736,
+     8.65074,
+     50.07661
+    ]
+   },
+   {
+    "name": "Sinaipark",
+    "osm": [
+     "w4756592"
+    ],
+    "flaeche_ha": 9.1,
+    "zone_ha": 8.9,
+    "anteil_zone": 0.9738,
+    "lat": 50.14541,
+    "lon": 8.67383,
+    "bbox": [
+     8.66822,
+     50.14348,
+     8.67685,
+     50.14729
+    ]
+   },
+   {
+    "name": "Heinrich-Kraft-Park",
+    "osm": [
+     "w4826709"
+    ],
+    "flaeche_ha": 8.3,
+    "zone_ha": 8.3,
+    "anteil_zone": 1.0,
+    "lat": 50.13821,
+    "lon": 8.76653,
+    "bbox": [
+     8.76419,
+     50.13631,
+     8.76946,
+     50.13939
+    ]
+   },
+   {
+    "name": "Martin-Luther-King-Park",
+    "osm": [
+     "w4805889"
+    ],
+    "flaeche_ha": 8.1,
+    "zone_ha": 6.0,
+    "anteil_zone": 0.7381,
+    "lat": 50.16164,
+    "lon": 8.62478,
+    "bbox": [
+     8.62058,
+     50.15981,
+     8.62755,
+     50.16378
+    ]
+   },
+   {
+    "name": "Viehtrieb",
+    "osm": [
+     "w28006051"
+    ],
+    "flaeche_ha": 8.1,
+    "zone_ha": 1.2,
+    "anteil_zone": 0.1475,
+    "lat": 50.15735,
+    "lon": 8.68396,
+    "bbox": [
+     8.6814,
+     50.15587,
+     8.68773,
+     50.15901
+    ]
+   },
+   {
+    "name": "Weingärtenanlage",
+    "osm": [
+     "w259660873",
+     "w259660874"
+    ],
+    "flaeche_ha": 8.1,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.3028,
+    "lat": 50.19438,
+    "lon": 8.63778,
+    "bbox": [
+     8.63564,
+     50.18813,
+     8.65139,
+     50.19495
+    ]
+   },
+   {
+    "name": "Bonifatiuspark",
+    "osm": [
+     "w4928691"
+    ],
+    "flaeche_ha": 8.0,
+    "zone_ha": 5.1,
+    "anteil_zone": 0.631,
+    "lat": 50.17764,
+    "lon": 8.63994,
+    "bbox": [
+     8.63474,
+     50.17504,
+     8.64656,
+     50.18032
+    ]
+   },
+   {
+    "name": "Neuer Rebstockpark",
+    "osm": [
+     "w5184368"
+    ],
+    "flaeche_ha": 7.5,
+    "zone_ha": 6.4,
+    "anteil_zone": 0.8414,
+    "lat": 50.11108,
+    "lon": 8.62427,
+    "bbox": [
+     8.62056,
+     50.1101,
+     8.62744,
+     50.11216
+    ]
+   },
+   {
+    "name": "Wörthspitze",
+    "osm": [
+     "w9825900"
+    ],
+    "flaeche_ha": 7.3,
+    "zone_ha": 2.3,
+    "anteil_zone": 0.3123,
+    "lat": 50.09969,
+    "lon": 8.55944,
+    "bbox": [
+     8.55157,
+     50.09854,
+     8.56244,
+     50.10083
+    ]
+   },
+   {
+    "name": "Bonameser Nordpark",
+    "osm": [
+     "w4616522"
+    ],
+    "flaeche_ha": 7.2,
+    "zone_ha": 4.1,
+    "anteil_zone": 0.5705,
+    "lat": 50.17873,
+    "lon": 8.66933,
+    "bbox": [
+     8.66497,
+     50.17755,
+     8.67277,
+     50.18001
+    ]
+   },
+   {
+    "name": "Rose-Schlösinger-Anlage",
+    "osm": [
+     "w4886980"
+    ],
+    "flaeche_ha": 7.2,
+    "zone_ha": 5.3,
+    "anteil_zone": 0.7353,
+    "lat": 50.12732,
+    "lon": 8.71941,
+    "bbox": [
+     8.71719,
+     50.12335,
+     8.72031,
+     50.13052
+    ]
+   },
+   {
+    "name": "August-Belz-Anlage",
+    "osm": [
+     "w615483224"
+    ],
+    "flaeche_ha": 6.4,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.3097,
+    "lat": 50.08275,
+    "lon": 8.64037,
+    "bbox": [
+     8.63651,
+     50.08172,
+     8.64288,
+     50.08392
+    ]
+   },
+   {
+    "name": "Miquelanlage",
+    "osm": [
+     "w4749533"
+    ],
+    "flaeche_ha": 5.7,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.037,
+    "lat": 50.13407,
+    "lon": 8.65751,
+    "bbox": [
+     8.65678,
+     50.13165,
+     8.66229,
+     50.13606
+    ]
+   },
+   {
+    "name": "Friedberger Anlage",
+    "osm": [
+     "w4799881",
+     "w4799882"
+    ],
+    "flaeche_ha": 5.4,
+    "zone_ha": 4.7,
+    "anteil_zone": 0.8816,
+    "lat": 50.11684,
+    "lon": 8.69229,
+    "bbox": [
+     8.68876,
+     50.11351,
+     8.69547,
+     50.11825
+    ]
+   },
+   {
+    "name": "Goldsteinpark",
+    "osm": [
+     "w8662463"
+    ],
+    "flaeche_ha": 5.3,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.5641,
+    "lat": 50.08205,
+    "lon": 8.60726,
+    "bbox": [
+     8.6042,
+     50.08087,
+     8.60952,
+     50.08311
+    ]
+   },
+   {
+    "name": "Solmspark",
+    "osm": [
+     "w4934078"
+    ],
+    "flaeche_ha": 5.2,
+    "zone_ha": 4.4,
+    "anteil_zone": 0.8349,
+    "lat": 50.12185,
+    "lon": 8.61224,
+    "bbox": [
+     8.61031,
+     50.12011,
+     8.61413,
+     50.12361
+    ]
+   },
+   {
+    "name": "Parkanlage Sulzbachtal",
+    "osm": [
+     "w12482506"
+    ],
+    "flaeche_ha": 5.2,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.3157,
+    "lat": 50.1219,
+    "lon": 8.55781,
+    "bbox": [
+     8.55313,
+     50.12077,
+     8.56188,
+     50.12293
+    ]
+   },
+   {
+    "name": "Spielpark Tannenwald",
+    "osm": [
+     "w15802898"
+    ],
+    "flaeche_ha": 5.2,
+    "zone_ha": 5.1,
+    "anteil_zone": 0.9875,
+    "lat": 50.05894,
+    "lon": 8.68158,
+    "bbox": [
+     8.67931,
+     50.05783,
+     8.68386,
+     50.06048
+    ]
+   },
+   {
+    "name": "Taunusanlage",
+    "osm": [
+     "r6551446"
+    ],
+    "flaeche_ha": 5.1,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.1501,
+    "lat": 50.11295,
+    "lon": 8.66964,
+    "bbox": [
+     8.66869,
+     50.1106,
+     8.67224,
+     50.11524
+    ]
+   },
+   {
+    "name": "Brentanopark",
+    "osm": [
+     "w4823037"
+    ],
+    "flaeche_ha": 4.9,
+    "zone_ha": 4.4,
+    "anteil_zone": 0.8913,
+    "lat": 50.12377,
+    "lon": 8.61553,
+    "bbox": [
+     8.61257,
+     50.12204,
+     8.61757,
+     50.12559
+    ]
+   },
+   {
+    "name": "Marie-Bittorf-Anlage",
+    "osm": [
+     "w4751903"
+    ],
+    "flaeche_ha": 4.5,
+    "zone_ha": 4.5,
+    "anteil_zone": 0.9965,
+    "lat": 50.14344,
+    "lon": 8.65982,
+    "bbox": [
+     8.65681,
+     50.14116,
+     8.66251,
+     50.1457
+    ]
+   },
+   {
+    "name": "Eschenheimer Anlage",
+    "osm": [
+     "r3896694",
+     "w4800100"
+    ],
+    "flaeche_ha": 4.5,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.723,
+    "lat": 50.11848,
+    "lon": 8.68318,
+    "bbox": [
+     8.67966,
+     50.1176,
+     8.68866,
+     50.11994
+    ]
+   },
+   {
+    "name": "Bockenheimer Anlage",
+    "osm": [
+     "w4800201"
+    ],
+    "flaeche_ha": 3.9,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.3318,
+    "lat": 50.11702,
+    "lon": 8.67572,
+    "bbox": [
+     8.672,
+     50.11594,
+     8.67899,
+     50.11806
+    ]
+   },
+   {
+    "name": "Hafenpark",
+    "osm": [
+     "w131722213"
+    ],
+    "flaeche_ha": 3.9,
+    "zone_ha": 3.9,
+    "anteil_zone": 1.0,
+    "lat": 50.1081,
+    "lon": 8.70763,
+    "bbox": [
+     8.70552,
+     50.10729,
+     8.70996,
+     50.10899
+    ]
+   },
+   {
+    "name": "Europagarten",
+    "osm": [
+     "r11963205"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 3.5,
+    "anteil_zone": 0.9588,
+    "lat": 50.10794,
+    "lon": 8.63167,
+    "bbox": [
+     8.62931,
+     50.10738,
+     8.63515,
+     50.10851
+    ]
+   },
+   {
+    "name": "Rothschildpark",
+    "osm": [
+     "w4783983"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.4455,
+    "lat": 50.11741,
+    "lon": 8.67002,
+    "bbox": [
+     8.66853,
+     50.11582,
+     8.67084,
+     50.11907
+    ]
+   },
+   {
+    "name": "Obermainanlage",
+    "osm": [
+     "w4799843"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 3.1,
+    "anteil_zone": 0.8883,
+    "lat": 50.11131,
+    "lon": 8.6937,
+    "bbox": [
+     8.69287,
+     50.10932,
+     8.69575,
+     50.11332
+    ]
+   },
+   {
+    "name": "Sommerhoffpark",
+    "osm": [
+     "w41412377"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.9338,
+    "lat": 50.09681,
+    "lon": 8.64897,
+    "bbox": [
+     8.64641,
+     50.09546,
+     8.65077,
+     50.098
+    ]
+   },
+   {
+    "name": "Adolph-von-Holzhausen-Park",
+    "osm": [
+     "w4693850"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 3.3,
+    "anteil_zone": 0.9476,
+    "lat": 50.12621,
+    "lon": 8.67828,
+    "bbox": [
+     8.67674,
+     50.1252,
+     8.67972,
+     50.12732
+    ]
+   },
+   {
+    "name": "Mainvorland",
+    "osm": [
+     "w41412611"
+    ],
+    "flaeche_ha": 3.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.08972,
+    "lon": 8.6234,
+    "bbox": [
+     8.61776,
+     50.08924,
+     8.62777,
+     50.09019
+    ]
+   },
+   {
+    "name": "Zeppelinallee",
+    "osm": [
+     "w1127997491",
+     "w238778881",
+     "w238778883",
+     "w240411197",
+     "w4752023"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.6386,
+    "lat": 50.12852,
+    "lon": 8.64732,
+    "bbox": [
+     8.64554,
+     50.12433,
+     8.65281,
+     50.1293
+    ]
+   },
+   {
+    "name": "Wasserpark",
+    "osm": [
+     "w13215029"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.9902,
+    "lat": 50.1368,
+    "lon": 8.6993,
+    "bbox": [
+     8.69722,
+     50.13618,
+     8.70147,
+     50.13758
+    ]
+   },
+   {
+    "name": "Elli-Lucht-Park",
+    "osm": [
+     "w69557425"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 2.3,
+    "anteil_zone": 0.7801,
+    "lat": 50.08981,
+    "lon": 8.64666,
+    "bbox": [
+     8.64456,
+     50.08923,
+     8.65013,
+     50.09038
+    ]
+   },
+   {
+    "name": "Bertramswiesen",
+    "osm": [
+     "w195565153"
+    ],
+    "flaeche_ha": 2.9,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.9194,
+    "lat": 50.13785,
+    "lon": 8.67686,
+    "bbox": [
+     8.67473,
+     50.1368,
+     8.67931,
+     50.1389
+    ]
+   },
+   {
+    "name": "Seehofpark",
+    "osm": [
+     "w8662962"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.9979,
+    "lat": 50.09615,
+    "lon": 8.70513,
+    "bbox": [
+     8.70309,
+     50.0951,
+     8.70628,
+     50.0973
+    ]
+   },
+   {
+    "name": "Elisabeth-Schwarzhaupt-Anlage",
+    "osm": [
+     "w11950499"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 2.8,
+    "anteil_zone": 1.0,
+    "lat": 50.15164,
+    "lon": 8.67435,
+    "bbox": [
+     8.67345,
+     50.14973,
+     8.67542,
+     50.15375
+    ]
+   },
+   {
+    "name": "Gateway Garden",
+    "osm": [
+     "w290544801"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.6123,
+    "lat": 50.05589,
+    "lon": 8.59387,
+    "bbox": [
+     8.59134,
+     50.05527,
+     8.59561,
+     50.05653
+    ]
+   },
+   {
+    "name": "Griesheimer Wäldchen",
+    "osm": [
+     "w14330759"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.5427,
+    "lat": 50.104,
+    "lon": 8.60158,
+    "bbox": [
+     8.59559,
+     50.103,
+     8.60235,
+     50.10524
+    ]
+   },
+   {
+    "name": "Helmut-Sittler-Promenade",
+    "osm": [
+     "w328913122"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.1553,
+    "lat": 50.1237,
+    "lon": 8.77141,
+    "bbox": [
+     8.76788,
+     50.11877,
+     8.77692,
+     50.12854
+    ]
+   },
+   {
+    "name": "Mühlbergpark",
+    "osm": [
+     "w96311770"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.1002,
+    "lon": 8.69941,
+    "bbox": [
+     8.69808,
+     50.09913,
+     8.70071,
+     50.10145
+    ]
+   },
+   {
+    "name": "Waldspielpark Louisa",
+    "osm": [
+     "w8662680"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.9713,
+    "lat": 50.0869,
+    "lon": 8.66791,
+    "bbox": [
+     8.66646,
+     50.08575,
+     8.66927,
+     50.08788
+    ]
+   },
+   {
+    "name": "Bethmannpark",
+    "osm": [
+     "w4723745"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 1.2,
+    "anteil_zone": 0.5806,
+    "lat": 50.11903,
+    "lon": 8.69161,
+    "bbox": [
+     8.68922,
+     50.11826,
+     8.69259,
+     50.11977
+    ]
+   },
+   {
+    "name": "Parkanlage \"Römische Straße\"",
+    "osm": [
+     "r14226266"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.95,
+    "lat": 50.17817,
+    "lon": 8.62319,
+    "bbox": [
+     8.62119,
+     50.1741,
+     8.6261,
+     50.18073
+    ]
+   },
+   {
+    "name": "Schwarzer Platz",
+    "osm": [
+     "w4495311"
+    ],
+    "flaeche_ha": 2.0,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.6881,
+    "lat": 50.16525,
+    "lon": 8.68868,
+    "bbox": [
+     8.68751,
+     50.16427,
+     8.68996,
+     50.16615
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r11014694",
+     "r17633574",
+     "r3747596",
+     "r3893485",
+     "r6473663",
+     "r6473685",
+     "r67360",
+     "r67362",
+     "w1451038718",
+     "w199251282",
+     "w215524567",
+     "w215524568",
+     "w27615643",
+     "w27615644",
+     "w27616176",
+     "w27616310",
+     "w27616311",
+     "w27616396",
+     "w27616469",
+     "w27616633",
+     "w27616634",
+     "w27616637",
+     "w27616728",
+     "w27616848",
+     "w27616948",
+     "w27616967",
+     "w30423200",
+     "w32343396",
+     "w32368766",
+     "w32369260",
+     "w35806641",
+     "w35806794",
+     "w370796003",
+     "w370796005",
+     "w4495771",
+     "w4498861",
+     "w4526520",
+     "w4616765",
+     "w4719534",
+     "w4719573",
+     "w4719601",
+     "w4734367",
+     "w4741876",
+     "w83604157"
+    ],
+    "flaeche_ha": 158.5,
+    "zone_ha": 28.4,
+    "anteil_zone": 0.1791,
+    "lat": 50.10467,
+    "lon": 8.67318,
+    "bbox": [
+     8.62549,
+     50.08799,
+     8.76236,
+     50.12141
+    ]
+   },
+   {
+    "name": "Offenbacher Mainbogen",
+    "osm": [
+     "w4858403",
+     "w4959935"
+    ],
+    "flaeche_ha": 26.1,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.1006,
+    "lat": 50.12102,
+    "lon": 8.77478,
+    "bbox": [
+     8.76212,
+     50.10783,
+     8.78097,
+     50.1343
+    ]
+   },
+   {
+    "name": "Main",
+    "osm": [
+     "w4719477"
+    ],
+    "flaeche_ha": 12.0,
+    "zone_ha": 1.2,
+    "anteil_zone": 0.1037,
+    "lat": 50.08899,
+    "lon": 8.61986,
+    "bbox": [
+     8.61374,
+     50.08795,
+     8.62586,
+     50.09009
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Palmengarten",
+    "osm": [
+     "w4793541"
+    ],
+    "flaeche_ha": 19.2,
+    "zone_ha": 5.0,
+    "anteil_zone": 0.26,
+    "lat": 50.12368,
+    "lon": 8.65596,
+    "bbox": [
+     8.65246,
+     50.12075,
+     8.65909,
+     50.1266
+    ]
+   },
+   {
+    "name": "Wissenschaftsgarten",
+    "osm": [
+     "w300747745"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.1473,
+    "lat": 50.17001,
+    "lon": 8.63068,
+    "bbox": [
+     8.62854,
+     50.16885,
+     8.63278,
+     50.17124
+    ]
+   },
+   {
+    "name": "Meisterpark",
+    "osm": [
+     "w226848933"
+    ],
+    "flaeche_ha": 1.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.07792,
+    "lon": 8.51961,
+    "bbox": [
+     8.51827,
+     50.07721,
+     8.52079,
+     50.07858
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Johann-Wolfgang-Goethe Universität - Campus Riedberg",
+    "osm": [
+     "w4839763"
+    ],
+    "flaeche_ha": 28.3,
+    "zone_ha": 4.3,
+    "anteil_zone": 0.151,
+    "lat": 50.17232,
+    "lon": 8.63074,
+    "bbox": [
+     8.62624,
+     50.16884,
+     8.6353,
+     50.17602
+    ]
+   },
+   {
+    "name": "Johann-Wolfgang-Goethe-Universität Campus Westend",
+    "osm": [
+     "w4794787"
+    ],
+    "flaeche_ha": 25.9,
+    "zone_ha": 4.8,
+    "anteil_zone": 0.1873,
+    "lat": 50.12721,
+    "lon": 8.66762,
+    "bbox": [
+     8.66351,
+     50.12377,
+     8.67107,
+     50.13073
+    ]
+   },
+   {
+    "name": "Philosophisch-Theologische Hochschule St. Georgen",
+    "osm": [
+     "w55159801"
+    ],
+    "flaeche_ha": 8.5,
+    "zone_ha": 4.5,
+    "anteil_zone": 0.5307,
+    "lat": 50.09776,
+    "lon": 8.7124,
+    "bbox": [
+     8.70987,
+     50.09616,
+     8.71477,
+     50.09929
+    ]
+   },
+   {
+    "name": "Goethe Universität - Campus Bockenheim",
+    "osm": [
+     "w284788804"
+    ],
+    "flaeche_ha": 5.6,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.4402,
+    "lat": 50.11747,
+    "lon": 8.64984,
+    "bbox": [
+     8.64897,
+     50.11555,
+     8.65333,
+     50.11985
+    ]
+   },
+   {
+    "name": "Frankfurt University of Applied Sciences",
+    "osm": [
+     "w4824694"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.2829,
+    "lat": 50.13053,
+    "lon": 8.69233,
+    "bbox": [
+     8.69094,
+     50.12953,
+     8.69405,
+     50.13165
+    ]
+   },
+   {
+    "name": "Frankfurt School of Finance & Management",
+    "osm": [
+     "w370617727"
+    ],
+    "flaeche_ha": 3.3,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.4753,
+    "lat": 50.13267,
+    "lon": 8.68022,
+    "bbox": [
+     8.67793,
+     50.13205,
+     8.6825,
+     50.13374
+    ]
+   }
+  ],
+  "see": [
+   {
+    "name": "Schmitt'sche Grube",
+    "osm": [
+     "w5117826"
+    ],
+    "flaeche_ha": 6.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.0881,
+    "lon": 8.55609,
+    "bbox": [
+     8.55356,
+     50.08652,
+     8.55857,
+     50.08967
+    ]
+   },
+   {
+    "name": "Jacobiweiher",
+    "osm": [
+     "r2700"
+    ],
+    "flaeche_ha": 5.9,
+    "zone_ha": 1.2,
+    "anteil_zone": 0.2064,
+    "lat": 50.06985,
+    "lon": 8.68554,
+    "bbox": [
+     8.68045,
+     50.06696,
+     8.69046,
+     50.07263
+    ]
+   },
+   {
+    "name": "Riedteich",
+    "osm": [
+     "w4826770"
+    ],
+    "flaeche_ha": 4.2,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.0733,
+    "lat": 50.15125,
+    "lon": 8.77268,
+    "bbox": [
+     8.76807,
+     50.15002,
+     8.77558,
+     50.15258
+    ]
+   },
+   {
+    "name": "Ostparkweiher",
+    "osm": [
+     "r6139"
+    ],
+    "flaeche_ha": 4.0,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.4166,
+    "lat": 50.12034,
+    "lon": 8.72388,
+    "bbox": [
+     8.72169,
+     50.11863,
+     8.7247,
+     50.12205
+    ]
+   },
+   {
+    "name": "Rebstockweiher",
+    "osm": [
+     "r3247"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.11136,
+    "lon": 8.61547,
+    "bbox": [
+     8.61358,
+     50.11046,
+     8.61739,
+     50.11226
+    ]
+   },
+   {
+    "name": "Grill’scher Altarm",
+    "osm": [
+     "r52746"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.1934,
+    "lat": 50.11273,
+    "lon": 8.58937,
+    "bbox": [
+     8.58798,
+     50.11139,
+     8.59417,
+     50.1141
+    ]
+   },
+   {
+    "name": "Fechenheimer Weiher",
+    "osm": [
+     "r6647807"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.14134,
+    "lon": 8.77829,
+    "bbox": [
+     8.77709,
+     50.14029,
+     8.78082,
+     50.14237
+    ]
+   },
+   {
+    "name": "Höchster Stadtparkweiher",
+    "osm": [
+     "r5408222"
+    ],
+    "flaeche_ha": 2.0,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.555,
+    "lat": 50.10909,
+    "lon": 8.55602,
+    "bbox": [
+     8.55407,
+     50.10775,
+     8.55736,
+     50.11045
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Frankfurter Stadtwald",
+    "osm": [
+     "r48493",
+     "w1195549154",
+     "w1231699027",
+     "w5133277"
+    ],
+    "flaeche_ha": 1119.4,
+    "zone_ha": 36.8,
+    "anteil_zone": 0.0328,
+    "lat": 50.08297,
+    "lon": 8.71763,
+    "bbox": [
+     8.6542,
+     50.05819,
+     8.74047,
+     50.09561
+    ]
+   },
+   {
+    "name": "Schwanheimer Wald",
+    "osm": [
+     "r2434"
+    ],
+    "flaeche_ha": 645.3,
+    "zone_ha": 30.3,
+    "anteil_zone": 0.0469,
+    "lat": 50.07457,
+    "lon": 8.59158,
+    "bbox": [
+     8.54381,
+     50.06596,
+     8.61552,
+     50.08493
+    ]
+   },
+   {
+    "name": "Unterwald",
+    "osm": [
+     "r2994963"
+    ],
+    "flaeche_ha": 356.5,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.0022,
+    "lat": 50.05875,
+    "lon": 8.56791,
+    "bbox": [
+     8.55045,
+     50.05014,
+     8.59591,
+     50.06628
+    ]
+   },
+   {
+    "name": "Enkheimer Wald",
+    "osm": [
+     "r2603912"
+    ],
+    "flaeche_ha": 207.6,
+    "zone_ha": 34.3,
+    "anteil_zone": 0.1653,
+    "lat": 50.13982,
+    "lon": 8.7676,
+    "bbox": [
+     8.74699,
+     50.13501,
+     8.78281,
+     50.15427
+    ]
+   },
+   {
+    "name": "Niedwald",
+    "osm": [
+     "r2091170"
+    ],
+    "flaeche_ha": 59.8,
+    "zone_ha": 3.1,
+    "anteil_zone": 0.0517,
+    "lat": 50.10917,
+    "lon": 8.59295,
+    "bbox": [
+     8.58332,
+     50.10539,
+     8.60072,
+     50.11284
+    ]
+   },
+   {
+    "name": "Riederwald",
+    "osm": [
+     "w4930886"
+    ],
+    "flaeche_ha": 28.0,
+    "zone_ha": 13.2,
+    "anteil_zone": 0.471,
+    "lat": 50.12516,
+    "lon": 8.73075,
+    "bbox": [
+     8.72641,
+     50.12219,
+     8.74006,
+     50.12822
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Marktplatz Bergen",
+    "osm": [
+     "w1517695784"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.92,
+    "lat": 50.1582,
+    "lon": 8.75824,
+    "bbox": [
+     8.75726,
+     50.15755,
+     8.75922,
+     50.15882
+    ]
+   },
+   {
+    "name": "Campus Frankfurt University of Applied Sciences",
+    "osm": [
+     "w507328056"
+    ],
+    "flaeche_ha": 1.4,
+    "zone_ha": 1.0,
+    "anteil_zone": 0.7362,
+    "lat": 50.1305,
+    "lon": 8.6925,
+    "bbox": [
+     8.69136,
+     50.12955,
+     8.69398,
+     50.13145
+    ]
+   },
+   {
+    "name": "Paulsplatz",
+    "osm": [
+     "r236941"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.11116,
+    "lon": 8.6815,
+    "bbox": [
+     8.68023,
+     50.11071,
+     8.68206,
+     50.1116
+    ]
+   },
+   {
+    "name": "Riedbergplatz",
+    "osm": [
+     "r2345327"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.9616,
+    "lat": 50.1766,
+    "lon": 8.62899,
+    "bbox": [
+     8.62831,
+     50.17606,
+     8.63003,
+     50.17715
+    ]
+   },
+   {
+    "name": "Theodor-W.-Adorno-Platz",
+    "osm": [
+     "r4275377"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.12769,
+    "lon": 8.6667,
+    "bbox": [
+     8.66606,
+     50.12719,
+     8.66736,
+     50.12817
+    ]
+   },
+   {
+    "name": "Römerberg",
+    "osm": [
+     "r2341721"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.11021,
+    "lon": 8.68217,
+    "bbox": [
+     8.6816,
+     50.10955,
+     8.68274,
+     50.11087
+    ]
+   },
+   {
+    "name": "Gisèle-Freund-Platz",
+    "osm": [
+     "w28724297"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.9958,
+    "lat": 50.12681,
+    "lon": 8.67075,
+    "bbox": [
+     8.67039,
+     50.12629,
+     8.67124,
+     50.12739
+    ]
+   },
+   {
+    "name": "Platz der Republik",
+    "osm": [
+     "r1413652"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.5256,
+    "lat": 50.11025,
+    "lon": 8.66019,
+    "bbox": [
+     8.65905,
+     50.10982,
+     8.66077,
+     50.11067
+    ]
+   },
+   {
+    "name": "Gebrüder-Hommel-Anlage",
+    "osm": [
+     "w11950475"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.416,
+    "lat": 50.15047,
+    "lon": 8.67643,
+    "bbox": [
+     8.67598,
+     50.1502,
+     8.67689,
+     50.15079
+    ]
+   },
+   {
+    "name": "Richard-Herrmann-Platz",
+    "osm": [
+     "w47444003"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.9954,
+    "lat": 50.12735,
+    "lon": 8.7236,
+    "bbox": [
+     8.72263,
+     50.12714,
+     8.72414,
+     50.12756
+    ]
+   },
+   {
+    "name": "Martin-Luther-Platz",
+    "osm": [
+     "r3896526"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.9931,
+    "lat": 50.12395,
+    "lon": 8.69729,
+    "bbox": [
+     8.69694,
+     50.12355,
+     8.69801,
+     50.12437
+    ]
+   },
+   {
+    "name": "Carlo-Schmid-Platz",
+    "osm": [
+     "w24215728"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.9711,
+    "lat": 50.12065,
+    "lon": 8.6511,
+    "bbox": [
+     8.65079,
+     50.12029,
+     8.65158,
+     50.12095
+    ]
+   },
+   {
+    "name": "Kaiserplatz",
+    "osm": [
+     "r4012818"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.2749,
+    "lat": 50.11064,
+    "lon": 8.6752,
+    "bbox": [
+     8.6748,
+     50.11018,
+     8.67576,
+     50.11086
+    ]
+   },
+   {
+    "name": "Rudolf-Schwarz-Platz",
+    "osm": [
+     "r13513426"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.8309,
+    "lat": 50.17875,
+    "lon": 8.6224,
+    "bbox": [
+     8.62188,
+     50.17832,
+     8.62307,
+     50.17919
+    ]
+   },
+   {
+    "name": "Thurn-und-Taxis-Platz",
+    "osm": [
+     "w1352753051"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0158,
+    "lat": 50.1152,
+    "lon": 8.68039,
+    "bbox": [
+     8.67957,
+     50.11485,
+     8.68054,
+     50.11555
+    ]
+   },
+   {
+    "name": "Merianplatz",
+    "osm": [
+     "r2008388"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.8191,
+    "lat": 50.1206,
+    "lon": 8.69559,
+    "bbox": [
+     8.69451,
+     50.12023,
+     8.69613,
+     50.12098
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 798.2,
+   "zone_ha": 208.7,
+   "anteil_zone": 0.2614
+  },
+  {
+   "name": "Offenbacher Mainbogen",
+   "flaeche_ha": 44.9,
+   "zone_ha": 1.6,
+   "anteil_zone": 0.0359
+  },
+  {
+   "name": "Main",
+   "flaeche_ha": 23.1,
+   "zone_ha": 4.2,
+   "anteil_zone": 0.1818
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 49.1,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 50.12132,
+  "lon": 8.6613,
+  "bbox": [
+   8.47137,
+   50.01493,
+   8.80105,
+   50.22733
+  ]
+ },
+ "orte": [
+  {
+   "name": "Zeil",
+   "osm": [
+    "r3881997",
+    "w1182019041",
+    "w32318881",
+    "w34568456",
+    "w371155807",
+    "w371155808",
+    "w4722338",
+    "w925243659",
+    "w925243662"
+   ],
+   "flaeche_ha": 1.95,
+   "bbox": [
+    8.67929,
+    50.11374,
+    8.68779,
+    50.11513
+   ],
+   "anteil_zone": 0.3209,
+   "art": "flaeche",
+   "lat": 50.11443,
+   "lon": 8.68303
+  },
+  {
+   "name": "Große Bockenheimer Straße",
+   "osm": [
+    "w1567367699",
+    "w4722377",
+    "w585986914"
+   ],
+   "flaeche_ha": 0.4,
+   "bbox": [
+    8.67273,
+    50.11383,
+    8.67611,
+    50.11504
+   ],
+   "anteil_zone": 0.0,
+   "art": "linie",
+   "lat": 50.11443,
+   "lon": 8.67487
+  },
+  {
+   "name": "Nizza",
+   "osm": [
+    "w165636449"
+   ],
+   "flaeche_ha": 0.45,
+   "bbox": [
+    8.67403,
+    50.10656,
+    8.67579,
+    50.10737
+   ],
+   "anteil_zone": 0.5024,
+   "art": "flaeche",
+   "lat": 50.10692,
+   "lon": 8.67493
+  },
+  {
+   "name": "Friedberger Platz",
+   "osm": [
+    "w42685929"
+   ],
+   "flaeche_ha": 0.25,
+   "bbox": [
+    8.69182,
+    50.123,
+    8.69292,
+    50.12369
+   ],
+   "anteil_zone": 0.971,
+   "art": "flaeche",
+   "lat": 50.12337,
+   "lon": 8.69262
+  },
+  {
+   "name": "Opernplatz",
+   "osm": [
+    "r1131246",
+    "w1041149362",
+    "w1567367696",
+    "w1567389674",
+    "w1567389675",
+    "w1567389676",
+    "w208500607",
+    "w208500613",
+    "w208500621",
+    "w208500625",
+    "w208500627",
+    "w28145005",
+    "w384153113",
+    "w52289444",
+    "w991504191",
+    "w991504198",
+    "w991504199",
+    "w991504200",
+    "w996719026"
+   ],
+   "flaeche_ha": 1.67,
+   "bbox": [
+    8.67103,
+    50.11473,
+    8.67318,
+    50.11664
+   ],
+   "anteil_zone": 0.0265,
+   "art": "flaeche",
+   "lat": 50.11568,
+   "lon": 8.67136
+  },
+  {
+   "name": "Konstablerwache",
+   "osm": [
+    "r6132091",
+    "w52289449"
+   ],
+   "flaeche_ha": 0.95,
+   "bbox": [
+    8.68605,
+    50.11406,
+    8.68777,
+    50.11485
+   ],
+   "anteil_zone": 0.9989,
+   "art": "flaeche",
+   "lat": 50.11441,
+   "lon": 8.68689
+  },
+  {
+   "name": "Weseler Werft",
+   "osm": [
+    "w150945640"
+   ],
+   "flaeche_ha": 1.36,
+   "bbox": [
+    8.69478,
+    50.10746,
+    8.70208,
+    50.10856
+   ],
+   "anteil_zone": 0.8088,
+   "art": "flaeche",
+   "lat": 50.10801,
+   "lon": 8.69785
+  },
+  {
+   "name": "Goetheplatz",
+   "osm": [
+    "r4773706"
+   ],
+   "flaeche_ha": 0.49,
+   "bbox": [
+    8.67617,
+    50.1126,
+    8.67707,
+    50.11368
+   ],
+   "anteil_zone": 0.0001,
+   "art": "flaeche",
+   "lat": 50.11312,
+   "lon": 8.67661
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-26",
+  "datum_lang": "26. November 2026",
+  "monat": "November 2026",
+  "osm": "2026-11-25T21:22:46Z",
+  "tags_json": 6,
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Hessen (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  50.112,
+  8.68
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Grüneburgpark",
+   "grueneburgpark"
+  ],
+  [
+   "park",
+   "Günthersburgpark",
+   "guenthersburgpark"
+  ],
+  [
+   "park",
+   "Ostpark",
+   "ostpark"
+  ],
+  [
+   "ort",
+   "Zeil",
+   "zeil"
+  ],
+  [
+   "ort",
+   "Nizza",
+   "nizza"
+  ],
+  [
+   "hochschule",
+   "Johann-Wolfgang-Goethe-Universität Campus Westend",
+   "campus-westend"
+  ]
+ ]
+}

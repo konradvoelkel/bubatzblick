@@ -11,11 +11,12 @@ Exit 0 = sauber, 1 = Treffer (werden mit Datei, Zeile und Muster gemeldet).
 Das Muster-Verzeichnis ist Absicht und keine Schikane: Kommentare, die eine
 Entwicklungsgeschichte erzaehlen, sind beim naechsten Mal genauso schnell
 wieder da wie beim letzten. Wer einen Treffer bewusst stehen lassen will,
-traegt ihn unter ERLAUBT ein -- mit Begruendung.
+traegt ihn unter ERLAUBT ein -- mit Begruendung (Dateiname auch als Muster wie staedte/*.md).
 """
 
 from __future__ import annotations
 
+import fnmatch
 import re
 import subprocess
 import sys
@@ -64,6 +65,17 @@ ERLAUBT: dict[tuple[str, str], str] = {
     ("README.md", "Serveradresse"): "127.0.0.1 als Bind-Adresse der Vorschau",
     ("rust/bubatz/src/serve.rs", "Serveradresse"): "127.0.0.1 als Bind-Adresse der Vorschau",
     ("viewer/app.js", "Serveradresse"): "Hinweis auf localhost in der Standortfreigabe",
+    # Staedteseiten: Quellen-URLs von Behoerden enthalten Pfade und Blob-Kennungen, die wie
+    # Spuren aussehen (mags.nrw: /system/files/media/document/..., hamburg.de und
+    # landtag-bw.de: /resource/blob/<Nummer>/<32 Hex>/...).
+    ("staedte/*.md", "Pfad einer Arbeitsumgebung"): "Quellen-URL einer Behoerde",
+    ("viewer/stadt/*.html", "Pfad einer Arbeitsumgebung"): "Quellen-URL einer Behoerde",
+    ("staedte/*.md", "Cloudflare-Zonenkennung"): "Blob-Kennung in einer Quellen-URL",
+    ("viewer/stadt/*.html", "Cloudflare-Zonenkennung"): "Blob-Kennung in einer Quellen-URL",
+    (
+        "tests/test_access_staedte.py",
+        "Serveradresse",
+    ): "erfundene, gekuerzte Adressen im Testprotokoll",
 }
 
 
@@ -92,7 +104,7 @@ def main() -> int:
             continue
         for nr, zeile in enumerate(text.splitlines(), 1):
             for name, rx in kompiliert:
-                if (rel, name) in ERLAUBT:
+                if any(n == name and fnmatch.fnmatch(rel, muster) for muster, n in ERLAUBT):
                     continue
                 if m := rx.search(zeile):
                     treffer.append(f"{rel}:{nr}: {name}: {m.group(0)!r}  |  {zeile.strip()[:90]}")

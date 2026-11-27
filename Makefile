@@ -1,9 +1,9 @@
 # cargo/maturin auch unter systemd-run (dort fehlt ~/.cargo/bin im PATH)
 export PATH := $(HOME)/.cargo/bin:$(PATH)
 
-.PHONY: dev core test lint about check-publishable audit audit-python audit-rust duesseldorf nrw germany update-pbf publish viewer report report-laender clean-duesseldorf clean-nrw clean-germany
+.PHONY: dev core test lint about staedte check-publishable audit audit-python audit-rust duesseldorf nrw germany update-pbf publish viewer report report-laender clean-duesseldorf clean-nrw clean-germany
 
-# bubatzblick -- Ziele: make dev | core | test | lint | about | check-publishable |
+# bubatzblick -- Ziele: make dev | core | test | lint | about | staedte | check-publishable |
 # audit | duesseldorf | nrw | germany | update-pbf | publish | viewer | report
 # (README.md).
 
@@ -104,6 +104,13 @@ lint:
 # ein Neubau kein Diff ergibt.
 about:
 	deploy/bin/build_about.py
+
+# Staedteseiten viewer/stadt/ (Seiten, Platzhalter fuer Staedte ohne eigene Seite, Uebersicht)
+# und ihre Eintraege in viewer/sitemap.xml, aus staedte/. Wie about.html erzeugt und von der CI
+# auf einen Neubau ohne Diff geprueft. Die Zahlen und Bilder unter staedte/ und viewer/img/stadt/
+# entstehen ausserhalb (lokale Laeufe auf Geofabrik-Auszuegen) und werden mitcommittet.
+staedte:
+	deploy/bin/build_staedte.py
 
 # Keine Entwicklungsspuren im Baum (Datumsangaben, interne Verweise, Pfade).
 check-publishable:

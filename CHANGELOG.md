@@ -11,6 +11,21 @@ Karte selbst.
 
 ### Hinzugefügt
 
+- Städteseiten unter `/stadt/<name>`, zunächst für Berlin, Hamburg, München, Köln, Frankfurt am
+  Main, Stuttgart, Düsseldorf und Heidelberg: Anteil der Stadtfläche in Sichtweite einer
+  Einrichtung (jede Stelle einmal gezählt), Tabelle je Art von Einrichtung, vorgerenderte Karten
+  der Stadt, großer Parks, Plätze, Fußgängerzonen und Hochschulen, dazu die örtlichen und
+  landesrechtlichen Regeln mit Quellen. Text in `staedte/<name>.md`, Zahlen in
+  `staedte/<name>.json`, Seiten erzeugt von `deploy/bin/build_staedte.py` (`make staedte`); die CI
+  prüft, dass ein Neubau kein Diff ergibt. Die Seiten stehen in der Sitemap.
+- Übersicht `/stadt/` mit Liste und klickbarer Deutschlandkarte (SVG ohne JavaScript, Grenzen aus
+  der Grundkarte). Darunter alle übrigen Großstädte grau unter „Welche Stadt sollen wir noch
+  ausführlicher beschreiben?“: Ein Klick führt über einen Platzhalter `/stadt/<name>` (nicht
+  indexiert) auf die Karte der Stadt mit einem kurzen Hinweis und zählt als Stimme. Karte und
+  Über-Seite verlinken auf die Übersicht.
+- Die tägliche Verdichtung des Zugriffsprotokolls zählt je Stadt die Aufrufe von `/stadt/<name>`
+  und die Stimmen (verschiedene gekürzte Adressen je Tag); die Statistikseite zeigt sie als
+  Balkendiagramme. Der Datenschutzabschnitt der Über-Seite nennt das.
 - `bubatz report --areas-pbf` (und `make report-laender`) misst die Zonenfläche je
   Verwaltungsgebiet, etwa je Bundesland: die Vereinigung aller Bänder bis 100 m, in der
   sich überlappende Zonen einmal zählen, geschnitten mit den Grenzen aus der PBF. Die

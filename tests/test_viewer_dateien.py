@@ -13,7 +13,21 @@ import subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
-ENDUNGEN = {".html", ".js", ".mjs", ".json", ".png", ".svg", ".ico", ".pdf", ".txt", ".xml"}
+# .jpg/.webp: vorgerenderte Karten der Staedteseiten (viewer/img/stadt/).
+ENDUNGEN = {
+    ".html",
+    ".js",
+    ".mjs",
+    ".json",
+    ".png",
+    ".jpg",
+    ".webp",
+    ".svg",
+    ".ico",
+    ".pdf",
+    ".txt",
+    ".xml",
+}
 # Einzelne Dateien mit anderer Endung, jede mit Grund.
 EINZELN = {
     "viewer/about.md",  # Quelle von about.html; der Deploy schliesst sie aus

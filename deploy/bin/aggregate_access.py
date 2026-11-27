@@ -8,9 +8,12 @@ fuer die Statistikseite. Danach bleiben im Protokoll nur die Zeilen von heute.
 Je abgeschlossenem Tag <ausgabe>/<YYYY-MM-DD>.json: requests, page_views (/ und
 /index.html), about_views, visitors (verschiedene gekuerzte Adressen), bots (User-
 Agent nennt sich bot/crawler/spider o. ae.; page_views/visitors ohne Bots), bytes,
-status_2xx..5xx, referer_hosts (Top 10 fremde Hosts). Nichts Personenbezogenes:
-keine Adressen, keine Pfade je Anfrage, keine User-Agents. Tagesdateien aelter
-als KEEP_DAYS werden geloescht.
+status_2xx..5xx, referer_hosts (Top 10 fremde Hosts), dazu fuer die Staedteseiten
+city_index_views (/stadt/), city_views (Aufrufe je /stadt/<name>, auch der Platzhalter
+fuer Staedte ohne eigene Seite) und city_votes (je Stadt die verschiedenen gekuerzten
+Adressen, die vom Platzhalter mit ?interesse=<name> auf die Karte kamen: die "Stimmen").
+Nichts Personenbezogenes: keine Adressen, keine Pfade je Anfrage, keine User-Agents.
+Tagesdateien aelter als KEEP_DAYS werden geloescht.
 """
 
 from __future__ import annotations
@@ -40,6 +43,10 @@ BOT = re.compile(
     r"bot|crawl|spider|slurp|curl|wget|python-requests|go-http-client|httpx|scan", re.I
 )
 PAGE = {"/", "/index.html"}
+# Staedteseiten: /stadt/<name> (Caddy liefert <name>.html), Uebersicht /stadt/
+STADT = re.compile(r"^/stadt/([a-z0-9-]{1,60})(?:\.html)?$")
+STADT_INDEX = {"/stadt/", "/stadt/index.html"}
+INTERESSE = re.compile(r"(?:^|&)interesse=([a-z0-9-]{1,60})(?:&|$)")
 
 
 def header(req: dict, name: str) -> str:
@@ -80,6 +87,9 @@ def main() -> None:
             "ips": set(),
             "status": Counter(),
             "referers": Counter(),
+            "city_index_views": 0,
+            "city_views": Counter(),
+            "city_votes": defaultdict(set),
         }
     )
     keep: list[str] = []
@@ -105,12 +115,19 @@ def main() -> None:
             if BOT.search(header(req, "User-Agent")):
                 d["bots"] += 1
                 continue
-            uri = (req.get("uri") or "").split("?", 1)[0]
+            uri, _, query = (req.get("uri") or "").partition("?")
+            ip = req.get("remote_ip") or req.get("client_ip") or ""
+            ok = int(e.get("status") or 0) < 400
             if uri in PAGE:
                 d["page_views"] += 1
+                if ok and (m := INTERESSE.search(query)):
+                    d["city_votes"][m.group(1)].add(ip)
             elif uri == "/about.html":
                 d["about_views"] += 1
-            ip = req.get("remote_ip") or req.get("client_ip") or ""
+            elif uri in STADT_INDEX:
+                d["city_index_views"] += ok
+            elif ok and (m := STADT.match(uri)) and m.group(1) != "index":
+                d["city_views"][m.group(1)] += 1
             if ip:
                 d["ips"].add(ip)
             ref = header(req, "Referer")
@@ -132,6 +149,9 @@ def main() -> None:
             "status_4xx": d["status"]["4xx"],
             "status_5xx": d["status"]["5xx"],
             "referer_hosts": d["referers"].most_common(10),
+            "city_index_views": d["city_index_views"],
+            "city_views": dict(sorted(d["city_views"].items())),
+            "city_votes": {k: len(v) for k, v in sorted(d["city_votes"].items())},
         }
         p = out / f"{day.isoformat()}.json"
         tmp = p.with_suffix(f".json.tmp{os.getpid()}")

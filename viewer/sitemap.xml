@@ -8,4 +8,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bubatzblick.de/</loc></url>
   <url><loc>https://bubatzblick.de/about.html</loc></url>
+  <url><loc>https://bubatzblick.de/stadt/</loc></url>
+  <url><loc>https://bubatzblick.de/stadt/duesseldorf</loc></url>
+  <url><loc>https://bubatzblick.de/stadt/heidelberg</loc></url>
+  <url><loc>https://bubatzblick.de/stadt/berlin</loc></url>
+  <url><loc>https://bubatzblick.de/stadt/hamburg</loc></url>
+  <url><loc>https://bubatzblick.de/stadt/muenchen</loc></url>
+  <url><loc>https://bubatzblick.de/stadt/koeln</loc></url>
+  <url><loc>https://bubatzblick.de/stadt/frankfurt-am-main</loc></url>
+  <url><loc>https://bubatzblick.de/stadt/stuttgart</loc></url>
 </urlset>

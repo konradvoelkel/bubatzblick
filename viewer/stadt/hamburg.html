@@ -1,0 +1,258 @@
+<!doctype html>
+<!-- Erzeugt aus staedte/hamburg.md und staedte/hamburg.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Kiffen in Hamburg: wo es verboten ist | BubatzBlick</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Hamburg liegen 124 km², 16,6 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<link rel="canonical" href="__SITE_URL__/stadt/hamburg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/hamburg">
+<meta property="og:title" content="Kiffen in Hamburg: wo es verboten ist">
+<meta property="og:description" content="In Hamburg liegen 124 km², 16,6 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/hamburg.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Hamburg mit den roten Verbotszonen, daneben: Kiffen in Hamburg, 16,6 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/hamburg",
+   "url": "__SITE_URL__/stadt/hamburg",
+   "name": "Kiffen in Hamburg: wo es verboten ist",
+   "description": "In Hamburg liegen 124 km², 16,6 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-26",
+   "about": {
+    "@type": "City",
+    "name": "Hamburg",
+    "sameAs": "https://www.wikidata.org/wiki/Q1055",
+    "containedInPlace": {
+     "@type": "Country",
+     "name": "Deutschland"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/hamburg.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Hamburg",
+     "item": "__SITE_URL__/stadt/hamburg"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { fill: #c0392b; stroke: #fff; stroke-width: 2; }
+  svg.deutschland text { font-size: 19px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 9; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  @media (max-width: 480px) { svg.deutschland text { font-size: 28px; }
+                              svg.deutschland circle { r: 10; } }
+</style>
+</head>
+<body>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Hamburg</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <nav><a href="../#12/53.56957/9.94199" class="knopf">Hamburg auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Hamburg ist öffentliches Kiffen auf 124 km² verboten, das sind
+<strong>16,6 % der Fläche</strong> von 747 km² (das Festland, ohne die Insel Neuwerk
+und das Wattenmeer). Grund sind 7 955 Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht
+konsumiert werden darf, vor allem Sportstätten und Spielplätze. Sichtweite heißt: höchstens
+100 Meter vom Eingangsbereich, und nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die
+Fußgängerzonen, in denen zwischen 7 und 20 Uhr nicht konsumiert werden darf, und überall die
+unmittelbare Gegenwart von Kindern und Jugendlichen.</p>
+
+<figure class="karte"><img src="../img/stadt/hamburg-stadt.webp" width="960" height="600" alt="Karte von Hamburg mit Stadtgrenze und den roten Verbotszonen"><figcaption>Hamburg: 124 km² Verbotszone auf 747 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">555</td><td class="zahl">35,0 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">980</td><td class="zahl">23,5 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">88</td><td class="zahl">1,6 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">2 855</td><td class="zahl">48,7 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">316</td><td class="zahl">6,3 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">3 161</td><td class="zahl">57,8 km²</td></tr></tbody></table>
+
+<p>Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
+überlappen, ist ihre Summe größer als die 124 km² oben. Den größten Teil machen die
+3 161 Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
+gefolgt von 2 855 Spielplätzen und 555 Schulen.</p>
+<p>Anbauvereinigungen fehlen in der Tabelle: 18 hatten im Juli 2026 eine Erlaubnis, ihre Adressen
+veröffentlicht die Stadt nicht
+(<a href="https://www.hamburg.de/resource/blob/1157502/2d48e644828ee04ee2db5f6f2d21b6ba/anbauvereinigungen-whitelist-data.pdf">Liste des Bezirksamts Altona</a>).</p>
+<h2 id="parks-und-alster">Parks und Alster</h2>
+<p>Im <strong>Stadtpark</strong> in Winterhude liegen 53 % der Fläche in einer Zone:
+sieben Spielplätze, eine Kita und viele Sportanlagen liegen im Park. Der <strong>Sternschanzenpark</strong>
+kommt auf 84 %, mit drei Spielplätzen im Park und Sportplätzen am Rand.</p>
+<figure class="karte"><img src="../img/stadt/hamburg-stadtpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Hamburger Stadtpark (grün umrandet) mit den roten Verbotszonen; etwa 53 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Hamburger Stadtpark: 150 ha, davon 53 % Verbotszone. <a href="../#16/53.5955/10.0177">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/hamburg-sternschanzenpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Sternschanzenpark (grün umrandet) mit den roten Verbotszonen; etwa 84 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Sternschanzenpark: 10 ha, davon 84 % Verbotszone. <a href="../#16/53.5657/9.97019">Auf der Karte ansehen</a></figcaption></figure>
+
+<p><strong>Planten un Blomen</strong> liegt zu 30 % in einer Zone, vor allem um die sieben
+Spielplätze und zwei Kitas im Park. Das <strong>Alstervorland</strong> an der Außenalster liegt dagegen ganz
+außerhalb der Zonen (0 %): Dort gibt es weder Spielplatz noch Sportanlage.</p>
+<figure class="karte"><img src="../img/stadt/hamburg-planten-un-blomen.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Planten un Blomen (grün umrandet) mit den roten Verbotszonen; etwa 30 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Planten un Blomen: 30 ha, davon 30 % Verbotszone. <a href="../#16/53.56196/9.98132">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/hamburg-alstervorland.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Alstervorland (grün umrandet) mit den roten Verbotszonen; etwa 0 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Alstervorland: 15 ha, davon 0 % Verbotszone. <a href="../#16/53.5737/10.00104">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Der Altonaer Balkon liegt zu 55 % in einer Zone, der Alte Elbpark zu
+94 %. Am <strong>Elbstrand in Övelgönne</strong> gibt es keine Zone (0 %).</p>
+<figure class="karte"><img src="../img/stadt/hamburg-oevelgoenne.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Övelgönne (grün umrandet) mit den roten Verbotszonen; etwa 0 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Övelgönne: 2 ha, davon 0 % Verbotszone. <a href="../#16/53.54429/9.90938">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="innenstadt-und-st-pauli">Innenstadt und St. Pauli</h2>
+<p>Eine amtliche Liste der Hamburger Fußgängerzonen haben wir nicht gefunden; maßgeblich ist das
+Schild vor Ort. Die <strong>Spitalerstraße</strong> ist Fußgängerzone, in der Mönckebergstraße fahren Busse, der
+Jungfernstieg ist seit 2020 nur für Privatautos gesperrt, und in Ottensen plant der Bezirk einen
+verkehrsberuhigten Geschäftsbereich, keine Fußgängerzone
+(<a href="https://www.hamburg.de/politik-und-verwaltung/bezirke/altona/themen/verkehr/freiraumottensen/faq-freiraum-ottensen-809686">Bezirksamt Altona</a>).
+In der Fußgängerzone gilt zwischen 7 und 20 Uhr Konsumverbot; blau zeigt die Karte die
+Fußgängerbereiche, wie sie in OpenStreetMap eingetragen sind.</p>
+<p>Von der Spitalerstraße liegen außerdem 25 % in einer Sichtweiten-Zone. Der
+Rathausmarkt (0 %) und der Hachmannplatz am Hauptbahnhof
+(0 %) liegen außerhalb der Zonen. Rund um den Hauptbahnhof und in weiten Teilen
+von St. Georg gilt seit August 2026 ein Alkoholverbot, zu Cannabis sagt es nichts
+(<a href="https://www.hamburg.de/politik-und-verwaltung/bezirke/mitte/aktuelles/pressemitteilungen/alkoholkonsumverbotszone-am-hauptbahnhof-deutlich-ausgeweitet-1205116">Bezirksamt Hamburg-Mitte</a>).</p>
+<p>Auf <strong>St. Pauli</strong> liegt der Spielbudenplatz an der Reeperbahn zu 65 % in einer
+Zone, das <strong>Heiligengeistfeld</strong>, auf dem der Hamburger DOM stattfindet, zu
+51 %: Sportanlagen, Spielplätze und eine Kita liegen am Rand.</p>
+<figure class="karte"><img src="../img/stadt/hamburg-heiligengeistfeld.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Heiligengeistfeld (grün umrandet) mit den roten Verbotszonen; etwa 51 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Heiligengeistfeld: 14 ha, davon 51 % Verbotszone. <a href="../#16/53.55436/9.97097">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="hochschulen-und-stadien">Hochschulen und Stadien</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte. Die Hausordnung der <strong>Universität Hamburg</strong>
+verbietet auf dem ganzen Gelände den Konsum von Stoffen, die unter das Betäubungsmittelgesetz
+fallen
+(<a href="https://www.fid.uni-hamburg.de/hausordnung-universitaet.pdf">Hausordnung</a>); Cannabis gehört
+seit April 2024 nicht mehr dazu. In Gebäuden von Hochschulen, Schulen und Behörden verbietet das
+Hamburgische Passivraucherschutzgesetz das Rauchen auch von Cannabis.</p>
+<p>Im <strong>Volksparkstadion</strong> verbietet die Stadionordnung des HSV den Konsum von Cannabis, auch auf
+Zugängen und Parkplätzen
+(<a href="https://a.storyblok.com/f/291215624286909/x/70bf3ed806/stadionordnung_04_2025.pdf">Stadionordnung</a>);
+die Stadionordnung des Millerntor-Stadions erwähnt Cannabis nicht. Für DOM, Hafengeburtstag und
+Weihnachtsmärkte haben wir keine eigene Regel zu Cannabis gefunden; wo viele Kinder und Jugendliche
+sind, greift das Verbot in ihrer Gegenwart (§ 5 Abs. 1 KCanG).</p>
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>Hamburg hat feste Bußgelder: Konsum in Sichtweite einer Einrichtung oder in der Fußgängerzone kostet
+500 Euro, in Gegenwart von Kindern und Jugendlichen 1.000 Euro
+(<a href="https://www.hamburg.de/politik-und-verwaltung/behoerden/behoerde-fuer-inneres-und-sport/presseservice/pressemeldungen/innenbehoerde-veroeffentlicht-bussgeldkatalog-zum-konsumcannabisgesetz-932950">Behörde für Inneres und Sport</a>).
+Zuständig ist die Innenbehörde. Auf Spielplätzen in öffentlichen Grünanlagen ist das Rauchen seit
+2019 verboten
+(<a href="https://www.aerzteblatt.de/themen/kinderschutz/zigaretten-und-alkohol-werden-auf-hamburgs-spielplaetzen-verboten-6a0f9c0d-02e7-47a0-ae7b-6e2944e8b37d">Ärzteblatt, Oktober 2019</a>).
+Eigene Verbotszonen für Cannabis hat Hamburg nicht (Stand 26. November 2026).</p>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-hamburg-kiffen">Wo darf man in Hamburg kiffen?</h3>
+<p>Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
+Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet. Eine weiße
+Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte kennt weder Hecken noch
+Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap fehlen.</p>
+<h3 id="darf-man-an-der-alster-kiffen">Darf man an der Alster kiffen?</h3>
+<p>Am Alstervorland liegt keine Sichtweiten-Zone. Es bleibt das Verbot in Gegenwart von Kindern und
+Jugendlichen, und an anderen Stellen des Ufers liegen Spielplätze und Sportanlagen in der Nähe.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
+neu gerechnet; die Zahlen auf dieser Seite sind vom 26. November 2026. Die Karte ist eine
+Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
+auf der <a href="../about.html">Über-Seite</a>.</p>
+<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
+OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 26. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
+</body>
+</html>

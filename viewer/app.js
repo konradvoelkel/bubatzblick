@@ -42,6 +42,29 @@ function startFehler(text) {
 const farbe = (token, ersatz) =>
   getComputedStyle(document.documentElement).getPropertyValue(token).trim() || ersatz;
 
+// Nach einem Klick auf eine Stadt ohne eigene Seite (/stadt/<name> leitet mit ?interesse=<name>
+// hierher): ein Hinweis ueber der Karte. Der Abruf von /stadt/<name> ist die Stimme, die Karte
+// zaehlt nichts selbst. Laeuft unabhaengig vom Kartenstart, damit der Hinweis auch dann kommt,
+// wenn WebGL fehlt; der Parameter verschwindet danach aus der Adresse (kein zweiter Hinweis
+// beim Neuladen), der Ausschnitt im Fragment bleibt.
+(async () => {
+  const anfrage = new URLSearchParams(location.search);
+  const slug = anfrage.get("interesse");
+  if (!slug || !/^[a-z0-9-]{1,60}$/.test(slug)) return;
+  anfrage.delete("interesse");
+  history.replaceState(null, "", location.pathname + (anfrage.size ? "?" + anfrage : "") + location.hash);
+  const namen = await fetch("stadt/vorschlaege.json").then(r => (r.ok ? r.json() : {}), () => ({}));
+  const name = namen[slug];
+  const dlg = document.getElementById("interesse");
+  if (!name || !dlg || !dlg.showModal) return;
+  document.getElementById("interesse-titel").textContent = name;
+  document.getElementById("interesse-text").textContent =
+    `Danke! Wir zählen, für welche Städte sich Besucher interessieren; ${name} hat jetzt eine ` +
+    `Stimme mehr. Vielleicht gibt es hier bald eine ausführlichere Beschreibung. Bis dahin zeigt ` +
+    `die Karte schon, wo in ${name} das Konsumverbot gilt.`;
+  dlg.showModal();
+})().catch(err => console.error(err));
+
 (async () => {
 // MapLibre 6 gibt es nur als ES-Modul. Das Laden beginnt sofort (modulepreload im
 // Kopf hat die Datei meist schon) und laeuft neben den Pruefungen unten; erwartet

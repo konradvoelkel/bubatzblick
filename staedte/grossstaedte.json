@@ -1,0 +1,725 @@
+{
+ "quelle": "Großstädte (ab 100 000 Einwohnern, Stand 2025) nach de.wikipedia.org, Liste der Großstädte in Deutschland (Zahlen des Statistischen Bundesamts), abgerufen am 27. November 2026; Koordinaten aus den Wikipedia-Artikeln. Schwerin als Landeshauptstadt dazu (unter 100 000).",
+ "staedte": [
+  {
+   "name": "Berlin",
+   "slug": "berlin",
+   "land": "Berlin",
+   "einwohner_2025": 3700577,
+   "lat": 52.5186,
+   "lon": 13.4083,
+   "wikidata": "Q64"
+  },
+  {
+   "name": "Hamburg",
+   "slug": "hamburg",
+   "land": "Hamburg",
+   "einwohner_2025": 1869473,
+   "lat": 53.5506,
+   "lon": 9.9933,
+   "wikidata": "Q1055"
+  },
+  {
+   "name": "München",
+   "slug": "muenchen",
+   "land": "Bayern",
+   "einwohner_2025": 1505036,
+   "lat": 48.1397,
+   "lon": 11.5744,
+   "wikidata": "Q1726"
+  },
+  {
+   "name": "Köln",
+   "slug": "koeln",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 1025523,
+   "lat": 50.9426,
+   "lon": 6.959,
+   "wikidata": "Q365"
+  },
+  {
+   "name": "Frankfurt am Main",
+   "slug": "frankfurt-am-main",
+   "land": "Hessen",
+   "einwohner_2025": 760656,
+   "lat": 50.1106,
+   "lon": 8.6822,
+   "wikidata": "Q1794"
+  },
+  {
+   "name": "Düsseldorf",
+   "slug": "duesseldorf",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 619444,
+   "lat": 51.2256,
+   "lon": 6.7828,
+   "wikidata": "Q1718"
+  },
+  {
+   "name": "Leipzig",
+   "slug": "leipzig",
+   "land": "Sachsen",
+   "einwohner_2025": 615932,
+   "lat": 51.3403,
+   "lon": 12.3748,
+   "wikidata": "Q2079"
+  },
+  {
+   "name": "Stuttgart",
+   "slug": "stuttgart",
+   "land": "Baden-Württemberg",
+   "einwohner_2025": 609365,
+   "lat": 48.7756,
+   "lon": 9.1828,
+   "wikidata": "Q1022"
+  },
+  {
+   "name": "Dortmund",
+   "slug": "dortmund",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 600880,
+   "lat": 51.5142,
+   "lon": 7.4639,
+   "wikidata": "Q1295"
+  },
+  {
+   "name": "Bremen",
+   "slug": "bremen",
+   "land": "Bremen",
+   "einwohner_2025": 588413,
+   "lat": 53.0759,
+   "lon": 8.8073,
+   "wikidata": "Q24879"
+  },
+  {
+   "name": "Essen",
+   "slug": "essen",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 573618,
+   "lat": 51.4581,
+   "lon": 7.0148,
+   "wikidata": "Q2066"
+  },
+  {
+   "name": "Dresden",
+   "slug": "dresden",
+   "land": "Sachsen",
+   "einwohner_2025": 562764,
+   "lat": 51.0493,
+   "lon": 13.7384,
+   "wikidata": "Q1731"
+  },
+  {
+   "name": "Nürnberg",
+   "slug": "nuernberg",
+   "land": "Bayern",
+   "einwohner_2025": 531159,
+   "lat": 49.4556,
+   "lon": 11.0786,
+   "wikidata": "Q2090"
+  },
+  {
+   "name": "Hannover",
+   "slug": "hannover",
+   "land": "Niedersachsen",
+   "einwohner_2025": 522803,
+   "lat": 52.3744,
+   "lon": 9.7386,
+   "wikidata": "Q1715"
+  },
+  {
+   "name": "Duisburg",
+   "slug": "duisburg",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 500810,
+   "lat": 51.4334,
+   "lon": 6.7661,
+   "wikidata": "Q2100"
+  },
+  {
+   "name": "Bochum",
+   "slug": "bochum",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 358880,
+   "lat": 51.4801,
+   "lon": 7.2166,
+   "wikidata": "Q2103"
+  },
+  {
+   "name": "Wuppertal",
+   "slug": "wuppertal",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 357243,
+   "lat": 51.2562,
+   "lon": 7.1508,
+   "wikidata": "Q2107"
+  },
+  {
+   "name": "Bielefeld",
+   "slug": "bielefeld",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 331419,
+   "lat": 52.0218,
+   "lon": 8.5351,
+   "wikidata": "Q2112"
+  },
+  {
+   "name": "Bonn",
+   "slug": "bonn",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 323587,
+   "lat": 50.734,
+   "lon": 7.0998,
+   "wikidata": "Q586"
+  },
+  {
+   "name": "Mannheim",
+   "slug": "mannheim",
+   "land": "Baden-Württemberg",
+   "einwohner_2025": 319536,
+   "lat": 49.4878,
+   "lon": 8.4662,
+   "wikidata": "Q2119"
+  },
+  {
+   "name": "Karlsruhe",
+   "slug": "karlsruhe",
+   "land": "Baden-Württemberg",
+   "einwohner_2025": 309247,
+   "lat": 49.014,
+   "lon": 8.4043,
+   "wikidata": "Q1040"
+  },
+  {
+   "name": "Münster",
+   "slug": "muenster",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 306368,
+   "lat": 51.9629,
+   "lon": 7.6287,
+   "wikidata": "Q2742"
+  },
+  {
+   "name": "Augsburg",
+   "slug": "augsburg",
+   "land": "Bayern",
+   "einwohner_2025": 301786,
+   "lat": 48.3717,
+   "lon": 10.8983,
+   "wikidata": "Q2749"
+  },
+  {
+   "name": "Wiesbaden",
+   "slug": "wiesbaden",
+   "land": "Hessen",
+   "einwohner_2025": 288584,
+   "lat": 50.0825,
+   "lon": 8.24,
+   "wikidata": "Q1721"
+  },
+  {
+   "name": "Mönchengladbach",
+   "slug": "moenchengladbach",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 267176,
+   "lat": 51.1941,
+   "lon": 6.4316,
+   "wikidata": "Q2758"
+  },
+  {
+   "name": "Gelsenkirchen",
+   "slug": "gelsenkirchen",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 266199,
+   "lat": 51.5111,
+   "lon": 7.1006,
+   "wikidata": "Q2765"
+  },
+  {
+   "name": "Aachen",
+   "slug": "aachen",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 263703,
+   "lat": 50.7753,
+   "lon": 6.0839,
+   "wikidata": "Q1017"
+  },
+  {
+   "name": "Braunschweig",
+   "slug": "braunschweig",
+   "land": "Niedersachsen",
+   "einwohner_2025": 252811,
+   "lat": 52.2692,
+   "lon": 10.5211,
+   "wikidata": "Q2773"
+  },
+  {
+   "name": "Kiel",
+   "slug": "kiel",
+   "land": "Schleswig-Holstein",
+   "einwohner_2025": 251842,
+   "lat": 54.3232,
+   "lon": 10.1402,
+   "wikidata": "Q1707"
+  },
+  {
+   "name": "Chemnitz",
+   "slug": "chemnitz",
+   "land": "Sachsen",
+   "einwohner_2025": 247252,
+   "lat": 50.8322,
+   "lon": 12.9242,
+   "wikidata": "Q2795"
+  },
+  {
+   "name": "Magdeburg",
+   "slug": "magdeburg",
+   "land": "Sachsen-Anhalt",
+   "einwohner_2025": 244494,
+   "lat": 52.1333,
+   "lon": 11.6167,
+   "wikidata": "Q1733"
+  },
+  {
+   "name": "Freiburg im Breisgau",
+   "slug": "freiburg-im-breisgau",
+   "land": "Baden-Württemberg",
+   "einwohner_2025": 238299,
+   "lat": 47.9948,
+   "lon": 7.8499,
+   "wikidata": "Q2833"
+  },
+  {
+   "name": "Krefeld",
+   "slug": "krefeld",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 230738,
+   "lat": 51.3326,
+   "lon": 6.5624,
+   "wikidata": "Q2805"
+  },
+  {
+   "name": "Halle (Saale)",
+   "slug": "halle-saale",
+   "land": "Sachsen-Anhalt",
+   "einwohner_2025": 226186,
+   "lat": 51.4828,
+   "lon": 11.97,
+   "wikidata": "Q2814"
+  },
+  {
+   "name": "Mainz",
+   "slug": "mainz",
+   "land": "Rheinland-Pfalz",
+   "einwohner_2025": 223888,
+   "lat": 50,
+   "lon": 8.2711,
+   "wikidata": "Q1720"
+  },
+  {
+   "name": "Erfurt",
+   "slug": "erfurt",
+   "land": "Thüringen",
+   "einwohner_2025": 217159,
+   "lat": 50.9781,
+   "lon": 11.0292,
+   "wikidata": "Q1729"
+  },
+  {
+   "name": "Lübeck",
+   "slug": "luebeck",
+   "land": "Schleswig-Holstein",
+   "einwohner_2025": 217061,
+   "lat": 53.8677,
+   "lon": 10.6851,
+   "wikidata": "Q2843"
+  },
+  {
+   "name": "Oberhausen",
+   "slug": "oberhausen",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 213178,
+   "lat": 51.4703,
+   "lon": 6.8522,
+   "wikidata": "Q2838"
+  },
+  {
+   "name": "Rostock",
+   "slug": "rostock",
+   "land": "Mecklenburg-Vorpommern",
+   "einwohner_2025": 204929,
+   "lat": 54.0882,
+   "lon": 12.1347,
+   "wikidata": "Q2861"
+  },
+  {
+   "name": "Kassel",
+   "slug": "kassel",
+   "land": "Hessen",
+   "einwohner_2025": 196799,
+   "lat": 51.3167,
+   "lon": 9.5,
+   "wikidata": "Q2865"
+  },
+  {
+   "name": "Hagen",
+   "slug": "hagen",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 189983,
+   "lat": 51.3594,
+   "lon": 7.475,
+   "wikidata": "Q2871"
+  },
+  {
+   "name": "Potsdam",
+   "slug": "potsdam",
+   "land": "Brandenburg",
+   "einwohner_2025": 185137,
+   "lat": 52.3958,
+   "lon": 13.0614,
+   "wikidata": "Q1711"
+  },
+  {
+   "name": "Saarbrücken",
+   "slug": "saarbruecken",
+   "land": "Saarland",
+   "einwohner_2025": 182859,
+   "lat": 49.2326,
+   "lon": 6.9962,
+   "wikidata": "Q1724"
+  },
+  {
+   "name": "Hamm",
+   "slug": "hamm",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 179108,
+   "lat": 51.6812,
+   "lon": 7.8191,
+   "wikidata": "Q2880"
+  },
+  {
+   "name": "Oldenburg (Oldb)",
+   "slug": "oldenburg-oldb",
+   "land": "Niedersachsen",
+   "einwohner_2025": 177355,
+   "lat": 53.1439,
+   "lon": 8.2139,
+   "wikidata": "Q2936"
+  },
+  {
+   "name": "Ludwigshafen am Rhein",
+   "slug": "ludwigshafen-am-rhein",
+   "land": "Rheinland-Pfalz",
+   "einwohner_2025": 177055,
+   "lat": 49.4831,
+   "lon": 8.4478,
+   "wikidata": "Q2910"
+  },
+  {
+   "name": "Mülheim an der Ruhr",
+   "slug": "muelheim-an-der-ruhr",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 171674,
+   "lat": 51.4331,
+   "lon": 6.8831,
+   "wikidata": "Q2899"
+  },
+  {
+   "name": "Leverkusen",
+   "slug": "leverkusen",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 168299,
+   "lat": 51.0333,
+   "lon": 6.9833,
+   "wikidata": "Q2938"
+  },
+  {
+   "name": "Darmstadt",
+   "slug": "darmstadt",
+   "land": "Hessen",
+   "einwohner_2025": 168253,
+   "lat": 49.8728,
+   "lon": 8.6512,
+   "wikidata": "Q2973"
+  },
+  {
+   "name": "Osnabrück",
+   "slug": "osnabrueck",
+   "land": "Niedersachsen",
+   "einwohner_2025": 166257,
+   "lat": 52.2789,
+   "lon": 8.0431,
+   "wikidata": "Q2916"
+  },
+  {
+   "name": "Solingen",
+   "slug": "solingen",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 164621,
+   "lat": 51.1714,
+   "lon": 7.0833,
+   "wikidata": "Q2942"
+  },
+  {
+   "name": "Herne",
+   "slug": "herne",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 156266,
+   "lat": 51.5419,
+   "lon": 7.2239,
+   "wikidata": "Q2904"
+  },
+  {
+   "name": "Heidelberg",
+   "slug": "heidelberg",
+   "land": "Baden-Württemberg",
+   "einwohner_2025": 156092,
+   "lat": 49.4103,
+   "lon": 8.6971,
+   "wikidata": "Q2966"
+  },
+  {
+   "name": "Paderborn",
+   "slug": "paderborn",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 155906,
+   "lat": 51.7194,
+   "lon": 8.7572,
+   "wikidata": "Q2971"
+  },
+  {
+   "name": "Neuss",
+   "slug": "neuss",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 153767,
+   "lat": 51.1986,
+   "lon": 6.6914,
+   "wikidata": "Q2948"
+  },
+  {
+   "name": "Regensburg",
+   "slug": "regensburg",
+   "land": "Bayern",
+   "einwohner_2025": 151517,
+   "lat": 49.0153,
+   "lon": 12.1017,
+   "wikidata": "Q2978"
+  },
+  {
+   "name": "Ingolstadt",
+   "slug": "ingolstadt",
+   "land": "Bayern",
+   "einwohner_2025": 140799,
+   "lat": 48.7642,
+   "lon": 11.4243,
+   "wikidata": "Q3004"
+  },
+  {
+   "name": "Pforzheim",
+   "slug": "pforzheim",
+   "land": "Baden-Württemberg",
+   "einwohner_2025": 134422,
+   "lat": 48.8907,
+   "lon": 8.7025,
+   "wikidata": "Q3046"
+  },
+  {
+   "name": "Würzburg",
+   "slug": "wuerzburg",
+   "land": "Bayern",
+   "einwohner_2025": 133753,
+   "lat": 49.7944,
+   "lon": 9.9294,
+   "wikidata": "Q2999"
+  },
+  {
+   "name": "Offenbach am Main",
+   "slug": "offenbach-am-main",
+   "land": "Hessen",
+   "einwohner_2025": 133195,
+   "lat": 50.0994,
+   "lon": 8.7708,
+   "wikidata": "Q3042"
+  },
+  {
+   "name": "Heilbronn",
+   "slug": "heilbronn",
+   "land": "Baden-Württemberg",
+   "einwohner_2025": 132516,
+   "lat": 49.1417,
+   "lon": 9.2222,
+   "wikidata": "Q715"
+  },
+  {
+   "name": "Fürth",
+   "slug": "fuerth",
+   "land": "Bayern",
+   "einwohner_2025": 131344,
+   "lat": 49.4774,
+   "lon": 10.9884,
+   "wikidata": "Q3075"
+  },
+  {
+   "name": "Göttingen",
+   "slug": "goettingen",
+   "land": "Niedersachsen",
+   "einwohner_2025": 130521,
+   "lat": 51.5339,
+   "lon": 9.9356,
+   "wikidata": "Q3033"
+  },
+  {
+   "name": "Ulm",
+   "slug": "ulm",
+   "land": "Baden-Württemberg",
+   "einwohner_2025": 130288,
+   "lat": 48.4008,
+   "lon": 9.9872,
+   "wikidata": "Q3012"
+  },
+  {
+   "name": "Wolfsburg",
+   "slug": "wolfsburg",
+   "land": "Niedersachsen",
+   "einwohner_2025": 129813,
+   "lat": 52.4231,
+   "lon": 10.7872,
+   "wikidata": "Q3014"
+  },
+  {
+   "name": "Reutlingen",
+   "slug": "reutlingen",
+   "land": "Baden-Württemberg",
+   "einwohner_2025": 119040,
+   "lat": 48.4833,
+   "lon": 9.2167,
+   "wikidata": "Q3085"
+  },
+  {
+   "name": "Bremerhaven",
+   "slug": "bremerhaven",
+   "land": "Bremen",
+   "einwohner_2025": 118502,
+   "lat": 53.5419,
+   "lon": 8.578,
+   "wikidata": "Q2706"
+  },
+  {
+   "name": "Bottrop",
+   "slug": "bottrop",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 118482,
+   "lat": 51.5209,
+   "lon": 6.9255,
+   "wikidata": "Q3069"
+  },
+  {
+   "name": "Erlangen",
+   "slug": "erlangen",
+   "land": "Bayern",
+   "einwohner_2025": 116450,
+   "lat": 49.5964,
+   "lon": 11.0043,
+   "wikidata": "Q3126"
+  },
+  {
+   "name": "Recklinghausen",
+   "slug": "recklinghausen",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 114851,
+   "lat": 51.6167,
+   "lon": 7.2,
+   "wikidata": "Q3050"
+  },
+  {
+   "name": "Remscheid",
+   "slug": "remscheid",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 113333,
+   "lat": 51.1783,
+   "lon": 7.1994,
+   "wikidata": "Q3097"
+  },
+  {
+   "name": "Koblenz",
+   "slug": "koblenz",
+   "land": "Rheinland-Pfalz",
+   "einwohner_2025": 113020,
+   "lat": 50.3567,
+   "lon": 7.5939,
+   "wikidata": "Q3104"
+  },
+  {
+   "name": "Bergisch Gladbach",
+   "slug": "bergisch-gladbach",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 111174,
+   "lat": 50.9917,
+   "lon": 7.1361,
+   "wikidata": "Q3117"
+  },
+  {
+   "name": "Jena",
+   "slug": "jena",
+   "land": "Thüringen",
+   "einwohner_2025": 109353,
+   "lat": 50.9272,
+   "lon": 11.5864,
+   "wikidata": "Q3150"
+  },
+  {
+   "name": "Trier",
+   "slug": "trier",
+   "land": "Rheinland-Pfalz",
+   "einwohner_2025": 105054,
+   "lat": 49.7596,
+   "lon": 6.6439,
+   "wikidata": "Q3138"
+  },
+  {
+   "name": "Salzgitter",
+   "slug": "salzgitter",
+   "land": "Niedersachsen",
+   "einwohner_2025": 104433,
+   "lat": 52.1504,
+   "lon": 10.3593,
+   "wikidata": "Q3200"
+  },
+  {
+   "name": "Siegen",
+   "slug": "siegen",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 102450,
+   "lat": 50.8744,
+   "lon": 8.0244,
+   "wikidata": "Q3167"
+  },
+  {
+   "name": "Moers",
+   "slug": "moers",
+   "land": "Nordrhein-Westfalen",
+   "einwohner_2025": 101298,
+   "lat": 51.4517,
+   "lon": 6.6263,
+   "wikidata": "Q3132"
+  },
+  {
+   "name": "Kaiserslautern",
+   "slug": "kaiserslautern",
+   "land": "Rheinland-Pfalz",
+   "einwohner_2025": 100247,
+   "lat": 49.4437,
+   "lon": 7.7699,
+   "wikidata": "Q3758"
+  },
+  {
+   "name": "Schwerin",
+   "slug": "schwerin",
+   "land": "Mecklenburg-Vorpommern",
+   "einwohner_2025": null,
+   "lat": 53.6289,
+   "lon": 11.415,
+   "wikidata": "Q1709"
+  }
+ ]
+}

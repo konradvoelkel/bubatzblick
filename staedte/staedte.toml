@@ -1,0 +1,95 @@
+# Staedteseiten unter /stadt/<slug> (Konrad, November 2026): die 23 groessten Staedte, alle
+# Landeshauptstaedte und 15 Studentenstaedte, zusammen 42. deploy/bin/build_staedte.py baut aus
+# jedem Eintrag mit `fertig = true` eine Seite; Zahlen in staedte/<slug>.json, Text in
+# staedte/<slug>.md. Gemeindeschluessel und Wikidata stammen aus der OSM-Grenzrelation.
+#
+# Reihenfolge des Baus: Duesseldorf, Heidelberg, Berlin, dann der Rest.
+
+[[stadt]]
+slug = "duesseldorf"
+name = "Düsseldorf"
+land = "Nordrhein-Westfalen"
+land_iso = "DE-NW"
+osm_relation = 62539
+wikidata = "Q1718"
+ags = "05111000"
+fertig = true
+
+[[stadt]]
+slug = "heidelberg"
+name = "Heidelberg"
+land = "Baden-Württemberg"
+land_iso = "DE-BW"
+osm_relation = 62487
+wikidata = "Q2966"
+ags = "08221000"
+fertig = true
+
+[[stadt]]
+slug = "berlin"
+name = "Berlin"
+land = "Berlin"
+land_iso = "DE-BE"
+osm_relation = 62422
+wikidata = "Q64"
+ags = "11000000"
+fertig = true
+
+# Noch ohne Daten, Reihenfolge wie in der Liste oben (Rang nach Einwohnern beim Bau pruefen):
+# 23 groesste: Berlin, Hamburg, Muenchen, Koeln, Frankfurt am Main, Duesseldorf, Stuttgart,
+#   Leipzig, Dortmund, Bremen, Essen, Dresden, Nuernberg, Hannover, Duisburg, Wuppertal, Bochum,
+#   Bielefeld, Bonn, Muenster, Mannheim, Karlsruhe, Augsburg
+# Landeshauptstaedte dazu: Wiesbaden, Mainz, Saarbruecken, Erfurt, Magdeburg, Potsdam, Schwerin, Kiel
+# Studentenstaedte dazu: Aachen, Braunschweig, Chemnitz, Freiburg im Breisgau, Kassel, Darmstadt,
+#   Osnabrueck, Heidelberg, Regensburg, Wuerzburg, Goettingen
+
+[[stadt]]
+slug = "hamburg"
+name = "Hamburg"
+land = "Hamburg"
+land_iso = "DE-HH"
+osm_relation = 62782
+wikidata = "Q1055"
+ags = "02000000"
+fertig = true
+
+[[stadt]]
+slug = "muenchen"
+name = "München"
+land = "Bayern"
+land_iso = "DE-BY"
+osm_relation = 62428
+wikidata = "Q1726"
+ags = "09162000"
+fertig = true
+
+[[stadt]]
+slug = "koeln"
+name = "Köln"
+land = "Nordrhein-Westfalen"
+land_iso = "DE-NW"
+osm_relation = 62578
+wikidata = "Q365"
+ags = "05315000"
+fertig = true
+
+[[stadt]]
+slug = "frankfurt-am-main"
+name = "Frankfurt am Main"
+land = "Hessen"
+land_iso = "DE-HE"
+osm_relation = 62400
+wikidata = "Q1794"
+ags = "06412000"
+fertig = true
+
+[[stadt]]
+slug = "stuttgart"
+name = "Stuttgart"
+land = "Baden-Württemberg"
+land_iso = "DE-BW"
+osm_relation = 62375
+wikidata = "Q1022"
+ags = "08111000"
+fertig = true
+

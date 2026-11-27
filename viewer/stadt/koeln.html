@@ -1,0 +1,275 @@
+<!doctype html>
+<!-- Erzeugt aus staedte/koeln.md und staedte/koeln.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Kiffen in Köln: wo es verboten ist | BubatzBlick</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Köln liegen 71 km², 17,6 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<link rel="canonical" href="__SITE_URL__/stadt/koeln">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/koeln">
+<meta property="og:title" content="Kiffen in Köln: wo es verboten ist">
+<meta property="og:description" content="In Köln liegen 71 km², 17,6 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/koeln.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Köln mit den roten Verbotszonen, daneben: Kiffen in Köln, 17,6 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/koeln",
+   "url": "__SITE_URL__/stadt/koeln",
+   "name": "Kiffen in Köln: wo es verboten ist",
+   "description": "In Köln liegen 71 km², 17,6 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-26",
+   "about": {
+    "@type": "City",
+    "name": "Köln",
+    "sameAs": "https://www.wikidata.org/wiki/Q365",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Nordrhein-Westfalen"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/koeln.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Köln",
+     "item": "__SITE_URL__/stadt/koeln"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { fill: #c0392b; stroke: #fff; stroke-width: 2; }
+  svg.deutschland text { font-size: 19px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 9; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  @media (max-width: 480px) { svg.deutschland text { font-size: 28px; }
+                              svg.deutschland circle { r: 10; } }
+</style>
+</head>
+<body>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Köln</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <nav><a href="../#12/50.95776/6.9553" class="knopf">Köln auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Köln ist öffentliches Kiffen auf 71 km² verboten, das sind
+<strong>17,6 % der Stadtfläche</strong> von 405 km². Grund sind 4 443
+Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
+Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
+nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
+7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
+Jugendlichen.</p>
+
+<figure class="karte"><img src="../img/stadt/koeln-stadt.webp" width="960" height="600" alt="Karte von Köln mit Stadtgrenze und den roten Verbotszonen"><figcaption>Köln: 71 km² Verbotszone auf 405 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">378</td><td class="zahl">15,0 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">576</td><td class="zahl">12,3 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">1 567</td><td class="zahl">23,3 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">90</td><td class="zahl">1,7 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">1 832</td><td class="zahl">36,8 km²</td></tr></tbody></table>
+
+<p>Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
+überlappen, ist ihre Summe größer als die 71 km² oben. Den größten Teil machen die
+1 832 Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
+gefolgt von 1 567 Spielplätzen.</p>
+<p>Auf den Spiel- und Bolzplätzen selbst verbietet die Kölner Stadtordnung Cannabis seit Ende 2024
+zusätzlich, ganz gleich, ob Kinder da sind; das kostet bis zu 1.000 Euro, und die Plätze sind
+ohnehin nur von 7 bis 22 Uhr offen
+(<a href="https://www.stadt-koeln.de/mediaasset/content/satzungen/koelner-stadtordnung_20250909.pdf">Kölner Stadtordnung, § 25</a>).</p>
+<p>Anbauvereinigungen fehlen in der Tabelle: Erlaubnisse erteilt die Bezirksregierung Köln, eine Zahl
+oder Liste für die Stadt hat sie nicht veröffentlicht
+(<a href="https://www.bezreg-koeln.nrw.de/themen/gesundheit-und-soziales/gesetz-zum-umgang-mit-konsumcannabis-kcang">Bezirksregierung Köln</a>).</p>
+<h2 id="parks-und-grungurtel">Parks und Grüngürtel</h2>
+<p>Im <strong>Volksgarten</strong> in der Südstadt liegen 84 % der Fläche in einer Zone: Vier
+Spielplätze und zwei Sportanlagen liegen im Park, Schulen und Kitas am Rand. Ähnlich der
+<strong>Stadtgarten</strong> im Belgischen Viertel mit 70 %; dort bilden vor allem Schulen, Kitas
+und Sportstätten rund um den Park die Zonen.</p>
+<figure class="karte"><img src="../img/stadt/koeln-volksgarten.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Volksgarten (grün umrandet) mit den roten Verbotszonen; etwa 84 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Volksgarten: 15 ha, davon 84 % Verbotszone. <a href="../#16/50.92105/6.94768">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/koeln-stadtgarten.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Stadtgarten (grün umrandet) mit den roten Verbotszonen; etwa 70 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Stadtgarten: 6 ha, davon 70 % Verbotszone. <a href="../#16/50.9445/6.93695">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Im <strong>Rheinpark</strong> in Deutz sind es 56 %, wegen eines Spielplatzes und mehrerer
+Sportanlagen samt Minigolf. Der <strong>Hiroshima-Nagasaki-Park</strong> am Aachener Weiher kommt auf
+42 %; ein Spielplatz und eine Sportanlage liegen im Park, Kitas und
+Sportplätze am Rand.</p>
+<figure class="karte"><img src="../img/stadt/koeln-rheinpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Rheinpark (grün umrandet) mit den roten Verbotszonen; etwa 56 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Rheinpark: 26 ha, davon 56 % Verbotszone. <a href="../#16/50.94941/6.97639">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/koeln-aachener-weiher.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Hiroshima-Nagasaki-Park (grün umrandet) mit den roten Verbotszonen; etwa 42 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Hiroshima-Nagasaki-Park: 21 ha, davon 42 % Verbotszone. <a href="../#16/50.93381/6.92803">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Der Äußere Grüngürtel liegt zu 19 % in einer Zone, der Königsforst im
+Osten fast gar nicht (0 %). Auf einem 100 Meter breiten Streifen Land entlang des
+Rheins sind es 12 %.</p>
+<h2 id="innenstadt-und-platze">Innenstadt und Plätze</h2>
+<p>Eine amtliche Liste der Kölner Fußgängerzonen haben wir nicht gefunden. Die Stadt nennt die
+<strong>Hohe Straße</strong> seit 1967 Fußgängerstraße, und ihr Faltblatt zum Radfahren in den Fußgängerzonen
+der City zeigt unter anderem Hohe Straße, Schildergasse, Ehrenstraße, Breite Straße, Alter Markt
+und Roncalliplatz
+(<a href="https://www.stadt-koeln.de/mediaasset/content/pdf66/radverkehr/radfahren-in-fussgaengerzonen-10-2025.pdf">Stadt Köln, Oktober 2025</a>).
+Dort gilt zwischen 7 und 20 Uhr Konsumverbot, ganz gleich, was die Karte rot zeigt; blau zeigt die
+Karte die Fußgängerbereiche, wie sie in OpenStreetMap eingetragen sind.</p>
+<p>Von Hohe Straße und Schildergasse liegen außerdem 46 % in einer
+Sichtweiten-Zone, vom Alter Markt 82 %, vom Roncalliplatz am Dom
+0 %.</p>
+<figure class="karte"><img src="../img/stadt/koeln-fussgaengerzone.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Hohe Straße und Schildergasse (grün umrandet) mit den roten Verbotszonen; etwa 46 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Hohe Straße und Schildergasse: 2 ha, davon 46 % Verbotszone. <a href="../#16/50.93794/6.95625">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Auf dem <strong>Brüsseler Platz</strong> sind es 61 %; dort gilt außerdem von 21 bis 6 Uhr
+ein Alkoholverbot, zu Cannabis sagt es nichts
+(<a href="https://www.stadt-koeln.de/artikel/73758/index.html">Stadt Köln</a>). Der Ebertplatz liegt fast
+ganz in einer Zone (100 %), Neumarkt und Rudolfplatz fast gar nicht
+(2 % und 0 %).</p>
+<h2 id="hochschulen">Hochschulen</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte. Der Hauptcampus der <strong>Universität zu Köln</strong>
+liegt zu 10 % in einer Zone; Sportanlagen, Schulen und Kitas liegen
+vor allem am Rand. Die <strong>Deutsche Sporthochschule</strong> kommt auf
+57 %. Die Hausordnungen von Universität und TH Köln
+verbieten das Rauchen in Gebäuden; zu Cannabis sagen sie nichts
+(<a href="https://itcc.uni-koeln.de/sites/rrzk/Support_Information/Computer-Arbeitsraeume/Hausordnung_der_Universitaet_zu_Koeln.pdf">Hausordnung der Universität</a>).</p>
+<figure class="karte"><img src="../img/stadt/koeln-uni.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Universität zu Köln (grün umrandet) mit den roten Verbotszonen; etwa 10 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Universität zu Köln: 27 ha, davon 10 % Verbotszone. <a href="../#16/50.92808/6.92811">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="karneval-und-andere-feste">Karneval und andere Feste</h2>
+<p>Die Allgemeinverfügungen der Stadt zu Karneval und zum 11. November regeln Glas, Drohnen und Zugänge,
+Cannabis nicht
+(<a href="https://www.stadt-koeln.de/politik-und-verwaltung/presse/mitteilungen/28755/index.html">Stadt Köln, November 2026</a>).
+Weil an diesen Tagen viele Minderjährige feiern, greift aber das Verbot in ihrer Gegenwart
+(§ 5 Abs. 1 KCanG); die Stadt zählte am 11. November 2025 Hunderte Verstöße gegen den Jugendschutz
+(<a href="https://www.stadt-koeln.de/politik-und-verwaltung/presseservice/der-elfte-im-elften-einsatzzahlen">Stadt Köln</a>).
+Für Volksfeste und ähnliche Großveranstaltungen sind die Veranstalter nach einem Erlass des Landes
+verpflichtet, Verstöße zu verhindern, notfalls mit einem generellen Konsumverbot
+(<a href="https://www.mags.nrw/system/files/media/document/file/erlass_konsumverbot_auf_volksfesten_presse.pdf">Erlass des Gesundheitsministeriums, Mai 2024</a>).
+Die Weihnachtsmärkte am Dom und auf dem Alter Markt liegen in der Fußgängerzone. Im
+RheinEnergieStadion verbietet die Stadionordnung, Cannabis mitzubringen, und bei Spielen des 1. FC
+Köln das Kiffen auf den Tribünen
+(<a href="https://www.rheinenergiestadion.de/wp-content/uploads/2025/11/Stadionordnung_-Stand-19.-November-2025.pdf">Stadionordnung</a>).</p>
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>Ein Verstoß gegen § 5 Abs. 2 kostet in Nordrhein-Westfalen 50 bis 500 Euro, in Gegenwart von
+Minderjährigen 300 bis 1.000 Euro
+(<a href="https://www.mags.nrw/regeln-und-bussgelder-zur-cannabiskontrolle">Land NRW</a>); zuständig ist die
+Stadt. Bei Kontrollen auf Spiel- und Bolzplätzen in den Osterferien 2025 traf das Ordnungsamt acht
+kiffende Personen an, bei 1.322 Kontrollen
+(<a href="https://www.stadt-koeln.de/politik-und-verwaltung/presse/mitteilungen/27544/index.html">Stadt Köln</a>).
+Eigene Verbotszonen für Cannabis über die Spielplätze hinaus hat Köln nicht (Stand 26. November 2026).</p>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-koln-kiffen">Wo darf man in Köln kiffen?</h3>
+<p>Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht auf Spiel-
+und Bolzplätzen, nicht in Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht
+es verbietet. Eine weiße Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte
+kennt weder Hecken noch Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap
+fehlen.</p>
+<h3 id="darf-man-an-karneval-kiffen">Darf man an Karneval kiffen?</h3>
+<p>Wo Kinder und Jugendliche mitfeiern, nein, und das ist an Karneval fast überall. In den
+Fußgängerzonen der Altstadt gilt außerdem bis 20 Uhr das Verbot für Fußgängerzonen. Die
+Glasverbote der Stadt regeln Cannabis nicht.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
+neu gerechnet; die Zahlen auf dieser Seite sind vom 26. November 2026. Die Karte ist eine
+Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
+auf der <a href="../about.html">Über-Seite</a>.</p>
+<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
+OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 26. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
+</body>
+</html>

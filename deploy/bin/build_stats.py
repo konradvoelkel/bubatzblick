@@ -24,6 +24,7 @@ import json
 import os
 import re
 import sys
+from collections import Counter
 from pathlib import Path
 
 ANSI = re.compile(r"\x1b\[[0-9;]*m")
@@ -306,7 +307,78 @@ def access_status_html(status: dict | None) -> str:
     return f'<p class="small">{" · ".join(teile)} — Zusage: unter {LOG_MAX_AGE_H} h</p>'
 
 
-def render(rec: dict, hist: list[dict], access: list[dict], status: dict | None) -> str:
+def staedte_summen(d: Path) -> dict:
+    """Aufrufe und Stimmen der Staedteseiten ueber alle aufbewahrten Tage (aggregate_access.py)."""
+    tage = [r for p in sorted(d.glob("*.json")) if TAGESDATEI.match(p.stem) and (r := read_json(p))]
+    tage = [r for r in tage if "city_views" in r]
+    views: Counter[str] = Counter()
+    votes: Counter[str] = Counter()
+    index = 0
+    # Platzhalter oder Seite, nach dem juengsten Tag mit einem Aufruf: ein Platzhalter leitet jeden
+    # Menschen mit ?interesse= weiter (also Stimmen am selben Tag), eine echte Seite nie.
+    platzhalter: dict[str, bool] = {}
+    for r in tage:
+        tag_views, tag_votes = r.get("city_views") or {}, r.get("city_votes") or {}
+        views.update(tag_views)
+        votes.update(tag_votes)
+        index += int(r.get("city_index_views") or 0)
+        for k in set(tag_views) | set(tag_votes):
+            platzhalter[k] = tag_votes.get(k, 0) > 0
+    return {
+        "tage": len(tage),
+        "seit": tage[0]["date"] if tage else None,
+        "index": index,
+        "views": views,
+        "votes": votes,
+        "platzhalter": sorted(k for k, v in platzhalter.items() if v),
+    }
+
+
+def balken(werte: list[tuple[str, int, str]], einheit: str, max_zeilen: int = 40) -> str:
+    """Waagrechtes Balkendiagramm in reinem HTML: (Name, Wert, CSS-Klasse)."""
+    werte = [w for w in werte if w[1] > 0][:max_zeilen]
+    if not werte:
+        return '<p class="small">noch keine Zahlen</p>'
+    hoch = max(w[1] for w in werte)
+    zeilen = "".join(
+        f'<div class="bz"><span class="bn">{h(name)}</span>'
+        f'<span class="bb"><span class="{cls}" style="width:{100 * wert / hoch:.1f}%"></span></span>'
+        f'<span class="bw">{n(wert)}</span></div>'
+        for name, wert, cls in werte
+    )
+    return f'<div class="balken" aria-label="{h(einheit)}">{zeilen}</div>'
+
+
+def staedte_html(s: dict) -> str:
+    """Drei Diagramme: alle /stadt/<name> (mit Platzhaltern), Stimmen fuer Staedte ohne Seite,
+    Aufrufe der Staedte mit Seite. Ob eine Stadt eine Seite hat, sieht diese Seite nicht (sie kennt
+    das Web-Verzeichnis nicht); geschaetzt in staedte_summen."""
+    if not s["tage"]:
+        return '<p class="small">Noch keine Tageszahlen mit Städteseiten.</p>'
+    platzhalter = set(s["platzhalter"])
+    alle = sorted(s["views"].items(), key=lambda kv: (-kv[1], kv[0]))
+    stimmen = sorted(
+        ((k, v) for k, v in s["votes"].items() if k in platzhalter), key=lambda kv: (-kv[1], kv[0])
+    )
+    seiten = [(k, v) for k, v in alle if k not in platzhalter]
+    return f"""<p class="small">Summe über {n(s["tage"])} Tage seit {h(s["seit"])}, ohne Bots. Übersicht /stadt/: {n(s["index"])} Aufrufe.
+Stimme = verschiedene gekürzte Adressen je Tag, die vom Platzhalter einer Stadt ohne eigene Seite auf die Karte kamen
+(Tage summiert). Ob eine Stadt eine Seite hat, ist geschätzt: am jüngsten Tag mit Aufruf hatte ein Platzhalter auch Stimmen.</p>
+<h3>Alle Adressen /stadt/&lt;name&gt; (Aufrufe; grau: ohne eigene Seite)</h3>
+{balken([(k, v, "grau" if k in platzhalter else "gruen") for k, v in alle], "Aufrufe je Stadt")}
+<h3>Ohne eigene Seite: Stimmen</h3>
+{balken([(k, v, "grau") for k, v in stimmen], "Stimmen je Stadt")}
+<h3>Mit eigener Seite: Aufrufe</h3>
+{balken([(k, v, "gruen") for k, v in seiten], "Aufrufe je Städteseite")}"""
+
+
+def render(
+    rec: dict,
+    hist: list[dict],
+    access: list[dict],
+    status: dict | None,
+    staedte: dict | None = None,
+) -> str:
     result = rec["result"] or ""
     cls = "ok" if result == "ok" else ("warn" if result.startswith("keine") else "err")
     rows = [
@@ -403,6 +475,11 @@ table{{border-collapse:collapse;margin:.5rem 0;font-size:.92rem}} th,td{{text-al
 th{{font-weight:600;white-space:nowrap}} ul{{margin:0;padding-left:1.1rem}}
 .ok{{color:#1a7f37}} .warn{{color:#9a6700}} .err{{color:#b3261e;font-weight:600}}
 .small{{color:#666;font-size:.85rem}} .scroll{{overflow-x:auto}}
+h3{{font-size:.98rem;margin:1.2rem 0 .4rem}}
+.balken{{max-width:44rem}} .bz{{display:flex;align-items:center;gap:.5rem;font-size:.85rem;line-height:1.5}}
+.bn{{flex:0 0 11rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
+.bb{{flex:1;background:#eee;height:.8rem;border-radius:2px}} .bb span{{display:block;height:100%;border-radius:2px}}
+.gruen{{background:#287c42}} .grau{{background:#9a9a9a}} .bw{{flex:0 0 3.5rem;text-align:right;font-variant-numeric:tabular-nums}}
 </style></head><body>
 <h1>BubatzBlick – Betrieb</h1>
 <p class="small">Erzeugt {h(rec["generated"])} vom Tageszyklus auf dem Server. Diese Seite ist nicht verlinkt und nicht indexiert.</p>
@@ -418,6 +495,8 @@ th{{font-weight:600;white-space:nowrap}} ul{{margin:0;padding-left:1.1rem}}
 {access_status_html(status)}
 <div class="scroll"><table><tr><th>Datum</th><th>Anfragen</th><th>Karte</th><th>Über</th><th>Besucher ≈</th><th>Bots</th><th>Volumen</th><th>4xx / 5xx</th><th>Herkunft (Referer)</th></tr>
 {"".join(acc_rows) or '<tr><td colspan="9">noch keine Auswertung</td></tr>'}</table></div>
+<h2>Städteseiten</h2>
+{staedte_html(staedte) if staedte else '<p class="small">keine Zahlen</p>'}
 </body></html>
 """
 
@@ -430,7 +509,8 @@ def main() -> None:
     access = load_access(stats_dir / "access")
     status = read_json(stats_dir / "access" / STATUS_NAME)
     tmp = stats_dir / f"index.html.tmp{os.getpid()}"
-    tmp.write_text(render(rec, hist, access, status))
+    staedte = staedte_summen(stats_dir / "access")
+    tmp.write_text(render(rec, hist, access, status, staedte))
     tmp.rename(stats_dir / "index.html")
     (stats_dir / "stats.json").write_text(
         json.dumps(
@@ -439,6 +519,9 @@ def main() -> None:
                 "history": hist[-HISTORY_ROWS:],
                 "access": access,
                 "access_status": status,
+                "staedte": {
+                    k: (dict(v) if isinstance(v, Counter) else v) for k, v in staedte.items()
+                },
             },
             ensure_ascii=False,
             indent=1,

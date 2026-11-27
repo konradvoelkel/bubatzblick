@@ -1,12 +1,14 @@
 """Die Sitemap nennt genau die oeffentlichen Seiten, und robots.txt zeigt auf sie.
 
-`viewer/sitemap.xml` ist von Hand geschrieben. Ohne Pruefung veraltet sie beim
+`viewer/sitemap.xml` ist von Hand geschrieben (die Staedteseiten traegt
+deploy/bin/build_staedte.py ein). Ohne Pruefung veraltet sie beim
 ersten Mal, wenn eine dritte Seite dazukommt oder eine umzieht -- und eine
 Suchmaschine, der man die Sitemap eingereicht hat, haelt sie fuer die Liste.
 Geprueft wird deshalb der Quellstand:
 
-- Jede `viewer/*.html` steht mit ihrer kanonischen Adresse in der Sitemap, und
-  die Sitemap nennt nichts darueber hinaus.
+- Jede `viewer/**/*.html` (auch die Staedteseiten unter viewer/stadt/) steht mit
+  ihrer kanonischen Adresse in der Sitemap, und die Sitemap nennt nichts darueber hinaus.
+  Ausgenommen sind die Platzhalter (noindex) fuer Staedte ohne eigene Seite.
 - robots.txt nennt die Sitemap genau einmal, unter derselben Herkunft.
 - Keine Adresse der Sitemap faellt unter ein `Disallow` von robots.txt.
 - Die Herkunft ist dieselbe wie in `.well-known/security.txt`: die Domain steht
@@ -57,8 +59,14 @@ def test_sitemap_nennt_genau_die_seiten() -> None:
     assert len(adressen) == len(set(adressen)), "doppelter Eintrag in der Sitemap"
     basis = herkunft(adressen)
     erwartet = set()
-    for seite in sorted(VIEWER.glob("*.html")):
+    for seite in sorted(
+        p for p in VIEWER.rglob("*.html") if "vendor" not in p.relative_to(VIEWER).parts
+    ):
         text = seite.read_text(encoding="utf-8")
+        if '<meta name="robots" content="noindex">' in text:
+            # Platzhalter einer Stadt ohne eigene Seite: leitet weiter, gehoert nicht hinein
+            assert "canonical" not in text, f"{seite.name}: noindex und canonical zugleich"
+            continue
         m = re.search(r'<link rel="canonical" href="([^"]+)"', text)
         assert m, f"{seite.name}: kein canonical"
         assert m.group(1).startswith(PLATZHALTER + "/"), m.group(1)

@@ -1,0 +1,1849 @@
+{
+ "stadtflaeche_osm_km2": 207.16,
+ "wald": {
+  "flaeche_km2": 53.9,
+  "anteil_stadt": 0.2602,
+  "anteil_zone": 0.0896,
+  "anteil_zone_ohne_wald": 0.2438
+ },
+ "zonen_km2": 42.19,
+ "anteil": 0.20369,
+ "kategorien": {
+  "sports": {
+   "objekte": 1309,
+   "zonen_km2": 20.98
+  },
+  "playground": {
+   "objekte": 923,
+   "zonen_km2": 18.3
+  },
+  "school": {
+   "objekte": 269,
+   "zonen_km2": 8.94
+  },
+  "kindergarten": {
+   "objekte": 379,
+   "zonen_km2": 7.65
+  },
+  "youth": {
+   "objekte": 48,
+   "zonen_km2": 0.97
+  },
+  "childcare": {
+   "objekte": 55,
+   "zonen_km2": 0.86
+  },
+  "cannabis_club": {
+   "objekte": 1,
+   "zonen_km2": 0.02
+  }
+ },
+ "objekte_gesamt": 2984,
+ "merkmale": {
+  "platz": [
+   {
+    "name": "Cannstatter Wasen",
+    "osm": [
+     "r14247592"
+    ],
+    "flaeche_ha": 14.4,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.018,
+    "lat": 48.7971,
+    "lon": 9.2171,
+    "bbox": [
+     9.21313,
+     48.79406,
+     9.22161,
+     48.79982
+    ]
+   },
+   {
+    "name": "Karl-Benz-Platz",
+    "osm": [
+     "w464630053"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.8296,
+    "lat": 48.77944,
+    "lon": 9.24928,
+    "bbox": [
+     9.24794,
+     48.77831,
+     9.25156,
+     48.78047
+    ]
+   },
+   {
+    "name": "Schlossplatz",
+    "osm": [
+     "w3933618"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.1794,
+    "lat": 48.77847,
+    "lon": 9.17974,
+    "bbox": [
+     9.17839,
+     48.77752,
+     9.18113,
+     48.77941
+    ]
+   },
+   {
+    "name": "Marienplatz",
+    "osm": [
+     "w516770322"
+    ],
+    "flaeche_ha": 1.7,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.9915,
+    "lat": 48.76429,
+    "lon": 9.16826,
+    "bbox": [
+     9.16718,
+     48.76349,
+     9.16946,
+     48.76493
+    ]
+   },
+   {
+    "name": "Manfred-Rommel-Platz",
+    "osm": [
+     "r16051128"
+    ],
+    "flaeche_ha": 1.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.78426,
+    "lon": 9.1812,
+    "bbox": [
+     9.18072,
+     48.78346,
+     9.1837,
+     48.78505
+    ]
+   },
+   {
+    "name": "Wiener Platz",
+    "osm": [
+     "w464636732"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.216,
+    "lat": 48.81372,
+    "lon": 9.16819,
+    "bbox": [
+     9.16683,
+     48.81295,
+     9.1693,
+     48.81453
+    ]
+   },
+   {
+    "name": "Marktplatz",
+    "osm": [
+     "w3990007"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0701,
+    "lat": 48.77519,
+    "lon": 9.17852,
+    "bbox": [
+     9.17764,
+     48.77464,
+     9.17921,
+     48.77568
+    ]
+   },
+   {
+    "name": "Karlsplatz",
+    "osm": [
+     "w507962489"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.77656,
+    "lon": 9.18092,
+    "bbox": [
+     9.18024,
+     48.77605,
+     9.18162,
+     48.77708
+    ]
+   },
+   {
+    "name": "Festplatz an der Hofener Brücke",
+    "osm": [
+     "w694527210"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.9912,
+    "lat": 48.8371,
+    "lon": 9.22263,
+    "bbox": [
+     9.22192,
+     48.83666,
+     9.22348,
+     48.83754
+    ]
+   },
+   {
+    "name": "Südheimer Platz",
+    "osm": [
+     "w37848040"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.5,
+    "anteil_zone": 1.0,
+    "lat": 48.75651,
+    "lon": 9.14469,
+    "bbox": [
+     9.14406,
+     48.75612,
+     9.14538,
+     48.7568
+    ]
+   },
+   {
+    "name": "Uhlbacher Platz",
+    "osm": [
+     "w464632800"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0983,
+    "lat": 48.77623,
+    "lon": 9.27897,
+    "bbox": [
+     9.27842,
+     48.77572,
+     9.27959,
+     48.77679
+    ]
+   },
+   {
+    "name": "Marga-von-Etzdorf-Platz",
+    "osm": [
+     "w911619413"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.9991,
+    "lat": 48.7976,
+    "lon": 9.226,
+    "bbox": [
+     9.22498,
+     48.79708,
+     9.22664,
+     48.79807
+    ]
+   },
+   {
+    "name": "Straßburger Platz",
+    "osm": [
+     "w1256466589"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.77899,
+    "lon": 9.18419,
+    "bbox": [
+     9.18351,
+     48.77858,
+     9.18487,
+     48.77939
+    ]
+   },
+   {
+    "name": "Festplatz",
+    "osm": [
+     "r5580917"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.5,
+    "anteil_zone": 1.0,
+    "lat": 48.83038,
+    "lon": 9.17826,
+    "bbox": [
+     9.17724,
+     48.8299,
+     9.17861,
+     48.83084
+    ]
+   },
+   {
+    "name": "Schillerplatz",
+    "osm": [
+     "w3996756"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.9948,
+    "lat": 48.77716,
+    "lon": 9.17849,
+    "bbox": [
+     9.17786,
+     48.77676,
+     9.17914,
+     48.77754
+    ]
+   },
+   {
+    "name": "Platz der Deutschen Einheit",
+    "osm": [
+     "w464627568"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.77987,
+    "lon": 9.16985,
+    "bbox": [
+     9.16944,
+     48.77942,
+     9.17026,
+     48.78025
+    ]
+   },
+   {
+    "name": "Kronprinzplatz",
+    "osm": [
+     "r6897634"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.9996,
+    "lat": 48.77686,
+    "lon": 9.17571,
+    "bbox": [
+     9.17495,
+     48.77624,
+     9.17628,
+     48.77738
+    ]
+   },
+   {
+    "name": "Wilhelmsplatz",
+    "osm": [
+     "w3933613"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 1.0,
+    "lat": 48.77123,
+    "lon": 9.17842,
+    "bbox": [
+     9.17784,
+     48.77089,
+     9.17888,
+     48.77155
+    ]
+   },
+   {
+    "name": "Stauffenbergplatz",
+    "osm": [
+     "w9714329"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.77676,
+    "lon": 9.18005,
+    "bbox": [
+     9.17962,
+     48.77635,
+     9.18061,
+     48.77725
+    ]
+   },
+   {
+    "name": "Pariser Platz",
+    "osm": [
+     "w11546063"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.78819,
+    "lon": 9.1831,
+    "bbox": [
+     9.18264,
+     48.78779,
+     9.18367,
+     48.78841
+    ]
+   },
+   {
+    "name": "Erwin-Schoettle-Platz",
+    "osm": [
+     "w82289994"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.3943,
+    "lat": 48.76227,
+    "lon": 9.16023,
+    "bbox": [
+     9.15968,
+     48.76191,
+     9.16061,
+     48.76277
+    ]
+   },
+   {
+    "name": "Mailänder Platz",
+    "osm": [
+     "w107760993"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.8811,
+    "lat": 48.7907,
+    "lon": 9.18307,
+    "bbox": [
+     9.18256,
+     48.79046,
+     9.18363,
+     48.7909
+    ]
+   },
+   {
+    "name": "Robert-Bosch-Platz",
+    "osm": [
+     "w224736424"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.77954,
+    "lon": 9.16875,
+    "bbox": [
+     9.16795,
+     48.77921,
+     9.16947,
+     48.77989
+    ]
+   },
+   {
+    "name": "Büsnauer Platz",
+    "osm": [
+     "w464631959"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.9988,
+    "lat": 48.74985,
+    "lon": 9.08009,
+    "bbox": [
+     9.07969,
+     48.74925,
+     9.08064,
+     48.75034
+    ]
+   },
+   {
+    "name": "Agnes-Kneher-Platz",
+    "osm": [
+     "w464634016"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 48.74561,
+    "lon": 9.17094,
+    "bbox": [
+     9.17061,
+     48.74528,
+     9.17138,
+     48.74591
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Rosensteinpark",
+    "osm": [
+     "r5197622"
+    ],
+    "flaeche_ha": 60.5,
+    "zone_ha": 7.5,
+    "anteil_zone": 0.1244,
+    "lat": 48.80311,
+    "lon": 9.20009,
+    "bbox": [
+     9.18932,
+     48.79892,
+     9.20812,
+     48.80729
+    ]
+   },
+   {
+    "name": "Unterer Schlossgarten",
+    "osm": [
+     "r3756047"
+    ],
+    "flaeche_ha": 35.0,
+    "zone_ha": 10.3,
+    "anteil_zone": 0.2953,
+    "lat": 48.79464,
+    "lon": 9.19879,
+    "bbox": [
+     9.18842,
+     48.78877,
+     9.21232,
+     48.80066
+    ]
+   },
+   {
+    "name": "Höhenpark Killesberg",
+    "osm": [
+     "w25950123"
+    ],
+    "flaeche_ha": 34.8,
+    "zone_ha": 12.9,
+    "anteil_zone": 0.3701,
+    "lat": 48.80524,
+    "lon": 9.17147,
+    "bbox": [
+     9.16627,
+     48.80126,
+     9.17702,
+     48.80944
+    ]
+   },
+   {
+    "name": "Park Villa Berg",
+    "osm": [
+     "w359272849"
+    ],
+    "flaeche_ha": 23.2,
+    "zone_ha": 15.3,
+    "anteil_zone": 0.6577,
+    "lat": 48.79185,
+    "lon": 9.20725,
+    "bbox": [
+     9.20367,
+     48.78868,
+     9.21567,
+     48.79493
+    ]
+   },
+   {
+    "name": "Tapachtal",
+    "osm": [
+     "w148025956"
+    ],
+    "flaeche_ha": 18.2,
+    "zone_ha": 11.0,
+    "anteil_zone": 0.6029,
+    "lat": 48.82916,
+    "lon": 9.20068,
+    "bbox": [
+     9.19218,
+     48.82572,
+     9.20384,
+     48.83292
+    ]
+   },
+   {
+    "name": "Mittlerer Schlossgarten",
+    "osm": [
+     "r5827784"
+    ],
+    "flaeche_ha": 18.1,
+    "zone_ha": 6.4,
+    "anteil_zone": 0.3536,
+    "lat": 48.78567,
+    "lon": 9.1872,
+    "bbox": [
+     9.18328,
+     48.7821,
+     9.19101,
+     48.78914
+    ]
+   },
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w24869440"
+    ],
+    "flaeche_ha": 16.4,
+    "zone_ha": 6.2,
+    "anteil_zone": 0.3796,
+    "lat": 48.70719,
+    "lon": 9.21362,
+    "bbox": [
+     9.2109,
+     48.7045,
+     9.21828,
+     48.70996
+    ]
+   },
+   {
+    "name": "Kurpark",
+    "osm": [
+     "w296052496"
+    ],
+    "flaeche_ha": 16.3,
+    "zone_ha": 10.0,
+    "anteil_zone": 0.6117,
+    "lat": 48.80889,
+    "lon": 9.22477,
+    "bbox": [
+     9.21831,
+     48.80641,
+     9.22815,
+     48.81131
+    ]
+   },
+   {
+    "name": "Wartberg",
+    "osm": [
+     "w24651672"
+    ],
+    "flaeche_ha": 15.7,
+    "zone_ha": 7.9,
+    "anteil_zone": 0.5024,
+    "lat": 48.80433,
+    "lon": 9.17868,
+    "bbox": [
+     9.17358,
+     48.80177,
+     9.18282,
+     48.80677
+    ]
+   },
+   {
+    "name": "Parkanlage Schloss Solitude",
+    "osm": [
+     "w1376406607"
+    ],
+    "flaeche_ha": 10.0,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.0522,
+    "lat": 48.78613,
+    "lon": 9.08417,
+    "bbox": [
+     9.08102,
+     48.78422,
+     9.09016,
+     48.78798
+    ]
+   },
+   {
+    "name": "Exotischer Garten",
+    "osm": [
+     "w24869415"
+    ],
+    "flaeche_ha": 9.9,
+    "zone_ha": 2.3,
+    "anteil_zone": 0.2378,
+    "lat": 48.709,
+    "lon": 9.2079,
+    "bbox": [
+     9.20437,
+     48.70685,
+     9.21134,
+     48.71101
+    ]
+   },
+   {
+    "name": "Karlshöhe",
+    "osm": [
+     "w3996884"
+    ],
+    "flaeche_ha": 7.5,
+    "zone_ha": 5.4,
+    "anteil_zone": 0.7209,
+    "lat": 48.76858,
+    "lon": 9.16546,
+    "bbox": [
+     9.1628,
+     48.76686,
+     9.16933,
+     48.77033
+    ]
+   },
+   {
+    "name": "Oberer Schlossgarten",
+    "osm": [
+     "w3934008"
+    ],
+    "flaeche_ha": 6.5,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.3711,
+    "lat": 48.78031,
+    "lon": 9.18283,
+    "bbox": [
+     9.18093,
+     48.77848,
+     9.18484,
+     48.78224
+    ]
+   },
+   {
+    "name": "Schlosspark",
+    "osm": [
+     "w24869468"
+    ],
+    "flaeche_ha": 6.1,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.084,
+    "lat": 48.7111,
+    "lon": 9.21399,
+    "bbox": [
+     9.21142,
+     48.71034,
+     9.21686,
+     48.71242
+    ]
+   },
+   {
+    "name": "Freizeitpark",
+    "osm": [
+     "w334352551"
+    ],
+    "flaeche_ha": 5.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.86477,
+    "lon": 9.21665,
+    "bbox": [
+     9.214,
+     48.86292,
+     9.21868,
+     48.8664
+    ]
+   },
+   {
+    "name": "Leibfriedscher Garten",
+    "osm": [
+     "w25872502"
+    ],
+    "flaeche_ha": 4.8,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.0865,
+    "lat": 48.80654,
+    "lon": 9.18573,
+    "bbox": [
+     9.18463,
+     48.80427,
+     9.18896,
+     48.80868
+    ]
+   },
+   {
+    "name": "Grünanlage Klingenbachtal",
+    "osm": [
+     "w28829768"
+    ],
+    "flaeche_ha": 4.3,
+    "zone_ha": 3.5,
+    "anteil_zone": 0.8042,
+    "lat": 48.78283,
+    "lon": 9.21348,
+    "bbox": [
+     9.20968,
+     48.7807,
+     9.21549,
+     48.78403
+    ]
+   },
+   {
+    "name": "Stadtgarten Stuttgart",
+    "osm": [
+     "w24960585"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.393,
+    "lat": 48.78134,
+    "lon": 9.17361,
+    "bbox": [
+     9.17035,
+     48.7802,
+     9.17504,
+     48.78249
+    ]
+   },
+   {
+    "name": "Weißenburgpark",
+    "osm": [
+     "w24388990"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.73,
+    "lat": 48.76516,
+    "lon": 9.18235,
+    "bbox": [
+     9.18131,
+     48.76383,
+     9.1838,
+     48.76651
+    ]
+   },
+   {
+    "name": "Rohrer Park",
+    "osm": [
+     "r12542450"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 3.4,
+    "anteil_zone": 0.9928,
+    "lat": 48.71724,
+    "lon": 9.10355,
+    "bbox": [
+     9.10146,
+     48.71646,
+     9.10576,
+     48.718
+    ]
+   },
+   {
+    "name": "Grüne Fuge",
+    "osm": [
+     "w464453272"
+    ],
+    "flaeche_ha": 3.3,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.5646,
+    "lat": 48.80046,
+    "lon": 9.17062,
+    "bbox": [
+     9.16969,
+     48.79919,
+     9.17142,
+     48.80224
+    ]
+   },
+   {
+    "name": "Stadtpark Vaihingen",
+    "osm": [
+     "r8430"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.9991,
+    "lat": 48.72794,
+    "lon": 9.11103,
+    "bbox": [
+     9.10984,
+     48.72701,
+     9.1128,
+     48.72888
+    ]
+   },
+   {
+    "name": "Rote Wand",
+    "osm": [
+     "w202713675"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 1.0,
+    "anteil_zone": 0.3771,
+    "lat": 48.79828,
+    "lon": 9.16992,
+    "bbox": [
+     9.16864,
+     48.79748,
+     9.17378,
+     48.79907
+    ]
+   },
+   {
+    "name": "Fanny-Leicht-Park",
+    "osm": [
+     "w23458372"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.7578,
+    "lat": 48.73218,
+    "lon": 9.11845,
+    "bbox": [
+     9.11614,
+     48.73132,
+     9.11954,
+     48.73311
+    ]
+   },
+   {
+    "name": "Uhlandshöhe",
+    "osm": [
+     "w34749445"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.9929,
+    "lat": 48.78093,
+    "lon": 9.19426,
+    "bbox": [
+     9.19279,
+     48.77921,
+     9.19657,
+     48.78267
+    ]
+   },
+   {
+    "name": "Waldheim Vaihingen",
+    "osm": [
+     "r1579706"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.9841,
+    "lat": 48.7212,
+    "lon": 9.0906,
+    "bbox": [
+     9.08938,
+     48.72034,
+     9.09193,
+     48.72196
+    ]
+   },
+   {
+    "name": "Feuerseeplatz",
+    "osm": [
+     "w24475644"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.7807,
+    "lat": 48.77307,
+    "lon": 9.16485,
+    "bbox": [
+     9.16339,
+     48.77227,
+     9.16629,
+     48.77398
+    ]
+   },
+   {
+    "name": "TSVgg Stuttgart-Münster",
+    "osm": [
+     "w367534242"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.9598,
+    "lat": 48.81835,
+    "lon": 9.22383,
+    "bbox": [
+     9.22233,
+     48.81706,
+     9.22505,
+     48.81938
+    ]
+   },
+   {
+    "name": "Akademiegarten",
+    "osm": [
+     "w35828199"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.77757,
+    "lon": 9.18285,
+    "bbox": [
+     9.1817,
+     48.77661,
+     9.18422,
+     48.77858
+    ]
+   },
+   {
+    "name": "Rotweganlage",
+    "osm": [
+     "w24824061"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.9119,
+    "lat": 48.83332,
+    "lon": 9.19167,
+    "bbox": [
+     9.1897,
+     48.83228,
+     9.19266,
+     48.83464
+    ]
+   },
+   {
+    "name": "Josefsanlage",
+    "osm": [
+     "w236469823"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 2.1,
+    "anteil_zone": 1.0,
+    "lat": 48.75042,
+    "lon": 9.16988,
+    "bbox": [
+     9.16879,
+     48.74931,
+     9.17189,
+     48.75148
+    ]
+   },
+   {
+    "name": "Grünanlage Nesenbach (Pumpwerk)",
+    "osm": [
+     "w870677112"
+    ],
+    "flaeche_ha": 2.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.75018,
+    "lon": 9.13721,
+    "bbox": [
+     9.13611,
+     48.74733,
+     9.13857,
+     48.75322
+    ]
+   }
+  ],
+  "see": [
+   {
+    "name": "Max-Eyth-See",
+    "osm": [
+     "r2334933"
+    ],
+    "flaeche_ha": 17.3,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.1753,
+    "lat": 48.83417,
+    "lon": 9.21552,
+    "bbox": [
+     9.21152,
+     48.83128,
+     9.21822,
+     48.83696
+    ]
+   },
+   {
+    "name": "Pfaffensee",
+    "osm": [
+     "w1544326509"
+    ],
+    "flaeche_ha": 7.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.75759,
+    "lon": 9.10896,
+    "bbox": [
+     9.10242,
+     48.75612,
+     9.11157,
+     48.75912
+    ]
+   },
+   {
+    "name": "Neuer See",
+    "osm": [
+     "w1544326511"
+    ],
+    "flaeche_ha": 6.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.75822,
+    "lon": 9.09954,
+    "bbox": [
+     9.09096,
+     48.75678,
+     9.10225,
+     48.75968
+    ]
+   },
+   {
+    "name": "Bärensee",
+    "osm": [
+     "w1544326510"
+    ],
+    "flaeche_ha": 4.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.76147,
+    "lon": 9.08922,
+    "bbox": [
+     9.08619,
+     48.75925,
+     9.09114,
+     48.76366
+    ]
+   },
+   {
+    "name": "Katzenbachsee",
+    "osm": [
+     "w5719813"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.74239,
+    "lon": 9.07419,
+    "bbox": [
+     9.07212,
+     48.74155,
+     9.07613,
+     48.74326
+    ]
+   },
+   {
+    "name": "Probstsee",
+    "osm": [
+     "w151272049"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.6561,
+    "lat": 48.72974,
+    "lon": 9.13781,
+    "bbox": [
+     9.13663,
+     48.72872,
+     9.13929,
+     48.73076
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Pfaffenwald",
+    "osm": [
+     "r4771113"
+    ],
+    "flaeche_ha": 206.8,
+    "zone_ha": 2.1,
+    "anteil_zone": 0.01,
+    "lat": 48.7518,
+    "lon": 9.1085,
+    "bbox": [
+     9.08835,
+     48.74558,
+     9.12959,
+     48.75794
+    ]
+   },
+   {
+    "name": "Hospitalwald",
+    "osm": [
+     "r1376795"
+    ],
+    "flaeche_ha": 132.6,
+    "zone_ha": 17.8,
+    "anteil_zone": 0.1343,
+    "lat": 48.74097,
+    "lon": 9.19171,
+    "bbox": [
+     9.17826,
+     48.73175,
+     9.19975,
+     48.75023
+    ]
+   },
+   {
+    "name": "Ohnholdwald",
+    "osm": [
+     "r538919"
+    ],
+    "flaeche_ha": 131.2,
+    "zone_ha": 24.0,
+    "anteil_zone": 0.1826,
+    "lat": 48.72733,
+    "lon": 9.1877,
+    "bbox": [
+     9.16735,
+     48.72187,
+     9.20502,
+     48.73285
+    ]
+   },
+   {
+    "name": "Zettachwald",
+    "osm": [
+     "w22704102"
+    ],
+    "flaeche_ha": 84.2,
+    "zone_ha": 4.4,
+    "anteil_zone": 0.0528,
+    "lat": 48.71154,
+    "lon": 9.17569,
+    "bbox": [
+     9.16135,
+     48.70561,
+     9.18929,
+     48.71738
+    ]
+   },
+   {
+    "name": "Dürrlewangwald",
+    "osm": [
+     "r12273516"
+    ],
+    "flaeche_ha": 71.9,
+    "zone_ha": 8.3,
+    "anteil_zone": 0.1155,
+    "lat": 48.71203,
+    "lon": 9.12135,
+    "bbox": [
+     9.11073,
+     48.70856,
+     9.13083,
+     48.71529
+    ]
+   },
+   {
+    "name": "Armenkastenwald",
+    "osm": [
+     "r13624147"
+    ],
+    "flaeche_ha": 66.6,
+    "zone_ha": 11.1,
+    "anteil_zone": 0.166,
+    "lat": 48.7495,
+    "lon": 9.19446,
+    "bbox": [
+     9.18651,
+     48.74217,
+     9.20003,
+     48.75635
+    ]
+   },
+   {
+    "name": "Dornhaldenwald",
+    "osm": [
+     "r4135989"
+    ],
+    "flaeche_ha": 64.9,
+    "zone_ha": 4.5,
+    "anteil_zone": 0.0699,
+    "lat": 48.75308,
+    "lon": 9.16234,
+    "bbox": [
+     9.14948,
+     48.7487,
+     9.16833,
+     48.75747
+    ]
+   },
+   {
+    "name": "Zwickenberg",
+    "osm": [
+     "r17234119"
+    ],
+    "flaeche_ha": 64.3,
+    "zone_ha": 3.7,
+    "anteil_zone": 0.0575,
+    "lat": 48.75311,
+    "lon": 9.13182,
+    "bbox": [
+     9.11723,
+     48.74839,
+     9.1373,
+     48.75852
+    ]
+   },
+   {
+    "name": "Bürgerwald",
+    "osm": [
+     "r1484937"
+    ],
+    "flaeche_ha": 63.5,
+    "zone_ha": 11.8,
+    "anteil_zone": 0.1852,
+    "lat": 48.76126,
+    "lon": 9.12449,
+    "bbox": [
+     9.11654,
+     48.75788,
+     9.13552,
+     48.76446
+    ]
+   },
+   {
+    "name": "Weidachwald",
+    "osm": [
+     "w432721055"
+    ],
+    "flaeche_ha": 59.3,
+    "zone_ha": 1.2,
+    "anteil_zone": 0.0205,
+    "lat": 48.71547,
+    "lon": 9.17644,
+    "bbox": [
+     9.16967,
+     48.70961,
+     9.18653,
+     48.72157
+    ]
+   },
+   {
+    "name": "Häslachwald",
+    "osm": [
+     "w25304987"
+    ],
+    "flaeche_ha": 54.9,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.0362,
+    "lat": 48.70865,
+    "lon": 9.23154,
+    "bbox": [
+     9.21993,
+     48.70579,
+     9.2411,
+     48.7117
+    ]
+   },
+   {
+    "name": "Sandebene",
+    "osm": [
+     "r17231640"
+    ],
+    "flaeche_ha": 46.3,
+    "zone_ha": 4.4,
+    "anteil_zone": 0.0959,
+    "lat": 48.76178,
+    "lon": 9.13786,
+    "bbox": [
+     9.12935,
+     48.75838,
+     9.14573,
+     48.76509
+    ]
+   },
+   {
+    "name": "Heidenklinge",
+    "osm": [
+     "r17055708"
+    ],
+    "flaeche_ha": 33.0,
+    "zone_ha": 5.1,
+    "anteil_zone": 0.1546,
+    "lat": 48.75842,
+    "lon": 9.13864,
+    "bbox": [
+     9.12694,
+     48.75501,
+     9.14481,
+     48.76179
+    ]
+   },
+   {
+    "name": "Fasanengarten",
+    "osm": [
+     "r23494"
+    ],
+    "flaeche_ha": 32.7,
+    "zone_ha": 5.5,
+    "anteil_zone": 0.1679,
+    "lat": 48.81116,
+    "lon": 9.09518,
+    "bbox": [
+     9.09027,
+     48.80703,
+     9.09899,
+     48.81519
+    ]
+   },
+   {
+    "name": "Wolfersberg",
+    "osm": [
+     "r17234118"
+    ],
+    "flaeche_ha": 31.2,
+    "zone_ha": 7.6,
+    "anteil_zone": 0.245,
+    "lat": 48.74753,
+    "lon": 9.13134,
+    "bbox": [
+     9.12193,
+     48.74467,
+     9.13566,
+     48.75035
+    ]
+   },
+   {
+    "name": "Rotenwald",
+    "osm": [
+     "r17231641"
+    ],
+    "flaeche_ha": 30.3,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.0934,
+    "lat": 48.76756,
+    "lon": 9.14366,
+    "bbox": [
+     9.1343,
+     48.76425,
+     9.14882,
+     48.7709
+    ]
+   },
+   {
+    "name": "Kohlhau",
+    "osm": [
+     "r17234053"
+    ],
+    "flaeche_ha": 29.7,
+    "zone_ha": 7.5,
+    "anteil_zone": 0.2512,
+    "lat": 48.74495,
+    "lon": 9.13904,
+    "bbox": [
+     9.13498,
+     48.74212,
+     9.14959,
+     48.74786
+    ]
+   },
+   {
+    "name": "Haldenwald",
+    "osm": [
+     "r17013555"
+    ],
+    "flaeche_ha": 29.4,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.1103,
+    "lat": 48.74169,
+    "lon": 9.14532,
+    "bbox": [
+     9.1396,
+     48.73863,
+     9.1521,
+     48.74471
+    ]
+   },
+   {
+    "name": "Maierwald",
+    "osm": [
+     "r5639696"
+    ],
+    "flaeche_ha": 21.5,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.0383,
+    "lat": 48.82011,
+    "lon": 9.12601,
+    "bbox": [
+     9.12156,
+     48.81776,
+     9.12985,
+     48.82261
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r1673640",
+     "r19392931",
+     "r5555836",
+     "w1545535063",
+     "w22891832"
+    ],
+    "flaeche_ha": 144.3,
+    "zone_ha": 41.5,
+    "anteil_zone": 0.2876,
+    "lat": 48.75171,
+    "lon": 9.26461,
+    "bbox": [
+     9.20708,
+     48.75054,
+     9.26681,
+     48.84678
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Universität Stuttgart",
+    "osm": [
+     "r5294338",
+     "w1286894940"
+    ],
+    "flaeche_ha": 84.3,
+    "zone_ha": 18.5,
+    "anteil_zone": 0.2197,
+    "lat": 48.74538,
+    "lon": 9.10328,
+    "bbox": [
+     9.09259,
+     48.73937,
+     9.11516,
+     48.75145
+    ]
+   },
+   {
+    "name": "Universität Hohenheim",
+    "osm": [
+     "w145026506"
+    ],
+    "flaeche_ha": 61.0,
+    "zone_ha": 15.4,
+    "anteil_zone": 0.2527,
+    "lat": 48.71339,
+    "lon": 9.21209,
+    "bbox": [
+     9.20387,
+     48.70854,
+     9.21816,
+     48.71813
+    ]
+   },
+   {
+    "name": "Fraunhofer-Institutszentrum Stuttgart (IZS)",
+    "osm": [
+     "w1508816076"
+    ],
+    "flaeche_ha": 8.9,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0161,
+    "lat": 48.74121,
+    "lon": 9.0987,
+    "bbox": [
+     9.09567,
+     48.73992,
+     9.10182,
+     48.74249
+    ]
+   },
+   {
+    "name": "Hochschule der Medien",
+    "osm": [
+     "w355513467"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.74164,
+    "lon": 9.10103,
+    "bbox": [
+     9.10004,
+     48.74038,
+     9.10257,
+     48.74267
+    ]
+   },
+   {
+    "name": "Staatliche Akademie der bildenden Künste",
+    "osm": [
+     "w25089952"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0865,
+    "lat": 48.80067,
+    "lon": 9.17465,
+    "bbox": [
+     9.17335,
+     48.79953,
+     9.17598,
+     48.80123
+    ]
+   },
+   {
+    "name": "HFT Stuttgart - Hochschule für Technik Stuttgart",
+    "osm": [
+     "w354369593"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.2228,
+    "lat": 48.78027,
+    "lon": 9.17253,
+    "bbox": [
+     9.17048,
+     48.77922,
+     9.17399,
+     48.78137
+    ]
+   },
+   {
+    "name": "DHBW Stuttgart",
+    "osm": [
+     "r5294212"
+    ],
+    "flaeche_ha": 2.0,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.17,
+    "lat": 48.78256,
+    "lon": 9.16742,
+    "bbox": [
+     9.16624,
+     48.78206,
+     9.16895,
+     48.7852
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 336.9,
+   "zone_ha": 80.3,
+   "anteil_zone": 0.2384
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 46.4,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 48.77928,
+  "lon": 9.19288,
+  "bbox": [
+   9.03856,
+   48.69179,
+   9.31658,
+   48.8666
+  ]
+ },
+ "orte": [
+  {
+   "name": "Königstraße",
+   "osm": [
+    "r2899521",
+    "w107026048",
+    "w107026049",
+    "w1229560656",
+    "w188343685",
+    "w188343686",
+    "w24608230",
+    "w25536222",
+    "w27660355",
+    "w299453886",
+    "w359863907",
+    "w360153552",
+    "w361333289",
+    "w374379264",
+    "w374379265",
+    "w374379266",
+    "w374379267",
+    "w374379268",
+    "w374379269",
+    "w3933627",
+    "w395529633",
+    "w397581454",
+    "w397585825",
+    "w416955343",
+    "w417027652",
+    "w417027657",
+    "w436919790",
+    "w436919791",
+    "w436919793",
+    "w471870206",
+    "w471870207",
+    "w743774998",
+    "w743774999",
+    "w9723253",
+    "w9723307"
+   ],
+   "flaeche_ha": 2.94,
+   "bbox": [
+    9.17346,
+    48.77322,
+    9.18222,
+    48.78261
+   ],
+   "anteil_zone": 0.2458,
+   "art": "flaeche",
+   "lat": 48.77789,
+   "lon": 9.17777
+  },
+  {
+   "name": "Calwer Straße",
+   "osm": [
+    "w1112593491",
+    "w368981885",
+    "w375989855",
+    "w375989856",
+    "w375989857"
+   ],
+   "flaeche_ha": 0.67,
+   "bbox": [
+    9.17242,
+    48.7746,
+    9.17624,
+    48.77826
+   ],
+   "anteil_zone": 0.0933,
+   "art": "linie",
+   "lat": 48.77724,
+   "lon": 9.17513
+  },
+  {
+   "name": "Schulstraße",
+   "osm": [
+    "w91264273"
+   ],
+   "flaeche_ha": 0.23,
+   "bbox": [
+    9.17613,
+    48.77537,
+    9.17792,
+    48.77628
+   ],
+   "anteil_zone": 0.8124,
+   "art": "linie",
+   "lat": 48.77578,
+   "lon": 9.17702
+  },
+  {
+   "name": "Rotebühlplatz",
+   "osm": [
+    "w234864581",
+    "w27663091",
+    "w9417214"
+   ],
+   "flaeche_ha": 0.3,
+   "bbox": [
+    9.17049,
+    48.77391,
+    9.17271,
+    48.77455
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 48.77424,
+   "lon": 9.1719
+  },
+  {
+   "name": "Mailänder Platz",
+   "osm": [
+    "w107760993",
+    "w1115732452",
+    "w1115732453",
+    "w1138605722",
+    "w1212765241",
+    "w258836731",
+    "w399327425",
+    "w551993768",
+    "w718117411",
+    "w718117412",
+    "w718117413",
+    "w718117414"
+   ],
+   "flaeche_ha": 0.56,
+   "bbox": [
+    9.18253,
+    48.79002,
+    9.18398,
+    48.7917
+   ],
+   "anteil_zone": 0.5763,
+   "art": "flaeche",
+   "lat": 48.79087,
+   "lon": 9.18315
+  },
+  {
+   "name": "Wilhelmsplatz",
+   "osm": [
+    "r5167496",
+    "w3933613"
+   ],
+   "flaeche_ha": 0.43,
+   "bbox": [
+    9.17784,
+    48.77082,
+    9.21716,
+    48.80362
+   ],
+   "anteil_zone": 0.6729,
+   "art": "flaeche",
+   "lat": 48.77123,
+   "lon": 9.17842
+  },
+  {
+   "name": "Feuersee",
+   "osm": [
+    "w3996889",
+    "w6993174"
+   ],
+   "flaeche_ha": 1.54,
+   "bbox": [
+    9.10345,
+    48.72742,
+    9.16597,
+    48.77377
+   ],
+   "anteil_zone": 0.741,
+   "art": "flaeche",
+   "lat": 48.72778,
+   "lon": 9.10452
+  },
+  {
+   "name": "Eckensee",
+   "osm": [
+    "w3933643"
+   ],
+   "flaeche_ha": 0.77,
+   "bbox": [
+    9.18194,
+    48.77927,
+    9.18368,
+    48.78049
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 48.77979,
+   "lon": 9.18273
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-26",
+  "datum_lang": "26. November 2026",
+  "monat": "November 2026",
+  "osm": "2026-11-25T21:22:46Z",
+  "tags_json": 6,
+  "quelle": "lokaler Lauf auf dem Auszug des Regierungsbezirks Stuttgart (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  48.778,
+  9.18
+ ],
+ "og_zoom": 13.0,
+ "bilder": [
+  [
+   "ort",
+   "Königstraße",
+   "koenigstrasse"
+  ],
+  [
+   "park",
+   "Mittlerer Schlossgarten",
+   "schlossgarten"
+  ],
+  [
+   "park",
+   "Rosensteinpark",
+   "rosensteinpark"
+  ],
+  [
+   "park",
+   "Höhenpark Killesberg",
+   "killesberg"
+  ],
+  [
+   "platz",
+   "Marienplatz",
+   "marienplatz"
+  ],
+  [
+   "hochschule",
+   "Universität Stuttgart",
+   "uni"
+  ]
+ ]
+}

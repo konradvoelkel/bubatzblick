@@ -208,6 +208,16 @@
            background: var(--feld); border-radius: 6px; padding: 6px 12px;
            font-size: .8125rem; color: var(--text); box-shadow: var(--schatten); }
   #laden[hidden] { display: none; }
+  #interesse { max-width: min(26rem, calc(100% - 2rem)); border: none; border-radius: 12px;
+               padding: 1.2rem 1.4rem .8rem; box-shadow: var(--schatten); color: var(--text);
+               background: var(--grund); font-size: .95rem; line-height: 1.45; }
+  #interesse::backdrop { background: rgb(0 0 0 / .35); }
+  #interesse h2 { margin: 0 0 .5rem; font-size: 1.2rem; color: var(--marke); }
+  #interesse form { margin: 1rem 0 .4rem; }
+  #interesse button { font: inherit; padding: 6px 16px; border: none; border-radius: 6px;
+                      background: var(--marke); color: var(--grund); cursor: pointer; }
+  #interesse .weiter { margin: .4rem 0 0; font-size: .85rem; }
+  #interesse .weiter a { color: var(--marke); }
   /* Startfehler (app.js `startFehler`) und die Seite ohne JavaScript: mittig
      und mit Umbruch statt als einzeilige Pille am Rand -- es ist dann das
      Einzige, was die Karte sagt. */
@@ -299,7 +309,7 @@
   <div id="hinweis"><small><strong>Keine Rechtsauskunft.</strong> Die Karte bildet &sect; 5 Abs. 2 KCanG
   näherungsweise aus OpenStreetMap-Daten ab. Ob an einem Ort tatsächlich ein Verbot gilt, entscheidet
   sie nicht: OSM kann unvollständig oder veraltet sein, und die Zonen sind bewusst zu groß gerechnet.</small></div>
-  <div id="ueber-zeile"><small><a href="about.html" id="ueber-link">Über diese Karte</a> &middot; Fehler melden, Lizenzen, Impressum</small></div>
+  <div id="ueber-zeile"><small><a href="about.html" id="ueber-link">Über diese Karte</a> &middot; <a href="stadt/">Städte</a> &middot; Fehler melden, Lizenzen, Impressum</small></div>
   </div>
   <div id="meldung" role="status" aria-live="polite"></div>
   <div id="ansage" class="visually-hidden" role="status"></div>
@@ -309,6 +319,14 @@
      Screenreader oft nicht an. Der Text aendert sich nur in startFehler (app.js). -->
 <div id="laden" role="alert">Karte lädt …</div>
 </main>
+<!-- Hinweis nach einem Klick auf eine Stadt ohne eigene Seite (/stadt/<name> leitet mit
+     ?interesse=<name> hierher). app.js setzt die Texte und oeffnet ihn; ohne Parameter bleibt er zu. -->
+<dialog id="interesse" aria-labelledby="interesse-titel">
+  <h2 id="interesse-titel"></h2>
+  <p id="interesse-text"></p>
+  <form method="dialog"><button type="submit" autofocus>Zur Karte</button></form>
+  <p class="weiter"><a href="stadt/">Alle Städte</a></p>
+</dialog>
 <noscript>
   <style>#laden { display: none; }</style>
   <div id="ohne-js">Diese Karte braucht JavaScript. Was sie zeigt und wie sie rechnet, steht

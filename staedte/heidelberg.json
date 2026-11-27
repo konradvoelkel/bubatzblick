@@ -1,0 +1,959 @@
+{
+ "stadtflaeche_osm_km2": 108.75,
+ "zonen_km2": 12.32,
+ "anteil": 0.11325,
+ "kategorien": {
+  "sports": {
+   "objekte": 397,
+   "zonen_km2": 6.46
+  },
+  "playground": {
+   "objekte": 258,
+   "zonen_km2": 4.43
+  },
+  "kindergarten": {
+   "objekte": 148,
+   "zonen_km2": 2.93
+  },
+  "school": {
+   "objekte": 66,
+   "zonen_km2": 2.39
+  },
+  "youth": {
+   "objekte": 18,
+   "zonen_km2": 0.37
+  },
+  "childcare": {
+   "objekte": 17,
+   "zonen_km2": 0.25
+  }
+ },
+ "objekte_gesamt": 904,
+ "merkmale": {
+  "platz": [
+   {
+    "name": "Messplatz",
+    "osm": [
+     "w26709317"
+    ],
+    "flaeche_ha": 1.7,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.1041,
+    "lat": 49.39124,
+    "lon": 8.6764,
+    "bbox": [
+     8.67545,
+     49.39044,
+     8.67723,
+     49.39222
+    ]
+   },
+   {
+    "name": "Bismarckplatz",
+    "osm": [
+     "w565322208"
+    ],
+    "flaeche_ha": 1.4,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.9544,
+    "lat": 49.41014,
+    "lon": 8.69293,
+    "bbox": [
+     8.69207,
+     49.4089,
+     8.69367,
+     49.41126
+    ]
+   },
+   {
+    "name": "Paradeplatz",
+    "osm": [
+     "w391678888"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 1.2,
+    "anteil_zone": 1.0,
+    "lat": 49.38693,
+    "lon": 8.68444,
+    "bbox": [
+     8.68369,
+     49.3862,
+     8.68523,
+     49.38734
+    ]
+   },
+   {
+    "name": "Gadamerplatz",
+    "osm": [
+     "w514691081"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 1.2,
+    "anteil_zone": 1.0,
+    "lat": 49.40311,
+    "lon": 8.66644,
+    "bbox": [
+     8.66553,
+     49.40236,
+     8.6675,
+     49.40374
+    ]
+   },
+   {
+    "name": "Pfaffengrunder Terrasse",
+    "osm": [
+     "w575144297"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.9977,
+    "lat": 49.40179,
+    "lon": 8.66532,
+    "bbox": [
+     8.66451,
+     49.40109,
+     8.66636,
+     49.40272
+    ]
+   },
+   {
+    "name": "Sickingenplatz",
+    "osm": [
+     "w917710522"
+    ],
+    "flaeche_ha": 1.0,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.6452,
+    "lat": 49.38449,
+    "lon": 8.6822,
+    "bbox": [
+     8.68107,
+     49.38415,
+     8.68331,
+     49.38481
+    ]
+   },
+   {
+    "name": "Marlene-Dietrich-Platz",
+    "osm": [
+     "w391678889"
+    ],
+    "flaeche_ha": 0.9,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.6686,
+    "lat": 49.38633,
+    "lon": 8.68182,
+    "bbox": [
+     8.68114,
+     49.38573,
+     8.68243,
+     49.38698
+    ]
+   },
+   {
+    "name": "Willy-Brandt-Platz",
+    "osm": [
+     "w762373513"
+    ],
+    "flaeche_ha": 0.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.4042,
+    "lon": 8.67642,
+    "bbox": [
+     8.67488,
+     49.40347,
+     8.67743,
+     49.40495
+    ]
+   },
+   {
+    "name": "Universitätsplatz",
+    "osm": [
+     "w14327307"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.41106,
+    "lon": 8.70637,
+    "bbox": [
+     8.70562,
+     49.41055,
+     8.70701,
+     49.41162
+    ]
+   },
+   {
+    "name": "Schwetzinger Terrasse",
+    "osm": [
+     "r3421098"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.6,
+    "anteil_zone": 1.0,
+    "lat": 49.39888,
+    "lon": 8.67091,
+    "bbox": [
+     8.67044,
+     49.3982,
+     8.67197,
+     49.39959
+    ]
+   },
+   {
+    "name": "Europaplatz",
+    "osm": [
+     "w1271289927"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.40272,
+    "lon": 8.67387,
+    "bbox": [
+     8.67323,
+     49.40227,
+     8.67468,
+     49.40319
+    ]
+   },
+   {
+    "name": "Karlsplatz",
+    "osm": [
+     "w27492493"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0795,
+    "lat": 49.41223,
+    "lon": 8.7128,
+    "bbox": [
+     8.71216,
+     49.41187,
+     8.71343,
+     49.41261
+    ]
+   },
+   {
+    "name": "Marstallhof",
+    "osm": [
+     "w230580265"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.4126,
+    "lon": 8.70462,
+    "bbox": [
+     8.70381,
+     49.41224,
+     8.70536,
+     49.41298
+    ]
+   },
+   {
+    "name": "Mary-Somerville-Platz",
+    "osm": [
+     "w1019452098"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.4975,
+    "lat": 49.39532,
+    "lon": 8.67317,
+    "bbox": [
+     8.67257,
+     49.39505,
+     8.67402,
+     49.39586
+    ]
+   },
+   {
+    "name": "Czernyplatz",
+    "osm": [
+     "w1271107578"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.3613,
+    "lat": 49.40501,
+    "lon": 8.66931,
+    "bbox": [
+     8.66881,
+     49.40459,
+     8.67008,
+     49.40529
+    ]
+   },
+   {
+    "name": "Friedrich-Ebert-Platz",
+    "osm": [
+     "w55461506"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.9898,
+    "lat": 49.40885,
+    "lon": 8.69848,
+    "bbox": [
+     8.6982,
+     49.40837,
+     8.69879,
+     49.40913
+    ]
+   },
+   {
+    "name": "Marktplatz",
+    "osm": [
+     "w88661898"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.41219,
+    "lon": 8.71042,
+    "bbox": [
+     8.70964,
+     49.41195,
+     8.71084,
+     49.41242
+    ]
+   },
+   {
+    "name": "Neckarmünzplatz",
+    "osm": [
+     "w218816888"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.41367,
+    "lon": 8.71391,
+    "bbox": [
+     8.71337,
+     49.41347,
+     8.71446,
+     49.41385
+    ]
+   },
+   {
+    "name": "Kerweplatz",
+    "osm": [
+     "w1135937343"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.9664,
+    "lat": 49.37695,
+    "lon": 8.66599,
+    "bbox": [
+     8.66566,
+     49.37669,
+     8.66638,
+     49.37744
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Kirchheimer Loch",
+    "osm": [
+     "w27308975"
+    ],
+    "flaeche_ha": 15.2,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.0823,
+    "lat": 49.39085,
+    "lon": 8.67944,
+    "bbox": [
+     8.67666,
+     49.38671,
+     8.6818,
+     49.39495
+    ]
+   },
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w25963212"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.4149,
+    "lon": 8.6684,
+    "bbox": [
+     8.66625,
+     49.41412,
+     8.6705,
+     49.41558
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Universität Heidelberg",
+    "osm": [
+     "r17808273"
+    ],
+    "flaeche_ha": 110.3,
+    "zone_ha": 15.0,
+    "anteil_zone": 0.1359,
+    "lat": 49.4186,
+    "lon": 8.6692,
+    "bbox": [
+     8.66072,
+     49.41144,
+     8.67744,
+     49.42564
+    ]
+   },
+   {
+    "name": "Uni Heidelberg Campus Im Neuenheimer Feld",
+    "osm": [
+     "w26946230"
+    ],
+    "flaeche_ha": 110.0,
+    "zone_ha": 15.0,
+    "anteil_zone": 0.1363,
+    "lat": 49.4186,
+    "lon": 8.6692,
+    "bbox": [
+     8.66072,
+     49.41144,
+     8.67629,
+     49.42564
+    ]
+   },
+   {
+    "name": "SRH Wieblingen Campus",
+    "osm": [
+     "w138914420"
+    ],
+    "flaeche_ha": 14.4,
+    "zone_ha": 6.9,
+    "anteil_zone": 0.4836,
+    "lat": 49.41286,
+    "lon": 8.65316,
+    "bbox": [
+     8.64964,
+     49.4108,
+     8.65689,
+     49.41457
+    ]
+   },
+   {
+    "name": "Uni Heidelberg Campus Bergheim",
+    "osm": [
+     "w323484193"
+    ],
+    "flaeche_ha": 8.9,
+    "zone_ha": 3.4,
+    "anteil_zone": 0.3789,
+    "lat": 49.40943,
+    "lon": 8.6865,
+    "bbox": [
+     8.68293,
+     49.40792,
+     8.69113,
+     49.41095
+    ]
+   },
+   {
+    "name": "Uni Heidelberg Campus Altstadt",
+    "osm": [
+     "r17808272"
+    ],
+    "flaeche_ha": 5.1,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0371,
+    "lat": 49.41065,
+    "lon": 8.7062,
+    "bbox": [
+     8.70369,
+     49.4091,
+     8.70864,
+     49.41318
+    ]
+   },
+   {
+    "name": "Pädagogische Hochschule Heidelberg",
+    "osm": [
+     "r6743661"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.42023,
+    "lon": 8.66948,
+    "bbox": [
+     8.66874,
+     49.41956,
+     8.67022,
+     49.42082
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Parkanlage der Fachklinik Königstuhl",
+    "osm": [
+     "w113619179"
+    ],
+    "flaeche_ha": 4.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.38795,
+    "lon": 8.73967,
+    "bbox": [
+     8.73675,
+     49.38685,
+     8.74208,
+     49.38906
+    ]
+   },
+   {
+    "name": "Schlossgarten",
+    "osm": [
+     "w75246883"
+    ],
+    "flaeche_ha": 4.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0004,
+    "lat": 49.41113,
+    "lon": 8.71853,
+    "bbox": [
+     8.7155,
+     49.40939,
+     8.71977,
+     49.41285
+    ]
+   },
+   {
+    "name": "Der Andere Park",
+    "osm": [
+     "r16193322"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 2.9,
+    "anteil_zone": 0.8638,
+    "lat": 49.389,
+    "lon": 8.68471,
+    "bbox": [
+     8.68339,
+     49.38786,
+     8.68711,
+     49.38959
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r110109",
+     "r33464",
+     "w1312820508",
+     "w144503694",
+     "w155222646",
+     "w277053369",
+     "w763400083"
+    ],
+    "flaeche_ha": 156.6,
+    "zone_ha": 22.0,
+    "anteil_zone": 0.1404,
+    "lat": 49.40966,
+    "lon": 8.77724,
+    "bbox": [
+     8.65151,
+     49.39323,
+     8.78022,
+     49.42575
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Grenzhöfer Wald",
+    "osm": [
+     "w161109345"
+    ],
+    "flaeche_ha": 48.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.41836,
+    "lon": 8.57629,
+    "bbox": [
+     8.57314,
+     49.41132,
+     8.58207,
+     49.42526
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 252.9,
+   "zone_ha": 56.4,
+   "anteil_zone": 0.2229
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 13.3,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 49.40597,
+  "lon": 8.71507,
+  "bbox": [
+   8.57284,
+   49.35182,
+   8.79422,
+   49.45977
+  ]
+ },
+ "wald": {
+  "flaeche_km2": 46.0,
+  "anteil_stadt": 0.4228,
+  "anteil_zone": 0.0294,
+  "anteil_zone_ohne_wald": 0.1747
+ },
+ "stand": {
+  "datum": "2026-11-26",
+  "datum_lang": "26. November 2026",
+  "monat": "November 2026",
+  "osm": "2026-11-25T21:22:46Z",
+  "tags_json": 6,
+  "quelle": "lokaler Lauf auf dem Auszug des Regierungsbezirks Karlsruhe (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  49.4095,
+  8.699
+ ],
+ "og_zoom": 13.0,
+ "bilder": [
+  [
+   "ort",
+   "Neckarwiese",
+   "neckarwiese"
+  ],
+  [
+   "ort",
+   "Hauptstraße (Fußgängerzone)",
+   "altstadt"
+  ],
+  [
+   "ort",
+   "Bismarckplatz",
+   "bismarckplatz"
+  ],
+  [
+   "hochschule",
+   "Uni Heidelberg Campus Im Neuenheimer Feld",
+   "neuenheimer-feld"
+  ],
+  [
+   "park",
+   "Der Andere Park",
+   "der-andere-park"
+  ],
+  [
+   "park",
+   "Schlossgarten",
+   "schlossgarten"
+  ]
+ ],
+ "orte": [
+  {
+   "name": "Neckarwiese",
+   "osm": [
+    "r19118137"
+   ],
+   "flaeche_ha": 5.19,
+   "bbox": [
+    8.67731,
+    49.41138,
+    8.69825,
+    49.41353
+   ],
+   "anteil_zone": 0.2792,
+   "art": "flaeche",
+   "lat": 49.41318,
+   "lon": 8.69416
+  },
+  {
+   "name": "Hauptstraße (Fußgängerzone)",
+   "osm": [
+    "w171691935",
+    "w236229954",
+    "w28899576",
+    "w28899577",
+    "w36093936",
+    "w44829784",
+    "w77277695",
+    "w783931395",
+    "w84908668",
+    "w86203910",
+    "w870757384"
+   ],
+   "flaeche_ha": 2.07,
+   "bbox": [
+    8.6935,
+    49.40953,
+    8.71172,
+    49.4122
+   ],
+   "anteil_zone": 0.1119,
+   "art": "flaeche",
+   "lat": 49.41083,
+   "lon": 8.69984
+  },
+  {
+   "name": "Bismarckplatz",
+   "osm": [
+    "w107884560",
+    "w107884565",
+    "w318808949",
+    "w320034097",
+    "w320034098",
+    "w320034099",
+    "w320034100",
+    "w320034101",
+    "w320034102",
+    "w565322208"
+   ],
+   "flaeche_ha": 1.37,
+   "bbox": [
+    8.69207,
+    49.4089,
+    8.69367,
+    49.41126
+   ],
+   "anteil_zone": 0.9542,
+   "art": "flaeche",
+   "lat": 49.41014,
+   "lon": 8.69293
+  },
+  {
+   "name": "Universitätsplatz",
+   "osm": [
+    "w14327307",
+    "w339391310"
+   ],
+   "flaeche_ha": 0.6,
+   "bbox": [
+    8.70559,
+    49.41055,
+    8.70701,
+    49.41162
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.41109,
+   "lon": 8.70628
+  },
+  {
+   "name": "Marktplatz",
+   "osm": [
+    "r16302345",
+    "w203931106",
+    "w29461724",
+    "w783931396",
+    "w88661898",
+    "w88661902"
+   ],
+   "flaeche_ha": 0.31,
+   "bbox": [
+    8.70964,
+    49.4119,
+    8.7109,
+    49.41243
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.41211,
+   "lon": 8.71047
+  },
+  {
+   "name": "Kornmarkt",
+   "osm": [
+    "w14329101",
+    "w171691938"
+   ],
+   "flaeche_ha": 0.18,
+   "bbox": [
+    8.71128,
+    49.4116,
+    8.712,
+    49.4122
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.41188,
+   "lon": 8.71162
+  },
+  {
+   "name": "Neckarmünzplatz",
+   "osm": [
+    "w218816887",
+    "w218816888",
+    "w30109925",
+    "w321018192"
+   ],
+   "flaeche_ha": 0.26,
+   "bbox": [
+    8.71304,
+    49.41342,
+    8.71446,
+    49.41385
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.41366,
+   "lon": 8.71388
+  },
+  {
+   "name": "Alte Brücke",
+   "osm": [
+    "w14328813",
+    "w166503032",
+    "w321018184",
+    "w321018185",
+    "w5209247",
+    "w5209251",
+    "w541333757"
+   ],
+   "flaeche_ha": 0.4,
+   "bbox": [
+    8.70853,
+    49.4132,
+    8.71096,
+    49.41529
+   ],
+   "anteil_zone": 0.2059,
+   "art": "flaeche",
+   "lat": 49.41366,
+   "lon": 8.71078
+  },
+  {
+   "name": "Schlossgarten",
+   "osm": [
+    "w75246883"
+   ],
+   "flaeche_ha": 4.32,
+   "bbox": [
+    8.7155,
+    49.40939,
+    8.71977,
+    49.41285
+   ],
+   "anteil_zone": 0.0004,
+   "art": "flaeche",
+   "lat": 49.41113,
+   "lon": 8.71853
+  },
+  {
+   "name": "Thingstätte",
+   "osm": [
+    "w24693208"
+   ],
+   "flaeche_ha": 0.82,
+   "bbox": [
+    8.70579,
+    49.42319,
+    8.70698,
+    49.42456
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.42386,
+   "lon": 8.70639
+  },
+  {
+   "name": "Philosophenweg",
+   "osm": [
+    "w11942887",
+    "w1525587464",
+    "w159981539",
+    "w205616653",
+    "w24270763",
+    "w24340268",
+    "w258562280",
+    "w258562282",
+    "w28890081",
+    "w32148375",
+    "w37565649",
+    "w37565650",
+    "w44829870",
+    "w524044727",
+    "w60711320"
+   ],
+   "flaeche_ha": 5.69,
+   "bbox": [
+    8.69325,
+    49.41463,
+    8.73,
+    49.42445
+   ],
+   "anteil_zone": 0.0685,
+   "art": "linie",
+   "lat": 49.41956,
+   "lon": 8.71794
+  },
+  {
+   "name": "Bahnstadt Promenade",
+   "osm": [
+    "w484616560"
+   ],
+   "flaeche_ha": 1.1,
+   "bbox": [
+    8.66515,
+    49.3984,
+    8.67061,
+    49.40121
+   ],
+   "anteil_zone": 0.9963,
+   "art": "flaeche",
+   "lat": 49.39926,
+   "lon": 8.66902
+  },
+  {
+   "name": "Der Andere Park",
+   "osm": [
+    "r16193322"
+   ],
+   "flaeche_ha": 3.37,
+   "bbox": [
+    8.68339,
+    49.38786,
+    8.68711,
+    49.38959
+   ],
+   "anteil_zone": 0.8638,
+   "art": "flaeche",
+   "lat": 49.389,
+   "lon": 8.68471
+  },
+  {
+   "name": "Untere Straße",
+   "osm": [
+    "w29461725",
+    "w87355822"
+   ],
+   "flaeche_ha": 0.33,
+   "bbox": [
+    8.7061,
+    49.412,
+    8.70915,
+    49.41238
+   ],
+   "anteil_zone": 0.0374,
+   "art": "linie",
+   "lat": 49.41219,
+   "lon": 8.70752
+  }
+ ]
+}

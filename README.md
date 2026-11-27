@@ -111,6 +111,7 @@ make test
 make audit                # cargo deny + pip-audit, beide gegen die Lockfiles
 make check-publishable    # keine Entwicklungsspuren im Baum
 make about                # viewer/about.html aus about.md erzeugen
+make staedte              # viewer/stadt/ (Städteseiten, Übersicht) aus staedte/ erzeugen
 ```
 
 CI (`.github/workflows/tests.yml`) prüft denselben Satz über den ganzen

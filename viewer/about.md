@@ -231,6 +231,9 @@ Lauf vom 24. November 2026.
 | Mecklenburg-Vorpommern | 285 km² | 1,2 % |
 | **Deutschland** | **11 425 km²** | **3,2 %** |
 
+Für einzelne Städte gibt es eigene Seiten mit Karte, Parks, Plätzen und den Regeln vor Ort:
+[Kiffen in deutschen Städten](stadt/).
+
 ## Unterschied zur Bubatzkarte (2023)
 
 Die [Bubatzkarte](https://bubatzkarte.de) (seit Juni 2023) war die
@@ -301,10 +304,13 @@ Einmal am Tag wird dieses Protokoll zu Tageszahlen verdichtet und dabei
 geleert — eine Protokollzeile liegt damit höchstens bis zum nächsten Lauf auf
 dem Server, in der Regel weniger als 48 Stunden.
 
-Die Tageszahlen enthalten **keine** Adressen, keine einzelnen Seitenpfade und
-keine Browserkennungen. Je Tag bleibt stehen: Zahl der Anfragen, Aufrufe der
-Karte und der Über-Seite, Zahl der unterschiedlichen gekürzten Adressen als
-Näherung für „Besucher", Zahl der erkannten Bots, übertragene Bytes, die
+Die Tageszahlen enthalten **keine** Adressen und keine Browserkennungen, und
+von den Seitenpfaden nur die der Städteseiten. Je Tag bleibt stehen: Zahl der
+Anfragen, Aufrufe der Karte, der Über-Seite und je Stadt der Städteseiten, für
+die Städte ohne eigene Seite die Zahl der Stimmen (je Stadt die
+unterschiedlichen gekürzten Adressen, die über „Welche Stadt sollen wir noch
+ausführlicher beschreiben?“ kamen), Zahl der unterschiedlichen gekürzten
+Adressen als Näherung für „Besucher", Zahl der erkannten Bots, übertragene Bytes, die
 Anzahl der Antworten je Statusklasse und die zehn häufigsten fremden Websites,
 von denen Besucher kamen. Diese Tageszahlen werden nach **400 Tagen** gelöscht,
 damit ein Jahresvergleich möglich bleibt und nicht mehr.

@@ -1,0 +1,300 @@
+<!doctype html>
+<!-- Erzeugt aus staedte/berlin.md und staedte/berlin.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Kiffen in Berlin: wo es verboten ist | BubatzBlick</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Berlin liegen 205 km², 23,0 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<link rel="canonical" href="__SITE_URL__/stadt/berlin">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/berlin">
+<meta property="og:title" content="Kiffen in Berlin: wo es verboten ist">
+<meta property="og:description" content="In Berlin liegen 205 km², 23,0 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/berlin.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Berlin mit den roten Verbotszonen, daneben: Kiffen in Berlin, 23,0 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/berlin",
+   "url": "__SITE_URL__/stadt/berlin",
+   "name": "Kiffen in Berlin: wo es verboten ist",
+   "description": "In Berlin liegen 205 km², 23,0 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-26",
+   "about": {
+    "@type": "City",
+    "name": "Berlin",
+    "sameAs": "https://www.wikidata.org/wiki/Q64",
+    "containedInPlace": {
+     "@type": "Country",
+     "name": "Deutschland"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/berlin.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Berlin",
+     "item": "__SITE_URL__/stadt/berlin"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { fill: #c0392b; stroke: #fff; stroke-width: 2; }
+  svg.deutschland text { font-size: 19px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 9; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  @media (max-width: 480px) { svg.deutschland text { font-size: 28px; }
+                              svg.deutschland circle { r: 10; } }
+</style>
+</head>
+<body>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Berlin</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <nav><a href="../#12/52.51431/13.3736" class="knopf">Berlin auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Berlin ist öffentliches Kiffen auf 205 km² verboten, das sind
+<strong>23,0 % der Stadtfläche</strong> von 892 km². Grund sind 15 571
+Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
+Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
+nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
+7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
+Jugendlichen.</p>
+
+<p>Innerhalb des S-Bahn-Rings, gemessen an der Umweltzone, liegen 42 % der Fläche in einer
+Zone. Am Stadtrand sind es weniger: 21 % Berlins sind Wald, vom Grunewald bis zu den
+Müggelbergen, und dort liegen nur 7,8 % in einer Zone. Ohne den Wald gerechnet sind es
+27,0 % der Stadtfläche.</p>
+<figure class="karte"><img src="../img/stadt/berlin-stadt.webp" width="960" height="600" alt="Karte von Berlin mit Stadtgrenze und den roten Verbotszonen"><figcaption>Berlin: 205 km² Verbotszone auf 892 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">1 080</td><td class="zahl">54,9 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">2 370</td><td class="zahl">52,9 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">135</td><td class="zahl">2,4 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">5 572</td><td class="zahl">83,4 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">505</td><td class="zahl">11,1 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">5 908</td><td class="zahl">93,9 km²</td></tr><tr><td>Anbauvereinigungen</td><td class="zahl">1</td><td class="zahl">unter 0,1 km²</td></tr></tbody></table>
+
+<p>Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
+überlappen, ist ihre Summe größer als die 205 km² oben. Den größten Teil machen die
+5 908 Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
+gefolgt von 5 572 Spielplätzen und 2 370 Kitas.</p>
+<p>Von den Anbauvereinigungen ist in OpenStreetMap nur eine Abgabestelle eingetragen, an der
+Goerzallee in Steglitz-Zehlendorf. Das Landesamt für Gesundheit und Soziales hatte bis Mai 2026
+14 Anbauvereinigungen erlaubt, 13 davon waren gültig; wo sie anbauen und abgeben, ist nicht
+veröffentlicht
+(<a href="https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-26126.pdf">Antwort des Senats, Drucksache 19/26126</a>).
+Ihre Zonen kann die Karte deshalb nur zum kleinsten Teil zeigen.</p>
+<h2 id="gorli-mauerpark-und-die-parks-der-innenstadt">Görli, Mauerpark und die Parks der Innenstadt</h2>
+<p>Im <strong>Görlitzer Park</strong> liegen 99 % der Fläche in einer Zone, im <strong>Mauerpark</strong>
+98 %. Der Grund liegt in den Parks selbst: Im Görli gibt es vier Spielplätze und
+15 Sportanlagen, von Fußballplätzen über Basketballfelder bis zur Skateanlage, im Mauerpark elf
+Spielplätze. Frei bleiben nur einzelne Ecken.</p>
+<figure class="karte"><img src="../img/stadt/berlin-goerli.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Görlitzer Park (grün umrandet) mit den roten Verbotszonen; etwa 99 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Görlitzer Park: 14 ha, davon 99 % Verbotszone. <a href="../#16/52.4966/13.43756">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/berlin-mauerpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Mauerpark (grün umrandet) mit den roten Verbotszonen; etwa 98 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Mauerpark: 14 ha, davon 98 % Verbotszone. <a href="../#16/52.54378/13.40192">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Um den Görlitzer Park hat der Senat einen Zaun gebaut. Nachts geschlossen war der Park aber nur vom
+1. März bis zum 1. Juni 2026: Das Verwaltungsgericht hat die Schließung im Eilverfahren gestoppt,
+das Oberverwaltungsgericht hat das im Oktober unanfechtbar bestätigt; der Park ist rund um die Uhr
+offen (<a href="https://berlin.de/-ii1720565">OVG Berlin-Brandenburg</a>). Der Park und der Wrangelkiez sind
+einer von sieben kriminalitätsbelasteten Orten, an denen die Polizei ohne Anlass kontrollieren
+darf, ebenso Alexanderplatz, Hermannplatz, Hermannstraße, Kottbusser Tor, Rigaer Straße und
+Warschauer Brücke
+(<a href="https://www.berlin.de/sen/justiz/service/gesetze-und-verordnungen/2026/ausgabe-nr-21-vom-3062026-s-465-484.pdf">Verordnung vom Juni 2026</a>).
+Ein Konsumverbot ist das nicht.</p>
+<p>So sieht es in fast allen Parks innerhalb des Rings aus: Der Monbijoupark liegt zu
+97 % in einer Zone, der Volkspark am Weinberg zu 99 %,
+der Park am Gleisdreieck zu 85 % und der Viktoriapark zu
+76 %. In der <strong>Hasenheide</strong> sind es 63 %, im
+<strong>Volkspark Friedrichshain</strong> 61 %. Der <strong>Treptower Park</strong> an der Spree
+kommt nur auf 24 %.</p>
+<figure class="karte"><img src="../img/stadt/berlin-hasenheide.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Volkspark Hasenheide (grün umrandet) mit den roten Verbotszonen; etwa 63 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Volkspark Hasenheide: 50 ha, davon 63 % Verbotszone. <a href="../#16/52.48423/13.41619">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Das Grünanlagengesetz verbietet in Parks weder Rauchen noch Alkohol; es regelt Nachtruhe, Hunde und
+Grillen
+(<a href="https://www.berlin.de/sen/uvk/natur-und-gruen/stadtgruen/oeffentliche-gruen-und-erholungsanlagen/gruenanlagengesetz/parkregeln/">Parkregeln des Senats</a>).
+Auch die Parkordnung des Mauerparks regelt nur Musik und Grillen.</p>
+<h2 id="tempelhofer-feld-und-tiergarten">Tempelhofer Feld und Tiergarten</h2>
+<p>Die großen Ausnahmen sind das <strong>Tempelhofer Feld</strong> (298 ha), das zu
+23 % in einer Zone liegt, und der <strong>Große Tiergarten</strong>
+(180 ha) mit 12 %. Auf dem Feld liegen 21
+Sportanlagen und drei Spielplätze, im Tiergarten sechs Spielplätze und keine Sportanlage; auf
+so großen Flächen erfassen die 100-Meter-Zonen vor allem die Ränder und einzelne Inseln.</p>
+<figure class="karte"><img src="../img/stadt/berlin-tempelhofer-feld.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Tempelhofer Feld (grün umrandet) mit den roten Verbotszonen; etwa 23 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Tempelhofer Feld: 298 ha, davon 23 % Verbotszone. <a href="../#16/52.47436/13.4027">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/berlin-tiergarten.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Großer Tiergarten (grün umrandet) mit den roten Verbotszonen; etwa 12 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Großer Tiergarten: 180 ha, davon 12 % Verbotszone. <a href="../#16/52.51621/13.36181">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Das Tempelhofer Feld ist nachts geschlossen; die Benutzungsordnung regelt Grillen und Hunde, zum
+Rauchen sagt sie nichts
+(<a href="https://tempelhofer-feld.berlin.de/documents/423/Anlage_5_Benutzungsordnung_ThF.pdf">Benutzungsordnung</a>).</p>
+<h2 id="platze-und-fugangerzonen">Plätze und Fußgängerzonen</h2>
+<p>Eine Fußgängerzone ist in Berlin ein Rechtsakt: Die Straße muss für Fahrzeuge teilweise
+eingezogen sein, und das Schild muss stehen. Eine amtliche Liste dieser Fußgängerzonen haben wir
+nicht gefunden. Belegt sind zum Beispiel die <strong>Wilmersdorfer Straße</strong> in Charlottenburg, <strong>Alt-Tegel</strong> und die
+Gorkistraße in Reinickendorf, die <strong>Altstadt Spandau</strong> und der Lausitzer Platz in Kreuzberg; die
+Friedrichstraße ist seit Juli 2023 keine Fußgängerzone mehr. Die Karte zeigt blau, was in
+OpenStreetMap als Fußgängerbereich eingetragen ist, und das ist mehr als die Fußgängerzonen im
+Rechtssinn.</p>
+<p>In der Fußgängerzone der Wilmersdorfer Straße liegen außerdem 93 %
+in einer Sichtweiten-Zone. Der <strong>Alexanderplatz</strong> dagegen liegt nur zu 3 % in
+einer Zone, der Gendarmenmarkt zu 2 %, der Breitscheidplatz zu
+3 %, der Hermannplatz zu 4 %. Ganz anders der
+<strong>Boxhagener Platz</strong> in Friedrichshain mit 99 % und das <strong>RAW-Gelände</strong> an der
+Revaler Straße mit 68 %.</p>
+<figure class="karte"><img src="../img/stadt/berlin-alexanderplatz.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Alexanderplatz (grün umrandet) mit den roten Verbotszonen; etwa 3 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Alexanderplatz: 8 ha, davon 3 % Verbotszone. <a href="../#16/52.52161/13.41362">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="wald-und-seen">Wald und Seen</h2>
+<p>Im <strong>Grunewald</strong> liegen 5 % in einer Zone, im Spandauer Forst 0 %,
+in den Müggelbergen 3 %. Das Strandbad Wannsee liegt dagegen ganz in einer Zone.</p>
+<h2 id="hochschulen">Hochschulen</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte. Auf dem Hauptcampus der <strong>Technischen
+Universität</strong> in Charlottenburg liegen trotzdem 29 % in einer
+Zone, auf dem Campus der <strong>Freien Universität</strong> in Dahlem 12 %,
+auf dem Campus Nord der <strong>Humboldt-Universität</strong> 18 %; der
+Campus Mitte der Humboldt-Universität liegt außerhalb jeder Zone. Eine Hausordnung mit einer Regel
+zu Cannabis haben wir bei keiner Berliner Hochschule gefunden; die Hausordnung der HTW etwa verbietet
+das Rauchen in Gebäuden
+(<a href="https://infopunkt.htw-berlin.de/fileadmin/HTW/Zentral/Rechtsstelle/Amtliche_Mitteilungsblaetter/2021/17_21.pdf">HTW Berlin</a>).</p>
+<h2 id="feste-und-veranstaltungen">Feste und Veranstaltungen</h2>
+<p>Eine Allgemeinverfügung zu Cannabis für Feste, Parks oder Plätze haben wir in Berlin nicht gefunden.
+Wo viele Kinder und Jugendliche sind, auf Weihnachtsmärkten, beim Karneval der Kulturen oder an
+Silvester, greift das Verbot in ihrer Gegenwart (§ 5 Abs. 1 KCanG); Märkte in einer Fußgängerzone
+fallen tagsüber zusätzlich unter deren Verbot. Im Olympiastadion verbietet die Hausordnung den
+Konsum von Cannabis ausdrücklich
+(<a href="https://olympiastadion.berlin/wp-content/uploads/2025/09/250516-din-a4-hausordnung-de.pdf">Hausordnung Olympiastadion</a>).</p>
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>Berlin hat einen eigenen Bußgeldkatalog: Konsum in einer Verbotszone, auch in der Fußgängerzone,
+kostet 250 bis 500 Euro, Konsum in Gegenwart von Kindern und Jugendlichen 300 bis 1.000 Euro
+(<a href="https://www.berlin.de/lb/drogen-sucht/gesetze/konsumcannabis-gesetz/abl_2024_49_3535_3590_online.pdf">Amtsblatt für Berlin, November 2024</a>).
+Zuständig sind die Bezirksämter. Die Polizei hat vom April 2025 bis Februar 2026 berlinweit 76
+solcher Ordnungswidrigkeiten erfasst, davon 17 an Spielplätzen und eine in einer Fußgängerzone;
+Zahlen der Ordnungsämter gibt es nicht
+(<a href="https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-25438.pdf">Antwort des Senats, Drucksache 19/25438</a>).</p>
+<p>Ein Rauchverbot im Freien wie in Baden-Württemberg gibt es in Berlin nicht: Das
+Nichtraucherschutzgesetz gilt nur in Gebäuden. Auf dem Schulgelände ist Rauchen nach dem
+Schulgesetz verboten, auf Spielplätzen in den meisten Bezirken nach deren Spielplatzregeln (Stand
+2018); der Senat hält Rauchen und Alkohol auf Spielplätzen auch ohne eigene Regel für unzulässig
+(<a href="https://pardok.parlament-berlin.de/starweb/adis/citat/VT/18/SchrAnfr/s18-16359.pdf">Antwort des Senats, 2018</a>).
+Eigene Verbotszonen für Cannabis haben Senat und Bezirke nicht festgelegt (Stand 26. November 2026).</p>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-berlin-kiffen">Wo darf man in Berlin kiffen?</h3>
+<p>Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
+Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet. Eine weiße
+Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte kennt weder Hecken
+noch Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap fehlen.</p>
+<h3 id="darf-man-im-gorlitzer-park-kiffen">Darf man im Görlitzer Park kiffen?</h3>
+<p>Fast nirgends: 99 % des Parks liegen in Sichtweite eines Spielplatzes oder einer
+Sportanlage. Auf den wenigen freien Ecken verbietet § 5 KCanG den Konsum in unmittelbarer
+Gegenwart von Kindern und Jugendlichen.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
+neu gerechnet; die Zahlen auf dieser Seite sind vom 26. November 2026. Die Karte ist eine
+Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
+auf der <a href="../about.html">Über-Seite</a>.</p>
+<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
+OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 26. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
+</body>
+</html>

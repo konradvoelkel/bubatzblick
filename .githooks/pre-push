@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 # Vor jedem Push dasselbe wie der Job tests in .github/workflows/tests.yml (Rust
-# fmt/clippy/Tests, Python-Lint/Tests, check-publishable, about.html), dazu cargo
+# fmt/clippy/Tests, Python-Lint/Tests, check-publishable, about.html, Staedteseiten), dazu cargo
 # audit und deny, ~1-2 min. tests/test_hook.py haelt beide Listen gleich.
 # Installiert durch `make dev` (git config core.hooksPath .githooks).
 # Ueberspringen: git push --no-verify.
@@ -33,3 +33,6 @@ uv run pytest -n auto -q
 make -s check-publishable
 make -s about >/dev/null
 git diff --exit-code -- viewer/about.html
+make -s staedte >/dev/null
+git diff --exit-code -- viewer/stadt viewer/sitemap.xml
+test -z "$(git status --porcelain -- viewer/stadt)"
