@@ -24,6 +24,7 @@ import json
 import os
 import re
 import sys
+import tomllib
 from collections import Counter
 from pathlib import Path
 
@@ -334,6 +335,18 @@ def staedte_summen(d: Path) -> dict:
     }
 
 
+def staedteliste(repo: Path | None = None) -> tuple[set[str], set[str]] | None:
+    """(alle Staedte, Staedte mit eigener Seite) aus staedte/ im Checkout, sonst None."""
+    repo = repo or Path(__file__).resolve().parents[2]
+    try:
+        gross = json.loads((repo / "staedte" / "grossstaedte.json").read_text())["staedte"]
+        liste = tomllib.loads((repo / "staedte" / "staedte.toml").read_text())["stadt"]
+    except (OSError, ValueError, KeyError):
+        return None
+    mit_seite = {s["slug"] for s in liste if s.get("fertig")}
+    return {s["slug"] for s in gross} | {s["slug"] for s in liste}, mit_seite
+
+
 def balken(werte: list[tuple[str, int, str]], einheit: str, max_zeilen: int = 40) -> str:
     """Waagrechtes Balkendiagramm in reinem HTML: (Name, Wert, CSS-Klasse)."""
     werte = [w for w in werte if w[1] > 0][:max_zeilen]
@@ -351,19 +364,27 @@ def balken(werte: list[tuple[str, int, str]], einheit: str, max_zeilen: int = 40
 
 def staedte_html(s: dict) -> str:
     """Drei Diagramme: alle /stadt/<name> (mit Platzhaltern), Stimmen fuer Staedte ohne Seite,
-    Aufrufe der Staedte mit Seite. Ob eine Stadt eine Seite hat, sieht diese Seite nicht (sie kennt
-    das Web-Verzeichnis nicht); geschaetzt in staedte_summen."""
+    Aufrufe der Staedte mit Seite. Welche Stadt eine Seite hat, steht in staedte/ im Checkout
+    (staedteliste); fehlt er, schaetzt es staedte_summen."""
     if not s["tage"]:
         return '<p class="small">Noch keine Tageszahlen mit Städteseiten.</p>'
+    views: Counter[str] = s["views"]
+    votes: Counter[str] = s["votes"]
     platzhalter = set(s["platzhalter"])
-    alle = sorted(s["views"].items(), key=lambda kv: (-kv[1], kv[0]))
+    if liste := staedteliste():
+        # Liegt der Checkout daneben, ist die Einteilung genau, und fremde Namen fallen weg.
+        bekannt, mit_seite = liste
+        views = Counter({k: v for k, v in views.items() if k in bekannt})
+        votes = Counter({k: v for k, v in votes.items() if k in bekannt})
+        platzhalter = bekannt - mit_seite
+    alle = sorted(views.items(), key=lambda kv: (-kv[1], kv[0]))
     stimmen = sorted(
-        ((k, v) for k, v in s["votes"].items() if k in platzhalter), key=lambda kv: (-kv[1], kv[0])
+        ((k, v) for k, v in votes.items() if k in platzhalter), key=lambda kv: (-kv[1], kv[0])
     )
     seiten = [(k, v) for k, v in alle if k not in platzhalter]
     return f"""<p class="small">Summe über {n(s["tage"])} Tage seit {h(s["seit"])}, ohne Bots. Übersicht /stadt/: {n(s["index"])} Aufrufe.
 Stimme = verschiedene gekürzte Adressen je Tag, die vom Platzhalter einer Stadt ohne eigene Seite auf die Karte kamen
-(Tage summiert). Ob eine Stadt eine Seite hat, ist geschätzt: am jüngsten Tag mit Aufruf hatte ein Platzhalter auch Stimmen.</p>
+(Tage summiert). Welche Stadt eine Seite hat, steht in staedte/staedte.toml; fehlt die Datei, ist es geschätzt.</p>
 <h3>Alle Adressen /stadt/&lt;name&gt; (Aufrufe; grau: ohne eigene Seite)</h3>
 {balken([(k, v, "grau" if k in platzhalter else "gruen") for k, v in alle], "Aufrufe je Stadt")}
 <h3>Ohne eigene Seite: Stimmen</h3>

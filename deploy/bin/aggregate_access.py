@@ -11,7 +11,8 @@ Agent nennt sich bot/crawler/spider o. ae.; page_views/visitors ohne Bots), byte
 status_2xx..5xx, referer_hosts (Top 10 fremde Hosts), dazu fuer die Staedteseiten
 city_index_views (/stadt/), city_views (Aufrufe je /stadt/<name>, auch der Platzhalter
 fuer Staedte ohne eigene Seite) und city_votes (je Stadt die verschiedenen gekuerzten
-Adressen, die vom Platzhalter mit ?interesse=<name> auf die Karte kamen: die "Stimmen").
+Adressen, die vom Platzhalter mit ?interesse=<name> auf die Karte kamen: die "Stimmen"; nur
+Namen, deren /stadt/<name> dieselbe Adresse am selben Tag erfolgreich abgerufen hat).
 Nichts Personenbezogenes: keine Adressen, keine Pfade je Anfrage, keine User-Agents.
 Tagesdateien aelter als KEEP_DAYS werden geloescht.
 """
@@ -90,6 +91,7 @@ def main() -> None:
             "city_index_views": 0,
             "city_views": Counter(),
             "city_votes": defaultdict(set),
+            "city_seen": defaultdict(set),
         }
     )
     keep: list[str] = []
@@ -128,6 +130,7 @@ def main() -> None:
                 d["city_index_views"] += ok
             elif ok and (m := STADT.match(uri)) and m.group(1) != "index":
                 d["city_views"][m.group(1)] += 1
+                d["city_seen"][m.group(1)].add(ip)
             if ip:
                 d["ips"].add(ip)
             ref = header(req, "Referer")
@@ -151,7 +154,14 @@ def main() -> None:
             "referer_hosts": d["referers"].most_common(10),
             "city_index_views": d["city_index_views"],
             "city_views": dict(sorted(d["city_views"].items())),
-            "city_votes": {k: len(v) for k, v in sorted(d["city_votes"].items())},
+            # Eine Stimme zaehlt nur, wenn dieselbe Adresse am selben Tag den Platzhalter
+            # /stadt/<name> erfolgreich abgerufen hat: Ein erfundener Name bekommt dort 404 und
+            # landet so nicht in den Tageszahlen (/ antwortet auf jede Query mit 200).
+            "city_votes": {
+                k: n
+                for k, v in sorted(d["city_votes"].items())
+                if (n := len(v & d["city_seen"][k]))
+            },
         }
         p = out / f"{day.isoformat()}.json"
         tmp = p.with_suffix(f".json.tmp{os.getpid()}")

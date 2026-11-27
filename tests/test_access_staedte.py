@@ -3,8 +3,9 @@ eigene Seite (deploy/bin/aggregate_access.py), dazu die Diagramme der Statistiks
 (deploy/bin/build_stats.py).
 
 Eine Stimme ist der Abruf der Karte mit ?interesse=<name>, auf den der Platzhalter einer Stadt
-ohne eigene Seite weiterleitet; gezaehlt wird je Tag jede gekuerzte Adresse einmal. Bots,
-Fehlerantworten und unsaubere Namen zaehlen nicht.
+ohne eigene Seite weiterleitet; gezaehlt wird je Tag jede gekuerzte Adresse einmal, und nur, wenn
+dieselbe Adresse am selben Tag /stadt/<name> erfolgreich abgerufen hat (sonst koennte jeder die
+Zahlen mit erfundenen Namen fuellen). Bots, Fehlerantworten und unsaubere Namen zaehlen nicht.
 """
 
 from __future__ import annotations
@@ -51,6 +52,10 @@ def _tageszahlen(tmp_path: pathlib.Path) -> tuple[dict, pathlib.Path]:
         _zeile("/stadt/gibtsnicht", "1.2.3.0", status=404),
         _zeile("/stadt/bochum", "8.8.8.0", ua="Googlebot/2.1"),
         _zeile("/?interesse=Bochum%3Cx%3E", "1.2.3.0"),
+        _zeile("/?interesse=erfundener-name", "3.3.3.0"),  # kein Platzhalter abgerufen
+        _zeile("/?interesse=bochum", "4.4.4.0"),  # Stimme ohne Abruf von /stadt/bochum
+        _zeile("/stadt/erfunden", "3.3.3.0", status=404),
+        _zeile("/?interesse=erfunden", "3.3.3.0"),  # Platzhalter gibt es nicht (404)
     ]
     log = tmp_path / "access.log"
     log.write_text("\n".join(zeilen) + "\n")
@@ -81,3 +86,19 @@ def test_statistikseite_trennt_platzhalter_von_seiten(tmp_path: pathlib.Path) ->
     ohne, mit = html.split("<h3>Ohne eigene Seite")[1].split("<h3>Mit eigener Seite")
     assert "bochum" in ohne and "berlin" not in ohne
     assert "berlin" in mit and "bochum" not in mit
+
+
+def test_statistikseite_kennt_nur_staedte_aus_der_liste(tmp_path: pathlib.Path) -> None:
+    tag = {
+        "date": "2026-01-02",
+        "city_views": {"erfunden": 9, "bochum": 1},
+        "city_votes": {"erfunden": 9},
+    }
+    (tmp_path / "2026-01-02.json").write_text(json.dumps(tag))
+    spec = importlib.util.spec_from_file_location("build_stats", BIN / "build_stats.py")
+    assert spec and spec.loader
+    bs = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bs)
+    html = bs.staedte_html(bs.staedte_summen(tmp_path))
+    assert "erfunden" not in html
+    assert "bochum" in html
