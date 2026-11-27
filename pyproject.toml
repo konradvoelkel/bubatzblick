@@ -63,6 +63,7 @@ module = [
     "pyarrow.*",
     "bubatzcore",
     "markdown",
+    "markdown.*",
 ]
 ignore_missing_imports = true
 

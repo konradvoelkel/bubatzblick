@@ -1,0 +1,1209 @@
+{
+ "stadtflaeche_osm_km2": 118.56,
+ "wald": {
+  "flaeche_km2": 12.2,
+  "anteil_stadt": 0.1031,
+  "anteil_zone": 0.1352,
+  "anteil_zone_ohne_wald": 0.1699
+ },
+ "zonen_km2": 19.72,
+ "anteil": 0.16634,
+ "kategorien": {
+  "sports": {
+   "objekte": 535,
+   "zonen_km2": 10.61
+  },
+  "playground": {
+   "objekte": 341,
+   "zonen_km2": 6.51
+  },
+  "school": {
+   "objekte": 77,
+   "zonen_km2": 5.03
+  },
+  "kindergarten": {
+   "objekte": 99,
+   "zonen_km2": 2.48
+  },
+  "youth": {
+   "objekte": 29,
+   "zonen_km2": 0.55
+  },
+  "childcare": {
+   "objekte": 9,
+   "zonen_km2": 0.22
+  }
+ },
+ "objekte_gesamt": 1090,
+ "merkmale": {
+  "see": [
+   {
+    "name": "Wellsee",
+    "osm": [
+     "r1071134",
+     "w5110617"
+    ],
+    "flaeche_ha": 25.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 54.2802,
+    "lon": 10.18386,
+    "bbox": [
+     10.17485,
+     54.27493,
+     10.18748,
+     54.28551
+    ]
+   },
+   {
+    "name": "Vorderer Russee",
+    "osm": [
+     "w250629002"
+    ],
+    "flaeche_ha": 20.3,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.0796,
+    "lat": 54.29743,
+    "lon": 10.07925,
+    "bbox": [
+     10.07369,
+     54.29526,
+     10.08404,
+     54.29961
+    ]
+   },
+   {
+    "name": "Schulensee",
+    "osm": [
+     "w26807699",
+     "w9403543"
+    ],
+    "flaeche_ha": 13.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 54.28866,
+    "lon": 10.09378,
+    "bbox": [
+     10.09077,
+     54.28348,
+     10.09991,
+     54.29086
+    ]
+   },
+   {
+    "name": "Seekamper Seewiesen",
+    "osm": [
+     "w342694269"
+    ],
+    "flaeche_ha": 8.5,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.2586,
+    "lat": 54.41421,
+    "lon": 10.16486,
+    "bbox": [
+     10.16281,
+     54.41119,
+     10.16673,
+     54.41716
+    ]
+   },
+   {
+    "name": "Drachensee",
+    "osm": [
+     "w93401578"
+    ],
+    "flaeche_ha": 7.2,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.0531,
+    "lat": 54.29662,
+    "lon": 10.10141,
+    "bbox": [
+     10.09915,
+     54.29476,
+     10.10387,
+     54.2985
+    ]
+   },
+   {
+    "name": "Kleiner Kiel",
+    "osm": [
+     "w172090930"
+    ],
+    "flaeche_ha": 6.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0003,
+    "lat": 54.32472,
+    "lon": 10.13427,
+    "bbox": [
+     10.13301,
+     54.3229,
+     10.14026,
+     54.32655
+    ]
+   },
+   {
+    "name": "Langsee",
+    "osm": [
+     "w5887894"
+    ],
+    "flaeche_ha": 5.8,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.0595,
+    "lat": 54.30259,
+    "lon": 10.15986,
+    "bbox": [
+     10.1581,
+     54.29962,
+     10.16247,
+     54.3055
+    ]
+   },
+   {
+    "name": "Tröndelsee",
+    "osm": [
+     "w5887891"
+    ],
+    "flaeche_ha": 4.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 54.30473,
+    "lon": 10.17226,
+    "bbox": [
+     10.17034,
+     54.30332,
+     10.17404,
+     54.3062
+    ]
+   },
+   {
+    "name": "Schreventeich",
+    "osm": [
+     "r230102"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 1.0,
+    "anteil_zone": 0.27,
+    "lat": 54.32719,
+    "lon": 10.12301,
+    "bbox": [
+     10.12148,
+     54.32578,
+     10.12494,
+     54.3286
+    ]
+   },
+   {
+    "name": "Heidenberger Teich",
+    "osm": [
+     "w23072065"
+    ],
+    "flaeche_ha": 3.2,
+    "zone_ha": 3.2,
+    "anteil_zone": 1.0,
+    "lat": 54.32239,
+    "lon": 10.04542,
+    "bbox": [
+     10.04403,
+     54.32172,
+     10.05001,
+     54.32302
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Exerzierplatz",
+    "osm": [
+     "w717903105"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.7614,
+    "lat": 54.32136,
+    "lon": 10.12782,
+    "bbox": [
+     10.12645,
+     54.32071,
+     10.12918,
+     54.32199
+    ]
+   },
+   {
+    "name": "Blücherplatz",
+    "osm": [
+     "w8066387"
+    ],
+    "flaeche_ha": 0.8,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.966,
+    "lat": 54.3421,
+    "lon": 10.13753,
+    "bbox": [
+     10.13686,
+     54.34156,
+     10.13819,
+     54.34248
+    ]
+   },
+   {
+    "name": "Rathausplatz",
+    "osm": [
+     "w28061100"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0031,
+    "lat": 54.32272,
+    "lon": 10.13345,
+    "bbox": [
+     10.13256,
+     54.32219,
+     10.13453,
+     54.32323
+    ]
+   },
+   {
+    "name": "Alter Markt",
+    "osm": [
+     "w9354155"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 54.32325,
+    "lon": 10.13941,
+    "bbox": [
+     10.13849,
+     54.32285,
+     10.14034,
+     54.32358
+    ]
+   },
+   {
+    "name": "Vinetaplatz",
+    "osm": [
+     "r14727649",
+     "w25928530"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.9609,
+    "lat": 54.31154,
+    "lon": 10.14658,
+    "bbox": [
+     10.14598,
+     54.31108,
+     10.14712,
+     54.31188
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Tiergehege Hasseldieksdamm",
+    "osm": [
+     "w26717968"
+    ],
+    "flaeche_ha": 22.5,
+    "zone_ha": 5.2,
+    "anteil_zone": 0.2336,
+    "lat": 54.322,
+    "lon": 10.08049,
+    "bbox": [
+     10.07464,
+     54.31941,
+     10.08656,
+     54.32457
+    ]
+   },
+   {
+    "name": "Moorteichwiese",
+    "osm": [
+     "w28739316"
+    ],
+    "flaeche_ha": 20.9,
+    "zone_ha": 20.0,
+    "anteil_zone": 0.9554,
+    "lat": 54.30968,
+    "lon": 10.12059,
+    "bbox": [
+     10.11387,
+     54.30689,
+     10.12527,
+     54.31246
+    ]
+   },
+   {
+    "name": "Forstbaumschule",
+    "osm": [
+     "w12140838"
+    ],
+    "flaeche_ha": 16.4,
+    "zone_ha": 8.1,
+    "anteil_zone": 0.4967,
+    "lat": 54.34736,
+    "lon": 10.14262,
+    "bbox": [
+     10.13933,
+     54.34453,
+     10.14696,
+     54.35025
+    ]
+   },
+   {
+    "name": "Werftpark",
+    "osm": [
+     "w24300751"
+    ],
+    "flaeche_ha": 13.2,
+    "zone_ha": 4.6,
+    "anteil_zone": 0.3508,
+    "lat": 54.31499,
+    "lon": 10.15704,
+    "bbox": [
+     10.15278,
+     54.31298,
+     10.16146,
+     54.31665
+    ]
+   },
+   {
+    "name": "Schrevenpark",
+    "osm": [
+     "w12310641"
+    ],
+    "flaeche_ha": 11.6,
+    "zone_ha": 5.6,
+    "anteil_zone": 0.4845,
+    "lat": 54.32833,
+    "lon": 10.12392,
+    "bbox": [
+     10.12112,
+     54.32564,
+     10.12645,
+     54.33086
+    ]
+   },
+   {
+    "name": "Pfaffenteich",
+    "osm": [
+     "w24763598"
+    ],
+    "flaeche_ha": 9.9,
+    "zone_ha": 4.5,
+    "anteil_zone": 0.4567,
+    "lat": 54.28991,
+    "lon": 10.19226,
+    "bbox": [
+     10.18671,
+     54.28822,
+     10.19574,
+     54.29151
+    ]
+   },
+   {
+    "name": "Schwanenseepark",
+    "osm": [
+     "w27047654"
+    ],
+    "flaeche_ha": 9.2,
+    "zone_ha": 4.9,
+    "anteil_zone": 0.5301,
+    "lat": 54.31708,
+    "lon": 10.17009,
+    "bbox": [
+     10.166,
+     54.31408,
+     10.17292,
+     54.32031
+    ]
+   },
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w12829697"
+    ],
+    "flaeche_ha": 8.3,
+    "zone_ha": 3.4,
+    "anteil_zone": 0.4091,
+    "lat": 54.34745,
+    "lon": 10.1172,
+    "bbox": [
+     10.11417,
+     54.34489,
+     10.11921,
+     54.35
+    ]
+   },
+   {
+    "name": "Fritz-Lauritzen-Park",
+    "osm": [
+     "w24771769"
+    ],
+    "flaeche_ha": 6.5,
+    "zone_ha": 4.9,
+    "anteil_zone": 0.7575,
+    "lat": 54.29224,
+    "lon": 10.18244,
+    "bbox": [
+     10.17921,
+     54.29002,
+     10.1833,
+     54.29469
+    ]
+   },
+   {
+    "name": "Schützenpark",
+    "osm": [
+     "r1328243"
+    ],
+    "flaeche_ha": 6.3,
+    "zone_ha": 6.0,
+    "anteil_zone": 0.953,
+    "lat": 54.32081,
+    "lon": 10.12381,
+    "bbox": [
+     10.11106,
+     54.31583,
+     10.12532,
+     54.32148
+    ]
+   },
+   {
+    "name": "Krusenkoppel",
+    "osm": [
+     "w27439756"
+    ],
+    "flaeche_ha": 4.4,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.508,
+    "lat": 54.33721,
+    "lon": 10.15169,
+    "bbox": [
+     10.1483,
+     54.33612,
+     10.15456,
+     54.33845
+    ]
+   },
+   {
+    "name": "Sport- und Begegnungspark",
+    "osm": [
+     "w169503055"
+    ],
+    "flaeche_ha": 4.0,
+    "zone_ha": 4.0,
+    "anteil_zone": 0.9959,
+    "lat": 54.30835,
+    "lon": 10.15551,
+    "bbox": [
+     10.15295,
+     54.30717,
+     10.15872,
+     54.30923
+    ]
+   },
+   {
+    "name": "Der Brook",
+    "osm": [
+     "w25449710"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 3.3,
+    "anteil_zone": 0.9423,
+    "lat": 54.30514,
+    "lon": 10.14405,
+    "bbox": [
+     10.14172,
+     54.30407,
+     10.14744,
+     54.30614
+    ]
+   },
+   {
+    "name": "Quartierspark Suchsdorf",
+    "osm": [
+     "w10046642"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.9228,
+    "lat": 54.35484,
+    "lon": 10.06871,
+    "bbox": [
+     10.0665,
+     54.35383,
+     10.07088,
+     54.35595
+    ]
+   },
+   {
+    "name": "Diederichsenpark",
+    "osm": [
+     "w24338248"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.1701,
+    "lat": 54.3474,
+    "lon": 10.1461,
+    "bbox": [
+     10.14454,
+     54.3465,
+     10.14871,
+     54.34896
+    ]
+   },
+   {
+    "name": "Stadtrat-Hahn-Park",
+    "osm": [
+     "w30725981"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.5696,
+    "lat": 54.31268,
+    "lon": 10.17145,
+    "bbox": [
+     10.16968,
+     54.31104,
+     10.17418,
+     54.314
+    ]
+   },
+   {
+    "name": "Orchideenwiese",
+    "osm": [
+     "w94232216"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.1533,
+    "lat": 54.35191,
+    "lon": 10.13972,
+    "bbox": [
+     10.13767,
+     54.35072,
+     10.14176,
+     54.3531
+    ]
+   },
+   {
+    "name": "Schulredder",
+    "osm": [
+     "w24331401"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.7515,
+    "lat": 54.35147,
+    "lon": 10.12951,
+    "bbox": [
+     10.12577,
+     54.3501,
+     10.13161,
+     54.35272
+    ]
+   },
+   {
+    "name": "Schlossgarten",
+    "osm": [
+     "w28081091"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 54.32693,
+    "lon": 10.14465,
+    "bbox": [
+     10.14361,
+     54.32545,
+     10.14624,
+     54.32832
+    ]
+   },
+   {
+    "name": "Skulpturenpark Seekamp",
+    "osm": [
+     "w32004434"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 54.41055,
+    "lon": 10.1621,
+    "bbox": [
+     10.16075,
+     54.40941,
+     10.16334,
+     54.41148
+    ]
+   },
+   {
+    "name": "Alter Botanischer Garten",
+    "osm": [
+     "w25838125"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.1377,
+    "lat": 54.33048,
+    "lon": 10.14691,
+    "bbox": [
+     10.14559,
+     54.32964,
+     10.14832,
+     54.33142
+    ]
+   },
+   {
+    "name": "Ratsdienergarten",
+    "osm": [
+     "w121419562"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.5177,
+    "lat": 54.32587,
+    "lon": 10.14095,
+    "bbox": [
+     10.13928,
+     54.32503,
+     10.14294,
+     54.32671
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Projensdorfer Gehölz",
+    "osm": [
+     "r1351417"
+    ],
+    "flaeche_ha": 169.6,
+    "zone_ha": 14.6,
+    "anteil_zone": 0.0862,
+    "lat": 54.36394,
+    "lon": 10.09199,
+    "bbox": [
+     10.07934,
+     54.35662,
+     10.12218,
+     54.37109
+    ]
+   },
+   {
+    "name": "Vieburger Gehölz",
+    "osm": [
+     "r1996810"
+    ],
+    "flaeche_ha": 65.9,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.029,
+    "lat": 54.29522,
+    "lon": 10.12382,
+    "bbox": [
+     10.10093,
+     54.28871,
+     10.1272,
+     54.30209
+    ]
+   },
+   {
+    "name": "Kuckucksberg",
+    "osm": [
+     "r2326746"
+    ],
+    "flaeche_ha": 33.2,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.0125,
+    "lat": 54.29535,
+    "lon": 10.15839,
+    "bbox": [
+     10.151,
+     54.29199,
+     10.17074,
+     54.2987
+    ]
+   },
+   {
+    "name": "Russeer Gehege",
+    "osm": [
+     "r7861927"
+    ],
+    "flaeche_ha": 29.4,
+    "zone_ha": 3.4,
+    "anteil_zone": 0.114,
+    "lat": 54.31262,
+    "lon": 10.06006,
+    "bbox": [
+     10.05524,
+     54.30943,
+     10.06779,
+     54.31579
+    ]
+   },
+   {
+    "name": "Hofholz",
+    "osm": [
+     "w22689819"
+    ],
+    "flaeche_ha": 27.9,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.1071,
+    "lat": 54.32192,
+    "lon": 10.07152,
+    "bbox": [
+     10.0666,
+     54.31922,
+     10.07998,
+     54.3246
+    ]
+   },
+   {
+    "name": "Düsternbrooker Gehölz",
+    "osm": [
+     "r5604964"
+    ],
+    "flaeche_ha": 22.7,
+    "zone_ha": 4.6,
+    "anteil_zone": 0.202,
+    "lat": 54.34113,
+    "lon": 10.15147,
+    "bbox": [
+     10.14757,
+     54.33724,
+     10.15582,
+     54.34626
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Christian-Albrechts-Universität zu Kiel",
+    "osm": [
+     "r1664397"
+    ],
+    "flaeche_ha": 75.0,
+    "zone_ha": 27.6,
+    "anteil_zone": 0.3684,
+    "lat": 54.34588,
+    "lon": 10.11299,
+    "bbox": [
+     10.10277,
+     54.33558,
+     10.127,
+     54.3501
+    ]
+   },
+   {
+    "name": "HAW Kiel",
+    "osm": [
+     "w25964094"
+    ],
+    "flaeche_ha": 9.7,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.202,
+    "lat": 54.33242,
+    "lon": 10.1798,
+    "bbox": [
+     10.17772,
+     54.32931,
+     10.18273,
+     54.33568
+    ]
+   },
+   {
+    "name": "Lehr- und Versuchsanstalt für Kleintierzucht und Gartenwesen",
+    "osm": [
+     "w129910835"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.3343,
+    "lat": 54.35626,
+    "lon": 10.10217,
+    "bbox": [
+     10.1006,
+     54.35527,
+     10.10389,
+     54.35695
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "Schilkseer Strand",
+    "osm": [
+     "w29398517"
+    ],
+    "flaeche_ha": 3.8,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.1129,
+    "lat": 54.42003,
+    "lon": 10.1785,
+    "bbox": [
+     10.17059,
+     54.41326,
+     10.18707,
+     54.4278
+    ]
+   },
+   {
+    "name": "Hasselfelder Strand",
+    "osm": [
+     "w150283914"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 54.34374,
+    "lon": 10.17537,
+    "bbox": [
+     10.17481,
+     54.34268,
+     10.1759,
+     54.3448
+    ]
+   },
+   {
+    "name": "Hundestrand Falckenstein",
+    "osm": [
+     "w485821674"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 54.41076,
+    "lon": 10.18867,
+    "bbox": [
+     10.18752,
+     54.40938,
+     10.18941,
+     54.41247
+    ]
+   },
+   {
+    "name": "Strander Katamaransegler e.V. Katamaranstrand",
+    "osm": [
+     "w497375279"
+    ],
+    "flaeche_ha": 0.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 54.43289,
+    "lon": 10.16896,
+    "bbox": [
+     10.16794,
+     54.43283,
+     10.16912,
+     54.43294
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "w149976418",
+     "w152758923",
+     "w32963373",
+     "w33004466"
+    ],
+    "flaeche_ha": 8.3,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0249,
+    "lat": 54.323,
+    "lon": 10.20444,
+    "bbox": [
+     10.18632,
+     54.31792,
+     10.21033,
+     54.32807
+    ]
+   },
+   {
+    "name": "Schwentine",
+    "osm": [
+     "w977963310"
+    ],
+    "flaeche_ha": 0.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.6973,
+    "lat": 54.32696,
+    "lon": 10.18666,
+    "bbox": [
+     10.18641,
+     54.32691,
+     10.18691,
+     54.32704
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Amerika",
+    "osm": [
+     "w544958789"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 1.2,
+    "anteil_zone": 0.7513,
+    "lat": 54.34924,
+    "lon": 10.11567,
+    "bbox": [
+     10.11426,
+     54.34852,
+     10.1169,
+     54.35
+    ]
+   },
+   {
+    "name": "Asien",
+    "osm": [
+     "w544958783"
+    ],
+    "flaeche_ha": 1.4,
+    "zone_ha": 0.9,
+    "anteil_zone": 0.6354,
+    "lat": 54.3458,
+    "lon": 10.11834,
+    "bbox": [
+     10.11715,
+     54.34489,
+     10.11912,
+     54.34671
+    ]
+   },
+   {
+    "name": "Europa",
+    "osm": [
+     "w544958786"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.1607,
+    "lat": 54.34822,
+    "lon": 10.11781,
+    "bbox": [
+     10.11647,
+     54.34724,
+     10.11863,
+     54.3492
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 65.5,
+   "zone_ha": 4.1,
+   "anteil_zone": 0.0619
+  },
+  {
+   "name": "Schwentine",
+   "flaeche_ha": 3.9,
+   "zone_ha": 2.3,
+   "anteil_zone": 0.5738
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 8.5,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 54.34219,
+  "lon": 10.14437,
+  "bbox": [
+   10.03048,
+   54.25007,
+   10.22183,
+   54.43456
+  ]
+ },
+ "orte": [
+  {
+   "name": "Holstenstraße und Dänische Straße",
+   "osm": [
+    "w1149086749",
+    "w25619193",
+    "w36548127",
+    "w36548131",
+    "w520405274",
+    "w709551790",
+    "w709551791",
+    "w818438751",
+    "w839838224",
+    "w861113825",
+    "w9400303"
+   ],
+   "flaeche_ha": 1.83,
+   "bbox": [
+    10.13255,
+    54.31848,
+    10.14207,
+    54.32474
+   ],
+   "anteil_zone": 0.393,
+   "art": "flaeche",
+   "lat": 54.32241,
+   "lon": 10.13814
+  },
+  {
+   "name": "Kiellinie",
+   "osm": [
+    "w167972432",
+    "w25861461",
+    "w36041425",
+    "w411060365",
+    "w56257459",
+    "w62688821",
+    "w75659012"
+   ],
+   "flaeche_ha": 2.24,
+   "bbox": [
+    10.14589,
+    54.32711,
+    10.15745,
+    54.33866
+   ],
+   "anteil_zone": 0.203,
+   "art": "linie",
+   "lat": 54.33301,
+   "lon": 10.15208
+  },
+  {
+   "name": "Hiroshimapark",
+   "osm": [
+    "w13858861"
+   ],
+   "flaeche_ha": 1.67,
+   "bbox": [
+    10.13104,
+    54.32333,
+    10.13387,
+    54.32534
+   ],
+   "anteil_zone": 0.1301,
+   "art": "flaeche",
+   "lat": 54.32429,
+   "lon": 10.1324
+  },
+  {
+   "name": "Alter Botanischer Garten",
+   "osm": [
+    "w25838125"
+   ],
+   "flaeche_ha": 2.16,
+   "bbox": [
+    10.14559,
+    54.32964,
+    10.14832,
+    54.33142
+   ],
+   "anteil_zone": 0.1377,
+   "art": "flaeche",
+   "lat": 54.33048,
+   "lon": 10.14691
+  },
+  {
+   "name": "Düsternbrooker Gehölz",
+   "osm": [
+    "r5604964"
+   ],
+   "flaeche_ha": 22.7,
+   "bbox": [
+    10.14757,
+    54.33724,
+    10.15582,
+    54.34626
+   ],
+   "anteil_zone": 0.202,
+   "art": "flaeche",
+   "lat": 54.34113,
+   "lon": 10.15147
+  },
+  {
+   "name": "Vinetaplatz",
+   "osm": [
+    "r14727649",
+    "w25928530"
+   ],
+   "flaeche_ha": 0.41,
+   "bbox": [
+    10.14598,
+    54.31108,
+    10.14712,
+    54.31188
+   ],
+   "anteil_zone": 0.9609,
+   "art": "flaeche",
+   "lat": 54.31154,
+   "lon": 10.14658
+  },
+  {
+   "name": "Asmus-Bremer-Platz",
+   "osm": [
+    "w25619193",
+    "w818438751"
+   ],
+   "flaeche_ha": 0.28,
+   "bbox": [
+    10.13427,
+    54.32093,
+    10.13539,
+    54.32161
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 54.32126,
+   "lon": 10.13477
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Schleswig-Holstein (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  54.322,
+  10.135
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "ort",
+   "Holstenstraße und Dänische Straße",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "Kiellinie",
+   "kiellinie"
+  ],
+  [
+   "park",
+   "Schrevenpark",
+   "schrevenpark"
+  ],
+  [
+   "ort",
+   "Hiroshimapark",
+   "hiroshimapark"
+  ],
+  [
+   "ort",
+   "Düsternbrooker Gehölz",
+   "duesternbrook"
+  ],
+  [
+   "hochschule",
+   "Christian-Albrechts-Universität zu Kiel",
+   "uni"
+  ]
+ ]
+}

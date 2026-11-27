@@ -1,10 +1,8 @@
 <p class="lead">In Dresden ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
 <strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km². Grund sind {{objekte}}
-Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
-Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
-nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
-7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
-Jugendlichen.</p>
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr
+und überall die Gegenwart von Minderjährigen.</p>
 
 {{wald_anteil}} der Stadtfläche sind Wald, vor allem die Dresdner Heide, und dort liegen nur
 {{wald_zone}} in einer Zone. Ohne den Wald gerechnet sind es
@@ -16,9 +14,8 @@ Jugendlichen.</p>
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Fast gleich viel machen die
-{{objekte:sports}} Sportstätten und die {{objekte:playground}} Spielplätze aus.
+Fast gleich viel machen die {{objekte:sports}} Sportstätten und die {{objekte:playground}}
+Spielplätze aus.
 
 Auf Spiel- und Bolzplätzen und auf Skater- und BMX-Anlagen verbietet die Grünanlagensatzung der
 Stadt außerdem, Alkohol „oder sonstige berauschende Mittel“ mitzubringen und zu konsumieren; das
@@ -56,11 +53,11 @@ Die Elbwiesen am **Königsufer** gegenüber der Altstadt liegen außerhalb jeder
 Eine amtliche Liste der Dresdner Fußgängerzonen haben wir nicht gefunden. Die **Hauptstraße** in der
 Neustadt wollte die Stadt bis Ende Oktober 2025 als Fußgängerzone mit Radverkehr ausweisen; vorher
 war sie Gehweg
-([Stadt Dresden](https://www.dresden.de/de/rathaus/aktuelles/pressemitteilungen/10/Pm_048.php)).
-Die Seestraße war 2024 und 2025 versuchsweise Fußgängerzone, 2026 wegen einer Baustelle nicht
-([Stadt Dresden, März 2026](https://www.dresden.de/de/rathaus/aktuelles/pressemitteilungen/2026/03/pm_079.php)). Die
-Karte zeigt blau, was in OpenStreetMap als Fußgängerbereich eingetragen ist, darunter Prager Straße,
-Altmarkt und Neumarkt; dort gilt zwischen 7 und 20 Uhr Konsumverbot.
+([Stadt Dresden](https://www.dresden.de/de/rathaus/aktuelles/pressemitteilungen/10/Pm_048.php)). Die
+Seestraße war 2024 und 2025 versuchsweise Fußgängerzone, 2026 wegen einer Baustelle nicht
+([Stadt Dresden, März 2026](https://www.dresden.de/de/rathaus/aktuelles/pressemitteilungen/2026/03/pm_079.php)).
+Die Karte zeigt blau, was in OpenStreetMap als Fußgängerbereich eingetragen ist, darunter Prager
+Straße, Altmarkt und Neumarkt; dort gilt von 7 bis 20 Uhr Konsumverbot.
 
 Von der **Prager Straße** liegen außerdem {{ort:Prager Straße}} in einer Sichtweiten-Zone, von der
 Hauptstraße {{ort:Hauptstraße}}, vom Wiener Platz am Hauptbahnhof {{ort:Wiener Platz}}. Altmarkt
@@ -96,11 +93,10 @@ nicht (Stand {{stand}}).
 
 ### Wo darf man in Dresden kiffen?
 
-Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht auf Spiel-
-und Bolzplätzen, nicht in Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht
-es verbietet. Eine weiße Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte
-kennt weder Hecken noch Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap
-fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa in der Dresdner Heide und in weiten Teilen des
+Großen Gartens ({{park:Großer Garten}} in einer Zone). Nicht auf Spiel- und Bolzplätzen, tagsüber
+nicht in den Fußgängerzonen, nie in Gegenwart von Minderjährigen und nicht gegen ein Hausrecht. Weiß
+heißt nicht sicher erlaubt: Hecken, Bäume und fehlende Einrichtungen kennt die Karte nicht.
 
 ### Darf man auf den Elbwiesen kiffen?
 
@@ -109,10 +105,8 @@ Jugendlichen, und an anderen Stellen des Ufers liegen Spielplätze und Sportanla
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

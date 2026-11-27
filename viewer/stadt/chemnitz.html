@@ -1,14 +1,264 @@
 <!doctype html>
-<!-- Platzhalter, erzeugt durch deploy/bin/build_staedte.py aus staedte/grossstaedte.json. -->
+<!-- Erzeugt aus staedte/chemnitz.md und staedte/chemnitz.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>Kiffen in Chemnitz | BubatzBlick</title>
+<title>Kiffen in Chemnitz: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=../?interesse=chemnitz#12/50.8322/12.9242">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Chemnitz liegen 11,6 % der Stadtfläche (26 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<link rel="canonical" href="__SITE_URL__/stadt/chemnitz">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/chemnitz">
+<meta property="og:title" content="Kiffen in Chemnitz: wo es verboten ist">
+<meta property="og:description" content="In Chemnitz liegen 11,6 % der Stadtfläche (26 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/chemnitz.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Chemnitz mit den roten Verbotszonen, daneben: Kiffen in Chemnitz, 11,6 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/chemnitz",
+   "url": "__SITE_URL__/stadt/chemnitz",
+   "name": "Kiffen in Chemnitz: wo es verboten ist",
+   "description": "In Chemnitz liegen 11,6 % der Stadtfläche (26 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-27",
+   "about": {
+    "@type": "City",
+    "name": "Chemnitz",
+    "sameAs": "https://www.wikidata.org/wiki/Q2795",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Sachsen"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/chemnitz.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Chemnitz",
+     "item": "__SITE_URL__/stadt/chemnitz"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .stand { font-size: .9em; opacity: .85; margin-top: .2em; }
+  .tabellennotiz { font-size: .88em; color: var(--text-schwach); margin: .4em 0 1.2em; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { r: 5; fill: #c0392b; stroke: #fff; stroke-width: 1.5; }
+  svg.deutschland text { font-size: 15px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 3.5px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 7; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1; }
+  /* Auf dem Handy nur die Namen, dafuer groesser; die Anteile stehen in der Tabelle darunter. */
+  @media (max-width: 480px) { svg.deutschland text { font-size: 19px; }
+                              svg.deutschland .anteil { display: none; }
+                              svg.deutschland circle { r: 7; }
+                              svg.deutschland a.ohne-handy text,
+                              svg.deutschland a.ohne-handy line { display: none; } }
+</style>
 </head>
 <body>
-<p>Weiter zur <a href="../?interesse=chemnitz#12/50.8322/12.9242">Karte von Chemnitz</a>.</p>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Chemnitz</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <p class="stand">Zahlen vom 27. November 2026 · Recherche zu Regeln vor Ort: November 2026</p>
+    <nav><a href="../#12/50.82242/12.90761" class="knopf">Chemnitz auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Chemnitz ist öffentliches Kiffen auf 26 km² verboten, das sind
+<strong>11,6 % der Stadtfläche</strong> von 221 km². Grund sind 1 229
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr
+und überall die Gegenwart von Minderjährigen.</p>
+
+<p>Gut ein Sechstel der Stadt ist Wald (17 % der Stadtfläche), vom Zeisigwald im Osten bis
+zum Rabensteiner Wald im Westen, und davon liegen nur 4,9 % in einer Zone; ohne den Wald
+gerechnet sind es 13,0 %.</p>
+<figure class="karte"><img src="../img/stadt/chemnitz-stadt.webp" width="960" height="600" alt="Karte von Chemnitz mit Stadtgrenze und den roten Verbotszonen"><figcaption>Chemnitz: 26 km² Verbotszone auf 221 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">106</td><td class="zahl">6,0 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">108</td><td class="zahl">4,4 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">12</td><td class="zahl">0,3 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">391</td><td class="zahl">7,8 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">28</td><td class="zahl">1,0 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">584</td><td class="zahl">14,2 km²</td></tr></tbody></table>
+<p class="tabellennotiz">Jede Art für sich gezählt, Überlappungen also mehrfach. Anbauvereinigungen nur, soweit in OpenStreetMap eingetragen.</p>
+
+<p>Die meisten Zonen gehen auf die 584 Sportstätten zurück, danach auf die
+391 Spielplätze. Auf Spiel- und Bolzplätzen verbietet die Grünanlagensatzung
+außerdem Alkohol, Glas und „zu rauchen“; sie sind von 8 bis 22 Uhr offen, ein Verstoß kostet bis zu
+1.000 Euro
+(<a href="https://d2vw8mc5mcb3gm.cloudfront.net/fileadmin/chemnitz/media/rathaus/satzungen/67_230_202508.pdf">Grünanlagensatzung, § 3a</a>).
+Die Polizeiverordnung der Stadt kennt kein Konsumverbot.</p>
+<h2 id="kuchwald-stadtpark-und-schloteich">Küchwald, Stadtpark und Schloßteich</h2>
+<p>Im <strong>Küchwaldpark</strong> liegen 39 % der Fläche in einer Zone: 13 Spielplätze liegen im
+Park. Im <strong>Stadtpark</strong> sind es 38 %, mit zwei Spielplätzen.</p>
+<figure class="karte"><img src="../img/stadt/chemnitz-kuechwaldpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Küchwaldpark (grün umrandet) mit den roten Verbotszonen; etwa 39 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Küchwaldpark: 92 ha, davon 39 % Verbotszone. <a href="../#16/50.85121/12.91179">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/chemnitz-stadtpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Stadtpark (grün umrandet) mit den roten Verbotszonen; etwa 38 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Stadtpark: 33 ha, davon 38 % Verbotszone. <a href="../#16/50.80625/12.90213">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Im <strong>Schloßteichpark</strong> selbst liegt keine Einrichtung, die eine Zone auslöst; wegen der Sportanlagen,
+Spielplätze und Schulen rundherum liegen trotzdem 59 % in einer Zone. Im
+<strong>Zeisigwald</strong> sind es 5 %, auf einem 100 Meter breiten Streifen Land entlang der
+Flüsse 16 %.</p>
+<figure class="karte"><img src="../img/stadt/chemnitz-schlossteich.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Schloßteichpark (grün umrandet) mit den roten Verbotszonen; etwa 59 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Schloßteichpark: 7 ha, davon 59 % Verbotszone. <a href="../#16/50.84164/12.91633">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/chemnitz-zeisigwald.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Zeisigwald (grün umrandet) mit den roten Verbotszonen; etwa 5 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Zeisigwald: 402 ha, davon 5 % Verbotszone. <a href="../#16/50.8436/12.96882">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="innenstadt">Innenstadt</h2>
+<p>Eine eigene Liste der Fußgängerzonen hat die Stadt nicht. Ihr Straßenreinigungsverzeichnis nennt aber
+Abschnitte von Bretgasse, Johannisplatz und Kirchgäßchen „Fußgängerzone“, und für Markt, Neumarkt,
+Rathausstraße, Innere Klosterstraße und einen Teil der Straße der Nationen verzeichnet es keine
+Fahrbahn
+(<a href="https://d2vw8mc5mcb3gm.cloudfront.net/fileadmin/chemnitz/media/rathaus/satzungen/32_900_20260101_mitanlage.pdf">Straßenreinigungssatzung</a>).
+In den Fußgängerzonen gilt von 7 bis 20 Uhr Konsumverbot; blau sind die Fußgängerbereiche aus
+OpenStreetMap.</p>
+<p>Von <strong>Markt und Neumarkt</strong> liegen außerdem 35 % in einer Sichtweiten-Zone, vom
+Rosenhof 17 %; im Stadthallenpark liegt keine Zone (0 %). In den
+Grünanlagen Am Wall, Johannisplatz und Park am Roten Turm verbietet die Stadt von April bis Oktober
+Alkohol, Cannabis nicht
+(<a href="https://www.chemnitz.de/de/unsere-stadt/ordnung-und-sicherheit/allgemeinverfuegungen/alkohol_gegenstaende_innenstadt">Stadt Chemnitz</a>).</p>
+<figure class="karte"><img src="../img/stadt/chemnitz-fussgaengerzone.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Markt und Neumarkt (grün umrandet) mit den roten Verbotszonen; etwa 35 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Markt und Neumarkt: 4 ha, davon 35 % Verbotszone. <a href="../#16/50.83298/12.92043">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Der Weihnachtsmarkt steht auf Markt und Neumarkt; seine Marktsatzung sagt zu Cannabis und Rauchen
+nichts (<a href="https://d2vw8mc5mcb3gm.cloudfront.net/fileadmin/chemnitz/media/rathaus/satzungen/72_100.pdf">Marktsatzung</a>).</p>
+<h2 id="universitat-und-stadion">Universität und Stadion</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte. Vom Campus der <strong>TU Chemnitz</strong> liegen
+30 % in einer Zone, um 18 Sportanlagen. Die Hausordnung
+hat keine Regel zu Cannabis und verbietet das Rauchen nur in Gebäuden
+(<a href="https://www.tu-chemnitz.de/verwaltung/studentenamt/abt11/ordnungen/2026/AB_2026_10_2.pdf">Hausordnung</a>).</p>
+<figure class="karte"><img src="../img/stadt/chemnitz-tu.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Technische Universität Chemnitz (grün umrandet) mit den roten Verbotszonen; etwa 30 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Technische Universität Chemnitz: 40 ha, davon 30 % Verbotszone. <a href="../#16/50.81415/12.92926">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Für Spieltage im <strong>Stadion an der Gellertstraße</strong> hat die Stadt eine eigene Polizeiverordnung: Wer
+erheblich unter dem Einfluss von Alkohol oder Drogen steht, darf nicht hinein; Cannabis nennt sie
+nicht (<a href="https://d2vw8mc5mcb3gm.cloudfront.net/fileadmin/chemnitz/media/rathaus/satzungen/32_110.pdf">Polizeiverordnung</a>).</p>
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>Ein Verstoß gegen § 5 Abs. 2 kostet in Sachsen 100 bis 500 Euro, in Gegenwart von Minderjährigen
+300 bis 1.000 Euro
+(<a href="https://revosax.sachsen.de/vorschrift_gesamt/20903/47218.html">Bußgeldkatalog Sachsen</a>).
+Zuständig ist die Stadt. Vier Anbauvereinigungen mit Sitz in Chemnitz hat die Landesdirektion
+zugelassen (<a href="https://www.lds.sachsen.de/soziales/?ID=21543&amp;art_param=1089">Landesdirektion Sachsen</a>);
+die Karte kennt sie nur, soweit sie in OpenStreetMap eingetragen sind. Eigene Verbotszonen für
+Cannabis hat Chemnitz nicht (Stand 27. November 2026).</p>
+<nav aria-label="Nachbarstädte" class="nachbarn">
+<h2 id="nachbarstadte-im-vergleich">Nachbarstädte im Vergleich</h2>
+<p>In Chemnitz liegen 11,6 % der Stadtfläche in einer Verbotszone. Die nächsten Städte mit eigener Seite:</p>
+<ul>
+<li><strong><a href="dresden">Dresden</a></strong>, 65 km entfernt: 14,0 % der Stadtfläche; <a href="dresden#altstadt-und-neustadt">Fußgängerzonen in Dresden</a>, <a href="dresden#was-sonst-noch-gilt">Regeln in Dresden</a></li>
+<li><strong><a href="leipzig">Leipzig</a></strong>, 68 km entfernt: 15,4 % der Stadtfläche; <a href="leipzig#innenstadt">Fußgängerzonen in Leipzig</a>, <a href="leipzig#was-sonst-noch-gilt">Regeln in Leipzig</a></li>
+<li><strong><a href="erfurt">Erfurt</a></strong>, 133 km entfernt: 6,7 % der Stadtfläche; <a href="erfurt#altstadt">Fußgängerzonen in Erfurt</a>, <a href="erfurt#was-sonst-noch-gilt">Regeln in Erfurt (Thüringen)</a></li>
+</ul>
+<p>Dieselben Landesregeln (Sachsen) gelten auch in <a href="dresden#was-sonst-noch-gilt">Dresden</a>, <a href="leipzig#was-sonst-noch-gilt">Leipzig</a>.</p>
+</nav>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-chemnitz-kiffen">Wo darf man in Chemnitz kiffen?</h3>
+<p>Nach § 5 KCanG außerhalb der roten Flächen, etwa im Zeisigwald (5 % in einer Zone).
+Nicht auf Spiel- und Bolzplätzen, tagsüber nicht in den Fußgängerzonen der Innenstadt, nie in
+Gegenwart von Minderjährigen. Weiß heißt nicht sicher erlaubt: Hecken, Bäume und fehlende
+Einrichtungen kennt die Karte nicht.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+27. November 2026. Eine Orientierungshilfe, keine Rechtsauskunft (<a href="../about.html">wie gerechnet wird</a>).</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
 </body>
 </html>

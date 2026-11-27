@@ -1,14 +1,263 @@
 <!doctype html>
-<!-- Platzhalter, erzeugt durch deploy/bin/build_staedte.py aus staedte/grossstaedte.json. -->
+<!-- Erzeugt aus staedte/potsdam.md und staedte/potsdam.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>Kiffen in Potsdam | BubatzBlick</title>
+<title>Kiffen in Potsdam: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=../?interesse=potsdam#12/52.3958/13.0614">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Potsdam liegen 10,0 % der Stadtfläche (19 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<link rel="canonical" href="__SITE_URL__/stadt/potsdam">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/potsdam">
+<meta property="og:title" content="Kiffen in Potsdam: wo es verboten ist">
+<meta property="og:description" content="In Potsdam liegen 10,0 % der Stadtfläche (19 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/potsdam.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Potsdam mit den roten Verbotszonen, daneben: Kiffen in Potsdam, 10,0 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/potsdam",
+   "url": "__SITE_URL__/stadt/potsdam",
+   "name": "Kiffen in Potsdam: wo es verboten ist",
+   "description": "In Potsdam liegen 10,0 % der Stadtfläche (19 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-27",
+   "about": {
+    "@type": "City",
+    "name": "Potsdam",
+    "sameAs": "https://www.wikidata.org/wiki/Q1711",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Brandenburg"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/potsdam.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Potsdam",
+     "item": "__SITE_URL__/stadt/potsdam"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .stand { font-size: .9em; opacity: .85; margin-top: .2em; }
+  .tabellennotiz { font-size: .88em; color: var(--text-schwach); margin: .4em 0 1.2em; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { r: 5; fill: #c0392b; stroke: #fff; stroke-width: 1.5; }
+  svg.deutschland text { font-size: 15px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 3.5px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 7; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1; }
+  /* Auf dem Handy nur die Namen, dafuer groesser; die Anteile stehen in der Tabelle darunter. */
+  @media (max-width: 480px) { svg.deutschland text { font-size: 19px; }
+                              svg.deutschland .anteil { display: none; }
+                              svg.deutschland circle { r: 7; }
+                              svg.deutschland a.ohne-handy text,
+                              svg.deutschland a.ohne-handy line { display: none; } }
+</style>
 </head>
 <body>
-<p>Weiter zur <a href="../?interesse=potsdam#12/52.3958/13.0614">Karte von Potsdam</a>.</p>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Potsdam</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <p class="stand">Zahlen vom 27. November 2026 · Recherche zu Regeln vor Ort: November 2026</p>
+    <nav><a href="../#12/52.42845/13.02284" class="knopf">Potsdam auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Potsdam ist öffentliches Kiffen auf 19 km² verboten, das sind
+<strong>10,0 % der Stadtfläche</strong> von 188 km². Grund sind 1 272
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommt die Fußgängerzone in der Brandenburger
+Straße von 7 bis 20 Uhr und überall die Gegenwart von Minderjährigen.</p>
+
+<p>Fast ein Drittel der Stadt ist Wald (29 % der Stadtfläche), dazu kommen Seen und die großen
+Schlossparks, und dort liegt kaum eine Zone; ohne den Wald gerechnet sind es 12,2 %.</p>
+<figure class="karte"><img src="../img/stadt/potsdam-stadt.webp" width="960" height="600" alt="Karte von Potsdam mit Stadtgrenze und den roten Verbotszonen"><figcaption>Potsdam: 19 km² Verbotszone auf 188 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">73</td><td class="zahl">3,7 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">114</td><td class="zahl">3,4 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">12</td><td class="zahl">0,3 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">537</td><td class="zahl">8,5 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">38</td><td class="zahl">0,8 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">498</td><td class="zahl">9,4 km²</td></tr></tbody></table>
+<p class="tabellennotiz">Jede Art für sich gezählt, Überlappungen also mehrfach. Anbauvereinigungen nur, soweit in OpenStreetMap eingetragen.</p>
+
+<p>Potsdam hat mehr Spielplätze (537) als Sportstätten (498); die größere
+Fläche haben trotzdem die Zonen um die Sportstätten. Auf ausgewiesenen Spielplätzen verbietet das
+Nichtraucherschutzgesetz des Landes außerdem das Rauchen von Tabak, also auch von Joints mit Tabak
+(<a href="https://bravors.brandenburg.de/gesetze/bbgnirschg">BbgNiRSchG</a>). Die Stadtordnung regelt Alkohol,
+Drogen und Rauchen nicht
+(<a href="https://www.potsdam.de/system/files/document/Stadtordnung%202024_07_22.pdf">Stadtordnung</a>).</p>
+<h2 id="sanssouci-und-die-schlossparks">Sanssouci und die Schlossparks</h2>
+<p>Vom <strong>Park Sanssouci</strong> liegen nur 4 % in einer Zone: Im Park liegen fünf
+Sportanlagen, Spielplätze und Kitas nur am Rand. Im <strong>Neuen Garten</strong> sind es 3 %, im
+Park Babelsberg 9 %. Die Parkordnung der Schlösserstiftung verbietet dort Feuer,
+Grillen, Musik und das Liegen außerhalb der freigegebenen Wiesen; zu Rauchen und Cannabis sagt sie
+nichts. Die Parks sind von 8 Uhr bis zur Dämmerung offen
+(<a href="https://www.spsg.de/fileadmin/user_upload/SPSG_Stiftungsanlagenverordnung.pdf">Stiftungsanlagenverordnung</a>).</p>
+<figure class="karte"><img src="../img/stadt/potsdam-sanssouci.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Park Sanssouci (grün umrandet) mit den roten Verbotszonen; etwa 4 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Park Sanssouci: 265 ha, davon 4 % Verbotszone. <a href="../#16/52.40322/13.02961">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/potsdam-neuer-garten.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Neuer Garten (grün umrandet) mit den roten Verbotszonen; etwa 3 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Neuer Garten: 67 ha, davon 3 % Verbotszone. <a href="../#16/52.41417/13.06826">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Ganz anders der <strong>Volkspark</strong> im Bornstedter Feld: Dort liegen 78 % in einer
+Zone, um neun Spielplätze und 18 Sportanlagen im Park.</p>
+<figure class="karte"><img src="../img/stadt/potsdam-volkspark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Volkspark Potsdam (grün umrandet) mit den roten Verbotszonen; etwa 78 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Volkspark Potsdam: 57 ha, davon 78 % Verbotszone. <a href="../#16/52.41393/13.0436">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Von der <strong>Freundschaftsinsel</strong> liegen 43 % in einer Zone, vom Ufer des Heiligen
+Sees 10 %. Auf einem 100 Meter breiten Streifen Land an den Havelarmen in der
+Innenstadt sind es 41 % an der Alten Fahrt und 54 % an der Neuen Fahrt.</p>
+<figure class="karte"><img src="../img/stadt/potsdam-freundschaftsinsel.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Freundschaftsinsel (grün umrandet) mit den roten Verbotszonen; etwa 43 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Freundschaftsinsel: 6 ha, davon 43 % Verbotszone. <a href="../#16/52.39462/13.06419">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="innenstadt">Innenstadt</h2>
+<p>Fußgängerzone ist die Brandenburger Straße vom Brandenburger Tor bis zur Friedrich-Ebert-Straße;
+Lindenstraße, Dortustraße und die Gassen des Holländischen Viertels sind es nach dem
+Innenstadtverkehrskonzept nicht
+(<a href="https://www.potsdam.de/system/files/documents/ivk-textteil.pdf">Stadt Potsdam, 2017</a>). Den kurzen
+Abschnitt östlich davon bis Am Bassin hat die Stadt 2026 zur Fußgängerzone umgebaut
+(<a href="https://www.entwicklungsstadt.de/brandenburger-strasse-weiterer-bauabschnitt-der-fussgaengerzone-fertiggestellt/">Entwicklungsstadt, März 2026</a>).
+Dort gilt von 7 bis 20 Uhr Konsumverbot; blau sind die Fußgängerbereiche aus OpenStreetMap.</p>
+<p>Von der Brandenburger Straße liegen außerdem 11 % in einer Sichtweiten-Zone,
+vom Luisenplatz 29 %. Der <strong>Bassinplatz</strong> liegt zu 74 % in einer Zone,
+der Lustgarten am Landtag ganz (100 %).</p>
+<figure class="karte"><img src="../img/stadt/potsdam-fussgaengerzone.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Brandenburger Straße (grün umrandet) mit den roten Verbotszonen; etwa 11 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Brandenburger Straße: 1 ha, davon 11 % Verbotszone. <a href="../#16/52.40086/13.05839">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="universitat-und-stadion">Universität und Stadion</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte. Vom Campus <strong>Am Neuen Palais</strong> der Universität
+liegen 62 % in einer Zone, um 23
+Sportanlagen, fünf Spielplätze und eine Kita; die Hausordnung wiederholt für diese Flächen nur das
+Gesetz
+(<a href="https://www.uni-potsdam.de/fileadmin/projects/ambek/Amtliche_Bekanntmachungen/2025/Ausgabe_14/ambek-2025-14-557-559.pdf">Hausordnung</a>).</p>
+<figure class="karte"><img src="../img/stadt/potsdam-uni.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Universität Potsdam: Campus I - Am Neuen Palais (grün umrandet) mit den roten Verbotszonen; etwa 62 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Universität Potsdam: Campus I - Am Neuen Palais: 23 ha, davon 62 % Verbotszone. <a href="../#16/52.40153/13.00877">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Die Stadionordnung des <strong>Karl-Liebknecht-Stadions</strong> von 2012 nennt Cannabis nicht; wer erkennbar
+unter Drogen steht und ein Risiko ist, kann abgewiesen werden
+(<a href="https://babelsberg03.de/documents/359/20f7d37a-b4b2-4f2a-b9ec-bd7dd9b457a7.pdf">Stadionordnung</a>).</p>
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>In Brandenburg ahndet nicht die Stadt Verstöße gegen die Konsumverbote, sondern das Landesamt für
+Arbeitsschutz, Verbraucherschutz und Gesundheit
+(<a href="https://bravors.brandenburg.de/verordnungen/bbgkcangzv">Zuständigkeitsverordnung</a>). Ein Verstoß
+gegen § 5 Abs. 2 kostet 50 bis 500 Euro, in Gegenwart von Minderjährigen 300 bis 1.000 Euro
+(<a href="https://msgiv.brandenburg.de/sixcms/media.php/9/183_24_MSGIV_Konsumcannabisgesetz_Bussgeldkatalog_20241106.pdf">Bußgeldkatalog Brandenburg</a>).
+Eigene Verbotszonen für Cannabis hat Potsdam nicht (Stand 27. November 2026).</p>
+<nav aria-label="Nachbarstädte" class="nachbarn">
+<h2 id="nachbarstadte-im-vergleich">Nachbarstädte im Vergleich</h2>
+<p>In Potsdam liegen 10,0 % der Stadtfläche in einer Verbotszone. Die nächsten Städte mit eigener Seite:</p>
+<ul>
+<li><strong><a href="berlin">Berlin</a></strong>, 26 km entfernt: 23,0 % der Stadtfläche; <a href="berlin#platze-und-fugangerzonen">Fußgängerzonen in Berlin</a>, <a href="berlin#was-sonst-noch-gilt">Regeln in Berlin (Berlin)</a></li>
+<li><strong><a href="magdeburg">Magdeburg</a></strong>, 101 km entfernt: 9,8 % der Stadtfläche; <a href="magdeburg#innenstadt">Fußgängerzonen in Magdeburg</a>, <a href="magdeburg#was-sonst-noch-gilt">Regeln in Magdeburg (Sachsen-Anhalt)</a></li>
+<li><strong><a href="leipzig">Leipzig</a></strong>, 128 km entfernt: 15,4 % der Stadtfläche; <a href="leipzig#innenstadt">Fußgängerzonen in Leipzig</a>, <a href="leipzig#was-sonst-noch-gilt">Regeln in Leipzig (Sachsen)</a></li>
+</ul>
+</nav>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-potsdam-kiffen">Wo darf man in Potsdam kiffen?</h3>
+<p>Nach § 5 KCanG außerhalb der roten Flächen, etwa in großen Teilen des Parks Sanssouci
+(4 % in einer Zone), solange er offen ist. Tagsüber nicht in der Brandenburger
+Straße, nie in Gegenwart von Minderjährigen und nicht gegen ein Hausrecht. Weiß heißt nicht sicher
+erlaubt: Hecken, Bäume und fehlende Einrichtungen kennt die Karte nicht.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+27. November 2026. Eine Orientierungshilfe, keine Rechtsauskunft (<a href="../about.html">wie gerechnet wird</a>).</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
 </body>
 </html>

@@ -1,0 +1,772 @@
+{
+ "stadtflaeche_osm_km2": 97.66,
+ "wald": {
+  "flaeche_km2": 5.3,
+  "anteil_stadt": 0.0547,
+  "anteil_zone": 0.1875,
+  "anteil_zone_ohne_wald": 0.1603
+ },
+ "zonen_km2": 15.8,
+ "anteil": 0.16183,
+ "kategorien": {
+  "sports": {
+   "objekte": 489,
+   "zonen_km2": 7.96
+  },
+  "playground": {
+   "objekte": 405,
+   "zonen_km2": 6.61
+  },
+  "school": {
+   "objekte": 65,
+   "zonen_km2": 2.81
+  },
+  "kindergarten": {
+   "objekte": 106,
+   "zonen_km2": 2.72
+  },
+  "youth": {
+   "objekte": 23,
+   "zonen_km2": 0.48
+  },
+  "childcare": {
+   "objekte": 8,
+   "zonen_km2": 0.15
+  }
+ },
+ "objekte_gesamt": 1096,
+ "merkmale": {
+  "park": [
+   {
+    "name": "Volkspark",
+    "osm": [
+     "w27054353"
+    ],
+    "flaeche_ha": 16.2,
+    "zone_ha": 11.7,
+    "anteil_zone": 0.7191,
+    "lat": 49.98712,
+    "lon": 8.29168,
+    "bbox": [
+     8.28689,
+     49.9844,
+     8.29556,
+     49.98971
+    ]
+   },
+   {
+    "name": "Hartenbergpark",
+    "osm": [
+     "w80138421"
+    ],
+    "flaeche_ha": 13.3,
+    "zone_ha": 11.0,
+    "anteil_zone": 0.8249,
+    "lat": 50.0118,
+    "lon": 8.24062,
+    "bbox": [
+     8.2375,
+     50.00846,
+     8.24326,
+     50.01514
+    ]
+   },
+   {
+    "name": "Wallgrünanlagen",
+    "osm": [
+     "r12852502"
+    ],
+    "flaeche_ha": 11.6,
+    "zone_ha": 5.7,
+    "anteil_zone": 0.4951,
+    "lat": 49.99176,
+    "lon": 8.26842,
+    "bbox": [
+     8.26481,
+     49.98948,
+     8.28117,
+     49.99284
+    ]
+   },
+   {
+    "name": "Stadtpark",
+    "osm": [
+     "w27054315"
+    ],
+    "flaeche_ha": 9.4,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0075,
+    "lat": 49.99045,
+    "lon": 8.28531,
+    "bbox": [
+     8.28117,
+     49.98859,
+     8.29001,
+     49.99233
+    ]
+   },
+   {
+    "name": "Großbergpark",
+    "osm": [
+     "w39955980"
+    ],
+    "flaeche_ha": 4.2,
+    "zone_ha": 3.9,
+    "anteil_zone": 0.9301,
+    "lat": 49.97192,
+    "lon": 8.29466,
+    "bbox": [
+     8.28792,
+     49.9702,
+     8.29563,
+     49.97359
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Bahnhofplatz",
+    "osm": [
+     "w1330009350"
+    ],
+    "flaeche_ha": 1.0,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.7693,
+    "lat": 50.00161,
+    "lon": 8.25975,
+    "bbox": [
+     8.25861,
+     50.00095,
+     8.26036,
+     50.00226
+    ]
+   },
+   {
+    "name": "Irène-Giron-Platz",
+    "osm": [
+     "r8538809"
+    ],
+    "flaeche_ha": 0.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.99593,
+    "lon": 8.24608,
+    "bbox": [
+     8.24438,
+     49.99536,
+     8.24703,
+     49.99657
+    ]
+   },
+   {
+    "name": "Forum Universitatis",
+    "osm": [
+     "w1535296515"
+    ],
+    "flaeche_ha": 0.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.99505,
+    "lon": 8.24471,
+    "bbox": [
+     8.24383,
+     49.9944,
+     8.24559,
+     49.99565
+    ]
+   },
+   {
+    "name": "Ernst-Ludwig-Platz",
+    "osm": [
+     "w589596428"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.9973,
+    "lat": 50.00544,
+    "lon": 8.2694,
+    "bbox": [
+     8.26858,
+     50.00488,
+     8.27015,
+     50.00598
+    ]
+   },
+   {
+    "name": "Fischtorplatz",
+    "osm": [
+     "w1542996456"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.99972,
+    "lon": 8.27774,
+    "bbox": [
+     8.2768,
+     49.99927,
+     8.27869,
+     50.00017
+    ]
+   },
+   {
+    "name": "Liebfrauenplatz",
+    "osm": [
+     "w154615768"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.99926,
+    "lon": 8.27525,
+    "bbox": [
+     8.27445,
+     49.99884,
+     8.27608,
+     49.99968
+    ]
+   },
+   {
+    "name": "Helmut-Kohl-Platz",
+    "osm": [
+     "w576075016"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.8526,
+    "lat": 50.00588,
+    "lon": 8.27001,
+    "bbox": [
+     8.26921,
+     50.00549,
+     8.27093,
+     50.00636
+    ]
+   },
+   {
+    "name": "Schillerplatz",
+    "osm": [
+     "w33714489"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.7524,
+    "lat": 49.99825,
+    "lon": 8.26784,
+    "bbox": [
+     8.26686,
+     49.99757,
+     8.2685,
+     49.99891
+    ]
+   },
+   {
+    "name": "Gutenbergplatz",
+    "osm": [
+     "w45062543"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.99907,
+    "lon": 8.27144,
+    "bbox": [
+     8.27073,
+     49.99855,
+     8.27219,
+     49.99962
+    ]
+   },
+   {
+    "name": "Auf dem Hewwel",
+    "osm": [
+     "w204847099"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.3824,
+    "lat": 49.96653,
+    "lon": 8.2876,
+    "bbox": [
+     8.28712,
+     49.96624,
+     8.28799,
+     49.96684
+    ]
+   },
+   {
+    "name": "Sömmerringplatz",
+    "osm": [
+     "w719632102"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.9976,
+    "lat": 50.01036,
+    "lon": 8.25874,
+    "bbox": [
+     8.25822,
+     50.01003,
+     8.25927,
+     50.01072
+    ]
+   },
+   {
+    "name": "Platz der Köpfe",
+    "osm": [
+     "w891933223"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.96361,
+    "lon": 8.20603,
+    "bbox": [
+     8.20561,
+     49.96332,
+     8.20646,
+     49.96389
+    ]
+   },
+   {
+    "name": "Lessingplatz",
+    "osm": [
+     "w925287852"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 1.0,
+    "lat": 50.00748,
+    "lon": 8.2568,
+    "bbox": [
+     8.25602,
+     50.00698,
+     8.25739,
+     50.00788
+    ]
+   },
+   {
+    "name": "Platz der Mainzer Republik",
+    "osm": [
+     "w197649317"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.758,
+    "lat": 50.00501,
+    "lon": 8.27118,
+    "bbox": [
+     8.27072,
+     50.00467,
+     8.27167,
+     50.00533
+    ]
+   },
+   {
+    "name": "Dr.Günter-Storch-Platz",
+    "osm": [
+     "w1228095828"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.2879,
+    "lat": 50.00355,
+    "lon": 8.26828,
+    "bbox": [
+     8.26777,
+     50.00317,
+     8.26951,
+     50.00395
+    ]
+   },
+   {
+    "name": "Ludwig-Lindenschmit-Forum",
+    "osm": [
+     "w1487878301"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.99349,
+    "lon": 8.28077,
+    "bbox": [
+     8.28017,
+     49.99321,
+     8.28138,
+     49.99375
+    ]
+   },
+   {
+    "name": "Imenhof",
+    "osm": [
+     "w1533554704"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0597,
+    "lat": 49.97243,
+    "lon": 8.23493,
+    "bbox": [
+     8.23443,
+     49.97212,
+     8.23543,
+     49.97275
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r2464570",
+     "r2464576",
+     "r2577809"
+    ],
+    "flaeche_ha": 283.6,
+    "zone_ha": 14.2,
+    "anteil_zone": 0.0502,
+    "lat": 49.98778,
+    "lon": 8.29879,
+    "bbox": [
+     8.18961,
+     49.93882,
+     8.34315,
+     50.03624
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Johannes Gutenberg-Universität Mainz",
+    "osm": [
+     "r8061090"
+    ],
+    "flaeche_ha": 86.3,
+    "zone_ha": 27.0,
+    "anteil_zone": 0.3129,
+    "lat": 49.992,
+    "lon": 8.23694,
+    "bbox": [
+     8.22772,
+     49.98689,
+     8.24716,
+     49.9965
+    ]
+   },
+   {
+    "name": "Hochschule Mainz - Standort Campus",
+    "osm": [
+     "w155183071"
+    ],
+    "flaeche_ha": 6.7,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.2807,
+    "lat": 49.98845,
+    "lon": 8.22671,
+    "bbox": [
+     8.22447,
+     49.987,
+     8.22874,
+     49.98994
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Botanischer Garten der Johannes Gutenberg-Universität Mainz",
+    "osm": [
+     "r8197811"
+    ],
+    "flaeche_ha": 6.5,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.4957,
+    "lat": 49.99087,
+    "lon": 8.24051,
+    "bbox": [
+     8.23814,
+     49.98938,
+     8.244,
+     49.99229
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Lennebergwald",
+    "osm": [
+     "r3160802"
+    ],
+    "flaeche_ha": 164.6,
+    "zone_ha": 10.8,
+    "anteil_zone": 0.0655,
+    "lat": 50.00223,
+    "lon": 8.16567,
+    "bbox": [
+     8.15538,
+     49.9981,
+     8.20318,
+     50.02039
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 202.9,
+   "zone_ha": 22.9,
+   "anteil_zone": 0.113
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 14.7,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 49.96563,
+  "lon": 8.25701,
+  "bbox": [
+   8.14209,
+   49.89475,
+   8.34374,
+   50.03624
+  ]
+ },
+ "orte": [
+  {
+   "name": "Schusterstraße und Stadthausstraße",
+   "osm": [
+    "r18570553",
+    "w129012174",
+    "w144078910",
+    "w1444680495",
+    "w1444680496",
+    "w154585419",
+    "w154619948",
+    "w15976970",
+    "w178224305",
+    "w178224308",
+    "w19881004",
+    "w19881195",
+    "w23645971",
+    "w237501191",
+    "w237501193",
+    "w237501194",
+    "w24393465",
+    "w247753750",
+    "w247753751",
+    "w31435043",
+    "w618453176",
+    "w835209127"
+   ],
+   "flaeche_ha": 1.51,
+   "bbox": [
+    8.26771,
+    49.99779,
+    8.27587,
+    50.00111
+   ],
+   "anteil_zone": 0.2849,
+   "art": "flaeche",
+   "lat": 50.00087,
+   "lon": 8.2712
+  },
+  {
+   "name": "Markt",
+   "osm": [
+    "w1287000155",
+    "w1287000156",
+    "w1321712907",
+    "w1395528376",
+    "w146459810",
+    "w22311542",
+    "w315265082",
+    "w315265083",
+    "w315265084",
+    "w315265087",
+    "w616870463"
+   ],
+   "flaeche_ha": 0.47,
+   "bbox": [
+    8.27307,
+    49.99905,
+    8.27466,
+    49.9999
+   ],
+   "anteil_zone": 0.0175,
+   "art": "flaeche",
+   "lat": 49.99945,
+   "lon": 8.27388
+  },
+  {
+   "name": "Gutenbergplatz",
+   "osm": [
+    "w45062543"
+   ],
+   "flaeche_ha": 0.54,
+   "bbox": [
+    8.27073,
+    49.99855,
+    8.27219,
+    49.99962
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.99907,
+   "lon": 8.27144
+  },
+  {
+   "name": "Liebfrauenplatz",
+   "osm": [
+    "w154615768"
+   ],
+   "flaeche_ha": 0.63,
+   "bbox": [
+    8.27445,
+    49.99884,
+    8.27608,
+    49.99968
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.99926,
+   "lon": 8.27525
+  },
+  {
+   "name": "Adenauer-Ufer",
+   "osm": [
+    "r11082426",
+    "r16935638",
+    "w1168449623",
+    "w1188235740",
+    "w143749261",
+    "w173662870",
+    "w173662890",
+    "w173662892",
+    "w173662894",
+    "w173662911",
+    "w173662922",
+    "w173662925",
+    "w173662930",
+    "w182081932",
+    "w231023261",
+    "w23645718",
+    "w247753748",
+    "w247753749",
+    "w247753755",
+    "w247753756",
+    "w268071940",
+    "w268071941",
+    "w280320130",
+    "w33174469",
+    "w48066659",
+    "w501340289",
+    "w501340292",
+    "w501340293",
+    "w557335516",
+    "w613760040",
+    "w613760041",
+    "w613760042",
+    "w686276770",
+    "w713928499",
+    "w903399378",
+    "w913070087",
+    "w913070088",
+    "w913297396"
+   ],
+   "flaeche_ha": 2.27,
+   "bbox": [
+    8.26714,
+    49.99969,
+    8.27917,
+    50.01146
+   ],
+   "anteil_zone": 0.2591,
+   "art": "flaeche",
+   "lat": 50.00951,
+   "lon": 8.26957
+  },
+  {
+   "name": "Winterhafen",
+   "osm": [
+    "w144071636"
+   ],
+   "flaeche_ha": 3.0,
+   "bbox": [
+    8.2828,
+    49.99186,
+    8.28794,
+    49.99539
+   ],
+   "anteil_zone": 0.1706,
+   "art": "flaeche",
+   "lat": 49.99361,
+   "lon": 8.28486
+  },
+  {
+   "name": "Augustinerstraße",
+   "osm": [
+    "w1342928921",
+    "w1342928922",
+    "w15971420",
+    "w179133904"
+   ],
+   "flaeche_ha": 0.4,
+   "bbox": [
+    8.27353,
+    49.99589,
+    8.27636,
+    49.99767
+   ],
+   "anteil_zone": 0.1489,
+   "art": "linie",
+   "lat": 49.99679,
+   "lon": 8.2749
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Rheinland-Pfalz (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  49.997,
+  8.268
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Volkspark",
+   "volkspark"
+  ],
+  [
+   "park",
+   "Stadtpark",
+   "stadtpark"
+  ],
+  [
+   "ort",
+   "Adenauer-Ufer",
+   "rheinufer"
+  ],
+  [
+   "ort",
+   "Schusterstraße und Stadthausstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "park",
+   "Hartenbergpark",
+   "hartenbergpark"
+  ],
+  [
+   "hochschule",
+   "Johannes Gutenberg-Universität Mainz",
+   "uni"
+  ]
+ ]
+}

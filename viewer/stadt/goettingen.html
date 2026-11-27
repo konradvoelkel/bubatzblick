@@ -1,14 +1,255 @@
 <!doctype html>
-<!-- Platzhalter, erzeugt durch deploy/bin/build_staedte.py aus staedte/grossstaedte.json. -->
+<!-- Erzeugt aus staedte/goettingen.md und staedte/goettingen.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>Kiffen in Göttingen | BubatzBlick</title>
+<title>Kiffen in Göttingen: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=../?interesse=goettingen#12/51.5339/9.9356">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Göttingen liegen 12,5 % der Stadtfläche (15 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<link rel="canonical" href="__SITE_URL__/stadt/goettingen">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/goettingen">
+<meta property="og:title" content="Kiffen in Göttingen: wo es verboten ist">
+<meta property="og:description" content="In Göttingen liegen 12,5 % der Stadtfläche (15 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/goettingen.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Göttingen mit den roten Verbotszonen, daneben: Kiffen in Göttingen, 12,5 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/goettingen",
+   "url": "__SITE_URL__/stadt/goettingen",
+   "name": "Kiffen in Göttingen: wo es verboten ist",
+   "description": "In Göttingen liegen 12,5 % der Stadtfläche (15 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-27",
+   "about": {
+    "@type": "City",
+    "name": "Göttingen",
+    "sameAs": "https://www.wikidata.org/wiki/Q3033",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Niedersachsen"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/goettingen.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Göttingen",
+     "item": "__SITE_URL__/stadt/goettingen"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .stand { font-size: .9em; opacity: .85; margin-top: .2em; }
+  .tabellennotiz { font-size: .88em; color: var(--text-schwach); margin: .4em 0 1.2em; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { r: 5; fill: #c0392b; stroke: #fff; stroke-width: 1.5; }
+  svg.deutschland text { font-size: 15px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 3.5px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 7; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1; }
+  /* Auf dem Handy nur die Namen, dafuer groesser; die Anteile stehen in der Tabelle darunter. */
+  @media (max-width: 480px) { svg.deutschland text { font-size: 19px; }
+                              svg.deutschland .anteil { display: none; }
+                              svg.deutschland circle { r: 7; }
+                              svg.deutschland a.ohne-handy text,
+                              svg.deutschland a.ohne-handy line { display: none; } }
+</style>
 </head>
 <body>
-<p>Weiter zur <a href="../?interesse=goettingen#12/51.5339/9.9356">Karte von Göttingen</a>.</p>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Göttingen</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <p class="stand">Zahlen vom 27. November 2026 · Recherche zu Regeln vor Ort: November 2026</p>
+    <nav><a href="../#13/51.53735/9.92653" class="knopf">Göttingen auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Göttingen ist öffentliches Kiffen auf 15 km² verboten, das sind
+<strong>12,5 % der Stadtfläche</strong> von 117 km². Grund sind 1 049
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommt die Fußgängerzone der Innenstadt von 7
+bis 20 Uhr und überall die Gegenwart von Minderjährigen.</p>
+
+<p>Ein Drittel der Stadt ist Wald (32 % der Stadtfläche), vor allem der Stadtwald im Osten,
+und davon liegen nur 3,6 % in einer Zone; ohne den Wald gerechnet sind es
+16,8 %.</p>
+<figure class="karte"><img src="../img/stadt/goettingen-stadt.webp" width="960" height="600" alt="Karte von Göttingen mit Stadtgrenze und den roten Verbotszonen"><figcaption>Göttingen: 15 km² Verbotszone auf 117 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">50</td><td class="zahl">2,8 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">113</td><td class="zahl">3,1 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">314</td><td class="zahl">5,6 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">35</td><td class="zahl">0,8 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">537</td><td class="zahl">8,4 km²</td></tr></tbody></table>
+<p class="tabellennotiz">Jede Art für sich gezählt, Überlappungen also mehrfach. Anbauvereinigungen nur, soweit in OpenStreetMap eingetragen.</p>
+
+<p>Die meisten Zonen gehen auf die 537 Sportstätten zurück, danach auf die
+314 Spielplätze. Auf Spiel- und Bolzplätzen verbietet eine Verordnung der Stadt
+außerdem, zu rauchen und Alkohol zu trinken, bis zu 5.000 Euro
+(<a href="https://www.goettingen.de/portal/dokumenteplus-900000277-25480.html?ordner=1&amp;containerSort=0&amp;schwelle_zuklappen=10&amp;naviID=0&amp;brotID=0">Verordnung über die öffentliche Sicherheit, § 5</a>).</p>
+<h2 id="schillerwiese-cheltenhampark-und-kiessee">Schillerwiese, Cheltenhampark und Kiessee</h2>
+<p>Auf der <strong>Schillerwiese</strong> liegen 70 % der Fläche in einer Zone, um sechs
+Sportanlagen, darunter Tennis und Minigolf, und einen Spielplatz. Der <strong>Cheltenhampark</strong> liegt fast
+ganz in einer Zone (90 %): Um ihn liegen drei Schulen und zwei Kitas.</p>
+<figure class="karte"><img src="../img/stadt/goettingen-schillerwiese.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Schillerwiese (grün umrandet) mit den roten Verbotszonen; etwa 70 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Schillerwiese: 9 ha, davon 70 % Verbotszone. <a href="../#16/51.53458/9.95477">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/goettingen-cheltenhampark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Cheltenhampark (grün umrandet) mit den roten Verbotszonen; etwa 90 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Cheltenhampark: 3 ha, davon 90 % Verbotszone. <a href="../#16/51.53243/9.94204">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Am <strong>Kiessee</strong> liegen 31 % der Wasserfläche in einer Zone, wegen der Sportanlagen und
+Spielplätze am Ufer. Auf einem 100 Meter breiten Streifen Land entlang der Flüsse sind es
+24 %. Kleinere Parks liegen fast ganz in einer Zone: der Levinsche Park zu
+92 %, der Klosterpark zu 93 %. Im Leinepark sind es
+45 %, im Stadtpark 27 %; der Stadtwald mit 1 712 ha
+liegt zu 3 % in einer Zone.</p>
+<figure class="karte"><img src="../img/stadt/goettingen-kiessee.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Kiessee (grün umrandet) mit den roten Verbotszonen; etwa 31 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Kiessee: 16 ha, davon 31 % Verbotszone. <a href="../#16/51.51739/9.92054">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="innenstadt">Innenstadt</h2>
+<p>Göttingen hat eine Liste: Das Straßenverzeichnis zur Straßenreinigungsverordnung kreuzt 36 Abschnitte
+in der Innenstadt als Fußgängerzone an, darunter die Weender Straße zwischen Markt und Jüdenstraße,
+Groner Straße, Markt, Kornmarkt, Johannisstraße und Wilhelmsplatz
+(<a href="https://www.goettingen.de/portal/dokumenteplus-900000281-25480.html?ordner=1&amp;containerSort=0&amp;schwelle_zuklappen=10&amp;naviID=0&amp;brotID=0">Straßenreinigungsverordnung</a>).
+Den nördlichen Teil der Weender Straße führt es nicht als Fußgängerzone. Dort gilt von 7 bis 20 Uhr
+Konsumverbot; blau sind die Fußgängerbereiche aus OpenStreetMap.</p>
+<p>Von Weender und Groner Straße liegen außerdem 57 % in einer
+Sichtweiten-Zone, vom <strong>Markt</strong> 88 %. Der Wilhelmsplatz liegt außerhalb
+(0 %); tagsüber gilt dort aber das Verbot der Fußgängerzone, ebenso auf dem
+Weihnachtsmarkt vor dem Alten Rathaus und um die Johanniskirche.</p>
+<figure class="karte"><img src="../img/stadt/goettingen-fussgaengerzone.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Weender und Groner Straße (grün umrandet) mit den roten Verbotszonen; etwa 57 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Weender und Groner Straße: 3 ha, davon 57 % Verbotszone. <a href="../#16/51.53347/9.93631">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="universitat-und-hawk">Universität und HAWK</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte. Vom Zentralcampus der <strong>Universität</strong> liegen
+15 % in einer Zone, wegen einer
+Kinderkrippe, vom Nordcampus mit den naturwissenschaftlichen Fakultäten
+9 %. Die <strong>HAWK</strong> verbietet bei Hochschulveranstaltungen auf ihrem Gelände Drogen und andere
+berauschende Mittel
+(<a href="https://www.hawk.de/sites/default/files/2024-04/rlhausr_z_00_hausordnung_hawk_2024_0.pdf">Hausordnung</a>).</p>
+<figure class="karte"><img src="../img/stadt/goettingen-uni.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Zentralcampus Georg-August-Universität Göttingen (grün umrandet) mit den roten Verbotszonen; etwa 15 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Zentralcampus Georg-August-Universität Göttingen: 25 ha, davon 15 % Verbotszone. <a href="../#16/51.54161/9.9372">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>Ein Verstoß gegen § 5 Abs. 2 kostet in Niedersachsen 20 bis 500 Euro, in Gegenwart von
+Minderjährigen 20 bis 1.000 Euro
+(<a href="https://www.stk.niedersachsen.de/download/216928/028-Anlage_-_Bussgeldkatalog_Cannabis.pdf.pdf">Bußgeldkatalog Niedersachsen</a>);
+zuständig ist die Stadt. Eigene Verbotszonen für Cannabis hat Göttingen nicht (Stand 27. November 2026).</p>
+<nav aria-label="Nachbarstädte" class="nachbarn">
+<h2 id="nachbarstadte-im-vergleich">Nachbarstädte im Vergleich</h2>
+<p>In Göttingen liegen 12,5 % der Stadtfläche in einer Verbotszone. Die nächsten Städte mit eigener Seite:</p>
+<ul>
+<li><strong><a href="kassel">Kassel</a></strong>, 41 km entfernt: 16,8 % der Stadtfläche; <a href="kassel#innenstadt">Fußgängerzonen in Kassel</a>, <a href="kassel#was-sonst-noch-gilt">Regeln in Kassel (Hessen)</a></li>
+<li><strong><a href="braunschweig">Braunschweig</a></strong>, 91 km entfernt: 14,1 % der Stadtfläche; <a href="braunschweig#innenstadt">Fußgängerzonen in Braunschweig</a>, <a href="braunschweig#was-sonst-noch-gilt">Regeln in Braunschweig</a></li>
+<li><strong><a href="hannover">Hannover</a></strong>, 94 km entfernt: 21,2 % der Stadtfläche; <a href="hannover#innenstadt">Fußgängerzonen in Hannover</a>, <a href="hannover#was-sonst-noch-gilt">Regeln in Hannover</a></li>
+</ul>
+<p>Dieselben Landesregeln (Niedersachsen) gelten auch in <a href="braunschweig#was-sonst-noch-gilt">Braunschweig</a>, <a href="hannover#was-sonst-noch-gilt">Hannover</a>, <a href="osnabrueck#was-sonst-noch-gilt">Osnabrück</a>.</p>
+</nav>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-gottingen-kiffen">Wo darf man in Göttingen kiffen?</h3>
+<p>Nach § 5 KCanG außerhalb der roten Flächen, etwa im Stadtwald (3 % in einer
+Zone). Nicht auf Spiel- und Bolzplätzen, tagsüber nicht in der Fußgängerzone der Innenstadt, nie in
+Gegenwart von Minderjährigen. Weiß heißt nicht sicher erlaubt: Hecken, Bäume und fehlende
+Einrichtungen kennt die Karte nicht.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+27. November 2026. Eine Orientierungshilfe, keine Rechtsauskunft (<a href="../about.html">wie gerechnet wird</a>).</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
 </body>
 </html>

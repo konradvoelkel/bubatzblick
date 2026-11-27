@@ -1,10 +1,8 @@
 <p class="lead">In Köln ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
 <strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km². Grund sind {{objekte}}
-Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
-Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
-nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
-7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
-Jugendlichen.</p>
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr
+und überall die Gegenwart von Minderjährigen.</p>
 
 [[stadtkarte]]
 
@@ -12,10 +10,8 @@ Jugendlichen.</p>
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Den größten Teil machen die
-{{objekte:sports}} Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von {{objekte:playground}} Spielplätzen.
+Die meisten Zonen gehen auf die {{objekte:sports}} Sportstätten zurück, danach auf die
+{{objekte:playground}} Spielplätze.
 
 Auf den Spiel- und Bolzplätzen selbst verbietet die Kölner Stadtordnung Cannabis seit Ende 2024
 zusätzlich, ganz gleich, ob Kinder da sind; das kostet bis zu 1.000 Euro, und die Plätze sind
@@ -53,16 +49,16 @@ Rheins sind es {{ufer:Fluss}}.
 ## Innenstadt und Plätze
 
 Eine amtliche Gesamtliste der Kölner Fußgängerzonen haben wir nicht gefunden. Die Stadt nennt die
-**Hohe Straße** seit 1967 Fußgängerstraße, und ihr Faltblatt zum Radfahren in den Fußgängerzonen
-der City zeigt unter anderem Hohe Straße, Schildergasse, Ehrenstraße, Breite Straße, Alter Markt
-und Roncalliplatz
+**Hohe Straße** seit 1967 Fußgängerstraße, und ihr Faltblatt zum Radfahren in den Fußgängerzonen der
+City zeigt unter anderem Hohe Straße, Schildergasse, Ehrenstraße, Breite Straße, Alter Markt und
+Roncalliplatz
 ([Stadt Köln, Oktober 2025](https://www.stadt-koeln.de/mediaasset/content/pdf66/radverkehr/radfahren-in-fussgaengerzonen-10-2025.pdf)).
 2025 hat sie außerdem die Straßen um den Alter Markt und große Teile des Eigelsteins auf Fuß- und
 Radverkehr beschränkt
 ([Altstadt](https://www.stadt-koeln.de/mediaasset/content/bekanntmachungen/2025/2025.04.09_0070-01_teileinziehung_bereich_altstadt.pdf),
 [Eigelstein](https://www.stadt-koeln.de/mediaasset/content/bekanntmachungen/2025/2025.06.02_0103-01_teileinziehung_eigelstein.pdf)).
-Dort gilt zwischen 7 und 20 Uhr Konsumverbot, ganz gleich, was die Karte rot zeigt; blau zeigt die
-Karte die Fußgängerbereiche, wie sie in OpenStreetMap eingetragen sind.
+Dort gilt von 7 bis 20 Uhr Konsumverbot, ganz gleich, was die Karte rot zeigt; blau sind die
+Fußgängerbereiche aus OpenStreetMap.
 
 Von Hohe Straße und Schildergasse liegen außerdem {{ort:Hohe Straße und Schildergasse}} in einer
 Sichtweiten-Zone, vom Alter Markt {{ort:Alter Markt}}, vom Roncalliplatz am Dom
@@ -89,11 +85,11 @@ verbieten das Rauchen in Gebäuden; zu Cannabis sagen sie nichts
 
 ## Karneval und andere Feste
 
-Die Allgemeinverfügungen der Stadt zu Karneval und zum 11. November regeln Glas, Drohnen und Zugänge,
-Cannabis nicht
+Die Allgemeinverfügungen der Stadt zu Karneval und zum 11. November regeln Glas, Drohnen und
+Zugänge, Cannabis nicht
 ([Stadt Köln, November 2026](https://www.stadt-koeln.de/politik-und-verwaltung/presse/mitteilungen/28755/index.html)).
-Weil an diesen Tagen viele Minderjährige feiern, greift aber das Verbot in ihrer Gegenwart
-(§ 5 Abs. 1 KCanG); die Stadt zählte am 11. November 2025 Hunderte Verstöße gegen den Jugendschutz
+Weil an diesen Tagen viele Minderjährige feiern, greift aber das Verbot in ihrer Gegenwart (§ 5 Abs.
+1 KCanG); die Stadt zählte am 11. November 2025 Hunderte Verstöße gegen den Jugendschutz
 ([Stadt Köln](https://www.stadt-koeln.de/politik-und-verwaltung/presseservice/der-elfte-im-elften-einsatzzahlen)).
 Für Volksfeste und ähnliche Großveranstaltungen sind die Veranstalter nach einem Erlass des Landes
 verpflichtet, Verstöße zu verhindern, notfalls mit einem generellen Konsumverbot
@@ -117,11 +113,11 @@ Eigene Verbotszonen für Cannabis über die Spielplätze hinaus hat Köln nicht 
 
 ### Wo darf man in Köln kiffen?
 
-Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht auf Spiel-
-und Bolzplätzen, nicht in Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht
-es verbietet. Eine weiße Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte
-kennt weder Hecken noch Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap
-fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa im Königsforst ({{wald:Königsforst}} in einer Zone)
+und in weiten Teilen des Äußeren Grüngürtels ({{park:Äußerer Grüngürtel}}). Nicht auf Spiel- und
+Bolzplätzen, tagsüber nicht in den Fußgängerzonen, nie in Gegenwart von Minderjährigen und nicht
+gegen ein Hausrecht. Weiß heißt nicht sicher erlaubt: Hecken, Bäume und fehlende Einrichtungen kennt
+die Karte nicht.
 
 ### Darf man an Karneval kiffen?
 
@@ -131,10 +127,8 @@ Glasverbote der Stadt regeln Cannabis nicht.
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

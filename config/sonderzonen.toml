@@ -19,7 +19,9 @@
 #   [[zone.teil]]   name = Regex auf OSM-name, optional ids = [..] (explizit, ohne name),
 #                   typ = ["way","relation"], puffer_m (ueberschreibt die Klassenbreite),
 #                   lon_max/lon_min/lat_max/lat_min (Mittelpunktfilter), ohne_ids = [..],
-#                   tags = "k=v" statt name, optional = true (kein Abbruch ohne Treffer)
+#                   tags = "k=v" statt name, optional = true (kein Abbruch ohne Treffer),
+#                   ausschnitt = [sued, west, nord, ost] (Geometrie darauf zuschneiden),
+#                   linie = [[lon, lat], ...] (Verbindung von Hand, wo OSM die Grenze nicht fuehrt)
 
 [[zone]]
 id = "nuernberg-hauptbahnhof"
@@ -79,3 +81,69 @@ name = "^(Luisenstraße|Sophienstraße|Elisenstraße|Luitpoldstraße)$"
 lat_max = 48.1432
 lon_min = 11.5600
 lon_max = 11.5666
+
+[[zone]]
+id = "augsburg-friedensplatz-oberhausen"
+name = "Cannabisverbot auf dem Oberhauser Friedensplatz"
+ort = "Augsburg"
+traeger = "Stadt Augsburg"
+rechtsgrundlage = "Satzung für das Forum St. Johannes vom 27. April 2026, § 4 Abs. 3 Nr. 4 e (Art. 24 GO)"
+verbot = ["konsum"]
+zeit = "ganztags"
+# Amtsblatt vom 30. April 2026; die Satzung tritt am Tag nach der Bekanntmachung in Kraft (§ 11).
+gueltig_ab = 2026-05-01
+quelle = "https://www.augsburg.de/fileadmin/user_upload/buergerservice_rathaus/rathaus/stadtrecht/pdf/54/5400.pdf"
+karte = "https://www.augsburg.de/fileadmin/user_upload/buergerservice_rathaus/rathaus/stadtrecht/pdf/54/Anlage_-5400.pdf"
+hinweis = "Der Platz (Flurstück 4121) zwischen St.-Joseph-Kirche, Pfarrhausstraße und Donauwörther Straße; maßgeblich ist der Lageplan der Satzung."
+bbox = [48.3795, 10.8795, 48.3810, 10.8815]
+
+[[zone.teil]]
+ids = [116084365]
+typ = ["way"]
+puffer_m = 0.5
+
+[[zone]]
+id = "darmstadt-stadion-boellenfalltor"
+name = "Cannabisverbot am Stadion am Böllenfalltor"
+ort = "Darmstadt"
+traeger = "Wissenschaftsstadt Darmstadt"
+rechtsgrundlage = "Gefahrenabwehrverordnung für das Merck-Stadion am Böllenfalltor, § 2 Abs. 2 Nr. 14, geändert am 17. November 2026 (§§ 74, 77 HSOG)"
+verbot = ["konsum", "mitfuehren"]
+zeit = "anlässlich von Veranstaltungen im Stadion (Uhrzeiten nennt die Verordnung nicht)"
+# Darmstaedter Echo vom 20. November 2026, in Kraft am 21. November; die Verordnung gilt bis Ende 2032.
+gueltig_ab = 2026-11-21
+gueltig_bis = 2032-12-31
+quelle = "https://www.darmstadt.de/fileadmin/Dateistruktur2024/04_RATHAUS/04_Stadtrecht-Satzungen/Alphabetisches_Sachregister/300_bis_399/371.pdf"
+hinweis = "Straßengeviert um das Stadion nach § 1 der Verordnung, näherungsweise; östlich des Böllenfalltorwegs reicht es im Wald bis zur Steckertswiesen- und Brückenschneise und zum Bahnhof TU Lichtwiese, die OpenStreetMap nur zum Teil führt. Eine Karte hat die Verordnung nicht."
+bbox = [49.8515, 8.6630, 49.8690, 8.6870]
+
+[[zone.teil]]
+# Von der Einmuendung des Poepperlingwegs nach Sueden bis zum Boellenfalltorweg
+name = "^Nieder-Ramstädter Straße$"
+ausschnitt = [49.8522, 8.6630, 49.8625, 8.6750]
+[[zone.teil]]
+name = "^Jahnstraße$"
+ausschnitt = [49.8595, 8.6635, 49.8620, 8.6680]
+[[zone.teil]]
+name = "^(Fichtestraße|Traisaer Straße|Böllenfalltorweg|Otto-Berndt-Straße|Ottilie-Bock-Straße|Eugen-Kogon-Straße|Schwambstraße|Poepperlingweg)$"
+[[zone.teil]]
+name = "^Heinrichwingertsweg$"
+ausschnitt = [49.8540, 8.6638, 49.8565, 8.6700]
+[[zone.teil]]
+# Von der Eugen-Kogon-Strasse bis zur Schwambstrasse
+name = "^Heinrichstraße$"
+ausschnitt = [49.8660, 8.6760, 49.8690, 8.6800]
+[[zone.teil]]
+# Fichtestrasse endet in OSM knapp vor Jahnstrasse und Heinrichwingertsweg
+linie = [[8.6641, 49.85940], [8.6641, 49.86070]]
+[[zone.teil]]
+linie = [[8.66468, 49.85500], [8.66468, 49.85620]]
+[[zone.teil]]
+# Heinrichwingertsweg endet knapp vor der Nieder-Ramstaedter Strasse
+linie = [[8.66880, 49.85500], [8.66940, 49.85520]]
+[[zone.teil]]
+# Poepperlingweg und Schwambstrasse beruehren sich in OSM nicht ganz
+linie = [[8.67316, 49.86396], [8.67322, 49.86417]]
+[[zone.teil]]
+# Schwambstrasse bis zur Heinrichstrasse
+linie = [[8.67687, 49.86677], [8.67700, 49.86775]]

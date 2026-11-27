@@ -1,0 +1,779 @@
+{
+ "stadtflaeche_osm_km2": 130.49,
+ "wald": {
+  "flaeche_km2": 29.1,
+  "anteil_stadt": 0.2233,
+  "anteil_zone": 0.0462,
+  "anteil_zone_ohne_wald": 0.0887
+ },
+ "zonen_km2": 10.34,
+ "anteil": 0.07923,
+ "kategorien": {
+  "sports": {
+   "objekte": 232,
+   "zonen_km2": 5.52
+  },
+  "playground": {
+   "objekte": 234,
+   "zonen_km2": 4.5
+  },
+  "school": {
+   "objekte": 49,
+   "zonen_km2": 1.75
+  },
+  "kindergarten": {
+   "objekte": 42,
+   "zonen_km2": 1.34
+  },
+  "youth": {
+   "objekte": 6,
+   "zonen_km2": 0.15
+  },
+  "childcare": {
+   "objekte": 1,
+   "zonen_km2": 0.05
+  }
+ },
+ "objekte_gesamt": 564,
+ "merkmale": {
+  "see": [
+   {
+    "name": "Schweriner See (Innensee)",
+    "osm": [
+     "r21142"
+    ],
+    "flaeche_ha": 2625.0,
+    "zone_ha": 30.6,
+    "anteil_zone": 0.0117,
+    "lat": 53.64073,
+    "lon": 11.4615,
+    "bbox": [
+     11.41576,
+     53.59606,
+     11.51001,
+     53.68559
+    ]
+   },
+   {
+    "name": "Ziegelsee",
+    "osm": [
+     "r68070"
+    ],
+    "flaeche_ha": 247.9,
+    "zone_ha": 29.2,
+    "anteil_zone": 0.1176,
+    "lat": 53.6606,
+    "lon": 11.42141,
+    "bbox": [
+     11.41154,
+     53.64587,
+     11.44966,
+     53.67508
+    ]
+   },
+   {
+    "name": "Unterer Ostorfer See",
+    "osm": [
+     "r31087"
+    ],
+    "flaeche_ha": 172.1,
+    "zone_ha": 14.0,
+    "anteil_zone": 0.0814,
+    "lat": 53.60998,
+    "lon": 11.39747,
+    "bbox": [
+     11.39012,
+     53.59962,
+     11.41796,
+     53.62002
+    ]
+   },
+   {
+    "name": "Neumühler See",
+    "osm": [
+     "w155218885"
+    ],
+    "flaeche_ha": 169.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.64224,
+    "lon": 11.33978,
+    "bbox": [
+     11.29441,
+     53.62436,
+     11.36288,
+     53.66044
+    ]
+   },
+   {
+    "name": "Medeweger See",
+    "osm": [
+     "w23569916"
+    ],
+    "flaeche_ha": 91.6,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.0041,
+    "lat": 53.65541,
+    "lon": 11.39029,
+    "bbox": [
+     11.38265,
+     53.64625,
+     11.40272,
+     53.66481
+    ]
+   },
+   {
+    "name": "Lankower See",
+    "osm": [
+     "r35748"
+    ],
+    "flaeche_ha": 53.2,
+    "zone_ha": 4.1,
+    "anteil_zone": 0.0765,
+    "lat": 53.63904,
+    "lon": 11.38081,
+    "bbox": [
+     11.36765,
+     53.63209,
+     11.3851,
+     53.64601
+    ]
+   },
+   {
+    "name": "Ziegelsee (Innensee)",
+    "osm": [
+     "w4082611"
+    ],
+    "flaeche_ha": 52.7,
+    "zone_ha": 6.1,
+    "anteil_zone": 0.1164,
+    "lat": 53.64154,
+    "lon": 11.41552,
+    "bbox": [
+     11.41008,
+     53.63664,
+     11.42139,
+     53.64663
+    ]
+   },
+   {
+    "name": "Fauler See",
+    "osm": [
+     "w23569793"
+    ],
+    "flaeche_ha": 50.7,
+    "zone_ha": 5.5,
+    "anteil_zone": 0.1077,
+    "lat": 53.61183,
+    "lon": 11.4254,
+    "bbox": [
+     11.41844,
+     53.60571,
+     11.43843,
+     53.61744
+    ]
+   },
+   {
+    "name": "Oberer Ostorfer See",
+    "osm": [
+     "w147213175"
+    ],
+    "flaeche_ha": 34.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.61976,
+    "lon": 11.38608,
+    "bbox": [
+     11.37923,
+     53.61521,
+     11.39227,
+     53.62424
+    ]
+   },
+   {
+    "name": "Heidensee",
+    "osm": [
+     "r18748125"
+    ],
+    "flaeche_ha": 25.2,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.0187,
+    "lat": 53.64197,
+    "lon": 11.42995,
+    "bbox": [
+     11.42754,
+     53.6376,
+     11.4352,
+     53.64629
+    ]
+   },
+   {
+    "name": "Pfaffenteich",
+    "osm": [
+     "w4082599"
+    ],
+    "flaeche_ha": 12.0,
+    "zone_ha": 2.1,
+    "anteil_zone": 0.173,
+    "lat": 53.63439,
+    "lon": 11.41256,
+    "bbox": [
+     11.4107,
+     53.6309,
+     11.4143,
+     53.637
+    ]
+   },
+   {
+    "name": "Burgsee",
+    "osm": [
+     "r152021"
+    ],
+    "flaeche_ha": 11.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.62303,
+    "lon": 11.41336,
+    "bbox": [
+     11.41095,
+     53.62033,
+     11.41797,
+     53.62567
+    ]
+   },
+   {
+    "name": "Sodemannscher Teich",
+    "osm": [
+     "w27200574"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.65031,
+    "lon": 11.38426,
+    "bbox": [
+     11.38274,
+     53.64819,
+     11.38692,
+     53.65244
+    ]
+   },
+   {
+    "name": "Grimkesee",
+    "osm": [
+     "w25538646"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0036,
+    "lat": 53.62123,
+    "lon": 11.39375,
+    "bbox": [
+     11.39242,
+     53.62043,
+     11.39503,
+     53.62215
+    ]
+   },
+   {
+    "name": "Ziegeleiteich",
+    "osm": [
+     "w27200573"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.65391,
+    "lon": 11.37822,
+    "bbox": [
+     11.37661,
+     53.65304,
+     11.3796,
+     53.65468
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "Zippendorfer Strand",
+    "osm": [
+     "w27041852"
+    ],
+    "flaeche_ha": 1.6,
+    "zone_ha": 1.6,
+    "anteil_zone": 1.0,
+    "lat": 53.60352,
+    "lon": 11.45906,
+    "bbox": [
+     11.45234,
+     53.60263,
+     11.46079,
+     53.60448
+    ]
+   },
+   {
+    "name": "Badestelle Reppiner Burg",
+    "osm": [
+     "w82225375"
+    ],
+    "flaeche_ha": 0.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.60493,
+    "lon": 11.48568,
+    "bbox": [
+     11.48546,
+     53.60473,
+     11.48589,
+     53.60512
+    ]
+   },
+   {
+    "name": "Badestelle Ziegelsee",
+    "osm": [
+     "w1018752917",
+     "w878105670",
+     "w878105671"
+    ],
+    "flaeche_ha": 0.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 1.0,
+    "lat": 53.66305,
+    "lon": 11.41629,
+    "bbox": [
+     11.41592,
+     53.66296,
+     11.41653,
+     53.6631
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Schlossgarten",
+    "osm": [
+     "w187124693"
+    ],
+    "flaeche_ha": 24.9,
+    "zone_ha": 6.4,
+    "anteil_zone": 0.2575,
+    "lat": 53.61894,
+    "lon": 11.41614,
+    "bbox": [
+     11.41259,
+     53.61489,
+     11.41962,
+     53.62348
+    ]
+   },
+   {
+    "name": "Zoo Schwerin",
+    "osm": [
+     "w32552814"
+    ],
+    "flaeche_ha": 19.3,
+    "zone_ha": 17.4,
+    "anteil_zone": 0.9037,
+    "lat": 53.6061,
+    "lon": 11.44155,
+    "bbox": [
+     11.43626,
+     53.60397,
+     11.44791,
+     53.6082
+    ]
+   },
+   {
+    "name": "Park Sachsenberg",
+    "osm": [
+     "w45322396"
+    ],
+    "flaeche_ha": 12.9,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.2174,
+    "lat": 53.65356,
+    "lon": 11.41491,
+    "bbox": [
+     11.41066,
+     53.65049,
+     11.41762,
+     53.6562
+    ]
+   },
+   {
+    "name": "Grünes Tal",
+    "osm": [
+     "w27519941"
+    ],
+    "flaeche_ha": 6.8,
+    "zone_ha": 5.5,
+    "anteil_zone": 0.8024,
+    "lat": 53.60031,
+    "lon": 11.44101,
+    "bbox": [
+     11.43895,
+     53.59839,
+     11.44279,
+     53.6022
+    ]
+   },
+   {
+    "name": "Gutspark Wendenhof",
+    "osm": [
+     "w1175544582"
+    ],
+    "flaeche_ha": 6.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.66826,
+    "lon": 11.42515,
+    "bbox": [
+     11.42207,
+     53.66683,
+     11.42785,
+     53.66976
+    ]
+   },
+   {
+    "name": "Schwimmende Wiese",
+    "osm": [
+     "w30454499"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.62184,
+    "lon": 11.414,
+    "bbox": [
+     11.41244,
+     53.62052,
+     11.41557,
+     53.62317
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Schelfwerder",
+    "osm": [
+     "r3492587",
+     "r3492588"
+    ],
+    "flaeche_ha": 319.2,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.006,
+    "lat": 53.65991,
+    "lon": 11.43557,
+    "bbox": [
+     11.42092,
+     53.6418,
+     11.45661,
+     53.66696
+    ]
+   },
+   {
+    "name": "Waldfriedhof",
+    "osm": [
+     "w29317054"
+    ],
+    "flaeche_ha": 27.2,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.0115,
+    "lat": 53.59103,
+    "lon": 11.41893,
+    "bbox": [
+     11.41439,
+     53.58756,
+     11.42324,
+     53.5944
+    ]
+   },
+   {
+    "name": "Alter Friedhof",
+    "osm": [
+     "w27520241"
+    ],
+    "flaeche_ha": 26.9,
+    "zone_ha": 6.5,
+    "anteil_zone": 0.2417,
+    "lat": 53.62336,
+    "lon": 11.39453,
+    "bbox": [
+     11.38745,
+     53.6207,
+     11.40121,
+     53.62584
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Werderkanal",
+    "osm": [
+     "w34923641"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.2401,
+    "lat": 53.64662,
+    "lon": 11.42729,
+    "bbox": [
+     11.42594,
+     53.64511,
+     11.43093,
+     53.64808
+    ]
+   },
+   {
+    "name": "Fluss",
+    "osm": [
+     "w512377246"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.5812,
+    "lon": 11.48812,
+    "bbox": [
+     11.48748,
+     53.57967,
+     11.48865,
+     53.58263
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Hochschule der Bundesagentur für Arbeit",
+    "osm": [
+     "w93361612"
+    ],
+    "flaeche_ha": 5.3,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.4803,
+    "lat": 53.65581,
+    "lon": 11.40824,
+    "bbox": [
+     11.40514,
+     53.65444,
+     11.41091,
+     53.65744
+    ]
+   },
+   {
+    "name": "Schweriner Aus– und Weiterbildungszentrum",
+    "osm": [
+     "w1545965584"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.2459,
+    "lat": 53.64915,
+    "lon": 11.38358,
+    "bbox": [
+     11.3826,
+     53.64818,
+     11.38478,
+     53.64984
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Platz der Freiheit",
+    "osm": [
+     "w1029107119"
+    ],
+    "flaeche_ha": 0.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 53.63361,
+    "lon": 11.40253,
+    "bbox": [
+     11.40148,
+     53.63303,
+     11.40352,
+     53.63422
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Werderkanal",
+   "flaeche_ha": 12.9,
+   "zone_ha": 2.1,
+   "anteil_zone": 0.1597
+  },
+  {
+   "name": "Fluss",
+   "flaeche_ha": 4.5,
+   "zone_ha": 0.0,
+   "anteil_zone": 0.0
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 12.1,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 53.61561,
+  "lon": 11.43005,
+  "bbox": [
+   11.28979,
+   53.54194,
+   11.51023,
+   53.68994
+  ]
+ },
+ "orte": [
+  {
+   "name": "Mecklenburgstraße und Schmiedestraße",
+   "osm": [
+    "w101337451",
+    "w409857125"
+   ],
+   "flaeche_ha": 0.18,
+   "bbox": [
+    11.41192,
+    53.62675,
+    11.41372,
+    53.62922
+   ],
+   "anteil_zone": 0.3504,
+   "art": "linie",
+   "lat": 53.62731,
+   "lon": 11.41224
+  },
+  {
+   "name": "Am Markt",
+   "osm": [
+    "w4163895"
+   ],
+   "flaeche_ha": 0.33,
+   "bbox": [
+    11.41438,
+    53.62851,
+    11.41545,
+    53.6292
+   ],
+   "anteil_zone": 0.1033,
+   "art": "flaeche",
+   "lat": 53.62886,
+   "lon": 11.41492
+  },
+  {
+   "name": "Marienplatz",
+   "osm": [
+    "w25508936",
+    "w26958450",
+    "w548640544"
+   ],
+   "flaeche_ha": 0.42,
+   "bbox": [
+    11.41012,
+    53.6277,
+    11.41131,
+    53.629
+   ],
+   "anteil_zone": 0.2497,
+   "art": "flaeche",
+   "lat": 53.62833,
+   "lon": 11.41097
+  },
+  {
+   "name": "Pfaffenteich Promenade",
+   "osm": [
+    "w76964663"
+   ],
+   "flaeche_ha": 0.35,
+   "bbox": [
+    11.41103,
+    53.63056,
+    11.41306,
+    53.63109
+   ],
+   "anteil_zone": 1.0,
+   "art": "flaeche",
+   "lat": 53.63082,
+   "lon": 11.41208
+  },
+  {
+   "name": "Burggarten",
+   "osm": [
+    "w209757213"
+   ],
+   "flaeche_ha": 1.64,
+   "bbox": [
+    11.41792,
+    53.62333,
+    11.42057,
+    53.62545
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 53.62438,
+   "lon": 11.42009
+  },
+  {
+   "name": "Franzosenweg",
+   "osm": [
+    "w1340720187",
+    "w25568977",
+    "w27041121",
+    "w54521253"
+   ],
+   "flaeche_ha": 3.11,
+   "bbox": [
+    11.42324,
+    53.6032,
+    11.45174,
+    53.62198
+   ],
+   "anteil_zone": 0.6719,
+   "art": "linie",
+   "lat": 53.62081,
+   "lon": 11.42943
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Mecklenburg-Vorpommern (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  53.627,
+  11.415
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Schlossgarten",
+   "schlossgarten"
+  ],
+  [
+   "ort",
+   "Burggarten",
+   "burggarten"
+  ],
+  [
+   "ort",
+   "Franzosenweg",
+   "franzosenweg"
+  ],
+  [
+   "ort",
+   "Marienplatz",
+   "marienplatz"
+  ],
+  [
+   "park",
+   "Zoo Schwerin",
+   "zoo"
+  ]
+ ]
+}

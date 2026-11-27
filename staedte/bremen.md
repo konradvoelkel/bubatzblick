@@ -1,10 +1,8 @@
 <p class="lead">In Bremen ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
 <strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km² (die Stadt Bremen, ohne
-Bremerhaven). Grund sind {{objekte}} Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht
-konsumiert werden darf, vor allem Sportstätten und Spielplätze. Sichtweite heißt: höchstens
-100 Meter vom Eingangsbereich, und nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die
-Fußgängerzonen, in denen zwischen 7 und 20 Uhr nicht konsumiert werden darf, und überall die
-unmittelbare Gegenwart von Kindern und Jugendlichen.</p>
+Bremerhaven). Grund sind {{objekte}} Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite,
+bis 100 Meter vom Eingang und ohne Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen
+die Fußgängerzonen von 7 bis 20 Uhr und überall die Gegenwart von Minderjährigen.</p>
 
 [[stadtkarte]]
 
@@ -12,16 +10,13 @@ unmittelbare Gegenwart von Kindern und Jugendlichen.</p>
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Den größten Teil machen die
-{{objekte:sports}} Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von {{objekte:playground}} Spielplätzen.
+Die meisten Zonen gehen auf die {{objekte:sports}} Sportstätten zurück, danach auf die
+{{objekte:playground}} Spielplätze.
 
-Auf den Spielplätzen selbst verbietet das Bremische Nichtraucherschutzgesetz seit 2013 das
-Rauchen; nach Auffassung der Polizei gilt das auch für Cannabis. Ab dem 1. Januar 2027 nennt das
-Gesetz Cannabis ausdrücklich und verbietet das Rauchen auch unter den Dächern von Haltestellen
+Auf den Spielplätzen selbst verbietet das Bremische Nichtraucherschutzgesetz seit 2013 das Rauchen;
+nach Auffassung der Polizei gilt das auch für Cannabis. Ab dem 1. Januar 2027 nennt das Gesetz
+Cannabis ausdrücklich und verbietet das Rauchen auch unter den Dächern von Haltestellen
 ([Gesetzblatt Bremen, September 2026](https://www.gesetzblatt.bremen.de/fastmedia/218/2026_09_08_GBl_Nr_0091_signed.pdf)).
-Anbauvereinigungen fehlen in der Tabelle: Wo sie anbauen, ist nicht veröffentlicht.
 
 ## Bürgerpark und andere Parks
 
@@ -58,11 +53,10 @@ einzelne, etwa die Langenstraße mit Großer und Kleiner Waagestraße
 ([Amtsblatt 2013](https://www.amtsblatt.bremen.de/fastmedia/233/2013-02-18-amtsblatt-2013-nr-38-widmung-langenstrasse.pdf))
 und die Fußgängerzonen der Vegesacker Innenstadt
 ([Amtsblatt 2025](https://www.amtsblatt.bremen.de/fastmedia/233/2025_10_09_ABl_Nr_0179_signed.pdf)).
-Der Senat spricht von den
-„Fußgängerzonen Obernstraße und Sögestraße“, auch wenn durch die Obernstraße die Straßenbahn fährt
+Der Senat spricht von den „Fußgängerzonen Obernstraße und Sögestraße“, auch wenn durch die
+Obernstraße die Straßenbahn fährt
 ([Senat, Februar 2024](https://www.rathaus.bremen.de/sixcms/media.php/13/top%205_20240206_Strassenbahnfuehrung_und_Innenstadt.pdf)).
-Dort gilt zwischen 7 und 20 Uhr Konsumverbot; blau zeigt die Karte die Fußgängerbereiche, wie sie
-in OpenStreetMap eingetragen sind.
+Dort gilt von 7 bis 20 Uhr Konsumverbot; blau sind die Fußgängerbereiche aus OpenStreetMap.
 
 Von Obern- und Sögestraße liegen außerdem {{ort:Obernstraße und Sögestraße}} in einer
 Sichtweiten-Zone. Marktplatz ({{ort:Am Markt}}) und Domshof ({{ort:Domshof}}) liegen außerhalb der
@@ -101,11 +95,11 @@ Verbotszonen für Cannabis hat Bremen nicht (Stand {{stand}}).
 
 ### Wo darf man in Bremen kiffen?
 
-Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet, etwa im
-Bürgerpark und auf dem Gelände der Universität. Eine weiße Fläche auf der Karte heißt nicht, dass
-Konsum dort erlaubt ist: Die Karte kennt weder Hecken noch Bäume, die die Sicht nehmen, noch
-Einrichtungen, die in OpenStreetMap fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa auf der Wiese am Werdersee
+({{ort:Werdersee (Wiese und Badestelle)}} in einer Zone). Nicht im Bürgerpark, dessen Parkordnung
+Cannabis verbietet, nicht auf dem Gelände der Universität, tagsüber nicht in den Fußgängerzonen und
+nie in Gegenwart von Minderjährigen. Weiß heißt nicht sicher erlaubt: Hecken, Bäume und fehlende
+Einrichtungen kennt die Karte nicht.
 
 ### Darf man im Bürgerpark kiffen?
 
@@ -114,10 +108,8 @@ Karte keine Zone zeigt.
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

@@ -1,0 +1,896 @@
+{
+ "stadtflaeche_osm_km2": 87.61,
+ "wald": {
+  "flaeche_km2": 17.6,
+  "anteil_stadt": 0.2006,
+  "anteil_zone": 0.0681,
+  "anteil_zone_ohne_wald": 0.1612
+ },
+ "zonen_km2": 12.49,
+ "anteil": 0.14255,
+ "kategorien": {
+  "sports": {
+   "objekte": 350,
+   "zonen_km2": 7.29
+  },
+  "playground": {
+   "objekte": 200,
+   "zonen_km2": 4.3
+  },
+  "school": {
+   "objekte": 68,
+   "zonen_km2": 2.16
+  },
+  "kindergarten": {
+   "objekte": 51,
+   "zonen_km2": 1.32
+  },
+  "youth": {
+   "objekte": 17,
+   "zonen_km2": 0.33
+  },
+  "childcare": {
+   "objekte": 1,
+   "zonen_km2": 0.02
+  }
+ },
+ "objekte_gesamt": 687,
+ "merkmale": {
+  "hochschule": [
+   {
+    "name": "Universität Würzburg",
+    "osm": [
+     "r14647652"
+    ],
+    "flaeche_ha": 90.8,
+    "zone_ha": 25.3,
+    "anteil_zone": 0.2784,
+    "lat": 49.78061,
+    "lon": 9.97163,
+    "bbox": [
+     9.96423,
+     49.7744,
+     9.97946,
+     49.78876
+    ]
+   },
+   {
+    "name": "Campus Hubland Süd",
+    "osm": [
+     "w4481969"
+    ],
+    "flaeche_ha": 53.1,
+    "zone_ha": 12.0,
+    "anteil_zone": 0.2256,
+    "lat": 49.78061,
+    "lon": 9.97163,
+    "bbox": [
+     9.96423,
+     49.77442,
+     9.97659,
+     49.78624
+    ]
+   },
+   {
+    "name": "Campus Hubland Nord",
+    "osm": [
+     "w57723974"
+    ],
+    "flaeche_ha": 37.8,
+    "zone_ha": 13.3,
+    "anteil_zone": 0.3526,
+    "lat": 49.78572,
+    "lon": 9.97311,
+    "bbox": [
+     9.96814,
+     49.78284,
+     9.97946,
+     49.78872
+    ]
+   },
+   {
+    "name": "Campus Röntgenring",
+    "osm": [
+     "w23961482"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0667,
+    "lat": 49.79947,
+    "lon": 9.9286,
+    "bbox": [
+     9.92624,
+     49.7988,
+     9.93059,
+     49.80009
+    ]
+   },
+   {
+    "name": "Technische Hochschule Würzburg-Schweinfurt",
+    "osm": [
+     "r21384580",
+     "w1104480887"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.4804,
+    "lat": 49.77747,
+    "lon": 9.96315,
+    "bbox": [
+     9.96191,
+     49.77704,
+     9.96444,
+     49.77797
+    ]
+   },
+   {
+    "name": "Neue Universität",
+    "osm": [
+     "w23961491"
+    ],
+    "flaeche_ha": 1.4,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.1177,
+    "lat": 49.78822,
+    "lon": 9.93525,
+    "bbox": [
+     9.93389,
+     49.7875,
+     9.93635,
+     49.78896
+    ]
+   },
+   {
+    "name": "Fakultät Humanwissenschaften",
+    "osm": [
+     "w105780429"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.6057,
+    "lat": 49.78654,
+    "lon": 9.95146,
+    "bbox": [
+     9.95061,
+     49.7859,
+     9.9529,
+     49.7875
+    ]
+   },
+   {
+    "name": "THWS Campus Röntgenring",
+    "osm": [
+     "w43557165"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.2138,
+    "lat": 49.79988,
+    "lon": 9.93147,
+    "bbox": [
+     9.93032,
+     49.79938,
+     9.93262,
+     49.80038
+    ]
+   },
+   {
+    "name": "Universitäts-Sportzentrum",
+    "osm": [
+     "w1099883299"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.9903,
+    "lat": 49.7763,
+    "lon": 9.92678,
+    "bbox": [
+     9.92582,
+     49.77567,
+     9.9278,
+     49.77684
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Lehnleite",
+    "osm": [
+     "w32267484"
+    ],
+    "flaeche_ha": 46.7,
+    "zone_ha": 6.9,
+    "anteil_zone": 0.1472,
+    "lat": 49.79337,
+    "lon": 9.97489,
+    "bbox": [
+     9.96502,
+     49.79095,
+     9.98502,
+     49.79574
+    ]
+   },
+   {
+    "name": "Landesgartenschau-Gelände 2018",
+    "osm": [
+     "w559366348"
+    ],
+    "flaeche_ha": 21.7,
+    "zone_ha": 15.7,
+    "anteil_zone": 0.7252,
+    "lat": 49.78882,
+    "lon": 9.97519,
+    "bbox": [
+     9.96407,
+     49.78523,
+     9.98106,
+     49.79231
+    ]
+   },
+   {
+    "name": "Ringpark",
+    "osm": [
+     "r13645698"
+    ],
+    "flaeche_ha": 21.7,
+    "zone_ha": 15.0,
+    "anteil_zone": 0.6904,
+    "lat": 49.78737,
+    "lon": 9.93605,
+    "bbox": [
+     9.93196,
+     49.78575,
+     9.94592,
+     49.79939
+    ]
+   },
+   {
+    "name": "Mainwiesen",
+    "osm": [
+     "r2318948"
+    ],
+    "flaeche_ha": 10.6,
+    "zone_ha": 6.9,
+    "anteil_zone": 0.6493,
+    "lat": 49.79968,
+    "lon": 9.90042,
+    "bbox": [
+     9.89015,
+     49.79552,
+     9.91539,
+     49.80382
+    ]
+   },
+   {
+    "name": "Hofgarten Würzburg",
+    "osm": [
+     "w7883950"
+    ],
+    "flaeche_ha": 9.1,
+    "zone_ha": 5.9,
+    "anteil_zone": 0.6494,
+    "lat": 49.79148,
+    "lon": 9.93777,
+    "bbox": [
+     9.93553,
+     49.78956,
+     9.94199,
+     49.79341
+    ]
+   },
+   {
+    "name": "Sieboldswäldchen",
+    "osm": [
+     "w4616500"
+    ],
+    "flaeche_ha": 8.9,
+    "zone_ha": 6.7,
+    "anteil_zone": 0.7618,
+    "lat": 49.77969,
+    "lon": 9.95789,
+    "bbox": [
+     9.95653,
+     49.7777,
+     9.96326,
+     49.78164
+    ]
+   },
+   {
+    "name": "Ringpark Klein-Nizza",
+    "osm": [
+     "w10202709"
+    ],
+    "flaeche_ha": 8.3,
+    "zone_ha": 4.6,
+    "anteil_zone": 0.55,
+    "lat": 49.79037,
+    "lon": 9.94126,
+    "bbox": [
+     9.93698,
+     49.78771,
+     9.94311,
+     49.79315
+    ]
+   },
+   {
+    "name": "Landesgartenschau-Gelände 1990",
+    "osm": [
+     "r16332636"
+    ],
+    "flaeche_ha": 8.2,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.2304,
+    "lat": 49.7925,
+    "lon": 9.91911,
+    "bbox": [
+     9.91519,
+     49.79038,
+     9.92295,
+     49.7946
+    ]
+   },
+   {
+    "name": "Ringpark Rennweger Glacis",
+    "osm": [
+     "w4996587"
+    ],
+    "flaeche_ha": 5.8,
+    "zone_ha": 5.2,
+    "anteil_zone": 0.9004,
+    "lat": 49.79551,
+    "lon": 9.94355,
+    "bbox": [
+     9.94243,
+     49.79296,
+     9.94495,
+     49.79792
+    ]
+   },
+   {
+    "name": "Ringpark Pleicherglacis",
+    "osm": [
+     "w12696882"
+    ],
+    "flaeche_ha": 4.5,
+    "zone_ha": 4.0,
+    "anteil_zone": 0.8803,
+    "lat": 49.80043,
+    "lon": 9.92916,
+    "bbox": [
+     9.92562,
+     49.79954,
+     9.93351,
+     49.80135
+    ]
+   },
+   {
+    "name": "Ringpark Sanderglacis",
+    "osm": [
+     "w24337155",
+     "w4485933",
+     "w4575407",
+     "w4575409"
+    ],
+    "flaeche_ha": 4.1,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.7481,
+    "lat": 49.78737,
+    "lon": 9.93605,
+    "bbox": [
+     9.93196,
+     49.78581,
+     9.93751,
+     49.78839
+    ]
+   },
+   {
+    "name": "Adamiwiese",
+    "osm": [
+     "w4616501"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.4879,
+    "lat": 49.7801,
+    "lon": 9.95591,
+    "bbox": [
+     9.95419,
+     49.77822,
+     9.95861,
+     49.782
+    ]
+   },
+   {
+    "name": "Ringpark Haugerglacis",
+    "osm": [
+     "w12696872",
+     "w12696873"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.661,
+    "lat": 49.80023,
+    "lon": 9.93902,
+    "bbox": [
+     9.9359,
+     49.79962,
+     9.9413,
+     49.80099
+    ]
+   },
+   {
+    "name": "Neutorwiese",
+    "osm": [
+     "w34398880"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.7913,
+    "lon": 9.92216,
+    "bbox": [
+     9.92006,
+     49.79046,
+     9.92341,
+     49.79235
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Guttenberger Forst",
+    "osm": [
+     "r58244"
+    ],
+    "flaeche_ha": 259.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.74701,
+    "lon": 9.91503,
+    "bbox": [
+     9.88215,
+     49.7392,
+     9.92833,
+     49.75493
+    ]
+   },
+   {
+    "name": "Mühltannen",
+    "osm": [
+     "w4576743"
+    ],
+    "flaeche_ha": 125.7,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.0111,
+    "lat": 49.8375,
+    "lon": 9.91434,
+    "bbox": [
+     9.90907,
+     49.83007,
+     9.92585,
+     49.84515
+    ]
+   },
+   {
+    "name": "Schenkentannenholz",
+    "osm": [
+     "w4576722"
+    ],
+    "flaeche_ha": 110.6,
+    "zone_ha": 7.9,
+    "anteil_zone": 0.0716,
+    "lat": 49.8218,
+    "lon": 9.91143,
+    "bbox": [
+     9.9024,
+     49.81426,
+     9.91993,
+     49.82902
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w4910762"
+    ],
+    "flaeche_ha": 8.0,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.1615,
+    "lat": 49.76501,
+    "lon": 9.93178,
+    "bbox": [
+     9.92871,
+     49.76342,
+     9.93465,
+     49.76673
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Berliner Platz",
+    "osm": [
+     "w1112212297"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.7357,
+    "lat": 49.79864,
+    "lon": 9.94282,
+    "bbox": [
+     9.94113,
+     49.79783,
+     9.94396,
+     49.79952
+    ]
+   },
+   {
+    "name": "Residenzplatz",
+    "osm": [
+     "r4743094",
+     "w1408754039"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 1.0,
+    "anteil_zone": 0.4825,
+    "lat": 49.79295,
+    "lon": 9.9378,
+    "bbox": [
+     9.93627,
+     49.79207,
+     9.93901,
+     49.79382
+    ]
+   },
+   {
+    "name": "Wittelsbacherplatz",
+    "osm": [
+     "w23034111"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.3554,
+    "lat": 49.78697,
+    "lon": 9.95106,
+    "bbox": [
+     9.95045,
+     49.78644,
+     9.95199,
+     49.7876
+    ]
+   },
+   {
+    "name": "Hublandplatz",
+    "osm": [
+     "w833532228"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.6066,
+    "lat": 49.78984,
+    "lon": 9.96997,
+    "bbox": [
+     9.96946,
+     49.78961,
+     9.9705,
+     49.7902
+    ]
+   },
+   {
+    "name": "Oskar-Laredo-Platz",
+    "osm": [
+     "w1111092754"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.80141,
+    "lon": 9.9227,
+    "bbox": [
+     9.92178,
+     49.80078,
+     9.92359,
+     49.80204
+    ]
+   },
+   {
+    "name": "Bibliotheksvorplatz",
+    "osm": [
+     "r16220"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.7823,
+    "lon": 9.96782,
+    "bbox": [
+     9.96746,
+     49.78179,
+     9.96914,
+     49.7828
+    ]
+   },
+   {
+    "name": "Innerer Burghof",
+    "osm": [
+     "r1381137"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.78974,
+    "lon": 9.92048,
+    "bbox": [
+     9.91989,
+     49.78952,
+     9.92172,
+     49.78995
+    ]
+   },
+   {
+    "name": "Greiffenclauhof",
+    "osm": [
+     "w1040650372"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.7897,
+    "lon": 9.91826,
+    "bbox": [
+     9.91777,
+     49.78947,
+     9.91878,
+     49.78998
+    ]
+   },
+   {
+    "name": "Josef-Stangl-Platz",
+    "osm": [
+     "w1041360826"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 49.79052,
+    "lon": 9.93553,
+    "bbox": [
+     9.93507,
+     49.7903,
+     9.936,
+     49.79073
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r10115",
+     "r2435146",
+     "r402113",
+     "w168983508",
+     "w235971667",
+     "w235971673",
+     "w235971674",
+     "w93598248"
+    ],
+    "flaeche_ha": 92.5,
+    "zone_ha": 24.9,
+    "anteil_zone": 0.2693,
+    "lat": 49.79372,
+    "lon": 9.92578,
+    "bbox": [
+     9.87131,
+     49.76521,
+     9.95556,
+     49.82243
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 253.7,
+   "zone_ha": 54.6,
+   "anteil_zone": 0.2153
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 11.8,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 49.77799,
+  "lon": 9.94341,
+  "bbox": [
+   9.87009,
+   49.71026,
+   10.01532,
+   49.84583
+  ]
+ },
+ "orte": [
+  {
+   "name": "Domstraße und Schönbornstraße",
+   "osm": [
+    "w119086712",
+    "w120067065",
+    "w1334831323",
+    "w1344779437",
+    "w1344779438",
+    "w1372756039",
+    "w171499357",
+    "w22662546",
+    "w28441628",
+    "w28808700",
+    "w28808701",
+    "w28808702",
+    "w30278672",
+    "w333209786",
+    "w35419675",
+    "w4568540",
+    "w4575504",
+    "w491635831",
+    "w509399583",
+    "w6110030",
+    "w6110033",
+    "w87983764",
+    "w982829585",
+    "w982829586"
+   ],
+   "flaeche_ha": 1.5,
+   "bbox": [
+    9.92859,
+    49.79307,
+    9.93491,
+    49.79619
+   ],
+   "anteil_zone": 0.4918,
+   "art": "flaeche",
+   "lat": 49.79552,
+   "lon": 9.93346
+  },
+  {
+   "name": "Marktplatz",
+   "osm": [
+    "w1280879797",
+    "w13024508",
+    "w1344779433",
+    "w1344779435",
+    "w264740326",
+    "w265759795",
+    "w298432117",
+    "w298432138",
+    "w298432149",
+    "w401910577",
+    "w401910578",
+    "w401910579",
+    "w4575533",
+    "w485666430",
+    "w970498050",
+    "w970498054",
+    "w970498056",
+    "w970498057",
+    "w970498059",
+    "w970498060",
+    "w970498062",
+    "w970498064"
+   ],
+   "flaeche_ha": 0.89,
+   "bbox": [
+    9.9284,
+    49.79393,
+    9.93108,
+    49.79506
+   ],
+   "anteil_zone": 0.0,
+   "art": "linie",
+   "lat": 49.79452,
+   "lon": 9.92981
+  },
+  {
+   "name": "Alte Mainbrücke",
+   "osm": [
+    "w172450950",
+    "w199642088",
+    "w22956047",
+    "w26158255",
+    "w6110020"
+   ],
+   "flaeche_ha": 0.4,
+   "bbox": [
+    9.92449,
+    49.79281,
+    9.92825,
+    49.79325
+   ],
+   "anteil_zone": 0.0,
+   "art": "linie",
+   "lat": 49.79303,
+   "lon": 9.92626
+  },
+  {
+   "name": "Mainwiesen",
+   "osm": [
+    "r2318948"
+   ],
+   "flaeche_ha": 10.65,
+   "bbox": [
+    9.89015,
+    49.79552,
+    9.91539,
+    49.80382
+   ],
+   "anteil_zone": 0.6493,
+   "art": "flaeche",
+   "lat": 49.79968,
+   "lon": 9.90042
+  },
+  {
+   "name": "Talavera",
+   "osm": [
+    "w146619231"
+   ],
+   "flaeche_ha": 0.36,
+   "bbox": [
+    9.91863,
+    49.79903,
+    9.91982,
+    49.79981
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.79941,
+   "lon": 9.91923
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Regierungsbezirks Unterfranken (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  49.793,
+  9.932
+ ],
+ "og_zoom": 13.0,
+ "bilder": [
+  [
+   "park",
+   "Ringpark",
+   "ringpark"
+  ],
+  [
+   "park",
+   "Hofgarten Würzburg",
+   "hofgarten"
+  ],
+  [
+   "ort",
+   "Mainwiesen",
+   "mainwiesen"
+  ],
+  [
+   "park",
+   "Landesgartenschau-Gelände 2018",
+   "hubland"
+  ],
+  [
+   "ort",
+   "Domstraße und Schönbornstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "Alte Mainbrücke",
+   "mainbruecke"
+  ]
+ ]
+}

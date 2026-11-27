@@ -1,10 +1,8 @@
 <p class="lead">In Düsseldorf ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
 <strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km². Grund sind {{objekte}}
-Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
-Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
-nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen der Innenstadt,
-in denen zwischen 7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare
-Gegenwart von Kindern und Jugendlichen.</p>
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen der Innenstadt
+von 7 bis 20 Uhr und überall die Gegenwart von Minderjährigen.</p>
 
 [[stadtkarte]]
 
@@ -12,10 +10,8 @@ Gegenwart von Kindern und Jugendlichen.</p>
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Den größten Teil machen die
-{{objekte:sports}} Sportstätten aus, von Fußballplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von {{objekte:playground}} Spielplätzen.
+Den größten Teil machen die {{objekte:sports}} Sportstätten aus, von Fußballplätzen über Turnhallen
+bis zu Fitnessstudios, gefolgt von {{objekte:playground}} Spielplätzen.
 
 Anbauvereinigungen fehlen in der Tabelle. Laut der Liste des Deutschen Hanfverbands (Stand April
 2026) hat Düsseldorf drei genehmigte Vereine; wo sie anbauen und abgeben, ist nicht öffentlich und
@@ -51,11 +47,12 @@ einer Zone, vor allem an den Rändern, wo Sportplätze und Jugendeinrichtungen a
 ## Am Rhein
 
 Die **Rheinuferpromenade** von der Oberkasseler Brücke bis zum Landtag ist nach Angaben der Stadt
-offiziell eine Fußgängerzone ([t-online, Mai 2024](https://duesseldorf.t-online.de/region/duesseldorf/id_100414396/japan-tag-in-duesseldorf-cannabis-konsum-verboten.html)).
+offiziell eine Fußgängerzone
+([t-online, Mai 2024](https://duesseldorf.t-online.de/region/duesseldorf/id_100414396/japan-tag-in-duesseldorf-cannabis-konsum-verboten.html)).
 Dort gilt das Verbot also tagsüber auf der ganzen Länge, ganz gleich, was die Karte rot zeigt; nach
 20 Uhr bleiben die Sichtweiten-Zonen, die {{ort:Rheinuferpromenade}} der Promenade abdecken. Am
-Rathausufer haben Stadt und Polizei eine gemeinsame Anlaufstelle; an Wochenenden und vor
-Feiertagen sind Ordnungsdienst und Polizei von dort aus zwischen 16 und 1 Uhr gemeinsam unterwegs
+Rathausufer haben Stadt und Polizei eine gemeinsame Anlaufstelle; an Wochenenden und vor Feiertagen
+sind Ordnungsdienst und Polizei von dort aus zwischen 16 und 1 Uhr gemeinsam unterwegs
 ([Stadt Düsseldorf](https://www.duesseldorf.de/aktuelles/news/detailansicht/newsdetail/gemeinsame-anlaufstelle-von-stadt-und-polizei-am-rheinufer/)).
 
 Gegenüber, auf den **Rheinwiesen in Oberkassel** (rund 84 ha Wiese samt Festplatz), liegen nur
@@ -85,11 +82,11 @@ Der **Ständehauspark** mit Kaiserteich und Schwanenspiegel in Unterbilk liegt z
 
 ## Hochschulen
 
-Hochschulen sind nach § 5 KCanG keine Verbotsorte. Auf dem Campus der
-**Heinrich-Heine-Universität** im Süden der Stadt ({{hochschule:Heinrich-Heine-Universität Düsseldorf:ha}}
-samt Universitätsklinikum) liegen trotzdem {{hochschule:Heinrich-Heine-Universität Düsseldorf}} in
-einer Zone: Dort gibt es dreizehn Sportanlagen, vier Kitas und drei Spielplätze. Für die
-Gebäude gilt außerdem das Hausrecht der Hochschule.
+Hochschulen sind nach § 5 KCanG keine Verbotsorte. Auf dem Campus der **Heinrich-Heine-Universität**
+im Süden der Stadt ({{hochschule:Heinrich-Heine-Universität Düsseldorf:ha}} samt
+Universitätsklinikum) liegen trotzdem {{hochschule:Heinrich-Heine-Universität Düsseldorf}} in einer
+Zone: Dort gibt es dreizehn Sportanlagen, vier Kitas und drei Spielplätze. Für die Gebäude gilt
+außerdem das Hausrecht der Hochschule.
 
 [[bild:uni]]
 
@@ -129,10 +126,10 @@ Zuständig ist das Ordnungsamt; nach eigener Auskunft im Rat sind die Fallzahlen
 
 ### Wo darf man in Düsseldorf kiffen?
 
-Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet. Eine weiße
-Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte kennt weder Hecken
-noch Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa am Elbsee ({{see:Elbsee}} in einer Zone) und auf
+den Rheinwiesen in Oberkassel ({{ort:Rheinwiesen Oberkassel}}). Tagsüber nicht in den Fußgängerzonen
+der Altstadt, nie in Gegenwart von Minderjährigen und nicht gegen ein Hausrecht. Weiß heißt nicht
+sicher erlaubt: Hecken, Bäume und fehlende Einrichtungen kennt die Karte nicht.
 
 ### Gilt das Verbot auch am Rhein?
 
@@ -142,10 +139,8 @@ und Feste wie die Rheinkirmes ändern das.
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

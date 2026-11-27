@@ -1,10 +1,8 @@
 <p class="lead">In Berlin ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
 <strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km². Grund sind {{objekte}}
-Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
-Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
-nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
-7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
-Jugendlichen.</p>
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr
+und überall die Gegenwart von Minderjährigen.</p>
 
 Innerhalb des S-Bahn-Rings, gemessen an der Umweltzone, liegen {{ring_zone}} der Fläche in einer
 Zone. Am Stadtrand sind es weniger: {{wald_anteil}} Berlins sind Wald, vom Grunewald bis zu den
@@ -17,10 +15,9 @@ Müggelbergen, und dort liegen nur {{wald_zone}} in einer Zone. Ohne den Wald ge
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Den größten Teil machen die
-{{objekte:sports}} Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von {{objekte:playground}} Spielplätzen und {{objekte:kindergarten}} Kitas.
+Den größten Teil machen die {{objekte:sports}} Sportstätten aus, von Bolzplätzen über Turnhallen bis
+zu Fitnessstudios, gefolgt von {{objekte:playground}} Spielplätzen und {{objekte:kindergarten}}
+Kitas.
 
 Von den Anbauvereinigungen ist in OpenStreetMap nur eine Abgabestelle eingetragen, an der
 Goerzallee in Steglitz-Zehlendorf. Das Landesamt für Gesundheit und Soziales hatte bis Mai 2026
@@ -93,29 +90,30 @@ Friedrichstraße ist seit Juli 2023 keine Fußgängerzone mehr. Die Karte zeigt 
 OpenStreetMap als Fußgängerbereich eingetragen ist, und das ist mehr als die Fußgängerzonen im
 Rechtssinn.
 
-In der Fußgängerzone der Wilmersdorfer Straße liegen außerdem {{ort:Wilmersdorfer Straße (Fußgängerzone)}}
-in einer Sichtweiten-Zone. Der **Alexanderplatz** dagegen liegt nur zu {{platz:Alexanderplatz}} in
-einer Zone, der Gendarmenmarkt zu {{platz:Gendarmenmarkt}}, der Breitscheidplatz zu
-{{platz:Breitscheidplatz}}, der Hermannplatz zu {{ort:Hermannplatz}}. Ganz anders der
-**Boxhagener Platz** in Friedrichshain mit {{ort:Boxhagener Platz}} und das **RAW-Gelände** an der
-Revaler Straße mit {{ort:RAW-Gelände}}.
+In der Fußgängerzone der Wilmersdorfer Straße liegen außerdem
+{{ort:Wilmersdorfer Straße (Fußgängerzone)}} in einer Sichtweiten-Zone. Der **Alexanderplatz**
+dagegen liegt nur zu {{platz:Alexanderplatz}} in einer Zone, der Gendarmenmarkt zu
+{{platz:Gendarmenmarkt}}, der Breitscheidplatz zu {{platz:Breitscheidplatz}}, der Hermannplatz zu
+{{ort:Hermannplatz}}. Ganz anders der **Boxhagener Platz** in Friedrichshain mit
+{{ort:Boxhagener Platz}} und das **RAW-Gelände** an der Revaler Straße mit {{ort:RAW-Gelände}}.
 
 [[bild:alexanderplatz]]
 
 ## Wald und Seen
 
-Im **Grunewald** liegen {{wald:Grunewald}} in einer Zone, im Spandauer Forst {{wald:Spandauer Forst}},
-in den Müggelbergen {{wald:Müggelberge}}. Das Strandbad Wannsee liegt dagegen ganz in einer Zone.
+Im **Grunewald** liegen {{wald:Grunewald}} in einer Zone, im Spandauer Forst
+{{wald:Spandauer Forst}}, in den Müggelbergen {{wald:Müggelberge}}. Das Strandbad Wannsee liegt
+dagegen ganz in einer Zone.
 
 ## Hochschulen
 
 Hochschulen sind nach § 5 KCanG keine Verbotsorte. Auf dem Hauptcampus der **Technischen
-Universität** in Charlottenburg liegen trotzdem {{hochschule:Technische Universität Berlin}} in einer
-Zone, auf dem Campus der **Freien Universität** in Dahlem {{hochschule:Freie Universität Berlin}},
-auf dem Campus Nord der **Humboldt-Universität** {{hochschule:Humboldt-Universität Campus Nord}}; der
-Campus Mitte der Humboldt-Universität liegt außerhalb jeder Zone. Eine Hausordnung mit einer Regel
-zu Cannabis haben wir bei keiner Berliner Hochschule gefunden; die Hausordnung der HTW etwa verbietet
-das Rauchen in Gebäuden
+Universität** in Charlottenburg liegen trotzdem {{hochschule:Technische Universität Berlin}} in
+einer Zone, auf dem Campus der **Freien Universität** in Dahlem
+{{hochschule:Freie Universität Berlin}}, auf dem Campus Nord der **Humboldt-Universität**
+{{hochschule:Humboldt-Universität Campus Nord}}; der Campus Mitte der Humboldt-Universität liegt
+außerhalb jeder Zone. Eine Hausordnung mit einer Regel zu Cannabis haben wir bei keiner Berliner
+Hochschule gefunden; die Hausordnung der HTW etwa verbietet das Rauchen in Gebäuden
 ([HTW Berlin](https://infopunkt.htw-berlin.de/fileadmin/HTW/Zentral/Rechtsstelle/Amtliche_Mitteilungsblaetter/2021/17_21.pdf)).
 
 ## Feste und Veranstaltungen
@@ -148,10 +146,10 @@ Eigene Verbotszonen für Cannabis haben Senat und Bezirke nicht festgelegt (Stan
 
 ### Wo darf man in Berlin kiffen?
 
-Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet. Eine weiße
-Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte kennt weder Hecken
-noch Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa im Spandauer Forst ({{wald:Spandauer Forst}} in
+einer Zone) und in den Müggelbergen ({{wald:Müggelberge}}). Tagsüber nicht in den Fußgängerzonen,
+nie in Gegenwart von Minderjährigen und nicht gegen ein Hausrecht. Weiß heißt nicht sicher erlaubt:
+Hecken, Bäume und fehlende Einrichtungen kennt die Karte nicht.
 
 ### Darf man im Görlitzer Park kiffen?
 
@@ -161,10 +159,8 @@ Gegenwart von Kindern und Jugendlichen.
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

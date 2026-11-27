@@ -1,0 +1,911 @@
+{
+ "stadtflaeche_osm_km2": 80.67,
+ "wald": {
+  "flaeche_km2": 7.0,
+  "anteil_stadt": 0.0872,
+  "anteil_zone": 0.0928,
+  "anteil_zone_ohne_wald": 0.1932
+ },
+ "zonen_km2": 14.88,
+ "anteil": 0.18444,
+ "kategorien": {
+  "sports": {
+   "objekte": 470,
+   "zonen_km2": 7.7
+  },
+  "playground": {
+   "objekte": 318,
+   "zonen_km2": 5.58
+  },
+  "school": {
+   "objekte": 85,
+   "zonen_km2": 3.22
+  },
+  "kindergarten": {
+   "objekte": 83,
+   "zonen_km2": 1.89
+  },
+  "youth": {
+   "objekte": 20,
+   "zonen_km2": 0.47
+  },
+  "childcare": {
+   "objekte": 15,
+   "zonen_km2": 0.31
+  }
+ },
+ "objekte_gesamt": 991,
+ "merkmale": {
+  "see": [
+   {
+    "name": "Westbad-Weiher",
+    "osm": [
+     "w5076518"
+    ],
+    "flaeche_ha": 10.0,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.176,
+    "lat": 49.02579,
+    "lon": 12.05083,
+    "bbox": [
+     12.04686,
+     49.02341,
+     12.05588,
+     49.02816
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Weintinger Holz",
+    "osm": [
+     "r8767401"
+    ],
+    "flaeche_ha": 111.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.97567,
+    "lon": 12.13923,
+    "bbox": [
+     12.12331,
+     48.96945,
+     12.14995,
+     48.98189
+    ]
+   },
+   {
+    "name": "Kreuther Forst",
+    "osm": [
+     "r2302707"
+    ],
+    "flaeche_ha": 66.4,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.0085,
+    "lat": 49.03039,
+    "lon": 12.16079,
+    "bbox": [
+     12.14123,
+     49.02498,
+     12.16829,
+     49.03638
+    ]
+   },
+   {
+    "name": "Hanslberg",
+    "osm": [
+     "w5131454"
+    ],
+    "flaeche_ha": 38.7,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.0615,
+    "lat": 48.97829,
+    "lon": 12.08083,
+    "bbox": [
+     12.07306,
+     48.97454,
+     12.08503,
+     48.98209
+    ]
+   },
+   {
+    "name": "Schwarzholz",
+    "osm": [
+     "w745351684"
+    ],
+    "flaeche_ha": 29.1,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.0383,
+    "lat": 49.04761,
+    "lon": 12.14163,
+    "bbox": [
+     12.13478,
+     49.04432,
+     12.14675,
+     49.05095
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r13684348",
+     "r14721569",
+     "r17081078",
+     "r1744953",
+     "r17885311",
+     "w17167853",
+     "w17167855",
+     "w17168601"
+    ],
+    "flaeche_ha": 219.8,
+    "zone_ha": 34.9,
+    "anteil_zone": 0.1588,
+    "lat": 49.0288,
+    "lon": 12.05272,
+    "bbox": [
+     12.03369,
+     49.00653,
+     12.19387,
+     49.04773
+    ]
+   },
+   {
+    "name": "Schleuse Regensburg",
+    "osm": [
+     "w17167852"
+    ],
+    "flaeche_ha": 8.6,
+    "zone_ha": 1.0,
+    "anteil_zone": 0.1194,
+    "lat": 49.0285,
+    "lon": 12.08128,
+    "bbox": [
+     12.0746,
+     49.02654,
+     12.09606,
+     49.03015
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Donaupark",
+    "osm": [
+     "w266669753"
+    ],
+    "flaeche_ha": 63.7,
+    "zone_ha": 40.2,
+    "anteil_zone": 0.6307,
+    "lat": 49.02605,
+    "lon": 12.05298,
+    "bbox": [
+     12.04321,
+     49.02076,
+     12.07453,
+     49.0311
+    ]
+   },
+   {
+    "name": "Winzerer Höhen",
+    "osm": [
+     "r7575715"
+    ],
+    "flaeche_ha": 52.6,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0011,
+    "lat": 49.03177,
+    "lon": 12.07786,
+    "bbox": [
+     12.03767,
+     49.02809,
+     12.08684,
+     49.03632
+    ]
+   },
+   {
+    "name": "Aubachpark",
+    "osm": [
+     "w247911316"
+    ],
+    "flaeche_ha": 34.1,
+    "zone_ha": 14.5,
+    "anteil_zone": 0.4244,
+    "lat": 48.98546,
+    "lon": 12.12721,
+    "bbox": [
+     12.11984,
+     48.98131,
+     12.14731,
+     48.98919
+    ]
+   },
+   {
+    "name": "Königswiesener Park",
+    "osm": [
+     "w23632361"
+    ],
+    "flaeche_ha": 10.9,
+    "zone_ha": 7.7,
+    "anteil_zone": 0.7072,
+    "lat": 49.00756,
+    "lon": 12.06469,
+    "bbox": [
+     12.06306,
+     49.00409,
+     12.07282,
+     49.01091
+    ]
+   },
+   {
+    "name": "Stadtpark",
+    "osm": [
+     "w23632452"
+    ],
+    "flaeche_ha": 9.7,
+    "zone_ha": 5.6,
+    "anteil_zone": 0.5794,
+    "lat": 49.01917,
+    "lon": 12.08147,
+    "bbox": [
+     12.07783,
+     49.01769,
+     12.08552,
+     49.0207
+    ]
+   },
+   {
+    "name": "Dörnbergpark",
+    "osm": [
+     "w23632474"
+    ],
+    "flaeche_ha": 7.1,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.4294,
+    "lat": 49.01597,
+    "lon": 12.08631,
+    "bbox": [
+     12.08352,
+     49.01451,
+     12.08889,
+     49.01743
+    ]
+   },
+   {
+    "name": "Aberdeenpark",
+    "osm": [
+     "w31824162"
+    ],
+    "flaeche_ha": 7.0,
+    "zone_ha": 4.8,
+    "anteil_zone": 0.6752,
+    "lat": 49.04232,
+    "lon": 12.10708,
+    "bbox": [
+     12.10432,
+     49.04064,
+     12.10883,
+     49.04402
+    ]
+   },
+   {
+    "name": "Inselpark",
+    "osm": [
+     "w59785222"
+    ],
+    "flaeche_ha": 6.6,
+    "zone_ha": 4.4,
+    "anteil_zone": 0.6755,
+    "lat": 49.02598,
+    "lon": 12.08043,
+    "bbox": [
+     12.07776,
+     49.02351,
+     12.08684,
+     49.02835
+    ]
+   },
+   {
+    "name": "Fürst-Anselm-Park",
+    "osm": [
+     "w252724387",
+     "w252726194",
+     "w42335125"
+    ],
+    "flaeche_ha": 5.6,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.222,
+    "lat": 49.01368,
+    "lon": 12.09799,
+    "bbox": [
+     12.08623,
+     49.01271,
+     12.1001,
+     49.01859
+    ]
+   },
+   {
+    "name": "Ziegetsdorfer Park",
+    "osm": [
+     "w23955024"
+    ],
+    "flaeche_ha": 4.9,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.6614,
+    "lat": 49.00018,
+    "lon": 12.06452,
+    "bbox": [
+     12.06359,
+     48.99814,
+     12.07113,
+     49.00217
+    ]
+   },
+   {
+    "name": "Parkanlage Neuprüll",
+    "osm": [
+     "w32254559"
+    ],
+    "flaeche_ha": 4.6,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.5238,
+    "lat": 48.9935,
+    "lon": 12.08016,
+    "bbox": [
+     12.07791,
+     48.99209,
+     12.08285,
+     48.99513
+    ]
+   },
+   {
+    "name": "Brixen-Park",
+    "osm": [
+     "r13135617"
+    ],
+    "flaeche_ha": 4.6,
+    "zone_ha": 3.3,
+    "anteil_zone": 0.7154,
+    "lat": 49.00204,
+    "lon": 12.1066,
+    "bbox": [
+     12.09917,
+     49.00101,
+     12.1104,
+     49.00321
+    ]
+   },
+   {
+    "name": "Grieser Spitz",
+    "osm": [
+     "w29185967"
+    ],
+    "flaeche_ha": 4.1,
+    "zone_ha": 2.7,
+    "anteil_zone": 0.6481,
+    "lat": 49.02457,
+    "lon": 12.10436,
+    "bbox": [
+     12.0961,
+     49.02334,
+     12.1068,
+     49.02591
+    ]
+   },
+   {
+    "name": "Tempepark",
+    "osm": [
+     "w31107045"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 1.0,
+    "anteil_zone": 0.2718,
+    "lat": 49.03772,
+    "lon": 12.11804,
+    "bbox": [
+     12.11607,
+     49.03684,
+     12.12,
+     49.0385
+    ]
+   },
+   {
+    "name": "Hegenauer-Park",
+    "osm": [
+     "w23820824"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.6706,
+    "lat": 48.9995,
+    "lon": 12.07175,
+    "bbox": [
+     12.06873,
+     48.99791,
+     12.07289,
+     49.0011
+    ]
+   },
+   {
+    "name": "Ostpark",
+    "osm": [
+     "r12995313"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 2.1,
+    "anteil_zone": 0.613,
+    "lat": 49.00873,
+    "lon": 12.11636,
+    "bbox": [
+     12.11462,
+     49.00759,
+     12.11864,
+     49.01102
+    ]
+   },
+   {
+    "name": "Sandfrauenpark",
+    "osm": [
+     "w887861931"
+    ],
+    "flaeche_ha": 3.2,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0272,
+    "lat": 49.02683,
+    "lon": 12.14737,
+    "bbox": [
+     12.143,
+     49.02563,
+     12.15405,
+     49.02785
+    ]
+   },
+   {
+    "name": "Jahninsel",
+    "osm": [
+     "w60196371"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.5334,
+    "lat": 49.02291,
+    "lon": 12.09864,
+    "bbox": [
+     12.0954,
+     49.02243,
+     12.10305,
+     49.0234
+    ]
+   },
+   {
+    "name": "Albert-Schweitzer-Park",
+    "osm": [
+     "w172864365"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.9998,
+    "lat": 49.03235,
+    "lon": 12.12113,
+    "bbox": [
+     12.11857,
+     49.03174,
+     12.12268,
+     49.03307
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Universität Regensburg",
+    "osm": [
+     "r6576273"
+    ],
+    "flaeche_ha": 81.7,
+    "zone_ha": 31.6,
+    "anteil_zone": 0.3875,
+    "lat": 48.9965,
+    "lon": 12.09407,
+    "bbox": [
+     12.08877,
+     48.99052,
+     12.10393,
+     49.00242
+    ]
+   },
+   {
+    "name": "Ostbayerische Technische Hochschule Regensburg",
+    "osm": [
+     "r1733231",
+     "w28938080"
+    ],
+    "flaeche_ha": 9.0,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0158,
+    "lat": 49.00306,
+    "lon": 12.09626,
+    "bbox": [
+     12.09331,
+     49.00188,
+     12.09923,
+     49.00423
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Dultplatz",
+    "osm": [
+     "w29184227"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 0.9,
+    "anteil_zone": 0.2526,
+    "lat": 49.02621,
+    "lon": 12.0888,
+    "bbox": [
+     12.08606,
+     49.02532,
+     12.09182,
+     49.02708
+    ]
+   },
+   {
+    "name": "Domplatz",
+    "osm": [
+     "r1569476"
+    ],
+    "flaeche_ha": 0.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.01932,
+    "lon": 12.09738,
+    "bbox": [
+     12.09688,
+     49.01883,
+     12.09966,
+     49.01975
+    ]
+   },
+   {
+    "name": "Quartiersplatz",
+    "osm": [
+     "w463173528"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.0018,
+    "lon": 12.10121,
+    "bbox": [
+     12.10081,
+     49.00153,
+     12.10159,
+     49.00205
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "Badestelle",
+    "osm": [
+     "w1193795374",
+     "w1193795375",
+     "w1193795376",
+     "w1193795377",
+     "w1193795378",
+     "w1193795380",
+     "w1193795381",
+     "w1193795382",
+     "w1193795383"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.2869,
+    "lat": 49.02479,
+    "lon": 12.09089,
+    "bbox": [
+     12.0886,
+     49.02426,
+     12.09287,
+     49.02534
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Botanischer Garten der Universität Regensburg",
+    "osm": [
+     "w1530429065"
+    ],
+    "flaeche_ha": 4.2,
+    "zone_ha": 1.0,
+    "anteil_zone": 0.248,
+    "lat": 48.99368,
+    "lon": 12.09024,
+    "bbox": [
+     12.08921,
+     48.99231,
+     12.09403,
+     48.99506
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 403.4,
+   "zone_ha": 90.1,
+   "anteil_zone": 0.2233
+  },
+  {
+   "name": "Schleuse Regensburg",
+   "flaeche_ha": 35.6,
+   "zone_ha": 7.6,
+   "anteil_zone": 0.213
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 9.2,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 49.02218,
+  "lon": 12.10265,
+  "bbox": [
+   12.0265,
+   48.96431,
+   12.19589,
+   49.07906
+  ]
+ },
+ "orte": [
+  {
+   "name": "Neupfarrplatz und Haidplatz",
+   "osm": [
+    "r3972996",
+    "r4720374",
+    "w110893003",
+    "w1382668622",
+    "w1382668623",
+    "w768084136",
+    "w768084138",
+    "w768084142",
+    "w768084143",
+    "w965217006",
+    "w965217007",
+    "w965217008"
+   ],
+   "flaeche_ha": 1.16,
+   "bbox": [
+    12.09198,
+    49.0178,
+    12.09716,
+    49.02003
+   ],
+   "anteil_zone": 0.0317,
+   "art": "flaeche",
+   "lat": 49.01834,
+   "lon": 12.09538
+  },
+  {
+   "name": "Domplatz",
+   "osm": [
+    "r1569476",
+    "w1382961055",
+    "w22992490",
+    "w42441230"
+   ],
+   "flaeche_ha": 0.8,
+   "bbox": [
+    12.09688,
+    49.01883,
+    12.09966,
+    49.01975
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.01932,
+   "lon": 12.09738
+  },
+  {
+   "name": "Steinerne Brücke",
+   "osm": [
+    "w122505069",
+    "w29180603"
+   ],
+   "flaeche_ha": 0.48,
+   "bbox": [
+    12.09684,
+    49.02117,
+    12.09743,
+    49.02403
+   ],
+   "anteil_zone": 0.0,
+   "art": "linie",
+   "lat": 49.02268,
+   "lon": 12.09724
+  },
+  {
+   "name": "Jahninsel",
+   "osm": [
+    "w60196371"
+   ],
+   "flaeche_ha": 2.62,
+   "bbox": [
+    12.0954,
+    49.02243,
+    12.10305,
+    49.0234
+   ],
+   "anteil_zone": 0.5334,
+   "art": "flaeche",
+   "lat": 49.02291,
+   "lon": 12.09864
+  },
+  {
+   "name": "Grieser Spitz",
+   "osm": [
+    "w29185967"
+   ],
+   "flaeche_ha": 4.13,
+   "bbox": [
+    12.0961,
+    49.02334,
+    12.1068,
+    49.02591
+   ],
+   "anteil_zone": 0.6481,
+   "art": "flaeche",
+   "lat": 49.02457,
+   "lon": 12.10436
+  },
+  {
+   "name": "Unterer Wöhrd",
+   "osm": [
+    "w1565278186"
+   ],
+   "flaeche_ha": 28.33,
+   "bbox": [
+    12.09494,
+    49.01958,
+    12.12208,
+    49.02342
+   ],
+   "anteil_zone": 0.317,
+   "art": "flaeche",
+   "lat": 49.02153,
+   "lon": 12.10783
+  },
+  {
+   "name": "Villapark",
+   "osm": [
+    "w5064736"
+   ],
+   "flaeche_ha": 1.5,
+   "bbox": [
+    12.10772,
+    49.01795,
+    12.10951,
+    49.01949
+   ],
+   "anteil_zone": 0.9547,
+   "art": "flaeche",
+   "lat": 49.01885,
+   "lon": 12.10862
+  },
+  {
+   "name": "Herzogspark",
+   "osm": [
+    "w23544299"
+   ],
+   "flaeche_ha": 1.74,
+   "bbox": [
+    12.08085,
+    49.02191,
+    12.08341,
+    49.02391
+   ],
+   "anteil_zone": 0.8461,
+   "art": "flaeche",
+   "lat": 49.02293,
+   "lon": 12.08182
+  },
+  {
+   "name": "Haidplatz und Kohlenmarkt",
+   "osm": [
+    "r4720368",
+    "r4720374",
+    "w110893003",
+    "w1381846474",
+    "w1382668622",
+    "w1382668623",
+    "w22992730",
+    "w23979630",
+    "w5571841",
+    "w8115422",
+    "w965217006",
+    "w965217007",
+    "w965217008"
+   ],
+   "flaeche_ha": 1.35,
+   "bbox": [
+    12.09191,
+    49.01646,
+    12.10062,
+    49.02047
+   ],
+   "anteil_zone": 0.0621,
+   "art": "flaeche",
+   "lat": 49.01792,
+   "lon": 12.09882
+  },
+  {
+   "name": "Neupfarrplatz",
+   "osm": [
+    "r3972996",
+    "w768084136",
+    "w768084138",
+    "w768084142",
+    "w768084143"
+   ],
+   "flaeche_ha": 0.79,
+   "bbox": [
+    12.09482,
+    49.0178,
+    12.09709,
+    49.01885
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.01834,
+   "lon": 12.09538
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Regierungsbezirks Oberpfalz (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  49.017,
+  12.097
+ ],
+ "og_zoom": 13.0,
+ "bilder": [
+  [
+   "park",
+   "Donaupark",
+   "donaupark"
+  ],
+  [
+   "ort",
+   "Jahninsel",
+   "jahninsel"
+  ],
+  [
+   "ort",
+   "Unterer Wöhrd",
+   "unterer-woehrd"
+  ],
+  [
+   "ort",
+   "Neupfarrplatz und Haidplatz",
+   "fussgaengerzone"
+  ],
+  [
+   "park",
+   "Stadtpark",
+   "stadtpark"
+  ],
+  [
+   "hochschule",
+   "Universität Regensburg",
+   "uni"
+  ]
+ ]
+}

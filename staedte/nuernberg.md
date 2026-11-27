@@ -1,14 +1,13 @@
 <p class="lead">In Nürnberg ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
 <strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km². Grund sind {{objekte}}
-Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
-Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
-nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen der Altstadt, in denen
-zwischen 7 und 20 Uhr nicht konsumiert werden darf, die Verbotszone der Stadt am Hauptbahnhof und
-überall die unmittelbare Gegenwart von Kindern und Jugendlichen.</p>
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen der Altstadt von
+7 bis 20 Uhr, die Verbotszone der Stadt am Hauptbahnhof und überall die Gegenwart von
+Minderjährigen.</p>
 
 In Bayern kommen Verbote nach Landesrecht hinzu, die die Karte nicht zeigt: Gerauchtes Cannabis ist
 auch in Biergärten, auf Volksfesten und auf dem Gelände von Spielplätzen, Schulen und Kitas
-verboten (siehe unten).
+verboten (siehe [Landesrecht in Bayern](#was-sonst-noch-gilt)).
 
 [[stadtkarte]]
 
@@ -16,10 +15,8 @@ verboten (siehe unten).
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Den größten Teil machen die
-{{objekte:sports}} Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von {{objekte:playground}} Spielplätzen.
+Die meisten Zonen gehen auf die {{objekte:sports}} Sportstätten zurück, danach auf die
+{{objekte:playground}} Spielplätze.
 
 Die Stadt zählt selbst mit: 2025 gingen Anzeigen wegen Kiffens in Verbotszonen vor allem an
 Spielplätzen (23) und Sportstätten (9) ein, dazu acht in Gegenwart von Minderjährigen und drei in
@@ -43,16 +40,16 @@ Die Karte zeigt die Zone lila. Nach § 5 KCanG allein lägen vom Nelson-Mandela-
 
 Im **Stadtpark** liegen {{park:Stadtpark}} der Fläche in einer Zone: Vier Sportanlagen, zwei
 Spielplätze und eine Kita liegen im Park. Auf der **Wöhrder Wiese** an der Pegnitz sind es
-{{ort:Wöhrder Wiese}}, um zwei Spielplätze; der **Wöhrder See** liegt zu {{see:Wöhrder See}} in einer
-Zone, vor allem am Ufer, an dem zwei Dutzend Sportanlagen und zwölf Spielplätze liegen.
+{{ort:Wöhrder Wiese}}, um zwei Spielplätze; der **Wöhrder See** liegt zu {{see:Wöhrder See}} in
+einer Zone, vor allem am Ufer, an dem zwei Dutzend Sportanlagen und zwölf Spielplätze liegen.
 
 [[bild:stadtpark]]
 
 [[bild:woehrder-wiese]]
 
 Auf der **Insel Schütt** mit Schule und Spielplatz sind es {{ort:Insel Schütt}}, im Kontumazgarten
-{{ort:Kontumazgarten}}. Im **Volkspark Marienberg** liegen {{park:Volkspark Marienberg}} in einer Zone,
-um neun Sportanlagen im Park, im Volkspark Dutzendteich {{park:Volkspark Dutzendteich}}. Im
+{{ort:Kontumazgarten}}. Im **Volkspark Marienberg** liegen {{park:Volkspark Marienberg}} in einer
+Zone, um neun Sportanlagen im Park, im Volkspark Dutzendteich {{park:Volkspark Dutzendteich}}. Im
 Burggarten der Kaiserburg sind es {{ort:Burggarten}}; eine Regel zu Rauchen oder Cannabis haben die
 Vorschriften der Schlösserverwaltung dort nicht
 ([Anlagenvorschriften](https://www.schloesser.bayern.de/deutsch/garten/objekte/anlagenvorschriften/nuernberg_kaiserburg_avo.pdf)).
@@ -74,13 +71,12 @@ Spielplätzen, Tabak zu rauchen; zu Cannabis sagt die Grünanlagensatzung nichts
 
 ## Altstadt
 
-Eine Liste der Nürnberger Fußgängerzonen gibt es nicht, aber eine Karte des Verkehrsplanungsamts
-von 2023: Fußgängerzone sind danach unter anderem die Königstraße vom Königstor bis zum Hauptmarkt,
-Hauptmarkt, Breite Gasse, Karolinenstraße, Kaiserstraße, Ludwigsplatz, Lorenzer Platz und
-Weinmarkt; der Albrecht-Dürer-Platz ist verkehrsberuhigter Bereich, keine Fußgängerzone
+Eine Liste der Nürnberger Fußgängerzonen gibt es nicht, aber eine Karte des Verkehrsplanungsamts von
+2023: Fußgängerzone sind danach unter anderem die Königstraße vom Königstor bis zum Hauptmarkt,
+Hauptmarkt, Breite Gasse, Karolinenstraße, Kaiserstraße, Ludwigsplatz, Lorenzer Platz und Weinmarkt;
+der Albrecht-Dürer-Platz ist verkehrsberuhigter Bereich, keine Fußgängerzone
 ([Karte der Stadt](https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/fussgaengerzone_altstadt_erweiterungen.pdf)).
-Dort gilt zwischen 7 und 20 Uhr Konsumverbot; blau zeigt die Karte die Fußgängerbereiche, wie sie
-in OpenStreetMap eingetragen sind.
+Dort gilt von 7 bis 20 Uhr Konsumverbot; blau sind die Fußgängerbereiche aus OpenStreetMap.
 
 Von Königstraße, Karolinenstraße, Breiter Gasse und Kaiserstraße liegen außerdem
 {{ort:Königstraße und Karolinenstraße}} in einer Sichtweiten-Zone. Hauptmarkt ({{ort:Hauptmarkt}})
@@ -119,11 +115,11 @@ ist die Stadt. Weitere Verbotszonen der Stadt außer der am Hauptbahnhof gibt es
 
 ### Wo darf man in Nürnberg kiffen?
 
-Außerhalb der roten und lila Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen, nicht dort, wo ein Hausrecht es verbietet, und gerauchtes
-Cannabis auch nicht in Biergärten und auf Volksfesten. Eine weiße Fläche auf der Karte heißt
-nicht, dass Konsum dort erlaubt ist: Die Karte kennt weder Hecken noch Bäume, die die Sicht nehmen,
-noch Einrichtungen, die in OpenStreetMap fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa in weiten Teilen des Volksparks Dutzendteich
+({{park:Volkspark Dutzendteich}} in einer Zone). Nicht in der lila Zone am Hauptbahnhof, tagsüber
+nicht in den Fußgängerzonen der Altstadt, nie in Gegenwart von Minderjährigen, gerauchtes Cannabis
+außerdem nicht in Biergärten und auf Volksfesten. Weiß heißt nicht sicher erlaubt: Hecken, Bäume und
+fehlende Einrichtungen kennt die Karte nicht.
 
 ### Darf man am Hauptbahnhof kiffen?
 
@@ -132,10 +128,8 @@ Patienten, und schon das Mitführen zum Konsum vor Ort.
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

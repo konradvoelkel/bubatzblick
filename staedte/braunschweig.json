@@ -1,0 +1,1456 @@
+{
+ "stadtflaeche_osm_km2": 192.61,
+ "wald": {
+  "flaeche_km2": 28.2,
+  "anteil_stadt": 0.1465,
+  "anteil_zone": 0.0813,
+  "anteil_zone_ohne_wald": 0.151
+ },
+ "zonen_km2": 27.13,
+ "anteil": 0.14083,
+ "kategorien": {
+  "sports": {
+   "objekte": 799,
+   "zonen_km2": 15.64
+  },
+  "playground": {
+   "objekte": 427,
+   "zonen_km2": 9.4
+  },
+  "school": {
+   "objekte": 145,
+   "zonen_km2": 5.41
+  },
+  "kindergarten": {
+   "objekte": 145,
+   "zonen_km2": 3.55
+  },
+  "youth": {
+   "objekte": 38,
+   "zonen_km2": 0.78
+  },
+  "childcare": {
+   "objekte": 12,
+   "zonen_km2": 0.22
+  },
+  "cannabis_club": {
+   "objekte": 1,
+   "zonen_km2": 0.01
+  }
+ },
+ "objekte_gesamt": 1567,
+ "merkmale": {
+  "see": [
+   {
+    "name": "Südsee",
+    "osm": [
+     "w4309932"
+    ],
+    "flaeche_ha": 22.8,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.0802,
+    "lat": 52.22898,
+    "lon": 10.5143,
+    "bbox": [
+     10.51028,
+     52.22306,
+     10.51865,
+     52.23479
+    ]
+   },
+   {
+    "name": "Schapenbruchteich",
+    "osm": [
+     "r5381"
+    ],
+    "flaeche_ha": 21.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.27626,
+    "lon": 10.58308,
+    "bbox": [
+     10.57785,
+     52.27314,
+     10.59187,
+     52.27933
+    ]
+   },
+   {
+    "name": "Ölper See",
+    "osm": [
+     "r5369"
+    ],
+    "flaeche_ha": 15.9,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0063,
+    "lat": 52.2886,
+    "lon": 10.50529,
+    "bbox": [
+     10.50155,
+     52.28656,
+     10.51278,
+     52.29059
+    ]
+   },
+   {
+    "name": "Heidbergsee",
+    "osm": [
+     "w24376080",
+     "w24376102"
+    ],
+    "flaeche_ha": 12.7,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.1119,
+    "lat": 52.22787,
+    "lon": 10.54829,
+    "bbox": [
+     10.54505,
+     52.22235,
+     10.55122,
+     52.229
+    ]
+   },
+   {
+    "name": "Kreuzteich",
+    "osm": [
+     "r5379"
+    ],
+    "flaeche_ha": 12.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.27172,
+    "lon": 10.57439,
+    "bbox": [
+     10.57015,
+     52.27001,
+     10.57833,
+     52.27341
+    ]
+   },
+   {
+    "name": "Mittelteich",
+    "osm": [
+     "r5380"
+    ],
+    "flaeche_ha": 10.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.27414,
+    "lon": 10.57813,
+    "bbox": [
+     10.57505,
+     52.27254,
+     10.58113,
+     52.27592
+    ]
+   },
+   {
+    "name": "Bienroder See",
+    "osm": [
+     "w23917656"
+    ],
+    "flaeche_ha": 10.1,
+    "zone_ha": 2.1,
+    "anteil_zone": 0.2121,
+    "lat": 52.32433,
+    "lon": 10.53841,
+    "bbox": [
+     10.53274,
+     52.32198,
+     10.54001,
+     52.32681
+    ]
+   },
+   {
+    "name": "Ellernbruchsee",
+    "osm": [
+     "r17069259"
+    ],
+    "flaeche_ha": 7.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.22025,
+    "lon": 10.43263,
+    "bbox": [
+     10.42968,
+     52.2181,
+     10.43388,
+     52.22246
+    ]
+   },
+   {
+    "name": "Moorhüttenteich",
+    "osm": [
+     "w4873145"
+    ],
+    "flaeche_ha": 7.5,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0249,
+    "lat": 52.29031,
+    "lon": 10.58595,
+    "bbox": [
+     10.5821,
+     52.2887,
+     10.5877,
+     52.29199
+    ]
+   },
+   {
+    "name": "Spielmannsteich",
+    "osm": [
+     "w4463573"
+    ],
+    "flaeche_ha": 4.4,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.2884,
+    "lat": 52.23885,
+    "lon": 10.52179,
+    "bbox": [
+     10.52009,
+     52.23766,
+     10.52339,
+     52.24007
+    ]
+   },
+   {
+    "name": "Ziegeleiteich",
+    "osm": [
+     "w23369427",
+     "w4309727"
+    ],
+    "flaeche_ha": 3.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.30096,
+    "lon": 10.55361,
+    "bbox": [
+     10.55136,
+     52.29996,
+     10.55558,
+     52.30198
+    ]
+   },
+   {
+    "name": "Südteich",
+    "osm": [
+     "r5903"
+    ],
+    "flaeche_ha": 3.8,
+    "zone_ha": 0.9,
+    "anteil_zone": 0.2417,
+    "lat": 52.24913,
+    "lon": 10.52756,
+    "bbox": [
+     10.52564,
+     52.24778,
+     10.52901,
+     52.25049
+    ]
+   },
+   {
+    "name": "Neuer Teich",
+    "osm": [
+     "r166500"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.26163,
+    "lon": 10.46167,
+    "bbox": [
+     10.45951,
+     52.26061,
+     10.46251,
+     52.26268
+    ]
+   },
+   {
+    "name": "Quellenteich",
+    "osm": [
+     "r166501"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.3048,
+    "lat": 52.26043,
+    "lon": 10.45755,
+    "bbox": [
+     10.45676,
+     52.25951,
+     10.45992,
+     52.26133
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Prinz-Albrecht-Park",
+    "osm": [
+     "w8684994"
+    ],
+    "flaeche_ha": 74.6,
+    "zone_ha": 39.0,
+    "anteil_zone": 0.5232,
+    "lat": 52.26744,
+    "lon": 10.5551,
+    "bbox": [
+     10.54832,
+     52.26125,
+     10.56349,
+     52.27349
+    ]
+   },
+   {
+    "name": "Bürgerpark",
+    "osm": [
+     "r10344276"
+    ],
+    "flaeche_ha": 49.2,
+    "zone_ha": 24.2,
+    "anteil_zone": 0.493,
+    "lat": 52.25082,
+    "lon": 10.5262,
+    "bbox": [
+     10.51836,
+     52.24578,
+     10.52977,
+     52.25855
+    ]
+   },
+   {
+    "name": "Heidbergpark",
+    "osm": [
+     "w29466063"
+    ],
+    "flaeche_ha": 40.6,
+    "zone_ha": 16.2,
+    "anteil_zone": 0.4,
+    "lat": 52.22616,
+    "lon": 10.54847,
+    "bbox": [
+     10.53961,
+     52.22175,
+     10.55381,
+     52.23077
+    ]
+   },
+   {
+    "name": "Inselwallpark (Gaußpark)",
+    "osm": [
+     "r91926"
+    ],
+    "flaeche_ha": 8.8,
+    "zone_ha": 6.2,
+    "anteil_zone": 0.7067,
+    "lat": 52.27097,
+    "lon": 10.51843,
+    "bbox": [
+     10.51497,
+     52.26916,
+     10.52197,
+     52.27274
+    ]
+   },
+   {
+    "name": "Schul- und Bürgergarten",
+    "osm": [
+     "r176632"
+    ],
+    "flaeche_ha": 7.0,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.3706,
+    "lat": 52.29305,
+    "lon": 10.53033,
+    "bbox": [
+     10.52876,
+     52.29126,
+     10.53382,
+     52.29481
+    ]
+   },
+   {
+    "name": "Südstadtpark",
+    "osm": [
+     "w32763510"
+    ],
+    "flaeche_ha": 6.5,
+    "zone_ha": 4.8,
+    "anteil_zone": 0.7282,
+    "lat": 52.23165,
+    "lon": 10.55115,
+    "bbox": [
+     10.54885,
+     52.22991,
+     10.55286,
+     52.2334
+    ]
+   },
+   {
+    "name": "Viewegs Garten",
+    "osm": [
+     "w10798136"
+    ],
+    "flaeche_ha": 6.0,
+    "zone_ha": 3.9,
+    "anteil_zone": 0.6545,
+    "lat": 52.25535,
+    "lon": 10.5376,
+    "bbox": [
+     10.53448,
+     52.25401,
+     10.5397,
+     52.25666
+    ]
+   },
+   {
+    "name": "Nordpark",
+    "osm": [
+     "w27352140"
+    ],
+    "flaeche_ha": 4.6,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.7079,
+    "lat": 52.27842,
+    "lon": 10.53167,
+    "bbox": [
+     10.52605,
+     52.27754,
+     10.53419,
+     52.27936
+    ]
+   },
+   {
+    "name": "Museumpark",
+    "osm": [
+     "w5563266"
+    ],
+    "flaeche_ha": 4.5,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.3912,
+    "lat": 52.26469,
+    "lon": 10.53283,
+    "bbox": [
+     10.53129,
+     52.26305,
+     10.53539,
+     52.26618
+    ]
+   },
+   {
+    "name": "Stadtpark",
+    "osm": [
+     "r12890029"
+    ],
+    "flaeche_ha": 4.2,
+    "zone_ha": 2.9,
+    "anteil_zone": 0.683,
+    "lat": 52.26886,
+    "lon": 10.5471,
+    "bbox": [
+     10.54503,
+     52.26781,
+     10.54822,
+     52.27132
+    ]
+   },
+   {
+    "name": "Theaterpark",
+    "osm": [
+     "w5563264"
+    ],
+    "flaeche_ha": 3.8,
+    "zone_ha": 3.1,
+    "anteil_zone": 0.8279,
+    "lat": 52.26744,
+    "lon": 10.53213,
+    "bbox": [
+     10.53046,
+     52.26625,
+     10.53363,
+     52.26869
+    ]
+   },
+   {
+    "name": "Hermann-Löns-Park",
+    "osm": [
+     "w29704293"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 2.6,
+    "anteil_zone": 1.0,
+    "lat": 52.23579,
+    "lon": 10.56058,
+    "bbox": [
+     10.55836,
+     52.23526,
+     10.56278,
+     52.23629
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Klostergarten",
+    "osm": [
+     "w1151609115",
+     "w819200627"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.26786,
+    "lon": 10.57742,
+    "bbox": [
+     10.57602,
+     52.26632,
+     10.57922,
+     52.26936
+    ]
+   },
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w7972950"
+    ],
+    "flaeche_ha": 1.7,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.1188,
+    "lat": 52.2708,
+    "lon": 10.53284,
+    "bbox": [
+     10.53095,
+     52.27008,
+     10.53398,
+     52.27159
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "TU Braunschweig - Campus Ost",
+    "osm": [
+     "w8013640"
+    ],
+    "flaeche_ha": 15.2,
+    "zone_ha": 3.3,
+    "anteil_zone": 0.2201,
+    "lat": 52.28266,
+    "lon": 10.54681,
+    "bbox": [
+     10.54401,
+     52.27978,
+     10.54992,
+     52.28557
+    ]
+   },
+   {
+    "name": "Technische Universität Braunschweig - Zentralbereich",
+    "osm": [
+     "r22274990",
+     "w27059288"
+    ],
+    "flaeche_ha": 13.1,
+    "zone_ha": 2.7,
+    "anteil_zone": 0.2036,
+    "lat": 52.27367,
+    "lon": 10.52987,
+    "bbox": [
+     10.52477,
+     52.27182,
+     10.53675,
+     52.27547
+    ]
+   },
+   {
+    "name": "TU Braunschweig - Campus Nord",
+    "osm": [
+     "w8011320"
+    ],
+    "flaeche_ha": 12.1,
+    "zone_ha": 5.1,
+    "anteil_zone": 0.4198,
+    "lat": 52.28533,
+    "lon": 10.54221,
+    "bbox": [
+     10.53804,
+     52.28346,
+     10.54614,
+     52.28681
+    ]
+   },
+   {
+    "name": "TU Braunschweig - Campus Ost - Langer Kamp",
+    "osm": [
+     "w8011319"
+    ],
+    "flaeche_ha": 7.0,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.193,
+    "lat": 52.27731,
+    "lon": 10.53839,
+    "bbox": [
+     10.53588,
+     52.27582,
+     10.54104,
+     52.2788
+    ]
+   },
+   {
+    "name": "TU Braunschweig - Campus Forschungsflughafen",
+    "osm": [
+     "w264963238"
+    ],
+    "flaeche_ha": 5.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.31476,
+    "lon": 10.54258,
+    "bbox": [
+     10.54137,
+     52.31342,
+     10.54944,
+     52.31542
+    ]
+   },
+   {
+    "name": "Hochschule für Bildende Künste Braunschweig",
+    "osm": [
+     "w10529331"
+    ],
+    "flaeche_ha": 2.9,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0441,
+    "lat": 52.25717,
+    "lon": 10.50091,
+    "bbox": [
+     10.49931,
+     52.2561,
+     10.50314,
+     52.25798
+    ]
+   },
+   {
+    "name": "TU Braunschweig",
+    "osm": [
+     "w23967822"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0849,
+    "lat": 52.27614,
+    "lon": 10.54109,
+    "bbox": [
+     10.53969,
+     52.27554,
+     10.54253,
+     52.27682
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Buchhorst",
+    "osm": [
+     "r1990281"
+    ],
+    "flaeche_ha": 244.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.26646,
+    "lon": 10.59786,
+    "bbox": [
+     10.58464,
+     52.25136,
+     10.61139,
+     52.27213
+    ]
+   },
+   {
+    "name": "Querumer Forst",
+    "osm": [
+     "r206606"
+    ],
+    "flaeche_ha": 153.9,
+    "zone_ha": 17.9,
+    "anteil_zone": 0.1165,
+    "lat": 52.30725,
+    "lon": 10.56045,
+    "bbox": [
+     10.54597,
+     52.30071,
+     10.57002,
+     52.31308
+    ]
+   },
+   {
+    "name": "Osterholz",
+    "osm": [
+     "r11744148",
+     "w520360553"
+    ],
+    "flaeche_ha": 145.9,
+    "zone_ha": 3.3,
+    "anteil_zone": 0.0224,
+    "lat": 52.29184,
+    "lon": 10.42967,
+    "bbox": [
+     10.41838,
+     52.28065,
+     10.45156,
+     52.30289
+    ]
+   },
+   {
+    "name": "Staatsforst Timmerlaher Busch",
+    "osm": [
+     "w23625556"
+    ],
+    "flaeche_ha": 102.4,
+    "zone_ha": 7.1,
+    "anteil_zone": 0.0695,
+    "lat": 52.25056,
+    "lon": 10.45546,
+    "bbox": [
+     10.44536,
+     52.24341,
+     10.47089,
+     52.25774
+    ]
+   },
+   {
+    "name": "Rautheimer Holz",
+    "osm": [
+     "w632091048"
+    ],
+    "flaeche_ha": 85.9,
+    "zone_ha": 2.9,
+    "anteil_zone": 0.0338,
+    "lat": 52.22643,
+    "lon": 10.58315,
+    "bbox": [
+     10.56606,
+     52.22042,
+     10.59366,
+     52.23298
+    ]
+   },
+   {
+    "name": "Geitelder Holz",
+    "osm": [
+     "w23625402"
+    ],
+    "flaeche_ha": 76.8,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.014,
+    "lat": 52.21779,
+    "lon": 10.48292,
+    "bbox": [
+     10.47362,
+     52.21235,
+     10.49255,
+     52.22295
+    ]
+   },
+   {
+    "name": "Mascheroder Holz",
+    "osm": [
+     "r5824478"
+    ],
+    "flaeche_ha": 68.5,
+    "zone_ha": 11.9,
+    "anteil_zone": 0.1744,
+    "lat": 52.22828,
+    "lon": 10.55823,
+    "bbox": [
+     10.55032,
+     52.22039,
+     10.56634,
+     52.23068
+    ]
+   },
+   {
+    "name": "Kahlenberg",
+    "osm": [
+     "w10577331"
+    ],
+    "flaeche_ha": 63.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.33765,
+    "lon": 10.55465,
+    "bbox": [
+     10.54676,
+     52.33169,
+     10.56129,
+     52.34354
+    ]
+   },
+   {
+    "name": "Ölper Holz",
+    "osm": [
+     "r5824501"
+    ],
+    "flaeche_ha": 54.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0007,
+    "lat": 52.2836,
+    "lon": 10.47485,
+    "bbox": [
+     10.46396,
+     52.27855,
+     10.48517,
+     52.2886
+    ]
+   },
+   {
+    "name": "Lechlumer Holz",
+    "osm": [
+     "w109042283",
+     "w158824739"
+    ],
+    "flaeche_ha": 51.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.19555,
+    "lon": 10.53475,
+    "bbox": [
+     10.52592,
+     52.19021,
+     10.54175,
+     52.1996
+    ]
+   },
+   {
+    "name": "Im Lah",
+    "osm": [
+     "w520360551"
+    ],
+    "flaeche_ha": 34.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.28943,
+    "lon": 10.6167,
+    "bbox": [
+     10.60872,
+     52.28682,
+     10.62393,
+     52.29222
+    ]
+   },
+   {
+    "name": "Gräfenhoop",
+    "osm": [
+     "w520360552"
+    ],
+    "flaeche_ha": 32.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.28729,
+    "lon": 10.62099,
+    "bbox": [
+     10.61227,
+     52.28458,
+     10.62885,
+     52.28997
+    ]
+   },
+   {
+    "name": "Lammer Holz",
+    "osm": [
+     "w23054814",
+     "w24236201"
+    ],
+    "flaeche_ha": 25.9,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.1159,
+    "lat": 52.2763,
+    "lon": 10.46079,
+    "bbox": [
+     10.44986,
+     52.27462,
+     10.46638,
+     52.27844
+    ]
+   },
+   {
+    "name": "von Pawelsches Holz",
+    "osm": [
+     "w23049209",
+     "w23049210"
+    ],
+    "flaeche_ha": 22.8,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.1047,
+    "lat": 52.27958,
+    "lon": 10.46282,
+    "bbox": [
+     10.45511,
+     52.27732,
+     10.46805,
+     52.28297
+    ]
+   },
+   {
+    "name": "Ellernbruch",
+    "osm": [
+     "w23625422"
+    ],
+    "flaeche_ha": 22.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.22614,
+    "lon": 10.44256,
+    "bbox": [
+     10.43218,
+     52.22342,
+     10.44839,
+     52.22872
+    ]
+   },
+   {
+    "name": "Mehlkamp",
+    "osm": [
+     "w41715725"
+    ],
+    "flaeche_ha": 22.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.33098,
+    "lon": 10.60243,
+    "bbox": [
+     10.59755,
+     52.32809,
+     10.60678,
+     52.33333
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Europaplatz",
+    "osm": [
+     "r21419379"
+    ],
+    "flaeche_ha": 1.0,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0499,
+    "lat": 52.2569,
+    "lon": 10.5184,
+    "bbox": [
+     10.51786,
+     52.25539,
+     10.51991,
+     52.25841
+    ]
+   },
+   {
+    "name": "Schlossplatz",
+    "osm": [
+     "w173043798"
+    ],
+    "flaeche_ha": 0.9,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.2389,
+    "lat": 52.26328,
+    "lon": 10.52692,
+    "bbox": [
+     10.52632,
+     52.26256,
+     10.52859,
+     52.26399
+    ]
+   },
+   {
+    "name": "Festplatz Timmerlah",
+    "osm": [
+     "w817460973"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.1197,
+    "lat": 52.23876,
+    "lon": 10.45338,
+    "bbox": [
+     10.45268,
+     52.23797,
+     10.45436,
+     52.23942
+    ]
+   },
+   {
+    "name": "Kohlmarkt",
+    "osm": [
+     "r4023500"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.26239,
+    "lon": 10.52012,
+    "bbox": [
+     10.51938,
+     52.26197,
+     10.52076,
+     52.26276
+    ]
+   },
+   {
+    "name": "Platz am Ritterbrunnen",
+    "osm": [
+     "w547898987"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.1086,
+    "lat": 52.26423,
+    "lon": 10.52817,
+    "bbox": [
+     10.52704,
+     52.26373,
+     10.52868,
+     52.26474
+    ]
+   },
+   {
+    "name": "Ruhfäutchenplatz",
+    "osm": [
+     "w22978948"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0101,
+    "lat": 52.26488,
+    "lon": 10.52476,
+    "bbox": [
+     10.52394,
+     52.26426,
+     10.52497,
+     52.26551
+    ]
+   },
+   {
+    "name": "Ägidienmarkt",
+    "osm": [
+     "w331801597",
+     "w596629353"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.26028,
+    "lon": 10.52543,
+    "bbox": [
+     10.52503,
+     52.25994,
+     10.52669,
+     52.26063
+    ]
+   },
+   {
+    "name": "Burgplatz",
+    "osm": [
+     "r4027231"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.26476,
+    "lon": 10.52362,
+    "bbox": [
+     10.52315,
+     52.26441,
+     10.52421,
+     52.26511
+    ]
+   },
+   {
+    "name": "Platz der Deutschen Einheit",
+    "osm": [
+     "r21291278"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.563,
+    "lat": 52.2639,
+    "lon": 10.52485,
+    "bbox": [
+     10.5244,
+     52.26366,
+     10.52554,
+     52.26431
+    ]
+   },
+   {
+    "name": "Magnikirchplatz",
+    "osm": [
+     "w25730288"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.5999,
+    "lat": 52.26207,
+    "lon": 10.53009,
+    "bbox": [
+     10.5296,
+     52.26193,
+     10.53058,
+     52.26228
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r12621444",
+     "r12621445",
+     "r1584378",
+     "r2169325",
+     "r6010854",
+     "w1002054811",
+     "w1002054812",
+     "w1002054813",
+     "w1002057317",
+     "w1005036276",
+     "w1009101412",
+     "w131707790",
+     "w131707799",
+     "w162013299",
+     "w162013310",
+     "w213094695",
+     "w213094696",
+     "w213886992",
+     "w213886994",
+     "w23038568",
+     "w23038569",
+     "w23118577",
+     "w23118582",
+     "w27471554",
+     "w27471803",
+     "w27531662",
+     "w27532200",
+     "w27812614",
+     "w29202730",
+     "w29202732",
+     "w31428830",
+     "w32266417",
+     "w33994364",
+     "w34213272",
+     "w34233343",
+     "w34345182",
+     "w34351902",
+     "w34353736",
+     "w34865278",
+     "w34865294",
+     "w34875407",
+     "w34875408",
+     "w35125940",
+     "w36943283",
+     "w38934579",
+     "w38934597",
+     "w39009254",
+     "w39095386",
+     "w43181275",
+     "w43722151",
+     "w44014841",
+     "w44016091",
+     "w48772940",
+     "w48774575",
+     "w571033097",
+     "w571033098",
+     "w571033099",
+     "w571033100",
+     "w573313167",
+     "w573574910",
+     "w575273924",
+     "w575274272",
+     "w575275591",
+     "w584728228",
+     "w588143679",
+     "w60121666",
+     "w60121667",
+     "w60133655",
+     "w60133658",
+     "w95096442",
+     "w992036771",
+     "w992036774",
+     "w992036775",
+     "w992036776",
+     "w992036777",
+     "w992036778"
+    ],
+    "flaeche_ha": 52.3,
+    "zone_ha": 14.3,
+    "anteil_zone": 0.2734,
+    "lat": 52.19136,
+    "lon": 10.51843,
+    "bbox": [
+     10.48571,
+     52.19083,
+     10.53707,
+     52.30705
+    ]
+   },
+   {
+    "name": "Schunter Mühlenarm Bienrode",
+    "osm": [
+     "w1320128004",
+     "w992036773"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.31854,
+    "lon": 10.52461,
+    "bbox": [
+     10.52277,
+     52.31317,
+     10.52711,
+     52.31907
+    ]
+   },
+   {
+    "name": "Schunter",
+    "osm": [
+     "w1320128006",
+     "w26600132"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.31512,
+    "lon": 10.52383,
+    "bbox": [
+     10.52345,
+     52.31432,
+     10.52661,
+     52.31584
+    ]
+   },
+   {
+    "name": "Alte Schunter",
+    "osm": [
+     "w1320128005"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.31488,
+    "lon": 10.52314,
+    "bbox": [
+     10.52299,
+     52.31414,
+     10.52389,
+     52.31577
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "Badestelle Heidbergsee",
+    "osm": [
+     "w176407980"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.8831,
+    "lat": 52.2273,
+    "lon": 10.54943,
+    "bbox": [
+     10.54835,
+     52.22706,
+     10.54968,
+     52.22754
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 859.4,
+   "zone_ha": 162.3,
+   "anteil_zone": 0.1888
+  },
+  {
+   "name": "Schunter Mühlenarm Bienrode",
+   "flaeche_ha": 19.3,
+   "zone_ha": 0.0,
+   "anteil_zone": 0.0
+  },
+  {
+   "name": "Schunter",
+   "flaeche_ha": 9.6,
+   "zone_ha": 0.0,
+   "anteil_zone": 0.0
+  },
+  {
+   "name": "Alte Schunter",
+   "flaeche_ha": 7.2,
+   "zone_ha": 0.5,
+   "anteil_zone": 0.068
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 16.7,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 52.27187,
+  "lon": 10.52034,
+  "bbox": [
+   10.40832,
+   52.18501,
+   10.64548,
+   52.35888
+  ]
+ },
+ "orte": [
+  {
+   "name": "Damm, Sack und Schuhstraße",
+   "osm": [
+    "r21291278",
+    "r4023500",
+    "w1125907055",
+    "w1125907056",
+    "w1128016806",
+    "w1128016809",
+    "w1128016810",
+    "w1365540005",
+    "w1571387320",
+    "w1571387321",
+    "w1571387322",
+    "w190405266",
+    "w191894358",
+    "w191894360",
+    "w191894370",
+    "w207259736",
+    "w207259737",
+    "w207259739",
+    "w207259745",
+    "w24021451",
+    "w25116462",
+    "w27008079",
+    "w298754641",
+    "w320044358",
+    "w478287476",
+    "w572657254",
+    "w574361941",
+    "w574361942",
+    "w574361944",
+    "w574407033",
+    "w711657168",
+    "w711657169",
+    "w732224348",
+    "w842342441"
+   ],
+   "flaeche_ha": 2.67,
+   "bbox": [
+    10.51932,
+    52.26023,
+    10.5256,
+    52.26547
+   ],
+   "anteil_zone": 0.1202,
+   "art": "flaeche",
+   "lat": 52.26394,
+   "lon": 10.52486
+  },
+  {
+   "name": "Kohlmarkt",
+   "osm": [
+    "r4023500"
+   ],
+   "flaeche_ha": 0.51,
+   "bbox": [
+    10.51938,
+    52.26197,
+    10.52076,
+    52.26276
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 52.26239,
+   "lon": 10.52012
+  },
+  {
+   "name": "Schlossplatz",
+   "osm": [
+    "w173043798"
+   ],
+   "flaeche_ha": 0.88,
+   "bbox": [
+    10.52632,
+    52.26256,
+    10.52859,
+    52.26399
+   ],
+   "anteil_zone": 0.2389,
+   "art": "flaeche",
+   "lat": 52.26328,
+   "lon": 10.52692
+  },
+  {
+   "name": "Löwenwall",
+   "osm": [
+    "r90216"
+   ],
+   "flaeche_ha": 1.6,
+   "bbox": [
+    10.52985,
+    52.25886,
+    10.53205,
+    52.26059
+   ],
+   "anteil_zone": 0.5142,
+   "art": "flaeche",
+   "lat": 52.25971,
+   "lon": 10.53093
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Niedersachsen (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  52.264,
+  10.523
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Prinz-Albrecht-Park",
+   "prinz-albrecht-park"
+  ],
+  [
+   "park",
+   "Bürgerpark",
+   "buergerpark"
+  ],
+  [
+   "park",
+   "Inselwallpark (Gaußpark)",
+   "inselwallpark"
+  ],
+  [
+   "ort",
+   "Damm, Sack und Schuhstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "Schlossplatz",
+   "schlossplatz"
+  ],
+  [
+   "hochschule",
+   "Technische Universität Braunschweig - Zentralbereich",
+   "tu"
+  ]
+ ]
+}

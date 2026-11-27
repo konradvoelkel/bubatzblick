@@ -1,14 +1,270 @@
 <!doctype html>
-<!-- Platzhalter, erzeugt durch deploy/bin/build_staedte.py aus staedte/grossstaedte.json. -->
+<!-- Erzeugt aus staedte/augsburg.md und staedte/augsburg.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>Kiffen in Augsburg | BubatzBlick</title>
+<title>Kiffen in Augsburg: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=../?interesse=augsburg#12/48.3717/10.8983">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Augsburg liegen 15,8 % der Stadtfläche (23 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<link rel="canonical" href="__SITE_URL__/stadt/augsburg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/augsburg">
+<meta property="og:title" content="Kiffen in Augsburg: wo es verboten ist">
+<meta property="og:description" content="In Augsburg liegen 15,8 % der Stadtfläche (23 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/augsburg.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Augsburg mit den roten Verbotszonen, daneben: Kiffen in Augsburg, 15,8 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/augsburg",
+   "url": "__SITE_URL__/stadt/augsburg",
+   "name": "Kiffen in Augsburg: wo es verboten ist",
+   "description": "In Augsburg liegen 15,8 % der Stadtfläche (23 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-27",
+   "about": {
+    "@type": "City",
+    "name": "Augsburg",
+    "sameAs": "https://www.wikidata.org/wiki/Q2749",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Bayern"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/augsburg.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Augsburg",
+     "item": "__SITE_URL__/stadt/augsburg"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .stand { font-size: .9em; opacity: .85; margin-top: .2em; }
+  .tabellennotiz { font-size: .88em; color: var(--text-schwach); margin: .4em 0 1.2em; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { r: 5; fill: #c0392b; stroke: #fff; stroke-width: 1.5; }
+  svg.deutschland text { font-size: 15px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 3.5px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 7; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1; }
+  /* Auf dem Handy nur die Namen, dafuer groesser; die Anteile stehen in der Tabelle darunter. */
+  @media (max-width: 480px) { svg.deutschland text { font-size: 19px; }
+                              svg.deutschland .anteil { display: none; }
+                              svg.deutschland circle { r: 7; }
+                              svg.deutschland a.ohne-handy text,
+                              svg.deutschland a.ohne-handy line { display: none; } }
+</style>
 </head>
 <body>
-<p>Weiter zur <a href="../?interesse=augsburg#12/48.3717/10.8983">Karte von Augsburg</a>.</p>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Augsburg</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <p class="stand">Zahlen vom 27. November 2026 · Recherche zu Regeln vor Ort: November 2026</p>
+    <nav><a href="../#13/48.3584/10.90209" class="knopf">Augsburg auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Augsburg ist öffentliches Kiffen auf 23 km² verboten, das sind
+<strong>15,8 % der Stadtfläche</strong> von 147 km². Grund sind 1 858
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr,
+der Friedensplatz in Oberhausen und überall die Gegenwart von Minderjährigen.</p>
+
+<p>Ein gutes Viertel der Stadt ist Wald, vom Siebentischwald bis zum Haunstetter Wald
+(27 % der Stadtfläche), und dort liegt kaum eine Zone; ohne den Wald gerechnet sind es
+20,2 %. In Bayern ist gerauchtes Cannabis außerdem in Biergärten, auf Volksfesten wie dem
+Plärrer und auf dem Gelände von Spielplätzen, Schulen und Kitas verboten (siehe <a href="#was-sonst-noch-gilt">Landesrecht in Bayern</a>).</p>
+<figure class="karte"><img src="../img/stadt/augsburg-stadt.webp" width="960" height="600" alt="Karte von Augsburg mit Stadtgrenze und den roten Verbotszonen"><figcaption>Augsburg: 23 km² Verbotszone auf 147 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">115</td><td class="zahl">4,2 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">153</td><td class="zahl">3,6 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">21</td><td class="zahl">0,5 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">626</td><td class="zahl">8,4 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">54</td><td class="zahl">0,9 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">889</td><td class="zahl">13,1 km²</td></tr></tbody></table>
+<p class="tabellennotiz">Jede Art für sich gezählt, Überlappungen also mehrfach. Anbauvereinigungen nur, soweit in OpenStreetMap eingetragen.</p>
+
+<p>Die meisten Zonen gehen auf die 889 Sportstätten zurück, danach auf die
+626 Spielplätze. Auf Spielplätzen verbietet die Grünanlagensatzung der Stadt
+außerdem Rauchen und Alkohol
+(<a href="https://www.augsburg.de/fileadmin/user_upload/buergerservice_rathaus/rathaus/stadtrecht/pdf/77/7700.pdf">Grünanlagensatzung</a>).</p>
+<h2 id="friedensplatz-oberhausen">Friedensplatz Oberhausen</h2>
+<p>Auf dem <strong>Friedensplatz</strong> in Oberhausen ist Cannabis seit Mai 2026 rund um die Uhr verboten, in jeder
+Form: Die Stadt hat es in der Benutzungssatzung für das Forum St. Johannes festgelegt, zu dem der Platz
+gehört; ein Verstoß kostet bis zu 2.500 Euro
+(<a href="https://www.augsburg.de/fileadmin/user_upload/buergerservice_rathaus/rathaus/stadtrecht/pdf/54/5400.pdf">Satzung</a>).
+Auf der Karte steht der Platz lila unter den örtlichen Verboten. Der Helmut-Haller-Platz in
+Oberhausen liegt zu 14 % in einer Sichtweiten-Zone.</p>
+<h2 id="parks-und-lech">Parks und Lech</h2>
+<p>Im <strong>Wittelsbacher Park</strong> liegen 84 % der Fläche in einer Zone: Sechs
+Spielplätze liegen im Park, rundherum die Sportanlagen am Rosenaustadion. Der Hofgarten liegt außerhalb
+jeder Zone (0 %).</p>
+<figure class="karte"><img src="../img/stadt/augsburg-wittelsbacher-park.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Wittelsbacher Park (grün umrandet) mit den roten Verbotszonen; etwa 84 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Wittelsbacher Park: 18 ha, davon 84 % Verbotszone. <a href="../#16/48.35833/10.88242">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Im <strong>Siebentischwald</strong> liegt kaum eine Zone (4 %), vor allem an seinen Rändern.
+Am <strong>Kuhsee</strong> liegen 22 % der Wasserfläche in einer Zone; auf einem 100 Meter breiten
+Streifen Land entlang von Lech und Wertach sind es 22 %.</p>
+<figure class="karte"><img src="../img/stadt/augsburg-siebentischwald.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Siebentischwald (grün umrandet) mit den roten Verbotszonen; etwa 4 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Siebentischwald: 562 ha, davon 4 % Verbotszone. <a href="../#16/48.33503/10.92133">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/augsburg-kuhsee.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Kuhsee (grün umrandet) mit den roten Verbotszonen; etwa 22 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Kuhsee: 16 ha, davon 22 % Verbotszone. <a href="../#16/48.33864/10.93985">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="innenstadt">Innenstadt</h2>
+<p>Die Fußgängerbereiche der Altstadt hat die Stadt 2025 im Amtsblatt aufgezählt: Annastraße,
+Fuggerplatz, Martin-Luther-Platz, Philippine-Welser-Straße, Steingasse, Welserplatz und Teile von
+Ludwigstraße und Rathausplatz
+(<a href="https://www.augsburg.de/fileadmin/user_upload/footer/amtsblatt/2025/Amtsblatt-2025-23-24_vom-13-06-2025.pdf">Amtsblatt, Juni 2025</a>).
+Die Maximilianstraße ist keine Fußgängerzone; den Versuch dazu hat das Verwaltungsgericht 2023
+gestoppt
+(<a href="https://www.vgh.bayern.de/mam/gerichte/vgaugsburg/pm_2023-08-04_eilantrag_verkehrsversuch_maximilianstrasse.pdf">VG Augsburg</a>).
+In den Fußgängerzonen gilt von 7 bis 20 Uhr Konsumverbot; blau sind die Fußgängerbereiche aus
+OpenStreetMap.</p>
+<p>Von Annastraße, Bürgermeister-Fischer-Straße, Philippine-Welser-Straße und Steingasse liegen außerdem
+26 % in einer Sichtweiten-Zone, vom Rathausplatz
+14 %. Der <strong>Königsplatz</strong> liegt zu 53 % in einer Zone, der Moritzplatz zu
+67 %; der Stadtmarkt liegt außerhalb (0 %).</p>
+<figure class="karte"><img src="../img/stadt/augsburg-fussgaengerzone.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Annastraße und Bürgermeister-Fischer-Straße (grün umrandet) mit den roten Verbotszonen; etwa 26 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Annastraße und Bürgermeister-Fischer-Straße: 2 ha, davon 26 % Verbotszone. <a href="../#16/48.36697/10.89716">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/augsburg-koenigsplatz.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Königsplatz (grün umrandet) mit den roten Verbotszonen; etwa 53 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Königsplatz: 1 ha, davon 53 % Verbotszone. <a href="../#16/48.36635/10.89442">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="universitat-stadion-und-plarrer">Universität, Stadion und Plärrer</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte. Auf dem <strong>Campus</strong> der Universität liegen
+40 % in einer Zone, um rund 40 Sportanlagen und zwei Kitas. In der <strong>WWK Arena</strong>
+verbietet die Stadionordnung den Konsum von Cannabis
+(<a href="https://www.fcaugsburg.de/stadionordnung">Stadionordnung</a>).</p>
+<figure class="karte"><img src="../img/stadt/augsburg-uni.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Campus (grün umrandet) mit den roten Verbotszonen; etwa 40 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Campus: 33 ha, davon 40 % Verbotszone. <a href="../#16/48.33228/10.89627">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Der <strong>Plärrer</strong> ist ein Volksfest: Gerauchtes Cannabis ist dort nach Landesrecht verboten. Der
+Christkindlesmarkt ist rechtlich ein Markt; er liegt am Rathausplatz, also tagsüber ohnehin in der
+Fußgängerzone.</p>
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>Bayern hat feste Bußgelder: Konsum in einer Verbotszone nach § 5 KCanG, auch in der Fußgängerzone,
+kostet 500 Euro, in Gegenwart von Kindern und Jugendlichen 1.000 Euro
+(<a href="https://www.gesetze-bayern.de/Content/Document/BayVV_2125_G_14409/true">Bußgeldkatalog Bayern</a>).
+Das Gesundheitsschutzgesetz verbietet, Cannabis zu rauchen, zu erhitzen oder zu verdampfen: in
+Biergärten, auf Volksfesten und auf dem Gelände von Spielplätzen, Schulen und Kitas, bis zu
+1.500 Euro (<a href="https://www.gesetze-bayern.de/Content/Document/BayGSG/true">Gesundheitsschutzgesetz</a>).</p>
+<nav aria-label="Nachbarstädte" class="nachbarn">
+<h2 id="nachbarstadte-im-vergleich">Nachbarstädte im Vergleich</h2>
+<p>In Augsburg liegen 15,8 % der Stadtfläche in einer Verbotszone. Die nächsten Städte mit eigener Seite:</p>
+<ul>
+<li><strong><a href="muenchen">München</a></strong>, 51 km entfernt: 27,7 % der Stadtfläche; <a href="muenchen#altstadt-und-platze">Fußgängerzonen in München</a>, <a href="muenchen#was-sonst-noch-gilt">Regeln in München</a></li>
+<li><strong><a href="regensburg">Regensburg</a></strong>, 115 km entfernt: 18,4 % der Stadtfläche; <a href="regensburg#altstadt">Fußgängerzonen in Regensburg</a>, <a href="regensburg#was-sonst-noch-gilt">Regeln in Regensburg</a></li>
+<li><strong><a href="nuernberg">Nürnberg</a></strong>, 120 km entfernt: 17,1 % der Stadtfläche; <a href="nuernberg#altstadt">Fußgängerzonen in Nürnberg</a>, <a href="nuernberg#was-sonst-noch-gilt">Regeln in Nürnberg</a></li>
+</ul>
+<p>Dieselben Landesregeln (Bayern) gelten auch in <a href="muenchen#was-sonst-noch-gilt">München</a>, <a href="nuernberg#was-sonst-noch-gilt">Nürnberg</a>, <a href="regensburg#was-sonst-noch-gilt">Regensburg</a>, <a href="wuerzburg#was-sonst-noch-gilt">Würzburg</a>.</p>
+<p>Eigene Verbotszonen über § 5 KCanG hinaus wie in Augsburg haben auch <a href="darmstadt#bollenfalltor-und-hochschulen">Darmstadt</a>, <a href="muenchen#alter-botanischer-garten">München</a>, <a href="nuernberg#verbotszone-am-hauptbahnhof">Nürnberg</a>.</p>
+</nav>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-augsburg-kiffen">Wo darf man in Augsburg kiffen?</h3>
+<p>Nach § 5 KCanG außerhalb der roten Flächen, etwa im Siebentischwald (4 % in einer
+Zone) und im Hofgarten. Nicht auf dem Friedensplatz in Oberhausen, tagsüber nicht in den Fußgängerzonen,
+nie in Gegenwart von Minderjährigen, gerauchtes Cannabis außerdem nicht in Biergärten und auf
+Volksfesten. Weiß heißt nicht sicher erlaubt: Hecken, Bäume und fehlende Einrichtungen kennt die Karte
+nicht.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+27. November 2026. Eine Orientierungshilfe, keine Rechtsauskunft (<a href="../about.html">wie gerechnet wird</a>).</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
 </body>
 </html>

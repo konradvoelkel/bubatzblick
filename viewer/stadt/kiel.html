@@ -1,14 +1,255 @@
 <!doctype html>
-<!-- Platzhalter, erzeugt durch deploy/bin/build_staedte.py aus staedte/grossstaedte.json. -->
+<!-- Erzeugt aus staedte/kiel.md und staedte/kiel.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>Kiffen in Kiel | BubatzBlick</title>
+<title>Kiffen in Kiel: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=../?interesse=kiel#12/54.3232/10.1402">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Kiel liegen 16,6 % der Stadtfläche (20 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<link rel="canonical" href="__SITE_URL__/stadt/kiel">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/kiel">
+<meta property="og:title" content="Kiffen in Kiel: wo es verboten ist">
+<meta property="og:description" content="In Kiel liegen 16,6 % der Stadtfläche (20 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/kiel.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Kiel mit den roten Verbotszonen, daneben: Kiffen in Kiel, 16,6 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/kiel",
+   "url": "__SITE_URL__/stadt/kiel",
+   "name": "Kiffen in Kiel: wo es verboten ist",
+   "description": "In Kiel liegen 16,6 % der Stadtfläche (20 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-27",
+   "about": {
+    "@type": "City",
+    "name": "Kiel",
+    "sameAs": "https://www.wikidata.org/wiki/Q1707",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Schleswig-Holstein"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/kiel.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Kiel",
+     "item": "__SITE_URL__/stadt/kiel"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .stand { font-size: .9em; opacity: .85; margin-top: .2em; }
+  .tabellennotiz { font-size: .88em; color: var(--text-schwach); margin: .4em 0 1.2em; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { r: 5; fill: #c0392b; stroke: #fff; stroke-width: 1.5; }
+  svg.deutschland text { font-size: 15px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 3.5px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 7; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1; }
+  /* Auf dem Handy nur die Namen, dafuer groesser; die Anteile stehen in der Tabelle darunter. */
+  @media (max-width: 480px) { svg.deutschland text { font-size: 19px; }
+                              svg.deutschland .anteil { display: none; }
+                              svg.deutschland circle { r: 7; }
+                              svg.deutschland a.ohne-handy text,
+                              svg.deutschland a.ohne-handy line { display: none; } }
+</style>
 </head>
 <body>
-<p>Weiter zur <a href="../?interesse=kiel#12/54.3232/10.1402">Karte von Kiel</a>.</p>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Kiel</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <p class="stand">Zahlen vom 27. November 2026 · Recherche zu Regeln vor Ort: November 2026</p>
+    <nav><a href="../#13/54.34219/10.14437" class="knopf">Kiel auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Kiel ist öffentliches Kiffen auf 20 km² verboten, das sind
+<strong>16,6 % der Stadtfläche</strong> von 119 km². Grund sind 1 090
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommt die Fußgängerzone in der Holstenstraße
+von 7 bis 20 Uhr und überall die Gegenwart von Minderjährigen.</p>
+
+<p>Wald gibt es wenig (10 % der Stadtfläche), und er liegt nicht abseits: 13,5 % davon
+liegen in einer Zone, fast so viel wie im Rest der Stadt (17,0 %).</p>
+<figure class="karte"><img src="../img/stadt/kiel-stadt.webp" width="960" height="600" alt="Karte von Kiel mit Stadtgrenze und den roten Verbotszonen"><figcaption>Kiel: 20 km² Verbotszone auf 119 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">77</td><td class="zahl">5,0 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">99</td><td class="zahl">2,5 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">9</td><td class="zahl">0,2 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">341</td><td class="zahl">6,5 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">29</td><td class="zahl">0,6 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">535</td><td class="zahl">10,6 km²</td></tr></tbody></table>
+<p class="tabellennotiz">Jede Art für sich gezählt, Überlappungen also mehrfach. Anbauvereinigungen nur, soweit in OpenStreetMap eingetragen.</p>
+
+<p>Die meisten Zonen gehen auf die 535 Sportstätten zurück, danach auf die
+341 Spielplätze. Auf Spielplätzen verbietet das Nichtraucherschutzgesetz des
+Landes außerdem das Rauchen von Tabak, also auch von Joints mit Tabak
+(<a href="https://www.umwelt-online.de/recht/arbeitss/arbeitsrecht/laender/sh/nichtrauchg.htm">Nichtraucherschutzgesetz</a>).</p>
+<h2 id="kiellinie-schrevenpark-und-dusternbrook">Kiellinie, Schrevenpark und Düsternbrook</h2>
+<p>An der <strong>Kiellinie</strong> an der Förde liegen 20 % in einer Zone, im <strong>Düsternbrooker Gehölz</strong>
+dahinter 20 %, im Alten Botanischen Garten 14 %.</p>
+<figure class="karte"><img src="../img/stadt/kiel-kiellinie.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Kiellinie (grün umrandet) mit den roten Verbotszonen; etwa 20 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Kiellinie: 2 ha, davon 20 % Verbotszone. <a href="../#16/54.33301/10.15208">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/kiel-duesternbrook.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Düsternbrooker Gehölz (grün umrandet) mit den roten Verbotszonen; etwa 20 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Düsternbrooker Gehölz: 23 ha, davon 20 % Verbotszone. <a href="../#16/54.34113/10.15147">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Im <strong>Schrevenpark</strong> sind es 48 %: Im Park liegt ein Spielplatz, am Rand liegen fünf
+Kitas und fünf Sportanlagen. Der <strong>Hiroshimapark</strong> am Rathaus liegt zu 13 % in einer
+Zone. Auf einem 100 Meter breiten Streifen Land entlang der Schwentine sind es 57 %.</p>
+<figure class="karte"><img src="../img/stadt/kiel-schrevenpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Schrevenpark (grün umrandet) mit den roten Verbotszonen; etwa 48 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Schrevenpark: 12 ha, davon 48 % Verbotszone. <a href="../#16/54.32833/10.12392">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/kiel-hiroshimapark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Hiroshimapark (grün umrandet) mit den roten Verbotszonen; etwa 13 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Hiroshimapark: 2 ha, davon 13 % Verbotszone. <a href="../#16/54.32429/10.1324">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="innenstadt">Innenstadt</h2>
+<p>Eine amtliche Liste der Fußgängerzonen gibt es nicht. Belegt ist die Holstenstraße „vom Alten Markt bis
+zur Schevenbrücke/Beginn Holstenplatz“
+(<a href="https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/IV/Presse/PI/2025/4_Quartal/251107_staedtebaufoerderung_kiel_holstenstrasse">Land Schleswig-Holstein, November 2025</a>).
+Dort gilt von 7 bis 20 Uhr Konsumverbot; blau sind die Fußgängerbereiche aus OpenStreetMap.</p>
+<p>Von Holsten- und Dänischer Straße liegen außerdem 39 % in einer
+Sichtweiten-Zone. Der Asmus-Bremer-Platz liegt außerhalb (0 %), der Vinetaplatz
+in Gaarden fast ganz in einer Zone (96 %). Auf dem Holstenplatz steht von Mai bis
+September eine betreute Sandkiste; in ihrem Umfeld gilt nach Angabe der Stadt ein „generelles
+Rauchverbot“
+(<a href="https://www.kiel.de/de/politik_verwaltung/service/_leistung.php?id=10237972">Stadt Kiel</a>).</p>
+<figure class="karte"><img src="../img/stadt/kiel-fussgaengerzone.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Holstenstraße und Dänische Straße (grün umrandet) mit den roten Verbotszonen; etwa 39 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Holstenstraße und Dänische Straße: 2 ha, davon 39 % Verbotszone. <a href="../#16/54.32241/10.13814">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="universitat-stadion-und-kieler-woche">Universität, Stadion und Kieler Woche</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte. Vom Campus der <strong>Universität</strong> liegen
+37 % in einer Zone, um 19 Sportanlagen, zwei Kitas
+und zwei Spielplätze auf dem Gelände.</p>
+<figure class="karte"><img src="../img/stadt/kiel-uni.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Christian-Albrechts-Universität zu Kiel (grün umrandet) mit den roten Verbotszonen; etwa 37 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Christian-Albrechts-Universität zu Kiel: 75 ha, davon 37 % Verbotszone. <a href="../#16/54.34588/10.11299">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Im <strong>Holstein-Stadion</strong> verbietet die Stadionordnung, Cannabis mitzuführen
+(<a href="https://www.holstein-kiel.de/wp-content/uploads/2025/09/Stadionordnung_Holstein-Stadion_2025-26_WEB6.0.pdf">Stadionordnung</a>).
+Für die Kieler Woche haben wir keine eigene Regel der Stadt zu Cannabis gefunden; dort sind aber viele
+Kinder, und in ihrer Gegenwart gilt das Verbot ohnehin.</p>
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>In Schleswig-Holstein ist die Stadt für Verstöße gegen die Konsumverbote zuständig
+(<a href="https://umwelt-online.de/recht/lebensmt/laender/sh/kcangzust.htm">Zuständigkeitsverordnung</a>). Die
+Beträge im Bußgeldkatalog des Landes haben wir nicht nachlesen können; das Gesetz erlaubt bis zu
+30.000 Euro. Seit Oktober 2026 ist gerauchtes Cannabis im Land außerdem in Gebäuden wie Gaststätten,
+Behörden und Hochschulen verboten
+(<a href="https://www.umwelt-online.de/recht/arbeitss/arbeitsrecht/laender/sh/z26_0088.htm">Gesetzesänderung</a>).
+Eigene Verbotszonen für Cannabis hat Kiel nicht (Stand 27. November 2026).</p>
+<nav aria-label="Nachbarstädte" class="nachbarn">
+<h2 id="nachbarstadte-im-vergleich">Nachbarstädte im Vergleich</h2>
+<p>In Kiel liegen 16,6 % der Stadtfläche in einer Verbotszone. Die nächsten Städte mit eigener Seite:</p>
+<ul>
+<li><strong><a href="hamburg">Hamburg</a></strong>, 87 km entfernt: 16,6 % der Stadtfläche; <a href="hamburg#innenstadt-und-st-pauli">Fußgängerzonen in Hamburg</a>, <a href="hamburg#was-sonst-noch-gilt">Regeln in Hamburg (Hamburg)</a></li>
+<li><strong><a href="schwerin">Schwerin</a></strong>, 117 km entfernt: 7,9 % der Stadtfläche; <a href="schwerin#altstadt">Fußgängerzonen in Schwerin</a>, <a href="schwerin#was-sonst-noch-gilt">Regeln in Schwerin (Mecklenburg-Vorpommern)</a></li>
+<li><strong><a href="bremen">Bremen</a></strong>, 162 km entfernt: 13,9 % der Stadtfläche; <a href="bremen#innenstadt">Fußgängerzonen in Bremen</a>, <a href="bremen#was-sonst-noch-gilt">Regeln in Bremen (Bremen)</a></li>
+</ul>
+</nav>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-kiel-kiffen">Wo darf man in Kiel kiffen?</h3>
+<p>Nach § 5 KCanG außerhalb der roten Flächen, etwa an großen Teilen der Kiellinie (20 % in
+einer Zone). Tagsüber nicht in der Holstenstraße, nie in Gegenwart von Minderjährigen und nicht in
+Gaststätten. Weiß heißt nicht sicher erlaubt: Hecken, Bäume und fehlende Einrichtungen kennt die
+Karte nicht.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+27. November 2026. Eine Orientierungshilfe, keine Rechtsauskunft (<a href="../about.html">wie gerechnet wird</a>).</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
 </body>
 </html>

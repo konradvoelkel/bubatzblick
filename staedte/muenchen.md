@@ -1,14 +1,12 @@
 <p class="lead">In München ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
 <strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km². Grund sind {{objekte}}
-Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
-Spielplätze und Sportstätten. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
-nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzone der Altstadt, in der
-zwischen 7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von
-Kindern und Jugendlichen.</p>
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzone der Altstadt von 7
+bis 20 Uhr und überall die Gegenwart von Minderjährigen.</p>
 
 Das ist viel: München ist dicht bebaut, mit vielen Spielplätzen und Sportanlagen, und Wald gibt
 es kaum ({{wald_anteil}} der Stadtfläche). In Bayern kommen außerdem Verbote nach
-Landesrecht hinzu, die die Karte nicht zeigt: in Biergärten und auf Volksfesten (siehe unten).
+Landesrecht hinzu, die die Karte nicht zeigt: in Biergärten und auf Volksfesten (siehe [Oktoberfest und Biergärten](#oktoberfest-und-biergarten)).
 
 [[stadtkarte]]
 
@@ -16,9 +14,8 @@ Landesrecht hinzu, die die Karte nicht zeigt: in Biergärten und auf Volksfesten
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Fast gleich viel machen die
-{{objekte:playground}} Spielplätze und die {{objekte:sports}} Sportstätten aus.
+Fast gleich viel machen die {{objekte:playground}} Spielplätze und die {{objekte:sports}}
+Sportstätten aus.
 
 Anbauvereinigungen fehlen in der Tabelle: In Bayern hatte das Landesamt bis August 2026 elf
 erlaubt, keine davon in München belegt
@@ -66,8 +63,8 @@ Die **Fußgängerzone der Altstadt** hat die Stadt amtlich abgegrenzt: Die Satzu
 Fußgängerbereiche zählt rund 55 Straßen und Plätze auf, darunter Neuhauser und Kaufingerstraße,
 Marienplatz, Sendlinger Straße, Theatiner- und Weinstraße; das Tal gehört nicht dazu
 ([Altstadt-Fußgängerbereiche-Satzung](https://stadt.muenchen.de/rathaus/stadtrecht/vorschrift/336/version3/0.html)).
-Dort gilt zwischen 7 und 20 Uhr Konsumverbot, ganz gleich, was die Karte rot zeigt; blau zeigt die
-Karte die Fußgängerbereiche, wie sie in OpenStreetMap eingetragen sind.
+Dort gilt von 7 bis 20 Uhr Konsumverbot, ganz gleich, was die Karte rot zeigt; blau sind die
+Fußgängerbereiche aus OpenStreetMap.
 
 Von Neuhauser und Kaufingerstraße liegen nur {{ort:Neuhauser und Kaufingerstraße}} zusätzlich in
 einer Sichtweiten-Zone, vom Marienplatz {{ort:Marienplatz}}, vom Odeonsplatz {{ort:Odeonsplatz}}.
@@ -96,10 +93,9 @@ Christkindlmarkt liegt ohnehin in der Fußgängerzone.
 
 ## Hochschulen
 
-Hochschulen sind nach § 5 KCanG keine Verbotsorte. Das Gelände um das Hauptgebäude der **LMU**
-liegt zu
-{{hochschule:Ludwig-Maximilians-Universität}} in einer Zone, das Stammgelände der **TU München** an der Arcisstraße
-zu {{hochschule:Technische Universität München}}, die **Hochschule München** zu
+Hochschulen sind nach § 5 KCanG keine Verbotsorte. Das Gelände um das Hauptgebäude der **LMU** liegt
+zu {{hochschule:Ludwig-Maximilians-Universität}} in einer Zone, das Stammgelände der **TU München**
+an der Arcisstraße zu {{hochschule:Technische Universität München}}, die **Hochschule München** zu
 {{hochschule:Hochschule München}}. Die Hausordnung der LMU verbietet das Rauchen in Gebäuden; zu
 Cannabis sagt sie nichts
 ([LMU](https://cms-cdn.lmu.de/media/03-jura/05-studium/05-studentisches-leben/hausordnung-lmu.pdf)).
@@ -117,11 +113,11 @@ Alten Botanischen Garten gibt es nicht (Stand {{stand}}).
 
 ### Wo darf man in München kiffen?
 
-Außerhalb der roten und lila Flächen, außerhalb der Fußgängerzone zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen, nicht dort, wo ein Hausrecht es verbietet, und gerauchtes
-Cannabis auch nicht in Biergärten und auf Volksfesten. Eine weiße Fläche auf der Karte heißt
-nicht, dass Konsum dort erlaubt ist: Die Karte kennt weder Hecken noch Bäume, die die Sicht nehmen,
-noch Einrichtungen, die in OpenStreetMap fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa im Hofgarten ({{ort:Hofgarten}} in einer Zone) und
+im Schlosspark Nymphenburg ({{park:Schlosspark Nymphenburg}}). Nicht in der lila Zone am Alten
+Botanischen Garten, tagsüber nicht in der Fußgängerzone der Altstadt, nie in Gegenwart von
+Minderjährigen, gerauchtes Cannabis außerdem nicht in Biergärten und auf Volksfesten. Weiß heißt
+nicht sicher erlaubt: Hecken, Bäume und fehlende Einrichtungen kennt die Karte nicht.
 
 ### Darf man im Englischen Garten kiffen?
 
@@ -131,10 +127,8 @@ Biergärten und das Verbot in Gegenwart von Kindern und Jugendlichen.
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

@@ -1,0 +1,652 @@
+{
+ "stadtflaeche_osm_km2": 203.76,
+ "wald": {
+  "flaeche_km2": 64.4,
+  "anteil_stadt": 0.3162,
+  "anteil_zone": 0.0465,
+  "anteil_zone_ohne_wald": 0.1339
+ },
+ "zonen_km2": 21.65,
+ "anteil": 0.10628,
+ "kategorien": {
+  "sports": {
+   "objekte": 561,
+   "zonen_km2": 12.65
+  },
+  "playground": {
+   "objekte": 282,
+   "zonen_km2": 6.26
+  },
+  "school": {
+   "objekte": 113,
+   "zonen_km2": 5.12
+  },
+  "kindergarten": {
+   "objekte": 137,
+   "zonen_km2": 2.82
+  },
+  "youth": {
+   "objekte": 21,
+   "zonen_km2": 0.49
+  },
+  "childcare": {
+   "objekte": 10,
+   "zonen_km2": 0.22
+  }
+ },
+ "objekte_gesamt": 1124,
+ "merkmale": {
+  "park": [
+   {
+    "name": "Schlosspark",
+    "osm": [
+     "w145482674"
+    ],
+    "flaeche_ha": 34.6,
+    "zone_ha": 15.0,
+    "anteil_zone": 0.433,
+    "lat": 50.04266,
+    "lon": 8.23553,
+    "bbox": [
+     8.23127,
+     50.0373,
+     8.23898,
+     50.04792
+    ]
+   },
+   {
+    "name": "Kuranlagen",
+    "osm": [
+     "w144805246"
+    ],
+    "flaeche_ha": 12.2,
+    "zone_ha": 5.4,
+    "anteil_zone": 0.4448,
+    "lat": 50.08941,
+    "lon": 8.25903,
+    "bbox": [
+     8.25434,
+     50.08427,
+     8.26009,
+     50.09447
+    ]
+   },
+   {
+    "name": "Hofwiese",
+    "osm": [
+     "w487499913"
+    ],
+    "flaeche_ha": 10.2,
+    "zone_ha": 5.1,
+    "anteil_zone": 0.4999,
+    "lat": 50.0969,
+    "lon": 8.26187,
+    "bbox": [
+     8.25847,
+     50.09365,
+     8.26738,
+     50.10017
+    ]
+   },
+   {
+    "name": "Kurpark",
+    "osm": [
+     "w1066012396"
+    ],
+    "flaeche_ha": 8.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.08439,
+    "lon": 8.25134,
+    "bbox": [
+     8.24735,
+     50.08347,
+     8.25464,
+     50.08549
+    ]
+   },
+   {
+    "name": "Rheinwiesen",
+    "osm": [
+     "w113962739",
+     "w25625346"
+    ],
+    "flaeche_ha": 7.4,
+    "zone_ha": 5.5,
+    "anteil_zone": 0.7432,
+    "lat": 50.04018,
+    "lon": 8.21579,
+    "bbox": [
+     8.21326,
+     50.03895,
+     8.22063,
+     50.04152
+    ]
+   },
+   {
+    "name": "Nerotalanlagen",
+    "osm": [
+     "w41981438"
+    ],
+    "flaeche_ha": 6.8,
+    "zone_ha": 4.1,
+    "anteil_zone": 0.6033,
+    "lat": 50.09325,
+    "lon": 8.23336,
+    "bbox": [
+     8.22617,
+     50.09119,
+     8.23608,
+     50.0951
+    ]
+   },
+   {
+    "name": "Freizeitpark Alter Friedhof",
+    "osm": [
+     "w144909144"
+    ],
+    "flaeche_ha": 6.2,
+    "zone_ha": 4.7,
+    "anteil_zone": 0.7629,
+    "lat": 50.08971,
+    "lon": 8.23126,
+    "bbox": [
+     8.229,
+     50.08806,
+     8.23369,
+     50.0912
+    ]
+   },
+   {
+    "name": "Aukammtal-Anlagen",
+    "osm": [
+     "w1012892547",
+     "w61882504"
+    ],
+    "flaeche_ha": 5.1,
+    "zone_ha": 3.6,
+    "anteil_zone": 0.6921,
+    "lat": 50.08865,
+    "lon": 8.26601,
+    "bbox": [
+     8.26022,
+     50.08728,
+     8.26899,
+     50.08967
+    ]
+   },
+   {
+    "name": "Dambachtal-Anlage",
+    "osm": [
+     "w36741546"
+    ],
+    "flaeche_ha": 4.8,
+    "zone_ha": 1.2,
+    "anteil_zone": 0.243,
+    "lat": 50.09524,
+    "lon": 8.23899,
+    "bbox": [
+     8.23787,
+     50.0921,
+     8.24221,
+     50.09851
+    ]
+   },
+   {
+    "name": "Warmer Damm",
+    "osm": [
+     "w24202797"
+    ],
+    "flaeche_ha": 4.6,
+    "zone_ha": 4.3,
+    "anteil_zone": 0.9331,
+    "lat": 50.08151,
+    "lon": 8.24629,
+    "bbox": [
+     8.24494,
+     50.08035,
+     8.24766,
+     50.08323
+    ]
+   },
+   {
+    "name": "Frei- und Hallenbad Kleinfeldchen",
+    "osm": [
+     "w143973658"
+    ],
+    "flaeche_ha": 3.8,
+    "zone_ha": 3.5,
+    "anteil_zone": 0.9395,
+    "lat": 50.07965,
+    "lon": 8.21423,
+    "bbox": [
+     8.21297,
+     50.07835,
+     8.21549,
+     50.08084
+    ]
+   },
+   {
+    "name": "Henkellpark / Richard-Wagner-Anlage",
+    "osm": [
+     "w35588891"
+    ],
+    "flaeche_ha": 3.0,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.6568,
+    "lat": 50.05439,
+    "lon": 8.24153,
+    "bbox": [
+     8.23944,
+     50.05324,
+     8.24319,
+     50.05556
+    ]
+   },
+   {
+    "name": "Lesselallee",
+    "osm": [
+     "w583629664"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.6324,
+    "lat": 49.99722,
+    "lon": 8.30251,
+    "bbox": [
+     8.29847,
+     49.99573,
+     8.305,
+     49.99867
+    ]
+   },
+   {
+    "name": "Albrecht-Dürer-Anlagen",
+    "osm": [
+     "w354884753",
+     "w61653124"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.4351,
+    "lat": 50.0907,
+    "lon": 8.21826,
+    "bbox": [
+     8.21553,
+     50.08805,
+     8.22187,
+     50.09236
+    ]
+   }
+  ],
+  "see": [
+   {
+    "name": "Kiesgrube Delkenheim",
+    "osm": [
+     "r2324611"
+    ],
+    "flaeche_ha": 6.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.03322,
+    "lon": 8.34025,
+    "bbox": [
+     8.33819,
+     50.03177,
+     8.34329,
+     50.03475
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Hessische Hochschule für öffentliches Management und Sicherheit",
+    "osm": [
+     "w28881883"
+    ],
+    "flaeche_ha": 10.7,
+    "zone_ha": 4.9,
+    "anteil_zone": 0.4537,
+    "lat": 50.08498,
+    "lon": 8.1908,
+    "bbox": [
+     8.18813,
+     50.0827,
+     8.19422,
+     50.08676
+    ]
+   },
+   {
+    "name": "Hochschule RheinMain",
+    "osm": [
+     "w144229340",
+     "w249458355",
+     "w459069023",
+     "w65045771"
+    ],
+    "flaeche_ha": 6.8,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.2294,
+    "lat": 50.09693,
+    "lon": 8.2167,
+    "bbox": [
+     8.21469,
+     50.095,
+     8.21819,
+     50.09898
+    ]
+   },
+   {
+    "name": "Friedrich-Ebert-Schule",
+    "osm": [
+     "w1228959971"
+    ],
+    "flaeche_ha": 1.9,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.585,
+    "lat": 50.06683,
+    "lon": 8.26024,
+    "bbox": [
+     8.25892,
+     50.06611,
+     8.26154,
+     50.06755
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Paulusplatz",
+    "osm": [
+     "w770015896"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.9987,
+    "lat": 50.00816,
+    "lon": 8.28729,
+    "bbox": [
+     8.28562,
+     50.00745,
+     8.28752,
+     50.00893
+    ]
+   },
+   {
+    "name": "Mauritiusplatz",
+    "osm": [
+     "w144889308"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.0818,
+    "lon": 8.23862,
+    "bbox": [
+     8.23812,
+     50.08147,
+     8.23906,
+     50.08212
+    ]
+   },
+   {
+    "name": "Hofgartenplatz",
+    "osm": [
+     "w899030417"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.1798,
+    "lat": 50.10146,
+    "lon": 8.26475,
+    "bbox": [
+     8.26428,
+     50.10113,
+     8.26529,
+     50.10177
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "Strand Bastion von Schönborn",
+    "osm": [
+     "w279574319"
+    ],
+    "flaeche_ha": 0.1,
+    "zone_ha": 0.1,
+    "anteil_zone": 1.0,
+    "lat": 50.00654,
+    "lon": 8.28054,
+    "bbox": [
+     8.28024,
+     50.00623,
+     8.28085,
+     50.00677
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r2464570",
+     "r2464576",
+     "r2464904",
+     "r6274126"
+    ],
+    "flaeche_ha": 395.2,
+    "zone_ha": 23.6,
+    "anteil_zone": 0.0598,
+    "lat": 50.03688,
+    "lon": 8.17618,
+    "bbox": [
+     8.17361,
+     49.99247,
+     8.33069,
+     50.04017
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 277.2,
+   "zone_ha": 56.0,
+   "anteil_zone": 0.2021
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 8.6,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 50.0724,
+  "lon": 8.25609,
+  "bbox": [
+   8.10937,
+   49.99201,
+   8.38727,
+   50.15244
+  ]
+ },
+ "orte": [
+  {
+   "name": "Kirchgasse und Langgasse",
+   "osm": [
+    "w111268564",
+    "w1347967859",
+    "w144889281",
+    "w144889286",
+    "w144889287",
+    "w144889296",
+    "w144889297",
+    "w144889302",
+    "w144889314",
+    "w145343166",
+    "w158089521",
+    "w391468200",
+    "w39965737",
+    "w40780108",
+    "w46242826"
+   ],
+   "flaeche_ha": 2.17,
+   "bbox": [
+    8.23627,
+    50.07774,
+    8.24178,
+    50.08516
+   ],
+   "anteil_zone": 0.223,
+   "art": "linie",
+   "lat": 50.08183,
+   "lon": 8.23943
+  },
+  {
+   "name": "Mauritiusplatz",
+   "osm": [
+    "w144889308",
+    "w483955878"
+   ],
+   "flaeche_ha": 0.32,
+   "bbox": [
+    8.23812,
+    50.08147,
+    8.23907,
+    50.08214
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 50.08181,
+   "lon": 8.23863
+  },
+  {
+   "name": "Schlossplatz",
+   "osm": [
+    "r4743158",
+    "w1034294928",
+    "w1072024545",
+    "w1548925533",
+    "w156511720",
+    "w51568376"
+   ],
+   "flaeche_ha": 0.6,
+   "bbox": [
+    8.24053,
+    50.08158,
+    8.24275,
+    50.08269
+   ],
+   "anteil_zone": 0.4837,
+   "art": "flaeche",
+   "lat": 50.08214,
+   "lon": 8.24154
+  },
+  {
+   "name": "Platz der Deutschen Einheit",
+   "osm": [
+    "w1156934427",
+    "w293327593"
+   ],
+   "flaeche_ha": 0.14,
+   "bbox": [
+    8.23491,
+    50.08008,
+    8.23622,
+    50.08027
+   ],
+   "anteil_zone": 1.0,
+   "art": "linie",
+   "lat": 50.08016,
+   "lon": 8.23555
+  },
+  {
+   "name": "Warmer Damm",
+   "osm": [
+    "w24202797"
+   ],
+   "flaeche_ha": 4.62,
+   "bbox": [
+    8.24494,
+    50.08035,
+    8.24766,
+    50.08323
+   ],
+   "anteil_zone": 0.9331,
+   "art": "flaeche",
+   "lat": 50.08151,
+   "lon": 8.24629
+  },
+  {
+   "name": "Reisinger- und Herbert-Anlage",
+   "osm": [
+    "w1485988628",
+    "w25764024"
+   ],
+   "flaeche_ha": 3.44,
+   "bbox": [
+    8.24311,
+    50.07191,
+    8.24527,
+    50.07524
+   ],
+   "anteil_zone": 0.6585,
+   "art": "flaeche",
+   "lat": 50.07362,
+   "lon": 8.24407
+  },
+  {
+   "name": "Luisenplatz",
+   "osm": [
+    "w392147427"
+   ],
+   "flaeche_ha": 0.75,
+   "bbox": [
+    8.23925,
+    50.07792,
+    8.24024,
+    50.07905
+   ],
+   "anteil_zone": 0.3008,
+   "art": "flaeche",
+   "lat": 50.07848,
+   "lon": 8.23975
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-25T21:22:46Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Hessen (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  50.08,
+  8.24
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Kurpark",
+   "kurpark"
+  ],
+  [
+   "ort",
+   "Warmer Damm",
+   "warmer-damm"
+  ],
+  [
+   "park",
+   "Schlosspark",
+   "schlosspark"
+  ],
+  [
+   "ort",
+   "Kirchgasse und Langgasse",
+   "fussgaengerzone"
+  ]
+ ]
+}

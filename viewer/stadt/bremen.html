@@ -7,14 +7,14 @@
 <title>Kiffen in Bremen: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<meta name="description" content="In Bremen liegen 45 km², 13,9 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<meta name="description" content="In Bremen liegen 13,9 % der Stadtfläche (45 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
 <link rel="canonical" href="__SITE_URL__/stadt/bremen">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BubatzBlick">
 <meta property="og:locale" content="de_DE">
 <meta property="og:url" content="__SITE_URL__/stadt/bremen">
 <meta property="og:title" content="Kiffen in Bremen: wo es verboten ist">
-<meta property="og:description" content="In Bremen liegen 45 km², 13,9 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<meta property="og:description" content="In Bremen liegen 13,9 % der Stadtfläche (45 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
 <meta property="og:image" content="__SITE_URL__/img/stadt/bremen.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -32,7 +32,7 @@
    "@id": "__SITE_URL__/stadt/bremen",
    "url": "__SITE_URL__/stadt/bremen",
    "name": "Kiffen in Bremen: wo es verboten ist",
-   "description": "In Bremen liegen 45 km², 13,9 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.",
+   "description": "In Bremen liegen 13,9 % der Stadtfläche (45 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.",
    "inLanguage": "de",
    "isPartOf": {
     "@id": "__SITE_URL__/#website"
@@ -123,6 +123,8 @@
   .lead { font-size: 1.12em; }
   .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
   td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .stand { font-size: .9em; opacity: .85; margin-top: .2em; }
+  .tabellennotiz { font-size: .88em; color: var(--text-schwach); margin: .4em 0 1.2em; }
   .hinweis { font-size: .92em; color: var(--text-schwach);
              border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
   @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
@@ -130,19 +132,23 @@
   svg.deutschland { width: 100%; height: auto; display: block; }
   svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
   svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
-  svg.deutschland circle { fill: #c0392b; stroke: #fff; stroke-width: 2; }
-  svg.deutschland text { font-size: 19px; font-weight: 700; fill: #222; paint-order: stroke;
-                         stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+  svg.deutschland circle { r: 5; fill: #c0392b; stroke: #fff; stroke-width: 1.5; }
+  svg.deutschland text { font-size: 15px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 3.5px; stroke-linejoin: round; }
   svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
-  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 9; fill: #8e2a20; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 7; fill: #8e2a20; }
   svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
   ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
   ul.grau a { color: var(--text-schwach); text-decoration: none;
               border-bottom: 1px dotted currentColor; }
   ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
-  svg.deutschland line { stroke: #8a918a; stroke-width: 1.2; }
-  @media (max-width: 480px) { svg.deutschland a:not(.eng) text { font-size: 28px; }
-                              svg.deutschland a:not(.eng) circle { r: 10; } }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1; }
+  /* Auf dem Handy nur die Namen, dafuer groesser; die Anteile stehen in der Tabelle darunter. */
+  @media (max-width: 480px) { svg.deutschland text { font-size: 19px; }
+                              svg.deutschland .anteil { display: none; }
+                              svg.deutschland circle { r: 7; }
+                              svg.deutschland a.ohne-handy text,
+                              svg.deutschland a.ohne-handy line { display: none; } }
 </style>
 </head>
 <body>
@@ -150,6 +156,7 @@
   <div>
     <h1>Kiffen in Bremen</h1>
     <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <p class="stand">Zahlen vom 27. November 2026 · Recherche zu Regeln vor Ort: November 2026</p>
     <nav><a href="../#12/53.12038/8.80685" class="knopf">Bremen auf der Karte</a>
       <a href="./" class="knopf">Alle Städte</a>
       <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
@@ -158,26 +165,22 @@
 <main>
 <p class="lead">In Bremen ist öffentliches Kiffen auf 45 km² verboten, das sind
 <strong>13,9 % der Stadtfläche</strong> von 326 km² (die Stadt Bremen, ohne
-Bremerhaven). Grund sind 2 397 Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht
-konsumiert werden darf, vor allem Sportstätten und Spielplätze. Sichtweite heißt: höchstens
-100 Meter vom Eingangsbereich, und nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die
-Fußgängerzonen, in denen zwischen 7 und 20 Uhr nicht konsumiert werden darf, und überall die
-unmittelbare Gegenwart von Kindern und Jugendlichen.</p>
+Bremerhaven). Grund sind 2 397 Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite,
+bis 100 Meter vom Eingang und ohne Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen
+die Fußgängerzonen von 7 bis 20 Uhr und überall die Gegenwart von Minderjährigen.</p>
 
 <figure class="karte"><img src="../img/stadt/bremen-stadt.webp" width="960" height="600" alt="Karte von Bremen mit Stadtgrenze und den roten Verbotszonen"><figcaption>Bremen: 45 km² Verbotszone auf 326 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
 
 <h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
 <table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">198</td><td class="zahl">10,8 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">307</td><td class="zahl">8,4 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">12</td><td class="zahl">0,2 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">702</td><td class="zahl">15,5 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">59</td><td class="zahl">1,4 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">1 119</td><td class="zahl">23,3 km²</td></tr></tbody></table>
+<p class="tabellennotiz">Jede Art für sich gezählt, Überlappungen also mehrfach. Anbauvereinigungen nur, soweit in OpenStreetMap eingetragen.</p>
 
-<p>Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die 45 km² oben. Den größten Teil machen die
-1 119 Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von 702 Spielplätzen.</p>
-<p>Auf den Spielplätzen selbst verbietet das Bremische Nichtraucherschutzgesetz seit 2013 das
-Rauchen; nach Auffassung der Polizei gilt das auch für Cannabis. Ab dem 1. Januar 2027 nennt das
-Gesetz Cannabis ausdrücklich und verbietet das Rauchen auch unter den Dächern von Haltestellen
-(<a href="https://www.gesetzblatt.bremen.de/fastmedia/218/2026_09_08_GBl_Nr_0091_signed.pdf">Gesetzblatt Bremen, September 2026</a>).
-Anbauvereinigungen fehlen in der Tabelle: Wo sie anbauen, ist nicht veröffentlicht.</p>
+<p>Die meisten Zonen gehen auf die 1 119 Sportstätten zurück, danach auf die
+702 Spielplätze.</p>
+<p>Auf den Spielplätzen selbst verbietet das Bremische Nichtraucherschutzgesetz seit 2013 das Rauchen;
+nach Auffassung der Polizei gilt das auch für Cannabis. Ab dem 1. Januar 2027 nennt das Gesetz
+Cannabis ausdrücklich und verbietet das Rauchen auch unter den Dächern von Haltestellen
+(<a href="https://www.gesetzblatt.bremen.de/fastmedia/218/2026_09_08_GBl_Nr_0091_signed.pdf">Gesetzblatt Bremen, September 2026</a>).</p>
 <h2 id="burgerpark-und-andere-parks">Bürgerpark und andere Parks</h2>
 <p>Im <strong>Bürgerpark</strong> liegen 23 % der Fläche in einer Zone, vor allem um die acht
 Spielplätze im Park. Kiffen ist dort aber ganz verboten: Die Parkordnung des Bürgerparkvereins
@@ -207,11 +210,10 @@ einzelne, etwa die Langenstraße mit Großer und Kleiner Waagestraße
 (<a href="https://www.amtsblatt.bremen.de/fastmedia/233/2013-02-18-amtsblatt-2013-nr-38-widmung-langenstrasse.pdf">Amtsblatt 2013</a>)
 und die Fußgängerzonen der Vegesacker Innenstadt
 (<a href="https://www.amtsblatt.bremen.de/fastmedia/233/2025_10_09_ABl_Nr_0179_signed.pdf">Amtsblatt 2025</a>).
-Der Senat spricht von den
-„Fußgängerzonen Obernstraße und Sögestraße“, auch wenn durch die Obernstraße die Straßenbahn fährt
+Der Senat spricht von den „Fußgängerzonen Obernstraße und Sögestraße“, auch wenn durch die
+Obernstraße die Straßenbahn fährt
 (<a href="https://www.rathaus.bremen.de/sixcms/media.php/13/top%205_20240206_Strassenbahnfuehrung_und_Innenstadt.pdf">Senat, Februar 2024</a>).
-Dort gilt zwischen 7 und 20 Uhr Konsumverbot; blau zeigt die Karte die Fußgängerbereiche, wie sie
-in OpenStreetMap eingetragen sind.</p>
+Dort gilt von 7 bis 20 Uhr Konsumverbot; blau sind die Fußgängerbereiche aus OpenStreetMap.</p>
 <p>Von Obern- und Sögestraße liegen außerdem 35 % in einer
 Sichtweiten-Zone. Marktplatz (0 %) und Domshof (0 %) liegen außerhalb der
 Zonen, der Bahnhofsplatz fast ganz in einer (99 %).</p>
@@ -239,23 +241,30 @@ Vom April bis Mitte Dezember 2024 bekam es 21 Anzeigen nach dem Cannabisgesetz
 Für Freimarkt, Osterwiese und Breminale haben wir keine eigene Regel zu Cannabis gefunden; wo viele
 Kinder und Jugendliche sind, greift das Verbot in ihrer Gegenwart (§ 5 Abs. 1 KCanG). Eigene
 Verbotszonen für Cannabis hat Bremen nicht (Stand 27. November 2026).</p>
+<nav aria-label="Nachbarstädte" class="nachbarn">
+<h2 id="nachbarstadte-im-vergleich">Nachbarstädte im Vergleich</h2>
+<p>In Bremen liegen 13,9 % der Stadtfläche in einer Verbotszone. Die nächsten Städte mit eigener Seite:</p>
+<ul>
+<li><strong><a href="hamburg">Hamburg</a></strong>, 90 km entfernt: 16,6 % der Stadtfläche; <a href="hamburg#innenstadt-und-st-pauli">Fußgängerzonen in Hamburg</a>, <a href="hamburg#was-sonst-noch-gilt">Regeln in Hamburg (Hamburg)</a></li>
+<li><strong><a href="hannover">Hannover</a></strong>, 105 km entfernt: 21,2 % der Stadtfläche; <a href="hannover#innenstadt">Fußgängerzonen in Hannover</a>, <a href="hannover#was-sonst-noch-gilt">Regeln in Hannover (Niedersachsen)</a></li>
+<li><strong><a href="osnabrueck">Osnabrück</a></strong>, 106 km entfernt: 13,3 % der Stadtfläche; <a href="osnabrueck#innenstadt">Fußgängerzonen in Osnabrück</a>, <a href="osnabrueck#was-sonst-noch-gilt">Regeln in Osnabrück (Niedersachsen)</a></li>
+</ul>
+</nav>
 <h2 id="haufige-fragen">Häufige Fragen</h2>
 <h3 id="wo-darf-man-in-bremen-kiffen">Wo darf man in Bremen kiffen?</h3>
-<p>Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet, etwa im
-Bürgerpark und auf dem Gelände der Universität. Eine weiße Fläche auf der Karte heißt nicht, dass
-Konsum dort erlaubt ist: Die Karte kennt weder Hecken noch Bäume, die die Sicht nehmen, noch
-Einrichtungen, die in OpenStreetMap fehlen.</p>
+<p>Nach § 5 KCanG außerhalb der roten Flächen, etwa auf der Wiese am Werdersee
+(0 % in einer Zone). Nicht im Bürgerpark, dessen Parkordnung
+Cannabis verbietet, nicht auf dem Gelände der Universität, tagsüber nicht in den Fußgängerzonen und
+nie in Gegenwart von Minderjährigen. Weiß heißt nicht sicher erlaubt: Hecken, Bäume und fehlende
+Einrichtungen kennt die Karte nicht.</p>
 <h3 id="darf-man-im-burgerpark-kiffen">Darf man im Bürgerpark kiffen?</h3>
 <p>Nein. Die Parkordnung verbietet Cannabis im ganzen Bürgerpark und im Stadtwald, auch dort, wo die
 Karte keine Zone zeigt.</p>
 <h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
-<p>Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom 27. November 2026. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der <a href="../about.html">Über-Seite</a>.</p>
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p>Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+27. November 2026. Eine Orientierungshilfe, keine Rechtsauskunft (<a href="../about.html">wie gerechnet wird</a>).</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>
 </main>
 <footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
 Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·

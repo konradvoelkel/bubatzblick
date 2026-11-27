@@ -1,10 +1,8 @@
 <p class="lead">In Hamburg ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
 <strong>{{anteil}} der Fläche</strong> von {{flaeche_km2}} km² (das Festland, ohne die Insel Neuwerk
-und das Wattenmeer). Grund sind {{objekte}} Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht
-konsumiert werden darf, vor allem Sportstätten und Spielplätze. Sichtweite heißt: höchstens
-100 Meter vom Eingangsbereich, und nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die
-Fußgängerzonen, in denen zwischen 7 und 20 Uhr nicht konsumiert werden darf, und überall die
-unmittelbare Gegenwart von Kindern und Jugendlichen.</p>
+und das Wattenmeer). Grund sind {{objekte}} Einrichtungen wie Schulen und Spielplätze: In ihrer
+Sichtweite, bis 100 Meter vom Eingang und ohne Gebäude dazwischen, verbietet § 5 KCanG den Konsum.
+Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr und überall die Gegenwart von Minderjährigen.</p>
 
 [[stadtkarte]]
 
@@ -12,10 +10,8 @@ unmittelbare Gegenwart von Kindern und Jugendlichen.</p>
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Den größten Teil machen die
-{{objekte:sports}} Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von {{objekte:playground}} Spielplätzen und {{objekte:school}} Schulen.
+Den größten Teil machen die {{objekte:sports}} Sportstätten aus, von Bolzplätzen über Turnhallen bis
+zu Fitnessstudios, gefolgt von {{objekte:playground}} Spielplätzen und {{objekte:school}} Schulen.
 
 Anbauvereinigungen fehlen in der Tabelle: 18 hatten im Juli 2026 eine Erlaubnis, ihre Adressen
 veröffentlicht die Stadt nicht
@@ -46,13 +42,13 @@ Der Altonaer Balkon liegt zu {{ort:Altonaer Balkon}} in einer Zone, der Alte Elb
 
 ## Innenstadt und St. Pauli
 
-Eine amtliche Liste der Hamburger Fußgängerzonen haben wir nicht gefunden; maßgeblich ist das
-Schild vor Ort. Die **Spitalerstraße** ist Fußgängerzone, in der Mönckebergstraße fahren Busse, der
+Eine amtliche Liste der Hamburger Fußgängerzonen haben wir nicht gefunden; maßgeblich ist das Schild
+vor Ort. Die **Spitalerstraße** ist Fußgängerzone, in der Mönckebergstraße fahren Busse, der
 Jungfernstieg ist seit 2020 nur für Privatautos gesperrt, und in Ottensen plant der Bezirk einen
 verkehrsberuhigten Geschäftsbereich, keine Fußgängerzone
 ([Bezirksamt Altona](https://www.hamburg.de/politik-und-verwaltung/bezirke/altona/themen/verkehr/freiraumottensen/faq-freiraum-ottensen-809686)).
-In der Fußgängerzone gilt zwischen 7 und 20 Uhr Konsumverbot; blau zeigt die Karte die
-Fußgängerbereiche, wie sie in OpenStreetMap eingetragen sind.
+In der Fußgängerzone gilt von 7 bis 20 Uhr Konsumverbot; blau sind die Fußgängerbereiche aus
+OpenStreetMap.
 
 Von der Spitalerstraße liegen außerdem {{ort:Spitalerstraße}} in einer Sichtweiten-Zone. Der
 Rathausmarkt ({{platz:Rathausmarkt}}) und der Hachmannplatz am Hauptbahnhof
@@ -96,10 +92,10 @@ Eigene Verbotszonen für Cannabis hat Hamburg nicht (Stand {{stand}}).
 
 ### Wo darf man in Hamburg kiffen?
 
-Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet. Eine weiße
-Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte kennt weder Hecken noch
-Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa im Alstervorland ({{park:Alstervorland}} in einer
+Zone) und am Elbstrand in Övelgönne ({{ort:Övelgönne}}). Tagsüber nicht in Fußgängerzonen wie der
+Spitalerstraße, nie in Gegenwart von Minderjährigen und nicht gegen ein Hausrecht. Weiß heißt nicht
+sicher erlaubt: Hecken, Bäume und fehlende Einrichtungen kennt die Karte nicht.
 
 ### Darf man an der Alster kiffen?
 
@@ -108,10 +104,8 @@ Jugendlichen, und an anderen Stellen des Ufers liegen Spielplätze und Sportanla
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

@@ -1,0 +1,854 @@
+{
+ "stadtflaeche_osm_km2": 106.7,
+ "wald": {
+  "flaeche_km2": 29.9,
+  "anteil_stadt": 0.2804,
+  "anteil_zone": 0.0671,
+  "anteil_zone_ohne_wald": 0.207
+ },
+ "zonen_km2": 17.9,
+ "anteil": 0.16776,
+ "kategorien": {
+  "sports": {
+   "objekte": 418,
+   "zonen_km2": 9.4
+  },
+  "playground": {
+   "objekte": 249,
+   "zonen_km2": 6.27
+  },
+  "school": {
+   "objekte": 85,
+   "zonen_km2": 4.64
+  },
+  "kindergarten": {
+   "objekte": 91,
+   "zonen_km2": 2.77
+  },
+  "youth": {
+   "objekte": 19,
+   "zonen_km2": 0.51
+  },
+  "childcare": {
+   "objekte": 11,
+   "zonen_km2": 0.29
+  }
+ },
+ "objekte_gesamt": 873,
+ "merkmale": {
+  "see": [
+   {
+    "name": "Bugasee",
+    "osm": [
+     "r1794834"
+    ],
+    "flaeche_ha": 32.2,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.0506,
+    "lat": 51.29607,
+    "lon": 9.50404,
+    "bbox": [
+     9.49015,
+     51.29057,
+     9.50752,
+     51.30167
+    ]
+   },
+   {
+    "name": "Aueteich",
+    "osm": [
+     "r1794838"
+    ],
+    "flaeche_ha": 8.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.29928,
+    "lon": 9.49099,
+    "bbox": [
+     9.48811,
+     51.29694,
+     9.49344,
+     51.30159
+    ]
+   },
+   {
+    "name": "Regattastrecke",
+    "osm": [
+     "w39698689"
+    ],
+    "flaeche_ha": 4.5,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.2829,
+    "lat": 51.29531,
+    "lon": 9.50094,
+    "bbox": [
+     9.49954,
+     51.29268,
+     9.50205,
+     51.29774
+    ]
+   },
+   {
+    "name": "Lac",
+    "osm": [
+     "r7723238"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.1016,
+    "lat": 51.31362,
+    "lon": 9.41893,
+    "bbox": [
+     9.41695,
+     51.31283,
+     9.42188,
+     51.31441
+    ]
+   },
+   {
+    "name": "Küchengraben",
+    "osm": [
+     "w19576293"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.2439,
+    "lat": 51.30579,
+    "lon": 9.49326,
+    "bbox": [
+     9.48682,
+     51.30263,
+     9.49746,
+     51.3083
+    ]
+   },
+   {
+    "name": "Hirschgraben",
+    "osm": [
+     "w19576294"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.30385,
+    "lon": 9.49857,
+    "bbox": [
+     9.49711,
+     51.30007,
+     9.49996,
+     51.30746
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Universität Kassel - Campus Holländischer Platz",
+    "osm": [
+     "w41800186"
+    ],
+    "flaeche_ha": 19.0,
+    "zone_ha": 6.6,
+    "anteil_zone": 0.3486,
+    "lat": 51.32335,
+    "lon": 9.50643,
+    "bbox": [
+     9.50214,
+     51.31977,
+     9.50852,
+     51.32692
+    ]
+   },
+   {
+    "name": "Universität Kassel, Heinrich-Plett-Straße",
+    "osm": [
+     "w28720789"
+    ],
+    "flaeche_ha": 6.8,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.2628,
+    "lat": 51.28289,
+    "lon": 9.44899,
+    "bbox": [
+     9.44786,
+     51.28078,
+     9.45225,
+     51.28488
+    ]
+   },
+   {
+    "name": "Kunsthochschule Kassel",
+    "osm": [
+     "w25502569"
+    ],
+    "flaeche_ha": 4.1,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.0974,
+    "lat": 51.30428,
+    "lon": 9.48899,
+    "bbox": [
+     9.48619,
+     51.3031,
+     9.49145,
+     51.30589
+    ]
+   },
+   {
+    "name": "Universität Kassel, Standort Wilhelmshöher Allee",
+    "osm": [
+     "w26922673"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.2184,
+    "lat": 51.3111,
+    "lon": 9.47405,
+    "bbox": [
+     9.47206,
+     51.31019,
+     9.47592,
+     51.31201
+    ]
+   },
+   {
+    "name": "Bundesbildungszentrum des Zimmerer- und Ausbaugewerbes",
+    "osm": [
+     "w394725152"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.28262,
+    "lon": 9.49797,
+    "bbox": [
+     9.49703,
+     51.28203,
+     9.4989,
+     51.28307
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "ehemalige Lehr- und Versuchsanstalt Kassel",
+    "osm": [
+     "w163191520"
+    ],
+    "flaeche_ha": 8.4,
+    "zone_ha": 1.0,
+    "anteil_zone": 0.1242,
+    "lat": 51.28081,
+    "lon": 9.45213,
+    "bbox": [
+     9.45018,
+     51.27863,
+     9.45338,
+     51.28334
+    ]
+   },
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w182391199"
+    ],
+    "flaeche_ha": 3.9,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.4723,
+    "lat": 51.29851,
+    "lon": 9.4702,
+    "bbox": [
+     9.46768,
+     51.29769,
+     9.47237,
+     51.29929
+    ]
+   },
+   {
+    "name": "Freie Waldschule",
+    "osm": [
+     "w185997036"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.32248,
+    "lon": 9.42084,
+    "bbox": [
+     9.41925,
+     51.32172,
+     9.42242,
+     51.3237
+    ]
+   },
+   {
+    "name": "Insel Siebenbergen",
+    "osm": [
+     "w25531647"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 1.2,
+    "anteil_zone": 0.5149,
+    "lat": 51.29555,
+    "lon": 9.48754,
+    "bbox": [
+     9.48607,
+     51.29464,
+     9.48898,
+     51.29645
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Bergpark Wilhelmshöhe",
+    "osm": [
+     "w608171475"
+    ],
+    "flaeche_ha": 248.5,
+    "zone_ha": 12.7,
+    "anteil_zone": 0.0513,
+    "lat": 51.31444,
+    "lon": 9.41498,
+    "bbox": [
+     9.39111,
+     51.30559,
+     9.43218,
+     51.32331
+    ]
+   },
+   {
+    "name": "Karlsaue",
+    "osm": [
+     "w25607970"
+    ],
+    "flaeche_ha": 130.9,
+    "zone_ha": 23.7,
+    "anteil_zone": 0.1813,
+    "lat": 51.30287,
+    "lon": 9.49259,
+    "bbox": [
+     9.48485,
+     51.29385,
+     9.5025,
+     51.31194
+    ]
+   },
+   {
+    "name": "Hauptfriedhof",
+    "osm": [
+     "w637934118"
+    ],
+    "flaeche_ha": 37.9,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.0294,
+    "lat": 51.32883,
+    "lon": 9.4914,
+    "bbox": [
+     9.48396,
+     51.32537,
+     9.49975,
+     51.33237
+    ]
+   },
+   {
+    "name": "Park Schönfeld",
+    "osm": [
+     "w436821614"
+    ],
+    "flaeche_ha": 31.0,
+    "zone_ha": 12.1,
+    "anteil_zone": 0.3894,
+    "lat": 51.29969,
+    "lon": 9.46125,
+    "bbox": [
+     9.45488,
+     51.296,
+     9.47922,
+     51.30333
+    ]
+   },
+   {
+    "name": "Tannenwäldchen",
+    "osm": [
+     "w27017847"
+    ],
+    "flaeche_ha": 11.1,
+    "zone_ha": 7.0,
+    "anteil_zone": 0.6281,
+    "lat": 51.31968,
+    "lon": 9.46756,
+    "bbox": [
+     9.4541,
+     51.31858,
+     9.47523,
+     51.32081
+    ]
+   },
+   {
+    "name": "Schwarzer Stein",
+    "osm": [
+     "w769957950"
+    ],
+    "flaeche_ha": 7.8,
+    "zone_ha": 7.0,
+    "anteil_zone": 0.8966,
+    "lat": 51.33952,
+    "lon": 9.49775,
+    "bbox": [
+     9.49363,
+     51.33743,
+     9.50013,
+     51.34197
+    ]
+   },
+   {
+    "name": "Dorothea-Viehmann-Park",
+    "osm": [
+     "w132091036"
+    ],
+    "flaeche_ha": 7.3,
+    "zone_ha": 4.7,
+    "anteil_zone": 0.6449,
+    "lat": 51.27497,
+    "lon": 9.45838,
+    "bbox": [
+     9.45573,
+     51.27024,
+     9.45962,
+     51.27976
+    ]
+   },
+   {
+    "name": "Goetheanlage",
+    "osm": [
+     "w25623971"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 3.5,
+    "anteil_zone": 0.9884,
+    "lat": 51.3143,
+    "lon": 9.45699,
+    "bbox": [
+     9.45365,
+     51.31399,
+     9.46089,
+     51.31481
+    ]
+   },
+   {
+    "name": "Wäldchen",
+    "osm": [
+     "w41308965"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 3.6,
+    "anteil_zone": 0.9896,
+    "lat": 51.34234,
+    "lon": 9.4628,
+    "bbox": [
+     9.45972,
+     51.3407,
+     9.46591,
+     51.34364
+    ]
+   },
+   {
+    "name": "Aschrottpark",
+    "osm": [
+     "w31539758"
+    ],
+    "flaeche_ha": 3.2,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.8136,
+    "lat": 51.31602,
+    "lon": 9.45181,
+    "bbox": [
+     9.45012,
+     51.31504,
+     9.45336,
+     51.31696
+    ]
+   },
+   {
+    "name": "Nordstadtpark",
+    "osm": [
+     "w70236336"
+    ],
+    "flaeche_ha": 3.2,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.9856,
+    "lat": 51.32788,
+    "lon": 9.50491,
+    "bbox": [
+     9.50302,
+     51.32676,
+     9.50643,
+     51.32881
+    ]
+   },
+   {
+    "name": "Weinberg",
+    "osm": [
+     "w38108416"
+    ],
+    "flaeche_ha": 2.5,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.2373,
+    "lat": 51.3088,
+    "lon": 9.48988,
+    "bbox": [
+     9.48724,
+     51.30822,
+     9.49195,
+     51.30937
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r148370",
+     "r171882",
+     "r222790",
+     "w37391175",
+     "w37482492",
+     "w38551306",
+     "w38776519",
+     "w39698106",
+     "w39698109",
+     "w39698691",
+     "w39699838",
+     "w532493069",
+     "w532493073",
+     "w532493078",
+     "w88749467"
+    ],
+    "flaeche_ha": 70.7,
+    "zone_ha": 19.6,
+    "anteil_zone": 0.2771,
+    "lat": 51.31126,
+    "lon": 9.50379,
+    "bbox": [
+     9.48795,
+     51.27006,
+     9.5703,
+     51.35226
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Eichwald",
+    "osm": [
+     "r11907177"
+    ],
+    "flaeche_ha": 32.3,
+    "zone_ha": 7.4,
+    "anteil_zone": 0.2279,
+    "lat": 51.29981,
+    "lon": 9.55561,
+    "bbox": [
+     9.54181,
+     51.29718,
+     9.56233,
+     51.30254
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "Strand 3",
+    "osm": [
+     "w177081667"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.29158,
+    "lon": 9.50296,
+    "bbox": [
+     9.50238,
+     51.2913,
+     9.50325,
+     51.29188
+    ]
+   },
+   {
+    "name": "Strand 5",
+    "osm": [
+     "w223677729"
+    ],
+    "flaeche_ha": 0.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.29061,
+    "lon": 9.49695,
+    "bbox": [
+     9.49648,
+     51.29053,
+     9.49717,
+     51.2907
+    ]
+   },
+   {
+    "name": "Strand 4",
+    "osm": [
+     "w223677732"
+    ],
+    "flaeche_ha": 0.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.29112,
+    "lon": 9.49872,
+    "bbox": [
+     9.49861,
+     51.29102,
+     9.49935,
+     51.29119
+    ]
+   },
+   {
+    "name": "Strand 2",
+    "osm": [
+     "w408648579"
+    ],
+    "flaeche_ha": 0.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.29541,
+    "lon": 9.50751,
+    "bbox": [
+     9.50739,
+     51.29527,
+     9.5076,
+     51.29555
+    ]
+   },
+   {
+    "name": "Strand 6",
+    "osm": [
+     "w408648580"
+    ],
+    "flaeche_ha": 0.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.29276,
+    "lon": 9.49638,
+    "bbox": [
+     9.49619,
+     51.29266,
+     9.49687,
+     51.29285
+    ]
+   },
+   {
+    "name": "Strand 7",
+    "osm": [
+     "w1228637117"
+    ],
+    "flaeche_ha": 0.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 1.0,
+    "lat": 51.29463,
+    "lon": 9.49882,
+    "bbox": [
+     9.49873,
+     51.29459,
+     9.49889,
+     51.29467
+    ]
+   },
+   {
+    "name": "Strand 8",
+    "osm": [
+     "w1228637118"
+    ],
+    "flaeche_ha": 0.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.29247,
+    "lon": 9.49903,
+    "bbox": [
+     9.49895,
+     51.29242,
+     9.4991,
+     51.29258
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Brüder-Grimm-Platz",
+    "osm": [
+     "w1151518196"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.9713,
+    "lat": 51.31097,
+    "lon": 9.49025,
+    "bbox": [
+     9.48945,
+     51.31036,
+     9.49132,
+     51.31176
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 247.7,
+   "zone_ha": 47.8,
+   "anteil_zone": 0.193
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 28.3,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 51.30722,
+  "lon": 9.45596,
+  "bbox": [
+   9.35067,
+   51.25999,
+   9.57052,
+   51.37009
+  ]
+ },
+ "orte": [
+  {
+   "name": "Königsstraße",
+   "osm": [
+    "r6467427",
+    "r6467428",
+    "r6467429",
+    "r6467430",
+    "w1412556960",
+    "w378324248",
+    "w378327155",
+    "w436024032",
+    "w436024045",
+    "w436024046",
+    "w436024047",
+    "w436024048",
+    "w621840397",
+    "w742147186",
+    "w981241410"
+   ],
+   "flaeche_ha": 2.07,
+   "bbox": [
+    9.49152,
+    51.31187,
+    9.50036,
+    51.31811
+   ],
+   "anteil_zone": 0.5137,
+   "art": "flaeche",
+   "lat": 51.31369,
+   "lon": 9.4945
+  },
+  {
+   "name": "Königsplatz",
+   "osm": [
+    "w180743505",
+    "w180743506",
+    "w378324664",
+    "w809583162",
+    "w981241411"
+   ],
+   "flaeche_ha": 1.35,
+   "bbox": [
+    9.49697,
+    51.31513,
+    9.49884,
+    51.31636
+   ],
+   "anteil_zone": 0.8515,
+   "art": "flaeche",
+   "lat": 51.31573,
+   "lon": 9.49791
+  },
+  {
+   "name": "Friedrichsplatz",
+   "osm": [
+    "r5868893"
+   ],
+   "flaeche_ha": 1.76,
+   "bbox": [
+    9.49528,
+    51.312,
+    9.4984,
+    51.31414
+   ],
+   "anteil_zone": 0.0134,
+   "art": "flaeche",
+   "lat": 51.31346,
+   "lon": 9.49637
+  },
+  {
+   "name": "Fuldaaue",
+   "osm": [
+    "w19849890"
+   ],
+   "flaeche_ha": 11.9,
+   "bbox": [
+    9.50231,
+    51.29699,
+    9.50656,
+    51.30217
+   ],
+   "anteil_zone": 0.1014,
+   "art": "flaeche",
+   "lat": 51.29955,
+   "lon": 9.50455
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-25T21:22:46Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Hessen (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  51.315,
+  9.495
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Karlsaue",
+   "karlsaue"
+  ],
+  [
+   "park",
+   "Bergpark Wilhelmshöhe",
+   "bergpark"
+  ],
+  [
+   "ort",
+   "Königsstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "Friedrichsplatz",
+   "friedrichsplatz"
+  ],
+  [
+   "see",
+   "Bugasee",
+   "bugasee"
+  ],
+  [
+   "hochschule",
+   "Universität Kassel - Campus Holländischer Platz",
+   "uni"
+  ]
+ ]
+}

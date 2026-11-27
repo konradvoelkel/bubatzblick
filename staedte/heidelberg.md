@@ -1,10 +1,8 @@
 <p class="lead">In Heidelberg ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
 <strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km². Grund sind {{objekte}}
-Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
-Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
-nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
-7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
-Jugendlichen.</p>
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr
+und überall die Gegenwart von Minderjährigen.</p>
 
 Dass der Anteil niedriger ist als in vielen Großstädten, liegt am Wald: {{wald_anteil}} der
 Stadtfläche sind Wald, vor allem an den Hängen von Königstuhl und Heiligenberg, und dort liegen nur
@@ -16,10 +14,9 @@ Stadtfläche sind Wald, vor allem an den Hängen von Königstuhl und Heiligenber
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Den größten Teil machen die
-{{objekte:sports}} Sportstätten aus, von Sportplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von {{objekte:playground}} Spielplätzen und {{objekte:kindergarten}} Kitas.
+Den größten Teil machen die {{objekte:sports}} Sportstätten aus, von Sportplätzen über Turnhallen
+bis zu Fitnessstudios, gefolgt von {{objekte:playground}} Spielplätzen und {{objekte:kindergarten}}
+Kitas.
 
 Anbauvereinigungen fehlen in der Tabelle: Eine erlaubte Anbauvereinigung gab es in Heidelberg nach
 Auskunft der Stadt im Juli 2025 nicht, der einzige Antrag beim Regierungspräsidium Freiburg wurde
@@ -41,7 +38,7 @@ Die Satzung für das Neckarvorland regelt Musik und Gruppen in der Nacht, zu Alk
 enthält sie nichts
 ([Neckarvorlandsatzung](https://www.heidelberg.de/site/Heidelberg2021/get/documents_E-1860574025/heidelberg/Objektdatenbank/30/PDF/30_pdf_ortsr_7-11_Neckarvorlandsatzung.pdf)).
 Auf den Spielplätzen selbst ist nach der Spielplatzsatzung der Stadt und seit Juni 2026 auch nach
-Landesrecht jedes Rauchen verboten (siehe unten). Stadt und Polizei nennen den Wasserspielplatz
+Landesrecht jedes Rauchen verboten (siehe [Rauchverbote in Baden-Württemberg](#was-sonst-noch-gilt)). Stadt und Polizei nennen den Wasserspielplatz
 und seine Sichtweite ausdrücklich als Verbotszone
 ([Brief an die Schulen, April 2025](https://heidelberg.de/site/Heidelberg2021/get/documents_E1309469050/heidelberg/Objektdatenbank/15/PDF/15_pdf_Sicher%20Feiern%202025.pdf))
 und kontrollieren auf der Neckarwiese den Jugendschutz, zuletzt bei den Schulabschlussfeiern im
@@ -53,15 +50,14 @@ Zone.
 
 ## Altstadt und Bismarckplatz
 
-Die Altstadt hat einen amtlich festgelegten Fußgängerbereich: Die Fußgängerbereichsatzung der
-Stadt zählt 62 Straßen und Plätze auf, darunter die Hauptstraße von der Sofienstraße bis zum
-Kornmarkt, den Marktplatz, den Universitätsplatz und die Untere Straße
+Die Altstadt hat einen amtlich festgelegten Fußgängerbereich: Die Fußgängerbereichsatzung der Stadt
+zählt 62 Straßen und Plätze auf, darunter die Hauptstraße von der Sofienstraße bis zum Kornmarkt,
+den Marktplatz, den Universitätsplatz und die Untere Straße
 ([Straßenverzeichnis zur Satzung](https://www.heidelberg.de/site/Heidelberg2021/get/documents_E1681523944/heidelberg/Objektdatenbank/30/PDF/30_pdf_ortsr_A1_6-5.pdf)).
 29 davon bilden den „reinen Fußgängerbereich“, die übrigen sind Bereiche mit Fußgängervorrang. Ob
 auch diese zweite Gruppe als Fußgängerzone im Sinne von § 5 KCanG gilt, sagt keine Quelle, die wir
-gefunden haben. In der Fußgängerzone ist Konsum zwischen 7 und 20 Uhr verboten, ganz gleich, was
-die Karte rot zeigt; blau zeigt die Karte die Fußgängerbereiche, wie sie in OpenStreetMap
-eingetragen sind.
+gefunden haben. In der Fußgängerzone ist Konsum zwischen 7 und 20 Uhr verboten, ganz gleich, was die
+Karte rot zeigt; blau sind die Fußgängerbereiche aus OpenStreetMap.
 
 Von der Fußgängerzone der Hauptstraße liegen nur {{ort:Hauptstraße (Fußgängerzone)}} zusätzlich
 in einer Sichtweiten-Zone. Universitätsplatz, Marktplatz und Kornmarkt liegen außerhalb jeder
@@ -128,11 +124,9 @@ Das Rauchverbot des Landes gilt in Bier-, Wein- und Festzelten nicht.
 
 ## Was sonst noch gilt
 
-Seit dem 1. Juni 2026 verbietet das Landesnichtraucherschutzgesetz Baden-Württemberg das Rauchen
-und Dampfen ausdrücklich auch von Cannabis, unabhängig von Kindern in Sichtweite: auf
-Spielplätzen, auf Schulgeländen und den Grundstücken von Kitas, an allen Haltestellen von Bus und
-Straßenbahn, in Freibädern und Zoos und in öffentlich zugänglichen Innenräumen. Das kostet bis zu
-200 Euro, im Wiederholungsfall bis zu 500 Euro
+Seit Juni 2026 ist gerauchtes Cannabis in Baden-Württemberg auch auf Spielplätzen, Schulgeländen und
+Kita-Grundstücken, an allen Haltestellen, in Freibädern, Zoos und öffentlich zugänglichen
+Innenräumen verboten, bis zu 200 Euro
 ([Land Baden-Württemberg](https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/neue-regeln-fuer-raucherinnen-und-raucher-vom-1-juni-an-1)).
 Auf den städtischen Spielplätzen, zu denen auch Bolzplätze, Skateanlagen und Pumptracks zählen,
 verbietet außerdem die Spielplatzsatzung Rauchen und Alkohol
@@ -147,22 +141,22 @@ Regel trotzdem darauf anwendet, haben wir nicht herausgefunden. Auf ihrer Seite 
 [Konsumverbotszonen](https://www.heidelberg.de/HD/Rathaus/konsumverbotszonen+cannabis.html)
 erwähnt die Stadt sie nicht.
 
-Einen Bußgeldkatalog für das Cannabisgesetz hat Baden-Württemberg nicht veröffentlicht; das
-Gesetz erlaubt bis zu 30.000 Euro. Im benachbarten Mannheim, das zum selben Polizeipräsidium gehört,
-nannte die Polizei im Juni 2026 Bußgelder von 300 bis 1.000 Euro als üblich
-([Polizeipräsidium Mannheim](https://www.presseportal.de/blaulicht/pm/14915/6303080)). In
-Heidelberg kontrollieren der Kommunale Ordnungsdienst und die Polizei; Zahlen zu Verstößen gegen
-§ 5 KCanG haben sie nicht veröffentlicht.
+Einen Bußgeldkatalog für das Cannabisgesetz hat das Land nicht; das Gesetz erlaubt bis zu 30.000
+Euro. Im benachbarten Mannheim, das zum selben Polizeipräsidium gehört, nannte die Polizei im Juni
+2026 Bußgelder von 300 bis 1.000 Euro als üblich
+([Polizeipräsidium Mannheim](https://www.presseportal.de/blaulicht/pm/14915/6303080)). In Heidelberg
+kontrollieren der Kommunale Ordnungsdienst und die Polizei; Zahlen zu Verstößen gegen § 5 KCanG
+haben sie nicht veröffentlicht.
 
 ## Häufige Fragen
 
 ### Wo darf man in Heidelberg kiffen?
 
-Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet. Gerauchtes
-Cannabis zusätzlich nicht an Haltestellen, auf Spielplätzen, Schulgeländen und in Freibädern.
-Eine weiße Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte kennt weder
-Hecken noch Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa auf dem Philosophenweg ({{ort:Philosophenweg}} in
+einer Zone) und an der Thingstätte ({{ort:Thingstätte}}). Tagsüber nicht in der Hauptstraße und den
+anderen Fußgängerbereichen, nie in Gegenwart von Minderjährigen, gerauchtes Cannabis außerdem nicht
+an Haltestellen, auf Spielplätzen, Schulgeländen und in Freibädern. Weiß heißt nicht sicher erlaubt:
+Hecken, Bäume und fehlende Einrichtungen kennt die Karte nicht.
 
 ### Darf man auf der Neckarwiese kiffen?
 
@@ -173,10 +167,8 @@ warmen Tagen oft da.
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

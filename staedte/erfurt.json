@@ -1,0 +1,1241 @@
+{
+ "stadtflaeche_osm_km2": 269.56,
+ "wald": {
+  "flaeche_km2": 25.0,
+  "anteil_stadt": 0.0927,
+  "anteil_zone": 0.0509,
+  "anteil_zone_ohne_wald": 0.0688
+ },
+ "zonen_km2": 18.11,
+ "anteil": 0.06719,
+ "kategorien": {
+  "sports": {
+   "objekte": 387,
+   "zonen_km2": 9.66
+  },
+  "playground": {
+   "objekte": 311,
+   "zonen_km2": 6.19
+  },
+  "school": {
+   "objekte": 92,
+   "zonen_km2": 4.13
+  },
+  "kindergarten": {
+   "objekte": 101,
+   "zonen_km2": 3.22
+  },
+  "youth": {
+   "objekte": 22,
+   "zonen_km2": 0.48
+  },
+  "childcare": {
+   "objekte": 3,
+   "zonen_km2": 0.06
+  },
+  "cannabis_club": {
+   "objekte": 1,
+   "zonen_km2": 0.02
+  }
+ },
+ "objekte_gesamt": 917,
+ "merkmale": {
+  "see": [
+   {
+    "name": "Sulzer See",
+    "osm": [
+     "r9832371"
+    ],
+    "flaeche_ha": 61.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.02988,
+    "lon": 11.05018,
+    "bbox": [
+     11.04628,
+     51.02337,
+     11.05987,
+     51.03633
+    ]
+   },
+   {
+    "name": "Schwerborner See",
+    "osm": [
+     "r13188069"
+    ],
+    "flaeche_ha": 43.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.03984,
+    "lon": 11.05317,
+    "bbox": [
+     11.0476,
+     51.03681,
+     11.06413,
+     51.04302
+    ]
+   },
+   {
+    "name": "Klingesee",
+    "osm": [
+     "w24967161"
+    ],
+    "flaeche_ha": 35.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.05657,
+    "lon": 11.05768,
+    "bbox": [
+     11.05143,
+     51.05384,
+     11.06393,
+     51.05933
+    ]
+   },
+   {
+    "name": "Neuer Kiessee",
+    "osm": [
+     "r13518187",
+     "w650509752",
+     "w650509754"
+    ],
+    "flaeche_ha": 29.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.04882,
+    "lon": 10.99174,
+    "bbox": [
+     10.98509,
+     51.04605,
+     10.99552,
+     51.05166
+    ]
+   },
+   {
+    "name": "Stotternheimer See",
+    "osm": [
+     "w26258535"
+    ],
+    "flaeche_ha": 19.6,
+    "zone_ha": 7.4,
+    "anteil_zone": 0.3794,
+    "lat": 51.04795,
+    "lon": 11.05707,
+    "bbox": [
+     11.04997,
+     51.04513,
+     11.06066,
+     51.05094
+    ]
+   },
+   {
+    "name": "Nordstrand",
+    "osm": [
+     "w23447257"
+    ],
+    "flaeche_ha": 18.0,
+    "zone_ha": 18.0,
+    "anteil_zone": 1.0,
+    "lat": 50.99851,
+    "lon": 11.05189,
+    "bbox": [
+     11.04566,
+     50.9962,
+     11.05428,
+     51.00092
+    ]
+   },
+   {
+    "name": "Großer Ringsee",
+    "osm": [
+     "w361965473"
+    ],
+    "flaeche_ha": 17.5,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0135,
+    "lat": 51.0731,
+    "lon": 11.04749,
+    "bbox": [
+     11.04272,
+     51.07048,
+     11.0498,
+     51.07575
+    ]
+   },
+   {
+    "name": "Triftsee",
+    "osm": [
+     "w650522105"
+    ],
+    "flaeche_ha": 16.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.05505,
+    "lon": 10.99574,
+    "bbox": [
+     10.99257,
+     51.0528,
+     10.9987,
+     51.05718
+    ]
+   },
+   {
+    "name": "Ebersee",
+    "osm": [
+     "w26258530"
+    ],
+    "flaeche_ha": 12.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.06856,
+    "lon": 11.0471,
+    "bbox": [
+     11.04187,
+     51.06656,
+     11.04931,
+     51.07056
+    ]
+   },
+   {
+    "name": "Luthersee",
+    "osm": [
+     "w26258538"
+    ],
+    "flaeche_ha": 12.4,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.1247,
+    "lat": 51.05167,
+    "lon": 11.0564,
+    "bbox": [
+     11.05091,
+     51.04984,
+     11.06006,
+     51.05355
+    ]
+   },
+   {
+    "name": "Reihersee",
+    "osm": [
+     "w89689979"
+    ],
+    "flaeche_ha": 12.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.054,
+    "lon": 10.9869,
+    "bbox": [
+     10.98398,
+     51.05174,
+     10.99194,
+     51.05622
+    ]
+   },
+   {
+    "name": "Barschsee",
+    "osm": [
+     "w182698531"
+    ],
+    "flaeche_ha": 10.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.05449,
+    "lon": 10.9906,
+    "bbox": [
+     10.98662,
+     51.05238,
+     10.99288,
+     51.05673
+    ]
+   },
+   {
+    "name": "Plötzensee",
+    "osm": [
+     "w229382392"
+    ],
+    "flaeche_ha": 6.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.05396,
+    "lon": 10.98167,
+    "bbox": [
+     10.97982,
+     51.05189,
+     10.98445,
+     51.05607
+    ]
+   },
+   {
+    "name": "Entenpfuhl",
+    "osm": [
+     "w186630079"
+    ],
+    "flaeche_ha": 4.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.07007,
+    "lon": 11.0513,
+    "bbox": [
+     11.05001,
+     51.06804,
+     11.0538,
+     51.07204
+    ]
+   },
+   {
+    "name": "Talsperre Vieselbach",
+    "osm": [
+     "w9755398"
+    ],
+    "flaeche_ha": 4.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.97712,
+    "lon": 11.14574,
+    "bbox": [
+     11.1449,
+     50.97528,
+     11.14815,
+     50.97901
+    ]
+   },
+   {
+    "name": "Erfurter See",
+    "osm": [
+     "w89689963"
+    ],
+    "flaeche_ha": 4.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.0389,
+    "lon": 10.97663,
+    "bbox": [
+     10.97438,
+     51.03789,
+     10.97853,
+     51.03987
+    ]
+   },
+   {
+    "name": "Hechtsee",
+    "osm": [
+     "w89689969"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.05518,
+    "lon": 10.98279,
+    "bbox": [
+     10.98083,
+     51.05385,
+     10.98418,
+     51.05629
+    ]
+   },
+   {
+    "name": "Bergwegteich",
+    "osm": [
+     "r9648069"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.05257,
+    "lon": 11.06311,
+    "bbox": [
+     11.06128,
+     51.05025,
+     11.06491,
+     51.05338
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Geraaue",
+    "osm": [
+     "w874637704"
+    ],
+    "flaeche_ha": 20.4,
+    "zone_ha": 18.0,
+    "anteil_zone": 0.8843,
+    "lat": 51.01237,
+    "lon": 11.00443,
+    "bbox": [
+     10.99696,
+     51.00891,
+     11.00799,
+     51.01592
+    ]
+   },
+   {
+    "name": "Nordpark",
+    "osm": [
+     "w61973237"
+    ],
+    "flaeche_ha": 13.9,
+    "zone_ha": 8.4,
+    "anteil_zone": 0.6032,
+    "lat": 50.99237,
+    "lon": 11.01777,
+    "bbox": [
+     11.01309,
+     50.98883,
+     11.01975,
+     50.99679
+    ]
+   },
+   {
+    "name": "Park und Schloss Molsdorf",
+    "osm": [
+     "w39856626"
+    ],
+    "flaeche_ha": 7.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0001,
+    "lat": 50.89921,
+    "lon": 10.96196,
+    "bbox": [
+     10.9593,
+     50.89767,
+     10.964,
+     50.90108
+    ]
+   },
+   {
+    "name": "Südpark",
+    "osm": [
+     "w59463045"
+    ],
+    "flaeche_ha": 7.1,
+    "zone_ha": 5.8,
+    "anteil_zone": 0.8137,
+    "lat": 50.9608,
+    "lon": 11.04044,
+    "bbox": [
+     11.03842,
+     50.95905,
+     11.04311,
+     50.96245
+    ]
+   },
+   {
+    "name": "Löberwallgraben",
+    "osm": [
+     "r13499744"
+    ],
+    "flaeche_ha": 6.9,
+    "zone_ha": 4.8,
+    "anteil_zone": 0.6963,
+    "lat": 50.96829,
+    "lon": 11.02727,
+    "bbox": [
+     11.01976,
+     50.96624,
+     11.03756,
+     50.97171
+    ]
+   },
+   {
+    "name": "Wohngebietspark Rieth",
+    "osm": [
+     "w938466478"
+    ],
+    "flaeche_ha": 6.8,
+    "zone_ha": 5.9,
+    "anteil_zone": 0.8595,
+    "lat": 51.00689,
+    "lon": 11.00848,
+    "bbox": [
+     11.00585,
+     51.00461,
+     11.01039,
+     51.00921
+    ]
+   },
+   {
+    "name": "Stadtpark",
+    "osm": [
+     "w16794249"
+    ],
+    "flaeche_ha": 6.3,
+    "zone_ha": 4.5,
+    "anteil_zone": 0.7094,
+    "lat": 50.97016,
+    "lon": 11.03846,
+    "bbox": [
+     11.03583,
+     50.96879,
+     11.04075,
+     50.97144
+    ]
+   },
+   {
+    "name": "Park am ehemaligen Heizkraftwerk",
+    "osm": [
+     "w397122968"
+    ],
+    "flaeche_ha": 4.9,
+    "zone_ha": 3.6,
+    "anteil_zone": 0.7333,
+    "lat": 51.01648,
+    "lon": 10.99624,
+    "bbox": [
+     10.99419,
+     51.01489,
+     11.00017,
+     51.01804
+    ]
+   },
+   {
+    "name": "Luisenpark",
+    "osm": [
+     "w27500100"
+    ],
+    "flaeche_ha": 4.1,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.695,
+    "lat": 50.96326,
+    "lon": 11.01084,
+    "bbox": [
+     11.00478,
+     50.96028,
+     11.01314,
+     50.96635
+    ]
+   },
+   {
+    "name": "Kilianipark",
+    "osm": [
+     "w151998571"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 3.3,
+    "anteil_zone": 0.952,
+    "lat": 51.01833,
+    "lon": 10.99283,
+    "bbox": [
+     10.98857,
+     51.01697,
+     10.99514,
+     51.01971
+    ]
+   },
+   {
+    "name": "Botanisch-Dendrologischer Garten",
+    "osm": [
+     "w346979758"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0528,
+    "lat": 50.96383,
+    "lon": 11.00956,
+    "bbox": [
+     11.0079,
+     50.96257,
+     11.011,
+     50.96494
+    ]
+   },
+   {
+    "name": "Hugo-Preuß-Platz",
+    "osm": [
+     "w26713506"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.4974,
+    "lat": 50.97736,
+    "lon": 11.01433,
+    "bbox": [
+     11.01281,
+     50.97646,
+     11.01617,
+     50.97822
+    ]
+   },
+   {
+    "name": "Arboretum FH Erfurt",
+    "osm": [
+     "w167959390"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.99048,
+    "lon": 11.05545,
+    "bbox": [
+     11.0539,
+     50.98936,
+     11.05696,
+     50.9916
+    ]
+   },
+   {
+    "name": "Bürgergarten",
+    "osm": [
+     "w983580735"
+    ],
+    "flaeche_ha": 2.3,
+    "zone_ha": 2.3,
+    "anteil_zone": 0.9988,
+    "lat": 50.98023,
+    "lon": 11.0199,
+    "bbox": [
+     11.01739,
+     50.97924,
+     11.02095,
+     50.98149
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Universität Erfurt",
+    "osm": [
+     "w17200177",
+     "w331035006",
+     "w971868716"
+    ],
+    "flaeche_ha": 18.3,
+    "zone_ha": 7.3,
+    "anteil_zone": 0.3973,
+    "lat": 50.99093,
+    "lon": 11.00963,
+    "bbox": [
+     11.00373,
+     50.98828,
+     11.01326,
+     50.99342
+    ]
+   },
+   {
+    "name": "Berufsbildungszentrum - Handwerkskammer Erfurt",
+    "osm": [
+     "w37290034",
+     "w676367833"
+    ],
+    "flaeche_ha": 6.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.97468,
+    "lon": 10.94459,
+    "bbox": [
+     10.94242,
+     50.97361,
+     10.94638,
+     50.97698
+    ]
+   },
+   {
+    "name": "Fachhochschule Erfurt",
+    "osm": [
+     "w297866557"
+    ],
+    "flaeche_ha": 4.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.98502,
+    "lon": 11.04276,
+    "bbox": [
+     11.04071,
+     50.98382,
+     11.04481,
+     50.98633
+    ]
+   },
+   {
+    "name": "Fachhochschule Erfurt - Forschungsstelle für gartenbauliche Kulturpflanzen",
+    "osm": [
+     "w292509724"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 51.03618,
+    "lon": 10.98638,
+    "bbox": [
+     10.98495,
+     51.03534,
+     10.98777,
+     51.03755
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Domplatz",
+    "osm": [
+     "r5417813"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.5266,
+    "lat": 50.97688,
+    "lon": 11.02383,
+    "bbox": [
+     11.02215,
+     50.97588,
+     11.025,
+     50.97802
+    ]
+   },
+   {
+    "name": "Leipziger Platz",
+    "osm": [
+     "w1338630233"
+    ],
+    "flaeche_ha": 0.8,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.4649,
+    "lat": 50.98137,
+    "lon": 11.04143,
+    "bbox": [
+     11.04039,
+     50.98061,
+     11.04232,
+     50.98179
+    ]
+   },
+   {
+    "name": "Festplatz",
+    "osm": [
+     "r20160038"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.96361,
+    "lon": 10.99871,
+    "bbox": [
+     10.99779,
+     50.96309,
+     10.99934,
+     50.96414
+    ]
+   },
+   {
+    "name": "Fischmarkt",
+    "osm": [
+     "w718887312"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.97783,
+    "lon": 11.02881,
+    "bbox": [
+     11.02826,
+     50.97718,
+     11.02964,
+     50.97847
+    ]
+   },
+   {
+    "name": "Herrmannsplatz",
+    "osm": [
+     "w26425622"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.7403,
+    "lat": 50.9737,
+    "lon": 11.02228,
+    "bbox": [
+     11.0216,
+     50.97318,
+     11.02272,
+     50.97423
+    ]
+   },
+   {
+    "name": "Wenigemarkt",
+    "osm": [
+     "w122236507"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.97863,
+    "lon": 11.03201,
+    "bbox": [
+     11.03157,
+     50.97826,
+     11.03288,
+     50.97893
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Lehr- und Versuchsanstalt für Gartenbau (LVG) Erfurt",
+    "osm": [
+     "w91095185"
+    ],
+    "flaeche_ha": 6.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.99149,
+    "lon": 11.05269,
+    "bbox": [
+     11.05108,
+     50.98982,
+     11.05559,
+     50.99344
+    ]
+   },
+   {
+    "name": "Maislabyrinth",
+    "osm": [
+     "w39926509"
+    ],
+    "flaeche_ha": 4.1,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.375,
+    "lat": 51.00694,
+    "lon": 10.98324,
+    "bbox": [
+     10.98113,
+     51.00552,
+     10.98537,
+     51.00826
+    ]
+   },
+   {
+    "name": "Auf der Melm",
+    "osm": [
+     "w41128275"
+    ],
+    "flaeche_ha": 4.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.9472,
+    "lon": 11.05488,
+    "bbox": [
+     11.05276,
+     50.946,
+     11.05729,
+     50.9483
+    ]
+   },
+   {
+    "name": "Waldeck",
+    "osm": [
+     "w48561066"
+    ],
+    "flaeche_ha": 3.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.94665,
+    "lon": 11.05315,
+    "bbox": [
+     11.05139,
+     50.94534,
+     11.05531,
+     50.94753
+    ]
+   },
+   {
+    "name": "Karl-Foerster-Garten",
+    "osm": [
+     "w30016736"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.6439,
+    "lat": 50.96969,
+    "lon": 11.00762,
+    "bbox": [
+     11.00623,
+     50.96878,
+     11.00925,
+     50.9705
+    ]
+   },
+   {
+    "name": "NaturErlebnisGarten - Fuchsfarm",
+    "osm": [
+     "w461590824"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.94306,
+    "lon": 11.00803,
+    "bbox": [
+     11.00677,
+     50.94252,
+     11.00934,
+     50.94355
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Steigerwald",
+    "osm": [
+     "r1664777"
+    ],
+    "flaeche_ha": 488.0,
+    "zone_ha": 28.0,
+    "anteil_zone": 0.0573,
+    "lat": 50.94839,
+    "lon": 11.0136,
+    "bbox": [
+     10.99174,
+     50.93595,
+     11.04222,
+     50.96076
+    ]
+   },
+   {
+    "name": "Alter Steiger",
+    "osm": [
+     "w147962269"
+    ],
+    "flaeche_ha": 56.7,
+    "zone_ha": 3.6,
+    "anteil_zone": 0.0634,
+    "lat": 50.94259,
+    "lon": 11.04305,
+    "bbox": [
+     11.036,
+     50.93761,
+     11.04874,
+     50.94752
+    ]
+   },
+   {
+    "name": "Waltersleber Holz",
+    "osm": [
+     "w133729914"
+    ],
+    "flaeche_ha": 38.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.92773,
+    "lon": 11.02724,
+    "bbox": [
+     11.02229,
+     50.92369,
+     11.03957,
+     50.93171
+    ]
+   },
+   {
+    "name": "Rhodaer Grund",
+    "osm": [
+     "w209851855"
+    ],
+    "flaeche_ha": 28.7,
+    "zone_ha": 3.5,
+    "anteil_zone": 0.1232,
+    "lat": 50.92841,
+    "lon": 11.00723,
+    "bbox": [
+     10.99545,
+     50.92542,
+     11.02273,
+     50.93139
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r15411202",
+     "r3127512",
+     "r5145428",
+     "r71472",
+     "r7534246",
+     "w1007387388",
+     "w1017162270",
+     "w1065873210",
+     "w1124115771",
+     "w151998541",
+     "w151998566",
+     "w191708658",
+     "w225691481",
+     "w232890200",
+     "w232900688",
+     "w232959913",
+     "w232998639",
+     "w233392362",
+     "w233393411",
+     "w233602059",
+     "w233731748",
+     "w308215200",
+     "w330191587",
+     "w345430649",
+     "w352331488",
+     "w362099710",
+     "w437803291",
+     "w462168805",
+     "w521893885",
+     "w932370313",
+     "w975282266",
+     "w985157160"
+    ],
+    "flaeche_ha": 18.3,
+    "zone_ha": 9.4,
+    "anteil_zone": 0.5149,
+    "lat": 50.9708,
+    "lon": 11.03493,
+    "bbox": [
+     10.96851,
+     50.9683,
+     11.0447,
+     51.0407
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "FKK-Strand",
+    "osm": [
+     "w1002053538"
+    ],
+    "flaeche_ha": 0.1,
+    "zone_ha": 0.1,
+    "anteil_zone": 1.0,
+    "lat": 51.04925,
+    "lon": 11.0516,
+    "bbox": [
+     11.05087,
+     51.04889,
+     11.05204,
+     51.04966
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 489.8,
+   "zone_ha": 144.4,
+   "anteil_zone": 0.2948
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 15.9,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 50.985,
+  "lon": 11.02661,
+  "bbox": [
+   10.84938,
+   50.88703,
+   11.17929,
+   51.08305
+  ]
+ },
+ "orte": [
+  {
+   "name": "Anger und Schlösserstraße",
+   "osm": [
+    "r2431021",
+    "w102663803",
+    "w102665254",
+    "w102665258",
+    "w102665264",
+    "w102665269",
+    "w102669834",
+    "w102669838",
+    "w102669841",
+    "w1042255736",
+    "w1042255737",
+    "w1042255738",
+    "w1042255739",
+    "w1138447533",
+    "w1240173801",
+    "w1240173802",
+    "w127058413",
+    "w130692788",
+    "w130698521",
+    "w131587335",
+    "w131587337",
+    "w132197268",
+    "w132197269",
+    "w135531128",
+    "w135696857",
+    "w138704642",
+    "w235004339",
+    "w241974839",
+    "w243033015",
+    "w29012521",
+    "w295783579",
+    "w295783580",
+    "w390956891",
+    "w390963939",
+    "w390963942",
+    "w418986428",
+    "w418986429",
+    "w419686264",
+    "w451086425",
+    "w451104048",
+    "w561949610",
+    "w561949611",
+    "w588904241",
+    "w75519840"
+   ],
+   "flaeche_ha": 3.63,
+   "bbox": [
+    11.02462,
+    50.97402,
+    11.03639,
+    50.97844
+   ],
+   "anteil_zone": 0.3774,
+   "art": "flaeche",
+   "lat": 50.97776,
+   "lon": 11.02626
+  },
+  {
+   "name": "Fischmarkt",
+   "osm": [
+    "w131570595",
+    "w307577421",
+    "w30815152",
+    "w451095175",
+    "w718887312",
+    "w770906383",
+    "w939745152"
+   ],
+   "flaeche_ha": 0.52,
+   "bbox": [
+    11.02826,
+    50.97718,
+    11.02965,
+    50.97848
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 50.97784,
+   "lon": 11.02886
+  },
+  {
+   "name": "Domplatz",
+   "osm": [
+    "r5417813",
+    "w1330892458",
+    "w1330892459",
+    "w4827280"
+   ],
+   "flaeche_ha": 2.69,
+   "bbox": [
+    11.02215,
+    50.97587,
+    11.02569,
+    50.97831
+   ],
+   "anteil_zone": 0.4213,
+   "art": "flaeche",
+   "lat": 50.97711,
+   "lon": 11.02349
+  },
+  {
+   "name": "Krämerbrücke",
+   "osm": [
+    "w122237921",
+    "w122237922",
+    "w893704926"
+   ],
+   "flaeche_ha": 0.18,
+   "bbox": [
+    11.02999,
+    50.97856,
+    11.03177,
+    50.97887
+   ],
+   "anteil_zone": 0.0001,
+   "art": "linie",
+   "lat": 50.97871,
+   "lon": 11.03078
+  },
+  {
+   "name": "Wenigemarkt",
+   "osm": [
+    "w122236507",
+    "w239070957",
+    "w4733686"
+   ],
+   "flaeche_ha": 0.36,
+   "bbox": [
+    11.03129,
+    50.97826,
+    11.03288,
+    50.97901
+   ],
+   "anteil_zone": 0.0169,
+   "art": "flaeche",
+   "lat": 50.97863,
+   "lon": 11.03201
+  },
+  {
+   "name": "Hirschgarten",
+   "osm": [
+    "w233637500"
+   ],
+   "flaeche_ha": 1.01,
+   "bbox": [
+    11.02765,
+    50.9731,
+    11.02994,
+    50.9742
+   ],
+   "anteil_zone": 0.9921,
+   "art": "flaeche",
+   "lat": 50.97367,
+   "lon": 11.02885
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Thüringen (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  50.977,
+  11.03
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "ort",
+   "Anger und Schlösserstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "Domplatz",
+   "domplatz"
+  ],
+  [
+   "park",
+   "Nordpark",
+   "nordpark"
+  ],
+  [
+   "park",
+   "Geraaue",
+   "geraaue"
+  ],
+  [
+   "ort",
+   "Krämerbrücke",
+   "kraemerbruecke"
+  ],
+  [
+   "hochschule",
+   "Universität Erfurt",
+   "uni"
+  ]
+ ]
+}

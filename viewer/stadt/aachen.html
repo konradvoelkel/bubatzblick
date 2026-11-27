@@ -1,14 +1,252 @@
 <!doctype html>
-<!-- Platzhalter, erzeugt durch deploy/bin/build_staedte.py aus staedte/grossstaedte.json. -->
+<!-- Erzeugt aus staedte/aachen.md und staedte/aachen.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>Kiffen in Aachen | BubatzBlick</title>
+<title>Kiffen in Aachen: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=../?interesse=aachen#12/50.7753/6.0839">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Aachen liegen 13,1 % der Stadtfläche (21 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<link rel="canonical" href="__SITE_URL__/stadt/aachen">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/aachen">
+<meta property="og:title" content="Kiffen in Aachen: wo es verboten ist">
+<meta property="og:description" content="In Aachen liegen 13,1 % der Stadtfläche (21 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/aachen.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Aachen mit den roten Verbotszonen, daneben: Kiffen in Aachen, 13,1 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/aachen",
+   "url": "__SITE_URL__/stadt/aachen",
+   "name": "Kiffen in Aachen: wo es verboten ist",
+   "description": "In Aachen liegen 13,1 % der Stadtfläche (21 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-27",
+   "about": {
+    "@type": "City",
+    "name": "Aachen",
+    "sameAs": "https://www.wikidata.org/wiki/Q1017",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Nordrhein-Westfalen"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/aachen.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Aachen",
+     "item": "__SITE_URL__/stadt/aachen"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .stand { font-size: .9em; opacity: .85; margin-top: .2em; }
+  .tabellennotiz { font-size: .88em; color: var(--text-schwach); margin: .4em 0 1.2em; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { r: 5; fill: #c0392b; stroke: #fff; stroke-width: 1.5; }
+  svg.deutschland text { font-size: 15px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 3.5px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 7; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1; }
+  /* Auf dem Handy nur die Namen, dafuer groesser; die Anteile stehen in der Tabelle darunter. */
+  @media (max-width: 480px) { svg.deutschland text { font-size: 19px; }
+                              svg.deutschland .anteil { display: none; }
+                              svg.deutschland circle { r: 7; }
+                              svg.deutschland a.ohne-handy text,
+                              svg.deutschland a.ohne-handy line { display: none; } }
+</style>
 </head>
 <body>
-<p>Weiter zur <a href="../?interesse=aachen#12/50.7753/6.0839">Karte von Aachen</a>.</p>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Aachen</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <p class="stand">Zahlen vom 27. November 2026 · Recherche zu Regeln vor Ort: November 2026</p>
+    <nav><a href="../#12/50.7597/6.11098" class="knopf">Aachen auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Aachen ist öffentliches Kiffen auf 21 km² verboten, das sind
+<strong>13,1 % der Stadtfläche</strong> von 161 km². Grund sind 1 223
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr
+und überall die Gegenwart von Minderjährigen.</p>
+
+<p>Knapp ein Viertel der Stadt ist Wald (23 % der Stadtfläche), vor allem im Süden, und davon
+liegen nur 4,9 % in einer Zone; ohne den Wald gerechnet sind es 15,5 %.</p>
+<figure class="karte"><img src="../img/stadt/aachen-stadt.webp" width="960" height="600" alt="Karte von Aachen mit Stadtgrenze und den roten Verbotszonen"><figcaption>Aachen: 21 km² Verbotszone auf 161 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">81</td><td class="zahl">3,8 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">143</td><td class="zahl">3,8 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">4</td><td class="zahl">0,1 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">343</td><td class="zahl">6,7 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">37</td><td class="zahl">0,8 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">615</td><td class="zahl">12,9 km²</td></tr></tbody></table>
+<p class="tabellennotiz">Jede Art für sich gezählt, Überlappungen also mehrfach. Anbauvereinigungen nur, soweit in OpenStreetMap eingetragen.</p>
+
+<p>Die meisten Zonen gehen auf die 615 Sportstätten zurück, danach auf die
+343 Spielplätze. Auf allen öffentlichen Spiel- und Bolzplätzen verbietet die
+Spielplatzsatzung der Stadt von 1998 außerdem Alkohol „oder Drogen“; Cannabis nennt sie nicht
+(<a href="https://www.aachen.de/in-aachen-leben/politik-und-verwaltung/stadtrecht/kinder-jugend-schule-und-kultur/512.pdf?cid=4eg">Spielplatzsatzung</a>).
+Das Nichtraucherschutzgesetz des Landes verbietet dort zusätzlich das Rauchen von Tabak, also auch
+von Joints mit Tabak.</p>
+<h2 id="westpark-stadtgarten-und-lousberg">Westpark, Stadtgarten und Lousberg</h2>
+<p>Im <strong>Westpark</strong> liegen 94 % der Fläche in einer Zone: Zwei Spielplätze und vier
+Sportanlagen liegen im Park. Im <strong>Stadtgarten</strong> sind es 86 %, mit zehn Sportanlagen,
+zwei Spielplätzen und einer Kita.</p>
+<figure class="karte"><img src="../img/stadt/aachen-westpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Westpark (grün umrandet) mit den roten Verbotszonen; etwa 94 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Westpark: 6 ha, davon 94 % Verbotszone. <a href="../#16/50.77182/6.06856">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/aachen-stadtgarten.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Stadtgarten (grün umrandet) mit den roten Verbotszonen; etwa 86 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Stadtgarten: 18 ha, davon 86 % Verbotszone. <a href="../#16/50.7832/6.09431">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Der <strong>Lousberg</strong>, ein Waldpark auf dem Hügel nördlich der Innenstadt, liegt dagegen nur zu
+13 % in einer Zone; im Park liegt ein einziger Spielplatz. Im Kurpark
+Burtscheid sind es 64 %, im Kennedypark 90 %, im
+Kaiser-Friedrich-Park 79 %. Der Müschpark liegt fast außerhalb
+(3 %), der Ferberpark fast ganz in einer Zone (97 %).</p>
+<figure class="karte"><img src="../img/stadt/aachen-lousberg.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Waldpark Lousberg (grün umrandet) mit den roten Verbotszonen; etwa 13 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Waldpark Lousberg: 36 ha, davon 13 % Verbotszone. <a href="../#16/50.78767/6.07838">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="innenstadt">Innenstadt</h2>
+<p>Aachen veröffentlicht die Zugänge zu seinen Fußgängerzonen als offenen Datensatz: 80 beschilderte
+Zugänge, 60 davon mit dem Schild Fußgängerzone
+(<a href="https://offenedaten.aachen.de/dataset/zugang-fussgaengerzonen-stadt-aachen">Stadt Aachen, offene Daten</a>).
+Fußgängerzone ist danach auch die Pontstraße, in Burtscheid unter anderem der Abteiplatz. Dort gilt
+von 7 bis 20 Uhr Konsumverbot; blau sind die Fußgängerbereiche aus OpenStreetMap.</p>
+<p>Von Adalbertstraße und Großkölnstraße liegen außerdem 16 % in
+einer Sichtweiten-Zone, von der <strong>Pontstraße</strong> 50 %, vom <strong>Markt</strong> 53 % und vom
+Katschhof 50 %. Der Friedrich-Wilhelm-Platz am Elisenbrunnen liegt fast ganz außerhalb
+(1 %); tagsüber gilt dort aber das Verbot der Fußgängerzone.</p>
+<figure class="karte"><img src="../img/stadt/aachen-fussgaengerzone.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Adalbertstraße und Großkölnstraße (grün umrandet) mit den roten Verbotszonen; etwa 16 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Adalbertstraße und Großkölnstraße: 2 ha, davon 16 % Verbotszone. <a href="../#16/50.77527/6.09205">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/aachen-pontstrasse.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Pontstraße (grün umrandet) mit den roten Verbotszonen; etwa 50 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Pontstraße: 0 ha, davon 50 % Verbotszone. <a href="../#16/50.77719/6.083">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/aachen-markt.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Markt (grün umrandet) mit den roten Verbotszonen; etwa 53 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Markt: 1 ha, davon 53 % Verbotszone. <a href="../#16/50.77632/6.08373">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>In Nordrhein-Westfalen kostet ein Verstoß 50 bis 500 Euro, vor Minderjährigen 300 bis 1.000 Euro
+(<a href="https://www.mags.nrw/regeln-und-bussgelder-zur-cannabiskontrolle">Land NRW</a>). Auf Volksfesten
+müssen die Veranstalter Verstöße verhindern, notfalls mit einem Verbot
+(<a href="https://www.mags.nrw/system/files/media/document/file/erlass_konsumverbot_auf_volksfesten_presse.pdf">Erlass, Mai 2024</a>).
+Im <strong>Tivoli</strong> verbietet die Stadionordnung Konsum, Besitz und Weitergabe von Cannabis
+(<a href="https://www.alemannia-aachen.de/tivoli/stadionordnung/">Stadionordnung</a>). Eigene Verbotszonen für
+Cannabis hat Aachen nicht (Stand 27. November 2026).</p>
+<nav aria-label="Nachbarstädte" class="nachbarn">
+<h2 id="nachbarstadte-im-vergleich">Nachbarstädte im Vergleich</h2>
+<p>In Aachen liegen 13,1 % der Stadtfläche in einer Verbotszone. Die nächsten Städte mit eigener Seite:</p>
+<ul>
+<li><strong><a href="koeln">Köln</a></strong>, 63 km entfernt: 17,6 % der Stadtfläche; <a href="koeln#innenstadt-und-platze">Fußgängerzonen in Köln</a>, <a href="koeln#was-sonst-noch-gilt">Regeln in Köln</a></li>
+<li><strong><a href="bonn">Bonn</a></strong>, 70 km entfernt: 17,5 % der Stadtfläche; <a href="bonn#innenstadt-und-weihnachtsmarkt">Fußgängerzonen in Bonn</a>, <a href="bonn#was-sonst-noch-gilt">Regeln in Bonn</a></li>
+<li><strong><a href="duesseldorf">Düsseldorf</a></strong>, 71 km entfernt: 18,5 % der Stadtfläche; <a href="duesseldorf#altstadt-und-innenstadt">Fußgängerzonen in Düsseldorf</a>, <a href="duesseldorf#was-sonst-noch-gilt">Regeln in Düsseldorf</a></li>
+</ul>
+<p>Dieselben Landesregeln (Nordrhein-Westfalen) gelten auch in <a href="bielefeld#was-sonst-noch-gilt">Bielefeld</a>, <a href="bochum#was-sonst-noch-gilt">Bochum</a>, <a href="bonn#was-sonst-noch-gilt">Bonn</a>, <a href="dortmund#was-sonst-noch-gilt">Dortmund</a>, <a href="duisburg#was-sonst-noch-gilt">Duisburg</a>, <a href="duesseldorf#was-sonst-noch-gilt">Düsseldorf</a>, <a href="essen#was-sonst-noch-gilt">Essen</a>, <a href="koeln#was-sonst-noch-gilt">Köln</a>, <a href="muenster#was-sonst-noch-gilt">Münster</a>, <a href="wuppertal#was-sonst-noch-gilt">Wuppertal</a>.</p>
+</nav>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-aachen-kiffen">Wo darf man in Aachen kiffen?</h3>
+<p>Nach § 5 KCanG außerhalb der roten Flächen, etwa auf großen Teilen des Lousbergs
+(13 % in einer Zone) und im Münsterwald (0 %). Tagsüber nicht in
+den Fußgängerzonen, auch nicht in der Pontstraße, nie in Gegenwart von Minderjährigen. Weiß heißt nicht
+sicher erlaubt: Hecken, Bäume und fehlende Einrichtungen kennt die Karte nicht.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+27. November 2026. Eine Orientierungshilfe, keine Rechtsauskunft (<a href="../about.html">wie gerechnet wird</a>).</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
 </body>
 </html>

@@ -86,6 +86,8 @@ def abfrage(zone: dict) -> str:
     teile: list[str] = []
     for t in zone["teil"]:
         typen = t.get("typ", ["way", "relation"])
+        if "linie" in t:
+            continue  # von Hand gezogen, nichts abzufragen
         if "ids" in t:
             ids = ",".join(str(i) for i in t["ids"])
             teile.extend(f"{typ}(id:{ids});" for typ in typen)
@@ -184,11 +186,27 @@ def zone_bauen(zone: dict) -> tuple[BaseGeometry, list[str]]:
     herkunft: list[str] = []
     for t in zone["teil"]:
         puffer = t.get("puffer_m")
+        if "linie" in t:
+            # Verbindung von Hand, wo der Rechtsakt eine Grenze nennt, die OSM nicht
+            # (unter diesem Namen) fuehrt -- etwa eine Waldschneise.
+            pts = [WGS84_ZU_UTM.transform(lon, lat) for lon, lat in t["linie"]]
+            breite = puffer if puffer is not None else 6.0
+            teile.append(LineString(pts).buffer(breite, cap_style="round"))
+            continue
+        ausschnitt = None
+        if "ausschnitt" in t:
+            # [sued, west, nord, ost]: nur dieses Stueck einer langen Strasse
+            s, w, n_, o = t["ausschnitt"]
+            x0, y0 = WGS84_ZU_UTM.transform(w, s)
+            x1, y1 = WGS84_ZU_UTM.transform(o, n_)
+            ausschnitt = shapely.box(x0, y0, x1, y1)
         n = 0
         for el in antwort["elements"]:
             if not passt(t, el):
                 continue
             g = geometrie(el, puffer)
+            if g is not None and ausschnitt is not None:
+                g = g.intersection(ausschnitt)
             if g is None or g.is_empty:
                 continue
             teile.append(g)

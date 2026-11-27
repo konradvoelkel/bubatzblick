@@ -1,10 +1,8 @@
 <p class="lead">In Bochum ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
 <strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km². Grund sind {{objekte}}
-Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
-Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
-nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
-7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
-Jugendlichen.</p>
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr
+und überall die Gegenwart von Minderjährigen.</p>
 
 Bochum ist dicht bebaut, mit vielen Spielplätzen und Sportanlagen auf wenig Fläche; auch in den
 Wäldern liegen {{wald_zone}} in einer Zone.
@@ -15,17 +13,14 @@ Wäldern liegen {{wald_zone}} in einer Zone.
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Den größten Teil machen die
-{{objekte:sports}} Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von {{objekte:playground}} Spielplätzen.
+Die meisten Zonen gehen auf die {{objekte:sports}} Sportstätten zurück, danach auf die
+{{objekte:playground}} Spielplätze.
 
 Auf Spiel-, Bolz- und Skateflächen und auf Schulhöfen verbietet die ordnungsbehördliche Verordnung
 der Stadt außerdem, sich „unter dem Einfluss“ von Alkohol oder anderen berauschenden Mitteln
 aufzuhalten; dort darf man sich nur von 8 bis 20 Uhr aufhalten, und Kinderspielplätze sind für
 Kinder bis 14 Jahre da
 ([Verordnung](https://www.bochum.de/C125830C0042AB74/vwContentByKey/N26R26QP189HGILDE/$File/bosvo.pdf)).
-Anbauvereinigungen fehlen in der Tabelle: Wo sie anbauen, ist nicht veröffentlicht.
 
 ## Parks und Kemnader See
 
@@ -46,10 +41,10 @@ Streifen Land entlang der Ruhr liegen {{ufer:Fluss}} in einer Zone.
 ## Innenstadt und Bermudadreieck
 
 Eine amtliche Liste der Bochumer Fußgängerzonen haben wir nicht gefunden. Belegt ist die
-**Kortumstraße** vom Südring bis zur Brückstraße mit dem Husemannplatz, über die Sondernutzungssatzung
+**Kortumstraße** vom Südring bis zur Brückstraße mit dem Husemannplatz, über die
+Sondernutzungssatzung
 ([Sondernutzungssatzung](https://www.bochum.de/C125830C0042AB74/vwContentByKey/N26R26U3212HGILDE/$File/sondernutzungs_satzung.pdf)).
-Dort gilt zwischen 7 und 20 Uhr Konsumverbot; blau zeigt die Karte die Fußgängerbereiche, wie sie in
-OpenStreetMap eingetragen sind.
+Dort gilt von 7 bis 20 Uhr Konsumverbot; blau sind die Fußgängerbereiche aus OpenStreetMap.
 
 Von Kortumstraße, Dr.-Ruer-Platz, Husemannplatz und Huestraße liegen außerdem
 {{ort:Kortumstraße}} in einer Sichtweiten-Zone, vor allem um Jugendeinrichtungen an der Straße. Der
@@ -78,23 +73,20 @@ ausdrücklich auch medizinisches Cannabis
 
 ## Was sonst noch gilt
 
-Ein Verstoß gegen § 5 Abs. 2 kostet in Nordrhein-Westfalen 50 bis 500 Euro, in Gegenwart von
-Minderjährigen 300 bis 1.000 Euro
-([Land NRW](https://www.mags.nrw/regeln-und-bussgelder-zur-cannabiskontrolle)); zuständig ist die
-Stadt. Für Volksfeste und ähnliche Großveranstaltungen wie Bochum Total sind die Veranstalter nach
-einem Erlass des Landes verpflichtet, Verstöße zu verhindern, notfalls mit einem generellen
-Konsumverbot
-([Erlass des Gesundheitsministeriums, Mai 2024](https://www.mags.nrw/system/files/media/document/file/erlass_konsumverbot_auf_volksfesten_presse.pdf)).
+In Nordrhein-Westfalen kostet ein Verstoß 50 bis 500 Euro, vor Minderjährigen 300 bis 1.000 Euro
+([Land NRW](https://www.mags.nrw/regeln-und-bussgelder-zur-cannabiskontrolle)). Auf Volksfesten wie
+Bochum Total müssen die Veranstalter Verstöße verhindern, notfalls mit einem Verbot
+([Erlass, Mai 2024](https://www.mags.nrw/system/files/media/document/file/erlass_konsumverbot_auf_volksfesten_presse.pdf)).
 Eigene Verbotszonen für Cannabis hat Bochum nicht (Stand {{stand}}).
 
 ## Häufige Fragen
 
 ### Wo darf man in Bochum kiffen?
 
-Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet. Eine weiße
-Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte kennt weder Hecken noch
-Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa im Weitmarer Holz ({{wald:Weitmarer Holz}} in einer
+Zone) und in weiten Teilen des Westparks ({{park:Westpark}}). Tagsüber nicht in den Fußgängerzonen,
+nie in Gegenwart von Minderjährigen und nicht gegen ein Hausrecht. Weiß heißt nicht sicher erlaubt:
+Hecken, Bäume und fehlende Einrichtungen kennt die Karte nicht.
 
 ### Darf man im Bermudadreieck kiffen?
 
@@ -103,10 +95,8 @@ In den Lokalen und auf ihren Terrassen kann der Wirt es per Hausrecht untersagen
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

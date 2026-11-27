@@ -1,0 +1,1017 @@
+{
+ "stadtflaeche_osm_km2": 152.92,
+ "wald": {
+  "flaeche_km2": 67.8,
+  "anteil_stadt": 0.4434,
+  "anteil_zone": 0.0341,
+  "anteil_zone_ohne_wald": 0.1989
+ },
+ "zonen_km2": 19.25,
+ "anteil": 0.12587,
+ "kategorien": {
+  "sports": {
+   "objekte": 635,
+   "zonen_km2": 10.55
+  },
+  "playground": {
+   "objekte": 374,
+   "zonen_km2": 6.75
+  },
+  "school": {
+   "objekte": 105,
+   "zonen_km2": 3.88
+  },
+  "kindergarten": {
+   "objekte": 149,
+   "zonen_km2": 3.23
+  },
+  "childcare": {
+   "objekte": 46,
+   "zonen_km2": 0.82
+  },
+  "youth": {
+   "objekte": 27,
+   "zonen_km2": 0.49
+  }
+ },
+ "objekte_gesamt": 1336,
+ "merkmale": {
+  "see": [
+   {
+    "name": "Opfinger See",
+    "osm": [
+     "r1268973"
+    ],
+    "flaeche_ha": 42.9,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.0101,
+    "lat": 48.0051,
+    "lon": 7.75747,
+    "bbox": [
+     7.75257,
+     47.99906,
+     7.76409,
+     48.01116
+    ]
+   },
+   {
+    "name": "Flückigersee",
+    "osm": [
+     "w199793060"
+    ],
+    "flaeche_ha": 10.5,
+    "zone_ha": 2.9,
+    "anteil_zone": 0.2795,
+    "lat": 48.01038,
+    "lon": 7.81847,
+    "bbox": [
+     7.81431,
+     48.00816,
+     7.82166,
+     48.01257
+    ]
+   },
+   {
+    "name": "Tunisee",
+    "osm": [
+     "w4870496"
+    ],
+    "flaeche_ha": 8.7,
+    "zone_ha": 2.6,
+    "anteil_zone": 0.2953,
+    "lat": 48.06612,
+    "lon": 7.81441,
+    "bbox": [
+     7.81225,
+     48.06461,
+     7.81667,
+     48.06771
+    ]
+   },
+   {
+    "name": "Moosweiher",
+    "osm": [
+     "w144475230"
+    ],
+    "flaeche_ha": 7.3,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.4172,
+    "lat": 48.03048,
+    "lon": 7.80456,
+    "bbox": [
+     7.80175,
+     48.0288,
+     7.80666,
+     48.03208
+    ]
+   },
+   {
+    "name": "Arlesheimer See",
+    "osm": [
+     "w4870492"
+    ],
+    "flaeche_ha": 6.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 47.9856,
+    "lon": 7.74585,
+    "bbox": [
+     7.7438,
+     47.98434,
+     7.7478,
+     47.98697
+    ]
+   },
+   {
+    "name": "Waltershofener See",
+    "osm": [
+     "w4870491"
+    ],
+    "flaeche_ha": 4.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.01249,
+    "lon": 7.76531,
+    "bbox": [
+     7.76362,
+     48.01076,
+     7.76736,
+     48.01425
+    ]
+   },
+   {
+    "name": "Silbersee",
+    "osm": [
+     "w4870494"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.4639,
+    "lat": 48.06206,
+    "lon": 7.81705,
+    "bbox": [
+     7.81501,
+     48.06103,
+     7.81957,
+     48.06272
+    ]
+   },
+   {
+    "name": "Dietenbachsee",
+    "osm": [
+     "r539979"
+    ],
+    "flaeche_ha": 3.3,
+    "zone_ha": 1.0,
+    "anteil_zone": 0.3006,
+    "lat": 48.00202,
+    "lon": 7.80206,
+    "bbox": [
+     7.80102,
+     48.00075,
+     7.80382,
+     48.00331
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Dietenbachpark",
+    "osm": [
+     "w145109461"
+    ],
+    "flaeche_ha": 45.1,
+    "zone_ha": 32.3,
+    "anteil_zone": 0.7166,
+    "lat": 48.00129,
+    "lon": 7.80423,
+    "bbox": [
+     7.7987,
+     47.99633,
+     7.81195,
+     48.0062
+    ]
+   },
+   {
+    "name": "Tier-Natur-Erlebnispark Mundenhof",
+    "osm": [
+     "w32897796"
+    ],
+    "flaeche_ha": 37.4,
+    "zone_ha": 12.6,
+    "anteil_zone": 0.3365,
+    "lat": 48.01333,
+    "lon": 7.78042,
+    "bbox": [
+     7.77446,
+     48.00796,
+     7.7842,
+     48.01924
+    ]
+   },
+   {
+    "name": "Seepark",
+    "osm": [
+     "r5627570"
+    ],
+    "flaeche_ha": 21.1,
+    "zone_ha": 16.2,
+    "anteil_zone": 0.766,
+    "lat": 48.01057,
+    "lon": 7.82072,
+    "bbox": [
+     7.81168,
+     48.00615,
+     7.82539,
+     48.01492
+    ]
+   },
+   {
+    "name": "Möslepark",
+    "osm": [
+     "w33142040"
+    ],
+    "flaeche_ha": 9.3,
+    "zone_ha": 4.1,
+    "anteil_zone": 0.4409,
+    "lat": 47.98385,
+    "lon": 7.87763,
+    "bbox": [
+     7.8735,
+     47.98195,
+     7.88121,
+     47.98567
+    ]
+   },
+   {
+    "name": "Josef-Brandel-Anlage",
+    "osm": [
+     "w25153361"
+    ],
+    "flaeche_ha": 5.1,
+    "zone_ha": 3.7,
+    "anteil_zone": 0.7302,
+    "lat": 47.98535,
+    "lon": 7.81492,
+    "bbox": [
+     7.80997,
+     47.98359,
+     7.81844,
+     47.98692
+    ]
+   },
+   {
+    "name": "Konrad-Guenther-Park",
+    "osm": [
+     "w37547311"
+    ],
+    "flaeche_ha": 4.7,
+    "zone_ha": 3.8,
+    "anteil_zone": 0.7979,
+    "lat": 47.98553,
+    "lon": 7.87883,
+    "bbox": [
+     7.87352,
+     47.98466,
+     7.88197,
+     47.98637
+    ]
+   },
+   {
+    "name": "Eschholzpark",
+    "osm": [
+     "w23116533"
+    ],
+    "flaeche_ha": 3.9,
+    "zone_ha": 3.9,
+    "anteil_zone": 0.9971,
+    "lat": 47.99921,
+    "lon": 7.82991,
+    "bbox": [
+     7.8281,
+     47.99754,
+     7.83167,
+     48.00084
+    ]
+   },
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w121495939"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 1.7,
+    "anteil_zone": 0.4974,
+    "lat": 48.00952,
+    "lon": 7.85788,
+    "bbox": [
+     7.85505,
+     48.00843,
+     7.85965,
+     48.01057
+    ]
+   },
+   {
+    "name": "Stadtgarten",
+    "osm": [
+     "w281021739"
+    ],
+    "flaeche_ha": 2.9,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.9565,
+    "lat": 47.99814,
+    "lon": 7.85771,
+    "bbox": [
+     7.85631,
+     47.99689,
+     7.8591,
+     47.99893
+    ]
+   },
+   {
+    "name": "Stühlinger Kirchplatz",
+    "osm": [
+     "w23226931"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 2.3,
+    "anteil_zone": 0.8729,
+    "lat": 47.99688,
+    "lon": 7.83782,
+    "bbox": [
+     7.83623,
+     47.99593,
+     7.83928,
+     47.99787
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Albert-Ludwigs-Universität Freiburg",
+    "osm": [
+     "r1590189"
+    ],
+    "flaeche_ha": 20.2,
+    "zone_ha": 6.9,
+    "anteil_zone": 0.34,
+    "lat": 48.01498,
+    "lon": 7.83282,
+    "bbox": [
+     7.82713,
+     48.01168,
+     7.83663,
+     48.01875
+    ]
+   },
+   {
+    "name": "Fakultät für Biologie",
+    "osm": [
+     "w1464238773"
+    ],
+    "flaeche_ha": 5.3,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.4734,
+    "lat": 48.00927,
+    "lon": 7.85745,
+    "bbox": [
+     7.85497,
+     48.00746,
+     7.85968,
+     48.0111
+    ]
+   },
+   {
+    "name": "Pädagogische Hochschule Freiburg",
+    "osm": [
+     "r1696036"
+    ],
+    "flaeche_ha": 5.2,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.4224,
+    "lat": 47.98084,
+    "lon": 7.8961,
+    "bbox": [
+     7.88979,
+     47.98006,
+     7.89757,
+     47.98294
+    ]
+   },
+   {
+    "name": "Bundesarchiv Abt. Militärarchiv",
+    "osm": [
+     "w223903056"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.4747,
+    "lat": 47.97869,
+    "lon": 7.8218,
+    "bbox": [
+     7.82069,
+     47.97796,
+     7.82321,
+     47.97929
+    ]
+   },
+   {
+    "name": "UWC Robert Bosch College",
+    "osm": [
+     "w375009841"
+    ],
+    "flaeche_ha": 1.4,
+    "zone_ha": 0.9,
+    "anteil_zone": 0.6457,
+    "lat": 47.99484,
+    "lon": 7.88303,
+    "bbox": [
+     7.88211,
+     47.99404,
+     7.88402,
+     47.99549
+    ]
+   },
+   {
+    "name": "Hochschule für Musik Freiburg",
+    "osm": [
+     "w37432713"
+    ],
+    "flaeche_ha": 1.3,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.1678,
+    "lat": 47.98882,
+    "lon": 7.87242,
+    "bbox": [
+     7.87167,
+     47.98808,
+     7.87359,
+     47.98959
+    ]
+   },
+   {
+    "name": "Collegium Borromaeum",
+    "osm": [
+     "w62329664"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.3246,
+    "lat": 47.99522,
+    "lon": 7.85532,
+    "bbox": [
+     7.85408,
+     47.99475,
+     7.85648,
+     47.99579
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Mooswald",
+    "osm": [
+     "r1959568",
+     "r1959569",
+     "w54293918"
+    ],
+    "flaeche_ha": 1287.1,
+    "zone_ha": 23.6,
+    "anteil_zone": 0.0183,
+    "lat": 47.9974,
+    "lon": 7.76747,
+    "bbox": [
+     7.72217,
+     47.97637,
+     7.79878,
+     48.02579
+    ]
+   },
+   {
+    "name": "Stadtwald",
+    "osm": [
+     "r882"
+    ],
+    "flaeche_ha": 791.1,
+    "zone_ha": 17.6,
+    "anteil_zone": 0.0223,
+    "lat": 48.03066,
+    "lon": 7.82075,
+    "bbox": [
+     7.8015,
+     48.01994,
+     7.86072,
+     48.06179
+    ]
+   },
+   {
+    "name": "Fürst von Hohenzollernscher Wald",
+    "osm": [
+     "r4799533"
+    ],
+    "flaeche_ha": 67.9,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.0205,
+    "lat": 48.016,
+    "lon": 7.78308,
+    "bbox": [
+     7.77659,
+     48.00987,
+     7.79355,
+     48.02221
+    ]
+   },
+   {
+    "name": "Gemeindewald Allmendschachen",
+    "osm": [
+     "w124660356"
+    ],
+    "flaeche_ha": 36.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 48.03351,
+    "lon": 7.79185,
+    "bbox": [
+     7.78714,
+     48.02853,
+     7.80009,
+     48.03885
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Münsterplatz",
+    "osm": [
+     "w110404211"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.4603,
+    "lat": 47.9956,
+    "lon": 7.85273,
+    "bbox": [
+     7.85149,
+     47.99495,
+     7.85385,
+     47.99623
+    ]
+   },
+   {
+    "name": "Platz der Alten Synagoge",
+    "osm": [
+     "r5558012"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 47.99482,
+    "lon": 7.84617,
+    "bbox": [
+     7.84562,
+     47.99436,
+     7.84669,
+     47.99531
+    ]
+   },
+   {
+    "name": "Europaplatz",
+    "osm": [
+     "r9075567"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 47.99776,
+    "lon": 7.85261,
+    "bbox": [
+     7.85156,
+     47.99739,
+     7.85342,
+     47.9981
+    ]
+   },
+   {
+    "name": "Rathausplatz",
+    "osm": [
+     "r6561950"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.5759,
+    "lat": 47.99616,
+    "lon": 7.8496,
+    "bbox": [
+     7.84916,
+     47.99579,
+     7.84993,
+     47.99655
+    ]
+   },
+   {
+    "name": "Fritz-Schieler-Platz",
+    "osm": [
+     "w145112598"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.6076,
+    "lat": 47.99446,
+    "lon": 7.81044,
+    "bbox": [
+     7.80983,
+     47.99411,
+     7.81061,
+     47.9948
+    ]
+   },
+   {
+    "name": "Karl-Rahner-Platz",
+    "osm": [
+     "w613528872"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0091,
+    "lat": 47.99318,
+    "lon": 7.84723,
+    "bbox": [
+     7.84681,
+     47.9929,
+     7.84754,
+     47.99345
+    ]
+   },
+   {
+    "name": "Platz der Begegnung",
+    "osm": [
+     "w665627537"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 48.02377,
+    "lon": 7.80849,
+    "bbox": [
+     7.80827,
+     48.02342,
+     7.80871,
+     48.02411
+    ]
+   },
+   {
+    "name": "Claire-Keidel-Platz",
+    "osm": [
+     "w773006499"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 48.01303,
+    "lon": 7.78231,
+    "bbox": [
+     7.7819,
+     48.0127,
+     7.78282,
+     48.01334
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Dreisam",
+    "osm": [
+     "r1381879",
+     "w374795309"
+    ],
+    "flaeche_ha": 20.9,
+    "zone_ha": 8.0,
+    "anteil_zone": 0.3812,
+    "lat": 48.00543,
+    "lon": 7.806,
+    "bbox": [
+     7.78711,
+     47.97821,
+     7.92506,
+     48.03387
+    ]
+   },
+   {
+    "name": "Fluss",
+    "osm": [
+     "r3321371",
+     "w1131969712",
+     "w1239777920",
+     "w126794542",
+     "w1275406339",
+     "w1275406340",
+     "w129514660",
+     "w1372999573",
+     "w1372999574",
+     "w310300692",
+     "w353167809",
+     "w699716197"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.7038,
+    "lat": 47.99226,
+    "lon": 7.86405,
+    "bbox": [
+     7.85928,
+     47.9918,
+     7.86783,
+     47.9927
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "Badestrand Opfinger Baggersee",
+    "osm": [
+     "r4783021"
+    ],
+    "flaeche_ha": 4.2,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.4181,
+    "lat": 48.00329,
+    "lon": 7.75404,
+    "bbox": [
+     7.7506,
+     47.9986,
+     7.7563,
+     48.00796
+    ]
+   },
+   {
+    "name": "Badestrand Kleiner Opfinger Badesee",
+    "osm": [
+     "w549310319"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 47.99699,
+    "lon": 7.7431,
+    "bbox": [
+     7.74112,
+     47.9965,
+     7.74356,
+     47.99759
+    ]
+   },
+   {
+    "name": "FKK-Strand Kleiner Opfinger Baggersee",
+    "osm": [
+     "w549310320"
+    ],
+    "flaeche_ha": 0.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 47.99632,
+    "lon": 7.74333,
+    "bbox": [
+     7.74307,
+     47.99593,
+     7.7435,
+     47.99657
+    ]
+   },
+   {
+    "name": "FKK Strand",
+    "osm": [
+     "w401776707"
+    ],
+    "flaeche_ha": 0.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.7921,
+    "lat": 48.00186,
+    "lon": 7.80348,
+    "bbox": [
+     7.80311,
+     48.0017,
+     7.80377,
+     48.00202
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Dreisam",
+   "flaeche_ha": 254.1,
+   "zone_ha": 90.2,
+   "anteil_zone": 0.3551
+  },
+  {
+   "name": "Fluss",
+   "flaeche_ha": 52.9,
+   "zone_ha": 22.8,
+   "anteil_zone": 0.4318
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 22.9,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 47.98686,
+  "lon": 7.80512,
+  "bbox": [
+   7.65932,
+   47.90131,
+   7.93264,
+   48.07218
+  ]
+ },
+ "orte": [
+  {
+   "name": "Kaiser-Joseph-Straße und Bertoldstraße",
+   "osm": [
+    "w1153082117",
+    "w161577394",
+    "w161577395",
+    "w218184002",
+    "w238007139",
+    "w241049596",
+    "w242691644",
+    "w251982675",
+    "w251982676",
+    "w251982677",
+    "w251982678",
+    "w252225145",
+    "w252225151",
+    "w252225152",
+    "w252225153",
+    "w27020566",
+    "w273332419",
+    "w273332420",
+    "w273347498",
+    "w273347500",
+    "w274830893",
+    "w274830896",
+    "w274830898",
+    "w30322514",
+    "w30322516",
+    "w30323019",
+    "w30323733",
+    "w33072454",
+    "w380463721",
+    "w380463722",
+    "w41452250",
+    "w42021068",
+    "w43159686",
+    "w4335707",
+    "w442777160",
+    "w442783318",
+    "w461606475",
+    "w4784116",
+    "w480258616",
+    "w480258617",
+    "w4881929",
+    "w492850693",
+    "w503800578",
+    "w509647274",
+    "w530860585",
+    "w53799586",
+    "w53799627",
+    "w53799628",
+    "w53799629",
+    "w53799734",
+    "w53799737",
+    "w53799738",
+    "w7970792",
+    "w844085157",
+    "w886657462",
+    "w980609945"
+   ],
+   "flaeche_ha": 3.69,
+   "bbox": [
+    7.84168,
+    47.99242,
+    7.85373,
+    47.9977
+   ],
+   "anteil_zone": 0.1546,
+   "art": "flaeche",
+   "lat": 47.99585,
+   "lon": 7.84407
+  },
+  {
+   "name": "Augustinerplatz",
+   "osm": [
+    "r1330564",
+    "w23021270",
+    "w23024460",
+    "w41455473"
+   ],
+   "flaeche_ha": 0.31,
+   "bbox": [
+    7.85134,
+    47.99335,
+    7.85255,
+    47.99419
+   ],
+   "anteil_zone": 0.9455,
+   "art": "flaeche",
+   "lat": 47.99377,
+   "lon": 7.85217
+  },
+  {
+   "name": "Stühlinger Kirchplatz",
+   "osm": [
+    "w23226931"
+   ],
+   "flaeche_ha": 2.58,
+   "bbox": [
+    7.83623,
+    47.99593,
+    7.83928,
+    47.99787
+   ],
+   "anteil_zone": 0.8729,
+   "art": "flaeche",
+   "lat": 47.99688,
+   "lon": 7.83782
+  },
+  {
+   "name": "Colombipark",
+   "osm": [
+    "w4881309"
+   ],
+   "flaeche_ha": 1.35,
+   "bbox": [
+    7.84555,
+    47.99682,
+    7.84765,
+    47.9981
+   ],
+   "anteil_zone": 0.8531,
+   "art": "flaeche",
+   "lat": 47.99748,
+   "lon": 7.84652
+  },
+  {
+   "name": "Stadtgarten",
+   "osm": [
+    "w281021739"
+   ],
+   "flaeche_ha": 2.91,
+   "bbox": [
+    7.85631,
+    47.99689,
+    7.8591,
+    47.99893
+   ],
+   "anteil_zone": 0.9565,
+   "art": "flaeche",
+   "lat": 47.99814,
+   "lon": 7.85771
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Regierungsbezirks Freiburg (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  47.995,
+  7.85
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "ort",
+   "Kaiser-Joseph-Straße und Bertoldstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "Stadtgarten",
+   "stadtgarten"
+  ],
+  [
+   "ort",
+   "Colombipark",
+   "colombipark"
+  ],
+  [
+   "park",
+   "Seepark",
+   "seepark"
+  ],
+  [
+   "ort",
+   "Stühlinger Kirchplatz",
+   "stuehlinger-kirchplatz"
+  ],
+  [
+   "platz",
+   "Münsterplatz",
+   "muensterplatz"
+  ]
+ ]
+}

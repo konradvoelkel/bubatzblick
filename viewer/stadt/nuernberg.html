@@ -7,14 +7,14 @@
 <title>Kiffen in Nürnberg: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<meta name="description" content="In Nürnberg liegen 32 km², 17,1 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<meta name="description" content="In Nürnberg liegen 17,1 % der Stadtfläche (32 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
 <link rel="canonical" href="__SITE_URL__/stadt/nuernberg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BubatzBlick">
 <meta property="og:locale" content="de_DE">
 <meta property="og:url" content="__SITE_URL__/stadt/nuernberg">
 <meta property="og:title" content="Kiffen in Nürnberg: wo es verboten ist">
-<meta property="og:description" content="In Nürnberg liegen 32 km², 17,1 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.">
+<meta property="og:description" content="In Nürnberg liegen 17,1 % der Stadtfläche (32 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
 <meta property="og:image" content="__SITE_URL__/img/stadt/nuernberg.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -32,7 +32,7 @@
    "@id": "__SITE_URL__/stadt/nuernberg",
    "url": "__SITE_URL__/stadt/nuernberg",
    "name": "Kiffen in Nürnberg: wo es verboten ist",
-   "description": "In Nürnberg liegen 32 km², 17,1 % der Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Fußgängerzonen, Stand November 2026.",
+   "description": "In Nürnberg liegen 17,1 % der Stadtfläche (32 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.",
    "inLanguage": "de",
    "isPartOf": {
     "@id": "__SITE_URL__/#website"
@@ -123,6 +123,8 @@
   .lead { font-size: 1.12em; }
   .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
   td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .stand { font-size: .9em; opacity: .85; margin-top: .2em; }
+  .tabellennotiz { font-size: .88em; color: var(--text-schwach); margin: .4em 0 1.2em; }
   .hinweis { font-size: .92em; color: var(--text-schwach);
              border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
   @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
@@ -130,19 +132,23 @@
   svg.deutschland { width: 100%; height: auto; display: block; }
   svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
   svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
-  svg.deutschland circle { fill: #c0392b; stroke: #fff; stroke-width: 2; }
-  svg.deutschland text { font-size: 19px; font-weight: 700; fill: #222; paint-order: stroke;
-                         stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+  svg.deutschland circle { r: 5; fill: #c0392b; stroke: #fff; stroke-width: 1.5; }
+  svg.deutschland text { font-size: 15px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 3.5px; stroke-linejoin: round; }
   svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
-  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 9; fill: #8e2a20; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 7; fill: #8e2a20; }
   svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
   ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
   ul.grau a { color: var(--text-schwach); text-decoration: none;
               border-bottom: 1px dotted currentColor; }
   ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
-  svg.deutschland line { stroke: #8a918a; stroke-width: 1.2; }
-  @media (max-width: 480px) { svg.deutschland a:not(.eng) text { font-size: 28px; }
-                              svg.deutschland a:not(.eng) circle { r: 10; } }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1; }
+  /* Auf dem Handy nur die Namen, dafuer groesser; die Anteile stehen in der Tabelle darunter. */
+  @media (max-width: 480px) { svg.deutschland text { font-size: 19px; }
+                              svg.deutschland .anteil { display: none; }
+                              svg.deutschland circle { r: 7; }
+                              svg.deutschland a.ohne-handy text,
+                              svg.deutschland a.ohne-handy line { display: none; } }
 </style>
 </head>
 <body>
@@ -150,6 +156,7 @@
   <div>
     <h1>Kiffen in Nürnberg</h1>
     <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <p class="stand">Zahlen vom 27. November 2026 · Recherche zu Regeln vor Ort: November 2026</p>
     <nav><a href="../#12/49.43555/11.06294" class="knopf">Nürnberg auf der Karte</a>
       <a href="./" class="knopf">Alle Städte</a>
       <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
@@ -158,24 +165,22 @@
 <main>
 <p class="lead">In Nürnberg ist öffentliches Kiffen auf 32 km² verboten, das sind
 <strong>17,1 % der Stadtfläche</strong> von 187 km². Grund sind 1 994
-Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
-Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
-nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen der Altstadt, in denen
-zwischen 7 und 20 Uhr nicht konsumiert werden darf, die Verbotszone der Stadt am Hauptbahnhof und
-überall die unmittelbare Gegenwart von Kindern und Jugendlichen.</p>
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen der Altstadt von
+7 bis 20 Uhr, die Verbotszone der Stadt am Hauptbahnhof und überall die Gegenwart von
+Minderjährigen.</p>
 
 <p>In Bayern kommen Verbote nach Landesrecht hinzu, die die Karte nicht zeigt: Gerauchtes Cannabis ist
 auch in Biergärten, auf Volksfesten und auf dem Gelände von Spielplätzen, Schulen und Kitas
-verboten (siehe unten).</p>
+verboten (siehe <a href="#was-sonst-noch-gilt">Landesrecht in Bayern</a>).</p>
 <figure class="karte"><img src="../img/stadt/nuernberg-stadt.webp" width="960" height="600" alt="Karte von Nürnberg mit Stadtgrenze und den roten Verbotszonen"><figcaption>Nürnberg: 32 km² Verbotszone auf 187 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
 
 <h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
 <table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">148</td><td class="zahl">6,9 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">321</td><td class="zahl">6,5 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">13</td><td class="zahl">0,3 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">489</td><td class="zahl">9,8 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">29</td><td class="zahl">0,5 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">994</td><td class="zahl">16,8 km²</td></tr></tbody></table>
+<p class="tabellennotiz">Jede Art für sich gezählt, Überlappungen also mehrfach. Anbauvereinigungen nur, soweit in OpenStreetMap eingetragen.</p>
 
-<p>Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die 32 km² oben. Den größten Teil machen die
-994 Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von 489 Spielplätzen.</p>
+<p>Die meisten Zonen gehen auf die 994 Sportstätten zurück, danach auf die
+489 Spielplätze.</p>
 <p>Die Stadt zählt selbst mit: 2025 gingen Anzeigen wegen Kiffens in Verbotszonen vor allem an
 Spielplätzen (23) und Sportstätten (9) ein, dazu acht in Gegenwart von Minderjährigen und drei in
 der Fußgängerzone; nach dem Cannabisgesetz ergingen 138 Bußgeldbescheide
@@ -194,15 +199,15 @@ Die Karte zeigt die Zone lila. Nach § 5 KCanG allein lägen vom Nelson-Mandela-
 <h2 id="parks-und-pegnitz">Parks und Pegnitz</h2>
 <p>Im <strong>Stadtpark</strong> liegen 55 % der Fläche in einer Zone: Vier Sportanlagen, zwei
 Spielplätze und eine Kita liegen im Park. Auf der <strong>Wöhrder Wiese</strong> an der Pegnitz sind es
-35 %, um zwei Spielplätze; der <strong>Wöhrder See</strong> liegt zu 32 % in einer
-Zone, vor allem am Ufer, an dem zwei Dutzend Sportanlagen und zwölf Spielplätze liegen.</p>
+35 %, um zwei Spielplätze; der <strong>Wöhrder See</strong> liegt zu 32 % in
+einer Zone, vor allem am Ufer, an dem zwei Dutzend Sportanlagen und zwölf Spielplätze liegen.</p>
 <figure class="karte"><img src="../img/stadt/nuernberg-stadtpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Stadtpark (grün umrandet) mit den roten Verbotszonen; etwa 55 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Stadtpark: 19 ha, davon 55 % Verbotszone. <a href="../#16/49.4652/11.09338">Auf der Karte ansehen</a></figcaption></figure>
 
 <figure class="karte"><img src="../img/stadt/nuernberg-woehrder-wiese.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Wöhrder Wiese (grün umrandet) mit den roten Verbotszonen; etwa 35 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Wöhrder Wiese: 17 ha, davon 35 % Verbotszone. <a href="../#16/49.45102/11.09163">Auf der Karte ansehen</a></figcaption></figure>
 
 <p>Auf der <strong>Insel Schütt</strong> mit Schule und Spielplatz sind es 72 %, im Kontumazgarten
-71 %. Im <strong>Volkspark Marienberg</strong> liegen 26 % in einer Zone,
-um neun Sportanlagen im Park, im Volkspark Dutzendteich 12 %. Im
+71 %. Im <strong>Volkspark Marienberg</strong> liegen 26 % in einer
+Zone, um neun Sportanlagen im Park, im Volkspark Dutzendteich 12 %. Im
 Burggarten der Kaiserburg sind es 15 %; eine Regel zu Rauchen oder Cannabis haben die
 Vorschriften der Schlösserverwaltung dort nicht
 (<a href="https://www.schloesser.bayern.de/deutsch/garten/objekte/anlagenvorschriften/nuernberg_kaiserburg_avo.pdf">Anlagenvorschriften</a>).</p>
@@ -220,13 +225,12 @@ Spielplatz und Basketballfeld; die Stadt beschreibt dort Kiffen im Laubengang
 Spielplätzen, Tabak zu rauchen; zu Cannabis sagt die Grünanlagensatzung nichts
 (<a href="https://www.nuernberg.de/imperia/md/zentral/dokumente/stadtrecht/850_270.pdf">Grünanlagensatzung</a>).</p>
 <h2 id="altstadt">Altstadt</h2>
-<p>Eine Liste der Nürnberger Fußgängerzonen gibt es nicht, aber eine Karte des Verkehrsplanungsamts
-von 2023: Fußgängerzone sind danach unter anderem die Königstraße vom Königstor bis zum Hauptmarkt,
-Hauptmarkt, Breite Gasse, Karolinenstraße, Kaiserstraße, Ludwigsplatz, Lorenzer Platz und
-Weinmarkt; der Albrecht-Dürer-Platz ist verkehrsberuhigter Bereich, keine Fußgängerzone
+<p>Eine Liste der Nürnberger Fußgängerzonen gibt es nicht, aber eine Karte des Verkehrsplanungsamts von
+2023: Fußgängerzone sind danach unter anderem die Königstraße vom Königstor bis zum Hauptmarkt,
+Hauptmarkt, Breite Gasse, Karolinenstraße, Kaiserstraße, Ludwigsplatz, Lorenzer Platz und Weinmarkt;
+der Albrecht-Dürer-Platz ist verkehrsberuhigter Bereich, keine Fußgängerzone
 (<a href="https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/fussgaengerzone_altstadt_erweiterungen.pdf">Karte der Stadt</a>).
-Dort gilt zwischen 7 und 20 Uhr Konsumverbot; blau zeigt die Karte die Fußgängerbereiche, wie sie
-in OpenStreetMap eingetragen sind.</p>
+Dort gilt von 7 bis 20 Uhr Konsumverbot; blau sind die Fußgängerbereiche aus OpenStreetMap.</p>
 <p>Von Königstraße, Karolinenstraße, Breiter Gasse und Kaiserstraße liegen außerdem
 6 % in einer Sichtweiten-Zone. Hauptmarkt (0 %)
 und Lorenzer Platz (0 %) liegen außerhalb der Zonen, der Aufseßplatz in der
@@ -254,23 +258,32 @@ Volksfest, auf dem Gelände von Spielplätzen, Schulen und Kitas, bis zu 1.500 E
 (<a href="https://www.gesetze-bayern.de/Content/Document/BayGSG/true">Gesundheitsschutzgesetz</a>). Zuständig
 ist die Stadt. Weitere Verbotszonen der Stadt außer der am Hauptbahnhof gibt es nicht (Stand
 27. November 2026).</p>
+<nav aria-label="Nachbarstädte" class="nachbarn">
+<h2 id="nachbarstadte-im-vergleich">Nachbarstädte im Vergleich</h2>
+<p>In Nürnberg liegen 17,1 % der Stadtfläche in einer Verbotszone. Die nächsten Städte mit eigener Seite:</p>
+<ul>
+<li><strong><a href="regensburg">Regensburg</a></strong>, 88 km entfernt: 18,4 % der Stadtfläche; <a href="regensburg#altstadt">Fußgängerzonen in Regensburg</a>, <a href="regensburg#was-sonst-noch-gilt">Regeln in Regensburg</a></li>
+<li><strong><a href="wuerzburg">Würzburg</a></strong>, 89 km entfernt: 14,3 % der Stadtfläche; <a href="wuerzburg#altstadt-und-alte-mainbrucke">Fußgängerzonen in Würzburg</a>, <a href="wuerzburg#was-sonst-noch-gilt">Regeln in Würzburg</a></li>
+<li><strong><a href="augsburg">Augsburg</a></strong>, 120 km entfernt: 15,8 % der Stadtfläche; <a href="augsburg#innenstadt">Fußgängerzonen in Augsburg</a>, <a href="augsburg#was-sonst-noch-gilt">Regeln in Augsburg</a></li>
+</ul>
+<p>Dieselben Landesregeln (Bayern) gelten auch in <a href="augsburg#was-sonst-noch-gilt">Augsburg</a>, <a href="muenchen#was-sonst-noch-gilt">München</a>, <a href="regensburg#was-sonst-noch-gilt">Regensburg</a>, <a href="wuerzburg#was-sonst-noch-gilt">Würzburg</a>.</p>
+<p>Eigene Verbotszonen über § 5 KCanG hinaus wie in Nürnberg haben auch <a href="augsburg#friedensplatz-oberhausen">Augsburg</a>, <a href="darmstadt#bollenfalltor-und-hochschulen">Darmstadt</a>, <a href="muenchen#alter-botanischer-garten">München</a>.</p>
+</nav>
 <h2 id="haufige-fragen">Häufige Fragen</h2>
 <h3 id="wo-darf-man-in-nurnberg-kiffen">Wo darf man in Nürnberg kiffen?</h3>
-<p>Außerhalb der roten und lila Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen, nicht dort, wo ein Hausrecht es verbietet, und gerauchtes
-Cannabis auch nicht in Biergärten und auf Volksfesten. Eine weiße Fläche auf der Karte heißt
-nicht, dass Konsum dort erlaubt ist: Die Karte kennt weder Hecken noch Bäume, die die Sicht nehmen,
-noch Einrichtungen, die in OpenStreetMap fehlen.</p>
+<p>Nach § 5 KCanG außerhalb der roten Flächen, etwa in weiten Teilen des Volksparks Dutzendteich
+(12 % in einer Zone). Nicht in der lila Zone am Hauptbahnhof, tagsüber
+nicht in den Fußgängerzonen der Altstadt, nie in Gegenwart von Minderjährigen, gerauchtes Cannabis
+außerdem nicht in Biergärten und auf Volksfesten. Weiß heißt nicht sicher erlaubt: Hecken, Bäume und
+fehlende Einrichtungen kennt die Karte nicht.</p>
 <h3 id="darf-man-am-hauptbahnhof-kiffen">Darf man am Hauptbahnhof kiffen?</h3>
 <p>Nein. In der Verbotszone der Stadt ist Cannabis rund um die Uhr verboten, auch für Patientinnen und
 Patienten, und schon das Mitführen zum Konsum vor Ort.</p>
 <h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
-<p>Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom 27. November 2026. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der <a href="../about.html">Über-Seite</a>.</p>
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p>Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+27. November 2026. Eine Orientierungshilfe, keine Rechtsauskunft (<a href="../about.html">wie gerechnet wird</a>).</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>
 </main>
 <footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
 Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·

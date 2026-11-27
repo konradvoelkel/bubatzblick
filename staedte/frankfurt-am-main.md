@@ -1,10 +1,8 @@
-<p class="lead">In Frankfurt am Main ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
-<strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km². Grund sind {{objekte}}
-Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
-Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
-nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
-7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
-Jugendlichen.</p>
+<p class="lead">In Frankfurt am Main ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das
+sind <strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km². Grund sind {{objekte}}
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr
+und überall die Gegenwart von Minderjährigen.</p>
 
 Zieht man den Stadtwald ab, ist der Anteil höher: {{wald_anteil}} der Stadtfläche sind Wald, dort
 liegen nur {{wald_zone}} in einer Zone, im übrigen Stadtgebiet {{ohne_wald_zone}}.
@@ -15,14 +13,12 @@ liegen nur {{wald_zone}} in einer Zone, im übrigen Stadtgebiet {{ohne_wald_zone
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Den größten Teil machen die
-{{objekte:sports}} Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von {{objekte:playground}} Spielplätzen und {{objekte:kindergarten}} Kitas.
+Den größten Teil machen die {{objekte:sports}} Sportstätten aus, von Bolzplätzen über Turnhallen bis
+zu Fitnessstudios, gefolgt von {{objekte:playground}} Spielplätzen und {{objekte:kindergarten}}
+Kitas.
 
 Auf den Spielplätzen selbst verbietet das Hessische Nichtraucherschutzgesetz außerdem das Rauchen
 ([HessNRSG, § 1](https://www.rv.hessenrecht.hessen.de/bshe/document/jlr-NNLHE0000521F)).
-Anbauvereinigungen fehlen in der Tabelle: Wo sie anbauen, ist nicht veröffentlicht.
 
 ## Parks
 
@@ -56,7 +52,7 @@ Stadtpolizei sieht dort nach eigener Auskunft nur gelegentlich vereinzelte Droge
 Eine amtliche Liste der Frankfurter Fußgängerzonen haben wir nicht gefunden; maßgeblich ist die
 Widmung der Straße und das Schild vor Ort. Die Karte zeigt blau, was in OpenStreetMap als
 Fußgängerbereich eingetragen ist, darunter die **Zeil** und die Große Bockenheimer Straße. In der
-Fußgängerzone gilt zwischen 7 und 20 Uhr Konsumverbot, ganz gleich, was die Karte rot zeigt.
+Fußgängerzone gilt von 7 bis 20 Uhr Konsumverbot, ganz gleich, was die Karte rot zeigt.
 
 Von der Zeil liegen außerdem {{ort:Zeil}} in einer Sichtweiten-Zone, vor allem um mehrere
 Sportstätten. Die **Konstablerwache** liegt ganz in einer Zone ({{ort:Konstablerwache}}), der
@@ -106,11 +102,11 @@ hat Frankfurt nicht (Stand {{stand}}).
 
 ### Wo darf man in Frankfurt kiffen?
 
-Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet, etwa auf dem
-Gelände der Goethe-Universität. Eine weiße Fläche auf der Karte heißt nicht, dass Konsum dort
-erlaubt ist: Die Karte kennt weder Hecken noch Bäume, die die Sicht nehmen, noch Einrichtungen, die
-in OpenStreetMap fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa im Frankfurter Stadtwald
+({{wald:Frankfurter Stadtwald}} in einer Zone). Tagsüber nicht in Fußgängerzonen wie der Zeil, nie
+in Gegenwart von Minderjährigen und nicht gegen ein Hausrecht, etwa auf dem Gelände der
+Goethe-Universität. Weiß heißt nicht sicher erlaubt: Hecken, Bäume und fehlende Einrichtungen kennt
+die Karte nicht.
 
 ### Darf man auf dem Campus Westend kiffen?
 
@@ -119,10 +115,8 @@ dort, wo die Karte keine Zone zeigt.
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

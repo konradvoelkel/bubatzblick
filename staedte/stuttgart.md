@@ -1,10 +1,8 @@
 <p class="lead">In Stuttgart ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
 <strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km². Grund sind {{objekte}}
-Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
-Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
-nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
-7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
-Jugendlichen.</p>
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr
+und überall die Gegenwart von Minderjährigen.</p>
 
 {{wald_anteil}} der Stadtfläche sind Wald, an den Hängen rund um den Talkessel und am Stadtrand;
 dort liegen nur {{wald_zone}} in einer Zone. Ohne den Wald gerechnet sind es {{ohne_wald_zone}}.
@@ -15,10 +13,8 @@ dort liegen nur {{wald_zone}} in einer Zone. Ohne den Wald gerechnet sind es {{o
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Den größten Teil machen die
-{{objekte:sports}} Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von {{objekte:playground}} Spielplätzen.
+Die meisten Zonen gehen auf die {{objekte:sports}} Sportstätten zurück, danach auf die
+{{objekte:playground}} Spielplätze.
 
 Von den Anbauvereinigungen hatte das Land bis Juni 2025 eine in Stuttgart erlaubt, in Weilimdorf;
 wo sie anbaut, ist nicht veröffentlicht
@@ -50,11 +46,10 @@ Auf einem 100 Meter breiten Streifen Land entlang des Neckars liegen {{ufer:Flus
 Eine amtliche Liste der Stuttgarter Fußgängerzonen haben wir nicht gefunden. Die Stadt zählt in
 ihrem Merkblatt für Straßenmusik unter anderem die untere Königstraße, den Schlossplatz am
 Fahnenrondell, den Kronprinzplatz, den Mailänder Platz und die Marienstraße zur „Fußgängerzone der
-Stuttgarter Innenstadt“
-([Stadt Stuttgart](https://www.stuttgart.de/medien/ibs/6-5-anlage1c.pdf)). Ob am Schlossplatz,
-der dem Land gehört, die Regel für Fußgängerzonen gilt, wollte das Land 2024 noch klären; eine
-Antwort haben wir nicht gefunden. In der Fußgängerzone gilt zwischen 7 und 20 Uhr Konsumverbot;
-blau zeigt die Karte die Fußgängerbereiche, wie sie in OpenStreetMap eingetragen sind.
+Stuttgarter Innenstadt“ ([Stadt Stuttgart](https://www.stuttgart.de/medien/ibs/6-5-anlage1c.pdf)).
+Ob am Schlossplatz, der dem Land gehört, die Regel für Fußgängerzonen gilt, wollte das Land 2024
+noch klären; eine Antwort haben wir nicht gefunden. In der Fußgängerzone gilt von 7 bis 20 Uhr
+Konsumverbot; blau sind die Fußgängerbereiche aus OpenStreetMap.
 
 Von der **Königstraße** liegen außerdem {{ort:Königstraße}} in einer Sichtweiten-Zone, vom
 Schlossplatz {{platz:Schlossplatz}}, von der Calwer Straße {{ort:Calwer Straße}}. Der
@@ -91,10 +86,9 @@ Vorflächen und Parkplätzen
 
 ## Was sonst noch gilt
 
-Seit dem 1. Juni 2026 verbietet das Landesnichtraucherschutzgesetz Baden-Württemberg das Rauchen
-und Dampfen ausdrücklich auch von Cannabis: auf Spielplätzen, auf Schulgeländen und den
-Grundstücken von Kitas, an allen Haltestellen von Bus und Bahn, in Freibädern und Zoos, also auch
-in der Wilhelma. Das kostet bis zu 200 Euro, im Wiederholungsfall bis zu 500 Euro
+Seit Juni 2026 ist gerauchtes Cannabis in Baden-Württemberg auch auf Spielplätzen, Schulgeländen und
+Kita-Grundstücken, an allen Haltestellen und in Freibädern und Zoos verboten, also auch in der
+Wilhelma, bis zu 200 Euro
 ([Land Baden-Württemberg](https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/neue-regeln-fuer-raucherinnen-und-raucher-vom-1-juni-an-1)).
 Auf Spielplätzen verbietet die Polizeiverordnung der Stadt schon den Aufenthalt unter dem Einfluss
 berauschender Mittel, mit Geldbuße bis 5.000 Euro
@@ -102,32 +96,29 @@ berauschender Mittel, mit Geldbuße bis 5.000 Euro
 verbietet dort außerdem das Rauchen
 ([Grünflächensatzung, § 5](https://www.stuttgart.de/medien/ibs/1-13.pdf)).
 
-Einen Bußgeldkatalog für das Cannabisgesetz hat Baden-Württemberg nicht veröffentlicht; das Gesetz
-erlaubt bis zu 30.000 Euro. Eigene Verbotszonen für Cannabis hat Stuttgart nicht (Stand
-{{stand}}).
+Einen Bußgeldkatalog für das Cannabisgesetz hat das Land nicht; das Gesetz erlaubt bis zu 30.000
+Euro. Eigene Verbotszonen für Cannabis hat Stuttgart nicht (Stand {{stand}}).
 
 ## Häufige Fragen
 
 ### Wo darf man in Stuttgart kiffen?
 
-Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet, etwa auf dem
-Wasen. Gerauchtes Cannabis zusätzlich nicht an Haltestellen, auf Spielplätzen und Schulgeländen.
-Eine weiße Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die Karte kennt weder
-Hecken noch Bäume, die die Sicht nehmen, noch Einrichtungen, die in OpenStreetMap fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa in weiten Teilen des Rosensteinparks
+({{park:Rosensteinpark}} in einer Zone). Tagsüber nicht in den Fußgängerzonen, nie in Gegenwart von
+Minderjährigen, nicht gegen ein Hausrecht wie auf dem Wasen, gerauchtes Cannabis außerdem nicht an
+Haltestellen, auf Spielplätzen, Schulgeländen und in Freibädern. Weiß heißt nicht sicher erlaubt:
+Hecken, Bäume und fehlende Einrichtungen kennt die Karte nicht.
 
 ### Darf man im Schlossgarten kiffen?
 
-Auf dem größten Teil liegt keine Sichtweiten-Zone, und nach Auskunft des Landes von 2024 ist es
-dort grundsätzlich erlaubt. Rot sind die Bereiche um Spielplätze und Sportanlagen; in Gegenwart von Kindern und
-Jugendlichen gilt das Verbot überall.
+Auf dem größten Teil liegt keine Sichtweiten-Zone, und nach Auskunft des Landes von 2024 ist es dort
+grundsätzlich erlaubt. Rot sind die Bereiche um Spielplätze und Sportanlagen; in Gegenwart von
+Kindern und Jugendlichen gilt das Verbot überall.
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

@@ -1,10 +1,8 @@
 <p class="lead">In Mannheim ist öffentliches Kiffen auf {{zonen_km2}} km² verboten, das sind
 <strong>{{anteil}} der Stadtfläche</strong> von {{flaeche_km2}} km². Grund sind {{objekte}}
-Einrichtungen, in deren Sichtweite nach § 5 KCanG nicht konsumiert werden darf, vor allem
-Sportstätten und Spielplätze. Sichtweite heißt: höchstens 100 Meter vom Eingangsbereich, und
-nur dort, wo kein Gebäude die Sicht verdeckt. Dazu kommen die Fußgängerzonen, in denen zwischen
-7 und 20 Uhr nicht konsumiert werden darf, und überall die unmittelbare Gegenwart von Kindern und
-Jugendlichen.</p>
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr
+und überall die Gegenwart von Minderjährigen.</p>
 
 Die Stadt Mannheim hat eine eigene Karte veröffentlicht, mit Zonen von 100 Metern und, auf einer
 zweiten Ebene, die man erst einschalten muss, den Fußgängerzonen nach ihren Angaben
@@ -16,10 +14,8 @@ zweiten Ebene, die man erst einschalten muss, den Fußgängerzonen nach ihren An
 
 [[kategorien]]
 
-Die Spalte rechts zählt jede Art für sich; weil sich Zonen verschiedener Einrichtungen
-überlappen, ist ihre Summe größer als die {{zonen_km2}} km² oben. Den größten Teil machen die
-{{objekte:sports}} Sportstätten aus, von Bolzplätzen über Turnhallen bis zu Fitnessstudios,
-gefolgt von {{objekte:playground}} Spielplätzen.
+Die meisten Zonen gehen auf die {{objekte:sports}} Sportstätten zurück, danach auf die
+{{objekte:playground}} Spielplätze.
 
 Von den Anbauvereinigungen hatte das Land bis Juni 2025 eine mit Sitz in Mannheim erlaubt; wo sie
 anbaut, ist nicht veröffentlicht
@@ -27,8 +23,8 @@ anbaut, ist nicht veröffentlicht
 
 ## Luisenpark und Parks
 
-Im **Luisenpark** liegen {{park:Luisenpark}} der Fläche in einer Zone: 18 Spielplätze liegen im Park.
-Im **Herzogenriedpark** sind es {{park:Herzogenriedpark}}, um sieben Spielplätze und sechs
+Im **Luisenpark** liegen {{park:Luisenpark}} der Fläche in einer Zone: 18 Spielplätze liegen im
+Park. Im **Herzogenriedpark** sind es {{park:Herzogenriedpark}}, um sieben Spielplätze und sechs
 Sportanlagen. In beiden Parks verbietet die Nutzungsordnung Cannabis auf dem ganzen Gelände; wer
 sich nicht daran hält, muss gehen
 ([Nutzungsordnung Luisenpark](https://www.luisenpark.de/besucherinfo/parkbesuch/nutzungsordnung),
@@ -50,16 +46,16 @@ Spielplätzen. Auf einem 100 Meter breiten Streifen Land entlang von Rhein und N
 
 ## Quadrate und Jungbusch
 
-Fußgängerzonen sind nach der Karte der Stadt die **Planken** über den Paradeplatz bis zum Friedrichsring
-und die **Breite Straße** von der Kurpfalzbrücke bis zum Paradeplatz, außerdem etwa der Alte
-Meßplatz und der Bahnhofsvorplatz; der Marktplatz und der Friedrichsplatz am Wasserturm sind dort
-nicht als Fußgängerzone eingefärbt. In der Fußgängerzone gilt zwischen 7 und 20 Uhr
-Konsumverbot; blau zeigt diese Karte die Fußgängerbereiche aus OpenStreetMap.
+Fußgängerzonen sind nach der Karte der Stadt die **Planken** über den Paradeplatz bis zum
+Friedrichsring und die **Breite Straße** von der Kurpfalzbrücke bis zum Paradeplatz, außerdem etwa
+der Alte Meßplatz und der Bahnhofsvorplatz; der Marktplatz und der Friedrichsplatz am Wasserturm
+sind dort nicht als Fußgängerzone eingefärbt. In der Fußgängerzone gilt von 7 bis 20 Uhr
+Konsumverbot; blau sind die Fußgängerbereiche aus OpenStreetMap.
 
 Von Planken und Breiter Straße liegen außerdem {{ort:Planken und Breite Straße}} in einer
 Sichtweiten-Zone, um Schulen, Kitas und Sportstätten in den Quadraten. Vom Paradeplatz sind es
-{{ort:Paradeplatz}}, vom Friedrichsplatz {{ort:Friedrichsplatz}}; der Marktplatz liegt fast außerhalb
-({{ort:Marktplatz}}), ebenso der Alte Meßplatz ({{ort:Alter Messplatz}}). An der
+{{ort:Paradeplatz}}, vom Friedrichsplatz {{ort:Friedrichsplatz}}; der Marktplatz liegt fast
+außerhalb ({{ort:Marktplatz}}), ebenso der Alte Meßplatz ({{ort:Alter Messplatz}}). An der
 **Jungbuschpromenade** am Verbindungskanal liegen {{ort:Jungbuschpromenade}} in einer Zone.
 
 [[bild:fussgaengerzone]]
@@ -82,29 +78,25 @@ Cannabis gemeint ist, sagt sie nicht
 
 ## Was sonst noch gilt
 
-Seit dem 1. Juni 2026 verbietet das Landesnichtraucherschutzgesetz Baden-Württemberg das Rauchen
-und Dampfen ausdrücklich auch von Cannabis: auf Spielplätzen, auf Schulgeländen und den
-Grundstücken von Kitas, an allen Haltestellen von Bus und Bahn, in Freibädern und Zoos. Das kostet
-bis zu 200 Euro, im Wiederholungsfall bis zu 500 Euro
+Seit Juni 2026 ist gerauchtes Cannabis in Baden-Württemberg auch auf Spielplätzen, Schulgeländen und
+Kita-Grundstücken, an allen Haltestellen und in Freibädern und Zoos verboten, bis zu 200 Euro
 ([Land Baden-Württemberg](https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/neue-regeln-fuer-raucherinnen-und-raucher-vom-1-juni-an-1)).
 
-Einen Bußgeldkatalog für das Cannabisgesetz hat Baden-Württemberg nicht veröffentlicht; das Gesetz
-erlaubt bis zu 30.000 Euro. Die Polizei in Mannheim nannte im Juni 2026 Bußgelder von 300 bis
-1.000 Euro als üblich, nachdem sie an einem Abend in der Innenstadt neun Verstöße gegen das
-Cannabisgesetz festgestellt hatte
-([Polizeipräsidium Mannheim](https://www.presseportal.de/blaulicht/pm/14915/6303080)). Eigene
+Einen Bußgeldkatalog für das Cannabisgesetz hat das Land nicht; das Gesetz erlaubt bis zu 30.000
+Euro. Die Polizei in Mannheim nannte im Juni 2026 Bußgelder von 300 bis 1.000 Euro als üblich,
+nachdem sie an einem Abend in der Innenstadt neun Verstöße gegen das Cannabisgesetz festgestellt
+hatte ([Polizeipräsidium Mannheim](https://www.presseportal.de/blaulicht/pm/14915/6303080)). Eigene
 Verbotszonen für Cannabis hat Mannheim nicht (Stand {{stand}}).
 
 ## Häufige Fragen
 
 ### Wo darf man in Mannheim kiffen?
 
-Außerhalb der roten Flächen, außerhalb der Fußgängerzonen zwischen 7 und 20 Uhr, nicht in
-Gegenwart von Kindern und Jugendlichen und nicht dort, wo ein Hausrecht es verbietet, wie im
-Luisenpark. Gerauchtes Cannabis zusätzlich nicht an Haltestellen, auf Spielplätzen, Schulgeländen
-und in Freibädern. Eine weiße Fläche auf der Karte heißt nicht, dass Konsum dort erlaubt ist: Die
-Karte kennt weder Hecken noch Bäume, die die Sicht nehmen, noch Einrichtungen, die in
-OpenStreetMap fehlen.
+Nach § 5 KCanG außerhalb der roten Flächen, etwa im Waldpark am Rhein ({{wald:Waldpark}} in einer
+Zone). Nicht im Luisenpark und im Herzogenriedpark, deren Nutzungsordnung Cannabis verbietet,
+tagsüber nicht in den Fußgängerzonen, nie in Gegenwart von Minderjährigen, gerauchtes Cannabis
+außerdem nicht an Haltestellen, auf Spielplätzen, Schulgeländen und in Freibädern. Weiß heißt nicht
+sicher erlaubt: Hecken, Bäume und fehlende Einrichtungen kennt die Karte nicht.
 
 ### Gibt es eine amtliche Karte?
 
@@ -114,10 +106,8 @@ eingetragen sind; im Zweifel gilt, was vor Ort ausgeschildert ist.
 
 ### Wie genau ist das?
 
-Die Zonen sind aus OpenStreetMap berechnet, mit Gebäuden als Sichthindernis, und werden täglich
-neu gerechnet; die Zahlen auf dieser Seite sind vom {{stand}}. Die Karte ist eine
-Orientierungshilfe, keine Rechtsauskunft. Wie gerechnet wird und wo die Grenzen liegen, steht
-auf der [Über-Seite](../about.html).
+Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+{{stand}}. Eine Orientierungshilfe, keine Rechtsauskunft ([wie gerechnet wird](../about.html)).
 
-<p class="hinweis">Fehlt eine Einrichtung oder ist eine falsch eingetragen? Korrekturen in
-OpenStreetMap erscheinen am Tag darauf auf der Karte; nur eintragen, was es vor Ort wirklich gibt.</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>

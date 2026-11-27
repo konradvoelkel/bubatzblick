@@ -1,0 +1,833 @@
+{
+ "stadtflaeche_osm_km2": 121.98,
+ "wald": {
+  "flaeche_km2": 60.2,
+  "anteil_stadt": 0.4934,
+  "anteil_zone": 0.0374,
+  "anteil_zone_ohne_wald": 0.187
+ },
+ "zonen_km2": 13.81,
+ "anteil": 0.11319,
+ "kategorien": {
+  "sports": {
+   "objekte": 393,
+   "zonen_km2": 7.43
+  },
+  "playground": {
+   "objekte": 218,
+   "zonen_km2": 4.16
+  },
+  "school": {
+   "objekte": 85,
+   "zonen_km2": 3.09
+  },
+  "kindergarten": {
+   "objekte": 93,
+   "zonen_km2": 2.1
+  },
+  "youth": {
+   "objekte": 20,
+   "zonen_km2": 0.3
+  },
+  "childcare": {
+   "objekte": 17,
+   "zonen_km2": 0.27
+  }
+ },
+ "objekte_gesamt": 826,
+ "merkmale": {
+  "see": [
+   {
+    "name": "Grube Prinz von Hessen",
+    "osm": [
+     "r1845214"
+    ],
+    "flaeche_ha": 6.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.89984,
+    "lon": 8.73376,
+    "bbox": [
+     8.73188,
+     49.89781,
+     8.73617,
+     49.9014
+    ]
+   },
+   {
+    "name": "Großer Woog",
+    "osm": [
+     "r8848"
+    ],
+    "flaeche_ha": 6.1,
+    "zone_ha": 4.0,
+    "anteil_zone": 0.6654,
+    "lat": 49.87283,
+    "lon": 8.66941,
+    "bbox": [
+     8.66788,
+     49.87152,
+     8.67215,
+     49.87414
+    ]
+   },
+   {
+    "name": "Steinbrücker Teich",
+    "osm": [
+     "r30845"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.5091,
+    "lat": 49.89064,
+    "lon": 8.69982,
+    "bbox": [
+     8.69822,
+     49.88929,
+     8.70115,
+     49.89196
+    ]
+   },
+   {
+    "name": "Brentano-See",
+    "osm": [
+     "w22200016"
+    ],
+    "flaeche_ha": 2.7,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.9019,
+    "lat": 49.90025,
+    "lon": 8.67938,
+    "bbox": [
+     8.67801,
+     49.89936,
+     8.68188,
+     49.90111
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Bürgerpark Nord",
+    "osm": [
+     "w150041553"
+    ],
+    "flaeche_ha": 51.1,
+    "zone_ha": 34.3,
+    "anteil_zone": 0.6714,
+    "lat": 49.88911,
+    "lon": 8.66601,
+    "bbox": [
+     8.66126,
+     49.88466,
+     8.67446,
+     49.89358
+    ]
+   },
+   {
+    "name": "Park Rosenhöhe",
+    "osm": [
+     "w149516195"
+    ],
+    "flaeche_ha": 20.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0004,
+    "lat": 49.87602,
+    "lon": 8.67826,
+    "bbox": [
+     8.67303,
+     49.87411,
+     8.68349,
+     49.87793
+    ]
+   },
+   {
+    "name": "Herrngarten",
+    "osm": [
+     "w150032785"
+    ],
+    "flaeche_ha": 12.5,
+    "zone_ha": 6.0,
+    "anteil_zone": 0.4771,
+    "lat": 49.87727,
+    "lon": 8.65246,
+    "bbox": [
+     8.65044,
+     49.87452,
+     8.65611,
+     49.88019
+    ]
+   },
+   {
+    "name": "Heinrich-von-Brentano-Anlage",
+    "osm": [
+     "w23508548"
+    ],
+    "flaeche_ha": 6.2,
+    "zone_ha": 5.6,
+    "anteil_zone": 0.894,
+    "lat": 49.90008,
+    "lon": 8.68017,
+    "bbox": [
+     8.67772,
+     49.89861,
+     8.68235,
+     49.90149
+    ]
+   },
+   {
+    "name": "Modaupromenade",
+    "osm": [
+     "w522475034"
+    ],
+    "flaeche_ha": 5.6,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.4947,
+    "lat": 49.81487,
+    "lon": 8.63101,
+    "bbox": [
+     8.63052,
+     49.81301,
+     8.64427,
+     49.81676
+    ]
+   },
+   {
+    "name": "Prinz-Emil-Garten",
+    "osm": [
+     "w161980446"
+    ],
+    "flaeche_ha": 5.5,
+    "zone_ha": 4.6,
+    "anteil_zone": 0.8386,
+    "lat": 49.86047,
+    "lon": 8.6494,
+    "bbox": [
+     8.6472,
+     49.85942,
+     8.65161,
+     49.86159
+    ]
+   },
+   {
+    "name": "Freizeitzentrum Steinbrücker Teich",
+    "osm": [
+     "r1845226"
+    ],
+    "flaeche_ha": 4.8,
+    "zone_ha": 3.5,
+    "anteil_zone": 0.7192,
+    "lat": 49.89016,
+    "lon": 8.69866,
+    "bbox": [
+     8.69735,
+     49.88825,
+     8.70215,
+     49.89209
+    ]
+   },
+   {
+    "name": "Schlosspark",
+    "osm": [
+     "w26005100"
+    ],
+    "flaeche_ha": 4.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.90077,
+    "lon": 8.69942,
+    "bbox": [
+     8.69728,
+     49.89965,
+     8.70143,
+     49.902
+    ]
+   },
+   {
+    "name": "Akaziengarten",
+    "osm": [
+     "w148696359"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0187,
+    "lat": 49.86136,
+    "lon": 8.63708,
+    "bbox": [
+     8.63466,
+     49.86015,
+     8.63894,
+     49.86251
+    ]
+   },
+   {
+    "name": "Albert-Schweitzer-Anlage",
+    "osm": [
+     "r12909672"
+    ],
+    "flaeche_ha": 3.4,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.4387,
+    "lat": 49.86651,
+    "lon": 8.64205,
+    "bbox": [
+     8.64023,
+     49.86505,
+     8.64286,
+     49.87111
+    ]
+   },
+   {
+    "name": "Rudolf-Mueller-Anlage",
+    "osm": [
+     "w150041604"
+    ],
+    "flaeche_ha": 3.2,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.9871,
+    "lat": 49.87254,
+    "lon": 8.66557,
+    "bbox": [
+     8.66367,
+     49.87174,
+     8.66765,
+     49.87332
+    ]
+   },
+   {
+    "name": "Orangeriegarten",
+    "osm": [
+     "w22938472"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 3.1,
+    "anteil_zone": 1.0,
+    "lat": 49.85673,
+    "lon": 8.65347,
+    "bbox": [
+     8.65254,
+     49.8558,
+     8.6544,
+     49.85803
+    ]
+   },
+   {
+    "name": "Bertha-von-Suttner-Anlage",
+    "osm": [
+     "w23411242",
+     "w33744645"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.7595,
+    "lat": 49.89424,
+    "lon": 8.67217,
+    "bbox": [
+     8.67059,
+     49.89279,
+     8.6762,
+     49.89579
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Quartierscarré Karl-Plagge-Platz",
+    "osm": [
+     "w1281280032"
+    ],
+    "flaeche_ha": 0.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0425,
+    "lat": 49.84694,
+    "lon": 8.65443,
+    "bbox": [
+     8.65374,
+     49.84639,
+     8.65511,
+     49.84748
+    ]
+   },
+   {
+    "name": "Platz der Deutschen Einheit",
+    "osm": [
+     "r21170217"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.87257,
+    "lon": 8.63214,
+    "bbox": [
+     8.63158,
+     49.87216,
+     8.6327,
+     49.87298
+    ]
+   },
+   {
+    "name": "Marktplatz",
+    "osm": [
+     "r21270997"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.3073,
+    "lat": 49.87242,
+    "lon": 8.65527,
+    "bbox": [
+     8.65429,
+     49.87201,
+     8.65614,
+     49.87283
+    ]
+   },
+   {
+    "name": "Mercksplatz",
+    "osm": [
+     "w150041598"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.983,
+    "lat": 49.87244,
+    "lon": 8.66164,
+    "bbox": [
+     8.66104,
+     49.87216,
+     8.66224,
+     49.87271
+    ]
+   },
+   {
+    "name": "Ludwigsplatz",
+    "osm": [
+     "r4063932"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 1.0,
+    "lat": 49.87071,
+    "lon": 8.65387,
+    "bbox": [
+     8.65332,
+     49.87051,
+     8.65473,
+     49.87091
+    ]
+   },
+   {
+    "name": "Emanuel-Merck-Platz",
+    "osm": [
+     "w1533546121"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.89507,
+    "lon": 8.65347,
+    "bbox": [
+     8.65304,
+     49.89469,
+     8.65383,
+     49.89536
+    ]
+   },
+   {
+    "name": "Reinhold-Staudt-Platz",
+    "osm": [
+     "w25017782"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.80705,
+    "lon": 8.63965,
+    "bbox": [
+     8.63929,
+     49.80677,
+     8.64003,
+     49.80736
+    ]
+   },
+   {
+    "name": "Löwenplatz",
+    "osm": [
+     "w815473104"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.9942,
+    "lat": 49.91087,
+    "lon": 8.65765,
+    "bbox": [
+     8.65741,
+     49.91048,
+     8.65821,
+     49.91128
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w148850692"
+    ],
+    "flaeche_ha": 5.3,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.3088,
+    "lat": 49.86941,
+    "lon": 8.67848,
+    "bbox": [
+     8.67691,
+     49.86782,
+     8.68031,
+     49.87079
+    ]
+   },
+   {
+    "name": "Rosarium",
+    "osm": [
+     "w150041602"
+    ],
+    "flaeche_ha": 1.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.87587,
+    "lon": 8.67942,
+    "bbox": [
+     8.67832,
+     49.8752,
+     8.68041,
+     49.87648
+    ]
+   },
+   {
+    "name": "Prinz-Georg-Garten",
+    "osm": [
+     "w150032819"
+    ],
+    "flaeche_ha": 1.6,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.3784,
+    "lat": 49.87913,
+    "lon": 8.65381,
+    "bbox": [
+     8.65298,
+     49.87826,
+     8.65566,
+     49.87997
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Westwald",
+    "osm": [
+     "r1997155"
+    ],
+    "flaeche_ha": 1035.5,
+    "zone_ha": 52.0,
+    "anteil_zone": 0.0502,
+    "lat": 49.83465,
+    "lon": 8.62232,
+    "bbox": [
+     8.58348,
+     49.81442,
+     8.64586,
+     49.86848
+    ]
+   },
+   {
+    "name": "Koberstadt",
+    "osm": [
+     "r404707",
+     "w316148452"
+    ],
+    "flaeche_ha": 667.3,
+    "zone_ha": 4.6,
+    "anteil_zone": 0.0069,
+    "lat": 49.94538,
+    "lon": 8.70131,
+    "bbox": [
+     8.64055,
+     49.93745,
+     8.73548,
+     49.95383
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Technische Universität Darmstadt",
+    "osm": [
+     "r11380923"
+    ],
+    "flaeche_ha": 20.3,
+    "zone_ha": 1.2,
+    "anteil_zone": 0.0609,
+    "lat": 49.86138,
+    "lon": 8.68201,
+    "bbox": [
+     8.67573,
+     49.85882,
+     8.68562,
+     49.86394
+    ]
+   },
+   {
+    "name": "Campus Lichtwiese",
+    "osm": [
+     "w536471392"
+    ],
+    "flaeche_ha": 20.3,
+    "zone_ha": 1.2,
+    "anteil_zone": 0.0609,
+    "lat": 49.86138,
+    "lon": 8.68201,
+    "bbox": [
+     8.67573,
+     49.85882,
+     8.68562,
+     49.86394
+    ]
+   },
+   {
+    "name": "Hochschule Darmstadt",
+    "osm": [
+     "r8933849",
+     "w1443587305"
+    ],
+    "flaeche_ha": 10.1,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.1592,
+    "lat": 49.8665,
+    "lon": 8.63899,
+    "bbox": [
+     8.6317,
+     49.86367,
+     8.64186,
+     49.8681
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "FKK Grube Prinz von Hessen",
+    "osm": [
+     "w1460786035"
+    ],
+    "flaeche_ha": 1.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.90026,
+    "lon": 8.73515,
+    "bbox": [
+     8.73401,
+     49.89956,
+     8.73605,
+     49.90099
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [],
+ "fussgaengerzonen": {
+  "flaeche_ha": 16.4,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 49.87467,
+  "lon": 8.66506,
+  "bbox": [
+   8.5572,
+   49.79536,
+   8.75043,
+   49.95386
+  ]
+ },
+ "orte": [
+  {
+   "name": "Ernst-Ludwig-Straße und Wilhelminenstraße",
+   "osm": [
+    "w1421376262",
+    "w1421376264",
+    "w1421376268",
+    "w1421376269",
+    "w1421376273",
+    "w1421376275",
+    "w148749630",
+    "w23549665",
+    "w23725740",
+    "w286023512",
+    "w286129080",
+    "w359446341",
+    "w53319934",
+    "w53323610",
+    "w55971599",
+    "w55971618",
+    "w55971620",
+    "w8663626"
+   ],
+   "flaeche_ha": 1.44,
+   "bbox": [
+    8.65,
+    49.86932,
+    8.65563,
+    49.87258
+   ],
+   "anteil_zone": 0.3646,
+   "art": "flaeche",
+   "lat": 49.87149,
+   "lon": 8.655
+  },
+  {
+   "name": "Luisenplatz",
+   "osm": [
+    "r4063929",
+    "w1201551425",
+    "w1201551426",
+    "w1201551427",
+    "w1201551428",
+    "w1201551429",
+    "w1201551430",
+    "w1201551434",
+    "w1420781784",
+    "w1547193969",
+    "w1547193970",
+    "w1547193971",
+    "w1547193972",
+    "w1547193973",
+    "w1547193974",
+    "w1547193975",
+    "w1547193976",
+    "w1547193977",
+    "w1547193978",
+    "w1547193979",
+    "w1547193983",
+    "w1547392242",
+    "w1547392304",
+    "w1547605759",
+    "w23590951",
+    "w33856112",
+    "w359446335",
+    "w359446338",
+    "w833994733",
+    "w833994734"
+   ],
+   "flaeche_ha": 1.49,
+   "bbox": [
+    8.65007,
+    49.8722,
+    8.65224,
+    49.87346
+   ],
+   "anteil_zone": 0.0162,
+   "art": "flaeche",
+   "lat": 49.87285,
+   "lon": 8.65061
+  },
+  {
+   "name": "Ludwigsplatz",
+   "osm": [
+    "r4063932",
+    "w1546982170",
+    "w175997194",
+    "w285989351",
+    "w285989352",
+    "w285989354",
+    "w4084037",
+    "w55971619",
+    "w59012999"
+   ],
+   "flaeche_ha": 0.32,
+   "bbox": [
+    8.65331,
+    49.8705,
+    8.65473,
+    49.87092
+   ],
+   "anteil_zone": 1.0,
+   "art": "flaeche",
+   "lat": 49.87071,
+   "lon": 8.65386
+  },
+  {
+   "name": "Marktplatz",
+   "osm": [
+    "r21270997",
+    "w1422446828",
+    "w148472824",
+    "w148749653",
+    "w1537952084",
+    "w1537952085",
+    "w1551840159",
+    "w286646444",
+    "w286646445",
+    "w286646447",
+    "w286646448",
+    "w286646449",
+    "w286646452",
+    "w286646453",
+    "w4212009"
+   ],
+   "flaeche_ha": 0.73,
+   "bbox": [
+    8.65384,
+    49.87199,
+    8.65618,
+    49.87283
+   ],
+   "anteil_zone": 0.2961,
+   "art": "flaeche",
+   "lat": 49.87241,
+   "lon": 8.65522
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-25T21:22:46Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Hessen (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  49.872,
+  8.652
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Herrngarten",
+   "herrngarten"
+  ],
+  [
+   "park",
+   "Bürgerpark Nord",
+   "buergerpark"
+  ],
+  [
+   "park",
+   "Park Rosenhöhe",
+   "rosenhoehe"
+  ],
+  [
+   "ort",
+   "Luisenplatz",
+   "luisenplatz"
+  ],
+  [
+   "ort",
+   "Ernst-Ludwig-Straße und Wilhelminenstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "see",
+   "Großer Woog",
+   "woog"
+  ]
+ ]
+}

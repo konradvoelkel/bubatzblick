@@ -4,44 +4,51 @@
 # staedte/<slug>.md. Gemeindeschluessel und Wikidata stammen aus der OSM-Grenzrelation.
 #
 # Reihenfolge des Baus: Duesseldorf, Heidelberg, Berlin, dann der Rest.
+# Auf der Karte der Uebersicht: `beschriftung` ("rechts", "links", "oben", "unten" oder
+# { dx, dy, anker, strich }), `kurzname` statt des Namens, `name_handy = false` blendet den
+# Namen auf dem Handy aus (dichte Gegenden).
+# `recherche`: Datum der letzten Recherche zu Regeln und Quellen der Seite (von Hand nachziehen);
+# die Zahlen tragen ihren eigenen Stand aus staedte/<slug>.json. `sonderzone`: Anker des Abschnitts
+# zur eigenen Verbotszone der Stadt (config/sonderzonen.toml), fuer Querverweise.
 
 [[stadt]]
 slug = "duesseldorf"
 name = "Düsseldorf"
-# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
-beschriftung = { dx = 70, dy = 58, strich = true }
+beschriftung = { dx = -12, dy = 1, anker = "end" }
 land = "Nordrhein-Westfalen"
 land_iso = "DE-NW"
 osm_relation = 62539
 wikidata = "Q1718"
 ags = "05111000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "heidelberg"
 name = "Heidelberg"
-# Unten rechts: rechts auf gleicher Hoehe liegt Nuernberg
-beschriftung = { dx = 8, dy = 24 }
+name_handy = false
+beschriftung = "unten"
 land = "Baden-Württemberg"
 land_iso = "DE-BW"
 osm_relation = 62487
 wikidata = "Q2966"
 ags = "08221000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "berlin"
 name = "Berlin"
-# Ueber dem Punkt: rechts liefe sie auf dem Handy ueber den Kartenrand
-beschriftung = "oben"
+beschriftung = { dx = 10, dy = 11 }
 land = "Berlin"
 land_iso = "DE-BE"
 osm_relation = 62422
 wikidata = "Q64"
 ags = "11000000"
 fertig = true
+recherche = 2026-11-27
 
-# Noch ohne Daten, Reihenfolge wie in der Liste oben (Rang nach Einwohnern beim Bau pruefen):
+# Umfang nach Liste (Rang nach Einwohnern):
 # 23 groesste: Berlin, Hamburg, Muenchen, Koeln, Frankfurt am Main, Duesseldorf, Stuttgart,
 #   Leipzig, Dortmund, Bremen, Essen, Dresden, Nuernberg, Hannover, Duisburg, Wuppertal, Bochum,
 #   Bielefeld, Bonn, Muenster, Mannheim, Karlsruhe, Augsburg
@@ -52,232 +59,476 @@ fertig = true
 [[stadt]]
 slug = "hamburg"
 name = "Hamburg"
+beschriftung = "links"
 land = "Hamburg"
 land_iso = "DE-HH"
 osm_relation = 62782
 wikidata = "Q1055"
 ags = "02000000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "muenchen"
 name = "München"
+beschriftung = "unten"
 land = "Bayern"
 land_iso = "DE-BY"
 osm_relation = 62428
 wikidata = "Q1726"
 ags = "09162000"
 fertig = true
+recherche = 2026-11-27
+sonderzone = "alter-botanischer-garten"
 
 [[stadt]]
 slug = "koeln"
 name = "Köln"
-# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
-beschriftung = { dx = 60, dy = 52, strich = true }
+beschriftung = { dx = -10, dy = 3, anker = "end" }
 land = "Nordrhein-Westfalen"
 land_iso = "DE-NW"
 osm_relation = 62578
 wikidata = "Q365"
 ags = "05315000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "frankfurt-am-main"
 name = "Frankfurt am Main"
-# Rechts, etwas tiefer und auf dem Handy nicht groesser: darueber endet die Spalte mit Bonn
-beschriftung = { dx = 14, dy = 16 }
+kurzname = "Frankfurt"
+beschriftung = { dx = 8, dy = -10 }
 land = "Hessen"
 land_iso = "DE-HE"
 osm_relation = 62400
 wikidata = "Q1794"
 ags = "06412000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "stuttgart"
 name = "Stuttgart"
-# Unter dem Punkt, auf dem Handy nicht groesser: rechts liefe sie in Karlsruhe
-beschriftung = { dx = 0, dy = 28, anker = "middle" }
+beschriftung = "unten"
 land = "Baden-Württemberg"
 land_iso = "DE-BW"
 osm_relation = 62375
 wikidata = "Q1022"
 ags = "08111000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "leipzig"
 name = "Leipzig"
-# Ueber dem Punkt: links stiesse sie auf dem Handy an die Spalte des Ruhrgebiets
-beschriftung = "oben"
+beschriftung = "unten"
 land = "Sachsen"
 land_iso = "DE-SN"
 osm_relation = 62649
 wikidata = "Q2079"
 ags = "14713000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "dortmund"
 name = "Dortmund"
-# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
-beschriftung = { dx = 28, dy = -25, strich = true }
+beschriftung = { dx = 10, dy = 3 }
 land = "Nordrhein-Westfalen"
 land_iso = "DE-NW"
 osm_relation = 1829065
 wikidata = "Q1295"
 ags = "05913000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "essen"
 name = "Essen"
-# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
-beschriftung = { dx = 54, dy = 12, strich = true }
+name_handy = false
+beschriftung = { dx = -26, dy = -22, anker = "end", strich = true }
 land = "Nordrhein-Westfalen"
 land_iso = "DE-NW"
 osm_relation = 62713
 wikidata = "Q2066"
 ags = "05113000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "bremen"
 name = "Bremen"
+beschriftung = "links"
 land = "Bremen"
 land_iso = "DE-HB"
 osm_relation = 62559
 wikidata = "Q24879"
 ags = "04011000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "dresden"
 name = "Dresden"
-# Beschriftung unter dem Punkt, rechts liefe sie ueber den Kartenrand
-beschriftung = "unten"
+beschriftung = { dx = 0, dy = -32, anker = "middle", strich = true }
 land = "Sachsen"
 land_iso = "DE-SN"
 osm_relation = 191645
 wikidata = "Q1731"
 ags = "14612000"
 fertig = true
+recherche = 2026-11-27
 
 
 [[stadt]]
 slug = "nuernberg"
 name = "Nürnberg"
+beschriftung = "unten"
 land = "Bayern"
 land_iso = "DE-BY"
 osm_relation = 62780
 wikidata = "Q2090"
 ags = "09564000"
 fertig = true
+recherche = 2026-11-27
+sonderzone = "verbotszone-am-hauptbahnhof"
 
 [[stadt]]
 slug = "hannover"
 name = "Hannover"
-# Rechts, auf dem Handy nicht groesser: sonst liefe sie in den Punkt von Berlin
-beschriftung = { dx = 14, dy = 6 }
+beschriftung = { dx = -4, dy = -9, anker = "middle" }
 land = "Niedersachsen"
 land_iso = "DE-NI"
 osm_relation = 59418
 wikidata = "Q1715"
 ags = "03241001"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "duisburg"
 name = "Duisburg"
-# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
-beschriftung = { dx = 73, dy = 35, strich = true }
+name_handy = false
+beschriftung = { dx = -10, dy = -1, anker = "end" }
 land = "Nordrhein-Westfalen"
 land_iso = "DE-NW"
 osm_relation = 62456
 wikidata = "Q2100"
 ags = "05112000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "wuppertal"
 name = "Wuppertal"
-# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
-beschriftung = { dx = 46, dy = 36, strich = true }
+name_handy = false
+beschriftung = { dx = 10, dy = 16 }
 land = "Nordrhein-Westfalen"
 land_iso = "DE-NW"
 osm_relation = 62478
 wikidata = "Q2107"
 ags = "05124000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "bochum"
 name = "Bochum"
-# Ruhrgebiet und Rheinland: Beschriftungen in einer Spalte rechts daneben (x = 140, alle 22), mit Strich
-beschriftung = { dx = 42, dy = -7, strich = true }
+name_handy = false
+beschriftung = { dx = -36, dy = -40, anker = "end", strich = true }
 land = "Nordrhein-Westfalen"
 land_iso = "DE-NW"
 osm_relation = 62644
 wikidata = "Q2103"
 ags = "05911000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "bielefeld"
 name = "Bielefeld"
-# Rechts, etwas hoeher und auf dem Handy nicht groesser: darunter beginnt die Spalte des Ruhrgebiets
-beschriftung = { dx = 14, dy = 0 }
+beschriftung = { dx = 10, dy = 11 }
 land = "Nordrhein-Westfalen"
 land_iso = "DE-NW"
 osm_relation = 62646
 wikidata = "Q2112"
 ags = "05711000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "bonn"
 name = "Bonn"
-# Unter dem Punkt, auf dem Handy nicht groesser: die Spalte des Ruhrgebiets endet mit Koeln
-beschriftung = { dx = 0, dy = 28, anker = "middle" }
+name_handy = false
 land = "Nordrhein-Westfalen"
 land_iso = "DE-NW"
 osm_relation = 62508
 wikidata = "Q586"
 ags = "05314000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "muenster"
 name = "Münster"
-# Ueber dem Punkt, nach links versetzt: rechts liegt Bielefeld
-beschriftung = { dx = -50, dy = -18, anker = "middle" }
+beschriftung = { dx = -57, dy = -18, anker = "end", strich = true }
 land = "Nordrhein-Westfalen"
 land_iso = "DE-NW"
 osm_relation = 62591
 wikidata = "Q2742"
 ags = "05515000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "mannheim"
 name = "Mannheim"
-# Ueber dem Punkt: rechts liegt Heidelberg
-beschriftung = { dx = 0, dy = -14, anker = "middle" }
+beschriftung = { dx = -10, dy = 1, anker = "end" }
 land = "Baden-Württemberg"
 land_iso = "DE-BW"
 osm_relation = 62691
 wikidata = "Q2119"
 ags = "08222000"
 fertig = true
+recherche = 2026-11-27
 
 [[stadt]]
 slug = "karlsruhe"
 name = "Karlsruhe"
-# Rechts, etwas tiefer und auf dem Handy nicht groesser: darueber steht Heidelberg
-beschriftung = { dx = 14, dy = 10 }
+beschriftung = { dx = -10, dy = 28, anker = "end", strich = true }
 land = "Baden-Württemberg"
 land_iso = "DE-BW"
 osm_relation = 62518
 wikidata = "Q1040"
 ags = "08212000"
 fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "augsburg"
+name = "Augsburg"
+beschriftung = { dx = 10, dy = -5 }
+land = "Bayern"
+land_iso = "DE-BY"
+osm_relation = 62407
+wikidata = "Q2749"
+ags = "09761000"
+fertig = true
+recherche = 2026-11-27
+sonderzone = "friedensplatz-oberhausen"
+
+[[stadt]]
+slug = "regensburg"
+name = "Regensburg"
+land = "Bayern"
+land_iso = "DE-BY"
+osm_relation = 62411
+wikidata = "Q2978"
+ags = "09362000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "wuerzburg"
+name = "Würzburg"
+beschriftung = { dx = 10, dy = 9 }
+land = "Bayern"
+land_iso = "DE-BY"
+osm_relation = 62464
+wikidata = "Q2999"
+ags = "09663000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "wiesbaden"
+name = "Wiesbaden"
+name_handy = false
+beschriftung = { dx = -10, dy = -6, anker = "end" }
+land = "Hessen"
+land_iso = "DE-HE"
+osm_relation = 62496
+wikidata = "Q1721"
+ags = "06414000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "darmstadt"
+name = "Darmstadt"
+name_handy = false
+beschriftung = { dx = 10, dy = -4, strich = true }
+land = "Hessen"
+land_iso = "DE-HE"
+osm_relation = 62581
+wikidata = "Q2973"
+ags = "06411000"
+fertig = true
+recherche = 2026-11-27
+sonderzone = "bollenfalltor-und-hochschulen"
+
+[[stadt]]
+slug = "kassel"
+name = "Kassel"
+beschriftung = { dx = 10, dy = 15 }
+land = "Hessen"
+land_iso = "DE-HE"
+osm_relation = 62598
+wikidata = "Q2865"
+ags = "06611000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "mainz"
+name = "Mainz"
+beschriftung = { dx = -10, dy = 10, anker = "end" }
+land = "Rheinland-Pfalz"
+land_iso = "DE-RP"
+osm_relation = 62630
+wikidata = "Q1720"
+ags = "07315000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "saarbruecken"
+name = "Saarbrücken"
+beschriftung = { dx = -10, dy = 6, anker = "end" }
+land = "Saarland"
+land_iso = "DE-SL"
+osm_relation = 1187159
+wikidata = "Q1724"
+ags = "10041100"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "erfurt"
+name = "Erfurt"
+beschriftung = "unten"
+land = "Thüringen"
+land_iso = "DE-TH"
+osm_relation = 62745
+wikidata = "Q1729"
+ags = "16051000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "magdeburg"
+name = "Magdeburg"
+beschriftung = { dx = 10, dy = 11 }
+land = "Sachsen-Anhalt"
+land_iso = "DE-ST"
+osm_relation = 62481
+wikidata = "Q1733"
+ags = "15003000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "chemnitz"
+name = "Chemnitz"
+beschriftung = "unten"
+land = "Sachsen"
+land_iso = "DE-SN"
+osm_relation = 62594
+wikidata = "Q2795"
+ags = "14511000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "potsdam"
+name = "Potsdam"
+beschriftung = { dx = 0, dy = -44, anker = "middle", strich = true }
+land = "Brandenburg"
+land_iso = "DE-BB"
+osm_relation = 62369
+wikidata = "Q1711"
+ags = "12054000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "schwerin"
+name = "Schwerin"
+land = "Mecklenburg-Vorpommern"
+land_iso = "DE-MV"
+osm_relation = 62685
+wikidata = "Q1709"
+ags = "13004000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "kiel"
+name = "Kiel"
+land = "Schleswig-Holstein"
+land_iso = "DE-SH"
+osm_relation = 27021
+wikidata = "Q1707"
+ags = "01002000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "braunschweig"
+name = "Braunschweig"
+beschriftung = { dx = 10, dy = -31, strich = true }
+land = "Niedersachsen"
+land_iso = "DE-NI"
+osm_relation = 62531
+wikidata = "Q2773"
+ags = "03101000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "goettingen"
+name = "Göttingen"
+beschriftung = { dx = 10, dy = -1 }
+land = "Niedersachsen"
+land_iso = "DE-NI"
+osm_relation = 191361
+wikidata = "Q3033"
+ags = "03159016"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "osnabrueck"
+name = "Osnabrück"
+beschriftung = { dx = -10, dy = -15, anker = "end" }
+land = "Niedersachsen"
+land_iso = "DE-NI"
+osm_relation = 62631
+wikidata = "Q2916"
+ags = "03404000"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "aachen"
+name = "Aachen"
+beschriftung = "unten"
+land = "Nordrhein-Westfalen"
+land_iso = "DE-NW"
+osm_relation = 62564
+wikidata = "Q1017"
+ags = "05334002"
+fertig = true
+recherche = 2026-11-27
+
+[[stadt]]
+slug = "freiburg-im-breisgau"
+name = "Freiburg im Breisgau"
+kurzname = "Freiburg"
+land = "Baden-Württemberg"
+land_iso = "DE-BW"
+osm_relation = 62768
+wikidata = "Q2833"
+ags = "08311000"
+fertig = true
+recherche = 2026-11-27

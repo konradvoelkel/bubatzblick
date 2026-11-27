@@ -11,6 +11,8 @@ Die erzeugten Seiten werden committet wie about.html; die CI prueft, dass ein Ne
 ergibt.
 """
 
+import datetime as dt
+import functools
 import html
 import json
 import math
@@ -55,6 +57,8 @@ STADT_STYLE = (
   .lead { font-size: 1.12em; }
   .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
   td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .stand { font-size: .9em; opacity: .85; margin-top: .2em; }
+  .tabellennotiz { font-size: .88em; color: var(--text-schwach); margin: .4em 0 1.2em; }
   .hinweis { font-size: .92em; color: var(--text-schwach);
              border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
   @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
@@ -62,19 +66,23 @@ STADT_STYLE = (
   svg.deutschland { width: 100%; height: auto; display: block; }
   svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
   svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
-  svg.deutschland circle { fill: #c0392b; stroke: #fff; stroke-width: 2; }
-  svg.deutschland text { font-size: 19px; font-weight: 700; fill: #222; paint-order: stroke;
-                         stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+  svg.deutschland circle { r: 5; fill: #c0392b; stroke: #fff; stroke-width: 1.5; }
+  svg.deutschland text { font-size: 15px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 3.5px; stroke-linejoin: round; }
   svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
-  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 9; fill: #8e2a20; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 7; fill: #8e2a20; }
   svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
   ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
   ul.grau a { color: var(--text-schwach); text-decoration: none;
               border-bottom: 1px dotted currentColor; }
   ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
-  svg.deutschland line { stroke: #8a918a; stroke-width: 1.2; }
-  @media (max-width: 480px) { svg.deutschland a:not(.eng) text { font-size: 28px; }
-                              svg.deutschland a:not(.eng) circle { r: 10; } }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1; }
+  /* Auf dem Handy nur die Namen, dafuer groesser; die Anteile stehen in der Tabelle darunter. */
+  @media (max-width: 480px) { svg.deutschland text { font-size: 19px; }
+                              svg.deutschland .anteil { display: none; }
+                              svg.deutschland circle { r: 7; }
+                              svg.deutschland a.ohne-handy text,
+                              svg.deutschland a.ohne-handy line { display: none; } }
 """
 )
 
@@ -192,6 +200,8 @@ def kategorien_tabelle(d: dict) -> str:
         '<th class="zahl">Zonen\u00adfläche</th></tr></thead><tbody>'
         + "".join(zeilen)
         + "</tbody></table>"
+        + '<p class="tabellennotiz">Jede Art für sich gezählt, Überlappungen also mehrfach. '
+        "Anbauvereinigungen nur, soweit in OpenStreetMap eingetragen.</p>"
     )
 
 
@@ -232,14 +242,23 @@ def kopf(
 """
 
 
-def rahmen(h1: str, unterzeile: str, knoepfe: list[tuple[str, str]], body: str, stand: str) -> str:
-    """Kopfleiste, Inhalt und Fuss; knoepfe sind (Adresse, Text)."""
+def rahmen(
+    h1: str,
+    unterzeile: str,
+    knoepfe: list[tuple[str, str]],
+    body: str,
+    stand: str,
+    zusatz: str = "",
+) -> str:
+    """Kopfleiste, Inhalt und Fuss; knoepfe sind (Adresse, Text), zusatz eine Zeile unter der
+    Unterzeile (Stand der Zahlen und der Recherche)."""
+    zusatz_html = f'\n    <p class="stand">{zusatz}</p>' if zusatz else ""
     nav = "\n      ".join(f'<a href="{h}" class="knopf">{html.escape(x)}</a>' for h, x in knoepfe)
     return f"""<body>
 <header><div class="inner">
   <div>
     <h1>{h1}</h1>
-    <p>{unterzeile}</p>
+    <p>{unterzeile}</p>{zusatz_html}
     <nav>{nav}</nav>
   </div>
 </div></header>
@@ -266,13 +285,159 @@ def krume(*stufen: tuple[str, str]) -> dict:
     }
 
 
+MONATE = (
+    "Januar",
+    "Februar",
+    "März",
+    "April",
+    "Mai",
+    "Juni",
+    "Juli",
+    "August",
+    "September",
+    "Oktober",
+    "November",
+    "Dezember",
+)
+
+
+def recherche(stadt: dict) -> dt.date:
+    """Wann Regeln und Quellen der Seite zuletzt recherchiert wurden (staedte.toml). Anders als die
+    Zahlen wird das nicht neu gerechnet: bei einer neuen Recherche von Hand nachziehen."""
+    r = stadt.get("recherche")
+    if not isinstance(r, dt.date):
+        raise SystemExit(f"{stadt['slug']}: recherche = JJJJ-MM-TT fehlt in staedte.toml")
+    return r
+
+
+def anker(text: str) -> str:
+    """Anker einer Zwischenueberschrift, wie die toc-Erweiterung von Markdown ihn vergibt."""
+    from markdown.extensions.toc import slugify
+
+    return slugify(text, "-")
+
+
+@functools.cache
+def alle_staedte() -> tuple[tuple[dict, dict, str], ...]:
+    """(Eintrag, Zahlen, Text) aller fertigen Staedte, fuer Querverweise."""
+    liste = tomllib.loads((QUELLE / "staedte.toml").read_text(encoding="utf-8"))["stadt"]
+    return tuple(
+        (
+            st,
+            json.loads((QUELLE / f"{st['slug']}.json").read_text(encoding="utf-8")),
+            (QUELLE / f"{st['slug']}.md").read_text(encoding="utf-8"),
+        )
+        for st in liste
+        if st.get("fertig")
+    )
+
+
+def ueberschriften(md: str) -> list[tuple[str, str]]:
+    """(Ueberschrift, Abschnittstext) je Zwischenueberschrift zweiter Ebene."""
+    teile = re.split(r"^## (.+)$", md, flags=re.M)
+    return [(h.strip(), t) for h, t in zip(teile[1::2], teile[2::2], strict=True)]
+
+
+def abschnitt_fussgaenger(md: str) -> str | None:
+    """Anker des Abschnitts, der die Fussgaengerzonen beschreibt (dort steht, was blau ist)."""
+    for h, t in ueberschriften(md):
+        if h != "Woher die Zonen kommen" and "blau" in t and "Fußgänger" in t:
+            return anker(h)
+    return None
+
+
+def entfernung_km(a: dict, b: dict) -> float:
+    la1, lo1, la2, lo2 = map(math.radians, (a["lat"], a["lon"], b["lat"], b["lon"]))
+    h = (
+        math.sin((la2 - la1) / 2) ** 2
+        + math.cos(la1) * math.cos(la2) * math.sin((lo2 - lo1) / 2) ** 2
+    )
+    return 2 * 6371 * math.asin(math.sqrt(h))
+
+
+NACHBARN = 3
+UEBERSCHRIFT_NACHBARN = "Nachbarstädte im Vergleich"
+
+
+def nachbarn_md(stadt: dict, d: dict) -> str:
+    """Abschnitt mit den naechsten Staedten und den Staedten im selben Land, verlinkt bis in deren
+    Abschnitte zu Fussgaengerzonen und Landesregeln."""
+    andere = sorted(
+        (entfernung_km(d["ansicht_stadt"], d2["ansicht_stadt"]), st2, d2, md2)
+        for st2, d2, md2 in alle_staedte()
+        if st2["slug"] != stadt["slug"]
+    )
+    # Als <nav>: es ist Navigation zwischen den Seiten, kein Text ueber diese Stadt.
+    zeilen = [
+        '<nav class="nachbarn" aria-label="Nachbarstädte" markdown="1">',
+        "",
+        f"## {UEBERSCHRIFT_NACHBARN}",
+        "",
+        f"In {stadt['name']} liegen {prozent(d['anteil'], 1)} der Stadtfläche in einer "
+        "Verbotszone. Die nächsten Städte mit eigener Seite:",
+        "",
+    ]
+    for km, st2, d2, md2 in andere[:NACHBARN]:
+        verweise = []
+        fz = abschnitt_fussgaenger(md2)
+        if fz:
+            verweise.append(f"[Fußgängerzonen in {st2['name']}]({st2['slug']}#{fz})")
+        regeln = (
+            f"Regeln in {st2['name']}"
+            if st2["land"] == stadt["land"]
+            else f"Regeln in {st2['name']} ({st2['land']})"
+        )
+        verweise.append(f"[{regeln}]({st2['slug']}#was-sonst-noch-gilt)")
+        zeilen.append(
+            f"- **[{st2['name']}]({st2['slug']})**, {zahl(km)} km entfernt: "
+            f"{prozent(d2['anteil'], 1)} der Stadtfläche; " + ", ".join(verweise)
+        )
+    gleich = [
+        st2
+        for _, st2, _, _ in sorted(andere, key=lambda e: sortierschluessel(e[1]["name"]))
+        if st2["land"] == stadt["land"]
+    ]
+    if gleich:
+        links = ", ".join(f"[{st2['name']}]({st2['slug']}#was-sonst-noch-gilt)" for st2 in gleich)
+        zeilen += ["", f"Dieselben Landesregeln ({stadt['land']}) gelten auch in {links}."]
+    sonder = [
+        st2
+        for st2, _, _ in sorted(alle_staedte(), key=lambda e: sortierschluessel(e[0]["name"]))
+        if st2.get("sonderzone") and st2["slug"] != stadt["slug"]
+    ]
+    if stadt.get("sonderzone") and sonder:
+        links = ", ".join(f"[{st2['name']}]({st2['slug']}#{st2['sonderzone']})" for st2 in sonder)
+        zeilen += [
+            "",
+            f"Eigene Verbotszonen über § 5 KCanG hinaus wie in {stadt['name']} haben auch {links}.",
+        ]
+    zeilen += ["", "</nav>"]
+    return "\n".join(zeilen) + "\n\n"
+
+
+def pruefe_anker(slug: str, body: str) -> None:
+    """Jeder Link auf einen Anker muss treffen: auf dieser Seite oder auf einer anderen
+    Staedteseite. Sonst bricht der Bau ab, statt einen toten Sprung auszuliefern."""
+    eigene = set(re.findall(r' id="([^"]+)"', body))
+    for ziel in re.findall(r'href="#([^"]+)"', body):
+        if ziel not in eigene:
+            raise SystemExit(f"{slug}: Anker #{ziel} gibt es auf der Seite nicht")
+    andere = {st["slug"]: md for st, _, md in alle_staedte()}
+    for zslug, ziel in re.findall(r'href="([a-z-]+)#([^"]+)"', body):
+        if zslug not in andere:
+            raise SystemExit(f"{slug}: Link auf {zslug}#{ziel}, aber {zslug} hat keine Seite")
+        ids = {anker(h) for h, _ in ueberschriften(andere[zslug])} | {anker(UEBERSCHRIFT_NACHBARN)}
+        if ziel not in ids:
+            raise SystemExit(f"{slug}: Anker #{ziel} gibt es auf der Seite {zslug} nicht")
+
+
 def seite(stadt: dict, d: dict, body: str) -> str:
     slug, name = stadt["slug"], stadt["name"]
     titel = f"Kiffen in {name}: wo es verboten ist"
     beschreibung = (
-        f"In {name} liegen {zahl(d['zonen_km2'])} km², {prozent(d['anteil'], 1)} der "
-        f"Stadtfläche, in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. "
-        f"Karte, Parks, Fußgängerzonen, Stand {d['stand']['monat']}."
+        f"In {name} liegen {prozent(d['anteil'], 1)} der Stadtfläche ({zahl(d['zonen_km2'])} km²) "
+        "in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. "
+        "Karte, Parks, Regeln vor Ort."
     )
     og_alt = (
         f"Karte der Innenstadt von {name} mit den roten Verbotszonen, daneben: "
@@ -291,7 +456,7 @@ def seite(stadt: dict, d: dict, body: str) -> str:
                 "description": beschreibung,
                 "inLanguage": "de",
                 "isPartOf": {"@id": "__SITE_URL__/#website"},
-                "dateModified": d["stand"]["datum"],
+                "dateModified": max(d["stand"]["datum"], recherche(stadt).isoformat()),
                 "about": {
                     "@type": "City",
                     "name": name,
@@ -325,16 +490,29 @@ def seite(stadt: dict, d: dict, body: str) -> str:
         ],
         body,
         d["stand"]["datum_lang"],
+        f"Zahlen vom {d['stand']['datum_lang']} · Recherche zu Regeln vor Ort: "
+        f"{MONATE[recherche(stadt).month - 1]} {recherche(stadt).year}",
     )
 
 
 # -- Uebersicht /stadt/ ------------------------------------------------------
 
 KARTE_BREITE = 600  # SVG-Einheiten; die Karte skaliert mit der Seite
+RAND_LINKS = 90  # Platz fuer Beschriftungen westlich von NRW und dem Saarland
 
 
 def merc(lon: float, lat: float) -> tuple[float, float]:
     return math.radians(lon), math.log(math.tan(math.pi / 4 + math.radians(lat) / 2))
+
+
+def strich_ende(tx: float, ty: float, anker: str, py: float) -> tuple[float, float]:
+    """Wo der Strich vom Punkt an die Beschriftung stoesst: an ihrer Anfangs- oder Endkante auf
+    halber Hoehe, bei mittig gesetzter an der Ober- oder Unterkante."""
+    if anker == "start":
+        return tx - 2, ty - 5
+    if anker == "end":
+        return tx + 2, ty - 5
+    return tx, (ty - 14 if ty > py else ty + 3)
 
 
 def svg_karte(eintraege: list[tuple[dict, dict]]) -> str:
@@ -344,12 +522,12 @@ def svg_karte(eintraege: list[tuple[dict, dict]]) -> str:
     x0, x1 = min(p[0] for p in punkte), max(p[0] for p in punkte)
     y0, y1 = min(p[1] for p in punkte), max(p[1] for p in punkte)
     rand = 12
-    s = (KARTE_BREITE - 2 * rand) / (x1 - x0)
+    s = (KARTE_BREITE - RAND_LINKS - rand) / (x1 - x0)
     hoehe = round((y1 - y0) * s + 2 * rand)
 
     def xy(lon: float, lat: float) -> tuple[float, float]:
         x, y = merc(lon, lat)
-        return round((x - x0) * s + rand, 1), round((y1 - y) * s + rand, 1)
+        return round((x - x0) * s + RAND_LINKS, 1), round((y1 - y) * s + rand, 1)
 
     def pfad(ringe: list, zu: bool) -> str:
         teile = []
@@ -365,28 +543,30 @@ def svg_karte(eintraege: list[tuple[dict, dict]]) -> str:
         a = d["ansicht_stadt"]
         x, y = xy(a["lon"], a["lat"])
         lage = stadt.get("beschriftung", "rechts")
-        strich, klasse = "", ""
+        kurz = stadt.get("kurzname", stadt["name"])  # auf der Karte, etwa "Frankfurt"
+        # In dichten Gegenden steht auf dem Handy nur der Punkt; die Tabelle nennt alle Staedte
+        klasse = "" if stadt.get("name_handy", True) else ' class="ohne-handy"'
+        strich = ""
         if isinstance(lage, dict):
-            # Freie Lage fuer dichte Gegenden (Ruhrgebiet): Textanfang relativ zum Punkt, auf Wunsch
-            # mit Strich zum Punkt. Solche Beschriftungen wachsen auf dem Handy nicht mit ("eng"),
-            # sonst stiessen sie dort wieder aneinander.
+            # Freie Lage fuer dichte Gegenden (Ruhrgebiet, Rhein-Main): Textanfang relativ zum
+            # Punkt, auf Wunsch mit Strich vom Punkt bis an den Rand der Beschriftung
             tx, ty = round(x + lage["dx"], 1), round(y + lage["dy"], 1)
             anker = lage.get("anker", "start")
-            klasse = ' class="eng"'
             if lage.get("strich"):
-                strich = f'<line x1="{x:g}" y1="{y:g}" x2="{tx - 3:g}" y2="{ty - 5:g}"/>'
+                ex, ey = strich_ende(tx, ty, anker, y)
+                strich = f'<line x1="{x:g}" y1="{y:g}" x2="{ex:g}" y2="{ey:g}"/>'
         else:
             tx, ty, anker = {
-                "rechts": (x + 14, y + 6, "start"),
-                "links": (x - 14, y + 6, "end"),
-                "oben": (x, y - 14, "middle"),
-                "unten": (x, y + 28, "middle"),
+                "rechts": (x + 10, y + 5, "start"),
+                "links": (x - 10, y + 5, "end"),
+                "oben": (x, y - 9, "middle"),
+                "unten": (x, y + 21, "middle"),
             }[lage]
         orte.append(
             f'<a href="{stadt["slug"]}"{klasse}><title>{html.escape(stadt["name"])}: '
             f"{prozent(d['anteil'], 1)} der Stadtfläche</title>"
             f'{strich}<circle cx="{x:g}" cy="{y:g}" r="7"/>'
-            f'<text x="{tx:g}" y="{ty:g}" text-anchor="{anker}">{html.escape(stadt["name"])} '
+            f'<text x="{tx:g}" y="{ty:g}" text-anchor="{anker}">{html.escape(kurz)} '
             f'<tspan class="anteil">{prozent(d["anteil"])}</tspan></text></a>'
         )
     return (
@@ -409,9 +589,8 @@ def uebersicht(eintraege: list[tuple[dict, dict]], grau: list[dict]) -> pathlib.
     url = "__SITE_URL__/stadt/"
     titel = "Kiffen in deutschen Städten: wo es verboten ist"
     beschreibung = (
-        f"Wie viel der Stadtfläche in Sichtweite von Schulen, Kitas, Spielplätzen und "
-        f"Sportstätten liegt, für {n} Städte, mit Karte, Parks, Fußgängerzonen und den Regeln "
-        "vor Ort."
+        f"Wie viel Stadtfläche in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten "
+        f"liegt: {n} Städte mit Karte, Parks, Fußgängerzonen und Regeln vor Ort."
     )
     neueste = max(eintraege, key=lambda e: e[1]["stand"]["datum"])[1]["stand"]
     zeilen = "".join(
@@ -512,10 +691,14 @@ def baue(stadt: dict) -> pathlib.Path:
         "</figcaption></figure>"
     )
     src = src.replace("[[stadtkarte]]", stadtbild)
+    if "\n## Häufige Fragen" not in src:
+        raise SystemExit(f"staedte/{slug}.md: Abschnitt „Häufige Fragen“ fehlt")
+    src = src.replace("\n## Häufige Fragen", "\n" + nachbarn_md(stadt, d) + "## Häufige Fragen", 1)
     src = re.sub(
         r"^\[\[bild:([a-z0-9-]+)\]\]$", lambda m: bild_figur(slug, m.group(1), d), src, flags=re.M
     )
     body = markdown.markdown(src, extensions=["tables", "sane_lists", "toc", "md_in_html"])
+    pruefe_anker(slug, body)
     ZIEL.mkdir(parents=True, exist_ok=True)
     out = ZIEL / f"{slug}.html"
     out.write_text(seite(stadt, d, body), encoding="utf-8")

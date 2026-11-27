@@ -1,0 +1,754 @@
+{
+ "stadtflaeche_osm_km2": 160.92,
+ "wald": {
+  "flaeche_km2": 36.2,
+  "anteil_stadt": 0.2251,
+  "anteil_zone": 0.0494,
+  "anteil_zone_ohne_wald": 0.1549
+ },
+ "zonen_km2": 21.11,
+ "anteil": 0.13118,
+ "kategorien": {
+  "sports": {
+   "objekte": 615,
+   "zonen_km2": 12.94
+  },
+  "playground": {
+   "objekte": 343,
+   "zonen_km2": 6.65
+  },
+  "kindergarten": {
+   "objekte": 143,
+   "zonen_km2": 3.79
+  },
+  "school": {
+   "objekte": 81,
+   "zonen_km2": 3.78
+  },
+  "youth": {
+   "objekte": 37,
+   "zonen_km2": 0.84
+  },
+  "childcare": {
+   "objekte": 4,
+   "zonen_km2": 0.1
+  }
+ },
+ "objekte_gesamt": 1223,
+ "merkmale": {
+  "park": [
+   {
+    "name": "Waldpark Lousberg",
+    "osm": [
+     "w766257463"
+    ],
+    "flaeche_ha": 35.7,
+    "zone_ha": 4.6,
+    "anteil_zone": 0.1282,
+    "lat": 50.78767,
+    "lon": 6.07838,
+    "bbox": [
+     6.0708,
+     50.78335,
+     6.08885,
+     50.79161
+    ]
+   },
+   {
+    "name": "Stadtgarten",
+    "osm": [
+     "r12868198"
+    ],
+    "flaeche_ha": 18.0,
+    "zone_ha": 15.5,
+    "anteil_zone": 0.8621,
+    "lat": 50.7832,
+    "lon": 6.09431,
+    "bbox": [
+     6.08907,
+     50.7794,
+     6.0981,
+     50.787
+    ]
+   },
+   {
+    "name": "Landschaftspark Gillesbachtal",
+    "osm": [
+     "r2469771"
+    ],
+    "flaeche_ha": 12.5,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.2004,
+    "lat": 50.75632,
+    "lon": 6.10365,
+    "bbox": [
+     6.09996,
+     50.74956,
+     6.10559,
+     50.76166
+    ]
+   },
+   {
+    "name": "Müschpark",
+    "osm": [
+     "w766257464"
+    ],
+    "flaeche_ha": 9.2,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.0286,
+    "lat": 50.7899,
+    "lon": 6.08131,
+    "bbox": [
+     6.07749,
+     50.78854,
+     6.08538,
+     50.79153
+    ]
+   },
+   {
+    "name": "Von-Halfern-Park",
+    "osm": [
+     "w27883316"
+    ],
+    "flaeche_ha": 7.1,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.3576,
+    "lat": 50.75207,
+    "lon": 6.05711,
+    "bbox": [
+     6.05251,
+     50.74983,
+     6.05981,
+     50.75422
+    ]
+   },
+   {
+    "name": "Hollandwiese",
+    "osm": [
+     "w548960894"
+    ],
+    "flaeche_ha": 6.6,
+    "zone_ha": 4.0,
+    "anteil_zone": 0.6123,
+    "lat": 50.77613,
+    "lon": 6.0522,
+    "bbox": [
+     6.04881,
+     50.77326,
+     6.05415,
+     50.77917
+    ]
+   },
+   {
+    "name": "Westpark",
+    "osm": [
+     "w488098659"
+    ],
+    "flaeche_ha": 6.5,
+    "zone_ha": 6.1,
+    "anteil_zone": 0.9397,
+    "lat": 50.77182,
+    "lon": 6.06856,
+    "bbox": [
+     6.06431,
+     50.77057,
+     6.07099,
+     50.77296
+    ]
+   },
+   {
+    "name": "Kaiser-Friedrich-Park",
+    "osm": [
+     "w4443727"
+    ],
+    "flaeche_ha": 6.3,
+    "zone_ha": 5.0,
+    "anteil_zone": 0.7932,
+    "lat": 50.75944,
+    "lon": 6.07364,
+    "bbox": [
+     6.07168,
+     50.75678,
+     6.07535,
+     50.76179
+    ]
+   },
+   {
+    "name": "Nelson-Mandela-Park",
+    "osm": [
+     "w23952503"
+    ],
+    "flaeche_ha": 5.2,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.3788,
+    "lat": 50.76169,
+    "lon": 6.07883,
+    "bbox": [
+     6.07638,
+     50.76045,
+     6.08084,
+     50.76293
+    ]
+   },
+   {
+    "name": "Kennedypark",
+    "osm": [
+     "w25991349"
+    ],
+    "flaeche_ha": 5.0,
+    "zone_ha": 4.5,
+    "anteil_zone": 0.9009,
+    "lat": 50.77365,
+    "lon": 6.11836,
+    "bbox": [
+     6.11621,
+     50.7724,
+     6.12126,
+     50.77502
+    ]
+   },
+   {
+    "name": "Park Neuköllner Straße",
+    "osm": [
+     "w1348012391"
+    ],
+    "flaeche_ha": 4.7,
+    "zone_ha": 2.4,
+    "anteil_zone": 0.5065,
+    "lat": 50.79156,
+    "lon": 6.12241,
+    "bbox": [
+     6.11968,
+     50.78946,
+     6.12419,
+     50.79354
+    ]
+   },
+   {
+    "name": "Schlosspark",
+    "osm": [
+     "w16084487"
+    ],
+    "flaeche_ha": 4.6,
+    "zone_ha": 4.0,
+    "anteil_zone": 0.8752,
+    "lat": 50.81073,
+    "lon": 6.06448,
+    "bbox": [
+     6.0618,
+     50.80949,
+     6.06971,
+     50.81209
+    ]
+   },
+   {
+    "name": "Ferberpark",
+    "osm": [
+     "w26438606"
+    ],
+    "flaeche_ha": 3.7,
+    "zone_ha": 3.6,
+    "anteil_zone": 0.9749,
+    "lat": 50.76041,
+    "lon": 6.0952,
+    "bbox": [
+     6.0936,
+     50.759,
+     6.09705,
+     50.76167
+    ]
+   },
+   {
+    "name": "Bürgerpark Moltkebahnhof",
+    "osm": [
+     "w25842111"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.8855,
+    "lat": 50.76638,
+    "lon": 6.10564,
+    "bbox": [
+     6.10375,
+     50.76557,
+     6.1091,
+     50.76723
+    ]
+   },
+   {
+    "name": "Kurpark Burtscheid",
+    "osm": [
+     "w26575287"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 1.8,
+    "anteil_zone": 0.6424,
+    "lat": 50.76467,
+    "lon": 6.09502,
+    "bbox": [
+     6.09255,
+     50.76304,
+     6.09792,
+     50.76626
+    ]
+   },
+   {
+    "name": "Bürgerpark am Justizzentrum",
+    "osm": [
+     "w79304868"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.77318,
+    "lon": 6.10579,
+    "bbox": [
+     6.10347,
+     50.77193,
+     6.10647,
+     50.77435
+    ]
+   }
+  ],
+  "see": [
+   {
+    "name": "Wasserbecken Niederforstbach",
+    "osm": [
+     "w17690960"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.73839,
+    "lon": 6.14997,
+    "bbox": [
+     6.14853,
+     50.73698,
+     6.15173,
+     50.73975
+    ]
+   },
+   {
+    "name": "Stauanlage Kupferbach",
+    "osm": [
+     "r21273112"
+    ],
+    "flaeche_ha": 2.9,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.8639,
+    "lat": 50.74392,
+    "lon": 6.09556,
+    "bbox": [
+     6.09391,
+     50.74297,
+     6.09736,
+     50.74482
+    ]
+   }
+  ],
+  "wald": [
+   {
+    "name": "Münsterwald",
+    "osm": [
+     "r11670195"
+    ],
+    "flaeche_ha": 909.9,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.0005,
+    "lat": 50.67503,
+    "lon": 6.1701,
+    "bbox": [
+     6.14366,
+     50.66166,
+     6.22016,
+     50.70386
+    ]
+   },
+   {
+    "name": "Würselener Wald",
+    "osm": [
+     "r9818772"
+    ],
+    "flaeche_ha": 47.0,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.0689,
+    "lat": 50.79744,
+    "lon": 6.18485,
+    "bbox": [
+     6.17572,
+     50.79219,
+     6.19141,
+     50.80229
+    ]
+   },
+   {
+    "name": "Nellessenpark",
+    "osm": [
+     "w48361370"
+    ],
+    "flaeche_ha": 46.8,
+    "zone_ha": 2.7,
+    "anteil_zone": 0.0583,
+    "lat": 50.7525,
+    "lon": 6.11915,
+    "bbox": [
+     6.11236,
+     50.74696,
+     6.12554,
+     50.7581
+    ]
+   },
+   {
+    "name": "Propsteier Wald",
+    "osm": [
+     "r1476293"
+    ],
+    "flaeche_ha": 36.0,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0058,
+    "lat": 50.80217,
+    "lon": 6.18732,
+    "bbox": [
+     6.18141,
+     50.79682,
+     6.19111,
+     50.80714
+    ]
+   },
+   {
+    "name": "Linterter Busch",
+    "osm": [
+     "r8015615"
+    ],
+    "flaeche_ha": 26.2,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.0255,
+    "lat": 50.74997,
+    "lon": 6.13085,
+    "bbox": [
+     6.11846,
+     50.74615,
+     6.13309,
+     50.75379
+    ]
+   },
+   {
+    "name": "Klauserwäldchen",
+    "osm": [
+     "w19428440"
+    ],
+    "flaeche_ha": 22.7,
+    "zone_ha": 2.9,
+    "anteil_zone": 0.127,
+    "lat": 50.73312,
+    "lon": 6.17702,
+    "bbox": [
+     6.17507,
+     50.72887,
+     6.1858,
+     50.73751
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Markt",
+    "osm": [
+     "r905098"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.3,
+    "anteil_zone": 0.5335,
+    "lat": 50.77632,
+    "lon": 6.08373,
+    "bbox": [
+     6.08214,
+     50.77576,
+     6.08467,
+     50.77689
+    ]
+   },
+   {
+    "name": "Alter Posthof",
+    "osm": [
+     "w84175155"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 50.77175,
+    "lon": 6.08624,
+    "bbox": [
+     6.08574,
+     50.77141,
+     6.08718,
+     50.7721
+    ]
+   },
+   {
+    "name": "Katschhof",
+    "osm": [
+     "w86973801"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.4959,
+    "lat": 50.77543,
+    "lon": 6.08381,
+    "bbox": [
+     6.08343,
+     50.77501,
+     6.08431,
+     50.77585
+    ]
+   },
+   {
+    "name": "Sariyer-Platz",
+    "osm": [
+     "w1202245791"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 1.0,
+    "lat": 50.76198,
+    "lon": 6.07376,
+    "bbox": [
+     6.07318,
+     50.76171,
+     6.07433,
+     50.76226
+    ]
+   },
+   {
+    "name": "Gert-Engels-Platz",
+    "osm": [
+     "w1013029023"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 50.72424,
+    "lon": 6.14467,
+    "bbox": [
+     6.14397,
+     50.7238,
+     6.14558,
+     50.72467
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "RWTH Aachen",
+    "osm": [
+     "r30697"
+    ],
+    "flaeche_ha": 65.9,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.0172,
+    "lat": 50.77639,
+    "lon": 6.04899,
+    "bbox": [
+     6.04015,
+     50.7725,
+     6.05567,
+     50.79385
+    ]
+   },
+   {
+    "name": "Fachhochschule Aachen",
+    "osm": [
+     "r1070152"
+    ],
+    "flaeche_ha": 8.0,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.1725,
+    "lat": 50.75911,
+    "lon": 6.08321,
+    "bbox": [
+     6.07977,
+     50.75743,
+     6.08528,
+     50.76071
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [],
+ "fussgaengerzonen": {
+  "flaeche_ha": 18.9,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 50.7597,
+  "lon": 6.11098,
+  "bbox": [
+   5.97113,
+   50.65757,
+   6.22016,
+   50.86101
+  ]
+ },
+ "orte": [
+  {
+   "name": "Adalbertstraße und Großkölnstraße",
+   "osm": [
+    "w1197230452",
+    "w126443544",
+    "w1359375255",
+    "w375010914",
+    "w4968165",
+    "w4969247",
+    "w5136362",
+    "w5168919",
+    "w5924249",
+    "w85656159"
+   ],
+   "flaeche_ha": 1.52,
+   "bbox": [
+    6.08398,
+    50.77471,
+    6.09439,
+    50.77818
+   ],
+   "anteil_zone": 0.1647,
+   "art": "flaeche",
+   "lat": 50.77527,
+   "lon": 6.09205
+  },
+  {
+   "name": "Markt",
+   "osm": [
+    "r905098"
+   ],
+   "flaeche_ha": 0.61,
+   "bbox": [
+    6.08214,
+    50.77576,
+    6.08467,
+    50.77689
+   ],
+   "anteil_zone": 0.5335,
+   "art": "flaeche",
+   "lat": 50.77632,
+   "lon": 6.08373
+  },
+  {
+   "name": "Pontstraße",
+   "osm": [
+    "w4444710",
+    "w4576410",
+    "w553328091"
+   ],
+   "flaeche_ha": 0.45,
+   "bbox": [
+    6.08017,
+    50.77647,
+    6.08379,
+    50.78038
+   ],
+   "anteil_zone": 0.5034,
+   "art": "linie",
+   "lat": 50.77719,
+   "lon": 6.083
+  },
+  {
+   "name": "Katschhof",
+   "osm": [
+    "w86973801"
+   ],
+   "flaeche_ha": 0.34,
+   "bbox": [
+    6.08343,
+    50.77501,
+    6.08431,
+    50.77585
+   ],
+   "anteil_zone": 0.4959,
+   "art": "flaeche",
+   "lat": 50.77543,
+   "lon": 6.08381
+  },
+  {
+   "name": "Friedrich-Wilhelm-Platz",
+   "osm": [
+    "w319379989",
+    "w692861799",
+    "w692861800"
+   ],
+   "flaeche_ha": 0.4,
+   "bbox": [
+    6.08632,
+    50.77359,
+    6.08783,
+    50.77481
+   ],
+   "anteil_zone": 0.0095,
+   "art": "flaeche",
+   "lat": 50.77421,
+   "lon": 6.0872
+  },
+  {
+   "name": "Kurpark Burtscheid",
+   "osm": [
+    "w26575287"
+   ],
+   "flaeche_ha": 2.82,
+   "bbox": [
+    6.09255,
+    50.76304,
+    6.09792,
+    50.76626
+   ],
+   "anteil_zone": 0.6424,
+   "art": "flaeche",
+   "lat": 50.76467,
+   "lon": 6.09502
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-25T21:22:46Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Regierungsbezirks Köln (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  50.775,
+  6.085
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Waldpark Lousberg",
+   "lousberg"
+  ],
+  [
+   "park",
+   "Westpark",
+   "westpark"
+  ],
+  [
+   "park",
+   "Stadtgarten",
+   "stadtgarten"
+  ],
+  [
+   "ort",
+   "Adalbertstraße und Großkölnstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "Pontstraße",
+   "pontstrasse"
+  ],
+  [
+   "ort",
+   "Markt",
+   "markt"
+  ]
+ ]
+}

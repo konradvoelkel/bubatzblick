@@ -1,14 +1,258 @@
 <!doctype html>
-<!-- Platzhalter, erzeugt durch deploy/bin/build_staedte.py aus staedte/grossstaedte.json. -->
+<!-- Erzeugt aus staedte/wiesbaden.md und staedte/wiesbaden.json durch deploy/bin/build_staedte.py
+     (`make staedte`). Nicht von Hand aendern: die CI prueft, dass ein Neubau kein Diff ergibt. -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>Kiffen in Wiesbaden | BubatzBlick</title>
+<title>Kiffen in Wiesbaden: wo es verboten ist | BubatzBlick</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=../?interesse=wiesbaden#12/50.0825/8.24">
+<meta name="color-scheme" content="light">
+<meta name="description" content="In Wiesbaden liegen 10,6 % der Stadtfläche (22 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<link rel="canonical" href="__SITE_URL__/stadt/wiesbaden">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BubatzBlick">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="__SITE_URL__/stadt/wiesbaden">
+<meta property="og:title" content="Kiffen in Wiesbaden: wo es verboten ist">
+<meta property="og:description" content="In Wiesbaden liegen 10,6 % der Stadtfläche (22 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.">
+<meta property="og:image" content="__SITE_URL__/img/stadt/wiesbaden.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Karte der Innenstadt von Wiesbaden mit den roten Verbotszonen, daneben: Kiffen in Wiesbaden, 10,6 % der Stadtfläche liegen in Sichtweite">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "__SITE_URL__/stadt/wiesbaden",
+   "url": "__SITE_URL__/stadt/wiesbaden",
+   "name": "Kiffen in Wiesbaden: wo es verboten ist",
+   "description": "In Wiesbaden liegen 10,6 % der Stadtfläche (22 km²) in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. Karte, Parks, Regeln vor Ort.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "__SITE_URL__/#website"
+   },
+   "dateModified": "2026-11-27",
+   "about": {
+    "@type": "City",
+    "name": "Wiesbaden",
+    "sameAs": "https://www.wikidata.org/wiki/Q1721",
+    "containedInPlace": {
+     "@type": "State",
+     "name": "Hessen"
+    }
+   },
+   "primaryImageOfPage": "__SITE_URL__/img/stadt/wiesbaden.jpg"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Karte",
+     "item": "__SITE_URL__/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Städte",
+     "item": "__SITE_URL__/stadt/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Wiesbaden",
+     "item": "__SITE_URL__/stadt/wiesbaden"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  /* Farben nur als Tokens, wie auf der Kartenseite (viewer/index.html). */
+  :root { color-scheme: light;
+          --marke: #287c42; --marke-dunkel: #03642b; --marke-hell: #e1f5e4;
+          --text: #222; --text-schwach: #555; --text-leise: #666;
+          --grund: #fff; --papier: #f2efe9; --code: #f3f3f3;
+          --linie: #ddd; --linie-hell: #eee; --linie-tabelle: #e5e5e5; }
+  body { margin: 0; font: 1rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         color: var(--text); background: var(--papier); overflow-wrap: break-word; }
+  header { background: var(--grund); border-bottom: 1px solid var(--linie); }
+  header .inner { max-width: 42em; margin: 0 auto; padding: 24px 20px 12px; display: flex;
+                  gap: 24px; align-items: center; flex-wrap: wrap; }
+  header img { width: 200px; height: 200px; flex: none; }
+  /* Darf bis 20em schrumpfen, bevor es unter das Bild umbricht: bei 42em Spalte
+     stehen Bild und Titel so weiter nebeneinander, auf dem Telefon untereinander. */
+  header .inner > div { flex: 1 1 20em; }
+  header h1 { font-size: 1.9em; line-height: 1.2; margin: 0 0 8px; color: var(--marke); }
+  header p { margin: 0 0 8px; color: var(--text-schwach); }
+  nav a { display: inline-block; padding: 6px 12px; border-radius: 6px; background: var(--marke);
+          color: var(--grund); text-decoration: none; font-weight: 600; }
+  nav a:hover { background: var(--marke-dunkel); }
+  main { max-width: 42em; margin: 0 auto; padding: 8px 20px 60px; background: var(--grund); }
+  main h2 { margin-top: 2em; padding-top: .5em; border-top: 1px solid var(--linie-hell); }
+  main h3 { margin-top: 1.5em; }
+  h1, h2, h3 { text-wrap: balance; }
+  blockquote { margin: 1em 0; padding: .6em 1em; border-inline-start: 4px solid var(--marke);
+               background: var(--marke-hell); }
+  blockquote ol { padding-inline-start: 1.4em; }
+  /* Zitat mit Quelle: die Quelle gehoert zum Zitat (figcaption), nicht in den Fliesstext. */
+  figure { margin: 1em 0; }
+  figure blockquote { margin: 0; }
+  figcaption { margin-top: .4em; font-size: .9em; color: var(--text-schwach); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: start; padding: 6px 10px; border-bottom: 1px solid var(--linie-tabelle);
+           vertical-align: top; }
+  code { font-size: .9em; background: var(--code); padding: 1px 4px; border-radius: 3px;
+         overflow-wrap: anywhere; }
+  pre { overflow-x: auto; background: var(--code); padding: 10px; border-radius: 6px; }
+  a { color: var(--marke); }
+  footer { max-width: 42em; margin: 0 auto; padding: 16px 20px; color: var(--text-leise);
+           font-size: .9em; }
+
+  .knopf { display: inline-block; margin: .3em .4em .3em 0; }
+  figure.karte img { width: 100%; height: auto; border: 1px solid var(--linie);
+                     border-radius: 4px; }
+  .lead { font-size: 1.12em; }
+  .gross { font-size: 2.4em; font-weight: 700; color: var(--marke-dunkel); line-height: 1.1; }
+  td.zahl, th.zahl { text-align: end; font-variant-numeric: tabular-nums; }
+  .stand { font-size: .9em; opacity: .85; margin-top: .2em; }
+  .tabellennotiz { font-size: .88em; color: var(--text-schwach); margin: .4em 0 1.2em; }
+  .hinweis { font-size: .92em; color: var(--text-schwach);
+             border-inline-start: 4px solid var(--linie); padding: .4em 1em; margin: 1.5em 0; }
+  @media (max-width: 480px) { th, td { padding: 6px 6px; } th.land, td.land { display: none; } }
+  figure.deutschland { margin: 1em auto; max-width: 560px; }
+  svg.deutschland { width: 100%; height: auto; display: block; }
+  svg.deutschland .land { fill: #eef0eb; stroke: #9aa39a; stroke-width: 1; }
+  svg.deutschland .grenze { fill: none; stroke: #b9c0b8; stroke-width: .8; stroke-dasharray: 3 2; }
+  svg.deutschland circle { r: 5; fill: #c0392b; stroke: #fff; stroke-width: 1.5; }
+  svg.deutschland text { font-size: 15px; font-weight: 700; fill: #222; paint-order: stroke;
+                         stroke: #fff; stroke-width: 3.5px; stroke-linejoin: round; }
+  svg.deutschland .anteil { font-weight: 400; fill: #c0392b; }
+  svg.deutschland a:hover circle, svg.deutschland a:focus circle { r: 7; fill: #8e2a20; }
+  svg.deutschland a:hover text, svg.deutschland a:focus text { text-decoration: underline; }
+  ul.grau { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .3em .9em; }
+  ul.grau a { color: var(--text-schwach); text-decoration: none;
+              border-bottom: 1px dotted currentColor; }
+  ul.grau a:hover, ul.grau a:focus { color: var(--marke); }
+  svg.deutschland line { stroke: #8a918a; stroke-width: 1; }
+  /* Auf dem Handy nur die Namen, dafuer groesser; die Anteile stehen in der Tabelle darunter. */
+  @media (max-width: 480px) { svg.deutschland text { font-size: 19px; }
+                              svg.deutschland .anteil { display: none; }
+                              svg.deutschland circle { r: 7; }
+                              svg.deutschland a.ohne-handy text,
+                              svg.deutschland a.ohne-handy line { display: none; } }
+</style>
 </head>
 <body>
-<p>Weiter zur <a href="../?interesse=wiesbaden#12/50.0825/8.24">Karte von Wiesbaden</a>.</p>
+<header><div class="inner">
+  <div>
+    <h1>Kiffen in Wiesbaden</h1>
+    <p>Wo das Konsumverbot nach § 5 KCanG gilt, berechnet aus OpenStreetMap.</p>
+    <p class="stand">Zahlen vom 27. November 2026 · Recherche zu Regeln vor Ort: November 2026</p>
+    <nav><a href="../#12/50.0724/8.25609" class="knopf">Wiesbaden auf der Karte</a>
+      <a href="./" class="knopf">Alle Städte</a>
+      <a href="../about.html" class="knopf">Wie gerechnet wird</a></nav>
+  </div>
+</div></header>
+<main>
+<p class="lead">In Wiesbaden ist öffentliches Kiffen auf 22 km² verboten, das sind
+<strong>10,6 % der Stadtfläche</strong> von 204 km². Grund sind 1 124
+Einrichtungen wie Schulen und Spielplätze: In ihrer Sichtweite, bis 100 Meter vom Eingang und ohne
+Gebäude dazwischen, verbietet § 5 KCanG den Konsum. Dazu kommen die Fußgängerzonen von 7 bis 20 Uhr
+und überall die Gegenwart von Minderjährigen.</p>
+
+<p>Ein Drittel der Stadt ist Wald, vor allem im Taunus (32 % der Stadtfläche), und dort liegt
+kaum eine Zone; ohne den Wald gerechnet sind es 13,4 %.</p>
+<figure class="karte"><img src="../img/stadt/wiesbaden-stadt.webp" width="960" height="600" alt="Karte von Wiesbaden mit Stadtgrenze und den roten Verbotszonen"><figcaption>Wiesbaden: 22 km² Verbotszone auf 204 km² Stadtfläche. Rot: in Sichtweite einer Einrichtung.</figcaption></figure>
+
+<h2 id="woher-die-zonen-kommen">Woher die Zonen kommen</h2>
+<table><thead><tr><th>Einrichtung</th><th class="zahl">Anzahl</th><th class="zahl">Zonen­fläche</th></tr></thead><tbody><tr><td>Schulen</td><td class="zahl">113</td><td class="zahl">5,1 km²</td></tr><tr><td>Kitas und Kinder­gärten</td><td class="zahl">137</td><td class="zahl">2,8 km²</td></tr><tr><td>Kinder­tages­pflege</td><td class="zahl">10</td><td class="zahl">0,2 km²</td></tr><tr><td>Spielplätze</td><td class="zahl">282</td><td class="zahl">6,3 km²</td></tr><tr><td>Kinder- und Jugend­einrichtungen</td><td class="zahl">21</td><td class="zahl">0,5 km²</td></tr><tr><td>Sport­stätten</td><td class="zahl">561</td><td class="zahl">12,7 km²</td></tr></tbody></table>
+<p class="tabellennotiz">Jede Art für sich gezählt, Überlappungen also mehrfach. Anbauvereinigungen nur, soweit in OpenStreetMap eingetragen.</p>
+
+<p>Die meisten Zonen gehen auf die 561 Sportstätten zurück, danach auf die
+282 Spielplätze. Auf Spielplätzen und Schulhöfen verbietet die
+Gefahrenabwehrverordnung der Stadt außerdem Alkohol; Spielplätze sind von 8 bis 20 Uhr offen, im
+Sommer bis 21 Uhr
+(<a href="https://wiesbaden.de/medien/downloads/rathaus/3-2.1-Gefahrenabwehrverordnung.pdf">Gefahrenabwehrverordnung</a>).</p>
+<h2 id="kurpark-biebrich-und-anlagen">Kurpark, Biebrich und Anlagen</h2>
+<p>Der <strong>Kurpark</strong> liegt außerhalb jeder Zone (0 %): Im Park und bis 100 Meter um ihn liegt
+keine Einrichtung, die eine Zone auslöst. Der <strong>Warme Damm</strong> dagegen liegt fast ganz in einer
+(93 %), wegen der Spielplätze darauf.</p>
+<figure class="karte"><img src="../img/stadt/wiesbaden-kurpark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Kurpark (grün umrandet) mit den roten Verbotszonen; etwa 0 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Kurpark: 8 ha, davon 0 % Verbotszone. <a href="../#16/50.08439/8.25134">Auf der Karte ansehen</a></figcaption></figure>
+
+<figure class="karte"><img src="../img/stadt/wiesbaden-warmer-damm.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Warmer Damm (grün umrandet) mit den roten Verbotszonen; etwa 93 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Warmer Damm: 5 ha, davon 93 % Verbotszone. <a href="../#16/50.08151/8.24629">Auf der Karte ansehen</a></figcaption></figure>
+
+<p>Im <strong>Schlosspark Biebrich</strong> sind es 43 %, um vier Sportanlagen und einen Spielplatz im
+Park, in den Nerotalanlagen 60 %. Auf einem 100 Meter breiten Streifen Land entlang
+des Rheins liegen 20 % in einer Zone. Reisinger- und Herbert-Anlage am Hauptbahnhof kommen auf
+66 %.</p>
+<figure class="karte"><img src="../img/stadt/wiesbaden-schlosspark.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Schlosspark (grün umrandet) mit den roten Verbotszonen; etwa 43 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Schlosspark: 35 ha, davon 43 % Verbotszone. <a href="../#16/50.04266/8.23553">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="innenstadt">Innenstadt</h2>
+<p>Eine amtliche Liste der Wiesbadener Fußgängerzonen gibt es nicht. Das Stadtlexikon nennt
+Faulbrunnenstraße, Ellenbogengasse, Mauritiusplatz, Kleine Kirchgasse und Kirchgasse und die
+„Quellenmeile“ von der Bärenstraße bis zur Webergasse
+(<a href="https://www.wiesbaden.de/stadtlexikon/stadtlexikon-a-z/fussgaengerzone">Stadtlexikon</a>); seit 2025 ist
+auch die Wellritzstraße Fußgängerzone
+(<a href="https://www.wiesbaden.de/pressemitteilungen/pressereferat/2025/november/251121-Versenkbare-Poller-in-der-Wellritzstrasse">Stadt Wiesbaden, November 2025</a>).
+Marktstraße, Schlossplatz und Luisenplatz gehören nach den Quellen nicht dazu. Dort gilt von 7 bis 20
+Uhr Konsumverbot; blau sind die Fußgängerbereiche aus OpenStreetMap.</p>
+<p>Von Kirchgasse, Langgasse und den Gassen daneben liegen außerdem 22 % in
+einer Sichtweiten-Zone. Der Mauritiusplatz liegt außerhalb (0 %), der Luisenplatz
+zu 30 %, der Platz der Deutschen Einheit ganz in einer Zone
+(100 %).</p>
+<figure class="karte"><img src="../img/stadt/wiesbaden-fussgaengerzone.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karte: Kirchgasse und Langgasse (grün umrandet) mit den roten Verbotszonen; etwa 22 % der Fläche liegen in Sichtweite einer Einrichtung"><figcaption>Kirchgasse und Langgasse: 2 ha, davon 22 % Verbotszone. <a href="../#16/50.08183/8.23943">Auf der Karte ansehen</a></figcaption></figure>
+
+<h2 id="hochschulen-stadion-und-feste">Hochschulen, Stadion und Feste</h2>
+<p>Hochschulen sind nach § 5 KCanG keine Verbotsorte. Die <strong>Hochschule RheinMain</strong> verbietet Cannabis aber
+per Hausordnung, außer mit ärztlicher Verordnung
+(<a href="https://www.hs-rm.de/fileadmin/HSRM/Veroeffentlichungen/Amtliche_Mitteilungen/950-999/968.pdf">Hausordnung</a>);
+ihr Gelände liegt zu 23 % in einer Zone. In der <strong>BRITA-Arena</strong> verbietet
+die Stadionordnung, Drogen wie Cannabis mitzubringen, auch auf Zufahrten und Parkplätzen
+(<a href="https://brita-arena.de/fileadmin/documents/01_Stadionordnung_der_BRITA_Arena_22.07.2024.pdf">Stadionordnung</a>).</p>
+<p>Ein Cannabisverbot auf Festen wie der Weinwoche oder dem Sternschnuppenmarkt hat die Stadt nicht;
+ein Antrag dafür wurde 2025 im Ausschuss abgelehnt. Ein Forschungsprojekt zur Abgabe von Cannabis über
+Apotheken hat die zuständige Bundesanstalt 2026 nicht genehmigt
+(<a href="https://www.wiesbaden.de/pressemitteilungen/pressereferat/februar/260219-Cannabis-Forschungsprojekt">Stadt Wiesbaden, Februar 2026</a>).</p>
+<h2 id="was-sonst-noch-gilt">Was sonst noch gilt</h2>
+<p>Hessen hat feste Bußgelder: Konsum in einer Verbotszone, auch in der Fußgängerzone, kostet 500 Euro,
+in Gegenwart von Kindern und Jugendlichen 1.000 Euro
+(<a href="https://www.rv.hessenrecht.hessen.de/bshe/document/VVHE-VVHE000020483">Bußgeldkatalog Hessen</a>).
+Zuständig ist die Stadt. Die Waffenverbotszone der Innenstadt regelt Cannabis nicht. Eigene
+Verbotszonen für Cannabis hat Wiesbaden nicht (Stand 27. November 2026).</p>
+<nav aria-label="Nachbarstädte" class="nachbarn">
+<h2 id="nachbarstadte-im-vergleich">Nachbarstädte im Vergleich</h2>
+<p>In Wiesbaden liegen 10,6 % der Stadtfläche in einer Verbotszone. Die nächsten Städte mit eigener Seite:</p>
+<ul>
+<li><strong><a href="mainz">Mainz</a></strong>, 12 km entfernt: 16,2 % der Stadtfläche; <a href="mainz#innenstadt">Fußgängerzonen in Mainz</a>, <a href="mainz#was-sonst-noch-gilt">Regeln in Mainz (Rheinland-Pfalz)</a></li>
+<li><strong><a href="frankfurt-am-main">Frankfurt am Main</a></strong>, 29 km entfernt: 18,3 % der Stadtfläche; <a href="frankfurt-am-main#innenstadt-und-platze">Fußgängerzonen in Frankfurt am Main</a>, <a href="frankfurt-am-main#was-sonst-noch-gilt">Regeln in Frankfurt am Main</a></li>
+<li><strong><a href="darmstadt">Darmstadt</a></strong>, 37 km entfernt: 11,3 % der Stadtfläche; <a href="darmstadt#innenstadt">Fußgängerzonen in Darmstadt</a>, <a href="darmstadt#was-sonst-noch-gilt">Regeln in Darmstadt</a></li>
+</ul>
+<p>Dieselben Landesregeln (Hessen) gelten auch in <a href="darmstadt#was-sonst-noch-gilt">Darmstadt</a>, <a href="frankfurt-am-main#was-sonst-noch-gilt">Frankfurt am Main</a>, <a href="kassel#was-sonst-noch-gilt">Kassel</a>.</p>
+</nav>
+<h2 id="haufige-fragen">Häufige Fragen</h2>
+<h3 id="wo-darf-man-in-wiesbaden-kiffen">Wo darf man in Wiesbaden kiffen?</h3>
+<p>Nach § 5 KCanG außerhalb der roten Flächen, etwa im Kurpark (0 % in einer Zone).
+Tagsüber nicht in den Fußgängerzonen der Innenstadt, nie in Gegenwart von Minderjährigen und nicht
+gegen ein Hausrecht, wie auf dem Gelände der Hochschule RheinMain. Weiß heißt nicht sicher erlaubt:
+Hecken, Bäume und fehlende Einrichtungen kennt die Karte nicht.</p>
+<h3 id="wie-genau-ist-das">Wie genau ist das?</h3>
+<p>Täglich aus OpenStreetMap gerechnet, mit Gebäuden als Sichthindernis; die Zahlen hier sind vom
+27. November 2026. Eine Orientierungshilfe, keine Rechtsauskunft (<a href="../about.html">wie gerechnet wird</a>).</p>
+<p class="hinweis">Fehlt eine Einrichtung? Korrekturen in OpenStreetMap stehen am Tag darauf auf der
+Karte; bitte nur eintragen, was es vor Ort gibt.</p>
+</main>
+<footer>BubatzBlick – Bubatzkarte 2.0 · Version 2.1.0 ·
+Daten © OpenStreetMap-Mitwirkende (ODbL) · Stand 27. November 2026 ·
+<a href="../">Zur Karte</a> · <a href="./">Alle Städte</a> ·
+<a href="../about.html#kontakt-und-impressum">Impressum</a></footer>
 </body>
 </html>

@@ -74,8 +74,9 @@ def test_zone_ist_vollstaendig_und_gueltig(feature: dict) -> None:
     w, s, e, n = g.bounds
     assert DEUTSCHLAND[0] <= w and e <= DEUTSCHLAND[2]
     assert DEUTSCHLAND[1] <= s and n <= DEUTSCHLAND[3]
-    # Eine Verbotszone einer Stadt ist Hektar bis wenige Dutzend Hektar gross, nie ein Stadtteil.
-    assert 2_000 <= p["flaeche_m2"] <= 1_000_000
+    # Von einem einzelnen Platz (Augsburg, Friedensplatz Oberhausen: 0,09 ha) bis zum
+    # Strassengeviert um ein Stadion (Darmstadt: gut 120 ha), nie ein ganzer Stadtteil.
+    assert 500 <= p["flaeche_m2"] <= 2_000_000
 
 
 def test_geojson_und_toml_nennen_dieselben_zonen() -> None:

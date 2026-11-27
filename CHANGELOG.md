@@ -11,19 +11,32 @@ Karte selbst.
 
 ### Hinzugefügt
 
-- Städteseiten unter `/stadt/<name>` für 23 Städte: Berlin, Hamburg, München, Köln, Frankfurt am
-  Main, Stuttgart, Düsseldorf, Leipzig, Dortmund, Essen, Bremen, Dresden, Nürnberg, Hannover,
-  Duisburg, Wuppertal, Bochum, Bielefeld, Bonn, Münster, Mannheim, Karlsruhe und Heidelberg;
-  geplant sind 42 (die größten Städte, alle Landeshauptstädte und weitere Hochschulstädte). Je
+- Städteseiten unter `/stadt/<name>` für 42 Städte: die 23 größten (Berlin, Hamburg, München,
+  Köln, Frankfurt am Main, Stuttgart, Düsseldorf, Leipzig, Dortmund, Essen, Bremen, Dresden,
+  Nürnberg, Hannover, Duisburg, Wuppertal, Bochum, Bielefeld, Bonn, Münster, Mannheim, Karlsruhe,
+  Augsburg), alle übrigen Landeshauptstädte (Wiesbaden, Mainz, Saarbrücken, Erfurt, Magdeburg,
+  Potsdam, Schwerin, Kiel) und die Hochschulstädte Aachen, Braunschweig, Chemnitz, Freiburg im
+  Breisgau, Kassel, Darmstadt, Osnabrück, Heidelberg, Regensburg, Würzburg und Göttingen. Je
   Stadt: Anteil der Stadtfläche in Sichtweite einer Einrichtung (jede Stelle einmal gezählt),
   Tabelle je Art von Einrichtung, vorgerenderte Karten der Stadt, großer Parks, Plätze,
   Fußgängerzonen und Hochschulen, dazu die örtlichen und landesrechtlichen Regeln mit Quellen.
   Text in `staedte/<name>.md`, Zahlen in `staedte/<name>.json`, Seiten erzeugt von
   `deploy/bin/build_staedte.py` (`make staedte`); die CI prüft, dass ein Neubau kein Diff ergibt.
-  Die Seiten stehen in der Sitemap.
+  Die Seiten stehen in der Sitemap. Oben steht, von wann die Zahlen sind und wann die Regeln vor
+  Ort zuletzt recherchiert wurden (`recherche` in `staedte/staedte.toml`). Unten verweist ein
+  Abschnitt „Nachbarstädte im Vergleich“ auf die drei nächsten Städte, bis in deren Abschnitte zu
+  Fußgängerzonen und Landesregeln, und auf alle Städte im selben Land; Verweise innerhalb einer
+  Seite sind Anker-Links, und der Bau bricht ab, wenn ein Anker ins Leere zeigt.
+- Örtliche Verbote (lila Ebene): Augsburg, Cannabisverbot auf dem Oberhauser Friedensplatz
+  (Satzung für das Forum St. Johannes, seit Mai 2026), und Darmstadt, Cannabisverbot im Gebiet
+  um das Stadion am Böllenfalltor anlässlich von Veranstaltungen (Gefahrenabwehrverordnung,
+  seit November 2026; Grenze näherungsweise). `scripts/sonderzonen.py` kennt dafür Teile mit
+  `ausschnitt` (Straße zuschneiden) und `linie` (Verbindung von Hand, wo OSM eine Grenze nicht
+  führt).
 - Übersicht `/stadt/` mit Liste und klickbarer Deutschlandkarte (SVG ohne JavaScript, Grenzen aus
   der Grundkarte; in dichten Gegenden wie dem Ruhrgebiet stehen die Namen in einer Spalte mit
-  Strichen zu den Punkten). Darunter alle übrigen Großstädte grau unter „Welche Stadt sollen wir
+  Strichen zu den Punkten, auf dem Handy nur die Namen und dort, wo es zu eng wird, nur die
+  Punkte). Darunter alle übrigen Großstädte grau unter „Welche Stadt sollen wir
   noch ausführlicher beschreiben?“: Ein Klick führt über einen Platzhalter `/stadt/<name>` (nicht
   indexiert) auf die Karte der Stadt mit einem kurzen Hinweis und zählt als Stimme. Karte und
   Über-Seite verlinken auf die Übersicht.

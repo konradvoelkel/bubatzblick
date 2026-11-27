@@ -1,0 +1,1465 @@
+{
+ "stadtflaeche_osm_km2": 119.71,
+ "wald": {
+  "flaeche_km2": 25.5,
+  "anteil_stadt": 0.2134,
+  "anteil_zone": 0.0787,
+  "anteil_zone_ohne_wald": 0.1475
+ },
+ "zonen_km2": 15.9,
+ "anteil": 0.13283,
+ "kategorien": {
+  "sports": {
+   "objekte": 375,
+   "zonen_km2": 7.73
+  },
+  "playground": {
+   "objekte": 264,
+   "zonen_km2": 6.0
+  },
+  "school": {
+   "objekte": 97,
+   "zonen_km2": 3.75
+  },
+  "kindergarten": {
+   "objekte": 87,
+   "zonen_km2": 2.29
+  },
+  "youth": {
+   "objekte": 21,
+   "zonen_km2": 0.55
+  },
+  "childcare": {
+   "objekte": 6,
+   "zonen_km2": 0.13
+  }
+ },
+ "objekte_gesamt": 850,
+ "merkmale": {
+  "wald": [
+   {
+    "name": "Hörner Bruch",
+    "osm": [
+     "r14056610",
+     "w7798379",
+     "w7798399"
+    ],
+    "flaeche_ha": 112.2,
+    "zone_ha": 4.2,
+    "anteil_zone": 0.0371,
+    "lat": 52.24657,
+    "lon": 8.0185,
+    "bbox": [
+     8.00478,
+     52.23992,
+     8.03069,
+     52.25554
+    ]
+   },
+   {
+    "name": "Heger Holz",
+    "osm": [
+     "w386725270"
+    ],
+    "flaeche_ha": 80.3,
+    "zone_ha": 14.3,
+    "anteil_zone": 0.1782,
+    "lat": 52.28721,
+    "lon": 7.99913,
+    "bbox": [
+     7.988,
+     52.28185,
+     8.00808,
+     52.29255
+    ]
+   },
+   {
+    "name": "Leyer Holz",
+    "osm": [
+     "r12988896",
+     "r6185252",
+     "w7798562"
+    ],
+    "flaeche_ha": 75.9,
+    "zone_ha": 5.8,
+    "anteil_zone": 0.076,
+    "lat": 52.29276,
+    "lon": 7.96171,
+    "bbox": [
+     7.94783,
+     52.28729,
+     7.97874,
+     52.29841
+    ]
+   },
+   {
+    "name": "Bramheide",
+    "osm": [
+     "r18740973"
+    ],
+    "flaeche_ha": 70.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.31491,
+    "lon": 8.09636,
+    "bbox": [
+     8.08328,
+     52.30926,
+     8.10007,
+     52.32047
+    ]
+   },
+   {
+    "name": "Hakenhof Holz",
+    "osm": [
+     "r4809710"
+    ],
+    "flaeche_ha": 70.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.27521,
+    "lon": 7.98895,
+    "bbox": [
+     7.97274,
+     52.26889,
+     7.99932,
+     52.28205
+    ]
+   },
+   {
+    "name": "Suttheide",
+    "osm": [
+     "r5656199"
+    ],
+    "flaeche_ha": 67.0,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.28011,
+    "lon": 7.9733,
+    "bbox": [
+     7.96143,
+     52.27397,
+     7.97945,
+     52.28609
+    ]
+   },
+   {
+    "name": "Sandforter Berg",
+    "osm": [
+     "r17848104"
+    ],
+    "flaeche_ha": 55.9,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.0133,
+    "lat": 52.25113,
+    "lon": 8.12025,
+    "bbox": [
+     8.11021,
+     52.24609,
+     8.13134,
+     52.25581
+    ]
+   },
+   {
+    "name": "Gartlage",
+    "osm": [
+     "w7798590"
+    ],
+    "flaeche_ha": 43.6,
+    "zone_ha": 4.9,
+    "anteil_zone": 0.1117,
+    "lat": 52.28928,
+    "lon": 8.0661,
+    "bbox": [
+     8.0514,
+     52.28417,
+     8.07927,
+     52.2943
+    ]
+   },
+   {
+    "name": "Carolinger Holz",
+    "osm": [
+     "w786476060"
+    ],
+    "flaeche_ha": 43.3,
+    "zone_ha": 8.0,
+    "anteil_zone": 0.1852,
+    "lat": 52.29741,
+    "lon": 8.08557,
+    "bbox": [
+     8.06737,
+     52.29214,
+     8.08839,
+     52.30261
+    ]
+   },
+   {
+    "name": "Schölerberg",
+    "osm": [
+     "r12683380"
+    ],
+    "flaeche_ha": 38.4,
+    "zone_ha": 18.6,
+    "anteil_zone": 0.4846,
+    "lat": 52.25221,
+    "lon": 8.07565,
+    "bbox": [
+     8.06108,
+     52.24855,
+     8.08102,
+     52.25577
+    ]
+   },
+   {
+    "name": "Natruper Holz",
+    "osm": [
+     "r5761285"
+    ],
+    "flaeche_ha": 35.7,
+    "zone_ha": 6.5,
+    "anteil_zone": 0.1807,
+    "lat": 52.29294,
+    "lon": 8.0057,
+    "bbox": [
+     7.9984,
+     52.28929,
+     8.01344,
+     52.29646
+    ]
+   },
+   {
+    "name": "Schinkelberg",
+    "osm": [
+     "r5685626"
+    ],
+    "flaeche_ha": 33.8,
+    "zone_ha": 4.1,
+    "anteil_zone": 0.1226,
+    "lat": 52.29052,
+    "lon": 8.10075,
+    "bbox": [
+     8.09272,
+     52.28482,
+     8.10576,
+     52.29623
+    ]
+   },
+   {
+    "name": "Bornheide",
+    "osm": [
+     "r5822799"
+    ],
+    "flaeche_ha": 33.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.28204,
+    "lon": 8.11944,
+    "bbox": [
+     8.11342,
+     52.27589,
+     8.12893,
+     52.28559
+    ]
+   },
+   {
+    "name": "Wulfter Holz",
+    "osm": [
+     "w7798542"
+    ],
+    "flaeche_ha": 30.7,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.23391,
+    "lon": 8.0369,
+    "bbox": [
+     8.03019,
+     52.22803,
+     8.04159,
+     52.23955
+    ]
+   },
+   {
+    "name": "Gesmoldsberg",
+    "osm": [
+     "w65644217"
+    ],
+    "flaeche_ha": 26.8,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.24034,
+    "lon": 7.99163,
+    "bbox": [
+     7.98584,
+     52.23761,
+     7.99917,
+     52.24282
+    ]
+   },
+   {
+    "name": "Halter Berg",
+    "osm": [
+     "w7798381"
+    ],
+    "flaeche_ha": 25.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.29435,
+    "lon": 8.16328,
+    "bbox": [
+     8.15085,
+     52.29108,
+     8.16748,
+     52.2978
+    ]
+   },
+   {
+    "name": "Großes Pyer Ding",
+    "osm": [
+     "w7798549"
+    ],
+    "flaeche_ha": 24.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.31497,
+    "lon": 7.98562,
+    "bbox": [
+     7.97745,
+     52.31159,
+     7.98904,
+     52.31825
+    ]
+   },
+   {
+    "name": "Mordsiek",
+    "osm": [
+     "r5296520"
+    ],
+    "flaeche_ha": 20.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.24154,
+    "lon": 8.07726,
+    "bbox": [
+     8.07254,
+     52.23865,
+     8.08363,
+     52.24446
+    ]
+   }
+  ],
+  "see": [
+   {
+    "name": "Rubbenbruch-See",
+    "osm": [
+     "r2329222"
+    ],
+    "flaeche_ha": 23.9,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.0539,
+    "lat": 52.28617,
+    "lon": 7.98902,
+    "bbox": [
+     7.98399,
+     52.28133,
+     7.99248,
+     52.29097
+    ]
+   },
+   {
+    "name": "Attersee",
+    "osm": [
+     "w7808970"
+    ],
+    "flaeche_ha": 6.2,
+    "zone_ha": 1.4,
+    "anteil_zone": 0.2194,
+    "lat": 52.30148,
+    "lon": 7.93986,
+    "bbox": [
+     7.93518,
+     52.30031,
+     7.94214,
+     52.30267
+    ]
+   },
+   {
+    "name": "Regenrückhaltebecken",
+    "osm": [
+     "w402283212",
+     "w729513244"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.1496,
+    "lat": 52.30224,
+    "lon": 7.9792,
+    "bbox": [
+     7.97763,
+     52.30172,
+     7.9884,
+     52.30282
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "w1082179160",
+     "w1273836762",
+     "w134436193",
+     "w179252419",
+     "w184558300",
+     "w184558301",
+     "w184786558",
+     "w184787238",
+     "w184787239",
+     "w203655590",
+     "w233821564",
+     "w371538453",
+     "w371538454",
+     "w436998656",
+     "w456623742",
+     "w655426429",
+     "w687964215",
+     "w687964216",
+     "w721703910",
+     "w721703911",
+     "w762723707",
+     "w762723708",
+     "w762723709",
+     "w762723710",
+     "w762723711",
+     "w762723712",
+     "w762723713",
+     "w762723714",
+     "w762723715",
+     "w762723716",
+     "w768814104",
+     "w768814105",
+     "w768814106",
+     "w768814107",
+     "w7809182",
+     "w819256640",
+     "w823072793",
+     "w823072796",
+     "w90690309",
+     "w951788156"
+    ],
+    "flaeche_ha": 7.9,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.0602,
+    "lat": 52.31039,
+    "lon": 7.988,
+    "bbox": [
+     7.97655,
+     52.28056,
+     8.0438,
+     52.31382
+    ]
+   },
+   {
+    "name": "Sporthafen Osnabrück",
+    "osm": [
+     "w794514660"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.4,
+    "anteil_zone": 1.0,
+    "lat": 52.31003,
+    "lon": 7.99955,
+    "bbox": [
+     7.99902,
+     52.30938,
+     8.00006,
+     52.31063
+    ]
+   },
+   {
+    "name": "Nette-Altarm",
+    "osm": [
+     "w958203616"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.29641,
+    "lon": 8.03251,
+    "bbox": [
+     8.03199,
+     52.29593,
+     8.03415,
+     52.2969
+    ]
+   },
+   {
+    "name": "Neuer Hasearm",
+    "osm": [
+     "w184552883"
+    ],
+    "flaeche_ha": 0.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.3101,
+    "lon": 7.99531,
+    "bbox": [
+     7.99459,
+     52.30968,
+     7.99653,
+     52.31052
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Hasepark",
+    "osm": [
+     "w184554083"
+    ],
+    "flaeche_ha": 12.2,
+    "zone_ha": 8.0,
+    "anteil_zone": 0.6563,
+    "lat": 52.27225,
+    "lon": 8.07979,
+    "bbox": [
+     8.06253,
+     52.26891,
+     8.08457,
+     52.27546
+    ]
+   },
+   {
+    "name": "Bürgerpark",
+    "osm": [
+     "w35078458"
+    ],
+    "flaeche_ha": 11.0,
+    "zone_ha": 7.4,
+    "anteil_zone": 0.6795,
+    "lat": 52.28642,
+    "lon": 8.04825,
+    "bbox": [
+     8.04471,
+     52.28447,
+     8.0519,
+     52.28848
+    ]
+   },
+   {
+    "name": "Hasefriedhof",
+    "osm": [
+     "w388220818"
+    ],
+    "flaeche_ha": 10.3,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.1944,
+    "lat": 52.28933,
+    "lon": 8.04212,
+    "bbox": [
+     8.03992,
+     52.28705,
+     8.04466,
+     52.29168
+    ]
+   },
+   {
+    "name": "Johannisfriedhof",
+    "osm": [
+     "r8971701"
+    ],
+    "flaeche_ha": 6.4,
+    "zone_ha": 2.7,
+    "anteil_zone": 0.4227,
+    "lat": 52.26055,
+    "lon": 8.05381,
+    "bbox": [
+     8.05053,
+     52.25766,
+     8.05596,
+     52.26123
+    ]
+   },
+   {
+    "name": "Schlossgarten",
+    "osm": [
+     "w24503151"
+    ],
+    "flaeche_ha": 2.8,
+    "zone_ha": 2.8,
+    "anteil_zone": 0.9989,
+    "lat": 52.27033,
+    "lon": 8.04421,
+    "bbox": [
+     8.04255,
+     52.26898,
+     8.04504,
+     52.27197
+    ]
+   },
+   {
+    "name": "Grünzug Winkelhausenkaserne",
+    "osm": [
+     "w235216553"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.2432,
+    "lat": 52.2994,
+    "lon": 8.02932,
+    "bbox": [
+     8.0264,
+     52.29675,
+     8.03243,
+     52.30196
+    ]
+   },
+   {
+    "name": "Herrenteichswall",
+    "osm": [
+     "w35568950"
+    ],
+    "flaeche_ha": 2.2,
+    "zone_ha": 1.9,
+    "anteil_zone": 0.8867,
+    "lat": 52.2784,
+    "lon": 8.04719,
+    "bbox": [
+     8.04554,
+     52.2762,
+     8.0484,
+     52.28071
+    ]
+   },
+   {
+    "name": "TERRA.park",
+    "osm": [
+     "w175722425"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 1.6,
+    "anteil_zone": 0.7745,
+    "lat": 52.24774,
+    "lon": 8.07322,
+    "bbox": [
+     8.07185,
+     52.24693,
+     8.07426,
+     52.24858
+    ]
+   }
+  ],
+  "garten": [
+   {
+    "name": "Botanischer Garten",
+    "osm": [
+     "w24697501"
+    ],
+    "flaeche_ha": 4.6,
+    "zone_ha": 1.1,
+    "anteil_zone": 0.2452,
+    "lat": 52.28136,
+    "lon": 8.02822,
+    "bbox": [
+     8.02629,
+     52.28029,
+     8.0314,
+     52.28243
+    ]
+   },
+   {
+    "name": "Pfarrgarten",
+    "osm": [
+     "w296533123"
+    ],
+    "flaeche_ha": 1.3,
+    "zone_ha": 1.3,
+    "anteil_zone": 0.9901,
+    "lat": 52.27917,
+    "lon": 8.04554,
+    "bbox": [
+     8.0445,
+     52.27826,
+     8.04652,
+     52.28003
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Hochschule Osnabrück und Universität Osnabrück - Campus Westerberg",
+    "osm": [
+     "r21318981"
+    ],
+    "flaeche_ha": 21.7,
+    "zone_ha": 3.0,
+    "anteil_zone": 0.1392,
+    "lat": 52.28443,
+    "lon": 8.02337,
+    "bbox": [
+     8.01939,
+     52.28179,
+     8.02733,
+     52.28697
+    ]
+   },
+   {
+    "name": "Hochschule Osnabrück - Campus Haste",
+    "osm": [
+     "r14206303"
+    ],
+    "flaeche_ha": 17.7,
+    "zone_ha": 1.5,
+    "anteil_zone": 0.0848,
+    "lat": 52.30418,
+    "lon": 8.03908,
+    "bbox": [
+     8.03476,
+     52.30212,
+     8.0419,
+     52.30741
+    ]
+   },
+   {
+    "name": "Universität Osnabrück - Standort Innenstadt",
+    "osm": [
+     "r14186058"
+    ],
+    "flaeche_ha": 5.2,
+    "zone_ha": 0.7,
+    "anteil_zone": 0.1382,
+    "lat": 52.27088,
+    "lon": 8.04584,
+    "bbox": [
+     8.0408,
+     52.26979,
+     8.04827,
+     52.27363
+    ]
+   },
+   {
+    "name": "Hochschule Osnabrück - Caprivicampus",
+    "osm": [
+     "w60227942"
+    ],
+    "flaeche_ha": 3.5,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.0675,
+    "lat": 52.27761,
+    "lon": 8.02505,
+    "bbox": [
+     8.02255,
+     52.27697,
+     8.02768,
+     52.27812
+    ]
+   },
+   {
+    "name": "Hochschule Osnabrück - Institut für Musik",
+    "osm": [
+     "w197525685"
+    ],
+    "flaeche_ha": 1.1,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.5584,
+    "lat": 52.27617,
+    "lon": 8.02133,
+    "bbox": [
+     8.0204,
+     52.27552,
+     8.0223,
+     52.27692
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Theodor-Heuss-Platz",
+    "osm": [
+     "w1005697278"
+    ],
+    "flaeche_ha": 1.3,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.3756,
+    "lat": 52.2727,
+    "lon": 8.05949,
+    "bbox": [
+     8.05855,
+     52.272,
+     8.06054,
+     52.27341
+    ]
+   },
+   {
+    "name": "Rosenplatz",
+    "osm": [
+     "w768967628"
+    ],
+    "flaeche_ha": 1.2,
+    "zone_ha": 0.9,
+    "anteil_zone": 0.7384,
+    "lat": 52.26567,
+    "lon": 8.05294,
+    "bbox": [
+     8.05051,
+     52.26525,
+     8.05447,
+     52.26608
+    ]
+   },
+   {
+    "name": "Große Domsfreiheit",
+    "osm": [
+     "w144628440"
+    ],
+    "flaeche_ha": 0.9,
+    "zone_ha": 0.8,
+    "anteil_zone": 0.9611,
+    "lat": 52.27836,
+    "lon": 8.04444,
+    "bbox": [
+     8.04374,
+     52.27775,
+     8.04508,
+     52.27895
+    ]
+   },
+   {
+    "name": "Neumarkt",
+    "osm": [
+     "w768966826"
+    ],
+    "flaeche_ha": 0.9,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0004,
+    "lat": 52.27282,
+    "lon": 8.04929,
+    "bbox": [
+     8.04695,
+     52.27226,
+     8.05011,
+     52.27337
+    ]
+   },
+   {
+    "name": "Am Ledenhof",
+    "osm": [
+     "w1005702291"
+    ],
+    "flaeche_ha": 0.9,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.0701,
+    "lat": 52.27239,
+    "lon": 8.04451,
+    "bbox": [
+     8.04345,
+     52.27207,
+     8.0456,
+     52.27282
+    ]
+   },
+   {
+    "name": "Eberleplatz",
+    "osm": [
+     "w1005698647"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.3294,
+    "lat": 52.30656,
+    "lon": 8.0474,
+    "bbox": [
+     8.04686,
+     52.30606,
+     8.04909,
+     52.30712
+    ]
+   },
+   {
+    "name": "Nelson-Mandela-Platz",
+    "osm": [
+     "w381231918"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.5,
+    "anteil_zone": 1.0,
+    "lat": 52.28648,
+    "lon": 8.02308,
+    "bbox": [
+     8.02203,
+     52.28618,
+     8.02413,
+     52.28677
+    ]
+   },
+   {
+    "name": "Eversburger Platz",
+    "osm": [
+     "w768970240"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.29563,
+    "lon": 8.01191,
+    "bbox": [
+     8.01115,
+     52.29515,
+     8.01273,
+     52.29608
+    ]
+   },
+   {
+    "name": "Domhof",
+    "osm": [
+     "w343478004"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.4381,
+    "lat": 52.27744,
+    "lon": 8.044,
+    "bbox": [
+     8.04372,
+     52.27691,
+     8.04508,
+     52.27792
+    ]
+   },
+   {
+    "name": "Entrée-Platz",
+    "osm": [
+     "w360129696"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.4832,
+    "lat": 52.28793,
+    "lon": 8.01625,
+    "bbox": [
+     8.01576,
+     52.28759,
+     8.01678,
+     52.28836
+    ]
+   },
+   {
+    "name": "Marktplatz",
+    "osm": [
+     "w387027924"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0575,
+    "lat": 52.27751,
+    "lon": 8.04178,
+    "bbox": [
+     8.04102,
+     52.27719,
+     8.04348,
+     52.27786
+    ]
+   },
+   {
+    "name": "Rißmüllerplatz",
+    "osm": [
+     "w768961821"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.27894,
+    "lon": 8.03851,
+    "bbox": [
+     8.03795,
+     52.27863,
+     8.03907,
+     52.27925
+    ]
+   },
+   {
+    "name": "Heinrich-Lübke-Platz",
+    "osm": [
+     "w768962501"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.27095,
+    "lon": 8.02704,
+    "bbox": [
+     8.0264,
+     52.27059,
+     8.02754,
+     52.27132
+    ]
+   },
+   {
+    "name": "Arndtplatz",
+    "osm": [
+     "w768962991"
+    ],
+    "flaeche_ha": 0.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.27173,
+    "lon": 8.03774,
+    "bbox": [
+     8.03718,
+     52.27139,
+     8.03835,
+     52.27211
+    ]
+   },
+   {
+    "name": "August-Bebel-Platz",
+    "osm": [
+     "w768969754"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0725,
+    "lat": 52.27055,
+    "lon": 8.05854,
+    "bbox": [
+     8.0581,
+     52.27021,
+     8.05891,
+     52.27083
+    ]
+   },
+   {
+    "name": "Bismarckplatz",
+    "osm": [
+     "w768970206"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.27704,
+    "lon": 8.03396,
+    "bbox": [
+     8.03322,
+     52.27684,
+     8.03476,
+     52.27733
+    ]
+   },
+   {
+    "name": "Platz der Städtefreundschaften",
+    "osm": [
+     "w768970460"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0953,
+    "lat": 52.27632,
+    "lon": 8.03764,
+    "bbox": [
+     8.03705,
+     52.27589,
+     8.03811,
+     52.27668
+    ]
+   },
+   {
+    "name": "Widukindplatz",
+    "osm": [
+     "w1005698722"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.3,
+    "anteil_zone": 1.0,
+    "lat": 52.29449,
+    "lon": 8.0963,
+    "bbox": [
+     8.09596,
+     52.29425,
+     8.09711,
+     52.29499
+    ]
+   },
+   {
+    "name": "Dammer Hof",
+    "osm": [
+     "w1005699317"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.29553,
+    "lon": 8.06699,
+    "bbox": [
+     8.06647,
+     52.2952,
+     8.06742,
+     52.29585
+    ]
+   },
+   {
+    "name": "Nahner Kirchplatz",
+    "osm": [
+     "w1243068386"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.6753,
+    "lat": 52.24672,
+    "lon": 8.05973,
+    "bbox": [
+     8.05872,
+     52.24639,
+     8.06008,
+     52.24706
+    ]
+   },
+   {
+    "name": "Stresemannplatz",
+    "osm": [
+     "w233823861"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 52.27371,
+    "lon": 8.05474,
+    "bbox": [
+     8.0544,
+     52.27332,
+     8.05571,
+     52.27393
+    ]
+   },
+   {
+    "name": "Platz des 20. Juli",
+    "osm": [
+     "w294975404"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0016,
+    "lat": 52.27872,
+    "lon": 8.03934,
+    "bbox": [
+     8.0387,
+     52.27849,
+     8.03997,
+     52.27897
+    ]
+   },
+   {
+    "name": "ICO-Platz",
+    "osm": [
+     "r6034131"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 52.28762,
+    "lon": 8.01905,
+    "bbox": [
+     8.01868,
+     52.28739,
+     8.01943,
+     52.28791
+    ]
+   },
+   {
+    "name": "Ertmanplatz",
+    "osm": [
+     "w467578214"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 52.25627,
+    "lon": 8.07462,
+    "bbox": [
+     8.07445,
+     52.25589,
+     8.07495,
+     52.25724
+    ]
+   },
+   {
+    "name": "Berliner Platz",
+    "osm": [
+     "w768961776"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 0.9297,
+    "lat": 52.27566,
+    "lon": 8.05187,
+    "bbox": [
+     8.05134,
+     52.27541,
+     8.05229,
+     52.27593
+    ]
+   },
+   {
+    "name": "Otto-Brenner-Platz",
+    "osm": [
+     "w786611066"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.5624,
+    "lat": 52.26606,
+    "lon": 8.06122,
+    "bbox": [
+     8.06067,
+     52.26567,
+     8.06179,
+     52.26649
+    ]
+   },
+   {
+    "name": "Helmut-Kohl-Platz",
+    "osm": [
+     "w982668690"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.1963,
+    "lat": 52.27213,
+    "lon": 8.04072,
+    "bbox": [
+     8.04026,
+     52.27199,
+     8.04116,
+     52.27237
+    ]
+   }
+  ],
+  "strand": [
+   {
+    "name": "Badestrand Attersee",
+    "osm": [
+     "w174195873"
+    ],
+    "flaeche_ha": 0.2,
+    "zone_ha": 0.2,
+    "anteil_zone": 1.0,
+    "lat": 52.30092,
+    "lon": 7.93962,
+    "bbox": [
+     7.93908,
+     52.30047,
+     7.94075,
+     52.30136
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 354.9,
+   "zone_ha": 59.2,
+   "anteil_zone": 0.1667
+  },
+  {
+   "name": "Sporthafen Osnabrück",
+   "flaeche_ha": 6.4,
+   "zone_ha": 5.5,
+   "anteil_zone": 0.8605
+  },
+  {
+   "name": "Nette-Altarm",
+   "flaeche_ha": 7.0,
+   "zone_ha": 0.8,
+   "anteil_zone": 0.1156
+  },
+  {
+   "name": "Neuer Hasearm",
+   "flaeche_ha": 6.8,
+   "zone_ha": 0.8,
+   "anteil_zone": 0.1173
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 8.9,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 52.27808,
+  "lon": 8.06102,
+  "bbox": [
+   7.92864,
+   52.21711,
+   8.18187,
+   52.33873
+  ]
+ },
+ "orte": [
+  {
+   "name": "Große Straße",
+   "osm": [
+    "w1040014541",
+    "w1136059553",
+    "w122682315",
+    "w122682316",
+    "w1239665935",
+    "w1250791619",
+    "w1409276247",
+    "w1409276248",
+    "w1409276249",
+    "w1409735163",
+    "w150520584",
+    "w185523749",
+    "w185523751",
+    "w185523755",
+    "w232331563",
+    "w24663349",
+    "w24709922",
+    "w343478003",
+    "w343478004",
+    "w343478006",
+    "w35899599",
+    "w364309742",
+    "w381983466",
+    "w387032659",
+    "w387032719",
+    "w40873828",
+    "w476303292",
+    "w501258150",
+    "w501258151",
+    "w501258152",
+    "w501258153",
+    "w501258155",
+    "w7765025",
+    "w7765056",
+    "w7765243",
+    "w7765263",
+    "w7765347",
+    "w779580409",
+    "w841963205",
+    "w91641518",
+    "w91692053",
+    "w91692080",
+    "w930266054"
+   ],
+   "flaeche_ha": 3.38,
+   "bbox": [
+    8.04099,
+    52.27258,
+    8.04899,
+    52.27801
+   ],
+   "anteil_zone": 0.1647,
+   "art": "flaeche",
+   "lat": 52.27532,
+   "lon": 8.04536
+  },
+  {
+   "name": "Johannisstraße",
+   "osm": [
+    "w1087827149",
+    "w1333597316",
+    "w220767937",
+    "w387027077",
+    "w635039621",
+    "w7765099",
+    "w848487863",
+    "w848487864"
+   ],
+   "flaeche_ha": 0.52,
+   "bbox": [
+    8.04874,
+    52.27004,
+    8.05152,
+    52.27269
+   ],
+   "anteil_zone": 0.0155,
+   "art": "linie",
+   "lat": 52.27134,
+   "lon": 8.05019
+  },
+  {
+   "name": "Neumarkt",
+   "osm": [
+    "w768966826"
+   ],
+   "flaeche_ha": 0.92,
+   "bbox": [
+    8.04695,
+    52.27226,
+    8.05011,
+    52.27337
+   ],
+   "anteil_zone": 0.0004,
+   "art": "flaeche",
+   "lat": 52.27282,
+   "lon": 8.04929
+  },
+  {
+   "name": "Markt",
+   "osm": [
+    "w1040014541",
+    "w1250791619",
+    "w150520584",
+    "w476303292",
+    "w7765347",
+    "w841963205"
+   ],
+   "flaeche_ha": 0.4,
+   "bbox": [
+    8.04099,
+    52.27714,
+    8.04358,
+    52.27785
+   ],
+   "anteil_zone": 0.0295,
+   "art": "linie",
+   "lat": 52.27748,
+   "lon": 8.04197
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Landes Niedersachsen (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  52.274,
+  8.045
+ ],
+ "og_zoom": 13.0,
+ "bilder": [
+  [
+   "park",
+   "Schlossgarten",
+   "schlossgarten"
+  ],
+  [
+   "park",
+   "Bürgerpark",
+   "buergerpark"
+  ],
+  [
+   "park",
+   "Hasepark",
+   "hasepark"
+  ],
+  [
+   "ort",
+   "Große Straße",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "Neumarkt",
+   "neumarkt"
+  ],
+  [
+   "see",
+   "Rubbenbruch-See",
+   "rubbenbruchsee"
+  ]
+ ]
+}

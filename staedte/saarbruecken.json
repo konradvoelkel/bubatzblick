@@ -1,0 +1,809 @@
+{
+ "stadtflaeche_osm_km2": 167.43,
+ "wald": {
+  "flaeche_km2": 83.7,
+  "anteil_stadt": 0.4998,
+  "anteil_zone": 0.0346,
+  "anteil_zone_ohne_wald": 0.1579
+ },
+ "zonen_km2": 16.12,
+ "anteil": 0.09629,
+ "kategorien": {
+  "sports": {
+   "objekte": 509,
+   "zonen_km2": 9.36
+  },
+  "playground": {
+   "objekte": 208,
+   "zonen_km2": 4.63
+  },
+  "school": {
+   "objekte": 68,
+   "zonen_km2": 3.19
+  },
+  "kindergarten": {
+   "objekte": 101,
+   "zonen_km2": 2.67
+  },
+  "youth": {
+   "objekte": 42,
+   "zonen_km2": 0.69
+  },
+  "childcare": {
+   "objekte": 4,
+   "zonen_km2": 0.09
+  }
+ },
+ "objekte_gesamt": 932,
+ "merkmale": {
+  "wald": [
+   {
+    "name": "Staatsforst Saarbrücken",
+    "osm": [
+     "r1085958"
+    ],
+    "flaeche_ha": 2146.8,
+    "zone_ha": 26.4,
+    "anteil_zone": 0.0123,
+    "lat": 49.29289,
+    "lon": 6.98228,
+    "bbox": [
+     6.9549,
+     49.24708,
+     7.02781,
+     49.32264
+    ]
+   },
+   {
+    "name": "St. Johanner Stadtwald",
+    "osm": [
+     "r6604692"
+    ],
+    "flaeche_ha": 813.9,
+    "zone_ha": 65.4,
+    "anteil_zone": 0.0803,
+    "lat": 49.25843,
+    "lon": 7.02218,
+    "bbox": [
+     7.00252,
+     49.22745,
+     7.05722,
+     49.27138
+    ]
+   },
+   {
+    "name": "Staatsforst Völklingen",
+    "osm": [
+     "r7928293"
+    ],
+    "flaeche_ha": 456.7,
+    "zone_ha": 6.2,
+    "anteil_zone": 0.0136,
+    "lat": 49.26389,
+    "lon": 6.94755,
+    "bbox": [
+     6.93065,
+     49.24532,
+     6.96237,
+     49.28208
+    ]
+   },
+   {
+    "name": "Alt-Saarbrücker Stadtwald",
+    "osm": [
+     "r3597677"
+    ],
+    "flaeche_ha": 378.5,
+    "zone_ha": 13.6,
+    "anteil_zone": 0.0361,
+    "lat": 49.22566,
+    "lon": 6.94322,
+    "bbox": [
+     6.91967,
+     49.21453,
+     6.96225,
+     49.23668
+    ]
+   },
+   {
+    "name": "St. Arnualer Stiftswald",
+    "osm": [
+     "r5490207"
+    ],
+    "flaeche_ha": 320.0,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.01,
+    "lat": 49.19967,
+    "lon": 7.00522,
+    "bbox": [
+     6.97848,
+     49.18741,
+     7.02077,
+     49.21185
+    ]
+   },
+   {
+    "name": "Überwald",
+    "osm": [
+     "r5396808"
+    ],
+    "flaeche_ha": 52.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.18061,
+    "lon": 7.10421,
+    "bbox": [
+     7.08951,
+     49.17592,
+     7.11195,
+     49.18502
+    ]
+   },
+   {
+    "name": "Sitters",
+    "osm": [
+     "w15020670"
+    ],
+    "flaeche_ha": 28.1,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.1966,
+    "lon": 7.09043,
+    "bbox": [
+     7.08728,
+     49.19179,
+     7.09651,
+     49.20146
+    ]
+   }
+  ],
+  "fluss": [
+   {
+    "name": "Fluss",
+    "osm": [
+     "r6024886",
+     "w24154179",
+     "w24652063",
+     "w25361590",
+     "w294672585",
+     "w401612639",
+     "w401615401",
+     "w401619309",
+     "w464082565"
+    ],
+    "flaeche_ha": 76.6,
+    "zone_ha": 13.9,
+    "anteil_zone": 0.1814,
+    "lat": 49.21285,
+    "lon": 7.02318,
+    "bbox": [
+     6.90023,
+     49.17439,
+     7.03591,
+     49.24935
+    ]
+   },
+   {
+    "name": "Osthafen",
+    "osm": [
+     "w24837527"
+    ],
+    "flaeche_ha": 3.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.22193,
+    "lon": 7.01973,
+    "bbox": [
+     7.01837,
+     49.22065,
+     7.02434,
+     49.22323
+    ]
+   },
+   {
+    "name": "Saar",
+    "osm": [
+     "w402609587"
+    ],
+    "flaeche_ha": 1.5,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.2336,
+    "lat": 49.22491,
+    "lon": 7.01171,
+    "bbox": [
+     7.0068,
+     49.22422,
+     7.01267,
+     49.22553
+    ]
+   }
+  ],
+  "see": [
+   {
+    "name": "Burbacher Waldweiher",
+    "osm": [
+     "w24323525"
+    ],
+    "flaeche_ha": 4.6,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.1327,
+    "lat": 49.2586,
+    "lon": 6.946,
+    "bbox": [
+     6.94307,
+     49.25563,
+     6.94862,
+     49.26157
+    ]
+   },
+   {
+    "name": "Deutschmühlenweiher",
+    "osm": [
+     "r11372080"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.1191,
+    "lat": 49.22733,
+    "lon": 6.96298,
+    "bbox": [
+     6.96155,
+     49.22547,
+     6.96389,
+     49.22917
+    ]
+   },
+   {
+    "name": "Absinkweiher Fischbachtal",
+    "osm": [
+     "w24161953"
+    ],
+    "flaeche_ha": 2.4,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.27926,
+    "lon": 6.99737,
+    "bbox": [
+     6.99622,
+     49.27789,
+     6.9994,
+     49.28074
+    ]
+   },
+   {
+    "name": "Netzbachweiher",
+    "osm": [
+     "w26197422"
+    ],
+    "flaeche_ha": 2.1,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.2758,
+    "lat": 49.29105,
+    "lon": 7.00981,
+    "bbox": [
+     7.00838,
+     49.28995,
+     7.01228,
+     49.29215
+    ]
+   }
+  ],
+  "park": [
+   {
+    "name": "Deutsch-Französischer Garten",
+    "osm": [
+     "r6014769"
+    ],
+    "flaeche_ha": 35.2,
+    "zone_ha": 6.4,
+    "anteil_zone": 0.1805,
+    "lat": 49.22483,
+    "lon": 6.96686,
+    "bbox": [
+     6.96078,
+     49.21956,
+     6.9733,
+     49.23006
+    ]
+   },
+   {
+    "name": "Wildpark Saarbrücken",
+    "osm": [
+     "w366476165"
+    ],
+    "flaeche_ha": 15.2,
+    "zone_ha": 3.9,
+    "anteil_zone": 0.2568,
+    "lat": 49.25126,
+    "lon": 7.02748,
+    "bbox": [
+     7.02364,
+     49.24888,
+     7.03449,
+     49.25373
+    ]
+   },
+   {
+    "name": "Bürgerpark",
+    "osm": [
+     "w847718858"
+    ],
+    "flaeche_ha": 8.0,
+    "zone_ha": 3.2,
+    "anteil_zone": 0.4041,
+    "lat": 49.23832,
+    "lon": 6.98088,
+    "bbox": [
+     6.97856,
+     49.23694,
+     6.98645,
+     49.23977
+    ]
+   },
+   {
+    "name": "Ludwigspark",
+    "osm": [
+     "w402648345"
+    ],
+    "flaeche_ha": 6.4,
+    "zone_ha": 5.1,
+    "anteil_zone": 0.8012,
+    "lat": 49.24524,
+    "lon": 6.98242,
+    "bbox": [
+     6.98133,
+     49.24349,
+     6.98559,
+     49.24704
+    ]
+   },
+   {
+    "name": "Staden",
+    "osm": [
+     "w27206347"
+    ],
+    "flaeche_ha": 6.2,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.4116,
+    "lat": 49.2266,
+    "lon": 7.00493,
+    "bbox": [
+     7.00197,
+     49.22362,
+     7.01392,
+     49.22967
+    ]
+   },
+   {
+    "name": "Alter Friedhof Alt-Saarbrücken",
+    "osm": [
+     "w400843001"
+    ],
+    "flaeche_ha": 4.3,
+    "zone_ha": 2.2,
+    "anteil_zone": 0.5069,
+    "lat": 49.23022,
+    "lon": 6.97662,
+    "bbox": [
+     6.97352,
+     49.22894,
+     6.97842,
+     49.23144
+    ]
+   },
+   {
+    "name": "Alter Friedhof Malstatt",
+    "osm": [
+     "w136822064"
+    ],
+    "flaeche_ha": 3.1,
+    "zone_ha": 2.0,
+    "anteil_zone": 0.634,
+    "lat": 49.24875,
+    "lon": 6.97404,
+    "bbox": [
+     6.97292,
+     49.24724,
+     6.97514,
+     49.25012
+    ]
+   },
+   {
+    "name": "Ehemaliger Botanischer Garten",
+    "osm": [
+     "w30965591"
+    ],
+    "flaeche_ha": 2.6,
+    "zone_ha": 2.5,
+    "anteil_zone": 0.9965,
+    "lat": 49.25388,
+    "lon": 7.03731,
+    "bbox": [
+     7.03538,
+     49.25296,
+     7.03877,
+     49.25474
+    ]
+   }
+  ],
+  "hochschule": [
+   {
+    "name": "Universität des Saarlandes",
+    "osm": [
+     "w30965590"
+    ],
+    "flaeche_ha": 45.5,
+    "zone_ha": 16.9,
+    "anteil_zone": 0.3711,
+    "lat": 49.25442,
+    "lon": 7.04149,
+    "bbox": [
+     7.03326,
+     49.25051,
+     7.04736,
+     49.25822
+    ]
+   },
+   {
+    "name": "htw saar Campus Alt-Saarbrücken",
+    "osm": [
+     "r13777195"
+    ],
+    "flaeche_ha": 3.3,
+    "zone_ha": 0.6,
+    "anteil_zone": 0.1703,
+    "lat": 49.23548,
+    "lon": 6.97469,
+    "bbox": [
+     6.97,
+     49.23463,
+     6.9773,
+     49.236
+    ]
+   },
+   {
+    "name": "HTW - Campus Rotenbühl",
+    "osm": [
+     "w169952835"
+    ],
+    "flaeche_ha": 1.7,
+    "zone_ha": 1.0,
+    "anteil_zone": 0.5994,
+    "lat": 49.24362,
+    "lon": 7.01526,
+    "bbox": [
+     7.01395,
+     49.24283,
+     7.0176,
+     49.24446
+    ]
+   }
+  ],
+  "platz": [
+   {
+    "name": "Ludwigsplatz",
+    "osm": [
+     "r6029646"
+    ],
+    "flaeche_ha": 0.7,
+    "zone_ha": 0.5,
+    "anteil_zone": 0.6572,
+    "lat": 49.23262,
+    "lon": 6.98579,
+    "bbox": [
+     6.98536,
+     49.23226,
+     6.9876,
+     49.23298
+    ]
+   },
+   {
+    "name": "Schloßplatz",
+    "osm": [
+     "r13828325"
+    ],
+    "flaeche_ha": 0.6,
+    "zone_ha": 0.0,
+    "anteil_zone": 0.0,
+    "lat": 49.23045,
+    "lon": 6.99142,
+    "bbox": [
+     6.99067,
+     49.23001,
+     6.99244,
+     49.23088
+    ]
+   },
+   {
+    "name": "Tifliser Platz",
+    "osm": [
+     "w47939120"
+    ],
+    "flaeche_ha": 0.5,
+    "zone_ha": 0.4,
+    "anteil_zone": 0.8408,
+    "lat": 49.23131,
+    "lon": 6.99544,
+    "bbox": [
+     6.99453,
+     49.23069,
+     6.99618,
+     49.23186
+    ]
+   },
+   {
+    "name": "Französischer Platz",
+    "osm": [
+     "w35620292"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.293,
+    "lat": 49.25338,
+    "lon": 7.04006,
+    "bbox": [
+     7.03948,
+     49.25317,
+     7.04064,
+     49.2536
+    ]
+   },
+   {
+    "name": "Rathausplatz",
+    "osm": [
+     "r13418967"
+    ],
+    "flaeche_ha": 0.3,
+    "zone_ha": 0.1,
+    "anteil_zone": 0.3801,
+    "lat": 49.2351,
+    "lon": 6.99684,
+    "bbox": [
+     6.99626,
+     49.23482,
+     6.99742,
+     49.23539
+    ]
+   }
+  ]
+ },
+ "uferstreifen_100m": [
+  {
+   "name": "Fluss",
+   "flaeche_ha": 294.9,
+   "zone_ha": 56.0,
+   "anteil_zone": 0.19
+  },
+  {
+   "name": "Osthafen",
+   "flaeche_ha": 15.8,
+   "zone_ha": 1.1,
+   "anteil_zone": 0.0708
+  },
+  {
+   "name": "Saar",
+   "flaeche_ha": 12.7,
+   "zone_ha": 3.7,
+   "anteil_zone": 0.2929
+  }
+ ],
+ "fussgaengerzonen": {
+  "flaeche_ha": 23.1,
+  "groesste": []
+ },
+ "ansicht_stadt": {
+  "lat": 49.2464,
+  "lon": 6.98832,
+  "bbox": [
+   6.82333,
+   49.16784,
+   7.13951,
+   49.32445
+  ]
+ },
+ "orte": [
+  {
+   "name": "Bahnhofstraße",
+   "osm": [
+    "r8169309",
+    "w1000073723",
+    "w1002768089",
+    "w1002768090",
+    "w1002768092",
+    "w1002768093",
+    "w1002768094",
+    "w1002768095",
+    "w1002768096",
+    "w1002768097",
+    "w103530233",
+    "w111483938",
+    "w111483942",
+    "w111483944",
+    "w111519873",
+    "w111958707",
+    "w1495318709",
+    "w1495318711",
+    "w1495318713",
+    "w1495318714",
+    "w1531071191",
+    "w1571145055",
+    "w188445054",
+    "w401933551",
+    "w541735708",
+    "w572226406",
+    "w572492522",
+    "w584001477",
+    "w880329738",
+    "w880330048",
+    "w956356783",
+    "w997803750",
+    "w997803753",
+    "w997803755",
+    "w997803756",
+    "w997803757"
+   ],
+   "flaeche_ha": 1.63,
+   "bbox": [
+    6.99014,
+    49.23302,
+    6.99602,
+    49.23914
+   ],
+   "anteil_zone": 0.0955,
+   "art": "flaeche",
+   "lat": 49.23643,
+   "lon": 6.9928
+  },
+  {
+   "name": "St. Johanner Markt",
+   "osm": [
+    "r11361803",
+    "w1152811628",
+    "w123207314",
+    "w123325663",
+    "w123330198",
+    "w125609996",
+    "w181885663",
+    "w24279673"
+   ],
+   "flaeche_ha": 0.55,
+   "bbox": [
+    6.99531,
+    49.23207,
+    6.99784,
+    49.23324
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.23265,
+   "lon": 6.99623
+  },
+  {
+   "name": "Ludwigsplatz",
+   "osm": [
+    "r6029646"
+   ],
+   "flaeche_ha": 0.72,
+   "bbox": [
+    6.98536,
+    49.23226,
+    6.9876,
+    49.23298
+   ],
+   "anteil_zone": 0.6572,
+   "art": "flaeche",
+   "lat": 49.23262,
+   "lon": 6.98579
+  },
+  {
+   "name": "Schloßplatz",
+   "osm": [
+    "r13828325",
+    "w401948414",
+    "w401948764",
+    "w66896912"
+   ],
+   "flaeche_ha": 0.62,
+   "bbox": [
+    6.99067,
+    49.23001,
+    6.99244,
+    49.23088
+   ],
+   "anteil_zone": 0.0,
+   "art": "flaeche",
+   "lat": 49.23045,
+   "lon": 6.99142
+  },
+  {
+   "name": "Berliner Promenade",
+   "osm": [
+    "w124764792",
+    "w1304650151",
+    "w1304650152",
+    "w1304650153",
+    "w49207929",
+    "w747467746",
+    "w747467747",
+    "w747467748",
+    "w747467749",
+    "w747467751",
+    "w747467753",
+    "w747467754"
+   ],
+   "flaeche_ha": 0.55,
+   "bbox": [
+    6.99045,
+    49.23421,
+    6.99309,
+    49.23704
+   ],
+   "anteil_zone": 0.0517,
+   "art": "flaeche",
+   "lat": 49.23561,
+   "lon": 6.99241
+  },
+  {
+   "name": "Tifliser Platz",
+   "osm": [
+    "w47939120"
+   ],
+   "flaeche_ha": 0.53,
+   "bbox": [
+    6.99453,
+    49.23069,
+    6.99618,
+    49.23186
+   ],
+   "anteil_zone": 0.8408,
+   "art": "flaeche",
+   "lat": 49.23131,
+   "lon": 6.99544
+  }
+ ],
+ "stand": {
+  "datum": "2026-11-27",
+  "datum_lang": "27. November 2026",
+  "monat": "November 2026",
+  "tags_json": 6,
+  "osm": "2026-11-26T21:21:01Z",
+  "quelle": "lokaler Lauf auf dem Auszug des Saarlandes (Geofabrik), Zonen wie auf der Karte"
+ },
+ "og_mitte": [
+  49.235,
+  6.996
+ ],
+ "og_zoom": 12.8,
+ "bilder": [
+  [
+   "park",
+   "Deutsch-Französischer Garten",
+   "dfg"
+  ],
+  [
+   "park",
+   "Bürgerpark",
+   "buergerpark"
+  ],
+  [
+   "park",
+   "Staden",
+   "staden"
+  ],
+  [
+   "ort",
+   "Bahnhofstraße",
+   "fussgaengerzone"
+  ],
+  [
+   "ort",
+   "St. Johanner Markt",
+   "st-johanner-markt"
+  ],
+  [
+   "hochschule",
+   "Universität des Saarlandes",
+   "uni"
+  ]
+ ]
+}
