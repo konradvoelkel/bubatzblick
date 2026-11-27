@@ -35,7 +35,8 @@ Park liegt nur ein Spielplatz, rundherum aber sieben Schulen. Vom Löwenwall sin
 {{ort:Löwenwall}}, auf einem 100 Meter breiten Streifen Land entlang der Flüsse {{ufer:Fluss}}. Im
 Theaterpark liegen {{park:Theaterpark}} in einer Zone, in Viewegs Garten {{park:Viewegs Garten}}, im
 Heidbergpark {{park:Heidbergpark}}. Vom Südsee liegen {{see:Südsee}} der Wasserfläche in einer
-Zone, vom Heidbergsee {{see:Heidbergsee}}.
+Zone, vom Heidbergsee {{see:Heidbergsee}}. Der Südstadtpark liegt zu {{park:Südstadtpark}} in einer
+Zone, der Nordpark zu {{park:Nordpark}}, der Stadtpark zu {{park:Stadtpark}}.
 
 [[bild:inselwallpark]]
 

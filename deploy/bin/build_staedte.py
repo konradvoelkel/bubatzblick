@@ -357,6 +357,13 @@ def entfernung_km(a: dict, b: dict) -> float:
 
 NACHBARN = 3
 UEBERSCHRIFT_NACHBARN = "Nachbarstädte im Vergleich"
+# Ueberschrift im Text -> Ueberschrift auf der Seite; der Anker kommt vom Text links.
+STANDARD_UEBERSCHRIFTEN = {
+    "Woher die Zonen kommen": "Woher die Zonen in {name} kommen",
+    "Was sonst noch gilt": "Was sonst noch in {name} gilt",
+    "Häufige Fragen": "Häufige Fragen zu {name}",
+    UEBERSCHRIFT_NACHBARN: "Nachbarstädte von {name} im Vergleich",
+}
 
 
 def nachbarn_md(stadt: dict, d: dict) -> str:
@@ -434,6 +441,10 @@ def pruefe_anker(slug: str, body: str) -> None:
 def seite(stadt: dict, d: dict, body: str) -> str:
     slug, name = stadt["slug"], stadt["name"]
     titel = f"Kiffen in {name}: wo es verboten ist"
+    # Mit " | BubatzBlick" ueber 60 Zeichen schneidet die Trefferliste ab: dann der Kurzname
+    # ("Frankfurt"); Ueberschrift und Text behalten den vollen Namen.
+    if len(titel) + len(" | BubatzBlick") > 60 and stadt.get("kurzname"):
+        titel = f"Kiffen in {stadt['kurzname']}: wo es verboten ist"
     beschreibung = (
         f"In {name} liegen {prozent(d['anteil'], 1)} der Stadtfläche ({zahl(d['zonen_km2'])} km²) "
         "in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten. "
@@ -587,7 +598,7 @@ def uebersicht(eintraege: list[tuple[dict, dict]], grau: list[dict]) -> pathlib.
     eintraege = sorted(eintraege, key=lambda e: sortierschluessel(e[0]["name"]))
     n = len(eintraege)
     url = "__SITE_URL__/stadt/"
-    titel = "Kiffen in deutschen Städten: wo es verboten ist"
+    titel = "Kiffen in deutschen Städten: die Verbotszonen"
     beschreibung = (
         f"Wie viel Stadtfläche in Sichtweite von Schulen, Kitas, Spielplätzen und Sportstätten "
         f"liegt: {n} Städte mit Karte, Parks, Fußgängerzonen und Regeln vor Ort."
@@ -694,10 +705,21 @@ def baue(stadt: dict) -> pathlib.Path:
     if "\n## Häufige Fragen" not in src:
         raise SystemExit(f"staedte/{slug}.md: Abschnitt „Häufige Fragen“ fehlt")
     src = src.replace("\n## Häufige Fragen", "\n" + nachbarn_md(stadt, d) + "## Häufige Fragen", 1)
+    # Die Standard-Ueberschriften mit dem Stadtnamen, die Anker bleiben die alten (Links von
+    # anderen Seiten zeigen darauf).
+    for alt, neu in STANDARD_UEBERSCHRIFTEN.items():
+        src = re.sub(
+            rf"^## {re.escape(alt)}$",
+            f"## {neu.format(name=stadt['name'])} {{#{anker(alt)}}}",
+            src,
+            flags=re.M,
+        )
     src = re.sub(
         r"^\[\[bild:([a-z0-9-]+)\]\]$", lambda m: bild_figur(slug, m.group(1), d), src, flags=re.M
     )
-    body = markdown.markdown(src, extensions=["tables", "sane_lists", "toc", "md_in_html"])
+    body = markdown.markdown(
+        src, extensions=["tables", "sane_lists", "attr_list", "toc", "md_in_html"]
+    )
     pruefe_anker(slug, body)
     ZIEL.mkdir(parents=True, exist_ok=True)
     out = ZIEL / f"{slug}.html"

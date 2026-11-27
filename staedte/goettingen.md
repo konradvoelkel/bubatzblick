@@ -34,7 +34,8 @@ Spielplätze am Ufer. Auf einem 100 Meter breiten Streifen Land entlang der Flü
 {{ufer:Fluss}}. Kleinere Parks liegen fast ganz in einer Zone: der Levinsche Park zu
 {{park:Levinscher Park}}, der Klosterpark zu {{park:Klosterpark}}. Im Leinepark sind es
 {{park:Leinepark}}, im Stadtpark {{park:Stadtpark}}; der Stadtwald mit {{wald:Göttinger Stadtwald:ha}}
-liegt zu {{wald:Göttinger Stadtwald}} in einer Zone.
+liegt zu {{wald:Göttinger Stadtwald}} in einer Zone. Im Pfalz-Grona-Park sind es
+{{park:Pfalz-Grona-Park}}, im Leinebergpark {{park:Leinebergpark}}.
 
 [[bild:kiessee]]
 
@@ -61,7 +62,8 @@ Hochschulen sind nach § 5 KCanG keine Verbotsorte. Vom Zentralcampus der **Univ
 Kinderkrippe, vom Nordcampus mit den naturwissenschaftlichen Fakultäten
 {{hochschule:Nordcampus Georg-August-Universität Göttingen}}. Die **HAWK** verbietet bei Hochschulveranstaltungen auf ihrem Gelände Drogen und andere
 berauschende Mittel
-([Hausordnung](https://www.hawk.de/sites/default/files/2024-04/rlhausr_z_00_hausordnung_hawk_2024_0.pdf)).
+([Hausordnung](https://www.hawk.de/sites/default/files/2024-04/rlhausr_z_00_hausordnung_hawk_2024_0.pdf)). Das Gelände des
+Deutschen Zentrums für Luft- und Raumfahrt liegt zu {{hochschule:DLR-Standort Göttingen}} in einer Zone.
 
 [[bild:uni]]
 

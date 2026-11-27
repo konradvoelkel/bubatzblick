@@ -37,7 +37,8 @@ Wasserfläche. Für die Aue hat die Stadt eine eigene Verordnung, auch sie nennt
 ([Fuldaauen-Ordnung](https://www.kassel.de/satzungen/fuldaauen-ordnung.php)). Auf einem 100 Meter
 breiten Streifen Land entlang der Flüsse sind es {{ufer:Fluss}}. Die Goetheanlage liegt fast ganz in
 einer Zone ({{park:Goetheanlage}}), das Tannenwäldchen zu {{park:Tannenwäldchen}}, die Kunsthochschule
-zu {{hochschule:Kunsthochschule Kassel}}.
+zu {{hochschule:Kunsthochschule Kassel}}. Von der Regattastrecke liegen {{see:Regattastrecke}}
+der Wasserfläche in einer Zone, vom Aueteich in der Karlsaue {{see:Aueteich}}.
 
 [[bild:bugasee]]
 

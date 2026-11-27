@@ -36,7 +36,9 @@ Rauchen noch Cannabis; der Rasen ist tabu, und nach Einbruch der Dunkelheit ist 
 Auf den **Mainwiesen** liegen {{ort:Mainwiesen}} in einer Zone, um den Spielplatz und den Skatepark;
 auf einem 100 Meter breiten Streifen Land entlang des Mains sind es {{ufer:Fluss}}. Auf dem früheren
 Landesgartenschaugelände am Hubland liegen sieben Spielplätze und vier Sportanlagen, entsprechend
-{{park:Landesgartenschau-Gelände 2018}}.
+{{park:Landesgartenschau-Gelände 2018}}. Im Ringpark sind es je nach Abschnitt
+unterschiedlich viele: am Rennweger Glacis {{park:Ringpark Rennweger Glacis}}, in Klein-Nizza
+{{park:Ringpark Klein-Nizza}}; an der Lehnleite {{park:Lehnleite}}.
 
 [[bild:mainwiesen]]
 
