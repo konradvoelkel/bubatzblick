@@ -60,6 +60,8 @@ ERLAUBT: dict[tuple[str, str], str] = {
         "Datum (TT.MM.)",
     ): "Koordinatenbereiche wie 6.79..6.792",
     ("rust/bubatzcore/tests/ogc_repro.rs", "Datum (TT.MM.)"): "Versionsnummern von i_overlay",
+    # Quell-URL der Stadt Essen (media.essen.de/media/wwwessende/...), kein lokaler Pfad.
+    ("config/fussgaengerzonen.*", "Pfad einer Arbeitsumgebung"): "URL der Stadt Essen",
     # Lokale Vorschau, keine Serveradresse.
     ("Makefile", "Serveradresse"): "127.0.0.1 als Bind-Adresse der Vorschau",
     ("README.md", "Serveradresse"): "127.0.0.1 als Bind-Adresse der Vorschau",

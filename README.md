@@ -77,7 +77,9 @@ beides per HTTP-Range. Pfade in `viewer/config.js` (setzt der Deploy).
 Alternativ `?pmtiles=<URL>`, `?tiles=<Vorlage>` oder `bubatz serve`.
 
 Zwei zuschaltbare Ebenen neben dem Rot: Fußgängerzonen aus OpenStreetMap
-(blau, 7–20 Uhr) und örtliche Verbote außerhalb des KCanG (lila) — kommunale
+(blau, 7–20 Uhr; dazu amtlich belegte Abschnitte, die OSM noch nicht führt, von
+Hand in `config/fussgaengerzonen.toml`, über `scripts/fussgaengerzonen.py` in
+dieselben Kacheln) und örtliche Verbote außerhalb des KCanG (lila) — kommunale
 Verordnungen mit Fläche und Laufzeit, von Hand in `config/sonderzonen.toml`
 gepflegt; `scripts/sonderzonen.py` zeichnet daraus `viewer/sonderzonen.json`
 über die im Rechtsakt genannten Straßen und Plätze (Overpass).

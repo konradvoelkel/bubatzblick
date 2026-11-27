@@ -46,7 +46,11 @@ genau der Tag-Datei erzeugt, mit der die Karte gerechnet wird
   die in OpenStreetMap aus mehreren Teilen zusammengesetzt sind
   (Multipolygon-Relationen), sind ebenfalls erfasst: nach Stückzahl rund 5 %,
   nach Fläche fast die Hälfte dessen, was die einfachen Flächen ausmachen —
-  es sind die großen Plätze.
+  es sind die großen Plätze. Umgekehrt fehlen in OpenStreetMap manche
+  Fußgängerzonen, die eine Stadt amtlich nennt (in einer Satzung, einem
+  Straßenverzeichnis, einer Widmung). Solche Abschnitte tragen wir von Hand nach
+  (`config/fussgaengerzonen.toml`); sie stehen in derselben blauen Ebene, und ihr
+  Popup nennt die Quelle. Sobald OpenStreetMap sie führt, fallen sie hier weg.
 - **Örtliche Verbote außerhalb des KCanG.** Städte können auf eigener
   Rechtsgrundlage weitere Flächen belegen — in Bayern per Verordnung nach
   Art. 30 LStVG (Konsum und meist auch das Mitführen zum Konsum, befristet

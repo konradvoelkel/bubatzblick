@@ -1,0 +1,425 @@
+# Fussgaengerzonen (Paragraf 5 Abs. 2 Nr. 5 KCanG), die eine Stadt amtlich nennt, die
+# OpenStreetMap aber (noch) nicht als highway=pedestrian fuehrt. Handgepflegt.
+# scripts/fussgaengerzonen.py holt die genannten Strassen aus OSM (Overpass) und schreibt
+# nur die Abschnitte, die dort NICHT schon Fussgaengerzone sind, nach
+# config/fussgaengerzonen.geojsonl; `bubatz pedestrian --extra-geojson` haengt sie an die
+# Ebene aus OSM an (dieselben Kacheln, dasselbe Blau, 7 bis 20 Uhr).
+#
+# Aufgenommen wird nur, was eine amtliche Quelle als Fussgaengerzone nennt: Satzung,
+# Verordnung, Strassen- oder Reinigungsverzeichnis mit eigener Spalte, Widmung oder
+# Teileinziehung, amtlicher Stadtplan mit eingefaerbter Fussgaengerzone. Nicht: Presse
+# allein, verkehrsberuhigte Bereiche (Zeichen 325), Wohnverkehrsstrassen,
+# Gebuehrenzonen ohne das Wort Fussgaengerzone. Wo OSM mehr als die Quelle zeigt,
+# bleibt das hier unberuehrt (die Datei ergaenzt nur).
+#
+# Schoener waere es, die Abschnitte in OSM einzutragen; dann faellt der Eintrag hier beim
+# naechsten Lauf von selbst weg. Bis dahin steht die Quelle im Popup.
+#
+# Je Quelle:
+#   id, ort, name     name: wie die Quelle die Zone nennt, steht im Popup
+#   beleg             was die Quelle sagt (kurz), steht im Popup
+#   quelle            URL der Quelle (https)
+#   bbox              [sued, west, nord, ost] fuer die Overpass-Abfrage
+#   [[zone.teil]]     wie in sonderzonen.toml: name = Regex auf OSM-name, ids = [..],
+#                     lon_min/lon_max/lat_min/lat_max (Mittelpunkt des Wegs),
+#                     ausschnitt = [sued, west, nord, ost] (Weg darauf zuschneiden),
+#                     ohne_ids = [..], optional = true
+
+[[zone]]
+id = "goettingen-innenstadt"
+ort = "Göttingen"
+name = "Fußgängerzone Innenstadt"
+beleg = "Straßenverzeichnis zur Straßenreinigungsverordnung (Stand Januar 2026), Spalte Fußgängerzone"
+quelle = "https://www.goettingen.de/portal/dokumenteplus-900000281-25480.html?ordner=1&containerSort=0&schwelle_zuklappen=10&naviID=0&brotID=0"
+bbox = [51.528, 9.926, 51.540, 9.944]
+
+[[zone.teil]]
+# im Verzeichnis ganz angekreuzt
+name = "^(Groner Straße|Markt|Kornmarkt|Johannisstraße|Johanniskirchhof|Wilhelmsplatz|Jüdenstraße|Nikolaikirchhof|Düstere Straße|Stumpfebiel|Gotmarstraße|Zindelstraße|Speckstraße|Petrosilienstraße|Jacobikirchhof)$"
+
+[[zone.teil]]
+# Weender Straße zwischen Markt und Jüdenstraße/Stumpfebiel
+name = "^Weender Straße$"
+ausschnitt = [51.5325, 9.9340, 51.53617, 9.9360]
+
+[[zone.teil]]
+# Barfüßerstraße von der Weender Straße über die Jüdenstraße bis zum Wilhelmsplatz
+name = "^Barfüßerstraße$"
+
+[[zone.teil]]
+# Theaterstraße von der Weender Straße über die Jüdenstraße bis zur Burgstraße
+name = "^Theaterstraße$"
+ausschnitt = [51.5343, 9.9350, 51.5351, 9.93786]
+
+[[zone.teil]]
+# Burgstraße von der Friedrichstraße bis zur Roten Straße
+name = "^Burgstraße$"
+ausschnitt = [51.5330, 9.9380, 51.53399, 9.9390]
+
+[[zone.teil]]
+# Burgstraße vom Ritterplan bis zur Theaterstraße
+name = "^Burgstraße$"
+ausschnitt = [51.53497, 9.9370, 51.5359, 9.9380]
+
+[[zone.teil]]
+# Rote Straße vom Kornmarkt bis zur Kurze-Geismar-Straße
+name = "^Rote Straße$"
+ausschnitt = [51.5324, 9.9352, 51.5330, 9.93705]
+
+[[zone.teil]]
+# Kurze Straße von der Turmstraße bis zur Lange-Geismar-Straße
+name = "^Kurze Straße$"
+ausschnitt = [51.53081, 9.9352, 51.5319, 9.9362]
+
+[[zone.teil]]
+# Lange-Geismar-Straße westlich der Kurze-Geismar-Straße
+name = "^Lange-Geismar-Straße$"
+ausschnitt = [51.5316, 9.9354, 51.5320, 9.93768]
+
+[[zone.teil]]
+# Mauerstraße von der Lange-Geismar-Straße bis zur Kurze-Geismar-Straße
+name = "^Mauerstraße$"
+ausschnitt = [51.5316, 9.9362, 51.53228, 9.93732]
+
+[[zone.teil]]
+# Nikolaistraße von der Groner Straße bis zur Turmstraße
+name = "^Nikolaistraße$"
+ausschnitt = [51.53036, 9.9340, 51.5320, 9.9350]
+
+[[zone.teil]]
+# Turmstraße von der Nikolaistraße bis zur Düsteren Straße
+name = "^Turmstraße$"
+lon_max = 9.9346
+ausschnitt = [51.5301, 9.93333, 51.5306, 9.93457]
+
+[[zone.teil]]
+# Prinzenstraße vom Stumpfebiel bis zur Weender Straße (der Abschnitt ab Goethe-Allee
+# bleibt weg, siehe Sondernutzungsgebuehrensatzung)
+name = "^Prinzenstraße$"
+ausschnitt = [51.5343, 9.93393, 51.5346, 9.9352]
+
+[[zone.teil]]
+# Mühlenstraße von der Weender Straße bis zum Stumpfebiel
+name = "^Mühlenstraße$"
+ausschnitt = [51.5350, 9.93387, 51.5354, 9.9352]
+
+[[zone.teil]]
+# Paulinerstraße vom Papendiek über die Gotmarstraße bis zur Zindelstraße
+name = "^Paulinerstraße$"
+
+[[zone]]
+id = "braunschweig-stadtplan"
+ort = "Braunschweig"
+name = "Fußgängerzone Innenstadt"
+beleg = "Stadtplan der Touristinfo (Kartengrundlage Stadt Braunschweig, Abteilung Geoinformation, 2023), Fußgängerzone eingefärbt"
+quelle = "https://www.braunschweig.de/tourismus/touristinfo/prospekte/katalog/Stadtplan-light-Braunschweig.pdf"
+bbox = [52.258, 10.514, 52.268, 10.532]
+
+[[zone.teil]]
+# im Plan ganz eingefaerbt; Teilstrecken ohne erkennbare Grenze (Marstall, Neue Strasse,
+# Wollmarkt, Langedammstrasse) und der Norden (Alte Waage, Reichsstrasse) bleiben weg
+name = "^(Sack|Schuhstraße|Kohlmarkt|Hutfiltern|Kattreppeln|Poststraße|Stephanstraße|Schild|Papenstieg|Burgplatz|Domplatz|Vor der Burg|Kleine Burg|Platz der Deutschen Einheit|Langer Hof|Am Bruchtor|Platz am Ritterbrunnen|Herzogin-Anna-Amalia-Platz|Friesenstraße|St.-Nicolai-Platz|Magnikirchhof|Am Magnitor|Rosenhagen|Ägidienstraße)$"
+
+[[zone]]
+id = "schwerin-stadtvertretung"
+ort = "Schwerin"
+name = "Fußgängerzone Innenstadt"
+beleg = "Beschlussvorlage der Stadtvertretung zum Radverkehr in der Fußgängerzone (Mai 2023), Liste der Abschnitte"
+quelle = "https://bis.schwerin.de/getfile.asp?id=206239&type=do"
+bbox = [53.625, 11.405, 53.632, 11.418]
+
+[[zone.teil]]
+# Mecklenburgstrasse von der Arsenalstrasse ueber die Schlossstrasse bis zur
+# Geschwister-Scholl-Strasse
+name = "^Mecklenburgstraße$"
+ausschnitt = [53.62683, 11.410, 53.63067, 11.415]
+
+[[zone.teil]]
+name = "^(Helenenstraße|Schmiedestraße|Buschstraße)$"
+
+[[zone.teil]]
+# Puschkinstrasse zwischen Schlossstrasse und Markt
+name = "^Puschkinstraße$"
+ausschnitt = [53.62739, 11.413, 53.62850, 11.416]
+
+[[zone.teil]]
+# Schlossstrasse nur zwischen Mecklenburgstrasse und Puschkinstrasse; wie weit sie
+# darueber hinaus zur Zone gehoert, sagt die Vorlage nicht
+name = "^Schloßstraße$"
+ausschnitt = [53.6272, 11.41246, 53.6279, 11.41443]
+
+[[zone]]
+id = "erfurt-lieferzeiten"
+ort = "Erfurt"
+name = "Fußgängerzonen der Altstadt"
+beleg = "Faltblatt der Stadt zur Lieferzeitbegrenzung in den Fußgängerzonen, Karte Stand 2013 (Dezember 2013)"
+quelle = "https://www.erfurt.de/mam/ef/leben/verkehrsplanung/vk/faltblatt_lieferzeitbegrenzung_in_den_fussgaengerzonen.pdf"
+bbox = [50.972, 11.022, 50.980, 11.040]
+
+[[zone.teil]]
+# Marktstrasse etwa ab Mettengasse/Grosse Arche bis zum Fischmarkt
+name = "^Marktstraße$"
+ausschnitt = [50.9775, 11.0263, 50.9782, 11.0284]
+
+[[zone.teil]]
+# Fischmarkt ohne den Uebergang zum Benediktsplatz (verkehrsberuhigt)
+name = "^Fischmarkt$"
+ohne_ids = [23493750]
+
+[[zone.teil]]
+# Schloesserstrasse vom Fischmarkt bis zum Anger, ohne die Kreuzung Junkersand und
+# ohne die Zufahrt nach Suedwesten
+name = "^Schlösserstraße$"
+ohne_ids = [144371714]
+ausschnitt = [50.9760, 11.0293, 50.9775, 11.03088]
+
+[[zone.teil]]
+name = "^Schlösserstraße$"
+ausschnitt = [50.9760, 11.03099, 50.9775, 11.0340]
+
+[[zone.teil]]
+# Anger in ganzer Laenge, ohne den verkehrsberuhigten Ast zur Meienbergstrasse
+name = "^Anger$"
+ohne_ids = [25696668]
+
+[[zone.teil]]
+# Bahnhofstrasse vom Anger bis zum Juri-Gagarin-Ring
+name = "^Bahnhofstraße$"
+lat_min = 50.97422
+
+[[zone]]
+id = "regensburg-isek"
+ort = "Regensburg"
+name = "Fußgängerzone Altstadt"
+beleg = "Integriertes städtebauliches Entwicklungskonzept Zentrale Altstadt (Stadt Regensburg, 2023): Haidplatz und Kohlenmarkt sind Fußgängerzone"
+quelle = "https://www.regensburg.de/fm/121/entwicklungskonzept-altstadt-fussgaengerzone.pdf"
+bbox = [49.0170, 12.0900, 49.0210, 12.0980]
+
+[[zone.teil]]
+# im Text ganz genannt; Westteil in OSM living_street
+name = "^Haidplatz$"
+
+[[zone]]
+id = "wuerzburg-satzung"
+ort = "Würzburg"
+name = "Fußgängerbereich Innenstadt"
+beleg = "Fußgängerzonensatzung (Sondernutzungen in den Fußgängerbereichen, letzte Änderung April 2026), Paragraf 2 Abs. 1: 43 Straßen, Wege und Plätze, teils mit Abschnitten"
+quelle = "https://www.wuerzburg.de/m_10760_dl"
+bbox = [49.786, 9.920, 49.803, 9.942]
+
+[[zone.teil]]
+# in der Satzung ohne Einschraenkung
+name = "^(Arztlade|Barbarossaplatz|Pleicherkirchplatz|Hahnenhof)$"
+
+[[zone.teil]]
+# Langgasse von der Domstrasse bis Schenkhof (Einmuendung bei 49.79379)
+ids = [492736693]
+
+[[zone.teil]]
+# Haefnergasse vom Marienplatz bis zur Einmuendung Dettelbachergasse
+ids = [1107941933]
+
+[[zone.teil]]
+# Theaterstrasse vom Barbarossaplatz bis zur Eichhornstrasse, letztes Stueck
+ids = [65041126]
+
+[[zone.teil]]
+# Herrnstrasse von der Eichhornstrasse bis zum Zugang Herrnstrasse 3 (um 49.7945)
+ids = [386798730]
+ausschnitt = [49.79450, 9.9320, 49.7960, 9.9340]
+
+[[zone.teil]]
+# Hofstrasse von der Einmuendung Maxstrasse (9.93530) bis Balthasar-Neumann-Promenade
+ids = [28413145]
+ausschnitt = [49.7930, 9.93530, 49.7940, 9.9370]
+
+[[zone]]
+id = "aachen-zugaenge"
+ort = "Aachen"
+name = "Fußgängerzone"
+beleg = "Offener Datensatz Zugang Fußgängerzonen (Fachbereich Mobilität und Verkehr, Stand Oktober 2026): Zeichen 242 an Jakobstraße/Klappergasse und am Adlerberg"
+quelle = "https://geoserver.aachen.de/opendata/lieferverkehr/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=lieferverkehr%3Azugang_fussgaengerzone&outputFormat=application/json&srsName=EPSG:4326"
+bbox = [50.758, 6.070, 50.782, 6.098]
+
+[[zone.teil]]
+# Jakobstrasse vom Zugang an der Klappergasse bis zur Fussgaengerzone in OSM
+ids = [123240445]
+
+[[zone.teil]]
+# Adlerberg suedlich des Zugangs (50.76319) bis Abteiplatz, in OSM footway
+ids = [13727571, 12153422, 148872114]
+
+[[zone]]
+id = "koeln-altstadt"
+ort = "Köln"
+name = "Alter Markt"
+beleg = "Teileinziehung Bereich Altstadt (April 2025): Alter Markt beschränkt auf Fuß- und Radverkehr, Anlieferung werktags vormittags"
+quelle = "https://www.stadt-koeln.de/mediaasset/content/bekanntmachungen/2025/2025.04.09_0070-01_teileinziehung_bereich_altstadt.pdf"
+bbox = [50.9375, 6.9590, 50.9395, 6.9608]
+
+[[zone.teil]]
+# ganze Platzfläche laut Teileinziehungsplan, auch die Nordkante bis Bürgerstraße/Mühlengasse
+ids = [39888572, 130752272, 1548186771, 1548186953]
+
+[[zone]]
+id = "koeln-eigelstein"
+ort = "Köln"
+name = "Eigelstein"
+beleg = "Teileinziehung Eigelstein (Juni 2025): Ebertplatz bis Dagobertstraße und Im Stavenhof bis Machabäerstraße beschränkt auf Fuß- und Radverkehr, Anlieferung werktags 6 bis 11 Uhr"
+quelle = "https://www.stadt-koeln.de/mediaasset/content/bekanntmachungen/2025/2025.06.02_0103-01_teileinziehung_eigelstein.pdf"
+bbox = [50.9465, 6.9560, 50.9495, 6.9576]
+
+[[zone.teil]]
+# Ebertplatz bis Dagobertstraße: Stücke an der Torburg und südlich bis Dagobertstraße
+ids = [555221640, 4940284, 144930996]
+
+[[zone.teil]]
+# Im Stavenhof bis Unter Krahnenbäumen und weiter bis Machabäerstraße
+ids = [827356676, 983703303, 983703304]
+
+[[zone]]
+id = "bremen-vegesack"
+ort = "Bremen"
+name = "Fußgängerzone Vegesacker Innenstadt"
+beleg = "Amtsblatt Nr. 179 (Oktober 2025), Widmung in den Fußgängerzonen/-teilen der Vegesacker Innenstadt mit Widmungsplan"
+quelle = "https://www.amtsblatt.bremen.de/fastmedia/233/2025_10_09_ABl_Nr_0179_signed.pdf"
+bbox = [53.1698, 8.6205, 53.1722, 8.6250]
+
+[[zone.teil]]
+# Breite Straße zwischen Gerhard-Rohlfs-Straße und Sagerstraße
+ids = [409582922]
+
+[[zone.teil]]
+# Friedrich-Schild-Straße ab Reeder-Bischoff-Straße bis vor die Garagenzufahrt (laut Plan rund 15 m)
+ids = [25749627]
+ausschnitt = [53.1700, 8.6240, 53.17025, 8.6246]
+
+[[zone]]
+id = "bremen-langenstrasse"
+ort = "Bremen"
+name = "Fußgängerzone um die Langenstraße"
+beleg = "Amtsblatt Nr. 38 (Februar 2013), Widmung im Bereich der Fußgängerzone um die Langenstraße: Große und Kleine Waagestraße ab Langenstraße bis zum Treppenaufgang"
+quelle = "https://www.amtsblatt.bremen.de/fastmedia/233/2013-02-18-amtsblatt-2013-nr-38-widmung-langenstrasse.pdf"
+bbox = [53.0762, 8.8052, 53.0770, 8.8060]
+
+[[zone.teil]]
+# die kurzen Stücke von Jacobshof bis zur Treppe
+ids = [48708323, 48708444]
+
+[[zone]]
+id = "karlsruhe-fussgaengerbereiche"
+ort = "Karlsruhe"
+name = "Fußgängerbereiche Innenstadt"
+beleg = "Satzung über Sondernutzungen in den Fußgängerbereichen (Stadtrecht 1/10, Stand Dezember 2024), Paragraf 2 mit Lageplänen und Abschnittsliste"
+quelle = "https://karlsruhe.de/securedl/sdl-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NDU1MjU5ODIsImV4cCI6MzMyMTc2MjY0NTYsInVzZXIiOjAsImdyb3VwcyI6WzAsLTFdLCJmaWxlIjoiZmlsZWFkbWluL3VzZXJfdXBsb2FkLzAxX1N0YWR0X1JhdGhhdXMvMDEzX1ZlcndhbHR1bmdfdW5kX1N0YWR0cG9saXRpay9TdGFkdHJlY2h0LzFfT0VmZmVudGxpY2hlX1NpY2hlcmhlaXRfdW5kX09yZG51bmcvMS0xMF9Tb25kZXJudXR6dW5nX0Z1c3NnYWVuZ2VyYmVyZWljaGUucGRmIiwicGFnZSI6NzB9.T8RCXObaFB9jy8dIs5suHDoLdElN6Y32VmgqKt4mDwk/1-10_Sondernutzung_Fussgaengerbereiche.pdf"
+bbox = [48.999, 8.390, 49.0125, 8.416]
+
+[[zone.teil]]
+# Nr. 27 Kreuzstraße Kaiserstraße bis Zähringerstraße; Nr. 10/11 Kaiserstraße an der Karl-Friedrich-Straße;
+# Nr. 24 Ständehausstraße Herrenstraße bis Ritterstraße; Nr. 29 Markgrafenstraße Steinstraße bis Adlerstraße;
+# Nr. 41 Erbprinzenstraße (Herrenstraße bis Ritterstraße); Nr. 43 Passagehof; Nr. 51 Werderplatz;
+# Nr. 52 Beiertheimer Allee ab Hermann-Billing-Straße Richtung Konzerthaus
+ids = [4059013, 1175929101, 1175929102, 4058974, 4188463, 160484291, 3924806, 566409374, 566409377, 566409382, 4059037, 262435736, 23404642]
+
+[[zone.teil]]
+# Plätze als Flächen: Nr. 6 Europaplatz, Nr. 20 Stephanplatz, Nr. 26 Marktplatz, Nr. 31 Fasanenplatz
+ids = [1369804443, 162539268, 743665089, 4060251]
+
+[[zone]]
+id = "karlsruhe-durlach"
+ort = "Karlsruhe"
+name = "Fußgängerbereich Pfinztalstraße (Durlach)"
+beleg = "Satzung über Sondernutzungen in den Fußgängerbereichen (Stadtrecht 1/10), Nr. 61 und 62: Pfinztalstraße zwischen Seboldstraße/Palmaienstraße und Zunftstraße/Amthausstraße"
+quelle = "https://karlsruhe.de/securedl/sdl-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3NDU1MjU5ODIsImV4cCI6MzMyMTc2MjY0NTYsInVzZXIiOjAsImdyb3VwcyI6WzAsLTFdLCJmaWxlIjoiZmlsZWFkbWluL3VzZXJfdXBsb2FkLzAxX1N0YWR0X1JhdGhhdXMvMDEzX1ZlcndhbHR1bmdfdW5kX1N0YWR0cG9saXRpay9TdGFkdHJlY2h0LzFfT0VmZmVudGxpY2hlX1NpY2hlcmhlaXRfdW5kX09yZG51bmcvMS0xMF9Tb25kZXJudXR6dW5nX0Z1c3NnYWVuZ2VyYmVyZWljaGUucGRmIiwicGFnZSI6NzB9.T8RCXObaFB9jy8dIs5suHDoLdElN6Y32VmgqKt4mDwk/1-10_Sondernutzung_Fussgaengerbereiche.pdf"
+bbox = [48.9990, 8.4670, 48.9998, 8.4700]
+
+[[zone.teil]]
+# zwischen Palmaienstraße und Kelterstraße/Bieleinstorstraße und weiter Richtung Zunftstraße
+ids = [691992762, 131568731, 444248383]
+
+[[zone]]
+id = "heidelberg-altstadt"
+ort = "Heidelberg"
+name = "Reiner Fußgängerbereich Altstadt"
+beleg = "Fußgängerbereichsatzung (Ortsrecht 6.5), Anlage 1 Straßenverzeichnis, Nr. 2 Reiner Fußgängerbereich: Marktplatz, Sandgasse"
+quelle = "https://www.heidelberg.de/site/Heidelberg2021/get/documents_E1681523944/heidelberg/Objektdatenbank/30/PDF/30_pdf_ortsr_A1_6-5.pdf"
+bbox = [49.4090, 8.7040, 49.4130, 8.7110]
+
+[[zone.teil]]
+# Marktplatz als Fläche; Sandgasse am Ende zur Plöck
+ids = [88661898, 30474945]
+
+[[zone]]
+id = "bielefeld-fussgaengerstrassen"
+ort = "Bielefeld"
+name = "Fußgängerstraßen"
+beleg = "Straßenreinigungsverzeichnis (gültig ab Januar 2025), Klassifizierung Fußgängerstraße: Arndtstraße (Bahnhofstraße bis Friedenstraße), Ravensberger Straße (Turnerstraße bis Teutoburger Straße), Seitenweg Oberntorwall (Klosterstraße bis Obernstraße)"
+quelle = "https://www.bielefeld.de/sites/default/files/datei/2025/Strassenreinigungsverzeichnis-2025_0.pdf"
+bbox = [52.0170, 8.5260, 52.0250, 8.5440]
+
+[[zone.teil]]
+# Arndtstraße, letztes Stück vor der Friedenstraße
+ids = [971715155]
+
+[[zone.teil]]
+# Ravensberger Straße zwischen Turnerstraße und Teutoburger Straße
+ids = [27225974, 1486367975, 1486367976, 151952224]
+
+[[zone.teil]]
+# Oberntorwall, Seitenweg von der Klosterstraße bis zur Obernstraße
+ids = [28092860, 839160567, 767607470]
+
+[[zone]]
+id = "wuppertal-barmen"
+ort = "Wuppertal"
+name = "Fußgängerzone Barmen"
+beleg = "Infoblatt Ausnahmegenehmigung Fußgängerzone (Oktober 2024), welche Straßen zur Fußgängerzone gehören: Lindenstraße, Platz Wupperfelder Markt"
+quelle = "https://www.wuppertal.de/vv/produkte/104/104.11_Ausnahmegenehmigung_Fussgaengerzone.php.media/531968/Infoblatt-Ausnahmegenehmigung-Fussgaengerzone_10_2024.pdf"
+bbox = [51.2700, 7.2000, 51.2755, 7.2150]
+
+[[zone.teil]]
+ids = [154706935, 37913121]
+
+[[zone]]
+id = "hannover-steintor-hauptbahnhof"
+ort = "Hannover"
+name = "Fußgängerzone zwischen Steintor und Hauptbahnhof"
+beleg = "Waffenverbotszonen-Verordnung, Anlage 1 Abs. 3 (Fassung Juni 2026): Fußgängerzone zwischen Steintor und Hauptbahnhof, darunter die Schillerstraße"
+quelle = "https://www.hannover.de/content/download/1018464/file/Verbotszonenverordnung-25-06-26.pdf"
+bbox = [52.3755, 9.7370, 52.3765, 9.7397]
+
+[[zone.teil]]
+# Schillerstraße vom Ernst-August-Platz bis zur Andreaestraße
+ids = [7996014, 664405344]
+
+[[zone]]
+id = "essen-fussgaengerstrassen"
+ort = "Essen"
+name = "Fußgängerstraßen"
+beleg = "Straßenreinigungsverzeichnis 7.11b (Dezember 2025), Spalte B = 2 Fußgängerstraßen: Brandstraße, Wüstenhöferstraße (Gerichtsstraße bis Marktstraße)"
+quelle = "https://media.essen.de/media/wwwessende/aemter/15/SR7_11bneu.pdf"
+bbox = [51.4560, 6.9500, 51.4735, 7.0110]
+
+[[zone.teil]]
+# Brandstraße (Stadtkern)
+ids = [5780361]
+
+[[zone.teil]]
+# Wüstenhöferstraße ab Gerichtsstraße Richtung Marktstraße (Borbeck)
+ids = [146660663, 163093314, 163093317, 163093315]
+
+[[zone]]
+id = "dortmund-cannabiskarte"
+ort = "Dortmund"
+name = "Fußgängerzone (Karte der Stadt)"
+beleg = "Cannabiskarte der Stadt Dortmund, Ebene Cannabisverbotszonen, Art Fußgängerzone: City (Umfeld Reinoldikirche, Petrikirchhof, Brückstraße) und Hörde"
+quelle = "https://geoweb1.digistadtdo.de/doris_gdi/mapapps4/resources/apps/canabiskarte/index.html"
+bbox = [51.4880, 7.4590, 51.5180, 7.5030]
+
+[[zone.teil]]
+# City: benannte Wege ganz in der Fußgängerzonen-Fläche der Stadt
+ids = [38267155, 23369687, 54356029, 486576693, 843120529, 23359272, 22736459, 54356031, 828983442, 828798881, 828798880, 877845391, 1300352326, 1300352329, 631588224]
+
+[[zone.teil]]
+# Hörde: Hörder Semerteichstraße und Brauerstraße in der Fläche
+ids = [104244337, 1163929471, 1163929472, 1301403079, 1301403080]

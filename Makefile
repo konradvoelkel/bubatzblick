@@ -309,9 +309,13 @@ germany: $(OUT_DIR)/germany/zonen.pmtiles $(OUT_DIR)/germany/fussgaengerzonen.pm
 # (Ways+Relationen, Mitglieds-Ways, Knoten), 36 s und 0,4 GB fuer den Bund
 # (auf 14 Threads). Billig genug, um im Tageszyklus mitzulaufen -- die
 # Ebene ist damit so frisch wie die Zonen.
-$(OUT_DIR)/germany/fussgaengerzonen.pmtiles: $(GERMANY_PBF) $(BUBATZ)
+# Dazu die amtlich belegten Fussgaengerzonen, die OSM noch nicht fuehrt
+# (config/fussgaengerzonen.toml -> scripts/fussgaengerzonen.py, eingecheckt).
+FUSSGAENGER_AMTLICH := config/fussgaengerzonen.geojsonl
+$(OUT_DIR)/germany/fussgaengerzonen.pmtiles: $(GERMANY_PBF) $(BUBATZ) $(FUSSGAENGER_AMTLICH)
 	$(BUBATZ) pedestrian $(GERMANY_PBF) \
 		--out-geojson $(GERMANY_DIR)/fussgaengerzonen.geojsonl \
+		--extra-geojson $(FUSSGAENGER_AMTLICH) \
 		--out-path $@
 
 # -- Kennzahlen + Diff zum Vorlauf ---------------------------------------------

@@ -10,7 +10,7 @@ Laufzeiten.
 | `clip` | auf Verwaltungsgrenze + Reichweite filtern (Grenze gecacht) |
 | `zones` | Sichtfeld je Objekt, 2-km-Zellen parallel, eine Parquet-Datei je Zelle; `--reuse-from` übernimmt unveränderte Objekte und Zellen |
 | `tiles` | Zellen → `zonen.pmtiles`: tippecanoe je Zoomband und Zellenblock (gecacht), `tile-join`, Metadaten bereinigt |
-| `pedestrian <pbf>` | Fußgängerzonen (§ 5 Abs. 2 Nr. 5) als eigene Ebene, ohne Puffer; Metadaten bereinigt |
+| `pedestrian <pbf>` | Fußgängerzonen (§ 5 Abs. 2 Nr. 5) als eigene Ebene, ohne Puffer; Metadaten bereinigt; `--extra-geojson` hängt amtlich belegte Abschnitte an, die OSM nicht führt |
 | `report` | Kennzahlen je Kategorie, größte Zonen, `--previous` = Diff |
 | `verify identical A B` | zwei Zonenstände byte-genau vergleichen |
 | `verify anchor` | Fläche des Referenzobjekts gegen den Sollwert |

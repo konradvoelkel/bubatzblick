@@ -33,6 +33,13 @@ Karte selbst.
   seit November 2026; Grenze näherungsweise). `scripts/sonderzonen.py` kennt dafür Teile mit
   `ausschnitt` (Straße zuschneiden) und `linie` (Verbindung von Hand, wo OSM eine Grenze nicht
   führt).
+- Fußgängerzonen, die eine Stadt amtlich nennt (Satzung, Straßenverzeichnis, Widmung,
+  Teileinziehung, amtlicher Stadtplan), die OpenStreetMap aber nicht als `highway=pedestrian`
+  führt, stehen jetzt in derselben blauen Ebene: von Hand in `config/fussgaengerzonen.toml`,
+  `scripts/fussgaengerzonen.py` holt die Abschnitte per Overpass und schreibt nur, was OSM nicht
+  schon führt, nach `config/fussgaengerzonen.geojsonl`; `bubatz pedestrian --extra-geojson`
+  hängt sie vor tippecanoe an. Anfangs 127 Wege aus 19 Quellen in 15 Städten. Das Popup nennt
+  die Quelle. Die Ebene schreibt keine Attributstatistik mehr in die Metadaten.
 - Übersicht `/stadt/` mit Liste und klickbarer Deutschlandkarte (SVG ohne JavaScript, Grenzen aus
   der Grundkarte; in dichten Gegenden wie dem Ruhrgebiet stehen die Namen in einer Spalte mit
   Strichen zu den Punkten, auf dem Handy nur die Namen und dort, wo es zu eng wird, nur die

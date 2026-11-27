@@ -41,6 +41,14 @@
 //! `relation`) -- beide IDs zaehlen getrennt, ohne den Typ waere die Zahl im
 //! Popup nicht nachschlagbar. Keine OSM-Freitexte: Fremdtext aus den Daten
 //! wird nicht in die Kacheln uebernommen.
+//!
+//! **Amtlich belegte Ergaenzungen** (`--extra-geojson`): Fussgaengerzonen, die
+//! eine Stadt in einer Satzung, einem Verzeichnis oder einer Widmung nennt, die
+//! OSM aber (noch) nicht als `highway=pedestrian` fuehrt. Sie kommen fertig als
+//! GeoJSONSeq (`config/fussgaengerzonen.geojsonl`, erzeugt von
+//! `scripts/fussgaengerzonen.py`) und werden vor tippecanoe angehaengt; jede
+//! Zeile muss ein Feature mit `amtlich: true` sein, ihre Texte stammen aus der
+//! handgepflegten TOML, nicht aus OSM.
 
 use std::collections::{HashMap, HashSet};
 use std::io::{BufWriter, Write};
@@ -58,8 +66,8 @@ use crate::assemble::{Assembler, Loc, Ring};
 /// Name der Ebene im Kachelarchiv; der Viewer spricht sie so an.
 pub const LAYER_NAME: &str = "fussgaengerzonen";
 /// Beschreibung des Archivs in seinen Metadaten (`tiles::scrub_metadata`).
-pub const DESCRIPTION: &str =
-    "Fussgaengerzonen (highway=pedestrian) aus OpenStreetMap, Paragraf 5 Abs. 2 Nr. 5 KCanG";
+pub const DESCRIPTION: &str = "Fussgaengerzonen (highway=pedestrian) aus OpenStreetMap, ergaenzt um amtlich \
+     belegte Abschnitte, Paragraf 5 Abs. 2 Nr. 5 KCanG";
 
 #[derive(Args, Debug)]
 pub struct PedestrianArgs {
@@ -78,6 +86,46 @@ pub struct PedestrianArgs {
     /// Nur die GeoJSONSeq schreiben, tippecanoe nicht aufrufen
     #[arg(long, default_value_t = false)]
     pub no_tiles: bool,
+    /// Amtlich belegte Fussgaengerzonen, die OSM nicht fuehrt (GeoJSONSeq,
+    /// jede Zeile ein Feature mit `amtlich: true`); werden angehaengt
+    #[arg(long)]
+    pub extra_geojson: Vec<PathBuf>,
+}
+
+/// Haengt die amtlich belegten Ergaenzungen an die GeoJSONSeq an. Jede nicht
+/// leere Zeile muss ein Feature mit Geometrie und `properties.amtlich == true`
+/// sein; sonst bricht der Lauf ab, statt Unbekanntes in die Kacheln zu legen.
+fn append_extra(out: &Path, extras: &[PathBuf]) -> Result<usize> {
+    let mut f = std::fs::OpenOptions::new()
+        .append(true)
+        .open(out)
+        .with_context(|| format!("{} zum Anhaengen oeffnen", out.display()))?;
+    let mut n = 0;
+    for path in extras {
+        let text =
+            std::fs::read_to_string(path).with_context(|| format!("{} lesen", path.display()))?;
+        for (nr, zeile) in text.lines().enumerate() {
+            let zeile = zeile.trim();
+            if zeile.is_empty() {
+                continue;
+            }
+            let v: serde_json::Value = serde_json::from_str(zeile)
+                .with_context(|| format!("{}:{}: kein JSON", path.display(), nr + 1))?;
+            let ok = v["type"] == "Feature"
+                && v["geometry"]["type"].is_string()
+                && v["properties"]["amtlich"] == serde_json::Value::Bool(true);
+            if !ok {
+                bail!(
+                    "{}:{}: kein Feature mit Geometrie und amtlich = true",
+                    path.display(),
+                    nr + 1
+                );
+            }
+            writeln!(f, "{zeile}")?;
+            n += 1;
+        }
+    }
+    Ok(n)
 }
 
 /// Ein Way mit `highway=pedestrian`, so wie er aus der PBF kommt.
@@ -376,6 +424,10 @@ fn tippecanoe(input: &Path, out: &Path, min_zoom: i32, max_zoom: i32) -> Result<
         .arg(format!("--minimum-zoom={min_zoom}"))
         .arg(format!("--maximum-zoom={max_zoom}"))
         .arg(format!("--layer={LAYER_NAME}"))
+        // Ohne Attribut-Statistik: sie schriebe Beispielwerte (die Quell-URLs der amtlichen
+        // Ergaenzungen) in die Metadaten, und `scrub_metadata` lehnt jeden Textwert mit `/`
+        // dort ab. Der Viewer braucht die Statistik nicht.
+        .arg("--no-tile-stats")
         .arg(format!("--output={}", out.display()))
         .arg(input)
         .status()
@@ -438,6 +490,10 @@ pub fn run(args: PedestrianArgs) -> Result<()> {
         z.rel_ungueltig,
         args.out_geojson.display()
     );
+    if !args.extra_geojson.is_empty() {
+        let n = append_extra(&args.out_geojson, &args.extra_geojson)?;
+        println!("pedestrian: {n} amtlich belegte Ergaenzungen angehaengt");
+    }
     if !args.no_tiles {
         tippecanoe(
             &args.out_geojson,

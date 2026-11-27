@@ -188,3 +188,67 @@ fn pedestrian_archive_metadata_names_no_path() {
     assert!(!text.contains('/'), "Pfadartiges in den Metadaten: {text}");
     std::fs::remove_dir_all(&dir).unwrap();
 }
+
+/// `--extra-geojson`: amtlich belegte Ergaenzungen landen hinter den OSM-Merkmalen;
+/// eine Zeile ohne `amtlich: true` bricht den Lauf ab.
+#[test]
+fn pedestrian_appends_official_extras_and_rejects_others() {
+    let data = Path::new(env!("CARGO_MANIFEST_DIR")).join("tests/data");
+    let tmp = std::env::temp_dir();
+    let pid = std::process::id();
+    let extra = tmp.join(format!("bubatz-pedestrian-extra-{pid}.geojsonl"));
+    std::fs::write(
+        &extra,
+        concat!(
+            r#"{"type":"Feature","properties":{"amtlich":true,"ort":"Testort"},"#,
+            r#""geometry":{"type":"LineString","coordinates":[[6.0,51.0],[6.001,51.001]]}}"#,
+            "\n\n"
+        ),
+    )
+    .unwrap();
+    let out = tmp.join(format!("bubatz-pedestrian-extra-out-{pid}.geojsonl"));
+    let run = |extra: &Path| {
+        Command::new(env!("CARGO_BIN_EXE_bubatz"))
+            .args([
+                "pedestrian",
+                &data.join("pedestrian.osm.pbf").to_string_lossy(),
+                "--out-geojson",
+                &out.to_string_lossy(),
+                "--no-tiles",
+                "--extra-geojson",
+                &extra.to_string_lossy(),
+            ])
+            .output()
+            .unwrap()
+    };
+    let output = run(&extra);
+    assert!(
+        output.status.success(),
+        "{}",
+        String::from_utf8_lossy(&output.stderr)
+    );
+    assert!(String::from_utf8_lossy(&output.stdout).contains("1 amtlich belegte Ergaenzungen"));
+    let text = std::fs::read_to_string(&out).unwrap();
+    let features: Vec<Value> = text
+        .lines()
+        .map(|l| serde_json::from_str(l).unwrap())
+        .collect();
+    assert_eq!(features.len(), 5, "{text}");
+    assert_eq!(features[4]["properties"]["amtlich"], Value::Bool(true));
+    assert_eq!(features[4]["properties"]["ort"], "Testort");
+
+    let falsch = tmp.join(format!("bubatz-pedestrian-extra-falsch-{pid}.geojsonl"));
+    std::fs::write(
+        &falsch,
+        r#"{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[6.0,51.0]}}"#,
+    )
+    .unwrap();
+    let output = run(&falsch);
+    assert!(
+        !output.status.success(),
+        "ohne amtlich = true haette der Lauf abbrechen muessen"
+    );
+    for p in [&extra, &falsch, &out] {
+        let _ = std::fs::remove_file(p);
+    }
+}

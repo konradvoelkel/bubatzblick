@@ -98,6 +98,14 @@ warum die Schwellen in `config/pipeline.toml` so stehen, wie sie stehen.
   `uv run python scripts/sonderzonen.py` (holt die Straßen aus Overpass) und
   die erzeugte `viewer/sonderzonen.json` mit einchecken; `tests/test_sonderzonen.py`
   prüft Geometrie, Pflichtfelder und Daten.
+- **Amtlich belegte Fußgängerzonen**, die OpenStreetMap noch nicht als
+  `highway=pedestrian` führt, stehen in `config/fussgaengerzonen.toml`: nur was
+  eine amtliche Quelle Fußgängerzone nennt, Teilstrecken mit `ausschnitt`. Nach
+  jeder Änderung `uv run python scripts/fussgaengerzonen.py` (holt die Straßen aus
+  Overpass und schreibt nur die Abschnitte, die OSM nicht schon führt) und
+  `config/fussgaengerzonen.geojsonl` mit einchecken; `bubatz pedestrian
+  --extra-geojson` hängt sie im Tageslauf an. Besser noch: den Abschnitt in OSM
+  eintragen, dann fällt er beim nächsten Lauf des Skripts hier weg.
 - **Tag-Entscheidungen** stehen in `config/tags.json`, auch die Begründung: die
   Kommentare dort erscheinen wortgleich auf der Über-Seite. Eine Änderung dort
   ist eine Aussage über Recht, nicht über Code.

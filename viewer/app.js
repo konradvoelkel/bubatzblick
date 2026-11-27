@@ -488,8 +488,24 @@ const TITEL = new Map(KATEGORIEN);
         box.appendChild(b);
         box.appendChild(document.createElement("br"));
         const p = e.features[0].properties;
-        box.appendChild(document.createTextNode(
-          (p.osm_type === "relation" ? "relation " : "way ") + String(p.osm_id)));
+        // Amtlich belegte Ergaenzung (config/fussgaengerzonen.toml): Quelle statt OSM-Nummer.
+        // Aus Vektorkacheln kommt der Wahrheitswert je nach Version als true oder "true".
+        if (p.amtlich === true || p.amtlich === "true") {
+          box.appendChild(document.createTextNode(String(p.ort) + ": " + String(p.name)));
+          box.appendChild(document.createElement("br"));
+          box.appendChild(document.createTextNode(
+            "nach " + String(p.beleg) + "; in OpenStreetMap noch nicht als Fußgängerzone eingetragen"));
+          if (String(p.quelle).startsWith("https://")) {
+            box.appendChild(document.createElement("br"));
+            const a = document.createElement("a");
+            a.href = String(p.quelle); a.target = "_blank"; a.rel = "noopener noreferrer";
+            a.textContent = "Quelle";
+            box.appendChild(a);
+          }
+        } else {
+          box.appendChild(document.createTextNode(
+            (p.osm_type === "relation" ? "relation " : "way ") + String(p.osm_id)));
+        }
         box.appendChild(document.createElement("br"));
         box.appendChild(document.createTextNode(
           "§ 5 Abs. 2 Nr. 5 KCanG, 7–20 Uhr — " + (giltJetzt() ? "gilt jetzt" : "gilt jetzt nicht")));
